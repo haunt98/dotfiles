@@ -1,0 +1,7 @@
+# Dotfiles
+
+Require:
+
+```txt
+rsync
+```
