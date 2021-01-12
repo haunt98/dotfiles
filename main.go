@@ -10,12 +10,29 @@ import (
 
 const (
 	appName = "dotfiles"
+
+	pathFlag = "path"
+
+	installCommand = "install"
+	updateCommand  = "update"
 )
 
 func main() {
 	app := &cli.App{
 		Name:  appName,
 		Usage: "managing dotfiles",
+		Commands: []*cli.Command{
+			{
+				Name:    installCommand,
+				Aliases: []string{"i"},
+				Usage:   "install configs from dotfiles",
+			},
+			{
+				Name:    updateCommand,
+				Aliases: []string{"u"},
+				Usage:   "update dotfiles from configs",
+			},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
