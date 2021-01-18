@@ -12,9 +12,6 @@ import (
 )
 
 type Config struct {
-	// Read when run
-	Path string `json:"-"`
-
 	// Read from file
 	Apps map[string]App `json:"apps"`
 }
@@ -53,7 +50,6 @@ func LoadConfig(path string) (result Config, err error) {
 		return
 	}
 
-	result.Path = configPath
 	return
 }
 

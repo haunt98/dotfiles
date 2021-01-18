@@ -13,6 +13,8 @@ const (
 
 	installCommand = "install"
 	updateCommand  = "update"
+
+	curentDir = "."
 )
 
 func main() {
@@ -46,11 +48,7 @@ func main() {
 	}
 }
 
-type action struct {
-	flags struct {
-		path string
-	}
-}
+type action struct{}
 
 // Show help by default
 func (a *action) Run(c *cli.Context) error {
@@ -58,7 +56,7 @@ func (a *action) Run(c *cli.Context) error {
 }
 
 func (a *action) RunInstall(c *cli.Context) error {
-	cfg, err := LoadConfig(a.flags.path)
+	cfg, err := LoadConfig(curentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -71,7 +69,7 @@ func (a *action) RunInstall(c *cli.Context) error {
 }
 
 func (a *action) RunUpdate(c *cli.Context) error {
-	cfg, err := LoadConfig(a.flags.path)
+	cfg, err := LoadConfig(curentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
