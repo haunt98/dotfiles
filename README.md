@@ -1,5 +1,8 @@
 # Dotfiles
 
+[![Go](https://github.com/haunt98/dotfiles/workflows/Go/badge.svg?branch=main)](https://github.com/actions/setup-go)
+[![GitHub Super-Linter](https://github.com/haunt98/haunt98/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 Install:
 
 ```sh
