@@ -20,7 +20,6 @@ let g:go_fmt_command='gofumports'
 " vim-plug
 call plug#begin()
 Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
 Plug 'machakann/vim-sandwich'
 Plug 'fatih/vim-go'
 call plug#end()

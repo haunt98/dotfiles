@@ -8,30 +8,6 @@
         }
       ]
     },
-    "mpv": {
-      "dirs": [
-        {
-          "internal": "config/mpv",
-          "external": "~/.config/mpv"
-        }
-      ]
-    },
-    "alacritty": {
-      "dirs": [
-        {
-          "internal": "config/alacritty",
-          "external": "~/.config/alacritty"
-        }
-      ]
-    },
-    "kitty": {
-      "dirs": [
-        {
-          "internal": "config/kitty",
-          "external": "~/.config/kitty"
-        }
-      ]
-    },
     "fontconfig": {
       "dirs": [
         {
