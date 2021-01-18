@@ -7,6 +7,8 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+
+	"github.com/haunt98/copy-go"
 )
 
 type Config struct {
@@ -18,13 +20,13 @@ type Config struct {
 }
 
 type App struct {
-	Files   []FromToPath `json:"files"`
-	Folders []FromToPath `json:"folders"`
+	Files []Path `json:"files"`
+	Dirs  []Path `json:"dirs"`
 }
 
-type FromToPath struct {
-	From string `json:"from"`
-	To   string `json:"to"`
+type Path struct {
+	Internal string `json:"internal"`
+	External string `json:"external"`
 }
 
 // Load config from file
@@ -53,6 +55,38 @@ func LoadConfig(path string) (result Config, err error) {
 
 	result.Path = configPath
 	return
+}
+
+// internal -> external
+func (c *Config) Install() error {
+	for _, app := range c.Apps {
+		for _, file := range app.Files {
+			if err := os.RemoveAll(file.External); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", file.External, err)
+			}
+
+			if err := copy.CopyFile(file.Internal, file.External); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", file.Internal, file.External, err)
+			}
+		}
+
+		for _, dir := range app.Dirs {
+			if err := os.RemoveAll(dir.External); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", dir.External, err)
+			}
+
+			if err := copy.CopyDir(dir.Internal, dir.External); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", dir.Internal, dir.External, err)
+			}
+		}
+	}
+
+	return nil
+}
+
+// external -> internal
+func (c *Config) Update() error {
+	return nil
 }
 
 func getConfigPath(path string) string {

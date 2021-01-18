@@ -71,6 +71,10 @@ func (a *action) RunInstall(c *cli.Context) error {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
 
+	if err := cfg.Install(); err != nil {
+		return fmt.Errorf("failed to install config: %w", err)
+	}
+
 	return nil
 }
 
