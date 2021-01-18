@@ -9,6 +9,8 @@ github.com/haunt98/copy-go v0.1.0 h1:h0WkcxKvprqH5whHUGz8wnekY7JTydayPCqRvS5Mz1s
 github.com/haunt98/copy-go v0.1.0/go.mod h1:4PtGf1Fl1ocrD9OhHyqAsBCA9UPuBPnUMm6RIJUe6vE=
 github.com/haunt98/copy-go v0.2.0 h1:8a4FQfTKO0k8Fdd9GWrp5DwJ6i/9tmbHNHC4XYrIW+A=
 github.com/haunt98/copy-go v0.2.0/go.mod h1:4PtGf1Fl1ocrD9OhHyqAsBCA9UPuBPnUMm6RIJUe6vE=
+github.com/haunt98/copy-go v0.3.0 h1:lcP5DLKhTFB+dASgFKLNDiTuWkx9u6ot0oSWifD2kc0=
+github.com/haunt98/copy-go v0.3.0/go.mod h1:4PtGf1Fl1ocrD9OhHyqAsBCA9UPuBPnUMm6RIJUe6vE=
 github.com/mattn/go-colorable v0.1.8 h1:c1ghPdyEDarC70ftn0y+A/Ee++9zz8ljHG1b13eJ0s8=
 github.com/mattn/go-colorable v0.1.8/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=
 github.com/mattn/go-isatty v0.0.12 h1:wuysRhFDzyxgEmMf5xjvJ2M9dZoWAXNNr5LSBS7uHXY=
