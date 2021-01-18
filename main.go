@@ -13,6 +13,7 @@ const (
 
 	installCommand = "install"
 	updateCommand  = "update"
+	cleanCommand   = "clean"
 
 	curentDir = "."
 )
@@ -35,6 +36,12 @@ func main() {
 				Aliases: []string{"u"},
 				Usage:   "update dotfiles from user configs",
 				Action:  a.RunUpdate,
+			},
+			{
+				Name:    cleanCommand,
+				Aliases: []string{"c"},
+				Usage:   "clean unused dotfiles",
+				Action:  a.RunClean,
 			},
 		},
 		Action: a.Run,
@@ -78,5 +85,9 @@ func (a *action) RunUpdate(c *cli.Context) error {
 		return fmt.Errorf("failed to update config: %w", err)
 	}
 
+	return nil
+}
+
+func (a *action) RunClean(c *cli.Context) error {
 	return nil
 }
