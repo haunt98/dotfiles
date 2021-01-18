@@ -48,7 +48,7 @@ func LoadConfig(path string) (result Config, err error) {
 		return
 	}
 
-	if err := json.Unmarshal(bytes, &result); err != nil {
+	if err = json.Unmarshal(bytes, &result); err != nil {
 		err = fmt.Errorf("failed to unmarshal: %w", err)
 		return
 	}

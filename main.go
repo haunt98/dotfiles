@@ -27,12 +27,14 @@ func main() {
 			{
 				Name:    installCommand,
 				Aliases: []string{"i"},
-				Usage:   "install configs from dotfiles",
+				Usage:   "install user configs from dotfiles",
+				Action:  a.RunInstall,
 			},
 			{
 				Name:    updateCommand,
 				Aliases: []string{"u"},
-				Usage:   "update dotfiles from configs",
+				Usage:   "update dotfiles from user configs",
+				Action:  a.RunUpdate,
 			},
 		},
 		Flags: []cli.Flag{
@@ -73,6 +75,21 @@ func (a *action) RunInstall(c *cli.Context) error {
 
 	if err := cfg.Install(); err != nil {
 		return fmt.Errorf("failed to install config: %w", err)
+	}
+
+	return nil
+}
+
+func (a *action) RunUpdate(c *cli.Context) error {
+	a.getFlags(c)
+
+	cfg, err := LoadConfig(a.flags.path)
+	if err != nil {
+		return fmt.Errorf("failed to load config: %w", err)
+	}
+
+	if err := cfg.Update(); err != nil {
+		return fmt.Errorf("failed to update config: %w", err)
 	}
 
 	return nil
