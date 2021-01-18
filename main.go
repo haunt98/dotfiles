@@ -11,8 +11,6 @@ import (
 const (
 	appName = "dotfiles"
 
-	pathFlag = "path"
-
 	installCommand = "install"
 	updateCommand  = "update"
 )
@@ -35,12 +33,6 @@ func main() {
 				Aliases: []string{"u"},
 				Usage:   "update dotfiles from user configs",
 				Action:  a.RunUpdate,
-			},
-		},
-		Flags: []cli.Flag{
-			&cli.StringFlag{
-				Name:  pathFlag,
-				Usage: "path to `DOTFILES`",
 			},
 		},
 		Action: a.Run,
@@ -66,8 +58,6 @@ func (a *action) Run(c *cli.Context) error {
 }
 
 func (a *action) RunInstall(c *cli.Context) error {
-	a.getFlags(c)
-
 	cfg, err := LoadConfig(a.flags.path)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
@@ -81,8 +71,6 @@ func (a *action) RunInstall(c *cli.Context) error {
 }
 
 func (a *action) RunUpdate(c *cli.Context) error {
-	a.getFlags(c)
-
 	cfg, err := LoadConfig(a.flags.path)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
@@ -93,8 +81,4 @@ func (a *action) RunUpdate(c *cli.Context) error {
 	}
 
 	return nil
-}
-
-func (a *action) getFlags(c *cli.Context) {
-	a.flags.path = c.String(pathFlag)
 }
