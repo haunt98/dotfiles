@@ -1,5 +1,75 @@
 # CHANGELOG
 
+## v0.2.0 (2021-1-18)
+
+### Added
+
+- feat(config): replace configs path to config
+
+- feat: remove config path completly
+
+- feat: revert use absolute path to copy configs
+
+- feat: remove path flags
+
+- feat: use absolute path to copy configs
+
+- feat: add update cmd
+
+- feat: add update config
+
+- feat: add install config using my own copy pkg
+
+- feat(config): split files and folders
+
+- feat: add config loading
+
+- feat: skeleton install, update command
+
+- feat: skeleton go cli app
+
+### Fixed
+
+- fix(config): correct copy dir
+
+### Others
+
+- chore: add bat config
+
+- chore: cleanup unused config
+
+- build: bumpd copy-go v0.3.0
+
+- chore: remove unused file
+
+- chore(readme): correct github linter badge
+
+- chore(readme): add github badges
+
+- chore: add golang in github action
+
+- chore(readme): add guide
+
+- chore: update from my config
+
+- chore: ignore build file
+
+- chore(config): add stackoverflow comments
+
+- refactor: use remove and copy to reduce boiler plate code
+
+- build: bump copy-go v0.2.0
+
+- chore: update configs
+
+- chore: add gitignore
+
+- chore: add github action linter
+
+- chore: add MIT LICENSE
+
+- chore(changelog): generate v0.1.0
+
 ## v0.1.0 (2021-1-12)
 
 ### Others
