@@ -125,6 +125,7 @@ func removeAndCopy(from, to string, fn copyFn) error {
 }
 
 // replace ~
+// https://stackoverflow.com/a/17609894
 func replaceHomeSymbol(path string) (string, error) {
 	if path == "" || path[0] != homeSymbol {
 		return path, nil
