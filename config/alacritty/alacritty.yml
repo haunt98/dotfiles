@@ -1,0 +1,22 @@
+import:
+  - /home/yoshie/.config/alacritty/dracula.yml
+
+window:
+  dimensions:
+    columns: 80
+    lines: 24
+
+font:
+  normal:
+    family: Agave
+    style: Regular
+  bold:
+    family: Agave
+    style: Bold
+  italic:
+    family: Agave
+    style: Regular
+  bold_italic:
+    family: Agave
+    style: Bold
+  size: 16.0

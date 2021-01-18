@@ -1,0 +1,44 @@
+{
+  "apps": {
+    "nvim": {
+      "files": [
+        {
+          "internal": "config/nvim/init.vim",
+          "external": "~/.config/nvim/init.vim"
+        }
+      ]
+    },
+    "mpv": {
+      "dirs": [
+        {
+          "internal": "config/mpv",
+          "external": "~/.config/mpv"
+        }
+      ]
+    },
+    "alacritty": {
+      "dirs": [
+        {
+          "internal": "config/alacritty",
+          "external": "~/.config/alacritty"
+        }
+      ]
+    },
+    "kitty": {
+      "dirs": [
+        {
+          "internal": "config/kitty",
+          "external": "~/.config/kitty"
+        }
+      ]
+    },
+    "fontconfig": {
+      "dirs": [
+        {
+          "internal": "config/fontconfig",
+          "external": "~/.config/fontconfig"
+        }
+      ]
+    }
+  }
+}
