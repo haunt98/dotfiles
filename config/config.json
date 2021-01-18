@@ -15,6 +15,14 @@
           "external": "~/.config/fontconfig"
         }
       ]
+    },
+    "bat": {
+      "dirs": [
+        {
+          "internal": "config/bat",
+          "external": "~/.config/bat"
+        }
+      ]
     }
   }
 }
