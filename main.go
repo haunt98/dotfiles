@@ -39,7 +39,7 @@ func main() {
 		},
 		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name:  "pathFlag",
+				Name:  pathFlag,
 				Usage: "path to `DOTFILES`",
 			},
 		},

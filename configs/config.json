@@ -1,18 +1,10 @@
 {
   "apps": {
-    "tmux": {
-      "folders": [
-        {
-          "from": "configs/tmux",
-          "to": "~/.config/tmux"
-        }
-      ]
-    },
     "nvim": {
-      "folders": [
+      "files": [
         {
-          "from": "configs/nvim",
-          "to": "~/.config/nvim"
+          "internal": "configs/nvim/init.vim",
+          "external": "~/.config/nvim/init.vim"
         }
       ]
     }
