@@ -1,0 +1,20 @@
+{
+  "apps": {
+    "tmux": {
+      "folders": [
+        {
+          "from": "configs/tmux",
+          "to": "~/.config/tmux"
+        }
+      ]
+    },
+    "nvim": {
+      "folders": [
+        {
+          "from": "configs/nvim",
+          "to": "~/.config/nvim"
+        }
+      ]
+    }
+  }
+}
