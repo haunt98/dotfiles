@@ -65,13 +65,13 @@ func (c *Config) Install() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
 			if err := removeAndCopy(file.Internal, file.External, copy.CopyFile); err != nil {
-				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.Internal, file.External)
+				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.Internal, file.External, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := removeAndCopy(dir.Internal, dir.External, copy.CopyFile); err != nil {
-				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.Internal, dir.External)
+			if err := removeAndCopy(dir.Internal, dir.External, copy.CopyDir); err != nil {
+				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.Internal, dir.External, err)
 			}
 		}
 	}
@@ -84,13 +84,13 @@ func (c *Config) Update() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
 			if err := removeAndCopy(file.External, file.Internal, copy.CopyFile); err != nil {
-				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.External, file.Internal)
+				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.External, file.Internal, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := removeAndCopy(dir.External, dir.Internal, copy.CopyFile); err != nil {
-				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.External, dir.Internal)
+			if err := removeAndCopy(dir.External, dir.Internal, copy.CopyDir); err != nil {
+				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.External, dir.Internal, err)
 			}
 		}
 	}
