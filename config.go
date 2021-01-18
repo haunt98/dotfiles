@@ -13,6 +13,8 @@ import (
 )
 
 const (
+	configFilePath = "config/config.json"
+
 	homeSymbol = '~'
 )
 
@@ -99,7 +101,7 @@ func (c *Config) Update() error {
 }
 
 func getConfigPath(path string) string {
-	return filepath.Join(path, "configs/config.json")
+	return filepath.Join(path, configFilePath)
 }
 
 func removeAndCopy(from, to string, fn copyFn) error {
