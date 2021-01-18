@@ -86,6 +86,28 @@ func (c *Config) Install() error {
 
 // external -> internal
 func (c *Config) Update() error {
+	for _, app := range c.Apps {
+		for _, file := range app.Files {
+			if err := os.RemoveAll(file.Internal); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", file.Internal, err)
+			}
+
+			if err := copy.CopyFile(file.External, file.Internal); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", file.External, file.Internal, err)
+			}
+		}
+
+		for _, dir := range app.Dirs {
+			if err := os.RemoveAll(dir.Internal); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", dir.Internal, err)
+			}
+
+			if err := copy.CopyDir(dir.External, dir.Internal); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", dir.External, dir.Internal, err)
+			}
+		}
+	}
+
 	return nil
 }
 
