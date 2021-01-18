@@ -61,22 +61,44 @@ func LoadConfig(path string) (result Config, err error) {
 func (c *Config) Install() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := os.RemoveAll(file.External); err != nil {
-				return fmt.Errorf("failed to remove %s: %w", file.External, err)
+			internal := filepath.Join(c.Path, file.Internal)
+			internal, err := filepath.Abs(internal)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", internal, err)
 			}
 
-			if err := copy.CopyFile(file.Internal, file.External); err != nil {
-				return fmt.Errorf("failed to copy from %s to %s: %w", file.Internal, file.External, err)
+			external, err := filepath.Abs(file.External)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", external, err)
+			}
+
+			if err := os.RemoveAll(external); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", external, err)
+			}
+
+			if err := copy.CopyFile(internal, external); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", internal, external, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := os.RemoveAll(dir.External); err != nil {
-				return fmt.Errorf("failed to remove %s: %w", dir.External, err)
+			internal := filepath.Join(c.Path, dir.Internal)
+			internal, err := filepath.Abs(internal)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", internal, err)
 			}
 
-			if err := copy.CopyDir(dir.Internal, dir.External); err != nil {
-				return fmt.Errorf("failed to copy from %s to %s: %w", dir.Internal, dir.External, err)
+			external, err := filepath.Abs(dir.External)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", external, err)
+			}
+
+			if err := os.RemoveAll(external); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", external, err)
+			}
+
+			if err := copy.CopyDir(internal, external); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", internal, external, err)
 			}
 		}
 	}
@@ -88,22 +110,44 @@ func (c *Config) Install() error {
 func (c *Config) Update() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := os.RemoveAll(file.Internal); err != nil {
-				return fmt.Errorf("failed to remove %s: %w", file.Internal, err)
+			internal := filepath.Join(c.Path, file.Internal)
+			internal, err := filepath.Abs(internal)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", internal, err)
 			}
 
-			if err := copy.CopyFile(file.External, file.Internal); err != nil {
-				return fmt.Errorf("failed to copy from %s to %s: %w", file.External, file.Internal, err)
+			external, err := filepath.Abs(file.External)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", external, err)
+			}
+
+			if err := os.RemoveAll(internal); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", internal, err)
+			}
+
+			if err := copy.CopyFile(external, internal); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", external, internal, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := os.RemoveAll(dir.Internal); err != nil {
-				return fmt.Errorf("failed to remove %s: %w", dir.Internal, err)
+			internal := filepath.Join(c.Path, dir.Internal)
+			internal, err := filepath.Abs(internal)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", internal, err)
 			}
 
-			if err := copy.CopyDir(dir.External, dir.Internal); err != nil {
-				return fmt.Errorf("failed to copy from %s to %s: %w", dir.External, dir.Internal, err)
+			external, err := filepath.Abs(dir.External)
+			if err != nil {
+				return fmt.Errorf("failed to abs path %s: %w", external, err)
+			}
+
+			if err := os.RemoveAll(internal); err != nil {
+				return fmt.Errorf("failed to remove %s: %w", internal, err)
+			}
+
+			if err := copy.CopyDir(external, internal); err != nil {
+				return fmt.Errorf("failed to copy from %s to %s: %w", external, internal, err)
 			}
 		}
 	}
