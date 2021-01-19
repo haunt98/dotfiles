@@ -100,6 +100,10 @@ func (c *Config) Update() error {
 	return nil
 }
 
+func (c *Config) Clean() error {
+	return nil
+}
+
 func getConfigPath(path string) string {
 	return filepath.Join(path, configFilePath)
 }

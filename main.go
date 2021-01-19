@@ -89,5 +89,14 @@ func (a *action) RunUpdate(c *cli.Context) error {
 }
 
 func (a *action) RunClean(c *cli.Context) error {
+	cfg, err := LoadConfig(curentDir)
+	if err != nil {
+		return fmt.Errorf("failed to load config: %w", err)
+	}
+
+	if err := cfg.Clean(); err != nil {
+		return fmt.Errorf("failed to clean config: %w", err)
+	}
+
 	return nil
 }
