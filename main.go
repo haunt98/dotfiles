@@ -15,7 +15,7 @@ const (
 	updateCommand  = "update"
 	cleanCommand   = "clean"
 
-	curentDir = "."
+	currentDir = "."
 )
 
 func main() {
@@ -63,7 +63,7 @@ func (a *action) Run(c *cli.Context) error {
 }
 
 func (a *action) RunInstall(c *cli.Context) error {
-	cfg, err := LoadConfig(curentDir)
+	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -76,7 +76,7 @@ func (a *action) RunInstall(c *cli.Context) error {
 }
 
 func (a *action) RunUpdate(c *cli.Context) error {
-	cfg, err := LoadConfig(curentDir)
+	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -89,7 +89,7 @@ func (a *action) RunUpdate(c *cli.Context) error {
 }
 
 func (a *action) RunClean(c *cli.Context) error {
-	cfg, err := LoadConfig(curentDir)
+	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
