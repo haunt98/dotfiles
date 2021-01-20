@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v0.3.0 (2021-1-20)
+
+### Added
+
+- feat(config): safe to delete unusedApps directly
+
+- feat(config): config clean remove all unused apps
+
+- feat: add clean config skeleton
+
+- feat: add skeleton clean command
+
+### Others
+
+- refactor: use copier instead copy
+
+- refactor: move fmtErr to global var
+
+- chore: typo currentDir
+
+- chore(config): use Choco cooky font
+
+- refactor: use replaceFile and replaceDir
+
+- chore: remove github super linter
+
+- chore(changelog): generate v0.2.0
+
 ## v0.2.0 (2021-1-18)
 
 ### Added
