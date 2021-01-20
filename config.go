@@ -111,9 +111,7 @@ func (c *Config) Clean() error {
 
 	// removed used apps
 	for name := range c.Apps {
-		if _, ok := unusedDirs[name]; ok {
-			delete(unusedDirs, name)
-		}
+		delete(unusedDirs, name)
 	}
 
 	for dir := range unusedDirs {
