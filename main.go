@@ -18,6 +18,8 @@ const (
 	currentDir = "."
 )
 
+var fmtErr = color.New(color.FgRed)
+
 func main() {
 	a := &action{}
 
@@ -49,7 +51,6 @@ func main() {
 
 	if err := app.Run(os.Args); err != nil {
 		// Highlight error
-		fmtErr := color.New(color.FgRed)
 		fmtErr.Printf("[%s error]: ", appName)
 		fmt.Printf("%s\n", err.Error())
 	}
