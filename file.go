@@ -6,7 +6,7 @@ import (
 	"os/user"
 	"path/filepath"
 
-	"github.com/haunt98/copy-go"
+	copier "github.com/haunt98/copy-go"
 )
 
 const (
@@ -16,11 +16,11 @@ const (
 type copyFn func(from, to string) error
 
 func replaceFile(from, to string) error {
-	return replace(from, to, copy.CopyFile)
+	return replace(from, to, copier.CopyFile)
 }
 
 func replaceDir(from, to string) error {
-	return replace(from, to, copy.CopyDir)
+	return replace(from, to, copier.CopyDir)
 }
 
 func replace(from, to string, fn copyFn) error {
