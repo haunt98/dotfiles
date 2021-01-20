@@ -10,7 +10,8 @@ import (
 )
 
 const (
-	configFilePath = "config/config.json"
+	configDirPath = "config"
+	configFile    = "config.json"
 )
 
 type Config struct {
@@ -94,9 +95,37 @@ func (c *Config) Update() error {
 }
 
 func (c *Config) Clean() error {
+	fileInfos, err := ioutil.ReadDir(configDirPath)
+	if err != nil {
+		return fmt.Errorf("failed to read dir %s: %w", configDirPath, err)
+	}
+
+	unusedDirs := make(map[string]struct{})
+	for _, fileInfo := range fileInfos {
+		if fileInfo.Name() == configFile {
+			continue
+		}
+
+		unusedDirs[fileInfo.Name()] = struct{}{}
+	}
+
+	// removed used apps
+	for name := range c.Apps {
+		if _, ok := unusedDirs[name]; ok {
+			delete(unusedDirs, name)
+		}
+	}
+
+	for dir := range unusedDirs {
+		dirPath := filepath.Join(configDirPath, dir)
+		if err := os.RemoveAll(dirPath); err != nil {
+			return fmt.Errorf("failed to remove %s: %w", dir, err)
+		}
+	}
+
 	return nil
 }
 
 func getConfigPath(path string) string {
-	return filepath.Join(path, configFilePath)
+	return filepath.Join(path, configDirPath, configFile)
 }
