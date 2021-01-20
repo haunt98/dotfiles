@@ -6,16 +6,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"os/user"
 	"path/filepath"
-
-	"github.com/haunt98/copy-go"
 )
 
 const (
 	configFilePath = "config/config.json"
-
-	homeSymbol = '~'
 )
 
 type Config struct {
@@ -32,8 +27,6 @@ type Path struct {
 	Internal string `json:"internal"`
 	External string `json:"external"`
 }
-
-type copyFn func(from, to string) error
 
 // Load config from file
 func LoadConfig(path string) (result Config, err error) {
@@ -66,13 +59,13 @@ func LoadConfig(path string) (result Config, err error) {
 func (c *Config) Install() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := removeAndCopy(file.Internal, file.External, copy.CopyFile); err != nil {
+			if err := replaceFile(file.Internal, file.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.Internal, file.External, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := removeAndCopy(dir.Internal, dir.External, copy.CopyDir); err != nil {
+			if err := replaceDir(dir.Internal, dir.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.Internal, dir.External, err)
 			}
 		}
@@ -85,13 +78,13 @@ func (c *Config) Install() error {
 func (c *Config) Update() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := removeAndCopy(file.External, file.Internal, copy.CopyFile); err != nil {
+			if err := replaceFile(file.External, file.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.External, file.Internal, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := removeAndCopy(dir.External, dir.Internal, copy.CopyDir); err != nil {
+			if err := replaceDir(dir.External, dir.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.External, dir.Internal, err)
 			}
 		}
@@ -106,42 +99,4 @@ func (c *Config) Clean() error {
 
 func getConfigPath(path string) string {
 	return filepath.Join(path, configFilePath)
-}
-
-func removeAndCopy(from, to string, fn copyFn) error {
-	newFrom, err := replaceHomeSymbol(from)
-	if err != nil {
-		return fmt.Errorf("failed to replace home symbol %s: %w", from, err)
-	}
-
-	newTo, err := replaceHomeSymbol(to)
-	if err != nil {
-		return fmt.Errorf("failed to replace home symbol %s: %w", to, err)
-	}
-
-	if err := os.RemoveAll(newTo); err != nil {
-		return fmt.Errorf("failed to remove %s: %w", newTo, err)
-	}
-
-	if err := fn(newFrom, newTo); err != nil {
-		return fmt.Errorf("failed to copy from %s to %s: %w", newFrom, newTo, err)
-	}
-
-	return nil
-}
-
-// replace ~
-// https://stackoverflow.com/a/17609894
-func replaceHomeSymbol(path string) (string, error) {
-	if path == "" || path[0] != homeSymbol {
-		return path, nil
-	}
-
-	currentUser, err := user.Current()
-	if err != nil {
-		return "", err
-	}
-
-	newPath := filepath.Join(currentUser.HomeDir, path[1:])
-	return newPath, nil
 }
