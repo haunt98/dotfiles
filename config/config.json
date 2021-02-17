@@ -23,14 +23,6 @@
           "external": "~/.config/bat"
         }
       ]
-    },
-    "fish": {
-      "files": [
-        {
-          "internal": "config/fish/config.fish",
-          "external": "~/.config/fish/config.fish"
-        }
-      ]
     }
   }
 }
