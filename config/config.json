@@ -8,19 +8,19 @@
         }
       ]
     },
-    "fontconfig": {
-      "dirs": [
-        {
-          "internal": "config/fontconfig",
-          "external": "~/.config/fontconfig"
-        }
-      ]
-    },
     "bat": {
       "dirs": [
         {
           "internal": "config/bat",
           "external": "~/.config/bat"
+        }
+      ]
+    },
+    "tmux": {
+      "files": [
+        {
+          "internal": "config/tmux/tmux.conf",
+          "external": "~/.tmux.conf"
         }
       ]
     }

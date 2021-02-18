@@ -7,6 +7,12 @@ set scrolloff=4
 set virtualedit=block
 set whichwrap=<,>,[,]
 
+" True color
+" https://gist.github.com/XVilka/8346728
+if has('termguicolors')
+	set termguicolors
+endif
+
 " install xclip
 set clipboard+=unnamedplus
 
@@ -20,7 +26,11 @@ let g:go_version_warning = 0
 
 " vim-plug
 call plug#begin()
+Plug 'lifepillar/vim-solarized8'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
 Plug 'fatih/vim-go'
 call plug#end()
+
+set background=dark
+colorscheme solarized8
