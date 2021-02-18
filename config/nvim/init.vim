@@ -9,9 +9,7 @@ set whichwrap=<,>,[,]
 
 " True color
 " https://gist.github.com/XVilka/8346728
-if has('termguicolors')
-	set termguicolors
-endif
+set termguicolors
 
 " install xclip
 set clipboard+=unnamedplus
