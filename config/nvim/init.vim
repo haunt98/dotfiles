@@ -19,7 +19,7 @@ set rtp+=~/.fzf
 
 " plugins config
 let g:go_fillstruct_mode = 'gopls'
-let g:go_fmt_command='gofumports'
+let g:go_fmt_command='goimports'
 let g:go_version_warning = 0
 
 " vim-plug
