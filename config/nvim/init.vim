@@ -24,6 +24,7 @@ let g:go_version_warning = 0
 
 " vim-plug
 call plug#begin()
+Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
