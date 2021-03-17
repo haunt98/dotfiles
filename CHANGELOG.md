@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.5.0 (2021-3-17)
+
+### Added
+
+- feat: replace ioutil.ReadAll with os pkg
+
+### Others
+
+- build: bump copy-go v0.4.0
+
+- chore(changelog): generate v0.4.0
+
 ## v0.4.0 (2021-3-17)
 
 ### Others
