@@ -2,13 +2,13 @@
 
 [![Go](https://github.com/haunt98/dotfiles/workflows/Go/badge.svg?branch=main)](https://github.com/actions/setup-go)
 
-Install:
+## Install
 
 ```sh
 go build
 ```
 
-Usage:
+## Usage
 
 ```sh
 # Install (replace user config with saved config)
