@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 )
@@ -32,19 +31,14 @@ type Path struct {
 // Load config from file
 func LoadConfig(path string) (result Config, err error) {
 	configPath := getConfigPath(path)
-	f, err := os.Open(configPath)
+	bytes, err := os.ReadFile(configPath)
 	if err != nil {
-		// https://github.com/golang/go/blob/3e1e13ce6d1271f49f3d8ee359689145a6995bad/src/os/error.go#L90-L91
 		if errors.Is(err, os.ErrNotExist) {
 			err = fmt.Errorf("file not exist %s: %w", configPath, err)
 			return
 		}
-	}
-	defer f.Close()
 
-	bytes, err := ioutil.ReadAll(f)
-	if err != nil {
-		err = fmt.Errorf("failed to read %s: %w", configPath, err)
+		err = fmt.Errorf("failed to read file%s: %w", configPath, err)
 		return
 	}
 
@@ -95,25 +89,27 @@ func (c *Config) Update() error {
 }
 
 func (c *Config) Clean() error {
-	fileInfos, err := ioutil.ReadDir(configDirPath)
+	files, err := os.ReadDir(configDirPath)
 	if err != nil {
 		return fmt.Errorf("failed to read dir %s: %w", configDirPath, err)
 	}
 
+	// get all dirs inside config dir
 	unusedDirs := make(map[string]struct{})
-	for _, fileInfo := range fileInfos {
-		if fileInfo.Name() == configFile {
+	for _, file := range files {
+		if file.Name() == configFile {
 			continue
 		}
 
-		unusedDirs[fileInfo.Name()] = struct{}{}
+		unusedDirs[file.Name()] = struct{}{}
 	}
 
-	// removed used apps
+	// removed used dirs
 	for name := range c.Apps {
 		delete(unusedDirs, name)
 	}
 
+	// delete ununsed dirs to save some space
 	for dir := range unusedDirs {
 		dirPath := filepath.Join(configDirPath, dir)
 		if err := os.RemoveAll(dirPath); err != nil {
