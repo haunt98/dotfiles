@@ -18,9 +18,8 @@ set clipboard+=unnamedplus
 set rtp+=~/.fzf
 
 " plugins config
-let g:go_fillstruct_mode = 'gopls'
 let g:go_fmt_command='goimports'
-let g:go_version_warning = 0
+let g:solarized_italics=0
 
 " vim-plug
 call plug#begin()
@@ -32,4 +31,4 @@ Plug 'fatih/vim-go'
 call plug#end()
 
 set background=dark
-colorscheme solarized8
+colorscheme solarized8_flat
