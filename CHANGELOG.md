@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## v0.4.0 (2021-3-17)
+
+### Others
+
+- chore(readme): better install usage
+
+- chore: bump go 1.16 in github action
+
+- build: bump go 1.16
+
+- chore(config): update nvim
+
+- build: update go.mod
+
+- build: update go.mod
+
+- chore: remove old install script
+
+- chore(configs): add vim-polygot
+
+- chore(config): good old goimports
+
+- chore: use bat solarized
+
+- chore: update nvim config
+
+- chore: update nvim, tmux; remove fontconfig
+
+- chore: ignore .bak files
+
+- chore: remove fish config
+
+- chore: add fish config
+
+- chore: ignore node package.json
+
+- chore(nvim): ignore vim-go warning
+
+- build: update go.mod
+
+- chore(changelog): generate v0.3.0
+
 ## v0.3.0 (2021-1-20)
 
 ### Added
