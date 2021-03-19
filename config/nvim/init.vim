@@ -11,17 +11,18 @@ set whichwrap=<,>,[,]
 " https://gist.github.com/XVilka/8346728
 set termguicolors
 
-" install xclip
+" Install xclip or xsel
 set clipboard+=unnamedplus
 
 " FZF
 set rtp+=~/.fzf
 
-" plugins config
+" Plugins config
 let g:go_fmt_command='goimports'
 let g:solarized_italics=0
 
 " vim-plug
+" https://github.com/junegunn/vim-plug
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
