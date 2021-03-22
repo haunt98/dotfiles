@@ -10,10 +10,13 @@ set whichwrap=<,>,[,]
 " True color
 " https://gist.github.com/XVilka/8346728
 if (empty($TMUX))
-  if (has("termguicolors"))
+  if (has('termguicolors'))
     set termguicolors
   endif
 endif
+
+" Disable cursor styling
+set guicursor=
 
 " Install xclip or xsel
 set clipboard+=unnamedplus
