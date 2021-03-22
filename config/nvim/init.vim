@@ -44,4 +44,4 @@ Plug 'fatih/vim-go'
 call plug#end()
 
 set background=dark
-colorscheme solarized8_flat
+colorscheme onedark
