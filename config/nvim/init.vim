@@ -9,7 +9,11 @@ set whichwrap=<,>,[,]
 
 " True color
 " https://gist.github.com/XVilka/8346728
-set termguicolors
+if (empty($TMUX))
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 " Install xclip or xsel
 set clipboard+=unnamedplus
@@ -24,11 +28,19 @@ let g:solarized_italics=0
 " vim-plug
 " https://github.com/junegunn/vim-plug
 call plug#begin()
+
+" Should use
 Plug 'sheerun/vim-polyglot'
-Plug 'lifepillar/vim-solarized8'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
+
+" Colorschemes
+Plug 'lifepillar/vim-solarized8'
+Plug 'joshdick/onedark.vim'
+
+" Languages
 Plug 'fatih/vim-go'
+
 call plug#end()
 
 set background=dark
