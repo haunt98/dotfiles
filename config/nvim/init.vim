@@ -36,6 +36,7 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
+Plug 'vim-airline/vim-airline'
 
 " Colorschemes
 Plug 'lifepillar/vim-solarized8'
