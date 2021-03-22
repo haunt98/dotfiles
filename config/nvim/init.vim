@@ -25,7 +25,8 @@ set clipboard+=unnamedplus
 set rtp+=~/.fzf
 
 " Plugins config
-let g:go_fmt_command='goimports'
+let g:go_fmt_command='gopls'
+let g:go_gopls_gofumpt=1
 let g:solarized_italics=0
 
 " vim-plug
