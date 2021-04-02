@@ -51,6 +51,14 @@
           "external": "~/.config/i3status/config"
         }
       ]
+    },
+    "rofi": {
+      "files": [
+        {
+          "internal": "config/rofi/config.rasi",
+          "external": "~/.config/rofi/config.rasi"
+        }
+      ]
     }
   }
 }
