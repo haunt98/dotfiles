@@ -35,6 +35,14 @@
           "external": "~/.config/alacritty/one-dark.yml"
         }
       ]
+    },
+    "i3": {
+      "files": [
+        {
+          "internal": "config/i3/config",
+          "external": "~/.config/i3/config"
+        }
+      ]
     }
   }
 }
