@@ -43,6 +43,14 @@
           "external": "~/.config/i3/config"
         }
       ]
+    },
+    "i3status": {
+      "files": [
+        {
+          "internal": "config/i3status/config",
+          "external": "~/.config/i3status/config"
+        }
+      ]
     }
   }
 }
