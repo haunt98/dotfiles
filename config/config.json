@@ -23,6 +23,14 @@
           "external": "~/.tmux.conf"
         }
       ]
+    },
+    "alacritty": {
+      "files": [
+        {
+          "internal": "config/alacritty/alacritty.yml",
+          "external": "~/.config/alacritty/alacritty.yml"
+        }
+      ]
     }
   }
 }
