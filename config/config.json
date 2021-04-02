@@ -29,6 +29,10 @@
         {
           "internal": "config/alacritty/alacritty.yml",
           "external": "~/.config/alacritty/alacritty.yml"
+        },
+        {
+          "internal": "config/alacritty/one-dark.yml",
+          "external": "~/.config/alacritty/one-dark.yml"
         }
       ]
     }

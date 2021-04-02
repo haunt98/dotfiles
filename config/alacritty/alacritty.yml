@@ -1,3 +1,6 @@
+import:
+  - ~/.config/alacritty/one-dark.yml
+
 font:
   normal:
     family: Fira Code
