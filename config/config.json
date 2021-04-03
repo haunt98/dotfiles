@@ -59,6 +59,14 @@
           "external": "~/.config/rofi/config.rasi"
         }
       ]
+    },
+    "xinit": {
+      "files": [
+        {
+          "internal": "config/xinit/xinitrc",
+          "external": "~/.xinitrc"
+        }
+      ]
     }
   }
 }
