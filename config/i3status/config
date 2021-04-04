@@ -6,11 +6,11 @@ general {
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
-order += "memory"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "Wifi: %quality at %essid"
+        format_up = "Wifi: %essid"
         format_down = "Wifi: down"
 }
 
@@ -23,10 +23,10 @@ battery all {
         format = "%status %percentage %remaining"
 }
 
-memory {
-        format = "Used %used Avail %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+volume master {
+        format = "Sound: %volume"
+        format_muted = "Sound: muted (%volume)"
+        device = "pulse"
 }
 
 tztime local {
