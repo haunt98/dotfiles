@@ -9,7 +9,7 @@ font pango:Cascadia Code 12
 exec --no-startup-id feh --no-fehbg --bg-fill --randomize /usr/share/backgrounds/archlinux/* 
 
 # i3lock
-bindsym $mod+l exec --no-startup-id i3lock
+bindsym $mod+l exec --no-startup-id i3lock -e -c 000000
 
 # adjust volume
 set $refresh_i3status killall -SIGUSR1 i3status
