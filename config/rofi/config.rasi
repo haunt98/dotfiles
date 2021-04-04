@@ -1,3 +1,4 @@
 configuration {
+	modi: "window,drun,combi";
 	font: "Cascadia Code 12";
 }
