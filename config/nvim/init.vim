@@ -27,6 +27,7 @@ set rtp+=~/.fzf
 " Plugins config
 let g:go_fmt_command='gopls'
 let g:go_gopls_gofumpt=1
+let g:lightline={'colorscheme':'onedark'}
 
 " vim-plug
 " https://github.com/junegunn/vim-plug
@@ -36,7 +37,7 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
