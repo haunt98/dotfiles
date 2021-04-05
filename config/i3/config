@@ -8,6 +8,10 @@ font pango:Cascadia Code 12
 # https://wiki.archlinux.org/index.php/Feh
 exec --no-startup-id feh --no-fehbg --bg-fill --randomize /usr/share/backgrounds/archlinux/* 
 
+# redshift
+# https://wiki.archlinux.org/index.php/Redshift
+exec --no-startup-id redshift-gtk
+
 # i3lock
 bindsym $mod+l exec --no-startup-id i3lock -e -c 000000
 

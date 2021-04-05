@@ -67,6 +67,14 @@
           "external": "~/.xinitrc"
         }
       ]
+    },
+    "redshift": {
+      "files": [
+        {
+          "internal": "config/redshift/redshift.conf",
+          "external": "~/.config/redshift/redshift.conf"
+        }
+      ]
     }
   }
 }
