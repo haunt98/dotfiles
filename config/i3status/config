@@ -1,6 +1,11 @@
 general {
-        colors = true
         interval = 5
+
+        # https://github.com/joshdick/onedark.vim
+        colors = true
+        color_good = "#98C379"
+        color_degraded = "#E5C07B"
+        color_bad = "#E06C75"
 }
 
 order += "wireless _first_"
