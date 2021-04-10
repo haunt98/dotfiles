@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# Window
+*.exe
+
 # IntelliJ
 .idea/
 
@@ -11,8 +14,3 @@
 node_modules/
 package.json
 package-lock.json
-
-# Go
-dotfiles
-
-*.bak

@@ -8,6 +8,14 @@
         }
       ]
     },
+    "vim": {
+      "files": [
+        {
+          "internal": "config/nvim/init.vim",
+          "external": "~/.vimrc"
+        }
+      ]
+    },
     "bat": {
       "dirs": [
         {
