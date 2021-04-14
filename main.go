@@ -19,11 +19,17 @@ const (
 	currentDir = "."
 )
 
-// denyOSes contains OS which is not supported
-// go tool dist list
-var denyOSes = map[string]struct{}{
-	"windows": struct{}{},
-}
+var (
+	installAliases = []string{"i"}
+	updateAliases  = []string{"u"}
+	cleanAliases   = []string{"c"}
+
+	// denyOSes contains OS which is not supported
+	// go tool dist list
+	denyOSes = map[string]struct{}{
+		"windows": struct{}{},
+	}
+)
 
 func main() {
 	// Prevent running at runtime
@@ -40,19 +46,19 @@ func main() {
 		Commands: []*cli.Command{
 			{
 				Name:    installCommand,
-				Aliases: []string{"i"},
+				Aliases: installAliases,
 				Usage:   "install user configs from dotfiles",
 				Action:  a.RunInstall,
 			},
 			{
 				Name:    updateCommand,
-				Aliases: []string{"u"},
+				Aliases: installAliases,
 				Usage:   "update dotfiles from user configs",
 				Action:  a.RunUpdate,
 			},
 			{
 				Name:    cleanCommand,
-				Aliases: []string{"c"},
+				Aliases: installAliases,
 				Usage:   "clean unused dotfiles",
 				Action:  a.RunClean,
 			},
