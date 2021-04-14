@@ -52,13 +52,13 @@ func main() {
 			},
 			{
 				Name:    updateCommand,
-				Aliases: installAliases,
+				Aliases: updateAliases,
 				Usage:   "update dotfiles from user configs",
 				Action:  a.RunUpdate,
 			},
 			{
 				Name:    cleanCommand,
-				Aliases: installAliases,
+				Aliases: cleanAliases,
 				Usage:   "clean unused dotfiles",
 				Action:  a.RunClean,
 			},
