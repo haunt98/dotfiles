@@ -1,5 +1,83 @@
 # CHANGELOG
 
+## v0.6.0 (2021-4-14)
+
+### Added
+
+- feat: use my own color pkg to wrap fatih/color (#3)
+
+- feat: prevent define os running at runtime (#2)
+
+### Others
+
+- chore: only run github action on main or pull request (#4)
+
+- chore(config): split vim and neovim config, keep it the same for now
+
+- chore(confg): add vimrc
+
+- build: update go.mod
+
+- chore: update latest go in github action
+
+- chore(config): i3status onedark color
+
+- chore(config): use lightline instead of airline
+
+- chore(config): add fcitx
+
+- chore(config): add redshift
+
+- chore(config): aadjust brightness in i3
+
+- chore(config): i3lock with black color
+
+- chore(config): add feh and update rofi
+
+- chore(config): simplify i3
+
+- chore(config): add volume i3status
+
+- chore(config): better i3status
+
+- chore(config): add xinit
+
+- chore(config): use cascadia code to look good on my bad laptop
+
+- chore(config): add rofi config
+
+- chore(config): add i3status config
+
+- chore(config): add i3 config
+
+- chore(config): use TwoDark for bat
+
+- chore(config): remove neovim solarized
+
+- chore(config): add one-dark color for alacritty
+
+- chore(config): add alacritty config
+
+- chore(config): stricter go format
+
+- chore(config): use airline for neovim
+
+- chore(config): disable cursor style in neovim
+
+- chore(config): switch neovim to onedark
+
+- chore(config): add onedark to vim
+
+- chore(config): tmux painless config
+
+- chore(config): better comment config neovim
+
+- chore(config): tmux plugin manager
+
+- chore(config): use back C-b for tmux
+
+- chore(changelog): generate v0.5.0
+
 ## v0.5.0 (2021-3-17)
 
 ### Added
