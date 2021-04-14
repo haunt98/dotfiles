@@ -1,6 +1,12 @@
 name: Go
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -12,7 +18,7 @@ jobs:
         with:
           go-version: "~1.16"
       - run: go test -race ./...
-  build-gotip:
+  build:
     name: Build
     runs-on: ubuntu-latest
     steps:
