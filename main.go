@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/fatih/color"
+	"github.com/haunt98/color"
 	"github.com/urfave/cli/v2"
 )
 
@@ -19,22 +19,16 @@ const (
 	currentDir = "."
 )
 
-var (
-	fmtErr    = color.New(color.FgRed)
-	headerErr = fmt.Sprintf("[%s error]: ", appName)
-
-	// denyOSes contains OS which is not supported
-	// go tool dist list
-	denyOSes = map[string]struct{}{
-		"windows": struct{}{},
-	}
-)
+// denyOSes contains OS which is not supported
+// go tool dist list
+var denyOSes = map[string]struct{}{
+	"windows": struct{}{},
+}
 
 func main() {
 	// Prevent running at runtime
 	if _, ok := denyOSes[runtime.GOOS]; ok {
-		fmtErr.Print(headerErr)
-		fmt.Printf("OS %s is not supported right now\n", runtime.GOOS)
+		color.PrintAppError(appName, fmt.Sprintf("OS %s is not supported right now", runtime.GOOS))
 		return
 	}
 
@@ -67,8 +61,7 @@ func main() {
 	}
 
 	if err := app.Run(os.Args); err != nil {
-		fmtErr.Print(headerErr)
-		fmt.Printf("%s\n", err.Error())
+		color.PrintAppError(appName, err.Error())
 	}
 }
 
