@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"runtime"
 
 	"github.com/fatih/color"
 	"github.com/urfave/cli/v2"
@@ -18,9 +19,25 @@ const (
 	currentDir = "."
 )
 
-var fmtErr = color.New(color.FgRed)
+var (
+	fmtErr    = color.New(color.FgRed)
+	headerErr = fmt.Sprintf("[%s error]: ", appName)
+
+	// denyOSes contains OS which is not supported
+	// go tool dist list
+	denyOSes = map[string]struct{}{
+		"windows": struct{}{},
+	}
+)
 
 func main() {
+	// Prevent running at runtime
+	if _, ok := denyOSes[runtime.GOOS]; ok {
+		fmtErr.Print(headerErr)
+		fmt.Printf("OS %s is not supported right now\n", runtime.GOOS)
+		return
+	}
+
 	a := &action{}
 
 	app := &cli.App{
@@ -50,8 +67,7 @@ func main() {
 	}
 
 	if err := app.Run(os.Args); err != nil {
-		// Highlight error
-		fmtErr.Printf("[%s error]: ", appName)
+		fmtErr.Print(headerErr)
 		fmt.Printf("%s\n", err.Error())
 	}
 }
