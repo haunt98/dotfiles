@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"runtime"
 
@@ -102,11 +103,13 @@ func (a *action) RunHelp(c *cli.Context) error {
 
 func (a *action) RunInstall(c *cli.Context) error {
 	a.getFlags(c)
+	a.log("start %s\n", installCommand)
 
 	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
+	a.log("config %+v\n", cfg)
 
 	if err := cfg.Install(); err != nil {
 		return fmt.Errorf("failed to install config: %w", err)
@@ -117,11 +120,13 @@ func (a *action) RunInstall(c *cli.Context) error {
 
 func (a *action) RunUpdate(c *cli.Context) error {
 	a.getFlags(c)
+	a.log("start %s\n", updateCommand)
 
 	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
+	a.log("config %+v\n", cfg)
 
 	if err := cfg.Update(); err != nil {
 		return fmt.Errorf("failed to update config: %w", err)
@@ -132,11 +137,13 @@ func (a *action) RunUpdate(c *cli.Context) error {
 
 func (a *action) RunClean(c *cli.Context) error {
 	a.getFlags(c)
+	a.log("start %s\n", cleanCommand)
 
 	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
+	a.log("config %+v\n", cfg)
 
 	if err := cfg.Clean(); err != nil {
 		return fmt.Errorf("failed to clean config: %w", err)
@@ -147,4 +154,10 @@ func (a *action) RunClean(c *cli.Context) error {
 
 func (a *action) getFlags(c *cli.Context) {
 	a.flags.verbose = c.Bool(verboseFlag)
+}
+
+func (a *action) log(format string, v ...interface{}) {
+	if a.flags.verbose {
+		log.Printf(format, v...)
+	}
 }
