@@ -81,7 +81,7 @@ func main() {
 				Action:  a.RunClean,
 			},
 		},
-		Action: a.Run,
+		Action: a.RunHelp,
 	}
 
 	if err := app.Run(os.Args); err != nil {
@@ -92,7 +92,7 @@ func main() {
 type action struct{}
 
 // Show help by default
-func (a *action) Run(c *cli.Context) error {
+func (a *action) RunHelp(c *cli.Context) error {
 	return cli.ShowAppHelp(c)
 }
 
