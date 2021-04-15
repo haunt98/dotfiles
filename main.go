@@ -89,7 +89,11 @@ func main() {
 	}
 }
 
-type action struct{}
+type action struct {
+	flags struct {
+		verbose bool
+	}
+}
 
 // Show help by default
 func (a *action) RunHelp(c *cli.Context) error {
@@ -97,6 +101,8 @@ func (a *action) RunHelp(c *cli.Context) error {
 }
 
 func (a *action) RunInstall(c *cli.Context) error {
+	a.getFlags(c)
+
 	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
@@ -110,6 +116,8 @@ func (a *action) RunInstall(c *cli.Context) error {
 }
 
 func (a *action) RunUpdate(c *cli.Context) error {
+	a.getFlags(c)
+
 	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
@@ -123,6 +131,8 @@ func (a *action) RunUpdate(c *cli.Context) error {
 }
 
 func (a *action) RunClean(c *cli.Context) error {
+	a.getFlags(c)
+
 	cfg, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
@@ -133,4 +143,8 @@ func (a *action) RunClean(c *cli.Context) error {
 	}
 
 	return nil
+}
+
+func (a *action) getFlags(c *cli.Context) {
+	a.flags.verbose = c.Bool(verboseFlag)
 }
