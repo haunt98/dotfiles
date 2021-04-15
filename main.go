@@ -16,6 +16,7 @@ const (
 
 	// flags
 	verboseFlag = "verbose"
+	dryRunFlag  = "dry-run"
 
 	// commands
 	installCommand = "install"
@@ -24,6 +25,7 @@ const (
 
 	// usages
 	verboseUsage = "show what is going on"
+	dryRunUsage  = "demo mode without actually changing anything"
 	installUsage = "install user configs from dotfiles"
 	updateUsage  = "update dotfiles from user configs"
 	cleanUsage   = "clean unused dotfiles"
@@ -66,6 +68,10 @@ func main() {
 						Name:  verboseFlag,
 						Usage: verboseUsage,
 					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
 				},
 				Action: a.RunInstall,
 			},
@@ -73,13 +79,33 @@ func main() {
 				Name:    updateCommand,
 				Aliases: updateAliases,
 				Usage:   updateUsage,
-				Action:  a.RunUpdate,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
+				},
+				Action: a.RunUpdate,
 			},
 			{
 				Name:    cleanCommand,
 				Aliases: cleanAliases,
 				Usage:   cleanUsage,
-				Action:  a.RunClean,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
+				},
+				Action: a.RunClean,
 			},
 		},
 		Action: a.RunHelp,
