@@ -10,16 +10,28 @@ import (
 )
 
 const (
-	appName = "dotfiles"
+	appName  = "dotfiles"
+	appUsage = "managing dotfiles"
 
+	// flags
+	verboseFlag = "verbose"
+
+	// commands
 	installCommand = "install"
 	updateCommand  = "update"
 	cleanCommand   = "clean"
+
+	// usages
+	verboseUsage = "show what is going on"
+	installUsage = "install user configs from dotfiles"
+	updateUsage  = "update dotfiles from user configs"
+	cleanUsage   = "clean unused dotfiles"
 
 	currentDir = "."
 )
 
 var (
+	// aliases
 	installAliases = []string{"i"}
 	updateAliases  = []string{"u"}
 	cleanAliases   = []string{"c"}
@@ -42,24 +54,30 @@ func main() {
 
 	app := &cli.App{
 		Name:  appName,
-		Usage: "managing dotfiles",
+		Usage: appUsage,
 		Commands: []*cli.Command{
 			{
 				Name:    installCommand,
 				Aliases: installAliases,
-				Usage:   "install user configs from dotfiles",
-				Action:  a.RunInstall,
+				Usage:   installUsage,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+				},
+				Action: a.RunInstall,
 			},
 			{
 				Name:    updateCommand,
 				Aliases: updateAliases,
-				Usage:   "update dotfiles from user configs",
+				Usage:   updateUsage,
 				Action:  a.RunUpdate,
 			},
 			{
 				Name:    cleanCommand,
 				Aliases: cleanAliases,
-				Usage:   "clean unused dotfiles",
+				Usage:   cleanUsage,
 				Action:  a.RunClean,
 			},
 		},
