@@ -15,7 +15,13 @@ const (
 	configFile    = "config.json"
 )
 
-type Config struct {
+type Config interface {
+	Install() error
+	Update() error
+	Clearn() error
+}
+
+type config struct {
 	// Read from file
 	Apps map[string]App `json:"apps"`
 }
@@ -31,29 +37,27 @@ type Path struct {
 }
 
 // Load config from file
-func LoadConfig(path string) (result Config, err error) {
+func LoadConfig(path string) (*config, error) {
 	configPath := getConfigPath(path)
 	bytes, err := os.ReadFile(configPath)
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
-			err = fmt.Errorf("file not exist %s: %w", configPath, err)
-			return
+			return nil, fmt.Errorf("file not exist %s: %w", configPath, err)
 		}
 
-		err = fmt.Errorf("failed to read file%s: %w", configPath, err)
-		return
+		return nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
 	}
 
-	if err = json.Unmarshal(bytes, &result); err != nil {
-		err = fmt.Errorf("failed to unmarshal: %w", err)
-		return
+	var c config
+	if err = json.Unmarshal(bytes, &c); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	return
+	return &c, nil
 }
 
 // internal -> external
-func (c *Config) Install() error {
+func (c *config) Install() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
 			if err := copy.Replace(file.Internal, file.External); err != nil {
@@ -72,7 +76,7 @@ func (c *Config) Install() error {
 }
 
 // external -> internal
-func (c *Config) Update() error {
+func (c *config) Update() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
 			if err := copy.Replace(file.External, file.Internal); err != nil {
@@ -90,7 +94,7 @@ func (c *Config) Update() error {
 	return nil
 }
 
-func (c *Config) Clean() error {
+func (c *config) Clean() error {
 	files, err := os.ReadDir(configDirPath)
 	if err != nil {
 		return fmt.Errorf("failed to read dir %s: %w", configDirPath, err)
