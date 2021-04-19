@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"github.com/haunt98/copy-go"
 )
 
 const (
@@ -54,13 +56,13 @@ func LoadConfig(path string) (result Config, err error) {
 func (c *Config) Install() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := replaceFile(file.Internal, file.External); err != nil {
+			if err := copy.Replace(file.Internal, file.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.Internal, file.External, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := replaceDir(dir.Internal, dir.External); err != nil {
+			if err := copy.Replace(dir.Internal, dir.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.Internal, dir.External, err)
 			}
 		}
@@ -73,13 +75,13 @@ func (c *Config) Install() error {
 func (c *Config) Update() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := replaceFile(file.External, file.Internal); err != nil {
+			if err := copy.Replace(file.External, file.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.External, file.Internal, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := replaceDir(dir.External, dir.Internal); err != nil {
+			if err := copy.Replace(dir.External, dir.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.External, dir.Internal, err)
 			}
 		}
