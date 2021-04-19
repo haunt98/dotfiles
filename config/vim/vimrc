@@ -44,7 +44,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 
 " Languages
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'tag': '*'}
 
 call plug#end()
 
