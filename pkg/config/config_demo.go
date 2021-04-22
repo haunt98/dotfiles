@@ -29,5 +29,14 @@ func (cd *configDemo) Update() error {
 }
 
 func (cd *configDemo) Clean() error {
+	unusedDirs, err := getUnusedDirs(cd.Apps)
+	if err != nil {
+		return err
+	}
+
+	for dir := range unusedDirs {
+		fmt.Printf("Remove %s\n", dir)
+	}
+
 	return nil
 }

@@ -91,25 +91,9 @@ func (c *config) Update() error {
 
 // Clean remove unused config inside config dir
 func (c *config) Clean() error {
-	files, err := os.ReadDir(configDirPath)
+	unusedDirs, err := getUnusedDirs(c.Apps)
 	if err != nil {
-		return fmt.Errorf("failed to read dir %s: %w", configDirPath, err)
-	}
-
-	// Get all dirs inside config dir
-	unusedDirs := make(map[string]struct{})
-	for _, file := range files {
-		// Ignore config file
-		if file.Name() == configFile {
-			continue
-		}
-
-		unusedDirs[file.Name()] = struct{}{}
-	}
-
-	// Removed used dirs
-	for name := range c.Apps {
-		delete(unusedDirs, name)
+		return err
 	}
 
 	// Delete ununsed dirs to save some space
@@ -125,4 +109,29 @@ func (c *config) Clean() error {
 
 func getConfigPath(path string) string {
 	return filepath.Join(path, configDirPath, configFile)
+}
+
+func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
+	files, err := os.ReadDir(configDirPath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read dir %s: %w", configDirPath, err)
+	}
+
+	// Get all dirs inside config dir
+	unusedDirs := make(map[string]struct{})
+	for _, file := range files {
+		// Ignore config file
+		if file.Name() == configFile {
+			continue
+		}
+
+		unusedDirs[file.Name()] = struct{}{}
+	}
+
+	// Removed used dirs
+	for name := range apps {
+		delete(unusedDirs, name)
+	}
+
+	return unusedDirs, nil
 }
