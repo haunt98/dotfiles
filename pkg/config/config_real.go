@@ -27,8 +27,7 @@ type configApps struct {
 
 // Read from file
 type App struct {
-	Files []Path `json:"files"`
-	Dirs  []Path `json:"dirs"`
+	Paths []Path `json:"paths"`
 }
 
 type Path struct {
@@ -67,15 +66,9 @@ func LoadConfig(path string) (*config, *configDemo, error) {
 // internal -> external
 func (c *config) Install() error {
 	for _, app := range c.Apps {
-		for _, file := range app.Files {
+		for _, file := range app.Paths {
 			if err := copy.Replace(file.Internal, file.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.Internal, file.External, err)
-			}
-		}
-
-		for _, dir := range app.Dirs {
-			if err := copy.Replace(dir.Internal, dir.External); err != nil {
-				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.Internal, dir.External, err)
 			}
 		}
 	}
@@ -86,15 +79,9 @@ func (c *config) Install() error {
 // external -> internal
 func (c *config) Update() error {
 	for _, app := range c.Apps {
-		for _, file := range app.Files {
+		for _, file := range app.Paths {
 			if err := copy.Replace(file.External, file.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.External, file.Internal, err)
-			}
-		}
-
-		for _, dir := range app.Dirs {
-			if err := copy.Replace(dir.External, dir.Internal); err != nil {
-				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.External, dir.Internal, err)
 			}
 		}
 	}
