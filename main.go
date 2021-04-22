@@ -7,6 +7,7 @@ import (
 	"runtime"
 
 	"github.com/haunt98/color"
+	"github.com/haunt98/dotfiles/pkg/config"
 	"github.com/urfave/cli/v2"
 )
 
@@ -131,7 +132,7 @@ func (a *action) RunInstall(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", installCommand)
 
-	cfg, _, err := LoadConfig(currentDir)
+	cfg, _, err := config.LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -148,7 +149,7 @@ func (a *action) RunUpdate(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", updateCommand)
 
-	cfg, _, err := LoadConfig(currentDir)
+	cfg, _, err := config.LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -165,7 +166,7 @@ func (a *action) RunClean(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", cleanCommand)
 
-	cfg, _, err := LoadConfig(currentDir)
+	cfg, _, err := config.LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
