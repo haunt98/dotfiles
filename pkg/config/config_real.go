@@ -107,6 +107,10 @@ func (c *config) Clean() error {
 	return nil
 }
 
+func (c *config) Compare() error {
+	return nil
+}
+
 func getConfigPath(path string) string {
 	return filepath.Join(path, configDirPath, configFile)
 }
