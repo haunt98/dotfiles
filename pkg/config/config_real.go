@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"encoding/json"
@@ -6,18 +6,26 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"github.com/haunt98/copy-go"
 )
 
 const (
-	configDirPath = "config"
-	configFile    = "config.json"
+	configDirPath = "data"
+	configFile    = "data.json"
 )
 
-type Config struct {
-	// Read from file
+type config struct {
+	configApps
+}
+
+var _ Config = (*config)(nil)
+
+type configApps struct {
 	Apps map[string]App `json:"apps"`
 }
 
+// Read from file
 type App struct {
 	Files []Path `json:"files"`
 	Dirs  []Path `json:"dirs"`
@@ -28,39 +36,45 @@ type Path struct {
 	External string `json:"external"`
 }
 
-// Load config from file
-func LoadConfig(path string) (result Config, err error) {
+// LoadConfig return config, configDemo
+func LoadConfig(path string) (*config, *configDemo, error) {
 	configPath := getConfigPath(path)
 	bytes, err := os.ReadFile(configPath)
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
-			err = fmt.Errorf("file not exist %s: %w", configPath, err)
-			return
+			return nil, nil, fmt.Errorf("file not exist %s: %w", configPath, err)
 		}
 
-		err = fmt.Errorf("failed to read file%s: %w", configPath, err)
-		return
+		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
 	}
 
-	if err = json.Unmarshal(bytes, &result); err != nil {
-		err = fmt.Errorf("failed to unmarshal: %w", err)
-		return
+	var cfgApps configApps
+	if err = json.Unmarshal(bytes, &cfgApps); err != nil {
+		return nil, nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	return
+	cfg := config{
+		configApps: cfgApps,
+	}
+
+	cfgDemo := configDemo{
+		configApps: cfgApps,
+	}
+
+	return &cfg, &cfgDemo, nil
 }
 
 // internal -> external
-func (c *Config) Install() error {
+func (c *config) Install() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := replaceFile(file.Internal, file.External); err != nil {
+			if err := copy.Replace(file.Internal, file.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.Internal, file.External, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := replaceDir(dir.Internal, dir.External); err != nil {
+			if err := copy.Replace(dir.Internal, dir.External); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.Internal, dir.External, err)
 			}
 		}
@@ -70,16 +84,16 @@ func (c *Config) Install() error {
 }
 
 // external -> internal
-func (c *Config) Update() error {
+func (c *config) Update() error {
 	for _, app := range c.Apps {
 		for _, file := range app.Files {
-			if err := replaceFile(file.External, file.Internal); err != nil {
+			if err := copy.Replace(file.External, file.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", file.External, file.Internal, err)
 			}
 		}
 
 		for _, dir := range app.Dirs {
-			if err := replaceDir(dir.External, dir.Internal); err != nil {
+			if err := copy.Replace(dir.External, dir.Internal); err != nil {
 				return fmt.Errorf("failed to remove and copy from %s to %s: %w", dir.External, dir.Internal, err)
 			}
 		}
@@ -88,7 +102,7 @@ func (c *Config) Update() error {
 	return nil
 }
 
-func (c *Config) Clean() error {
+func (c *config) Clean() error {
 	files, err := os.ReadDir(configDirPath)
 	if err != nil {
 		return fmt.Errorf("failed to read dir %s: %w", configDirPath, err)

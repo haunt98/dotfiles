@@ -7,6 +7,7 @@ import (
 	"runtime"
 
 	"github.com/haunt98/color"
+	"github.com/haunt98/dotfiles/pkg/config"
 	"github.com/urfave/cli/v2"
 )
 
@@ -16,6 +17,7 @@ const (
 
 	// flags
 	verboseFlag = "verbose"
+	dryRunFlag  = "dry-run"
 
 	// commands
 	installCommand = "install"
@@ -24,6 +26,7 @@ const (
 
 	// usages
 	verboseUsage = "show what is going on"
+	dryRunUsage  = "demo mode without actually changing anything"
 	installUsage = "install user configs from dotfiles"
 	updateUsage  = "update dotfiles from user configs"
 	cleanUsage   = "clean unused dotfiles"
@@ -66,6 +69,10 @@ func main() {
 						Name:  verboseFlag,
 						Usage: verboseUsage,
 					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
 				},
 				Action: a.RunInstall,
 			},
@@ -73,13 +80,33 @@ func main() {
 				Name:    updateCommand,
 				Aliases: updateAliases,
 				Usage:   updateUsage,
-				Action:  a.RunUpdate,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
+				},
+				Action: a.RunUpdate,
 			},
 			{
 				Name:    cleanCommand,
 				Aliases: cleanAliases,
 				Usage:   cleanUsage,
-				Action:  a.RunClean,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
+				},
+				Action: a.RunClean,
 			},
 		},
 		Action: a.RunHelp,
@@ -93,6 +120,7 @@ func main() {
 type action struct {
 	flags struct {
 		verbose bool
+		dryRun  bool
 	}
 }
 
@@ -105,11 +133,10 @@ func (a *action) RunInstall(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", installCommand)
 
-	cfg, err := LoadConfig(currentDir)
+	cfg, err := a.loadConfig()
 	if err != nil {
-		return fmt.Errorf("failed to load config: %w", err)
+		return err
 	}
-	a.log("config %+v\n", cfg)
 
 	if err := cfg.Install(); err != nil {
 		return fmt.Errorf("failed to install config: %w", err)
@@ -122,11 +149,10 @@ func (a *action) RunUpdate(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", updateCommand)
 
-	cfg, err := LoadConfig(currentDir)
+	cfg, err := a.loadConfig()
 	if err != nil {
-		return fmt.Errorf("failed to load config: %w", err)
+		return err
 	}
-	a.log("config %+v\n", cfg)
 
 	if err := cfg.Update(); err != nil {
 		return fmt.Errorf("failed to update config: %w", err)
@@ -139,11 +165,10 @@ func (a *action) RunClean(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", cleanCommand)
 
-	cfg, err := LoadConfig(currentDir)
+	cfg, err := a.loadConfig()
 	if err != nil {
-		return fmt.Errorf("failed to load config: %w", err)
+		return err
 	}
-	a.log("config %+v\n", cfg)
 
 	if err := cfg.Clean(); err != nil {
 		return fmt.Errorf("failed to clean config: %w", err)
@@ -152,8 +177,22 @@ func (a *action) RunClean(c *cli.Context) error {
 	return nil
 }
 
+func (a *action) loadConfig() (config.Config, error) {
+	cfgReal, cfgDemo, err := config.LoadConfig(currentDir)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load config: %w", err)
+	}
+
+	if a.flags.dryRun {
+		return cfgDemo, nil
+	}
+
+	return cfgReal, nil
+}
+
 func (a *action) getFlags(c *cli.Context) {
 	a.flags.verbose = c.Bool(verboseFlag)
+	a.flags.dryRun = c.Bool(dryRunFlag)
 }
 
 func (a *action) log(format string, v ...interface{}) {
