@@ -1,7 +1,7 @@
 {
   "apps": {
     "nvim": {
-      "files": [
+      "paths": [
         {
           "internal": "config/nvim/init.vim",
           "external": "~/.config/nvim/init.vim"
