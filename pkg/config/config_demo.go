@@ -11,7 +11,7 @@ var _ Config = (*configDemo)(nil)
 func (cd *configDemo) Install() error {
 	for _, app := range cd.Apps {
 		for _, p := range app.Paths {
-			fmt.Printf("Replace src %s dst %s\n", p.Internal, p.External)
+			fmt.Printf("Replace %s -> %s\n", p.Internal, p.External)
 		}
 	}
 
@@ -21,7 +21,7 @@ func (cd *configDemo) Install() error {
 func (cd *configDemo) Update() error {
 	for _, app := range cd.Apps {
 		for _, p := range app.Paths {
-			fmt.Printf("Replace src %s dst %s\n", p.External, p.Internal)
+			fmt.Printf("Replace %s -> %s\n", p.External, p.Internal)
 		}
 	}
 
