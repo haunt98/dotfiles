@@ -131,7 +131,7 @@ func (a *action) RunInstall(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", installCommand)
 
-	cfg, err := LoadConfig(currentDir)
+	cfg, _, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -148,7 +148,7 @@ func (a *action) RunUpdate(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", updateCommand)
 
-	cfg, err := LoadConfig(currentDir)
+	cfg, _, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
@@ -165,7 +165,7 @@ func (a *action) RunClean(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", cleanCommand)
 
-	cfg, err := LoadConfig(currentDir)
+	cfg, _, err := LoadConfig(currentDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}

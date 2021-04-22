@@ -22,10 +22,14 @@ type Config interface {
 }
 
 type config struct {
-	// Read from file
+	configApps
+}
+
+type configApps struct {
 	Apps map[string]App `json:"apps"`
 }
 
+// Read from file
 type App struct {
 	Files []Path `json:"files"`
 	Dirs  []Path `json:"dirs"`
@@ -36,24 +40,32 @@ type Path struct {
 	External string `json:"external"`
 }
 
-// Load config from file
-func LoadConfig(path string) (*config, error) {
+// LoadConfig return config, configDemo
+func LoadConfig(path string) (*config, *configDemo, error) {
 	configPath := getConfigPath(path)
 	bytes, err := os.ReadFile(configPath)
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
-			return nil, fmt.Errorf("file not exist %s: %w", configPath, err)
+			return nil, nil, fmt.Errorf("file not exist %s: %w", configPath, err)
 		}
 
-		return nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
+		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
 	}
 
-	var c config
-	if err = json.Unmarshal(bytes, &c); err != nil {
-		return nil, fmt.Errorf("failed to unmarshal: %w", err)
+	var ca configApps
+	if err = json.Unmarshal(bytes, &ca); err != nil {
+		return nil, nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	return &c, nil
+	c := config{
+		configApps: ca,
+	}
+
+	cd := configDemo{
+		configApps: ca,
+	}
+
+	return &c, &cd, nil
 }
 
 // internal -> external
