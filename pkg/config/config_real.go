@@ -66,9 +66,9 @@ func LoadConfig(path string) (*config, *configDemo, error) {
 // Install replace src internal dst external
 func (c *config) Install() error {
 	for _, app := range c.Apps {
-		for _, path := range app.Paths {
-			if err := copy.Replace(path.Internal, path.External); err != nil {
-				return fmt.Errorf("failed to replace src %s dst %s: %w", path.Internal, path.External, err)
+		for _, p := range app.Paths {
+			if err := copy.Replace(p.Internal, p.External); err != nil {
+				return fmt.Errorf("failed to replace src %s dst %s: %w", p.Internal, p.External, err)
 			}
 		}
 	}
@@ -79,9 +79,9 @@ func (c *config) Install() error {
 // Update replace src external dst internal
 func (c *config) Update() error {
 	for _, app := range c.Apps {
-		for _, path := range app.Paths {
-			if err := copy.Replace(path.External, path.Internal); err != nil {
-				return fmt.Errorf("failed to replace src %s dst %s: %w", path.External, path.Internal, err)
+		for _, p := range app.Paths {
+			if err := copy.Replace(p.External, p.Internal); err != nil {
+				return fmt.Errorf("failed to replace src %s dst %s: %w", p.External, p.Internal, err)
 			}
 		}
 	}
