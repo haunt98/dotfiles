@@ -52,20 +52,20 @@ func LoadConfig(path string) (*config, *configDemo, error) {
 		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
 	}
 
-	var ca configApps
-	if err = json.Unmarshal(bytes, &ca); err != nil {
+	var cfgApps configApps
+	if err = json.Unmarshal(bytes, &cfgApps); err != nil {
 		return nil, nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	c := config{
-		configApps: ca,
+	cfg := config{
+		configApps: cfgApps,
 	}
 
-	cd := configDemo{
-		configApps: ca,
+	cfgDemo := configDemo{
+		configApps: cfgApps,
 	}
 
-	return &c, &cd, nil
+	return &cfg, &cfgDemo, nil
 }
 
 // internal -> external
