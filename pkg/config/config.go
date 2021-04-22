@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	configDirPath = "config"
-	configFile    = "config.json"
+	configDirPath = "data"
+	configFile    = "data.json"
 )
 
 type Config interface {
