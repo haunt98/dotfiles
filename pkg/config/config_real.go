@@ -108,6 +108,14 @@ func (c *config) Clean() error {
 }
 
 func (c *config) Compare() error {
+	for _, app := range c.Apps {
+		for _, p := range app.Paths {
+			if err := copy.Compare(p.Internal, p.External); err != nil {
+				return fmt.Errorf("failed to compare %s with %s: %w", p.Internal, p.External, err)
+			}
+		}
+	}
+
 	return nil
 }
 
