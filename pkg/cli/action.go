@@ -68,6 +68,22 @@ func (a *action) RunClean(c *cli.Context) error {
 	return nil
 }
 
+func (a *action) RunCompare(c *cli.Context) error {
+	a.getFlags(c)
+	a.log("start %s\n", compareCommand)
+
+	cfg, err := a.loadConfig()
+	if err != nil {
+		return err
+	}
+
+	if err := cfg.Compare(); err != nil {
+		return fmt.Errorf("failed to compare config: %w", err)
+	}
+
+	return nil
+}
+
 func (a *action) loadConfig() (config.Config, error) {
 	cfgReal, cfgDemo, err := config.LoadConfig(currentDir)
 	if err != nil {

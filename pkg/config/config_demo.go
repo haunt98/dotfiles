@@ -40,3 +40,7 @@ func (cd *configDemo) Clean() error {
 
 	return nil
 }
+
+func (cd *configDemo) Compare() error {
+	return nil
+}

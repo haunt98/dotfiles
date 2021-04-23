@@ -3,7 +3,7 @@
     "nvim": {
       "paths": [
         {
-          "internal": "config/nvim/init.vim",
+          "internal": "data/nvim/init.vim",
           "external": "~/.config/nvim/init.vim"
         }
       ]
