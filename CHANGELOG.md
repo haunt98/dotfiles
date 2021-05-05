@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## v0.7.0 (2021-05-05)
+
+### Added
+
+- feat: un-export action funcs (2021-05-05)
+
+- feat: do not distinguish errors for simple case (2021-05-05)
+
+- feat: add compare command (#10) (2021-04-23)
+
+- feat: dry run for install, update, clean (#9) (2021-04-22)
+
+- feat: treat files, dirs in config as the same (#8) (2021-04-22)
+
+- feat: add --dry-run flag (#6) (2021-04-22)
+
+- feat: add --verbose flag (#5) (2021-04-15)
+
+### Fixed
+
+- fix: correct aliases for commands (2021-04-14)
+
+### Others
+
+- chore(readme): use dot as new name (2021-05-05)
+
+- chore: no need to have separate getConfigPath (2021-05-05)
+
+- refactor: split config real and config demo (2021-05-05)
+
+- chore: correct go build in github action (2021-05-05)
+
+- refactor: remove unused struct (2021-05-05)
+
+- refactor: move main to cmd (2021-05-05)
+
+- chore:  switch pkg to internal (2021-05-05)
+
+- chore: add building macos on github action (#11) (2021-04-23)
+
+- chore(readme): guide compare (2021-04-23)
+
+- refactor: move completely cli outside golang (#7) (2021-04-22)
+
+- chore(config): use tag vim-go release (2021-04-19)
+
+- chore(config): ignore vim-go version (2021-04-16)
+
+- refactor: move aliases to pre-define var (2021-04-14)
+
+- chore(changelog): generate v0.6.0 (2021-04-14)
+
 ## v0.6.0 (2021-4-14)
 
 ### Added
