@@ -47,7 +47,7 @@ var (
 // denyOSes contains OS which is not supported
 // go tool dist list
 var denyOSes = map[string]struct{}{
-	"windows": struct{}{},
+	"windows": {},
 }
 
 type App struct {
