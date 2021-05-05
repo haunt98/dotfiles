@@ -5,12 +5,15 @@
 ## Usage
 
 ```sh
+# Build
+go build ./cmd/dot
+
 # Install dotfiles
-go run *.go install
+./dot install
 
 # Update dotfiles with user config
-go run *.go update
+./dot update
 
 # Compare dotfiles with user config
-go run *.go compare
+./dot compare
 ```
