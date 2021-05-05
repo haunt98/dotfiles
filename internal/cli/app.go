@@ -75,7 +75,7 @@ func NewApp() *App {
 						Usage: dryRunUsage,
 					},
 				},
-				Action: a.RunInstall,
+				Action: a.runInstall,
 			},
 			{
 				Name:    updateCommand,
@@ -91,7 +91,7 @@ func NewApp() *App {
 						Usage: dryRunUsage,
 					},
 				},
-				Action: a.RunUpdate,
+				Action: a.runUpdate,
 			},
 			{
 				Name:    cleanCommand,
@@ -107,7 +107,7 @@ func NewApp() *App {
 						Usage: dryRunUsage,
 					},
 				},
-				Action: a.RunClean,
+				Action: a.runClean,
 			},
 			{
 				Name:    compareCommand,
@@ -119,10 +119,10 @@ func NewApp() *App {
 						Usage: verboseUsage,
 					},
 				},
-				Action: a.RunCompare,
+				Action: a.runCompare,
 			},
 		},
-		Action: a.RunHelp,
+		Action: a.runHelp,
 	}
 
 	return &App{

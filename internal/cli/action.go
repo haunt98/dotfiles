@@ -16,11 +16,11 @@ type action struct {
 }
 
 // Show help by default
-func (a *action) RunHelp(c *cli.Context) error {
+func (a *action) runHelp(c *cli.Context) error {
 	return cli.ShowAppHelp(c)
 }
 
-func (a *action) RunInstall(c *cli.Context) error {
+func (a *action) runInstall(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", installCommand)
 
@@ -36,7 +36,7 @@ func (a *action) RunInstall(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) RunUpdate(c *cli.Context) error {
+func (a *action) runUpdate(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", updateCommand)
 
@@ -52,7 +52,7 @@ func (a *action) RunUpdate(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) RunClean(c *cli.Context) error {
+func (a *action) runClean(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", cleanCommand)
 
@@ -68,7 +68,7 @@ func (a *action) RunClean(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) RunCompare(c *cli.Context) error {
+func (a *action) runCompare(c *cli.Context) error {
 	a.getFlags(c)
 	a.log("start %s\n", compareCommand)
 
