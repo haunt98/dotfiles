@@ -1,8 +1,6 @@
 package config
 
 import (
-	"encoding/json"
-	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -10,61 +8,14 @@ import (
 	"github.com/haunt98/copy-go"
 )
 
-const (
-	configDirPath = "data"
-	configFile    = "data.json"
-)
-
-type config struct {
+type configReal struct {
 	configApps
 }
 
-var _ Config = (*config)(nil)
-
-type configApps struct {
-	Apps map[string]App `json:"apps"`
-}
-
-// Read from file
-type App struct {
-	Paths []Path `json:"paths"`
-}
-
-type Path struct {
-	Internal string `json:"internal"`
-	External string `json:"external"`
-}
-
-// LoadConfig return config, configDemo
-func LoadConfig(path string) (*config, *configDemo, error) {
-	configPath := getConfigPath(path)
-	bytes, err := os.ReadFile(configPath)
-	if err != nil {
-		if errors.Is(err, os.ErrNotExist) {
-			return nil, nil, fmt.Errorf("file not exist %s: %w", configPath, err)
-		}
-
-		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
-	}
-
-	var cfgApps configApps
-	if err = json.Unmarshal(bytes, &cfgApps); err != nil {
-		return nil, nil, fmt.Errorf("failed to unmarshal: %w", err)
-	}
-
-	cfg := config{
-		configApps: cfgApps,
-	}
-
-	cfgDemo := configDemo{
-		configApps: cfgApps,
-	}
-
-	return &cfg, &cfgDemo, nil
-}
+var _ Config = (*configReal)(nil)
 
 // Install internal -> external
-func (c *config) Install() error {
+func (c *configReal) Install() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if err := copy.Replace(p.Internal, p.External); err != nil {
@@ -77,7 +28,7 @@ func (c *config) Install() error {
 }
 
 // Update external -> internal
-func (c *config) Update() error {
+func (c *configReal) Update() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if err := copy.Replace(p.External, p.Internal); err != nil {
@@ -90,7 +41,7 @@ func (c *config) Update() error {
 }
 
 // Clean remove unused config inside config dir
-func (c *config) Clean() error {
+func (c *configReal) Clean() error {
 	unusedDirs, err := getUnusedDirs(c.Apps)
 	if err != nil {
 		return err
@@ -107,7 +58,7 @@ func (c *config) Clean() error {
 	return nil
 }
 
-func (c *config) Compare() error {
+func (c *configReal) Compare() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if err := copy.Compare(p.Internal, p.External); err != nil {
@@ -117,10 +68,6 @@ func (c *config) Compare() error {
 	}
 
 	return nil
-}
-
-func getConfigPath(path string) string {
-	return filepath.Join(path, configDirPath, configFile)
 }
 
 func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {

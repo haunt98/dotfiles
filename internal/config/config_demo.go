@@ -8,8 +8,8 @@ type configDemo struct {
 
 var _ Config = (*configDemo)(nil)
 
-func (cd *configDemo) Install() error {
-	for _, app := range cd.Apps {
+func (c *configDemo) Install() error {
+	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			fmt.Printf("Replace %s -> %s\n", p.Internal, p.External)
 		}
@@ -18,8 +18,8 @@ func (cd *configDemo) Install() error {
 	return nil
 }
 
-func (cd *configDemo) Update() error {
-	for _, app := range cd.Apps {
+func (c *configDemo) Update() error {
+	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			fmt.Printf("Replace %s -> %s\n", p.External, p.Internal)
 		}
@@ -28,8 +28,8 @@ func (cd *configDemo) Update() error {
 	return nil
 }
 
-func (cd *configDemo) Clean() error {
-	unusedDirs, err := getUnusedDirs(cd.Apps)
+func (c *configDemo) Clean() error {
+	unusedDirs, err := getUnusedDirs(c.Apps)
 	if err != nil {
 		return err
 	}
@@ -41,6 +41,6 @@ func (cd *configDemo) Clean() error {
 	return nil
 }
 
-func (cd *configDemo) Compare() error {
+func (c *configDemo) Compare() error {
 	return nil
 }
