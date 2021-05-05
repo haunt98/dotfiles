@@ -2,7 +2,6 @@ package config
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -39,10 +38,6 @@ func LoadConfig(path string) (*configReal, *configDemo, error) {
 	configPath := getConfigPath(path)
 	bytes, err := os.ReadFile(configPath)
 	if err != nil {
-		if errors.Is(err, os.ErrNotExist) {
-			return nil, nil, fmt.Errorf("file not exist %s: %w", configPath, err)
-		}
-
 		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
 	}
 
