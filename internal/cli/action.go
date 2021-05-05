@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/haunt98/dotfiles/pkg/config"
+	"github.com/haunt98/dotfiles/internal/config"
 	"github.com/urfave/cli/v2"
 )
 
