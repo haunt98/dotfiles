@@ -35,7 +35,7 @@ type Path struct {
 
 // LoadConfig return config, configDemo
 func LoadConfig(path string) (*configReal, *configDemo, error) {
-	configPath := getConfigPath(path)
+	configPath := filepath.Join(path, configDirPath, configFile)
 	bytes, err := os.ReadFile(configPath)
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
@@ -55,8 +55,4 @@ func LoadConfig(path string) (*configReal, *configDemo, error) {
 	}
 
 	return &cfgReal, &cfgDemo, nil
-}
-
-func getConfigPath(path string) string {
-	return filepath.Join(path, configDirPath, configFile)
 }
