@@ -15,6 +15,14 @@
           "external": "~/.config/bat/config"
         }
       ]
+    },
+    "mpv": {
+      "paths": [
+        {
+          "internal": "data/mpv/mpv.conf",
+          "external": "~/.config/mpv/mpv.conf"
+        }
+      ]
     }
   }
 }
