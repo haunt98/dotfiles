@@ -8,4 +8,5 @@ require (
 	github.com/haunt98/copy-go v0.7.0
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/urfave/cli/v2 v2.3.0
+	golang.org/x/sys v0.0.0-20210603125802-9665404d3644 // indirect
 )
