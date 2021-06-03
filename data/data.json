@@ -8,6 +8,14 @@
         }
       ]
     },
+    "alacritty": {
+      "paths": [
+        {
+          "internal": "data/alacritty",
+          "external": "~/.config/alacritty"
+        }
+      ]
+    },
     "bat": {
       "paths": [
         {

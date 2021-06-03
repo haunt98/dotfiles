@@ -39,6 +39,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'

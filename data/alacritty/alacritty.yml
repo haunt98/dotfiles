@@ -1,0 +1,14 @@
+import:
+  - ~/.config/alacritty/one-dark.yml
+
+font:
+  normal:
+    family: Iosevka
+    style: Regular
+  bold:
+    family: Iosevka
+    style: Bold
+  italic:
+    family: Iosevka
+    style: Italic
+  size: 12
