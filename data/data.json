@@ -8,6 +8,14 @@
         }
       ]
     },
+    "tmux": {
+      "paths": [
+        {
+          "internal": "data/tmux/tmux.conf",
+          "external": "~/.config/tmux/tmux.conf"
+        }
+      ]
+    },
     "alacritty": {
       "paths": [
         {
