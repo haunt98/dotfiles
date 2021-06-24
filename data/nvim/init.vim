@@ -40,6 +40,7 @@ Plug 'preservim/nerdtree'
 Plug 'machakann/vim-sandwich'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
