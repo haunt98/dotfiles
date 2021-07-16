@@ -25,7 +25,6 @@ set clipboard+=unnamedplus
 set rtp+=~/.fzf
 
 " Plugins config
-let g:go_fmt_command='gopls'
 let g:go_gopls_gofumpt=1
 let g:go_version_warning=0
 let g:lightline={'colorscheme':'onedark'}
