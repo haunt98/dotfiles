@@ -48,9 +48,6 @@ Plug 'joshdick/onedark.vim'
 
 " Languages
 Plug 'fatih/vim-go', {'tag': '*'}
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'json', 'markdown', 'yaml', 'html'] }
 
 call plug#end()
 
