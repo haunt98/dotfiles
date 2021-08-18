@@ -28,8 +28,8 @@ set clipboard+=unnamedplus
 set rtp+=~/.fzf
 
 " Plugins config
-let g:go_gopls_gofumpt=1
 let g:go_version_warning=0
+let g:go_gopls_gofumpt=1
 let g:lightline={'colorscheme':'onedark'}
 
 " vim-plug
@@ -37,9 +37,7 @@ let g:lightline={'colorscheme':'onedark'}
 call plug#begin()
 
 " Should use
-Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
-Plug 'machakann/vim-sandwich'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 
