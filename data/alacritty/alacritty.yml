@@ -3,9 +3,6 @@ import:
 
 font:
   normal:
-    family: Agave
+    family: Cascadia Code
     style: Regular
-  bold:
-    family: Agave
-    style: Bold
-  size: 16
+  size: 12.0

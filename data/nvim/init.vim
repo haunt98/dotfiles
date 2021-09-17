@@ -32,6 +32,9 @@ let g:go_version_warning=0
 let g:go_gopls_gofumpt=1
 let g:lightline={'colorscheme':'onedark'}
 
+" coc-nvim
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " vim-plug
 " https://github.com/junegunn/vim-plug
 call plug#begin()
@@ -46,6 +49,7 @@ Plug 'joshdick/onedark.vim'
 
 " Languages
 Plug 'fatih/vim-go', {'tag': '*'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
