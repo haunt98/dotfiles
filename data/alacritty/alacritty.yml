@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/one-dark.yml
+  - ~/.config/alacritty/nord.yml
 
 font:
   normal:

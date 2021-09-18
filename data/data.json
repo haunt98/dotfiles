@@ -27,8 +27,8 @@
     "kitty": {
       "paths": [
         {
-          "internal": "data/kitty/kitty.conf",
-          "external": "~/.config/kitty/kitty.conf"
+          "internal": "data/kitty",
+          "external": "~/.config/kitty"
         }
       ]
     },
