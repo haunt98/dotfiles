@@ -39,6 +39,14 @@
           "external": "~/.config/bat/config"
         }
       ]
+    },
+    "fd": {
+      "paths": [
+        {
+          "internal": "data/fd/.fdignore",
+          "external": "~/.fdignore"
+        }
+      ]
     }
   }
 }

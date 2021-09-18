@@ -1,11 +1,19 @@
 # macOS
 .DS_Store
 
-# Window
-*.exe
-
 # IntelliJ
 .idea/
 
 # VSCode
 .vscode/
+
+# Git
+.git
+
+# Node
+node_modules
+
+# Go
+mod
+sumdb
+vendor
