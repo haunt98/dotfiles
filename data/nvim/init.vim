@@ -30,7 +30,8 @@ set rtp+=~/.fzf
 " Plugins config
 let g:go_version_warning=0
 let g:go_gopls_gofumpt=1
-let g:lightline={'colorscheme':'onedark'}
+" let g:lightline={'colorscheme':'onedark'}
+let g:lightline={'colorscheme':'nord'}
 
 " coc-nvim
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -46,6 +47,7 @@ Plug 'tpope/vim-fugitive'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 
 " Languages
 Plug 'fatih/vim-go', {'tag': '*'}
@@ -54,4 +56,5 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 set background=dark
-colorscheme onedark
+" colorscheme onedark
+colorscheme nord
