@@ -7,6 +7,13 @@ set scrolloff=4
 set virtualedit=block
 set whichwrap=<,>,[,]
 
+" tabstop
+" https://www.reddit.com/r/vim/wiki/tabstop
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 " True color
 " https://gist.github.com/XVilka/8346728
 if (empty($TMUX))
