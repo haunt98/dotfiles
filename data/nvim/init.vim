@@ -40,9 +40,6 @@ let g:go_gopls_gofumpt=1
 " let g:lightline={'colorscheme':'onedark'}
 let g:lightline={'colorscheme':'nord'}
 
-" coc-nvim
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
 " vim-plug
 " https://github.com/junegunn/vim-plug
 call plug#begin()
@@ -58,7 +55,6 @@ Plug 'arcticicestudio/nord-vim'
 
 " Languages
 Plug 'fatih/vim-go', {'tag': '*'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
