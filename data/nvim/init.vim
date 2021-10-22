@@ -14,14 +14,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" True color
-" https://gist.github.com/XVilka/8346728
-if (empty($TMUX))
-  if (has('termguicolors'))
-    set termguicolors
-  endif
-endif
-
 " Disable cursor styling
 set guicursor=
 
@@ -37,8 +29,8 @@ set rtp+=~/.fzf
 " Plugins config
 let g:go_version_warning=0
 let g:go_gopls_gofumpt=1
-" let g:lightline={'colorscheme':'onedark'}
-let g:lightline={'colorscheme':'nord'}
+let g:lightline={'colorscheme':'onedark'}
+" let g:lightline={'colorscheme':'nord'}
 
 " vim-plug
 " https://github.com/junegunn/vim-plug
@@ -59,5 +51,5 @@ Plug 'fatih/vim-go', {'tag': '*'}
 call plug#end()
 
 set background=dark
-" colorscheme onedark
-colorscheme nord
+colorscheme onedark
+" colorscheme nord
