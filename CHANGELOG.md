@@ -1,5 +1,83 @@
 # CHANGELOG
 
+## v0.8.0 (2021-11-19)
+
+### Others
+
+- chore: bump copy-go v0.8.0 (2021-11-19)
+
+- chore(config): remove vim lang, should use IDE for that (2021-11-19)
+
+- chore(config): return back Cascadia Code (2021-10-27)
+
+- chore(config): back to Rec Mono Casual (2021-10-24)
+
+- chore(config): remote truecolor and use onedark (2021-10-22)
+
+- chore(config): remove coc.nvim (2021-10-12)
+
+- chore(scripts): add git tag (2021-10-12)
+
+- chore(config): Disable option in mac (2021-10-03)
+
+- Bump terminal size to 14.0 (2021-09-24)
+
+- chore(config): add tabstop for nvim (2021-09-24)
+
+- chore(config): add fdignore (2021-09-18)
+
+- chore(config): switch to nord config (2021-09-18)
+
+- chore(config): use vim nord (2021-09-18)
+
+- chore: Update configs (2021-09-17)
+
+- chore: bump go 1.17 in github action (2021-08-19)
+
+- build: update go.mod (2021-08-19)
+
+- chore(config): remove unused exts nvim (2021-08-19)
+
+- chore: add scripts folder (2021-08-14)
+
+- chore(config): remove vim prettier (2021-08-07)
+
+- build: update go.mod (2021-08-04)
+
+- chore(config): add mouse support and add prettier (2021-08-04)
+
+- chore(config): always love Agave (2021-07-16)
+
+- chore(config): vim-go new default (2021-07-16)
+
+- chore(config): remove nvim whitespace (2021-06-26)
+
+- chore(nvim): strip whitespace (2021-06-24)
+
+- chore(config): better tmux config (2021-06-24)
+
+- chore(config): add tmux (2021-06-23)
+
+- build: update go.mod (2021-06-17)
+
+- build: update go.mod (2021-06-03)
+
+- chore(config): update alacritty and nvim config (2021-06-03)
+
+- build: update go.mod (2021-05-30)
+
+- chore: remove already build (2021-05-24)
+
+- chore(config): remove mpv (2021-05-24)
+
+- chore(config): remove problematic (2021-05-16)
+
+- chore(config): add mpv (2021-05-16)
+
+- chore(config): re add bat (2021-05-13)
+
+- chore(changelog): generate v0.7.0 (2021-05-05)
+
 ## v0.7.0 (2021-05-05)
 
 ### Added
