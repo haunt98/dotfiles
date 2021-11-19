@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/haunt98/copy-go"
+	"github.com/make-go-great/copy-go"
 )
 
 type configReal struct {
