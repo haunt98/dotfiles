@@ -43,8 +43,8 @@
     "fd": {
       "paths": [
         {
-          "internal": "data/fd/.fdignore",
-          "external": "~/.fdignore"
+          "internal": "data/fd/.ignore",
+          "external": "~/.ignore"
         }
       ]
     }

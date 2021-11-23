@@ -2,10 +2,10 @@
 .DS_Store
 
 # IntelliJ
-.idea/
+.idea
 
 # VSCode
-.vscode/
+.vscode
 
 # Git
 .git
