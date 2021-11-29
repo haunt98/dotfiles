@@ -11,7 +11,7 @@ git config --global alias.pl pull
 git config --global alias.ps push
 git config --global alias.st status
 git config --global alias.sw switch
-git config --global alias.tg "tag --sort=version:refname"
+git config --global alias.tg "tag --sort=-version:refname"
 
 # Misc
 git config --global pull.rebase true
