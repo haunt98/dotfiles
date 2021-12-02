@@ -14,13 +14,10 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" Disable cursor styling
-set guicursor=
-
 " Mouse support
 set mouse=a
 
-" Install xclip or xsel
+" Clipboard support
 set clipboard+=unnamedplus
 
 " FZF
