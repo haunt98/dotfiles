@@ -1,5 +1,6 @@
 # macOS
 .DS_Store
+Library
 
 # IntelliJ
 .idea
@@ -19,5 +20,6 @@ sumdb
 vendor
 generated
 test
-*generated*.go
-*mock*.go
+
+# Python
+venv
