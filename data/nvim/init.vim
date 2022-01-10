@@ -23,22 +23,28 @@ set clipboard+=unnamedplus
 " FZF
 set rtp+=~/.fzf
 
-" Plugins config
-let g:lightline={'colorscheme':'onedark'}
-
 " vim-plug
 " https://github.com/junegunn/vim-plug
 call plug#begin()
 
 " Should use
 Plug 'preservim/nerdtree'
-Plug 'itchyny/lightline.vim'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-fugitive'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
+Plug 'projekt0n/github-nvim-theme'
 
 call plug#end()
 
 set background=dark
-colorscheme onedark
+colorscheme github_dark
+
+lua << EOF
+require('lualine').setup{
+    options = {
+        theme = 'github',
+    }
+}
+EOF

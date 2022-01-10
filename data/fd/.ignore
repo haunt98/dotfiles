@@ -20,6 +20,9 @@ sumdb
 vendor
 generated
 test
+*test*.go
+*mock*.go
+*generated*.go
 
 # Python
 venv
