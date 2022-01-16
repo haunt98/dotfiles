@@ -18,9 +18,8 @@ node_modules
 mod
 sumdb
 vendor
+mock
 generated
-test
-*test*.go
 *mock*.go
 *generated*.go
 
