@@ -47,6 +47,14 @@
           "external": "~/.ignore"
         }
       ]
+    },
+    "termux": {
+      "paths": [
+        {
+          "internal": "data/termux/colors.properties",
+          "external": "~/.termux/colors.properties"
+        }
+      ]
     }
   }
 }
