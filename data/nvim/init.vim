@@ -33,6 +33,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 " Colorschemes
+Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -58,6 +59,10 @@ EOF
 
 set background=dark
 
-" colorscheme onedark
-" colorscheme github_dark
-colorscheme catppuccin
+if $TERM == 'xterm-kitty'
+    " colorscheme onedark
+    " colorscheme github_dark
+    colorscheme catppuccin
+else
+    colorscheme iceberg
+endif
