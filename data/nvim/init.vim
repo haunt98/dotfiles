@@ -27,24 +27,37 @@ set rtp+=~/.fzf
 " https://github.com/junegunn/vim-plug
 call plug#begin()
 
-" Should use
 Plug 'preservim/nerdtree'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 call plug#end()
 
-set background=dark
-colorscheme github_dark
-
 lua << EOF
-require('lualine').setup{
+local lualine = require('lualine')
+local catppuccin = require("catppuccin")
+
+lualine.setup({
     options = {
-        theme = 'github',
+        -- theme = 'onedark',
+        -- theme = 'github',
+        theme = 'catppuccin',
     }
-}
+})
+
+catppuccin.setup({
+    transparent_background = true,
+})
 EOF
+
+set background=dark
+
+" colorscheme onedark
+" colorscheme github_dark
+colorscheme catppuccin
