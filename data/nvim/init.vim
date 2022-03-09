@@ -54,6 +54,7 @@ call plug#end()
 lua << EOF
 local lualine = require('lualine')
 local catppuccin = require('catppuccin')
+local tree = require('nvim-tree')
 
 lualine.setup({
     options = {
@@ -67,6 +68,8 @@ lualine.setup({
 catppuccin.setup({
     transparent_background = true,
 })
+
+tree.setup({})
 EOF
 
 set background=dark
