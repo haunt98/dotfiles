@@ -23,10 +23,12 @@ set clipboard+=unnamedplus
 " FZF
 set rtp+=~/.fzf
 
+" Plugins config
+let g:go_gopls_gofumpt=1
+
 " vim-plug
 " https://github.com/junegunn/vim-plug
 call plug#begin()
-
 Plug 'preservim/nerdtree'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-fugitive'
@@ -38,6 +40,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
+" Languages
+Plug 'fatih/vim-go'
 call plug#end()
 
 lua << EOF
@@ -46,6 +50,7 @@ local catppuccin = require("catppuccin")
 
 lualine.setup({
     options = {
+        icons_enabled = false,
         -- theme = 'onedark',
         -- theme = 'github',
         theme = 'catppuccin',
