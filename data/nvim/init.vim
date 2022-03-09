@@ -25,11 +25,18 @@ set rtp+=~/.fzf
 
 " Plugins config
 let g:go_gopls_gofumpt=1
+let g:nvim_tree_show_icons = {
+    \ 'git': 0,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+    \ }
+nnoremap <C-n> :NvimTreeToggle<CR>
 
 " vim-plug
 " https://github.com/junegunn/vim-plug
 call plug#begin()
-Plug 'preservim/nerdtree'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -46,7 +53,7 @@ call plug#end()
 
 lua << EOF
 local lualine = require('lualine')
-local catppuccin = require("catppuccin")
+local catppuccin = require('catppuccin')
 
 lualine.setup({
     options = {
