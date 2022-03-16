@@ -62,6 +62,8 @@ lualine.setup({
         -- theme = 'onedark',
         -- theme = 'github',
         theme = 'catppuccin',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
     }
 })
 
