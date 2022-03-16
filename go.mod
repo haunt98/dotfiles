@@ -1,6 +1,6 @@
 module github.com/haunt98/dotfiles
 
-go 1.17
+go 1.18
 
 require (
 	github.com/make-go-great/color-go v0.3.0
