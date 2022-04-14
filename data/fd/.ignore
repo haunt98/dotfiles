@@ -1,7 +1,12 @@
 # macOS
 .DS_Store
 Applications
+Desktop
+Documents
 Library
+Movies
+Music
+Pictures
 
 # IntelliJ
 .idea
