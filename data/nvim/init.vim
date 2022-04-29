@@ -17,9 +17,6 @@ set expandtab
 " Mouse support
 set mouse=a
 
-" Clipboard support
-set clipboard+=unnamedplus
-
 " FZF
 set rtp+=~/.fzf
 
