@@ -37,6 +37,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'axelf4/vim-strip-trailing-whitespace'
 
 " Colorschemes
 Plug 'cocopon/iceberg.vim'
