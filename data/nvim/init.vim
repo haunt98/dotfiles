@@ -52,23 +52,23 @@ Plug 'fatih/vim-go'
 call plug#end()
 
 lua << EOF
-local lualine = require('lualine')
-local catppuccin = require('catppuccin')
-local tree = require('nvim-tree')
+local lualine = require("lualine")
+local catppuccin = require("catppuccin")
+local tree = require("nvim-tree")
 
 lualine.setup({
-    options = {
-        icons_enabled = false,
-        -- theme = 'onedark',
-        -- theme = 'github',
-        theme = 'catppuccin',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
-    }
+	options = {
+		icons_enabled = false,
+		-- theme = 'onedark',
+		-- theme = 'github',
+		theme = "catppuccin",
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
+	},
 })
 
 catppuccin.setup({
-    transparent_background = true,
+	transparent_background = true,
 })
 
 tree.setup({})
