@@ -22,14 +22,14 @@ set rtp+=~/.fzf
 
 " Plugins config
 let g:go_gopls_gofumpt=1
-let g:nvim_tree_show_icons = {
+let g:nvim_tree_show_icons={
     \ 'git': 0,
     \ 'folders': 0,
     \ 'files': 0,
     \ 'folder_arrows': 0,
     \ }
 nnoremap <C-n> :NvimTreeToggle<CR>
-let g:neoformat_try_node_exe = 1
+let g:neoformat_try_node_exe=1
 
 " vim-plug
 " https://github.com/junegunn/vim-plug
