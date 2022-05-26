@@ -17,3 +17,7 @@ go build ./cmd/dot
 # Compare dotfiles with user config
 ./dot compare
 ```
+
+## Roadmap
+
+- [ ] Support compare directory
