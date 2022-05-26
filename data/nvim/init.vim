@@ -29,6 +29,7 @@ let g:nvim_tree_show_icons = {
     \ 'folder_arrows': 0,
     \ }
 nnoremap <C-n> :NvimTreeToggle<CR>
+let g:neoformat_try_node_exe = 1
 
 " vim-plug
 " https://github.com/junegunn/vim-plug
@@ -46,6 +47,7 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 " Languages
+Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go'
 call plug#end()
 
