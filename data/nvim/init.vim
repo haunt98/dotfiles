@@ -52,7 +52,6 @@ let g:neovide_cursor_vfx_mode="railgun"
 call plug#begin()
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'axelf4/vim-strip-trailing-whitespace'
 
