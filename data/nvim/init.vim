@@ -91,7 +91,7 @@ EOF
 
 set background=dark
 
-if $TERM == 'xterm-kitty'
+if $TERM == 'xterm-kitty' || $COLORTERM == 'truecolor'
     set termguicolors
     " colorscheme onedark
     " colorscheme github_dark

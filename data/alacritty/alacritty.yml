@@ -1,8 +1,12 @@
 import:
-  - ~/.config/alacritty/github_dark.yml
+  - ~/.config/alacritty/catppuccin.yml
+
+window:
+  opacity: 0.9
 
 font:
   normal:
-    family: Cascadia Code
+    family: APL385 Unicode
     style: Regular
-  size: 14.0
+  size: 18.0
+
