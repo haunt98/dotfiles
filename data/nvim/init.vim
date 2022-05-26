@@ -14,14 +14,23 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Clipboard support
+set clipboard+=unnamedplus
+
 " Mouse support
 set mouse=a
 
 " FZF
 set rtp+=~/.fzf
 
+" GUI
+" Same as VSCode
+set guifont=APL385\ Unicode:h18,Agave:h18,Victor\ Mono:h18,Rec\ Mono\ Casual:h18,Cascadia\ Code:h18,JetBrains\ Mono:h18,Iosevka:h18,Fira\ Code:h18
+
 " Plugins config
 let g:go_gopls_gofumpt=1
+
+let g:nvim_tree_highlight_opened_files=1
 let g:nvim_tree_show_icons={
     \ 'git': 0,
     \ 'folders': 0,
@@ -29,7 +38,14 @@ let g:nvim_tree_show_icons={
     \ 'folder_arrows': 0,
     \ }
 nnoremap <C-n> :NvimTreeToggle<CR>
+
+" https://prettier.io/docs/en/vim.html
 let g:neoformat_try_node_exe=1
+
+" https://github.com/neovide/neovide/wiki/Configuration
+let g:neovide_transparency=0.8
+let g:neovide_input_use_logo=v:true
+let g:neovide_cursor_vfx_mode="railgun"
 
 " vim-plug
 " https://github.com/junegunn/vim-plug
@@ -77,6 +93,7 @@ EOF
 set background=dark
 
 if $TERM == 'xterm-kitty'
+    set termguicolors
     " colorscheme onedark
     " colorscheme github_dark
     colorscheme catppuccin
