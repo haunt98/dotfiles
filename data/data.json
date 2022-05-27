@@ -3,8 +3,8 @@
     "nvim": {
       "paths": [
         {
-          "internal": "data/nvim/init.vim",
-          "external": "~/.config/nvim/init.vim"
+          "internal": "data/nvim/init.lua",
+          "external": "~/.config/nvim/init.lua"
         }
       ]
     },
