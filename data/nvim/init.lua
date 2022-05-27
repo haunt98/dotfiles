@@ -4,7 +4,6 @@ vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 4
-vim.opt.showmode = false
 vim.opt.swapfile = false
 vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
@@ -64,6 +63,9 @@ require("packer").startup(function()
 	-- https://github.com/fatih/vim-go
 	use("fatih/vim-go")
 end)
+
+-- Disable showmode when use lualine
+vim.opt.showmode = false
 
 local lualine_theme = require("lualine.themes.iceberg")
 if vim.fn.getenv("COLORTERM") == "truecolor" then
