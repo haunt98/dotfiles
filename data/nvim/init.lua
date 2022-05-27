@@ -32,7 +32,6 @@ vim.opt.guifont = {
 vim.g.go_gopls_gofumpt = 1
 
 -- https://github.com/neovide/neovide/wiki/Configuration
-vim.g.neovide_transparency = 0.8
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
 -- https://github.com/wbthomason/packer.nvim
