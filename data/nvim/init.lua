@@ -1,11 +1,12 @@
 -- https://neovim.io/doc/user/lua.html#lua-vim-options
 vim.opt.breakindent = true
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
-vim.opt.swapfile = false
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.virtualedit = "block"
 vim.opt.scrolloff = 4
+vim.opt.showmode = false
+vim.opt.swapfile = false
+vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
 
 -- Clipboard support
