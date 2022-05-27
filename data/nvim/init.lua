@@ -64,10 +64,15 @@ require("packer").startup(function()
 	use("fatih/vim-go")
 end)
 
+local lualine_theme = require("lualine.themes.iceberg")
+if vim.fn.getenv("COLORTERM") == "truecolor" then
+	lualine_theme = require("lualine.themes.catppuccin")
+end
+
 require("lualine").setup({
 	options = {
 		icons_enabled = false,
-		theme = "catppuccin",
+		theme = lualine_theme,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 	},
