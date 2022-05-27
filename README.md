@@ -22,4 +22,4 @@ go build ./cmd/dot
 
 - [ ] Support compare directory
 - [ ] Switch to use lua for neovim config
-- [ ] Add diff command
+- [x] Add diff command

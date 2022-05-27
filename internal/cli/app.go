@@ -41,7 +41,7 @@ var (
 	installAliases = []string{"i"}
 	updateAliases  = []string{"u"}
 	cleanAliases   = []string{"c"}
-	compareAliases = []string{"cmp"}
+	compareAliases = []string{"cmp", "diff"}
 )
 
 // denyOSes contains OS which is not supported
