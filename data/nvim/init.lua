@@ -4,6 +4,7 @@ vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt.swapfile = false
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.virtualedit = "block"
 vim.opt.scrolloff = 4
 vim.opt.whichwrap = "<,>,[,]"
 
