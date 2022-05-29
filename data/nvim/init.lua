@@ -40,9 +40,6 @@ require("packer").startup(function()
 	-- Manage itself
 	use("wbthomason/packer.nvim")
 
-	-- https://github.com/tpope/vim-surround
-	use("tpope/vim-surround")
-
 	-- https://github.com/axelf4/vim-strip-trailing-whitespace
 	use("axelf4/vim-strip-trailing-whitespace")
 
