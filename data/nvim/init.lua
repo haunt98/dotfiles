@@ -28,6 +28,10 @@ vim.opt.guifont = {
 	"Fira Code:h18",
 }
 
+-- Workaround
+-- https://github.com/neovim/neovim/issues/16416
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
 -- https://neovim.io/doc/user/lua.html#lua-vim-variables
 -- https://github.com/mvdan/gofumpt#vim-go
 vim.g.go_gopls_gofumpt = 1
