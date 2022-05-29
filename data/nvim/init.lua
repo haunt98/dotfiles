@@ -36,6 +36,11 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- https://github.com/mvdan/gofumpt#vim-go
 vim.g.go_gopls_gofumpt = 1
 
+-- https://github.com/kyazdani42/nvim-tree.lua#setup
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
+vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
+
 -- https://github.com/neovide/neovide/wiki/Configuration
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
@@ -49,6 +54,9 @@ require("packer").startup(function()
 
 	-- https://github.com/nvim-lualine/lualine.nvim
 	use("nvim-lualine/lualine.nvim")
+
+	-- https://github.com/kyazdani42/nvim-tree.lua
+	use("kyazdani42/nvim-tree.lua")
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
@@ -68,6 +76,7 @@ end)
 -- Disable showmode when use lualine
 vim.opt.showmode = false
 
+-- https://github.com/nvim-lualine/lualine.nvim#configuring-lualine-in-initvim
 local lualine_theme = require("lualine.themes.iceberg")
 if vim.fn.getenv("COLORTERM") == "truecolor" then
 	lualine_theme = require("lualine.themes.catppuccin")
@@ -82,6 +91,21 @@ require("lualine").setup({
 	},
 })
 
+-- https://github.com/kyazdani42/nvim-tree.lua#setup
+require("nvim-tree").setup({
+	renderer = {
+		icons = {
+			show = {
+				file = false,
+				folder = false,
+				folder_arrow = false,
+				git = false,
+			},
+		},
+	},
+})
+
+-- https://github.com/catppuccin/nvim#setup
 require("catppuccin").setup({
 	transparent_background = true,
 })
