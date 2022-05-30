@@ -106,8 +106,15 @@ require("nvim-tree").setup({
 })
 
 -- https://github.com/catppuccin/nvim#setup
+local catppuccin_term_colors = false
+if vim.fn.getenv("COLORTERM") == "truecolor" then
+	catppuccin_term_colors = true
+	vim.g.catppuccin_flavour = "mocha"
+end
+
 require("catppuccin").setup({
 	transparent_background = true,
+	term_colors = catppuccin_term_colors,
 })
 
 if vim.fn.getenv("COLORTERM") == "truecolor" then
