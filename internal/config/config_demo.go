@@ -41,6 +41,6 @@ func (c *configDemo) Clean() error {
 	return nil
 }
 
-func (c *configDemo) Compare() error {
+func (c *configDemo) Diff() error {
 	return nil
 }

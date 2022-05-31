@@ -21,7 +21,7 @@ const (
 	installCommand = "install"
 	updateCommand  = "update"
 	cleanCommand   = "clean"
-	compareCommand = "compare"
+	diffCommand    = "diff"
 
 	// flag usages
 	verboseUsage = "show what is going on"
@@ -31,7 +31,7 @@ const (
 	installUsage = "install user configs from dotfiles"
 	updateUsage  = "update dotfiles from user configs"
 	cleanUsage   = "clean unused dotfiles"
-	compareUsage = "compare dotfiles with user configs"
+	diffUsage    = "diff dotfiles with user configs"
 
 	currentDir = "."
 )
@@ -41,7 +41,6 @@ var (
 	installAliases = []string{"i"}
 	updateAliases  = []string{"u"}
 	cleanAliases   = []string{"c"}
-	compareAliases = []string{"cmp", "diff"}
 )
 
 // denyOSes contains OS which is not supported
@@ -110,16 +109,15 @@ func NewApp() *App {
 				Action: a.runClean,
 			},
 			{
-				Name:    compareCommand,
-				Aliases: compareAliases,
-				Usage:   compareUsage,
+				Name:  diffCommand,
+				Usage: diffUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
 						Name:  verboseFlag,
 						Usage: verboseUsage,
 					},
 				},
-				Action: a.runCompare,
+				Action: a.runDiff,
 			},
 		},
 		Action: a.runHelp,

@@ -20,6 +20,6 @@ go build ./cmd/dot
 
 ## Roadmap
 
-- [ ] Support compare directory
 - [x] Switch to use lua for neovim config
 - [x] Add diff command
+- [x] Support diff directory

@@ -59,7 +59,7 @@ func (c *configReal) Clean() error {
 	return nil
 }
 
-func (c *configReal) Compare() error {
+func (c *configReal) Diff() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if err := diff.Diff(p.Internal, p.External); err != nil {
