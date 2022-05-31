@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/make-go-great/copy-go"
+	"github.com/make-go-great/diff-go"
 )
 
 type configReal struct {
@@ -61,7 +62,7 @@ func (c *configReal) Clean() error {
 func (c *configReal) Compare() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
-			if err := copy.Compare(p.Internal, p.External); err != nil {
+			if err := diff.Diff(p.Internal, p.External); err != nil {
 				return fmt.Errorf("failed to compare %s with %s: %w", p.Internal, p.External, err)
 			}
 		}
