@@ -6,8 +6,8 @@ github.com/make-go-great/color-go v0.3.0 h1:ZVtVk/wVVsZZwSJG7PZpsY5zwIyGao5VoN48
 github.com/make-go-great/color-go v0.3.0/go.mod h1:G5G8IJ3PUo+vSQ+UvnfaswF8O/piVIhFJKv1mQjBGpI=
 github.com/make-go-great/copy-go v0.9.0 h1:RTqVypNIa6liItFg6kORP93ZhgSck8+pupvGrnSzrSI=
 github.com/make-go-great/copy-go v0.9.0/go.mod h1:J1ihIqaX3O/lGAaL23d+1GXSQwJX3RpStmUIUdh4xyw=
-github.com/make-go-great/diff-go v0.0.3 h1:LEBt+oJ3KR8DDDIVKC7H/oONf+eKmQfUgQOTzskZfTc=
-github.com/make-go-great/diff-go v0.0.3/go.mod h1:vRXh6owtk7WrPoIooBGYEzUIRT67fVUPZwqYDu7jt44=
+github.com/make-go-great/diff-go v0.0.5 h1:lH5cVHlkeSyBsUWbQOCCwou4ywpeOD0d215Nl0P5Uoc=
+github.com/make-go-great/diff-go v0.0.5/go.mod h1:u3sgJr4e5UkAlYahID5ZXK7kP2ejoZBJeYEb07EAK5Y=
 github.com/mattn/go-colorable v0.1.9/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=
 github.com/mattn/go-colorable v0.1.12 h1:jF+Du6AlPIjs2BiUiQlKOX0rt3SujHxPnksPKZbaA40=
 github.com/mattn/go-colorable v0.1.12/go.mod h1:u5H1YNBxpqRaxsYJYSkiCWKzEfiAb1Gb520KVy5xxl4=
