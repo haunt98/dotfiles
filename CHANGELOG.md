@@ -1,5 +1,149 @@
 # CHANGELOG
 
+## v0.9.0 (2022-05-31)
+
+### Added
+
+- feat: use make-go-great/diff-go to support diff dir (2022-05-31)
+
+- feat: Add diff command (2022-05-27)
+
+### Others
+
+- build: bump github.com/make-go-great/diff-go v0.0.5 (2022-05-31)
+
+- refactor: use diff instead of compare (2022-05-31)
+
+- chore(config): update catppuccin theme (2022-05-30)
+
+- chore(config): remove termux and macos-terminal (2022-05-29)
+
+- chore(nvim): re-add nvim-tree (2022-05-29)
+
+- chore(config): add workaround for neovim (2022-05-29)
+
+- chore(config): remove tpope/vim-surround (2022-05-29)
+
+- chore: update readme roadmap (2022-05-27)
+
+- chore(config): comment for nvim config (2022-05-27)
+
+- chore(config): noshowmode for neovim (2022-05-27)
+
+- chore(config): use dynamic theme for lualine vim (2022-05-27)
+
+- chore(update): add virtualedit for vim (2022-05-27)
+
+- chore: update README (2022-05-27)
+
+- chore(config): disable transparency for neovide (2022-05-27)
+
+- chore(config): use lua for neovim config (2022-05-27)
+
+- chore(config): update alacritty config, add truecolor for neovim (2022-05-27)
+
+- chore: update roadmap and also remove git from neovim (2022-05-27)
+
+- chore(config): use neovide (2022-05-27)
+
+- chore(config): consistent neovim config (2022-05-27)
+
+- chore(config): use stylua with neoformat to format lua in neovim (2022-05-27)
+
+- chore(config): add neoformat (2022-05-27)
+
+- chore: update roadmap (2022-05-27)
+
+- build: bump github.com/urfave/cli/v2 v2.8.1 (2022-05-27)
+
+- chore(config): git log oneline (2022-05-26)
+
+- build: bump github.com/urfave/cli/v2 v2.8.0 (2022-05-23)
+
+- chore(config): use APL font (2022-05-17)
+
+- chore(config): no integrate with clipboard (2022-04-29)
+
+- chore(config): make sure kitty cursor not change (2022-04-26)
+
+- chore(config): no need kitty with nnn (2022-04-21)
+
+- chore(config): remove github dark (2022-04-19)
+
+- chore: update config ignore (2022-04-14)
+
+- chore(config): switch to agave, for now (2022-04-02)
+
+- build: bump go 1.18 (2022-03-16)
+
+- chore(config): update nvim config (2022-03-16)
+
+- chore(config): init nvim-tree (2022-03-09)
+
+- chore(config): add nvim-tree (2022-03-09)
+
+- chore(config): re add vim go, let the fun begin (2022-03-09)
+
+- chore(config): Disable kitty ligatures (2022-03-09)
+
+- build: run go get -u ./... (2022-02-19)
+
+- chore(config): change colorscheme based on terminal (2022-02-19)
+
+- chore(config): use catppuccin (2022-02-19)
+
+- chore(config): terminal macos use option as meta (2022-02-03)
+
+- chore(config): add termux color (2022-01-27)
+
+- chore(config): update kitty font (2022-01-27)
+
+- chore(config): update font for macos-terminal (2022-01-27)
+
+- chore(config): original dracula theme (2022-01-27)
+
+- chore(config): update ignore (2022-01-27)
+
+- chore(config): kitty with transparent background (2022-01-16)
+
+- chore(config): add github dark to alacritty (2022-01-10)
+
+- chore(config): add github to kitty (2022-01-10)
+
+- chore(config): update fd and nvim (2022-01-10)
+
+- chore(config): increase kitty window size (2021-12-23)
+
+- chore(config): copy on select with kitty (2021-12-17)
+
+- chore: update badge in readme (2021-12-16)
+
+- chore(config): update kitty with comment (2021-12-15)
+
+- chore: add git fetch (2021-12-13)
+
+- chore: Add more ignore with go files (2021-12-11)
+
+- chore(config): update bat color (2021-12-08)
+
+- chore(config): use kitty Monokai (2021-12-08)
+
+- chore(config): integrate kitty with nnn (2021-12-03)
+
+- chore: user github.com/make-go-great/copy-go (2021-12-02)
+
+- chore(config): off kitty audio bell (2021-12-02)
+
+- chore(config): enable cursor styling (2021-12-02)
+
+- chore(scripts): sort git tag with latest first (2021-11-29)
+
+- chore(scripts): git log with stat (2021-11-27)
+
+- chore(config): use .ignore instead .fdignore to support rg, ag (2021-11-23)
+
+- chore(changelog): generate v0.8.0 (2021-11-19)
+
 ## v0.8.0 (2021-11-19)
 
 ### Others
