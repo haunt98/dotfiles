@@ -23,3 +23,5 @@ go build ./cmd/dot
 - [x] Switch to use lua for neovim config
 - [x] Add diff command
 - [x] Support diff directory
+- [ ] Support embed confgis
+- [ ] Release single binary
