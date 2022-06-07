@@ -1,3 +1,5 @@
+-- https://github.com/nanotee/nvim-lua-guide
+
 -- https://neovim.io/doc/user/lua.html#lua-vim-options
 vim.opt.breakindent = true
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
@@ -32,7 +34,6 @@ vim.opt.guifont = {
 -- https://github.com/neovim/neovim/issues/16416
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- https://neovim.io/doc/user/lua.html#lua-vim-variables
 -- https://github.com/mvdan/gofumpt#vim-go
 vim.g.go_gopls_gofumpt = 1
 
@@ -78,7 +79,7 @@ vim.opt.showmode = false
 
 -- https://github.com/nvim-lualine/lualine.nvim#configuring-lualine-in-initvim
 local lualine_theme = require("lualine.themes.iceberg")
-if vim.fn.getenv("COLORTERM") == "truecolor" then
+if vim.env.COLORTERM == "truecolor" then
 	lualine_theme = require("lualine.themes.catppuccin")
 end
 
@@ -107,17 +108,22 @@ require("nvim-tree").setup({
 
 -- https://github.com/catppuccin/nvim#setup
 local catppuccin_term_colors = false
-if vim.fn.getenv("COLORTERM") == "truecolor" then
+if vim.env.COLORTERM == "truecolor" then
 	catppuccin_term_colors = true
 	vim.g.catppuccin_flavour = "mocha"
 end
 
+local catppuccin_transparent_background = false
+if vim.env.TERM == "xterm-kitty" then
+	catppuccin_transparent_background = true
+end
+
 require("catppuccin").setup({
-	transparent_background = true,
+	transparent_background = catppuccin_transparent_background,
 	term_colors = catppuccin_term_colors,
 })
 
-if vim.fn.getenv("COLORTERM") == "truecolor" then
+if vim.env.COLORTERM == "truecolor" then
 	vim.opt.termguicolors = true
 	vim.cmd([[ colorscheme catppuccin ]])
 else
