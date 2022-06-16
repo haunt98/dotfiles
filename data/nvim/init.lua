@@ -7,6 +7,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 4
 vim.opt.swapfile = false
+vim.opt.title = true
 vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
 
