@@ -108,6 +108,9 @@ require("nvim-tree").setup({
 			},
 		},
 	},
+	git = {
+		enable = false,
+	},
 })
 
 -- https://github.com/catppuccin/nvim#setup
