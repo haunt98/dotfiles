@@ -66,6 +66,8 @@ require("packer").startup(function()
 	-- https://github.com/kyazdani42/nvim-tree.lua
 	use("kyazdani42/nvim-tree.lua")
 
+	use("lukas-reineke/indent-blankline.nvim")
+
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
@@ -116,6 +118,9 @@ require("nvim-tree").setup({
 		custom = { "^\\.git" },
 	},
 })
+
+-- lukas-reineke/indent-blankline.nvim
+require("indent_blankline").setup({})
 
 -- https://github.com/catppuccin/nvim#setup
 local catppuccin_term_colors = false
