@@ -16,14 +16,6 @@
         }
       ]
     },
-    "alacritty": {
-      "paths": [
-        {
-          "internal": "data/alacritty",
-          "external": "~/.config/alacritty"
-        }
-      ]
-    },
     "kitty": {
       "paths": [
         {
@@ -35,8 +27,8 @@
     "bat": {
       "paths": [
         {
-          "internal": "data/bat/config",
-          "external": "~/.config/bat/config"
+          "internal": "data/bat",
+          "external": "~/.config/bat"
         }
       ]
     },

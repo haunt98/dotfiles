@@ -19,3 +19,12 @@ git config --global alias.tg "tag --sort=-version:refname"
 git config --global pull.rebase true
 git config --global fetch.prune true
 git config --global init.defaultBranch main
+git config --global diff.colorMoved default
+git config --global merge.conflictstyle diff3
+
+# Delta
+# https://github.com/dandavison/delta
+git config --global core.pager delta
+git config --global interactive.diffFilter "delta --color-only"
+git config --global delta.navigate true
+git config --global delta.syntax-theme ansi
