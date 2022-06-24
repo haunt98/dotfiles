@@ -91,6 +91,7 @@ require("lualine").setup({
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 	},
+	extensions = { "fzf", "nvim-tree", "toggleterm" },
 })
 
 require("nvim-tree").setup({
