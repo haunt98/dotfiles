@@ -1,6 +1,3 @@
--- https://github.com/nanotee/nvim-lua-guide
-
--- https://neovim.io/doc/user/lua.html#lua-vim-options
 vim.opt.breakindent = true
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt.number = true
@@ -12,11 +9,9 @@ vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
 
 -- Clipboard support
--- https://neovim.io/doc/user/options.html#'clipboard'
 vim.opt.clipboard:append({ "unnamedplus" })
 
 -- Mouse support
--- https://neovim.io/doc/user/options.html#'mouse'
 vim.opt.mouse = "a"
 
 -- GUI support
@@ -38,19 +33,16 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Disable showmode when use lualine
 vim.opt.showmode = false
 
--- https://github.com/kyazdani42/nvim-tree.lua#setup
+-- NvimTree kepmap
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 
--- https://github.com/mvdan/gofumpt#vim-go
+-- Use gofumpt
 vim.g.go_gopls_gofumpt = 1
 
--- https://github.com/junegunn/fzf/blob/master/README-VIM.md
+-- Use fzf
 vim.opt.rtp:append({ "~/.fzf" })
-
--- https://github.com/neovide/neovide/wiki/Configuration
-vim.g.neovide_cursor_vfx_mode = "railgun"
 
 -- https://github.com/wbthomason/packer.nvim
 require("packer").startup(function()
@@ -69,6 +61,9 @@ require("packer").startup(function()
 	-- https://github.com/lukas-reineke/indent-blankline.nvim
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- https://github.com/akinsho/toggleterm.nvim
+	use({ "akinsho/toggleterm.nvim", tag = "v1.*" })
+
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
@@ -84,7 +79,6 @@ require("packer").startup(function()
 	use("fatih/vim-go")
 end)
 
--- https://github.com/nvim-lualine/lualine.nvim#configuring-lualine-in-initvim
 local lualine_theme = require("lualine.themes.iceberg")
 if vim.env.COLORTERM == "truecolor" then
 	lualine_theme = require("lualine.themes.catppuccin")
@@ -99,7 +93,6 @@ require("lualine").setup({
 	},
 })
 
--- https://github.com/kyazdani42/nvim-tree.lua#setup
 require("nvim-tree").setup({
 	renderer = {
 		icons = {
@@ -120,10 +113,10 @@ require("nvim-tree").setup({
 	},
 })
 
--- lukas-reineke/indent-blankline.nvim
-require("indent_blankline").setup({})
+require("indent_blankline").setup()
 
--- https://github.com/catppuccin/nvim#setup
+require("toggleterm").setup()
+
 local catppuccin_term_colors = false
 if vim.env.COLORTERM == "truecolor" then
 	catppuccin_term_colors = true
