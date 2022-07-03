@@ -22,6 +22,7 @@ git config --global init.defaultBranch main
 git config --global diff.colorMoved default
 git config --global merge.conflictstyle diff3
 git config --global core.fsmonitor true
+git config --global push.autoSetupRemote true
 
 # Delta
 # https://github.com/dandavison/delta
