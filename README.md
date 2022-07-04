@@ -17,11 +17,3 @@ go build ./cmd/dot
 # Compare dotfiles with user config
 ./dot compare
 ```
-
-## Roadmap
-
-- [x] Switch to use lua for neovim config
-- [x] Add diff command
-- [x] Support diff directory
-- [ ] Support embed confgis
-- [ ] Release single binary
