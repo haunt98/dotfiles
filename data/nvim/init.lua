@@ -69,7 +69,7 @@ require("packer").startup(function()
 	use("cocopon/iceberg.vim")
 
 	-- https://github.com/catppuccin/nvim
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "catppuccin/nvim", as = "catppuccin", run = "CatppuccinCompile" })
 
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
@@ -132,6 +132,9 @@ end
 require("catppuccin").setup({
 	transparent_background = catppuccin_transparent_background,
 	term_colors = catppuccin_term_colors,
+	compile = {
+		enabled = true,
+	},
 })
 
 if vim.env.COLORTERM == "truecolor" then
