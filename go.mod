@@ -6,7 +6,7 @@ require (
 	github.com/make-go-great/color-go v0.3.0
 	github.com/make-go-great/copy-go v0.9.0
 	github.com/make-go-great/diff-go v0.0.5
-	github.com/urfave/cli/v2 v2.11.0
+	github.com/urfave/cli/v2 v2.11.1
 )
 
 require (
