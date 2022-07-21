@@ -8,6 +8,11 @@ vim.opt.title = true
 vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
 
+-- Tab
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 -- Clipboard support
 vim.opt.clipboard:append({ "unnamedplus" })
 
@@ -69,7 +74,7 @@ require("packer").startup(function()
 	use("cocopon/iceberg.vim")
 
 	-- https://github.com/catppuccin/nvim
-	use({ "catppuccin/nvim", as = "catppuccin", run = "CatppuccinCompile" })
+	use({ "catppuccin/nvim", as = "catppuccin", run = ":CatppuccinCompile" })
 
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
