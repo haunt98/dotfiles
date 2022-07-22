@@ -2,8 +2,8 @@ github.com/cpuguy83/go-md2man/v2 v2.0.2 h1:p1EgwI/C7NhT0JmVkwCD2ZBK8j4aeHQX2pMHH
 github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/fatih/color v1.13.0 h1:8LOYc1KYPPmyKMuN8QV2DNRWNbLo6LZ0iLs8+mlH53w=
 github.com/fatih/color v1.13.0/go.mod h1:kLAiJbzzSOZDVNGyDpeOxJ47H46qBXwg5ILebYFFOfk=
-github.com/make-go-great/color-go v0.3.0 h1:ZVtVk/wVVsZZwSJG7PZpsY5zwIyGao5VoN48yKfSzYA=
-github.com/make-go-great/color-go v0.3.0/go.mod h1:G5G8IJ3PUo+vSQ+UvnfaswF8O/piVIhFJKv1mQjBGpI=
+github.com/make-go-great/color-go v0.4.1 h1:4HIat5r1oQneu5BSDUjHKN/9x4Ay2qEEkswdOgk/VRY=
+github.com/make-go-great/color-go v0.4.1/go.mod h1:G5G8IJ3PUo+vSQ+UvnfaswF8O/piVIhFJKv1mQjBGpI=
 github.com/make-go-great/copy-go v0.9.0 h1:RTqVypNIa6liItFg6kORP93ZhgSck8+pupvGrnSzrSI=
 github.com/make-go-great/copy-go v0.9.0/go.mod h1:J1ihIqaX3O/lGAaL23d+1GXSQwJX3RpStmUIUdh4xyw=
 github.com/make-go-great/diff-go v0.0.5 h1:lH5cVHlkeSyBsUWbQOCCwou4ywpeOD0d215Nl0P5Uoc=
