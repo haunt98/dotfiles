@@ -74,7 +74,7 @@ require("packer").startup(function()
 	use("cocopon/iceberg.vim")
 
 	-- https://github.com/catppuccin/nvim
-	use({ "catppuccin/nvim", as = "catppuccin", run = ":CatppuccinCompile" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
