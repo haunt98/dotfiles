@@ -46,6 +46,14 @@ vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 -- Use gofumpt
 vim.g.go_gopls_gofumpt = 1
 
+-- Use copilot
+vim.g.copilot_filetypes = {
+	["*"] = false,
+	go = true,
+	proto = true,
+	yaml = true,
+}
+
 -- Use fzf
 vim.opt.rtp:append({ "~/.fzf" })
 
@@ -82,6 +90,9 @@ require("packer").startup(function()
 
 	-- https://github.com/fatih/vim-go
 	use("fatih/vim-go")
+
+	-- https://github.com/github/copilot.vim
+	use("github/copilot.vim")
 end)
 
 local lualine_theme = require("lualine.themes.iceberg")
