@@ -75,7 +75,7 @@ require("packer").startup(function()
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- https://github.com/akinsho/toggleterm.nvim
-	use({ "akinsho/toggleterm.nvim", tag = "v1.*" })
+	use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
