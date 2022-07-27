@@ -1,7 +1,5 @@
 vim.opt.breakindent = true
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
-vim.opt.ignorecase = true
-vim.opt.infercase = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 4
