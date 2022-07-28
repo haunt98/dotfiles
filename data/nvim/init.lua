@@ -43,6 +43,9 @@ vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 
+-- Use catppuccin
+vim.g.catppuccin_flavour = "mocha"
+
 -- Use gofumpt
 vim.g.go_gopls_gofumpt = 1
 
@@ -74,8 +77,8 @@ require("packer").startup(function()
 	-- https://github.com/lukas-reineke/indent-blankline.nvim
 	use("lukas-reineke/indent-blankline.nvim")
 
-	-- https://github.com/akinsho/toggleterm.nvim
-	use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
+	-- https://github.com/junegunn/fzf.vim
+	use("junegunn/fzf.vim")
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
@@ -132,21 +135,12 @@ require("nvim-tree").setup({
 
 require("indent_blankline").setup()
 
-require("toggleterm").setup()
-
 local catppuccin_term_colors = false
 if vim.env.COLORTERM == "truecolor" then
 	catppuccin_term_colors = true
-	vim.g.catppuccin_flavour = "mocha"
-end
-
-local catppuccin_transparent_background = false
-if vim.env.TERM == "xterm-kitty" then
-	catppuccin_transparent_background = true
 end
 
 require("catppuccin").setup({
-	transparent_background = catppuccin_transparent_background,
 	term_colors = catppuccin_term_colors,
 	compile = {
 		enabled = true,
