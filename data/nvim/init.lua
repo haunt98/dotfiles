@@ -1,12 +1,14 @@
 vim.opt.breakindent = true
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.scrolloff = 4
 vim.opt.swapfile = false
 vim.opt.title = true
 vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
+
+-- Line number
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 4
 
 -- Tab
 vim.opt.tabstop = 4
