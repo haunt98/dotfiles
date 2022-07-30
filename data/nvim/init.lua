@@ -1,6 +1,5 @@
 -- https://github.com/vscode-neovim/vscode-neovim
 if not vim.g.vscode then
-	vim.opt.breakindent = true
 	vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 	vim.opt.swapfile = false
 	vim.opt.title = true
@@ -16,6 +15,14 @@ if not vim.g.vscode then
 	vim.opt.tabstop = 4
 	vim.opt.shiftwidth = 4
 	vim.opt.expandtab = true
+
+	-- Wrap
+	vim.opt.breakindent = true
+
+	-- Truecolor
+	if vim.env.COLORTERM == "truecolor" then
+		vim.opt.termguicolors = true
+	end
 
 	-- Clipboard support
 	vim.opt.clipboard:append({ "unnamedplus" })
@@ -73,23 +80,93 @@ if not vim.g.vscode then
 		use("axelf4/vim-strip-trailing-whitespace")
 
 		-- https://github.com/nvim-lualine/lualine.nvim
-		use("nvim-lualine/lualine.nvim")
+		use({
+			"nvim-lualine/lualine.nvim",
+			config = function()
+				local lualine_theme = require("lualine.themes.iceberg")
+				if vim.opt.termguicolors then
+					lualine_theme = require("lualine.themes.catppuccin")
+				end
+
+				require("lualine").setup({
+					options = {
+						icons_enabled = false,
+						theme = lualine_theme,
+						component_separators = { left = "", right = "" },
+						section_separators = { left = "", right = "" },
+					},
+					extensions = { "fzf", "nvim-tree" },
+				})
+			end,
+		})
 
 		-- https://github.com/kyazdani42/nvim-tree.lua
-		use("kyazdani42/nvim-tree.lua")
+		use({
+			"kyazdani42/nvim-tree.lua",
+			config = function()
+				require("nvim-tree").setup({
+					renderer = {
+						icons = {
+							show = {
+								file = false,
+								folder = false,
+								folder_arrow = false,
+								git = false,
+							},
+						},
+					},
+					git = {
+						enable = true,
+						ignore = true,
+					},
+					filters = {
+						custom = { "^\\.git$" },
+					},
+				})
+			end,
+		})
 
 		-- https://github.com/lukas-reineke/indent-blankline.nvim
-		use("lukas-reineke/indent-blankline.nvim")
+		use({
+			"lukas-reineke/indent-blankline.nvim",
+			config = function()
+				require("indent_blankline").setup()
+			end,
+		})
 
 		-- https://github.com/junegunn/fzf.vim
 		use("junegunn/fzf.vim")
+
+		-- https://github.com/Pocco81/true-zen.nvim
+		use({
+			"Pocco81/true-zen.nvim",
+			config = function()
+				require("true-zen").setup()
+			end,
+		})
 
 		-- Colorschemes
 		-- https://github.com/cocopon/iceberg.vim
 		use("cocopon/iceberg.vim")
 
 		-- https://github.com/catppuccin/nvim
-		use({ "catppuccin/nvim", as = "catppuccin" })
+		use({
+			"catppuccin/nvim",
+			as = "catppuccin",
+			config = function()
+				local catppuccin_term_colors = false
+				if vim.opt.termguicolors then
+					catppuccin_term_colors = true
+				end
+
+				require("catppuccin").setup({
+					term_colors = catppuccin_term_colors,
+					compile = {
+						enabled = true,
+					},
+				})
+			end,
+		})
 
 		-- Programming languages
 		-- https://github.com/sbdchd/neoformat
@@ -102,57 +179,7 @@ if not vim.g.vscode then
 		use("github/copilot.vim")
 	end)
 
-	local lualine_theme = require("lualine.themes.iceberg")
-	if vim.env.COLORTERM == "truecolor" then
-		lualine_theme = require("lualine.themes.catppuccin")
-	end
-
-	require("lualine").setup({
-		options = {
-			icons_enabled = false,
-			theme = lualine_theme,
-			component_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
-		},
-		extensions = { "fzf", "nvim-tree", "toggleterm" },
-	})
-
-	require("nvim-tree").setup({
-		renderer = {
-			icons = {
-				show = {
-					file = false,
-					folder = false,
-					folder_arrow = false,
-					git = false,
-				},
-			},
-		},
-		git = {
-			enable = true,
-			ignore = true,
-		},
-		filters = {
-			custom = { "^\\.git$" },
-		},
-	})
-
-	require("indent_blankline").setup()
-
-	local catppuccin_term_colors = false
-	if vim.env.COLORTERM == "truecolor" then
-		catppuccin_term_colors = true
-	end
-
-	require("catppuccin").setup({
-		term_colors = catppuccin_term_colors,
-		compile = {
-			enabled = true,
-		},
-	})
-
-	if vim.env.COLORTERM == "truecolor" then
-		vim.opt.termguicolors = true
+	if vim.opt.termguicolors then
 		vim.cmd([[ colorscheme catppuccin ]])
 	else
 		vim.cmd([[ colorscheme iceberg ]])
