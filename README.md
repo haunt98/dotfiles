@@ -14,6 +14,6 @@ go build ./cmd/dot
 # Update dotfiles with user config
 ./dot update
 
-# Compare dotfiles with user config
-./dot compare
+# Diff dotfiles with user config
+./dot diff
 ```
