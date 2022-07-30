@@ -51,6 +51,7 @@ if not vim.g.vscode then
 	vim.opt.showmode = false
 
 	-- Keymap
+	vim.keymap.set("n", "<leader>s", ":w<CR>")
 	vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 	vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 	vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
