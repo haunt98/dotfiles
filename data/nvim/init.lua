@@ -50,10 +50,12 @@ if not vim.g.vscode then
 	-- Disable showmode when use lualine
 	vim.opt.showmode = false
 
-	-- NvimTree kepmap
+	-- Keymap
 	vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 	vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 	vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
+	vim.keymap.set("n", "<leader>z", ":TZAtaraxis<CR>")
+	vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
 
 	-- Use catppuccin
 	vim.g.catppuccin_flavour = "mocha"
