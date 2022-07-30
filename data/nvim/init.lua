@@ -1,3 +1,4 @@
+-- https://github.com/nanotee/nvim-lua-guide
 -- https://github.com/vscode-neovim/vscode-neovim
 if not vim.g.vscode then
 	vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
