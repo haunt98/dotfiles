@@ -1,157 +1,160 @@
-vim.opt.breakindent = true
-vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
-vim.opt.swapfile = false
-vim.opt.title = true
-vim.opt.virtualedit = "block"
-vim.opt.whichwrap = "<,>,[,]"
+-- https://github.com/vscode-neovim/vscode-neovim
+if not vim.g.vscode then
+	vim.opt.breakindent = true
+	vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
+	vim.opt.swapfile = false
+	vim.opt.title = true
+	vim.opt.virtualedit = "block"
+	vim.opt.whichwrap = "<,>,[,]"
 
--- Line number
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.scrolloff = 4
+	-- Line number
+	vim.opt.number = true
+	vim.opt.relativenumber = true
+	vim.opt.scrolloff = 4
 
--- Tab
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+	-- Tab
+	vim.opt.tabstop = 4
+	vim.opt.shiftwidth = 4
+	vim.opt.expandtab = true
 
--- Clipboard support
-vim.opt.clipboard:append({ "unnamedplus" })
+	-- Clipboard support
+	vim.opt.clipboard:append({ "unnamedplus" })
 
--- Mouse support
-vim.opt.mouse = "a"
+	-- Mouse support
+	vim.opt.mouse = "a"
 
--- GUI support
-vim.opt.guifont = {
-	"APL385 Unicode:h18",
-	"Agave:h18",
-	"Victor Mono:h18",
-	"Rec Mono Casual:h18",
-	"Cascadia Code:h18",
-	"JetBrains Mono:h18",
-	"Iosevka:h18",
-	"Fira Code:h18",
-}
+	-- GUI support
+	vim.opt.guifont = {
+		"APL385 Unicode:h18",
+		"Agave:h18",
+		"Victor Mono:h18",
+		"Rec Mono Casual:h18",
+		"Cascadia Code:h18",
+		"JetBrains Mono:h18",
+		"Iosevka:h18",
+		"Fira Code:h18",
+	}
 
--- Workaround
--- https://github.com/neovim/neovim/issues/16416
-vim.keymap.set("i", "<C-c>", "<Esc>")
+	-- Workaround
+	-- https://github.com/neovim/neovim/issues/16416
+	vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- Disable showmode when use lualine
-vim.opt.showmode = false
+	-- Disable showmode when use lualine
+	vim.opt.showmode = false
 
--- NvimTree kepmap
-vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
-vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
+	-- NvimTree kepmap
+	vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+	vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
+	vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 
--- Use catppuccin
-vim.g.catppuccin_flavour = "mocha"
+	-- Use catppuccin
+	vim.g.catppuccin_flavour = "mocha"
 
--- Use gofumpt
-vim.g.go_gopls_gofumpt = 1
+	-- Use gofumpt
+	vim.g.go_gopls_gofumpt = 1
 
--- Use copilot
-vim.g.copilot_filetypes = {
-	["*"] = false,
-	go = true,
-	proto = true,
-	yaml = true,
-}
+	-- Use copilot
+	vim.g.copilot_filetypes = {
+		["*"] = false,
+		go = true,
+		proto = true,
+		yaml = true,
+	}
 
--- Use fzf
-vim.opt.rtp:append({ "~/.fzf" })
+	-- Use fzf
+	vim.opt.rtp:append({ "~/.fzf" })
 
--- https://github.com/wbthomason/packer.nvim
-require("packer").startup(function()
-	-- Manage itself
-	use("wbthomason/packer.nvim")
+	-- https://github.com/wbthomason/packer.nvim
+	require("packer").startup(function()
+		-- Manage itself
+		use("wbthomason/packer.nvim")
 
-	-- https://github.com/axelf4/vim-strip-trailing-whitespace
-	use("axelf4/vim-strip-trailing-whitespace")
+		-- https://github.com/axelf4/vim-strip-trailing-whitespace
+		use("axelf4/vim-strip-trailing-whitespace")
 
-	-- https://github.com/nvim-lualine/lualine.nvim
-	use("nvim-lualine/lualine.nvim")
+		-- https://github.com/nvim-lualine/lualine.nvim
+		use("nvim-lualine/lualine.nvim")
 
-	-- https://github.com/kyazdani42/nvim-tree.lua
-	use("kyazdani42/nvim-tree.lua")
+		-- https://github.com/kyazdani42/nvim-tree.lua
+		use("kyazdani42/nvim-tree.lua")
 
-	-- https://github.com/lukas-reineke/indent-blankline.nvim
-	use("lukas-reineke/indent-blankline.nvim")
+		-- https://github.com/lukas-reineke/indent-blankline.nvim
+		use("lukas-reineke/indent-blankline.nvim")
 
-	-- https://github.com/junegunn/fzf.vim
-	use("junegunn/fzf.vim")
+		-- https://github.com/junegunn/fzf.vim
+		use("junegunn/fzf.vim")
 
-	-- Colorschemes
-	-- https://github.com/cocopon/iceberg.vim
-	use("cocopon/iceberg.vim")
+		-- Colorschemes
+		-- https://github.com/cocopon/iceberg.vim
+		use("cocopon/iceberg.vim")
 
-	-- https://github.com/catppuccin/nvim
-	use({ "catppuccin/nvim", as = "catppuccin" })
+		-- https://github.com/catppuccin/nvim
+		use({ "catppuccin/nvim", as = "catppuccin" })
 
-	-- Programming languages
-	-- https://github.com/sbdchd/neoformat
-	use("sbdchd/neoformat")
+		-- Programming languages
+		-- https://github.com/sbdchd/neoformat
+		use("sbdchd/neoformat")
 
-	-- https://github.com/fatih/vim-go
-	use("fatih/vim-go")
+		-- https://github.com/fatih/vim-go
+		use("fatih/vim-go")
 
-	-- https://github.com/github/copilot.vim
-	use("github/copilot.vim")
-end)
+		-- https://github.com/github/copilot.vim
+		use("github/copilot.vim")
+	end)
 
-local lualine_theme = require("lualine.themes.iceberg")
-if vim.env.COLORTERM == "truecolor" then
-	lualine_theme = require("lualine.themes.catppuccin")
-end
+	local lualine_theme = require("lualine.themes.iceberg")
+	if vim.env.COLORTERM == "truecolor" then
+		lualine_theme = require("lualine.themes.catppuccin")
+	end
 
-require("lualine").setup({
-	options = {
-		icons_enabled = false,
-		theme = lualine_theme,
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-	},
-	extensions = { "fzf", "nvim-tree", "toggleterm" },
-})
+	require("lualine").setup({
+		options = {
+			icons_enabled = false,
+			theme = lualine_theme,
+			component_separators = { left = "", right = "" },
+			section_separators = { left = "", right = "" },
+		},
+		extensions = { "fzf", "nvim-tree", "toggleterm" },
+	})
 
-require("nvim-tree").setup({
-	renderer = {
-		icons = {
-			show = {
-				file = false,
-				folder = false,
-				folder_arrow = false,
-				git = false,
+	require("nvim-tree").setup({
+		renderer = {
+			icons = {
+				show = {
+					file = false,
+					folder = false,
+					folder_arrow = false,
+					git = false,
+				},
 			},
 		},
-	},
-	git = {
-		enable = true,
-		ignore = true,
-	},
-	filters = {
-		custom = { "^\\.git$" },
-	},
-})
+		git = {
+			enable = true,
+			ignore = true,
+		},
+		filters = {
+			custom = { "^\\.git$" },
+		},
+	})
 
-require("indent_blankline").setup()
+	require("indent_blankline").setup()
 
-local catppuccin_term_colors = false
-if vim.env.COLORTERM == "truecolor" then
-	catppuccin_term_colors = true
-end
+	local catppuccin_term_colors = false
+	if vim.env.COLORTERM == "truecolor" then
+		catppuccin_term_colors = true
+	end
 
-require("catppuccin").setup({
-	term_colors = catppuccin_term_colors,
-	compile = {
-		enabled = true,
-	},
-})
+	require("catppuccin").setup({
+		term_colors = catppuccin_term_colors,
+		compile = {
+			enabled = true,
+		},
+	})
 
-if vim.env.COLORTERM == "truecolor" then
-	vim.opt.termguicolors = true
-	vim.cmd([[ colorscheme catppuccin ]])
-else
-	vim.cmd([[ colorscheme iceberg ]])
+	if vim.env.COLORTERM == "truecolor" then
+		vim.opt.termguicolors = true
+		vim.cmd([[ colorscheme catppuccin ]])
+	else
+		vim.cmd([[ colorscheme iceberg ]])
+	end
 end
