@@ -1,15 +1,9 @@
-.PHONY: all test coverage-cli coverate-html lint
+.PHONY: all test lint
 
 all: test lint
 
 test:
-	go test -race -coverprofile=coverage.out ./...
-
-coverage-cli: test
-	go tool cover -func=coverage.out
-
-coverage-html: test
-	go tool cover -html=coverage.out
+	go test -race -failfast ./...
 
 lint:
 	golangci-lint run ./...
