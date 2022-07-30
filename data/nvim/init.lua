@@ -1,11 +1,12 @@
 -- https://github.com/nanotee/nvim-lua-guide
+vim.opt.virtualedit = "block"
+vim.opt.whichwrap = "<,>,[,]"
+
 -- https://github.com/vscode-neovim/vscode-neovim
 if not vim.g.vscode then
 	vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 	vim.opt.swapfile = false
 	vim.opt.title = true
-	vim.opt.virtualedit = "block"
-	vim.opt.whichwrap = "<,>,[,]"
 
 	-- Line number
 	vim.opt.number = true
