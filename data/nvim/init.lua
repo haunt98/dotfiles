@@ -63,8 +63,9 @@ if not vim.g.vscode then
 	-- Use catppuccin
 	vim.g.catppuccin_flavour = "mocha"
 
-	-- Use gofumpt
+	-- Use vim-go
 	vim.g.go_gopls_gofumpt = 1
+	vim.g.go_doc_popup_window = 1
 
 	-- Use copilot
 	vim.g.copilot_filetypes = {
