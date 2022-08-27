@@ -156,6 +156,9 @@ if not vim.g.vscode then
 		-- https://github.com/cocopon/iceberg.vim
 		use("cocopon/iceberg.vim")
 
+		-- https://github.com/junegunn/seoul256.vim
+		use("junegunn/seoul256.vim")
+
 		-- https://github.com/catppuccin/nvim
 		use({
 			"catppuccin/nvim",
@@ -168,9 +171,6 @@ if not vim.g.vscode then
 
 				require("catppuccin").setup({
 					term_colors = catppuccin_term_colors,
-					compile = {
-						enabled = true,
-					},
 				})
 			end,
 		})
