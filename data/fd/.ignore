@@ -1,5 +1,4 @@
 # macOS
-.DS_Store
 Applications
 Desktop
 Documents
@@ -8,17 +7,9 @@ Movies
 Music
 Pictures
 
-# IntelliJ
-.idea
-
-# VSCode
-.vscode
-
-# Git
-.git
-
 # Node
 node_modules
+node
 
 # Go
 mod
@@ -31,3 +22,6 @@ generated
 
 # Python
 venv
+
+# Personal
+Homework

@@ -29,4 +29,4 @@ git config --global push.autoSetupRemote true
 git config --global core.pager delta
 git config --global interactive.diffFilter "delta --color-only"
 git config --global delta.navigate true
-git config --global delta.syntax-theme ansi
+git config --global delta.syntax-theme "Monokai Extended"
