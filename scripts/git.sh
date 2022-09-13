@@ -16,12 +16,13 @@ git config --global alias.sw switch
 git config --global alias.tg "tag --sort=-version:refname"
 
 # Misc
-git config --global pull.rebase true
+git config --global core.fsmonitor true
+git config --global diff.colorMoved default
 git config --global fetch.prune true
 git config --global init.defaultBranch main
-git config --global diff.colorMoved default
 git config --global merge.conflictstyle diff3
-git config --global core.fsmonitor true
+git config --global pull.rebase true
+git config --global pull.twohead ort
 git config --global push.autoSetupRemote true
 
 # Delta
