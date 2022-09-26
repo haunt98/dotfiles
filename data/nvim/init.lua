@@ -125,6 +125,9 @@ require("packer").startup(function()
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
 
+	-- https://github.com/junegunn/seoul256.vim
+	use("junegunn/seoul256.vim")
+
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
 	use("sbdchd/neoformat")
