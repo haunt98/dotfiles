@@ -128,9 +128,6 @@ require("packer").startup(function()
 	-- https://github.com/junegunn/seoul256.vim
 	use("junegunn/seoul256.vim")
 
-	-- https://github.com/tribela/vim-transparent
-	use("tribela/vim-transparent")
-
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
 	use("sbdchd/neoformat")
