@@ -1,5 +1,149 @@
 # CHANGELOG
 
+## v0.9.1 (2022-10-10)
+
+### Others
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.17.1 to 2.19.2 (2022-10-10)
+
+- chore(config): no transparent neovim (2022-10-10)
+
+- chore(config): use vim.api.nvim_command (2022-10-10)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.16.3 to 2.17.1 (2022-09-30)
+
+- chore(config): re-add seoul theme (2022-09-26)
+
+- chore(config): update nvim keymap (2022-09-21)
+
+- chore(config): update mocha theme kitty (2022-09-21)
+
+- chore(config): use iceberg for neovim (2022-09-21)
+
+- chore(config): update kitty transparent (2022-09-21)
+
+- chore(config): kitty disable ligature (2022-09-15)
+
+- chore(config): kitty new tab better (2022-09-15)
+
+- chore(config): use iosevka term curly (2022-09-15)
+
+- chore(config): use git merge-ort (2022-09-13)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.16.2 to 2.16.3 (2022-09-13)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.14.1 to 2.16.2 (2022-09-12)
+
+- chore(config): delta line numbers (2022-09-07)
+
+- chore(config): update monokai (2022-09-07)
+
+- chore: update golangci-lint config (2022-09-07)
+
+- chore: bump go 1.19 (2022-09-07)
+
+- chore(config): use Monokai (2022-09-07)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.14.0 to 2.14.1 (2022-09-06)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.11.2 to 2.14.0 (2022-09-02)
+
+- chore(config): add junegunn/seoul256.vim (2022-08-28)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.11.1 to 2.11.2 (2022-08-15)
+
+- chore(config): popup vim-go help (2022-08-01)
+
+- chore(config): imrpove neovim in vscode (2022-07-31)
+
+- chore(config): keymap fzf neovim (2022-07-31)
+
+- chore(config): neovim keymap save (2022-07-30)
+
+- chore(config): add neovim keymap (2022-07-30)
+
+- chore(config): give credit to https://github.com/nanotee/nvim-lua-guide (2022-07-30)
+
+- chore: update README with diff not compare (2022-07-30)
+
+- chore: remove cover from Makefile (2022-07-30)
+
+- chore(config): refactor packer config (2022-07-30)
+
+- chore(config): use vscode-neovim (2022-07-30)
+
+- chore(config): stop fold in neovim (2022-07-29)
+
+- chore(config): remove transparent background (2022-07-28)
+
+- chore(config): revert ignore case in neovim (2022-07-27)
+
+- chore(config): ignore case in neovim (2022-07-27)
+
+- chore(config): only ignore .git in neovim (2022-07-23)
+
+- chore(config): bump toggleterm in neovim (2022-07-23)
+
+- chore(config): use github copilot (2022-07-23)
+
+- chore(config): remove catppucin compile (2022-07-22)
+
+- build(deps): bump github.com/make-go-great/color-go from 0.3.0 to 0.4.1 (2022-07-22)
+
+- chore(config): improve kitty perf (2022-07-22)
+
+- chore(config): better tab for neovim (2022-07-21)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.11.0 to 2.11.1 (2022-07-21)
+
+- chore: add nvim catppucin cache (2022-07-18)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.10.3 to 2.11.0 (2022-07-11)
+
+- chore(config): wip add kitty diff (2022-07-07)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.8.1 to 2.10.3 (2022-07-04)
+
+- chore: remove roadmap (2022-07-04)
+
+- chore: add Makefile (2022-07-04)
+
+- chore: bump github workflows v3 (2022-07-04)
+
+- chore: add dependabot (2022-07-04)
+
+- chore(config): enable git push.autoSetupRemote (2022-07-03)
+
+- chore(config): enable git fsmonitor (2022-06-30)
+
+- chore(config): kitty map (2022-06-27)
+
+- chore(config): lualine config in neovim (2022-06-24)
+
+- chore(config): add float term in neovim (2022-06-24)
+
+- chore(config): use catppuccin for bat, delta (2022-06-23)
+
+- chore: update doc (2022-06-22)
+
+- chore(config): add indent_blankline to neovim (2022-06-22)
+
+- chore(config): support git in nvim-tree (2022-06-20)
+
+- chore(config): disable git in nvim-tree (2022-06-16)
+
+- chore(config): set title in neovim (2022-06-16)
+
+- build: bump golang.org/x/sys v0.0.0-20220610221304-9f5ed59c137d (2022-06-14)
+
+- chore(config): add fzf for neovim (2022-06-14)
+
+- chore(config): only transparent for kitty (2022-06-07)
+
+- chore: update roadmap (2022-05-31)
+
+- chore(changelog): generate v0.9.0 (2022-05-31)
+
 ## v0.9.0 (2022-05-31)
 
 ### Added
