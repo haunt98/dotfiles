@@ -128,6 +128,9 @@ require("packer").startup(function()
 	-- https://github.com/junegunn/seoul256.vim
 	use("junegunn/seoul256.vim")
 
+	-- https://github.com/tribela/vim-transparent
+	use("tribela/vim-transparent")
+
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
 	use("sbdchd/neoformat")
@@ -139,4 +142,4 @@ require("packer").startup(function()
 	use("github/copilot.vim")
 end)
 
-vim.cmd([[ colorscheme iceberg ]])
+vim.api.nvim_command("colorscheme iceberg")
