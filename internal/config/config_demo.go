@@ -11,6 +11,10 @@ var _ Config = (*configDemo)(nil)
 func (c *configDemo) Install() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
+			if p.External == "" {
+				continue
+			}
+
 			fmt.Printf("Replace %s -> %s\n", p.Internal, p.External)
 		}
 	}
@@ -21,7 +25,25 @@ func (c *configDemo) Install() error {
 func (c *configDemo) Update() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
+			if p.External == "" {
+				continue
+			}
+
 			fmt.Printf("Replace %s -> %s\n", p.External, p.Internal)
+		}
+	}
+
+	return nil
+}
+
+func (c *configDemo) Download() error {
+	for _, app := range c.Apps {
+		for _, p := range app.Paths {
+			if p.URL == "" {
+				continue
+			}
+
+			fmt.Printf("Download %s -> %s\n", p.URL, p.Internal)
 		}
 	}
 

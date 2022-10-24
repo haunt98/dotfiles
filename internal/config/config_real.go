@@ -2,6 +2,8 @@ package config
 
 import (
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 	"path/filepath"
 
@@ -10,6 +12,7 @@ import (
 )
 
 type configReal struct {
+	httpClient *http.Client
 	configApps
 }
 
@@ -19,6 +22,10 @@ var _ Config = (*configReal)(nil)
 func (c *configReal) Install() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
+			if p.External == "" {
+				continue
+			}
+
 			if err := copy.Replace(p.Internal, p.External); err != nil {
 				return fmt.Errorf("failed to replace %s -> %s: %w", p.Internal, p.External, err)
 			}
@@ -32,9 +39,41 @@ func (c *configReal) Install() error {
 func (c *configReal) Update() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
+			if p.External == "" {
+				continue
+			}
+
 			if err := copy.Replace(p.External, p.Internal); err != nil {
 				return fmt.Errorf("failed to replace %s -> %s: %w", p.External, p.Internal, err)
 			}
+		}
+	}
+
+	return nil
+}
+
+func (c *configReal) Download() error {
+	for _, app := range c.Apps {
+		for _, p := range app.Paths {
+			if p.URL == "" {
+				continue
+			}
+
+			httpRsp, err := c.httpClient.Get(p.URL)
+			if err != nil {
+				return fmt.Errorf("http client: failed to get: %w", err)
+			}
+
+			data, err := io.ReadAll(httpRsp.Body)
+			if err != nil {
+				return fmt.Errorf("io: failed to read all: %w", err)
+			}
+
+			if err := os.WriteFile(p.Internal, data, 0o600); err != nil {
+				return fmt.Errorf("os: failed to write file: %w", err)
+			}
+
+			httpRsp.Body.Close()
 		}
 	}
 

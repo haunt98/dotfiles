@@ -13,34 +13,36 @@ const (
 	appName  = "dotfiles"
 	appUsage = "managing dotfiles"
 
-	// flags
-	verboseFlag = "verbose"
-	dryRunFlag  = "dry-run"
-
-	// commands
 	installCommand = "install"
-	updateCommand  = "update"
-	cleanCommand   = "clean"
-	diffCommand    = "diff"
+	installUsage   = "install user configs from dotfiles"
 
-	// flag usages
-	verboseUsage = "show what is going on"
-	dryRunUsage  = "demo mode without actually changing anything"
+	updateCommand = "update"
+	updateUsage   = "update dotfiles from user configs"
 
-	// command usages
-	installUsage = "install user configs from dotfiles"
-	updateUsage  = "update dotfiles from user configs"
+	downloadCommand = "download"
+	downloadUsage   = "download configs from internet (theme for example)"
+
+	cleanCommand = "clean"
 	cleanUsage   = "clean unused dotfiles"
-	diffUsage    = "diff dotfiles with user configs"
+
+	diffCommand = "diff"
+	diffUsage   = "diff dotfiles with user configs"
+
+	verboseFlag  = "verbose"
+	verboseUsage = "show what is going on"
+
+	dryRunFlag  = "dry-run"
+	dryRunUsage = "demo mode without actually changing anything"
 
 	currentDir = "."
 )
 
 var (
-	// command aliases
-	installAliases = []string{"i"}
-	updateAliases  = []string{"u"}
-	cleanAliases   = []string{"c"}
+	installAliases  = []string{"i"}
+	updateAliases   = []string{"u"}
+	downloadAliases = []string{"d"}
+	cleanAliases    = []string{"c"}
+	diffAliases     = []string{"df"}
 )
 
 // denyOSes contains OS which is not supported
@@ -93,6 +95,22 @@ func NewApp() *App {
 				Action: a.runUpdate,
 			},
 			{
+				Name:    downloadCommand,
+				Aliases: downloadAliases,
+				Usage:   downloadUsage,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+					&cli.BoolFlag{
+						Name:  dryRunFlag,
+						Usage: dryRunUsage,
+					},
+				},
+				Action: a.runDownload,
+			},
+			{
 				Name:    cleanCommand,
 				Aliases: cleanAliases,
 				Usage:   cleanUsage,
@@ -109,8 +127,9 @@ func NewApp() *App {
 				Action: a.runClean,
 			},
 			{
-				Name:  diffCommand,
-				Usage: diffUsage,
+				Name:    diffCommand,
+				Aliases: diffAliases,
+				Usage:   diffUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
 						Name:  verboseFlag,

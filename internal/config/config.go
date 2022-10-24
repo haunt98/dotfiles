@@ -3,8 +3,10 @@ package config
 import (
 	"encoding/json"
 	"fmt"
+	"net/http"
 	"os"
 	"path/filepath"
+	"time"
 )
 
 const (
@@ -17,6 +19,7 @@ type Config interface {
 	Update() error
 	Clean() error
 	Diff() error
+	Download() error
 }
 
 type configApps struct {
@@ -30,7 +33,8 @@ type App struct {
 
 type Path struct {
 	Internal string `json:"internal"`
-	External string `json:"external"`
+	External string `json:"external,omitempty"`
+	URL      string `json:"url,omitempty"`
 }
 
 // LoadConfig return config, configDemo
@@ -47,6 +51,9 @@ func LoadConfig(path string) (*configReal, *configDemo, error) {
 	}
 
 	cfgReal := configReal{
+		httpClient: &http.Client{
+			Timeout: time.Second * 5,
+		},
 		configApps: cfgApps,
 	}
 

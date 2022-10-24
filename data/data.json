@@ -21,6 +21,10 @@
         {
           "internal": "data/kitty",
           "external": "~/.config/kitty"
+        },
+        {
+          "internal": "data/kitty/mocha.conf",
+          "url": "https://raw.githubusercontent.com/catppuccin/kitty/main/mocha.conf"
         }
       ]
     },

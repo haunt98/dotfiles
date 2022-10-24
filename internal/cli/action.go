@@ -21,73 +21,77 @@ func (a *action) runHelp(c *cli.Context) error {
 }
 
 func (a *action) runInstall(c *cli.Context) error {
-	a.getFlags(c)
-	a.log("start %s\n", installCommand)
-
-	cfg, err := a.loadConfig()
+	cfg, err := a.loadConfig(c, installCommand)
 	if err != nil {
 		return err
 	}
 
 	if err := cfg.Install(); err != nil {
-		return fmt.Errorf("failed to install config: %w", err)
+		return fmt.Errorf("config: failed to install: %w", err)
 	}
 
 	return nil
 }
 
 func (a *action) runUpdate(c *cli.Context) error {
-	a.getFlags(c)
-	a.log("start %s\n", updateCommand)
-
-	cfg, err := a.loadConfig()
+	cfg, err := a.loadConfig(c, updateCommand)
 	if err != nil {
 		return err
 	}
 
 	if err := cfg.Update(); err != nil {
-		return fmt.Errorf("failed to update config: %w", err)
+		return fmt.Errorf("config: failed to update: %w", err)
+	}
+
+	return nil
+}
+
+func (a *action) runDownload(c *cli.Context) error {
+	cfg, err := a.loadConfig(c, downloadCommand)
+	if err != nil {
+		return err
+	}
+
+	if err := cfg.Download(); err != nil {
+		return fmt.Errorf("config: failed to download: %w", err)
 	}
 
 	return nil
 }
 
 func (a *action) runClean(c *cli.Context) error {
-	a.getFlags(c)
-	a.log("start %s\n", cleanCommand)
-
-	cfg, err := a.loadConfig()
+	cfg, err := a.loadConfig(c, cleanCommand)
 	if err != nil {
 		return err
 	}
 
 	if err := cfg.Clean(); err != nil {
-		return fmt.Errorf("failed to clean config: %w", err)
+		return fmt.Errorf("config: failed to clean: %w", err)
 	}
 
 	return nil
 }
 
 func (a *action) runDiff(c *cli.Context) error {
-	a.getFlags(c)
-	a.log("start %s\n", diffCommand)
-
-	cfg, err := a.loadConfig()
+	cfg, err := a.loadConfig(c, diffCommand)
 	if err != nil {
 		return err
 	}
 
 	if err := cfg.Diff(); err != nil {
-		return fmt.Errorf("failed to compare config: %w", err)
+		return fmt.Errorf("config: failed to compare: %w", err)
 	}
 
 	return nil
 }
 
-func (a *action) loadConfig() (config.Config, error) {
+func (a *action) loadConfig(c *cli.Context, command string) (config.Config, error) {
+	a.getFlags(c)
+	a.log("start %s with flags %+v\n", command, a.flags)
+
 	cfgReal, cfgDemo, err := config.LoadConfig(currentDir)
 	if err != nil {
-		return nil, fmt.Errorf("failed to load config: %w", err)
+		return nil, fmt.Errorf("config: failed to load: %w", err)
 	}
 
 	if a.flags.dryRun {
