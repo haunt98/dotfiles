@@ -43,6 +43,18 @@
           "external": "~/.ignore"
         }
       ]
+    },
+    "btop": {
+      "paths": [
+        {
+          "internal": "data/btop/themes/catppuccin_mocha.theme",
+          "external": "~/.config/btop/themes/catppuccin_mocha.theme"
+        },
+        {
+          "internal": "data/btop/themes/catppuccin_mocha.theme",
+          "url": "https://raw.githubusercontent.com/catppuccin/btop/main/catppuccin_mocha.theme"
+        }
+      ]
     }
   }
 }
