@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v0.10.0 (2022-10-24)
+
+### Added
+
+- feat: add download command (2022-10-24)
+
+### Others
+
+- chore(config): add btop catppuccin mocha (2022-10-24)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.20.2 to 2.20.3 (2022-10-24)
+
+- chore(config): resize kitty (2022-10-24)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.19.2 to 2.20.2 (2022-10-17)
+
+- chore: bump go 1.19 in github action (2022-10-16)
+
+- chore(config): ignore git diff whitespace (2022-10-11)
+
+- chore(changelog): generate v0.9.1 (2022-10-10)
+
 ## v0.9.1 (2022-10-10)
 
 ### Others
