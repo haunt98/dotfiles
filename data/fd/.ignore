@@ -19,6 +19,8 @@ mock
 generated
 *mock*.go
 *generated*.go
+go.mod
+go.sum
 
 # Python
 venv
