@@ -33,6 +33,10 @@
         {
           "internal": "data/bat",
           "external": "~/.config/bat"
+        },
+        {
+          "internal": "data/bat/themes/Catppuccin-mocha.tmTheme",
+          "url": "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme"
         }
       ]
     },
