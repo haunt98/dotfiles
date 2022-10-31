@@ -16,4 +16,7 @@ go build ./cmd/dot
 
 # Diff dotfiles with user config
 ./dot diff
+
+# Download internet themes, ...
+./dot download
 ```
