@@ -59,6 +59,14 @@
           "url": "https://raw.githubusercontent.com/catppuccin/btop/main/catppuccin_mocha.theme"
         }
       ]
+    },
+    "delta": {
+      "paths": [
+        {
+          "internal": "data/delta/themes.gitconfig",
+          "url": "https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig"
+        }
+      ]
     }
   }
 }
