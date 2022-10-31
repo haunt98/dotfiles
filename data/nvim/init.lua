@@ -33,9 +33,6 @@ vim.opt.mouse = "a"
 -- https://github.com/neovim/neovim/issues/16416
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- Disable showmode when use lualine
-vim.opt.showmode = false
-
 -- Keymap
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
@@ -81,6 +78,9 @@ require("packer").startup(function()
 				},
 				extensions = { "fzf", "nvim-tree" },
 			})
+
+			-- Disable showmode when use lualine
+			vim.opt.showmode = false
 		end,
 	})
 
@@ -125,8 +125,16 @@ require("packer").startup(function()
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
 
-	-- https://github.com/junegunn/seoul256.vim
-	use("junegunn/seoul256.vim")
+	-- https://github.com/catppuccin/nvim
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			require("catppuccin").setup({
+				flavour = "mocha",
+			})
+		end,
+	})
 
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
@@ -139,4 +147,5 @@ require("packer").startup(function()
 	use("github/copilot.vim")
 end)
 
-vim.api.nvim_command("colorscheme iceberg")
+-- vim.api.nvim_command("colorscheme iceberg")
+vim.api.nvim_command("colorscheme catppuccin")
