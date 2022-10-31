@@ -31,3 +31,5 @@ git config --global core.pager delta
 git config --global interactive.diffFilter "delta --color-only"
 git config --global delta.navigate true
 git config --global delta.line-numbers true
+git config --global include.path "~/.config/delta/themes.gitconfig"
+git config --global delta.features "chameleon"

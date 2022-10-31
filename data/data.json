@@ -65,6 +65,10 @@
         {
           "internal": "data/delta/themes.gitconfig",
           "url": "https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig"
+        },
+        {
+          "internal": "data/delta",
+          "external": "~/.config/delta"
         }
       ]
     }
