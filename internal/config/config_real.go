@@ -69,6 +69,13 @@ func (c *configReal) Download() error {
 				return fmt.Errorf("io: failed to read all: %w", err)
 			}
 
+			// Copy from github.com/make-go-great/copy-go
+			// Make sure nested dir is exist before copying file
+			dstDir := filepath.Dir(p.Internal)
+			if err := os.MkdirAll(dstDir, os.ModePerm); err != nil {
+				return fmt.Errorf("failed to mkdir %s: %w", dstDir, err)
+			}
+
 			if err := os.WriteFile(p.Internal, data, 0o600); err != nil {
 				return fmt.Errorf("os: failed to write file: %w", err)
 			}
