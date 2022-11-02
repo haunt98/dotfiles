@@ -121,6 +121,9 @@ require("packer").startup(function()
 	-- https://github.com/junegunn/fzf.vim
 	use("junegunn/fzf.vim")
 
+    -- https://github.com/tpope/vim-surround
+    use("tpope/vim-surround")
+
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
