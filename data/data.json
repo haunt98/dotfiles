@@ -63,12 +63,24 @@
     "delta": {
       "paths": [
         {
-          "internal": "data/delta/themes.gitconfig",
-          "url": "https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig"
-        },
-        {
           "internal": "data/delta",
           "external": "~/.config/delta"
+        },
+        {
+          "internal": "data/delta/themes.gitconfig",
+          "url": "https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig"
+        }
+      ]
+    },
+    "gitui": {
+      "paths": [
+        {
+          "internal": "data/gitui/mocha.ron",
+          "external": "~/.config/gitui/mocha.ron"
+        },
+        {
+          "internal": "data/gitui/mocha.ron",
+          "url": "https://raw.githubusercontent.com/catppuccin/gitui/master/theme/mocha.ron"
         }
       ]
     }
