@@ -19,12 +19,28 @@
     "kitty": {
       "paths": [
         {
-          "internal": "data/kitty",
-          "external": "~/.config/kitty"
+          "internal": "data/kitty/kitty.conf",
+          "external": "~/.config/kitty/kitty.conf"
+        },
+        {
+          "internal": "data/kitty/mocha.conf",
+          "external": "~/.config/kitty/mocha.conf"
+        },
+        {
+          "internal": "data/kitty/kitty-dark.icns",
+          "external": "~/.config/kitty/kitty.app.icns"
         },
         {
           "internal": "data/kitty/mocha.conf",
           "url": "https://raw.githubusercontent.com/catppuccin/kitty/main/mocha.conf"
+        },
+        {
+          "internal": "data/kitty/kitty-dark.icns",
+          "url": "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-dark.icns?raw=true"
+        },
+        {
+          "internal": "data/kitty/kitty-light.icns",
+          "url": "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-light.icns?raw=true"
         }
       ]
     },
