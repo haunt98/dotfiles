@@ -10,6 +10,7 @@ git config --global alias.df "diff -w"
 git config --global alias.fe "fetch --all --tags"
 git config --global alias.lg "log --stat"
 git config --global alias.lg1 "log --oneline"
+git config --global alias.me merge
 git config --global alias.pl "pull --tags"
 git config --global alias.ps push
 git config --global alias.st status
