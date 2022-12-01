@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/haunt98/dotfiles/internal/config"
 	"github.com/urfave/cli/v2"
+
+	"github.com/haunt98/dotfiles/internal/config"
 )
 
 type action struct {
