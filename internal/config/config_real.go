@@ -108,6 +108,10 @@ func (c *configReal) Clean() error {
 func (c *configReal) Diff() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
+			if p.External == "" {
+				continue
+			}
+
 			if err := diff.Diff(p.Internal, p.External); err != nil {
 				return fmt.Errorf("failed to compare %s with %s: %w", p.Internal, p.External, err)
 			}
