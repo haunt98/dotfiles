@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## v0.11.0 (2022-12-01)
+
+### Added
+
+- feat: make sure internal path is mkdir before download (2022-10-31)
+
+### Fixed
+
+- fix: ignore diff on url (2022-12-01)
+
+### Others
+
+- chore(config): add extra zshrc (2022-12-01)
+
+- chore(scripts): add macports (2022-12-01)
+
+- chore: reformat code (2022-12-01)
+
+- chore(config): sync latest (2022-11-25)
+
+- chore: git me :) (2022-11-25)
+
+- chore: git ass :) (2022-11-25)
+
+- chore(config): download latest config (2022-11-14)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.23.4 to 2.23.5 (2022-11-09)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.23.2 to 2.23.4 (2022-11-08)
+
+- chore(config): use new kitty icon (2022-11-07)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.23.0 to 2.23.2 (2022-11-04)
+
+- chore(config): add gitui catppuccin (2022-11-03)
+
+- chore(config): add vim surround (2022-11-02)
+
+- chore(config): use delta chameleon (2022-10-31)
+
+- chore(config): download delta themes.gitconfig (2022-10-31)
+
+- chore(config): back to catppuccin nvim (2022-10-31)
+
+- chore: add download to README (2022-10-31)
+
+- chore(config): add bat catppuccin (2022-10-31)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.20.3 to 2.23.0 (2022-10-31)
+
+- chore(config): ignore go.mod, go.sum (2022-10-26)
+
+- chore(changelog): generate v0.10.0 (2022-10-24)
+
 ## v0.10.0 (2022-10-24)
 
 ### Added
