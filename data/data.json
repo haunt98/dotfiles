@@ -99,6 +99,14 @@
           "url": "https://raw.githubusercontent.com/catppuccin/gitui/master/theme/mocha.ron"
         }
       ]
+    },
+    "zsh": {
+      "paths": [
+        {
+          "internal": "data/zsh/extra-zshrc",
+          "external": "~/.config/zsh/extra-zshrc"
+        }
+      ]
     }
   }
 }

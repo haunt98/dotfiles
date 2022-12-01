@@ -1,0 +1,56 @@
+# Put this in ~/.zshrc
+# source ~/.config/zsh/extra-zshrc
+
+# https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
+export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit)"
+export HISTSIZE=100000000
+export SAVEHIST=$HISTSIZE
+
+# https://zsh.sourceforge.io/Doc/Release/Options.html
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_FUNCTIONS
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+
+# https://stackoverflow.com/q/12382499
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+# nvim
+export EDITOR=nvim
+export VISUAL=nvim
+export GIT_EDITOR=nvim
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+# Depend on your company
+# Please copy this manually to ~/.zshrc
+export GOPRIVATE=git.private.com
+
+# fzf
+# https://github.com/junegunn/fzf#environment-variables
+export FZF_DEFAULT_COMMAND="fd --type file"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type directory"
+
+# https://github.com/catppuccin/fzf
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# Alias
+alias g="git"
+alias moe="make"
+
+# https://sw.kovidgoyal.net/kitty/faq/
+alias kssh="kitty +kitten ssh"
+
+# https://github.com/catppuccin/gitui
+alias gu="gitui -t mocha.ron"
