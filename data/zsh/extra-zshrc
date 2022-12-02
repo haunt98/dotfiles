@@ -51,6 +51,3 @@ alias moe="make"
 
 # https://sw.kovidgoyal.net/kitty/faq/
 alias kssh="kitty +kitten ssh"
-
-# https://github.com/catppuccin/gitui
-alias gu="gitui -t mocha.ron"

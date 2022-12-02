@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 port install \
-	openssh inetutils \
-	git neovim tmux \
+	inetutils \
+	git neovim \
 	fd bat ripgrep tealdeer git-delta exa ncdu fdupes rclone restic \
 	stylua

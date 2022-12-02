@@ -8,14 +8,6 @@
         }
       ]
     },
-    "tmux": {
-      "paths": [
-        {
-          "internal": "data/tmux/tmux.conf",
-          "external": "~/.config/tmux/tmux.conf"
-        }
-      ]
-    },
     "kitty": {
       "paths": [
         {
@@ -64,18 +56,6 @@
         }
       ]
     },
-    "btop": {
-      "paths": [
-        {
-          "internal": "data/btop/themes/catppuccin_mocha.theme",
-          "external": "~/.config/btop/themes/catppuccin_mocha.theme"
-        },
-        {
-          "internal": "data/btop/themes/catppuccin_mocha.theme",
-          "url": "https://raw.githubusercontent.com/catppuccin/btop/main/catppuccin_mocha.theme"
-        }
-      ]
-    },
     "delta": {
       "paths": [
         {
@@ -85,18 +65,6 @@
         {
           "internal": "data/delta/themes.gitconfig",
           "url": "https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig"
-        }
-      ]
-    },
-    "gitui": {
-      "paths": [
-        {
-          "internal": "data/gitui/mocha.ron",
-          "external": "~/.config/gitui/mocha.ron"
-        },
-        {
-          "internal": "data/gitui/mocha.ron",
-          "url": "https://raw.githubusercontent.com/catppuccin/gitui/master/theme/mocha.ron"
         }
       ]
     },
