@@ -35,3 +35,10 @@ git config --global delta.navigate true
 git config --global delta.line-numbers true
 git config --global include.path "~/.config/delta/themes.gitconfig"
 git config --global delta.features "chameleon"
+
+# gitsign
+# https://github.com/sigstore/gitsign
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
+git config --global gpg.x509.program gitsign
+git config --global gpg.format x509
