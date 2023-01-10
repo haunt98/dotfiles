@@ -31,7 +31,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # Depend on your company
 # Please copy this manually to ~/.zshrc
-export GOPRIVATE=git.private.com
+export GOPRIVATE=github.com/haunt98,github.com/make-go-great
 
 # fzf
 # https://github.com/junegunn/fzf#environment-variables
