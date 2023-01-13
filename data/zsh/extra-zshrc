@@ -48,6 +48,9 @@ export FZF_DEFAULT_OPTS=" \
 # Alias
 alias g="git"
 alias moe="make"
+alias jq="gojq"
 
 # https://sw.kovidgoyal.net/kitty/faq/
 alias kssh="kitty +kitten ssh"
+
+export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
