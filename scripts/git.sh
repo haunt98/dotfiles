@@ -26,6 +26,7 @@ git config --global merge.conflictstyle diff3
 git config --global pull.rebase true
 git config --global pull.twohead ort
 git config --global push.autoSetupRemote true
+git config --global rebase.stat true
 
 # Delta
 # https://github.com/dandavison/delta
