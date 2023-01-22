@@ -1,5 +1,49 @@
 # CHANGELOG
 
+## v0.12.0 (2023-01-22)
+
+### Others
+
+- chore: remove delta leftover config (2023-01-22)
+
+- chore: mold, adb, difftastic for macports (2023-01-22)
+
+- chore: replace delta with difftastic (2023-01-22)
+
+- chore: update Makefile with gofumpt (2023-01-22)
+
+- config: add git rebase.stat (2023-01-14)
+
+- chore: restic password file for now (2023-01-13)
+
+- chore: make my github goprivate (2023-01-11)
+
+- chore(config): stylua neovim init.lua (2023-01-05)
+
+- Revert "chore(config): add gitsign" (2022-12-22)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.23.6 to 2.23.7 (2022-12-12)
+
+- chore(config): add gitsign (2022-12-10)
+
+- chore: remove inetutils (2022-12-08)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.23.5 to 2.23.6 (2022-12-06)
+
+- chore: config use Jetbrains Mono (2022-12-04)
+
+- chore(config): remove ncdu (2022-12-02)
+
+- chore: remove openssh, tmux, gitui, btop (2022-12-02)
+
+- chore(scripts): split macports (2022-12-02)
+
+- chore(scripts): remove unused macports (2022-12-02)
+
+- chore: remove useless (2022-12-01)
+
+- chore(changelog): generate v0.11.0 (2022-12-01)
+
 ## v0.11.0 (2022-12-01)
 
 ### Added
