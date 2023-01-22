@@ -2,5 +2,6 @@
 
 port install \
 	git neovim \
-	fd bat ripgrep tealdeer git-delta exa fdupes rclone restic \
-	stylua
+	fd bat ripgrep tealdeer difftastic exa fdupes rclone restic \
+	stylua \
+	mold android-platform-tools
