@@ -31,7 +31,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # Depend on your company
 # Please copy this manually to ~/.zshrc
-export GOPRIVATE=github.com/haunt98,github.com/make-go-great
+export GOPRIVATE=github.com/make-go-great,github.com/haunt98
 
 # fzf
 # https://github.com/junegunn/fzf#environment-variables
@@ -48,9 +48,12 @@ export FZF_DEFAULT_OPTS=" \
 # Alias
 alias g="git"
 alias moe="make"
-alias jq="gojq"
 
 # https://sw.kovidgoyal.net/kitty/faq/
 alias kssh="kitty +kitten ssh"
 
+# https://restic.readthedocs.io/en/latest/manual_rest.html
 export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
+
+# https://difftastic.wilfred.me.uk/git.html
+export GIT_EXTERNAL_DIFF=difft
