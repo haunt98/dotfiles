@@ -90,21 +90,7 @@ require("packer").startup(function()
 		config = function()
 			require("nvim-tree").setup({
 				renderer = {
-					icons = {
-						show = {
-							file = false,
-							folder = false,
-							folder_arrow = false,
-							git = false,
-						},
-					},
-				},
-				git = {
-					enable = true,
-					ignore = true,
-				},
-				filters = {
-					custom = { "^\\.git$" },
+					group_empty = true,
 				},
 			})
 		end,
