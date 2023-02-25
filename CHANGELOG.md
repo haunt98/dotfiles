@@ -1,5 +1,53 @@
 # CHANGELOG
 
+## v0.13.0 (2023-02-25)
+
+### Added
+
+- feat: better alias (2023-02-25)
+
+- feat: switch config json to toml (2023-02-25)
+
+- feat: support config validate (2023-02-25)
+
+- feat: support toml config (wip) (2023-02-25)
+
+- feat: split load config json (2023-02-25)
+
+### Others
+
+- chore: change url for kitty mocha (2023-02-25)
+
+- chore: use mononoki font because vietnamese support :) (2023-02-25)
+
+- chore: improve log (2023-02-25)
+
+- chore: bump go 1.20 (2023-02-25)
+
+- chore: re-add alacritty (2023-02-25)
+
+- chore: add git rank (2023-02-22)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.24.3 to 2.24.4 (2023-02-17)
+
+- chore: hide nvim tree icons (2023-02-07)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.24.2 to 2.24.3 (2023-02-03)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.24.1 to 2.24.2 (2023-01-30)
+
+- chore: port reclaim twice (2023-01-27)
+
+- chore: add asciinema (2023-01-27)
+
+- chore: switch kitty JetBrains Mono -> Martian Mono (2023-01-25)
+
+- chore: cleanup nvim-tree (2023-01-25)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.23.7 to 2.24.1 (2023-01-23)
+
+- chore(changelog): generate v0.12.0 (2023-01-22)
+
 ## v0.12.0 (2023-01-22)
 
 ### Others
