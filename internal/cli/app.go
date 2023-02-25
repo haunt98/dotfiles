@@ -42,10 +42,10 @@ const (
 )
 
 var (
-	installAliases  = []string{"i"}
-	updateAliases   = []string{"u"}
-	downloadAliases = []string{"d"}
-	cleanAliases    = []string{"c"}
+	installAliases  = []string{"ins"}
+	updateAliases   = []string{"upd"}
+	downloadAliases = []string{"dl"}
+	cleanAliases    = []string{"cl"}
 	diffAliases     = []string{"df"}
 	validateAliases = []string{"vl"}
 )
