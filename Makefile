@@ -5,6 +5,8 @@ all:
 	$(MAKE) test-color
 	$(MAKE) lint
 	$(MAKE) format
+	$(MAKE) build
+	$(MAKE) clean
 
 test:
 	go test -race -failfast ./...
@@ -36,4 +38,8 @@ format:
 	shfmt -w ./scripts
 
 build:
+	$(MAKE) clean
 	go build ./cmd/dot
+
+clean:
+	rm -rf dot
