@@ -1,4 +1,4 @@
-.PHONY: all test test-color coverage coverage-cli coverate-html lint format build
+.PHONY: all test test-color coverage coverage-cli coverate-html lint format build clean
 
 all:
 	go mod tidy
