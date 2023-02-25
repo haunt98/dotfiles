@@ -1,0 +1,55 @@
+[[apps.nvim.paths]]
+internal = "data/nvim/init.lua"
+external = "~/.config/nvim/init.lua"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/kitty.conf"
+external = "~/.config/kitty/kitty.conf"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/mocha.conf"
+external = "~/.config/kitty/mocha.conf"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/kitty-dark.icns"
+external = "~/.config/kitty/kitty.app.icns"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/mocha.conf"
+url = "https://raw.githubusercontent.com/catppuccin/kitty/main/mocha.conf"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/kitty-dark.icns"
+url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-dark.icns?raw=true"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/kitty-light.icns"
+url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-light.icns?raw=true"
+
+[[apps.alacritty.paths]]
+internal = "data/alacritty/alacritty.yml"
+external = "~/.config/alacritty/alacritty.yml"
+
+[[apps.alacritty.paths]]
+internal = "data/alacritty/catppuccin-mocha.yml"
+external = "~/.config/alacritty/catppuccin-mocha.yml"
+
+[[apps.alacritty.paths]]
+internal = "data/alacritty/catppuccin-mocha.yml"
+url = "https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.yml"
+
+[[apps.bat.paths]]
+internal = "data/bat"
+external = "~/.config/bat"
+
+[[apps.bat.paths]]
+internal = "data/bat/themes/Catppuccin-mocha.tmTheme"
+url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme"
+
+[[apps.fd.paths]]
+internal = "data/fd/.ignore"
+external = "~/.ignore"
+
+[[apps.zsh.paths]]
+internal = "data/zsh/extra-zshrc"
+external = "~/.config/zsh/extra-zshrc"

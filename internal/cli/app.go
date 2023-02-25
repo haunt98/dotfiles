@@ -167,7 +167,7 @@ func NewApp() *App {
 func (a *App) Run() {
 	// Prevent running at runtime
 	if _, ok := denyOSes[runtime.GOOS]; ok {
-		color.PrintAppError(appName, fmt.Sprintf("OS %s is not supported right now", runtime.GOOS))
+		color.PrintAppError(appName, fmt.Sprintf("OS [%s] is not supported right now", runtime.GOOS))
 		return
 	}
 

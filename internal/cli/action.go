@@ -101,12 +101,13 @@ func (a *action) runValidate(c *cli.Context) error {
 
 func (a *action) loadConfig(c *cli.Context, command string) (config.Config, error) {
 	a.getFlags(c)
-	a.log("start %s with flags %+v\n", command, a.flags)
+	a.log("Start command [%s] with flags [%+v]\n", command, a.flags)
 
 	cfgReal, cfgDemo, err := config.LoadConfig(currentDir)
 	if err != nil {
 		return nil, fmt.Errorf("config: failed to load: %w", err)
 	}
+	a.log("Config apps [%+v]\n", cfgReal.Apps)
 
 	if a.flags.dryRun {
 		return cfgDemo, nil

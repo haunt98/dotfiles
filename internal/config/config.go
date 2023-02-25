@@ -45,7 +45,7 @@ type Path struct {
 }
 
 // LoadConfig return config, configDemo
-func LoadConfig(path string) (*configReal, *configDemo, error) {
+func LoadConfig(path string) (*ConfigReal, *ConfigDemo, error) {
 	cfgReal, cfgDemo, err := loadConfigJSON(path)
 	if err == nil {
 		return cfgReal, cfgDemo, nil
@@ -59,7 +59,7 @@ func LoadConfig(path string) (*configReal, *configDemo, error) {
 	return nil, nil, ErrConfigNotFound
 }
 
-func loadConfigJSON(path string) (*configReal, *configDemo, error) {
+func loadConfigJSON(path string) (*ConfigReal, *ConfigDemo, error) {
 	configPathJSON := filepath.Join(path, configDirPath, configFileJSON)
 
 	bytes, err := os.ReadFile(configPathJSON)
@@ -72,21 +72,21 @@ func loadConfigJSON(path string) (*configReal, *configDemo, error) {
 		return nil, nil, fmt.Errorf("json: failed to unmarshal: %w", err)
 	}
 
-	cfgReal := configReal{
+	cfgReal := ConfigReal{
 		httpClient: &http.Client{
 			Timeout: time.Second * 5,
 		},
 		ConfigApps: cfgApps,
 	}
 
-	cfgDemo := configDemo{
+	cfgDemo := ConfigDemo{
 		ConfigApps: cfgApps,
 	}
 
 	return &cfgReal, &cfgDemo, nil
 }
 
-func loadConfigTOML(path string) (*configReal, *configDemo, error) {
+func loadConfigTOML(path string) (*ConfigReal, *ConfigDemo, error) {
 	configPathTOML := filepath.Join(path, configDirPath, configFileTOML)
 
 	bytes, err := os.ReadFile(configPathTOML)
@@ -99,14 +99,14 @@ func loadConfigTOML(path string) (*configReal, *configDemo, error) {
 		return nil, nil, fmt.Errorf("toml: failed to decode: %w", err)
 	}
 
-	cfgReal := configReal{
+	cfgReal := ConfigReal{
 		httpClient: &http.Client{
 			Timeout: time.Second * 5,
 		},
 		ConfigApps: cfgApps,
 	}
 
-	cfgDemo := configDemo{
+	cfgDemo := ConfigDemo{
 		ConfigApps: cfgApps,
 	}
 

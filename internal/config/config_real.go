@@ -14,15 +14,15 @@ import (
 
 var ErrConfigInvalid = errors.New("config invalid")
 
-type configReal struct {
+type ConfigReal struct {
 	httpClient *http.Client
 	ConfigApps
 }
 
-var _ Config = (*configReal)(nil)
+var _ Config = (*ConfigReal)(nil)
 
 // Install internal -> external
-func (c *configReal) Install() error {
+func (c *ConfigReal) Install() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
@@ -39,7 +39,7 @@ func (c *configReal) Install() error {
 }
 
 // Update external -> internal
-func (c *configReal) Update() error {
+func (c *ConfigReal) Update() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
@@ -55,7 +55,7 @@ func (c *configReal) Update() error {
 	return nil
 }
 
-func (c *configReal) Download() error {
+func (c *ConfigReal) Download() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.URL == "" {
@@ -91,7 +91,7 @@ func (c *configReal) Download() error {
 }
 
 // Clean remove unused config inside config dir
-func (c *configReal) Clean() error {
+func (c *ConfigReal) Clean() error {
 	unusedDirs, err := getUnusedDirs(c.Apps)
 	if err != nil {
 		return err
@@ -133,7 +133,7 @@ func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	return unusedDirs, nil
 }
 
-func (c *configReal) Diff() error {
+func (c *ConfigReal) Diff() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
@@ -149,7 +149,7 @@ func (c *configReal) Diff() error {
 	return nil
 }
 
-func (c *configReal) Validate() error {
+func (c *ConfigReal) Validate() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.Internal == "" {

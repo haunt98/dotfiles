@@ -2,13 +2,13 @@ package config
 
 import "fmt"
 
-type configDemo struct {
+type ConfigDemo struct {
 	ConfigApps
 }
 
-var _ Config = (*configDemo)(nil)
+var _ Config = (*ConfigDemo)(nil)
 
-func (c *configDemo) Install() error {
+func (c *ConfigDemo) Install() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
@@ -22,7 +22,7 @@ func (c *configDemo) Install() error {
 	return nil
 }
 
-func (c *configDemo) Update() error {
+func (c *ConfigDemo) Update() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
@@ -36,7 +36,7 @@ func (c *configDemo) Update() error {
 	return nil
 }
 
-func (c *configDemo) Download() error {
+func (c *ConfigDemo) Download() error {
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.URL == "" {
@@ -50,7 +50,7 @@ func (c *configDemo) Download() error {
 	return nil
 }
 
-func (c *configDemo) Clean() error {
+func (c *ConfigDemo) Clean() error {
 	unusedDirs, err := getUnusedDirs(c.Apps)
 	if err != nil {
 		return err
@@ -63,10 +63,10 @@ func (c *configDemo) Clean() error {
 	return nil
 }
 
-func (c *configDemo) Diff() error {
+func (c *ConfigDemo) Diff() error {
 	return nil
 }
 
-func (c *configDemo) Validate() error {
+func (c *ConfigDemo) Validate() error {
 	return nil
 }
