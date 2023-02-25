@@ -13,7 +13,7 @@ import (
 
 type configReal struct {
 	httpClient *http.Client
-	configApps
+	ConfigApps
 }
 
 var _ Config = (*configReal)(nil)

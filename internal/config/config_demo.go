@@ -3,7 +3,7 @@ package config
 import "fmt"
 
 type configDemo struct {
-	configApps
+	ConfigApps
 }
 
 var _ Config = (*configDemo)(nil)
