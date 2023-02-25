@@ -16,7 +16,7 @@ external = "~/.config/kitty/kitty.app.icns"
 
 [[apps.kitty.paths]]
 internal = "data/kitty/mocha.conf"
-url = "https://raw.githubusercontent.com/catppuccin/kitty/main/mocha.conf"
+url = "https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf"
 
 [[apps.kitty.paths]]
 internal = "data/kitty/kitty-dark.icns"
