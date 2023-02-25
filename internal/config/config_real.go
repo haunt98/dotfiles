@@ -30,7 +30,7 @@ func (c *configReal) Install() error {
 			}
 
 			if err := copy.Replace(p.Internal, p.External); err != nil {
-				return fmt.Errorf("failed to replace %s -> %s: %w", p.Internal, p.External, err)
+				return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.Internal, p.External, err)
 			}
 		}
 	}
@@ -47,7 +47,7 @@ func (c *configReal) Update() error {
 			}
 
 			if err := copy.Replace(p.External, p.Internal); err != nil {
-				return fmt.Errorf("failed to replace %s -> %s: %w", p.External, p.Internal, err)
+				return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.External, p.Internal, err)
 			}
 		}
 	}
@@ -76,7 +76,7 @@ func (c *configReal) Download() error {
 			// Make sure nested dir is exist before copying file
 			dstDir := filepath.Dir(p.Internal)
 			if err := os.MkdirAll(dstDir, os.ModePerm); err != nil {
-				return fmt.Errorf("failed to mkdir %s: %w", dstDir, err)
+				return fmt.Errorf("os: failed to mkdir all [%s]: %w", dstDir, err)
 			}
 
 			if err := os.WriteFile(p.Internal, data, 0o600); err != nil {
@@ -101,7 +101,7 @@ func (c *configReal) Clean() error {
 	for dir := range unusedDirs {
 		dirPath := filepath.Join(configDirPath, dir)
 		if err := os.RemoveAll(dirPath); err != nil {
-			return fmt.Errorf("failed to remove %s: %w", dir, err)
+			return fmt.Errorf("os: failed to remove all [%s]: %w", dir, err)
 		}
 	}
 
@@ -111,7 +111,7 @@ func (c *configReal) Clean() error {
 func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	files, err := os.ReadDir(configDirPath)
 	if err != nil {
-		return nil, fmt.Errorf("failed to read dir %s: %w", configDirPath, err)
+		return nil, fmt.Errorf("os: failed to read dir [%s]: %w", configDirPath, err)
 	}
 
 	// Get all dirs inside config dir
@@ -141,7 +141,7 @@ func (c *configReal) Diff() error {
 			}
 
 			if err := diff.Diff(p.Internal, p.External); err != nil {
-				return fmt.Errorf("failed to compare %s with %s: %w", p.Internal, p.External, err)
+				return fmt.Errorf("diff: failed to compare [%s] with [%s]: %w", p.Internal, p.External, err)
 			}
 		}
 	}

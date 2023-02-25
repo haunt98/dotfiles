@@ -15,7 +15,7 @@ func (c *configDemo) Install() error {
 				continue
 			}
 
-			fmt.Printf("Replace %s -> %s\n", p.Internal, p.External)
+			fmt.Printf("Replace [%s] -> [%s]\n", p.Internal, p.External)
 		}
 	}
 
@@ -29,7 +29,7 @@ func (c *configDemo) Update() error {
 				continue
 			}
 
-			fmt.Printf("Replace %s -> %s\n", p.External, p.Internal)
+			fmt.Printf("Replace [%s] -> [%s]\n", p.External, p.Internal)
 		}
 	}
 
@@ -43,7 +43,7 @@ func (c *configDemo) Download() error {
 				continue
 			}
 
-			fmt.Printf("Download %s -> %s\n", p.URL, p.Internal)
+			fmt.Printf("Download [%s] -> [%s]\n", p.URL, p.Internal)
 		}
 	}
 
@@ -57,7 +57,7 @@ func (c *configDemo) Clean() error {
 	}
 
 	for dir := range unusedDirs {
-		fmt.Printf("Remove %s\n", dir)
+		fmt.Printf("Remove [%s]\n", dir)
 	}
 
 	return nil

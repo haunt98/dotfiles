@@ -2,6 +2,7 @@ package config
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"os"
@@ -17,7 +18,7 @@ const (
 	configFileTOML = "data.toml"
 )
 
-var ErrConfigNotFound = fmt.Errorf("config not found")
+var ErrConfigNotFound = errors.New("config not found")
 
 type Config interface {
 	Install() error
@@ -68,7 +69,7 @@ func loadConfigJSON(path string) (*configReal, *configDemo, error) {
 
 	var cfgApps ConfigApps
 	if err = json.Unmarshal(bytes, &cfgApps); err != nil {
-		return nil, nil, fmt.Errorf("failed to unmarshal: %w", err)
+		return nil, nil, fmt.Errorf("json: failed to unmarshal: %w", err)
 	}
 
 	cfgReal := configReal{
