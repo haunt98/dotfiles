@@ -131,7 +131,7 @@ func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	unusedDirs := make(map[string]struct{})
 	for _, file := range files {
 		// Ignore config file
-		if file.Name() == configFile {
+		if file.Name() == configFileJSON {
 			continue
 		}
 

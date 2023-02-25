@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	configDirPath = "data"
-	configFile    = "data.json"
+	configDirPath  = "data"
+	configFileJSON = "data.json"
 )
 
 type Config interface {
@@ -39,10 +39,20 @@ type Path struct {
 
 // LoadConfig return config, configDemo
 func LoadConfig(path string) (*configReal, *configDemo, error) {
-	configPath := filepath.Join(path, configDirPath, configFile)
-	bytes, err := os.ReadFile(configPath)
+	cfgReal, cfgDemo, err := loadConfigJSON(path)
+	if err == nil {
+		return cfgReal, cfgDemo, nil
+	}
+
+	return nil, nil, fmt.Errorf("failed to load config: %w", err)
+}
+
+func loadConfigJSON(path string) (*configReal, *configDemo, error) {
+	configPathJSON := filepath.Join(path, configDirPath, configFileJSON)
+
+	bytes, err := os.ReadFile(configPathJSON)
 	if err != nil {
-		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPath, err)
+		return nil, nil, fmt.Errorf("failed to read file%s: %w", configPathJSON, err)
 	}
 
 	var cfgApps configApps
