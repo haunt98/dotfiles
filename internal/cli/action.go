@@ -86,6 +86,19 @@ func (a *action) runDiff(c *cli.Context) error {
 	return nil
 }
 
+func (a *action) runValidate(c *cli.Context) error {
+	cfg, err := a.loadConfig(c, validateCommand)
+	if err != nil {
+		return err
+	}
+
+	if err := cfg.Validate(); err != nil {
+		return fmt.Errorf("config: failed to validate: %w", err)
+	}
+
+	return nil
+}
+
 func (a *action) loadConfig(c *cli.Context, command string) (config.Config, error) {
 	a.getFlags(c)
 	a.log("start %s with flags %+v\n", command, a.flags)

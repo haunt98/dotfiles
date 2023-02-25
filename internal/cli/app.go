@@ -29,6 +29,9 @@ const (
 	diffCommand = "diff"
 	diffUsage   = "diff dotfiles with user configs"
 
+	validateCommand = "validate"
+	validateUsage   = "validate config"
+
 	verboseFlag  = "verbose"
 	verboseUsage = "show what is going on"
 
@@ -44,6 +47,7 @@ var (
 	downloadAliases = []string{"d"}
 	cleanAliases    = []string{"c"}
 	diffAliases     = []string{"df"}
+	validateAliases = []string{"vl"}
 )
 
 // denyOSes contains OS which is not supported
@@ -138,6 +142,18 @@ func NewApp() *App {
 					},
 				},
 				Action: a.runDiff,
+			},
+			{
+				Name:    validateCommand,
+				Aliases: validateAliases,
+				Usage:   validateUsage,
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  verboseFlag,
+						Usage: verboseUsage,
+					},
+				},
+				Action: a.runValidate,
 			},
 		},
 		Action: a.runHelp,

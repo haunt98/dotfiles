@@ -66,3 +66,7 @@ func (c *configDemo) Clean() error {
 func (c *configDemo) Diff() error {
 	return nil
 }
+
+func (c *configDemo) Validate() error {
+	return nil
+}

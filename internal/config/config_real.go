@@ -1,6 +1,7 @@
 package config
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -10,6 +11,8 @@ import (
 	"github.com/make-go-great/copy-go"
 	"github.com/make-go-great/diff-go"
 )
+
+var ErrConfigInvalid = errors.New("config invalid")
 
 type configReal struct {
 	httpClient *http.Client
@@ -105,22 +108,6 @@ func (c *configReal) Clean() error {
 	return nil
 }
 
-func (c *configReal) Diff() error {
-	for _, app := range c.Apps {
-		for _, p := range app.Paths {
-			if p.External == "" {
-				continue
-			}
-
-			if err := diff.Diff(p.Internal, p.External); err != nil {
-				return fmt.Errorf("failed to compare %s with %s: %w", p.Internal, p.External, err)
-			}
-		}
-	}
-
-	return nil
-}
-
 func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	files, err := os.ReadDir(configDirPath)
 	if err != nil {
@@ -144,4 +131,36 @@ func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	}
 
 	return unusedDirs, nil
+}
+
+func (c *configReal) Diff() error {
+	for _, app := range c.Apps {
+		for _, p := range app.Paths {
+			if p.External == "" {
+				continue
+			}
+
+			if err := diff.Diff(p.Internal, p.External); err != nil {
+				return fmt.Errorf("failed to compare %s with %s: %w", p.Internal, p.External, err)
+			}
+		}
+	}
+
+	return nil
+}
+
+func (c *configReal) Validate() error {
+	for _, app := range c.Apps {
+		for _, p := range app.Paths {
+			if p.Internal == "" {
+				return fmt.Errorf("empty internal app [%s]: %w", app, ErrConfigInvalid)
+			}
+
+			if p.External == "" && p.URL == "" {
+				return fmt.Errorf("empty external and url app [%s]: %w", app, ErrConfigInvalid)
+			}
+		}
+	}
+
+	return nil
 }

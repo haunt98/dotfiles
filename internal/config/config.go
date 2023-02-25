@@ -25,6 +25,7 @@ type Config interface {
 	Clean() error
 	Diff() error
 	Download() error
+	Validate() error
 }
 
 type ConfigApps struct {
