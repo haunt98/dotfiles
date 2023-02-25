@@ -50,7 +50,9 @@ vim.g.go_doc_popup_window = 1
 vim.g.copilot_filetypes = {
 	["*"] = false,
 	go = true,
+	json = true,
 	proto = true,
+	python = true,
 	yaml = true,
 }
 

@@ -36,6 +36,22 @@
         }
       ]
     },
+    "alacritty": {
+      "paths": [
+        {
+          "internal": "data/alacritty/alacritty.yml",
+          "external": "~/.config/alacritty/alacritty.yml"
+        },
+        {
+          "internal": "data/alacritty/catppuccin-mocha.yml",
+          "external": "~/.config/alacritty/catppuccin-mocha.yml"
+        },
+        {
+          "internal": "data/alacritty/catppuccin-mocha.yml",
+          "url": "https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.yml"
+        }
+      ]
+    },
     "bat": {
       "paths": [
         {
