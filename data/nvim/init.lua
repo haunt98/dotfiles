@@ -52,11 +52,12 @@ vim.g.copilot_filetypes = {
 	["*"] = false,
 	go = true,
 	json = true,
+	lua = true,
 	make = true,
 	proto = true,
 	python = true,
 	yaml = true,
-	lua = true,
+	toml = true,
 }
 
 -- Use fzf
@@ -123,6 +124,14 @@ require("packer").startup(function()
 
 	-- https://github.com/RRethy/vim-illuminate
 	use("RRethy/vim-illuminate")
+
+	-- https://github.com/terrortylor/nvim-comment
+	use({
+		"terrortylor/nvim-comment",
+		config = function()
+			require("nvim_comment").setup()
+		end,
+	})
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
