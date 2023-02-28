@@ -41,6 +41,7 @@ vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
 vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
+vim.keymap.set("n", "<F2>", ":GoRename<CR>")
 
 -- Use vim-go
 vim.g.go_gopls_gofumpt = 1
@@ -51,9 +52,11 @@ vim.g.copilot_filetypes = {
 	["*"] = false,
 	go = true,
 	json = true,
+	make = true,
 	proto = true,
 	python = true,
 	yaml = true,
+	lua = true,
 }
 
 -- Use fzf
@@ -118,8 +121,8 @@ require("packer").startup(function()
 	-- https://github.com/junegunn/fzf.vim
 	use("junegunn/fzf.vim")
 
-	-- https://github.com/tpope/vim-surround
-	use("tpope/vim-surround")
+	-- https://github.com/RRethy/vim-illuminate
+	use("RRethy/vim-illuminate")
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
