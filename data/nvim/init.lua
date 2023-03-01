@@ -133,6 +133,14 @@ require("packer").startup(function()
 		end,
 	})
 
+	-- https://github.com/echasnovski/mini.nvim#installation
+	use({
+		"echasnovski/mini.bracketed",
+		config = function()
+			require("mini.bracketed").setup()
+		end,
+	})
+
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
