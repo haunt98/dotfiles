@@ -38,6 +38,10 @@ external = "~/.config/alacritty/catppuccin-mocha.yml"
 internal = "data/alacritty/catppuccin-mocha.yml"
 url = "https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.yml"
 
+[[apps.wezterm.paths]]
+internal = "data/wezterm/wezterm.lua"
+external = "~/.config/wezterm/wezterm.lua"
+
 [[apps.bat.paths]]
 internal = "data/bat"
 external = "~/.config/bat"
