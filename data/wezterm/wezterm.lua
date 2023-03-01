@@ -25,5 +25,6 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	tab_bar_at_bottom = true,
 	window_background_opacity = 0.9,
+	text_background_opacity = 0.5,
 	audible_bell = "Disabled",
 }
