@@ -8,6 +8,7 @@ return {
 		"JetBrains Mono",
 	}),
 	font_size = 16.0,
+	line_height = 1.2,
 	color_scheme = "Catppuccin Mocha",
 	keys = {
 		{
@@ -24,4 +25,5 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	tab_bar_at_bottom = true,
 	window_background_opacity = 0.9,
+	audible_bell = "Disabled",
 }
