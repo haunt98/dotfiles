@@ -54,6 +54,14 @@ url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tm
 internal = "data/fd/.ignore"
 external = "~/.ignore"
 
+[[apps.vivid.paths]]
+internal = "data/vivid/catppuccin-mocha.yml"
+external = "~/.config/vivid/catppuccin-mocha.yml"
+
+[[apps.vivid.paths]]
+internal = "data/vivid/catppuccin-mocha.yml"
+url = "https://raw.githubusercontent.com/sharkdp/vivid/master/themes/catppuccin-mocha.yml"
+
 [[apps.zsh.paths]]
 internal = "data/zsh/extra-zshrc"
 external = "~/.config/zsh/extra-zshrc"
