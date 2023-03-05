@@ -8,6 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"golang.org/x/sync/errgroup"
+
 	"github.com/make-go-great/copy-go"
 	"github.com/make-go-great/diff-go"
 )
@@ -23,16 +25,32 @@ var _ Config = (*ConfigReal)(nil)
 
 // Install internal -> external
 func (c *ConfigReal) Install() error {
+	eg := new(errgroup.Group)
+
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
 			}
 
-			if err := copy.Replace(p.Internal, p.External); err != nil {
-				return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.Internal, p.External, err)
+			p := Path{
+				Internal: p.Internal,
+				External: p.External,
+				URL:      p.URL,
 			}
+
+			eg.Go(func() error {
+				if err := copy.Replace(p.Internal, p.External); err != nil {
+					return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.Internal, p.External, err)
+				}
+
+				return nil
+			})
 		}
+	}
+
+	if err := eg.Wait(); err != nil {
+		return err
 	}
 
 	return nil
@@ -40,50 +58,79 @@ func (c *ConfigReal) Install() error {
 
 // Update external -> internal
 func (c *ConfigReal) Update() error {
+	eg := new(errgroup.Group)
+
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
 			}
 
-			if err := copy.Replace(p.External, p.Internal); err != nil {
-				return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.External, p.Internal, err)
+			p := Path{
+				Internal: p.Internal,
+				External: p.External,
+				URL:      p.URL,
 			}
+
+			eg.Go(func() error {
+				if err := copy.Replace(p.External, p.Internal); err != nil {
+					return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.External, p.Internal, err)
+				}
+
+				return nil
+			})
 		}
+	}
+
+	if err := eg.Wait(); err != nil {
+		return err
 	}
 
 	return nil
 }
 
 func (c *ConfigReal) Download() error {
+	eg := new(errgroup.Group)
+
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
 			if p.URL == "" {
 				continue
 			}
 
-			httpRsp, err := c.httpClient.Get(p.URL)
-			if err != nil {
-				return fmt.Errorf("http client: failed to get: %w", err)
+			p := Path{
+				Internal: p.Internal,
+				External: p.External,
+				URL:      p.URL,
 			}
 
-			data, err := io.ReadAll(httpRsp.Body)
-			if err != nil {
-				return fmt.Errorf("io: failed to read all: %w", err)
-			}
+			eg.Go(func() error {
+				httpRsp, err := c.httpClient.Get(p.URL)
+				if err != nil {
+					return fmt.Errorf("http client: failed to get: %w", err)
+				}
 
-			// Copy from github.com/make-go-great/copy-go
-			// Make sure nested dir is exist before copying file
-			dstDir := filepath.Dir(p.Internal)
-			if err := os.MkdirAll(dstDir, os.ModePerm); err != nil {
-				return fmt.Errorf("os: failed to mkdir all [%s]: %w", dstDir, err)
-			}
+				data, err := io.ReadAll(httpRsp.Body)
+				if err != nil {
+					return fmt.Errorf("io: failed to read all: %w", err)
+				}
 
-			if err := os.WriteFile(p.Internal, data, 0o600); err != nil {
-				return fmt.Errorf("os: failed to write file: %w", err)
-			}
+				// Copy from github.com/make-go-great/copy-go
+				// Make sure nested dir is exist before copying file
+				dstDir := filepath.Dir(p.Internal)
+				if err := os.MkdirAll(dstDir, os.ModePerm); err != nil {
+					return fmt.Errorf("os: failed to mkdir all [%s]: %w", dstDir, err)
+				}
 
-			httpRsp.Body.Close()
+				if err := os.WriteFile(p.Internal, data, 0o600); err != nil {
+					return fmt.Errorf("os: failed to write file: %w", err)
+				}
+
+				httpRsp.Body.Close()
+
+				return nil
+			})
+
 		}
 	}
 
@@ -150,16 +197,33 @@ func (c *ConfigReal) Diff() error {
 }
 
 func (c *ConfigReal) Validate() error {
+	eg := new(errgroup.Group)
+
 	for _, app := range c.Apps {
 		for _, p := range app.Paths {
-			if p.Internal == "" {
-				return fmt.Errorf("empty internal app [%s]: %w", app, ErrConfigInvalid)
+			app := app
+			p := Path{
+				Internal: p.Internal,
+				External: p.External,
+				URL:      p.URL,
 			}
 
-			if p.External == "" && p.URL == "" {
-				return fmt.Errorf("empty external and url app [%s]: %w", app, ErrConfigInvalid)
-			}
+			eg.Go(func() error {
+				if p.Internal == "" {
+					return fmt.Errorf("empty internal app [%s]: %w", app, ErrConfigInvalid)
+				}
+
+				if p.External == "" && p.URL == "" {
+					return fmt.Errorf("empty external and url app [%s]: %w", app, ErrConfigInvalid)
+				}
+
+				return nil
+			})
 		}
+	}
+
+	if err := eg.Wait(); err != nil {
+		return err
 	}
 
 	return nil
