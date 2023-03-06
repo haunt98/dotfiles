@@ -36,13 +36,14 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Keymap
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
+vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
 vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
-vim.keymap.set("n", "<leader>t", ":GoAlternate<CR>")
+vim.keymap.set("n", "<leader>gt", ":GoAlternate<CR>")
 
 -- Use vim-go
 vim.g.go_gopls_gofumpt = 1
