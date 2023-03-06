@@ -40,8 +40,9 @@ vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
-vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
+vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
+vim.keymap.set("n", "<leader>t", ":GoAlternate<CR>")
 
 -- Use vim-go
 vim.g.go_gopls_gofumpt = 1
@@ -56,8 +57,9 @@ vim.g.copilot_filetypes = {
 	make = true,
 	proto = true,
 	python = true,
-	yaml = true,
 	toml = true,
+	yaml = true,
+	markdown = true,
 }
 
 -- Use fzf
