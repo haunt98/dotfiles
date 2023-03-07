@@ -44,6 +44,7 @@ vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
 vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
 vim.keymap.set("n", "<leader>gt", ":GoAlternate<CR>")
+vim.keymap.set("n", "<leader>gtt", ":GoTest<CR>")
 
 -- Use vim-go
 vim.g.go_gopls_gofumpt = 1
