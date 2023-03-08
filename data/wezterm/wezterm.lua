@@ -6,6 +6,10 @@ return {
 			harfbuzz_features = { "ss01" },
 		},
 		"JetBrains Mono",
+		{
+			family = "Fira Code",
+			harfbuzz_features = { "cv06", "zero", "cv14", "ss04", "cv18", "ss03", "cv16", "cv31" },
+		},
 	}),
 	font_size = 16.0,
 	line_height = 1.2,
