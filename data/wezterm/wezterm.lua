@@ -1,39 +1,10 @@
 local wezterm = require("wezterm")
 return {
-	font = wezterm.font_with_fallback({
-		"Martian Mono",
-		"JetBrains Mono",
-		{
-			family = "Fira Code",
-			harfbuzz_features = { "cv06", "zero", "cv14", "ss04", "cv18", "ss03", "cv16", "cv31" },
-		},
-		{
-			family = "mononoki",
-			harfbuzz_features = { "ss01" },
-		},
-		"Input Mono",
+	font = wezterm.font({
+		family = "mononoki",
+		harfbuzz_features = { "ss01" },
 	}),
-	font_rules = {
-		{
-			intensity = "Bold",
-			italic = true,
-			font = wezterm.font({
-				family = "JetBrains Mono",
-				weight = "Bold",
-				style = "Italic",
-			}),
-		},
-		{
-			intensity = "Normal",
-			italic = true,
-			font = wezterm.font({
-				family = "JetBrains Mono",
-				style = "Italic",
-			}),
-		},
-	},
-	font_size = 14.0,
-	use_cap_height_to_scale_fallback_fonts = true,
+	font_size = 16.0,
 	line_height = 1.4,
 	color_scheme = "Catppuccin Mocha",
 	keys = {
