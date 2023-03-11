@@ -82,7 +82,7 @@ require("packer").startup(function()
 			require("lualine").setup({
 				options = {
 					icons_enabled = false,
-					theme = "auto",
+					theme = "catppuccin",
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "", right = "" },
 				},
@@ -156,6 +156,12 @@ require("packer").startup(function()
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
+				integrations = {
+					indent_blankline = {
+						enabled = true,
+						colored_indent_levels = false,
+					},
+				},
 			})
 		end,
 	})
