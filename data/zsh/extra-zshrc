@@ -61,6 +61,11 @@ export FZF_DEFAULT_OPTS=" \
 alias g="git"
 alias moe="make"
 
+# https://zellij.dev/documentation/faq.html
+if command -v zellij &> /dev/null; then
+    alias zz="zellij --layout compact"
+fi
+
 # https://sw.kovidgoyal.net/kitty/faq/
 alias kssh="kitty +kitten ssh"
 
