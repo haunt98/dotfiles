@@ -49,6 +49,10 @@ vim.keymap.set("n", "<leader>gtt", ":GoTest<CR>")
 -- Use plugin vim-better-whitespace
 vim.g.better_whitespace_enabled = 1
 
+-- Use plugin neoformat
+vim.g.neoformat_enabled_go = { "gofumpt" }
+vim.g.shfmt_opt = "-ci"
+
 -- Use plugin vim-go
 vim.g.go_gopls_gofumpt = 1
 vim.g.go_doc_popup_window = 1
@@ -140,7 +144,7 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- https://github.com/echasnovski/mini.nvim#installation
+	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 	use({
 		"echasnovski/mini.bracketed",
 		config = function()
