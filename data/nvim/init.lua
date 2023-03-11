@@ -46,11 +46,14 @@ vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
 vim.keymap.set("n", "<leader>gt", ":GoAlternate<CR>")
 vim.keymap.set("n", "<leader>gtt", ":GoTest<CR>")
 
--- Use vim-go
+-- Use plugin vim-better-whitespace
+vim.g.better_whitespace_enabled = 1
+
+-- Use plugin vim-go
 vim.g.go_gopls_gofumpt = 1
 vim.g.go_doc_popup_window = 1
 
--- Use copilot
+-- Use plugin copilot
 vim.g.copilot_filetypes = {
 	["*"] = false,
 	go = true,
@@ -72,8 +75,8 @@ require("packer").startup(function()
 	-- Manage itself
 	use("wbthomason/packer.nvim")
 
-	-- https://github.com/axelf4/vim-strip-trailing-whitespace
-	use("axelf4/vim-strip-trailing-whitespace")
+	-- https://github.com/ntpeters/vim-better-whitespace
+	use("ntpeters/vim-better-whitespace")
 
 	-- https://github.com/nvim-lualine/lualine.nvim
 	use({
@@ -169,6 +172,15 @@ require("packer").startup(function()
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
 	use("sbdchd/neoformat")
+
+	-- https://github.com/nvim-treesitter/nvim-treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
 
 	-- https://github.com/fatih/vim-go
 	use("fatih/vim-go")
