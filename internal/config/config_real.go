@@ -134,6 +134,10 @@ func (c *ConfigReal) Download() error {
 		}
 	}
 
+	if err := eg.Wait(); err != nil {
+		return err
+	}
+
 	return nil
 }
 
