@@ -1,4 +1,4 @@
--- https://github.com/nanotee/nvim-lua-guide
+-- https://neovim.io/doc/user/lua-guide.html
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt.swapfile = false
 vim.opt.title = true
