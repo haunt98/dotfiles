@@ -1,1 +1,4 @@
 theme "catppuccin-mocha"
+default_layout "compact"
+default_mode "locked"
+mouse_mode false
