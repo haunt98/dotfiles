@@ -16,9 +16,7 @@ mod
 sumdb
 vendor
 mock
-generated
 *mock*.go
-*generated*.go
 
 # Python
 venv
