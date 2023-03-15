@@ -1,11 +1,18 @@
 local wezterm = require("wezterm")
 return {
-	font = wezterm.font({
-		family = "mononoki",
-		harfbuzz_features = { "ss01" },
+	font = wezterm.font_with_fallback({
+		"Hermit",
+		-- {
+		-- 	family = "mononoki",
+		-- 	harfbuzz_features = { "ss01" },
+		-- },
+		"JetBrains Mono",
 	}),
-	font_size = 16.0,
-	line_height = 1.4,
+	font_size = 14.0,
+	line_height = 1.2,
+	-- font_size = 16.0,
+	-- line_height = 1.4,
+	use_cap_height_to_scale_fallback_fonts = true,
 	color_scheme = "Catppuccin Mocha",
 	keys = {
 		{
