@@ -79,5 +79,5 @@ fi
 
 # https://github.com/sharkdp/vivid
 if command -v vivid &> /dev/null; then
-    export LS_COLORS="$(vivid generate ~/.config/vivid/catppuccin-mocha.yml)"
+    export LS_COLORS="$(vivid generate catppuccin-mocha)"
 fi

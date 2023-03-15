@@ -54,14 +54,6 @@ url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tm
 internal = "data/fd/.ignore"
 external = "~/.ignore"
 
-[[apps.vivid.paths]]
-internal = "data/vivid"
-external = "~/.config/vivid"
-
-[[apps.vivid.paths]]
-internal = "data/vivid/catppuccin-mocha.yml"
-url = "https://raw.githubusercontent.com/sharkdp/vivid/master/themes/catppuccin-mocha.yml"
-
 [[apps.zellij.paths]]
 internal = "data/zellij"
 external = "~/.config/zellij"
