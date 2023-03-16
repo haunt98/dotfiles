@@ -82,6 +82,11 @@ if command -v vivid &> /dev/null; then
     export LS_COLORS="$(vivid generate catppuccin-mocha)"
 fi
 
+# https://github.com/dylanaraps/pfetch
+if command -v pfetch &> /dev/null; then
+    pfetch
+fi
+
 # https://github.com/shlomif/fortune-mod
 if command -v fortune &> /dev/null; then
     fortune
