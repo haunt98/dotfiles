@@ -22,6 +22,7 @@ bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
 # omz
+zstyle ':omz:update' mode disabled
 # https://github.com/ohmyzsh/ohmyzsh/issues/5700
 DISABLE_AUTO_TITLE="true"
 # https://github.com/ohmyzsh/ohmyzsh/issues/10291
@@ -30,10 +31,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 DISABLE_MAGIC_FUNCTIONS="true"
 
 # nvim
-if command -v nvim &> /dev/null; then
-    export EDITOR=nvim
-    export VISUAL=nvim
-    export GIT_EDITOR=nvim
+if command -v nvim &>/dev/null; then
+	export EDITOR=nvim
+	export VISUAL=nvim
+	export GIT_EDITOR=nvim
 fi
 
 # go
@@ -45,10 +46,10 @@ export GOPRIVATE=github.com/make-go-great,github.com/haunt98
 
 # fzf
 # https://github.com/junegunn/fzf#environment-variables
-if command -v fd &> /dev/null; then
-    export FZF_DEFAULT_COMMAND="fd --type file"
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-    export FZF_ALT_C_COMMAND="fd --type directory"
+if command -v fd &>/dev/null; then
+	export FZF_DEFAULT_COMMAND="fd --type file"
+	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+	export FZF_ALT_C_COMMAND="fd --type directory"
 fi
 
 # https://github.com/catppuccin/fzf
@@ -62,8 +63,8 @@ alias g="git"
 alias moe="make"
 
 # https://zellij.dev/documentation/faq.html
-if command -v zellij &> /dev/null; then
-    alias zz="zellij"
+if command -v zellij &>/dev/null; then
+	alias zz="zellij"
 fi
 
 # https://sw.kovidgoyal.net/kitty/faq/
@@ -73,21 +74,21 @@ alias kssh="kitty +kitten ssh"
 export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
 
 # https://difftastic.wilfred.me.uk/git.html
-if command -v difft &> /dev/null; then
-    export GIT_EXTERNAL_DIFF=difft
+if command -v difft &>/dev/null; then
+	export GIT_EXTERNAL_DIFF=difft
 fi
 
 # https://github.com/sharkdp/vivid
-if command -v vivid &> /dev/null; then
-    export LS_COLORS="$(vivid generate catppuccin-mocha)"
+if command -v vivid &>/dev/null; then
+	export LS_COLORS="$(vivid generate catppuccin-mocha)"
 fi
 
 # https://github.com/dylanaraps/pfetch
-if command -v pfetch &> /dev/null; then
-    pfetch
+if command -v pfetch &>/dev/null; then
+	pfetch
 fi
 
 # https://github.com/shlomif/fortune-mod
-if command -v fortune &> /dev/null; then
-    fortune
+if command -v fortune &>/dev/null; then
+	fortune
 fi
