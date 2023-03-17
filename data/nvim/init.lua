@@ -89,7 +89,9 @@ require("packer").startup(function()
 			require("lualine").setup({
 				options = {
 					icons_enabled = false,
-					theme = "catppuccin",
+					theme = "auto",
+					-- theme = "iceberg",
+					-- theme = "catppuccin",
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "", right = "" },
 				},
@@ -159,6 +161,9 @@ require("packer").startup(function()
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
 
+	-- https://github.com/nyoom-engineering/oxocarbon.nvim
+	use("nyoom-engineering/oxocarbon.nvim")
+
 	-- https://github.com/catppuccin/nvim
 	use({
 		"catppuccin/nvim",
@@ -166,12 +171,6 @@ require("packer").startup(function()
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
-				integrations = {
-					indent_blankline = {
-						enabled = true,
-						colored_indent_levels = false,
-					},
-				},
 			})
 		end,
 	})
@@ -197,4 +196,5 @@ require("packer").startup(function()
 end)
 
 -- vim.api.nvim_command("colorscheme iceberg")
-vim.api.nvim_command("colorscheme catppuccin")
+vim.api.nvim_command("colorscheme oxocarbon")
+-- vim.api.nvim_command("colorscheme catppuccin")
