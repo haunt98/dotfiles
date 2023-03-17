@@ -152,6 +152,9 @@ require("packer").startup(function()
 		end,
 	})
 
+	-- https://github.com/tpope/vim-fugitive
+	use("tpope/vim-fugitive")
+
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
