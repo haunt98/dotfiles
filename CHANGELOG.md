@@ -1,5 +1,103 @@
 # CHANGELOG
 
+## v0.13.1 (2023-03-20)
+
+### Added
+
+- feat: add gdu instead of ncdu (2023-03-12)
+
+- feat: use errgroup (2023-03-05)
+
+### Fixed
+
+- fix: missing errgroup wait when download (2023-03-11)
+
+### Others
+
+- chore: remove neovim unnamedplus (2023-03-19)
+
+- chore: switch oxocarbon (2023-03-17)
+
+- chore: add git for neovim (2023-03-17)
+
+- config: mold -> sold (2023-03-16)
+
+- config: mouse for zellij (2023-03-16)
+
+- config: disable omz update (2023-03-16)
+
+- chore: init pfetch (2023-03-16)
+
+- chore: add fortune-mod (2023-03-16)
+
+- chore: let generated breath (2023-03-15)
+
+- config: hermit (2023-03-15)
+
+- config: vivid embed catppuccin (2023-03-15)
+
+- config: better zellij (2023-03-13)
+
+- config: remove stylua (2023-03-12)
+
+- config: nvim lua guide (2023-03-12)
+
+- config: neovim custom neoformat (2023-03-11)
+
+- chore: nvim config (2023-03-11)
+
+- config: nvim config (2023-03-11)
+
+- config: more macports (2023-03-11)
+
+- chore: alias zellij (2023-03-11)
+
+- config: add zellij (2023-03-11)
+
+- config: copy dir instead of single file (2023-03-11)
+
+- config: back to mononoki (2023-03-10)
+
+- chore: config italic font wezterm (2023-03-09)
+
+- config: add fira code with prefer lig (2023-03-08)
+
+- chore: config keymap nvim (2023-03-07)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.24.4 to 2.25.0 (2023-03-06)
+
+- chore: more nvim keymap (2023-03-06)
+
+- chore: nvim keymap (2023-03-06)
+
+- chore: add vivid, add check exist bin zsh (2023-03-05)
+
+- chore(config): transparent for wezterm (2023-03-01)
+
+- chore: wezterm line height (2023-03-01)
+
+- chore: add echasnovski/mini.bracketed (2023-03-01)
+
+- chore: add omz dirty config (2023-03-01)
+
+- chore: map switch tab in wezterm (2023-03-01)
+
+- chore: use wezterm (2023-03-01)
+
+- chore(config): add nvim comment (2023-02-28)
+
+- chore(config): dotted-zero for mononoki (2023-02-28)
+
+- chore(config): keymap nvim (2023-02-28)
+
+- chore: update make (2023-02-26)
+
+- chore: update lint (2023-02-25)
+
+- chore: test build (2023-02-25)
+
+- chore(changelog): generate v0.13.0 (2023-02-25)
+
 ## v0.13.0 (2023-02-25)
 
 ### Added
