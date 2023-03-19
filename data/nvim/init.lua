@@ -23,9 +23,6 @@ if vim.env.COLORTERM == "truecolor" then
 	vim.opt.termguicolors = true
 end
 
--- Clipboard support
-vim.opt.clipboard:append({ "unnamedplus" })
-
 -- Mouse support
 vim.opt.mouse = "a"
 
@@ -34,6 +31,12 @@ vim.opt.mouse = "a"
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Keymap
+-- Copy/paste to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>P", "\"+P")
+-- Plugin
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
