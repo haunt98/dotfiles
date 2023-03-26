@@ -2,5 +2,5 @@
 
 port install \
 	git neovim \
-	fd bat ripgrep difftastic exa zellij fdupes rclone restic tealdeer task \
+	fd bat ripgrep difftastic git-delta exa zellij fdupes rclone restic tealdeer task \
 	android-platform-tools
