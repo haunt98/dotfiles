@@ -73,11 +73,6 @@ alias kssh="kitty +kitten ssh"
 # https://restic.readthedocs.io/en/latest/manual_rest.html
 export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
 
-# https://difftastic.wilfred.me.uk/git.html
-if command -v difft &>/dev/null; then
-	export GIT_EXTERNAL_DIFF=difft
-fi
-
 # https://github.com/sharkdp/vivid
 if command -v vivid &>/dev/null; then
 	export LS_COLORS="$(vivid generate catppuccin-mocha)"
