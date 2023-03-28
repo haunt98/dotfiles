@@ -30,5 +30,6 @@ return {
 	tab_bar_at_bottom = true,
 	window_background_opacity = 0.9,
 	text_background_opacity = 0.8,
+	macos_window_background_blur = 20,
 	audible_bell = "Disabled",
 }
