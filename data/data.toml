@@ -30,14 +30,6 @@ url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-dark.icns?raw=true
 internal = "data/kitty/kitty-light.icns"
 url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-light.icns?raw=true"
 
-[[apps.alacritty.paths]]
-internal = "data/alacritty"
-external = "~/.config/alacritty"
-
-[[apps.alacritty.paths]]
-internal = "data/alacritty/catppuccin-mocha.yml"
-url = "https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.yml"
-
 [[apps.wezterm.paths]]
 internal = "data/wezterm"
 external = "~/.config/wezterm"
