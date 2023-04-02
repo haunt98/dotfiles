@@ -146,19 +146,19 @@ require("packer").startup(function()
 	-- https://github.com/RRethy/vim-illuminate
 	use("RRethy/vim-illuminate")
 
-	-- https://github.com/terrortylor/nvim-comment
-	use({
-		"terrortylor/nvim-comment",
-		config = function()
-			require("nvim_comment").setup()
-		end,
-	})
-
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 	use({
 		"echasnovski/mini.bracketed",
 		config = function()
 			require("mini.bracketed").setup()
+		end,
+	})
+
+	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
+	use({
+		"echasnovski/mini.comment",
+		config = function()
+			require("mini.comment").setup()
 		end,
 	})
 
