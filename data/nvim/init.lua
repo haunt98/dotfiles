@@ -19,7 +19,7 @@ vim.opt.expandtab = true
 vim.opt.breakindent = true
 
 -- Clipboard support
-vim.opt.clipboard:append({ "unnamedplus" })
+vim.opt.clipboard = "unnamedplus"
 
 -- Truecolor
 if vim.env.COLORTERM == "truecolor" then
