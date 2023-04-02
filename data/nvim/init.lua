@@ -143,9 +143,6 @@ require("packer").startup(function()
 	-- https://github.com/junegunn/fzf.vim
 	use("junegunn/fzf.vim")
 
-	-- https://github.com/RRethy/vim-illuminate
-	use("RRethy/vim-illuminate")
-
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 	use({
 		"echasnovski/mini.bracketed",
@@ -159,6 +156,14 @@ require("packer").startup(function()
 		"echasnovski/mini.comment",
 		config = function()
 			require("mini.comment").setup()
+		end,
+	})
+
+	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
+	use({
+		"echasnovski/mini.cursorword",
+		config = function()
+			require("mini.cursorword").setup()
 		end,
 	})
 
@@ -204,5 +209,5 @@ require("packer").startup(function()
 end)
 
 -- vim.api.nvim_command("colorscheme iceberg")
--- vim.api.nvim_command("colorscheme oxocarbon")
-vim.api.nvim_command("colorscheme catppuccin")
+vim.api.nvim_command("colorscheme oxocarbon")
+-- vim.api.nvim_command("colorscheme catppuccin")
