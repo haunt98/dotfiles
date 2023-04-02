@@ -167,6 +167,14 @@ require("packer").startup(function()
 		end,
 	})
 
+	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
+	use({
+		"echasnovski/mini.surround",
+		config = function()
+			require("mini.surround").setup()
+		end,
+	})
+
 	-- https://github.com/tpope/vim-fugitive
 	use("tpope/vim-fugitive")
 
