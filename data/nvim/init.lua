@@ -209,6 +209,17 @@ require("packer").startup(function()
 		end,
 	})
 
+	-- https://github.com/nvim-treesitter/nvim-treesitter-context
+	use({
+		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			require("treesitter-context").setup({
+				enable = true,
+				max_lines = 2,
+			})
+		end,
+	})
+
 	-- https://github.com/fatih/vim-go
 	use("fatih/vim-go")
 
