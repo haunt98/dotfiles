@@ -39,8 +39,6 @@ vim.keymap.set("n", "<leader><LEFT>", "<C-w>h")
 vim.keymap.set("n", "<leader><UP>", "<C-w>j")
 vim.keymap.set("n", "<leader><DOWN>", "<C-w>k")
 vim.keymap.set("n", "<leader><RIGHT>", "<C-w>l")
-vim.keymap.set("n", ";", ":")
-vim.keymap.set("n", ":", ";")
 -- Plugin
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
