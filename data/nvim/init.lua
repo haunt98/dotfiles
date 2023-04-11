@@ -35,10 +35,6 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Keymap
 vim.keymap.set("n", "<leader>s", ":w<CR>")
-vim.keymap.set("n", "<leader><LEFT>", "<C-w>h")
-vim.keymap.set("n", "<leader><UP>", "<C-w>j")
-vim.keymap.set("n", "<leader><DOWN>", "<C-w>k")
-vim.keymap.set("n", "<leader><RIGHT>", "<C-w>l")
 -- Plugin
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
@@ -52,6 +48,7 @@ vim.keymap.set("n", "<leader>gt", ":GoAlternate<CR>")
 vim.keymap.set("n", "<leader>gtt", ":GoTest<CR>")
 vim.keymap.set("n", "<leader>gr", ":GoReferrers<CR>")
 vim.keymap.set("n", "<leader>gcv", ":GoCoverage<CR>")
+vim.keymap.set("n", "<leader>gdd", ":GoDeclsDir<CR>")
 
 -- Use plugin vim-better-whitespace
 vim.g.better_whitespace_enabled = 1
