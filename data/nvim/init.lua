@@ -53,6 +53,10 @@ vim.keymap.set("n", "<leader>gdd", ":GoDeclsDir<CR>")
 -- Use plugin vim-better-whitespace
 vim.g.better_whitespace_enabled = 1
 
+-- Use plugin nvim-tree.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Use plugin neoformat
 vim.g.neoformat_enabled_go = { "gofumpt" }
 vim.g.shfmt_opt = "-ci"
@@ -107,12 +111,13 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- https://github.com/kyazdani42/nvim-tree.lua
+	-- https://github.com/nvim-tree/nvim-tree.lua
 	use({
-		"kyazdani42/nvim-tree.lua",
+		"nvim-tree/nvim-tree.lua",
 		config = function()
 			require("nvim-tree").setup({
 				renderer = {
+					group_empty = true,
 					icons = {
 						show = {
 							file = false,
@@ -122,7 +127,6 @@ require("packer").startup(function()
 							modified = false,
 						},
 					},
-					group_empty = true,
 				},
 			})
 		end,
