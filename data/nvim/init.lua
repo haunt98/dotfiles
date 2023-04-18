@@ -35,7 +35,8 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Keymap
 vim.keymap.set("n", "<leader>s", ":w<CR>")
--- Plugin
+
+-- Keymap for plugin
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
@@ -50,12 +51,18 @@ vim.keymap.set("n", "<leader>gr", ":GoReferrers<CR>")
 vim.keymap.set("n", "<leader>gcv", ":GoCoverage<CR>")
 vim.keymap.set("n", "<leader>gdd", ":GoDeclsDir<CR>")
 
--- Use plugin vim-better-whitespace
-vim.g.better_whitespace_enabled = 1
+-- Use fzf
+vim.opt.rtp:append({ "~/.fzf" })
 
 -- Use plugin nvim-tree.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Use plugin vim-better-whitespace
+vim.g.better_whitespace_enabled = 1
+
+-- Use plugin which-key.nvim
+vim.o.timeoutlen = 500
 
 -- Use plugin neoformat
 vim.g.neoformat_enabled_go = { "gofumpt" }
@@ -79,16 +86,13 @@ vim.g.copilot_filetypes = {
 	markdown = true,
 }
 
--- Use fzf
-vim.opt.rtp:append({ "~/.fzf" })
-
 -- https://github.com/wbthomason/packer.nvim
 require("packer").startup(function()
 	-- Manage itself
 	use("wbthomason/packer.nvim")
 
-	-- https://github.com/ntpeters/vim-better-whitespace
-	use("ntpeters/vim-better-whitespace")
+	-- https://github.com/junegunn/fzf.vim
+	use("junegunn/fzf.vim")
 
 	-- https://github.com/nvim-lualine/lualine.nvim
 	use({
@@ -140,8 +144,8 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- https://github.com/junegunn/fzf.vim
-	use("junegunn/fzf.vim")
+	-- https://github.com/ntpeters/vim-better-whitespace
+	use("ntpeters/vim-better-whitespace")
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 	use({
@@ -177,6 +181,14 @@ require("packer").startup(function()
 
 	-- https://github.com/tpope/vim-fugitive
 	use("tpope/vim-fugitive")
+
+	-- https://github.com/folke/which-key.nvim
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup()
+		end,
+	})
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
