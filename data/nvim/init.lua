@@ -35,7 +35,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Keymap
 vim.keymap.set("n", ";", "<leader>", { remap = true })
-vim.keymap.set("n", "<leader>s", ":w<CR>")
+vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- Keymap for plugin
 vim.keymap.set("n", "<leader>q", ":FZF<CR>")
