@@ -87,6 +87,7 @@ fi
 # https://github.com/jarun/nnn
 if command -v nnn &>/dev/null; then
 	export NNN_FIFO=/tmp/nnn.fifo
+	export NNN_PLUG="p:-preview-tui"
 fi
 
 # https://github.com/dylanaraps/pfetch
