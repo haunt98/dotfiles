@@ -195,6 +195,9 @@ require("packer").startup(function()
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
 
+	-- https://github.com/projekt0n/github-nvim-theme
+	use({ "projekt0n/github-nvim-theme", branch = "0.0.x" })
+
 	-- https://github.com/nyoom-engineering/oxocarbon.nvim
 	use("nyoom-engineering/oxocarbon.nvim")
 
