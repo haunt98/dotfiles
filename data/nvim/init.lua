@@ -36,14 +36,16 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Keymap
 vim.keymap.set("n", ";", "<leader>", { remap = true })
 vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
 
 -- Keymap for plugin
-vim.keymap.set("n", "<leader>q", ":FZF<CR>")
+vim.keymap.set("n", "<leader>f", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
-vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
+vim.keymap.set("n", "<leader>fm", ":Neoformat<CR>")
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
 vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
 vim.keymap.set("n", "<leader>gt", ":GoAlternate<CR>")
@@ -63,7 +65,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.better_whitespace_enabled = 1
 
 -- Use plugin which-key.nvim
-vim.o.timeoutlen = 500
+vim.o.timeoutlen = 250
 
 -- Use plugin neoformat
 vim.g.neoformat_enabled_go = { "gofumpt" }
@@ -174,6 +176,14 @@ require("packer").startup(function()
 
 	-- https://github.com/ntpeters/vim-better-whitespace
 	use("ntpeters/vim-better-whitespace")
+
+	-- https://github.com/folke/zen-mode.nvim
+	use({
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup()
+		end,
+	})
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 	use({
