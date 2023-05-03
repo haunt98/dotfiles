@@ -59,9 +59,6 @@ vim.opt.rtp:append({ "~/.fzf" })
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Use plugin vim-better-whitespace
-vim.g.better_whitespace_enabled = 1
-
 -- Use plugin which-key.nvim
 vim.o.timeoutlen = 250
 
@@ -172,9 +169,6 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- https://github.com/ntpeters/vim-better-whitespace
-	use("ntpeters/vim-better-whitespace")
-
 	-- https://github.com/folke/zen-mode.nvim
 	use({
 		"folke/zen-mode.nvim",
@@ -212,6 +206,14 @@ require("packer").startup(function()
 		"echasnovski/mini.surround",
 		config = function()
 			require("mini.surround").setup()
+		end,
+	})
+
+	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
+	use({
+		"echasnovski/mini.trailspace",
+		config = function()
+			require("mini.trailspace").setup()
 		end,
 	})
 
