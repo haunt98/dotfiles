@@ -59,9 +59,6 @@ vim.opt.rtp:append({ "~/.fzf" })
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Use plugin which-key.nvim
-vim.o.timeoutlen = 250
-
 -- Use plugin neoformat
 vim.g.neoformat_enabled_go = { "gofumpt" }
 vim.g.shfmt_opt = "-ci"
@@ -219,14 +216,6 @@ require("packer").startup(function()
 
 	-- https://github.com/tpope/vim-fugitive
 	use("tpope/vim-fugitive")
-
-	-- https://github.com/folke/which-key.nvim
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup()
-		end,
-	})
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
