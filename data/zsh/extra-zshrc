@@ -92,12 +92,18 @@ if command -v nnn &>/dev/null; then
 	export NNN_PLUG="p:-preview-tui"
 fi
 
+# TODO: Randomly choose which fun way to start
 # https://github.com/dylanaraps/pfetch
-if command -v pfetch &>/dev/null; then
-	pfetch
-fi
+# if command -v pfetch &>/dev/null; then
+# 	pfetch
+# fi
 
 # https://github.com/shlomif/fortune-mod
-if command -v fortune &>/dev/null; then
-	fortune
+# if command -v fortune &>/dev/null; then
+# 	fortune
+# fi
+
+# https://gitlab.com/phoneybadger/pokemon-colorscripts
+if command -v pokemon-colorscripts &>/dev/null; then
+	pokemon-colorscripts --no-title -r 1-8
 fi
