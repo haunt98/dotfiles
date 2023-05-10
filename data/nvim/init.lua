@@ -37,10 +37,9 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", ";", "<leader>", { remap = true })
 
 -- Keymap for plugin
-vim.keymap.set("n", "<leader>ff", ":FZF<CR>")
+vim.keymap.set("n", "<leader>f", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
