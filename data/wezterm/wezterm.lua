@@ -1,7 +1,8 @@
 local wezterm = require("wezterm")
 return {
-	font = wezterm.font("JetBrains Mono"),
-	font_size = 14.0,
+	-- font = wezterm.font("JetBrains Mono"),
+	font = wezterm.font("Iosevka Term SS08"),
+	font_size = 16.0,
 	line_height = 1.2,
 	use_cap_height_to_scale_fallback_fonts = true,
 	color_scheme = "Catppuccin Mocha",
