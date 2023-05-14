@@ -58,7 +58,22 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Use plugin neoformat
+vim.g.neoformat_cpp_clangformatmacports = {
+	exe = "clang-format-mp-15",
+	args = { "-style=file" },
+}
+
+vim.g.neoformat_enabled_cpp = { "clangformatmacports" }
+
+vim.g.neoformat_c_clangformatmacports = {
+	exe = "clang-format-mp-15",
+	args = { "-style=file" },
+}
+
+vim.g.neoformat_enabled_c = { "clangformatmacports" }
+
 vim.g.neoformat_enabled_go = { "gofumpt" }
+
 vim.g.shfmt_opt = "-ci"
 
 -- Use plugin vim-go
