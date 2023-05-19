@@ -5,6 +5,10 @@ vim.opt.title = true
 vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
 
+-- Case character
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Line number
 vim.opt.number = true
 vim.opt.relativenumber = true
