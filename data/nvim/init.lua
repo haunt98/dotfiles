@@ -130,6 +130,9 @@ require("packer").startup(function()
 						},
 					},
 				},
+				filters = {
+					custom = { "^\\.git", "^\\.DS_Store" },
+				},
 			})
 		end,
 	})
