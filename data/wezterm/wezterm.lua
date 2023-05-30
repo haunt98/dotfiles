@@ -1,7 +1,13 @@
 local wezterm = require("wezterm")
 return {
-	-- font = wezterm.font("JetBrains Mono"),
-	font = wezterm.font("Iosevka Term SS08"),
+	font = wezterm.font({
+		family = "JetBrains Mono",
+		harfbuzz_features = {
+			"ss02", -- f l m t Ww y
+			"cv18", -- 2 6 9
+			"cv20", -- 5
+		},
+	}),
 	font_size = 16.0,
 	line_height = 1.2,
 	use_cap_height_to_scale_fallback_fonts = true,

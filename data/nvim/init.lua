@@ -63,6 +63,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Use plugin neoformat
+vim.g.neoformat_basic_format_trim = 1
 vim.g.neoformat_enabled_go = { "gofumpt" }
 vim.g.shfmt_opt = "-ci"
 
