@@ -1,5 +1,5 @@
 -- https://neovim.io/doc/user/lua-guide.html
-vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
+vim.opt.completeopt = { "menuone", "noinsert", "noselect", "preview" }
 vim.opt.swapfile = false
 vim.opt.title = true
 vim.opt.virtualedit = "block"
