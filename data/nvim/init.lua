@@ -193,9 +193,6 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- https://github.com/tpope/vim-fugitive
-	use("tpope/vim-fugitive")
-
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
 	use("cocopon/iceberg.vim")
@@ -250,4 +247,5 @@ end)
 
 -- vim.api.nvim_command("colorscheme iceberg")
 vim.api.nvim_command("colorscheme oxocarbon")
+-- vim.api.nvim_command("colorscheme github_dark")
 -- vim.api.nvim_command("colorscheme catppuccin")
