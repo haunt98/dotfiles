@@ -132,7 +132,7 @@ require("packer").startup(function()
 					},
 				},
 				filters = {
-					custom = { "^\\.git", "^\\.DS_Store" },
+					custom = { "^\\.git$", "^\\.DS_Store", "\\.out", "\\.class" },
 				},
 			})
 		end,
