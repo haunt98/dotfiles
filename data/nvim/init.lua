@@ -74,15 +74,18 @@ vim.g.go_doc_popup_window = 1
 -- Use plugin copilot
 vim.g.copilot_filetypes = {
 	["*"] = false,
+	c = true,
+	cpp = true,
 	go = true,
+	java = true,
 	json = true,
 	lua = true,
 	make = true,
+	markdown = true,
 	proto = true,
 	python = true,
 	toml = true,
 	yaml = true,
-	markdown = true,
 }
 
 -- https://github.com/wbthomason/packer.nvim
