@@ -1,5 +1,5 @@
 -- https://neovim.io/doc/user/lua-guide.html
-vim.opt.completeopt = { "menuone", "noinsert", "noselect", "preview" }
+vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt.swapfile = false
 vim.opt.title = true
 vim.opt.virtualedit = "block"
@@ -47,6 +47,7 @@ vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
+vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
 vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
 vim.keymap.set("n", "<leader>gat", ":GoAlternate<CR>")

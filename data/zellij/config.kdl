@@ -1,3 +1,14 @@
 theme "catppuccin-mocha"
 default_layout "compact"
 default_mode "locked"
+
+keybinds {
+    normal {
+        bind "Alt n" { NewPane; }
+        bind "Alt d" { NewPane "Down"; }
+    }
+    locked {
+        bind "Alt n" { NewPane; }
+        bind "Alt d" { NewPane "Down"; }
+    }
+}
