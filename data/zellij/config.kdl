@@ -4,10 +4,12 @@ default_mode "locked"
 
 keybinds {
     normal {
+        bind "Alt p" { SwitchFocus; }
         bind "Alt n" { NewPane; }
         bind "Alt d" { NewPane "Down"; }
     }
     locked {
+        bind "Alt p" { SwitchFocus; }
         bind "Alt n" { NewPane; }
         bind "Alt d" { NewPane "Down"; }
     }
