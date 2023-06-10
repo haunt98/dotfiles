@@ -1,5 +1,155 @@
 # CHANGELOG
 
+## v0.13.2 (2023-06-10)
+
+### Added
+
+- feat: back to Iosevka Term SS08 (2023-05-12)
+
+- feat: more toys for port (2023-04-27)
+
+- feat: support nnn (2023-04-27)
+
+### Others
+
+- chore: simple zellij ui (2023-06-10)
+
+- config: zellij keymap switch panel (2023-06-10)
+
+- chore: nvim github theme release (2023-06-09)
+
+- config: update config (2023-06-09)
+
+- build(deps): bump github.com/BurntSushi/toml from 1.3.1 to 1.3.2 (2023-06-09)
+
+- build(deps): bump github.com/BurntSushi/toml from 1.3.0 to 1.3.1 (2023-06-07)
+
+- chore: ignore java class (2023-06-02)
+
+- chore: ignore nvim-tree (2023-06-02)
+
+- build(deps): bump github.com/BurntSushi/toml from 1.2.1 to 1.3.0 (2023-05-31)
+
+- config: re pick Jetbrains Mono again with custom ligatures (2023-05-31)
+
+- chore: add preview in vim completeopt (2023-05-30)
+
+- chore: add github color (2023-05-30)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.4 to 2.25.5 (2023-05-30)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.3 to 2.25.4 (2023-05-29)
+
+- chore: ignore more in nvim (2023-05-24)
+
+- chore: neovim smartcase (2023-05-19)
+
+- chore: remove clang-format (2023-05-18)
+
+- config: bye float neovim (2023-05-14)
+
+- chore: fast quit neovim (2023-05-14)
+
+- chore: clang-format from macports for neoformat (2023-05-14)
+
+- chore: update neovim keymap (2023-05-11)
+
+- chore: pikachu I choose you (2023-05-07)
+
+- chore: re-add git-delta (i'm tired) (2023-05-07)
+
+- chore: better neovim keymap (2023-05-05)
+
+- chore: all in neovim (2023-05-05)
+
+- chore: remove folke/which-key.nvim (2023-05-05)
+
+- build(deps): bump golang.org/x/sync from 0.1.0 to 0.2.0 (2023-05-05)
+
+- chore: use echasnovski/mini.trailspace (2023-05-04)
+
+- chore: zellij change themes folder (2023-05-02)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.2 to 2.25.3 (2023-05-02)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.1 to 2.25.2 (2023-05-01)
+
+- chore: code slow please (2023-04-27)
+
+- chore: reshow title bar macos (2023-04-26)
+
+- chore: add zen mode (2023-04-26)
+
+- chore: float nvim-tree (2023-04-25)
+
+- chore: add projekt0n/github-nvim-theme (2023-04-21)
+
+- config: preview in wezterm (2023-04-19)
+
+- chore: support nnn (2023-04-19)
+
+- chore: save neovim with leader w (2023-04-18)
+
+- chore: use ; for leader with remap in neovim (2023-04-18)
+
+- chore: use which-key (2023-04-18)
+
+- chore: show macports outdated first (2023-04-15)
+
+- chore: use nvim-tree/nvim-tree.lua (2023-04-12)
+
+- chore: update vim keymap (2023-04-11)
+
+- Revert "chore: genius map to exclude shift neovim" (2023-04-10)
+
+- chore: genius map to exclude shift neovim (2023-04-09)
+
+- chore: keymap neovim (2023-04-05)
+
+- chore: use nvim-treesitter/nvim-treesitter-context (2023-04-04)
+
+- chore: config: hide titlebar macos (2023-04-03)
+
+- chore: neovim unnamedplus (2023-04-03)
+
+- chore: use echasnovski/mini.surround (2023-04-03)
+
+- chore: use echasnovski/mini.cursorword (2023-04-03)
+
+- chore: use echasnovski/mini.comment (2023-04-03)
+
+- chore: better line height for kitty (2023-04-02)
+
+- chore: more port (2023-03-31)
+
+- chore: optimize github action (2023-03-31)
+
+- chore: switch back to JetBrains Mono (2023-03-31)
+
+- chore: remove alacritty (2023-03-29)
+
+- chore: wezterm macos_window_background_blur (2023-03-28)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.0 to 2.25.1 (2023-03-27)
+
+- chore: lualine auto theme (2023-03-26)
+
+- chore: re-add git-delta (2023-03-26)
+
+- chore: difftastic is slow (2023-03-26)
+
+- chore: more vim keymap (2023-03-25)
+
+- build(deps): bump actions/setup-go from 3 to 4 (2023-03-22)
+
+- chore: update dependabot (2023-03-22)
+
+- chore: so sad (2023-03-21)
+
+- chore: fix clipboard neovim (2023-03-20)
+
+- chore(changelog): generate v0.13.1 (2023-03-20)
+
 ## v0.13.1 (2023-03-20)
 
 ### Added
