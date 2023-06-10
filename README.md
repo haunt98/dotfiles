@@ -20,3 +20,5 @@ go build ./cmd/dot
 # Download internet themes, ...
 ./dot download
 ```
+
+![nvim-000](https://raw.githubusercontent.com/haunt98/posts-images/main/nvim-000.png)
