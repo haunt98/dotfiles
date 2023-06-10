@@ -1,6 +1,8 @@
 theme "catppuccin-mocha"
 default_layout "compact"
 default_mode "locked"
+on_force_close "quit"
+simplified_ui true
 
 keybinds {
     normal {
