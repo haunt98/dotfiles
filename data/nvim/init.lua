@@ -42,8 +42,8 @@ vim.keymap.set("n", ";", "<leader>", { remap = true })
 vim.keymap.set("n", "q", ":q<CR>")
 
 -- Keymap for plugin
-vim.keymap.set("n", "<leader>f", ":FZF<CR>")
-vim.keymap.set("n", "<leader>rg", ":Rg<CR>")
+vim.keymap.set("n", "<leader>f", ":FZFFiles<CR>")
+vim.keymap.set("n", "<leader>rg", ":FZFRg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
@@ -58,6 +58,9 @@ vim.keymap.set("n", "<leader>gdd", ":GoDeclsDir<CR>")
 
 -- Use fzf
 vim.opt.rtp:append({ "~/.fzf" })
+
+-- Use plugin fzf.vim
+vim.g.fzf_command_prefix = "FZF"
 
 -- Use plugin nvim-tree.lua
 vim.g.loaded_netrw = 1
