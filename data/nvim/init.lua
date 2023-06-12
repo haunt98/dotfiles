@@ -42,7 +42,7 @@ vim.keymap.set("n", ";", "<leader>", { remap = true })
 vim.keymap.set("n", "q", ":q<CR>")
 
 -- Keymap for plugin
-vim.keymap.set("n", "<leader>f", ":FZFFiles<CR>")
+vim.keymap.set("n", "<leader>f", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":FZFRg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
