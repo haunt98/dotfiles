@@ -46,7 +46,6 @@ vim.keymap.set("n", "<leader>f", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":FZFRg<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
-vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
 vim.keymap.set("n", "<F2>", ":GoRename<CR>")
 vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
@@ -153,13 +152,8 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- https://github.com/folke/zen-mode.nvim
-	use({
-		"folke/zen-mode.nvim",
-		config = function()
-			require("zen-mode").setup()
-		end,
-	})
+	-- https://github.com/airblade/vim-gitgutter
+	use("airblade/vim-gitgutter")
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 	use({
@@ -173,7 +167,9 @@ require("packer").startup(function()
 	use({
 		"echasnovski/mini.comment",
 		config = function()
-			require("mini.comment").setup()
+			require("mini.comment").setup({
+				comment = { suffix = "", options = {} },
+			})
 		end,
 	})
 
