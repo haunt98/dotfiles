@@ -158,7 +158,12 @@ require("lazy").setup({
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("indent_blankline").setup()
+			require("indent_blankline").setup({
+				-- For oxocarbon
+				char_highlight_list = {
+					"Whitespace",
+				},
+			})
 		end,
 	},
 
