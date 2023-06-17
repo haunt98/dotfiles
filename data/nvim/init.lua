@@ -169,7 +169,9 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.bracketed",
 		config = function()
-			require("mini.bracketed").setup()
+			require("mini.bracketed").setup({
+				comment = { suffix = "", options = {} },
+			})
 		end,
 	},
 
@@ -177,9 +179,7 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.comment",
 		config = function()
-			require("mini.comment").setup({
-				comment = { suffix = "", options = {} },
-			})
+			require("mini.comment").setup()
 		end,
 	},
 
