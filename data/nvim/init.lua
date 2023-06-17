@@ -91,16 +91,26 @@ vim.g.copilot_filetypes = {
 	yaml = true,
 }
 
--- https://github.com/wbthomason/packer.nvim
-require("packer").startup(function()
-	-- Manage itself
-	use("wbthomason/packer.nvim")
+-- https://github.com/folke/lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
+require("lazy").setup({
 	-- https://github.com/junegunn/fzf.vim
-	use("junegunn/fzf.vim")
+	"junegunn/fzf.vim",
 
 	-- https://github.com/nvim-lualine/lualine.nvim
-	use({
+	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
 			require("lualine").setup({
@@ -118,10 +128,10 @@ require("packer").startup(function()
 			-- Disable showmode when use lualine
 			vim.opt.showmode = false
 		end,
-	})
+	},
 
 	-- https://github.com/nvim-tree/nvim-tree.lua
-	use({
+	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
 			require("nvim-tree").setup({
@@ -142,97 +152,94 @@ require("packer").startup(function()
 				},
 			})
 		end,
-	})
+	},
 
 	-- https://github.com/lukas-reineke/indent-blankline.nvim
-	use({
+	{
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
 			require("indent_blankline").setup()
 		end,
-	})
+	},
 
 	-- https://github.com/airblade/vim-gitgutter
-	use("airblade/vim-gitgutter")
+	"airblade/vim-gitgutter",
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
-	use({
+	{
 		"echasnovski/mini.bracketed",
 		config = function()
 			require("mini.bracketed").setup()
 		end,
-	})
+	},
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
-	use({
+	{
 		"echasnovski/mini.comment",
 		config = function()
 			require("mini.comment").setup({
 				comment = { suffix = "", options = {} },
 			})
 		end,
-	})
+	},
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
-	use({
+	{
 		"echasnovski/mini.cursorword",
 		config = function()
 			require("mini.cursorword").setup()
 		end,
-	})
+	},
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
-	use({
+	{
 		"echasnovski/mini.surround",
 		config = function()
 			require("mini.surround").setup()
 		end,
-	})
+	},
 
 	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
-	use({
+	{
 		"echasnovski/mini.trailspace",
 		config = function()
 			require("mini.trailspace").setup()
 		end,
-	})
+	},
 
 	-- Colorschemes
 	-- https://github.com/cocopon/iceberg.vim
-	use("cocopon/iceberg.vim")
+	"cocopon/iceberg.vim",
 
 	-- https://github.com/projekt0n/github-nvim-theme
-	use("projekt0n/github-nvim-theme")
+	"projekt0n/github-nvim-theme",
 
 	-- https://github.com/nyoom-engineering/oxocarbon.nvim
-	use("nyoom-engineering/oxocarbon.nvim")
+	"nyoom-engineering/oxocarbon.nvim",
 
 	-- https://github.com/catppuccin/nvim
-	use({
+	{
 		"catppuccin/nvim",
-		as = "catppuccin",
+		name = "catppuccin",
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
 			})
 		end,
-	})
+	},
 
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
-	use("sbdchd/neoformat")
+	"sbdchd/neoformat",
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter
-	use({
+	{
 		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
-	})
+		build = ":TSUpdate",
+	},
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter-context
-	use({
+	{
 		"nvim-treesitter/nvim-treesitter-context",
 		config = function()
 			require("treesitter-context").setup({
@@ -240,14 +247,14 @@ require("packer").startup(function()
 				max_lines = 2,
 			})
 		end,
-	})
+	},
 
 	-- https://github.com/fatih/vim-go
-	use("fatih/vim-go")
+	"fatih/vim-go",
 
 	-- https://github.com/github/copilot.vim
-	use("github/copilot.vim")
-end)
+	"github/copilot.vim",
+})
 
 -- vim.api.nvim_command("colorscheme iceberg")
 vim.api.nvim_command("colorscheme oxocarbon")
