@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v0.13.3 (2023-06-17)
+
+### Others
+
+- chore: cleanup (2023-06-17)
+
+- chore(nvim): make indent blankline support oxocarbon (2023-06-17)
+
+- chore(nvim): correct mini.bracket (2023-06-17)
+
+- chore(nvim): switch to folke/lazy.nvim (2023-06-17)
+
+- chore(nvim): remove zen-mode, add gitgutter (2023-06-16)
+
+- build(deps): bump golang.org/x/sync from 0.2.0 to 0.3.0 (2023-06-15)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.5 to 2.25.6 (2023-06-13)
+
+- chore: revert old keymap vim (2023-06-12)
+
+- chore: better keymap fzf vim (2023-06-12)
+
+- chore: add img (2023-06-10)
+
+- chore(changelog): generate v0.13.2 (2023-06-10)
+
 ## v0.13.2 (2023-06-10)
 
 ### Added
