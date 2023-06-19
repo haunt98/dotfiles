@@ -50,10 +50,6 @@ external = "~/.ignore"
 internal = "data/zellij"
 external = "~/.config/zellij"
 
-[[apps.zellij.paths]]
-internal = "data/zellij/themes/catppuccin.kdl"
-url = "https://raw.githubusercontent.com/zellij-org/zellij/main/zellij-utils/assets/themes/catppuccin.kdl"
-
 [[apps.gdu.paths]]
 internal = "data/gdu"
 external = "~/.config/gdu"
