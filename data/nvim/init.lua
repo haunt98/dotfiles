@@ -55,9 +55,6 @@ vim.keymap.set("n", "<leader>gr", ":GoReferrers<CR>")
 vim.keymap.set("n", "<leader>gcv", ":GoCoverage<CR>")
 vim.keymap.set("n", "<leader>gdd", ":GoDeclsDir<CR>")
 
--- Use fzf
-vim.opt.rtp:append({ "~/.fzf" })
-
 -- Use plugin fzf.vim
 vim.g.fzf_command_prefix = "FZF"
 
@@ -107,6 +104,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- https://github.com/junegunn/fzf.vim
+	"junegunn/fzf",
 	"junegunn/fzf.vim",
 
 	-- https://github.com/nvim-lualine/lualine.nvim
