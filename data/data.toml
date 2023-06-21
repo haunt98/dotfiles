@@ -57,3 +57,11 @@ external = "~/.config/gdu"
 [[apps.zed.paths]]
 internal = "data/zed/settings.json"
 external = "~/.config/zed/settings.json"
+
+[[apps.gitui.paths]]
+internal = "data/gitui"
+external = "~/.config/gitui"
+
+[[apps.gitui.paths]]
+internal = "data/gitui/mocha.ron"
+url = "https://raw.githubusercontent.com/catppuccin/gitui/main/theme/mocha.ron"
