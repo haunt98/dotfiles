@@ -168,44 +168,25 @@ require("lazy").setup({
 	-- https://github.com/airblade/vim-gitgutter
 	"airblade/vim-gitgutter",
 
-	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
+	-- https://github.com/echasnovski/mini.nvim
 	{
-		"echasnovski/mini.bracketed",
+		"echasnovski/mini.nvim",
 		config = function()
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 			require("mini.bracketed").setup({
 				comment = { suffix = "", options = {} },
 			})
-		end,
-	},
 
-	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
-	{
-		"echasnovski/mini.comment",
-		config = function()
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
 			require("mini.comment").setup()
-		end,
-	},
 
-	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
-	{
-		"echasnovski/mini.cursorword",
-		config = function()
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
-		end,
-	},
 
-	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
-	{
-		"echasnovski/mini.surround",
-		config = function()
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
-		end,
-	},
 
-	-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
-	{
-		"echasnovski/mini.trailspace",
-		config = function()
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
 			require("mini.trailspace").setup()
 		end,
 	},
