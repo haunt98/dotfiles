@@ -44,6 +44,7 @@ vim.keymap.set("n", "q", ":q<CR>")
 -- Keymap for plugin
 vim.keymap.set("n", "<leader>f", ":FZF<CR>")
 vim.keymap.set("n", "<leader>rg", ":FZFRg<CR>")
+vim.keymap.set("n", "<leader>cm", ":FZFCommands<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
@@ -219,6 +220,9 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
+			require("mini.pairs").setup()
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
 
@@ -235,7 +239,17 @@ require("lazy").setup({
 	"projekt0n/github-nvim-theme",
 
 	-- https://github.com/nyoom-engineering/oxocarbon.nvim
-	"nyoom-engineering/oxocarbon.nvim",
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+
+	-- https://github.com/folke/tokyonight.nvim
+	"folke/tokyonight.nvim",
+
+	-- https://github.com/junegunn/seoul256.vim
+	"junegunn/seoul256.vim",
 
 	-- https://github.com/catppuccin/nvim
 	{
