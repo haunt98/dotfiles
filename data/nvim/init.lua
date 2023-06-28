@@ -241,8 +241,6 @@ require("lazy").setup({
 	-- https://github.com/nyoom-engineering/oxocarbon.nvim
 	{
 		"nyoom-engineering/oxocarbon.nvim",
-		lazy = false,
-		priority = 1000,
 	},
 
 	-- https://github.com/folke/tokyonight.nvim
@@ -255,6 +253,8 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		lazy = false,
+		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
@@ -304,6 +304,6 @@ require("lazy").setup({
 })
 
 -- vim.api.nvim_command("colorscheme iceberg")
-vim.api.nvim_command("colorscheme oxocarbon")
+-- vim.api.nvim_command("colorscheme oxocarbon")
 -- vim.api.nvim_command("colorscheme github_dark")
--- vim.api.nvim_command("colorscheme catppuccin")
+vim.api.nvim_command("colorscheme catppuccin")
