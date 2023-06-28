@@ -5,7 +5,7 @@
   },
   "base_keymap": "VSCode",
   "theme": "Rosé Pine Moon",
-  "buffer_font_family": "Jetbrains Mono",
+  "buffer_font_family": "SF Mono",
   "buffer_font_features": {
     "ss02": true,
     "cv18": true,
