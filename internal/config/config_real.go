@@ -105,6 +105,7 @@ func (c *ConfigReal) Download() error {
 			}
 
 			eg.Go(func() error {
+				// nolint:noctx
 				httpRsp, err := c.httpClient.Get(p.URL)
 				if err != nil {
 					return fmt.Errorf("http client: failed to get: %w", err)
