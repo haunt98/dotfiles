@@ -149,12 +149,7 @@ require("lazy").setup({
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("indent_blankline").setup({
-				-- For oxocarbon
-				char_highlight_list = {
-					"Whitespace",
-				},
-			})
+			require("indent_blankline").setup()
 		end,
 	},
 
@@ -220,24 +215,6 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
 			require("mini.trailspace").setup()
-		end,
-	},
-
-	-- Colorschemes
-	-- https://github.com/catppuccin/nvim
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				flavour = "mocha",
-				transparent_background = true,
-				integrations = {
-					mini = true,
-				},
-			})
 		end,
 	},
 
@@ -325,4 +302,4 @@ require("lazy").setup({
 	"github/copilot.vim",
 })
 
-vim.api.nvim_command("colorscheme catppuccin")
+vim.api.nvim_command("colorscheme minicyan")
