@@ -224,23 +224,6 @@ require("lazy").setup({
 	},
 
 	-- Colorschemes
-	-- https://github.com/cocopon/iceberg.vim
-	"cocopon/iceberg.vim",
-
-	-- https://github.com/projekt0n/github-nvim-theme
-	"projekt0n/github-nvim-theme",
-
-	-- https://github.com/nyoom-engineering/oxocarbon.nvim
-	{
-		"nyoom-engineering/oxocarbon.nvim",
-	},
-
-	-- https://github.com/folke/tokyonight.nvim
-	"folke/tokyonight.nvim",
-
-	-- https://github.com/junegunn/seoul256.vim
-	"junegunn/seoul256.vim",
-
 	-- https://github.com/catppuccin/nvim
 	{
 		"catppuccin/nvim",
@@ -343,7 +326,4 @@ require("lazy").setup({
 	"github/copilot.vim",
 })
 
--- vim.api.nvim_command("colorscheme iceberg")
--- vim.api.nvim_command("colorscheme oxocarbon")
--- vim.api.nvim_command("colorscheme github_dark")
 vim.api.nvim_command("colorscheme catppuccin")
