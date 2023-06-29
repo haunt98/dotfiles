@@ -65,6 +65,7 @@ fi
 # Alias
 alias g="git"
 alias moe="make"
+alias meo="make"
 
 # https://zellij.dev/documentation/faq.html
 if command -v zellij &>/dev/null; then

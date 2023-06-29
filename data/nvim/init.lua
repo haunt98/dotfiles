@@ -116,8 +116,6 @@ require("lazy").setup({
 				options = {
 					icons_enabled = false,
 					theme = "auto",
-					-- theme = "iceberg",
-					-- theme = "catppuccin",
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "", right = "" },
 				},
@@ -263,6 +261,10 @@ require("lazy").setup({
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
+				transparent_background = true,
+				integrations = {
+					mini = true,
+				},
 			})
 		end,
 	},
