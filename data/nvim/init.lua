@@ -259,6 +259,7 @@ require("lazy").setup({
 			lspconfig = require("lspconfig")
 			util = require("lspconfig/util")
 
+			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
@@ -271,8 +272,17 @@ require("lazy").setup({
 				},
 			})
 
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				pattern = "*.go",
+				callback = function()
+					vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+				end,
+			})
+
+			-- Proto
 			lspconfig.bufls.setup({})
 
+			-- General keymap
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
@@ -302,4 +312,4 @@ require("lazy").setup({
 	"github/copilot.vim",
 })
 
-vim.api.nvim_command("colorscheme minicyan")
+vim.api.nvim_command("colorscheme minischeme")
