@@ -93,6 +93,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- Colorscheme
+	-- https://github.com/folke/tokyonight.nvim
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.api.nvim_command("colorscheme tokyonight")
+		end,
+	},
+
 	-- https://github.com/junegunn/fzf.vim
 	"junegunn/fzf",
 	"junegunn/fzf.vim",
@@ -311,5 +322,3 @@ require("lazy").setup({
 	-- https://github.com/github/copilot.vim
 	"github/copilot.vim",
 })
-
-vim.api.nvim_command("colorscheme minischeme")
