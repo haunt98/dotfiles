@@ -286,9 +286,6 @@ require("lazy").setup({
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 			lspconfig.gopls.setup({
-				cmd = { "gopls", "serve" },
-				filetypes = { "go", "gomod" },
-				root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 				settings = {
 					gopls = {
 						gofumpt = true,
