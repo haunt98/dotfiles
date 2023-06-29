@@ -48,13 +48,6 @@ vim.keymap.set("n", "<leader>cm", ":FZFCommands<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
-vim.keymap.set("n", "<F2>", ":GoRename<CR>")
-vim.keymap.set("n", "<leader>gf", ":GoFillStruct<CR>:w<CR>")
-vim.keymap.set("n", "<leader>gat", ":GoAlternate<CR>")
-vim.keymap.set("n", "<leader>gt", ":GoTest<CR>")
-vim.keymap.set("n", "<leader>gr", ":GoReferrers<CR>")
-vim.keymap.set("n", "<leader>gcv", ":GoCoverage<CR>")
-vim.keymap.set("n", "<leader>gdd", ":GoDeclsDir<CR>")
 
 -- Use plugin fzf.vim
 vim.g.fzf_command_prefix = "FZF"
@@ -67,10 +60,6 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.neoformat_basic_format_trim = 1
 vim.g.neoformat_enabled_go = { "gofumpt" }
 vim.g.shfmt_opt = "-ci"
-
--- Use plugin vim-go
-vim.g.go_gopls_gofumpt = 1
-vim.g.go_doc_popup_window = 1
 
 -- Use plugin copilot
 vim.g.copilot_filetypes = {
@@ -303,8 +292,52 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/fatih/vim-go
-	"fatih/vim-go",
+	-- https://github.com/neovim/nvim-lspconfig
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			lspconfig = require("lspconfig")
+			util = require("lspconfig/util")
+
+			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
+			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
+			lspconfig.gopls.setup({
+				cmd = { "gopls", "serve" },
+				filetypes = { "go", "gomod" },
+				root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+				settings = {
+					gopls = {
+						gofumpt = true,
+						semanticTokens = true,
+					},
+				},
+			})
+
+			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+
+			vim.api.nvim_create_autocmd("LspAttach", {
+				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+				callback = function(ev)
+					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+
+					local opts = { buffer = ev.buf }
+					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+					vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
+					vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
+					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+					vim.keymap.set("n", "<space>f", function()
+						vim.lsp.buf.format({ async = true })
+					end, opts)
+				end,
+			})
+		end,
+	},
 
 	-- https://github.com/github/copilot.vim
 	"github/copilot.vim",
