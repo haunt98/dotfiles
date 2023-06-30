@@ -93,14 +93,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- Colorscheme
-	-- https://github.com/loctvl842/monokai-pro.nvim
+	-- Colorschemes
+	-- https://github.com/catppuccin/nvim
 	{
-		"loctvl842/monokai-pro.nvim",
+		"catppuccin/nvim",
+		name = "catppuccin",
+		lazy = false,
+		priority = 1000,
 		config = function()
-			require("monokai-pro").setup()
+			require("catppuccin").setup({
+				flavour = "mocha",
+				integrations = {
+					mini = true,
+				},
+			})
 
-			vim.cmd("colorscheme monokai-pro")
+			vim.cmd("colorscheme catppuccin")
 		end,
 	},
 
