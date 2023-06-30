@@ -94,17 +94,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- Colorscheme
-	-- https://github.com/folke/tokyonight.nvim
+	-- https://github.com/loctvl842/monokai-pro.nvim
 	{
-		"projekt0n/github-nvim-theme",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		"loctvl842/monokai-pro.nvim",
 		config = function()
-			require("github-theme").setup({
-				-- ...
-			})
+			require("monokai-pro").setup()
 
-			vim.cmd("colorscheme github_dark_dimmed")
+			vim.cmd("colorscheme monokai-pro")
 		end,
 	},
 
