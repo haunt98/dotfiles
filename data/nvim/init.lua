@@ -291,17 +291,10 @@ require("lazy").setup({
 				},
 			})
 
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				pattern = "*.go",
-				callback = function()
-					vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
-				end,
-			})
-
 			-- Proto
 			lspconfig.bufls.setup({})
 
-			-- General keymap
+			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
@@ -318,6 +311,7 @@ require("lazy").setup({
 					vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
 					vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
+					vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
 					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 					vim.keymap.set("n", "<space>f", function()
 						vim.lsp.buf.format({ async = true })
