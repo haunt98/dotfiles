@@ -254,9 +254,6 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
-			require("mini.pairs").setup()
-
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
 
