@@ -48,6 +48,7 @@ vim.keymap.set("n", "<leader>cm", ":FZFCommands<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
+vim.keymap.set("n", "<leader>lr", ":LspRestart<CR>")
 
 -- Use plugin fzf.vim
 vim.g.fzf_command_prefix = "FZF"
