@@ -1,5 +1,91 @@
 # CHANGELOG
 
+## v0.13.4 (2023-07-01)
+
+### Added
+
+- feat: add lua language server (2023-07-01)
+
+- feat: back to SF mono and cat-pu-cin (2023-06-28)
+
+- feat: add gitui (2023-06-22)
+
+### Others
+
+- chore(nvim): gitsign ignore untrack (2023-07-01)
+
+- chore(nvim): add lua ls (2023-07-01)
+
+- scripts: add cargo, go (2023-07-01)
+
+- chore(nvim): tweak nvim-tree (2023-07-01)
+
+- chore(nvim): remove auto pairs (2023-07-01)
+
+- chore(nvim): use nvim-cmp (2023-07-01)
+
+- chore(nvim): add lsp code action (2023-07-01)
+
+- chore: I prefer darker (2023-06-30)
+
+- chore: font size 14 (2023-06-30)
+
+- chore(nvim): change color again (2023-06-30)
+
+- chore(nvim): change theme again (2023-06-30)
+
+- chore(nvim): color tokyonight (2023-06-30)
+
+- chore(nvim): import goo (2023-06-29)
+
+- chore(nvim): back to the basic (2023-06-29)
+
+- chore(nvim): add bufls (2023-06-29)
+
+- chore(nvim): remove default gopls setting (2023-06-29)
+
+- chore(nvim): cleanup color (2023-06-29)
+
+- chore(nvim): use nvim-lsp instead of vim-go (2023-06-29)
+
+- chore(nvim): transparent background (2023-06-29)
+
+- chore(nvim): reformat (2023-06-29)
+
+- chore: sync golangci-lint (2023-06-29)
+
+- chore(zed): SF mono (2023-06-29)
+
+- chore(nvim): update config (2023-06-24)
+
+- chore(nvim): switch lewis6991/gitsigns.nvim (2023-06-23)
+
+- chore(macports): add gitui (2023-06-23)
+
+- chore(zsh): add gu aka gitui alias (2023-06-22)
+
+- Revert "chore(zsh): auto start zellij" (2023-06-21)
+
+- chore(zsh): auto start zellij (2023-06-21)
+
+- chore(nvim): only use mini.nvim (2023-06-21)
+
+- chore(zellij): use prebuild theme instead (2023-06-21)
+
+- chore: add zed (2023-06-19)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.6 to 2.25.7 (2023-06-19)
+
+- chore(nvim): fix fzf (2023-06-19)
+
+- chore(zellij): embed themes inside config (2023-06-19)
+
+- chore: sync config upstream (2023-06-19)
+
+- chore(nvim): forse install treesiter (2023-06-17)
+
+- chore(changelog): generate v0.13.3 (2023-06-17)
+
 ## v0.13.3 (2023-06-17)
 
 ### Others
