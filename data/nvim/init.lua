@@ -207,6 +207,9 @@ require("lazy").setup({
 		"lewis6991/gitsigns.nvim",
 		config = function()
 			require("gitsigns").setup({
+				signs = {
+					untracked = { text = "" },
+				},
 				on_attach = function(bufnr)
 					local gs = package.loaded.gitsigns
 
