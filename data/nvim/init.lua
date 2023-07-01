@@ -302,13 +302,12 @@ require("lazy").setup({
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			lspconfig = require("lspconfig")
-			util = require("lspconfig/util")
+			local lspconfig = require("lspconfig")
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			lspconfig.gopls.setup({
 				settings = {
 					gopls = {
@@ -319,7 +318,31 @@ require("lazy").setup({
 			})
 
 			-- Proto
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bufls
 			lspconfig.bufls.setup({})
+
+			-- Lua
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
+			lspconfig.lua_ls.setup({
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+						diagnostics = {
+							globals = { "vim" },
+						},
+						format = {
+							-- Prefer Neoformat with stylua
+							enable = false,
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false,
+						},
+					},
+				},
+			})
 
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
