@@ -310,20 +310,13 @@ require("lazy").setup({
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
+			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			lspconfig.gopls.setup({
 				settings = {
-					-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 					gopls = {
 						gofumpt = true,
 						semanticTokens = true,
-						-- https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
-						analyses = {
-							fieldalignment = true,
-							nilness = true,
-							shadow = true,
-							useany = true,
-						},
 					},
 				},
 			})
@@ -379,13 +372,6 @@ require("lazy").setup({
 					end, opts)
 				end,
 			})
-
-			-- https://github.com/neovim/nvim-lspconfig/issues/127
-			vim.lsp.handlers["textDocument/publishDiagnostics"] =
-				vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-					-- delay update diagnostics
-					update_in_insert = false,
-				})
 		end,
 	},
 
