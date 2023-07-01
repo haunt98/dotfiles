@@ -142,6 +142,8 @@ require("lazy").setup({
 			require("nvim-tree").setup({
 				renderer = {
 					group_empty = true,
+					root_folder_label = false,
+					indent_width = 1,
 					icons = {
 						show = {
 							file = false,
@@ -154,10 +156,10 @@ require("lazy").setup({
 				},
 				filters = {
 					custom = {
-						"^\\.git$",
-						"^\\.DS_Store",
-						"\\.out",
-						"\\.class",
+						"^.git$",
+						"^.DS_Store",
+						".out",
+						".class",
 					},
 				},
 			})
