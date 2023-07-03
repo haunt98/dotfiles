@@ -93,11 +93,6 @@ if command -v nnn &>/dev/null; then
 	export NNN_PLUG="p:-preview-tui"
 fi
 
-# https://github.com/extrawurst/gitui
-if command -v gitui &>/dev/null; then
-	alias gu="gitui -t mocha.ron"
-fi
-
 # https://gitlab.com/phoneybadger/pokemon-colorscripts
 if command -v pokemon-colorscripts &>/dev/null; then
 	pokemon-colorscripts --no-title -r 1-8
