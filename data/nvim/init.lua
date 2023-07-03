@@ -39,6 +39,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Keymap
 vim.keymap.set("n", ";", "<leader>", { remap = true })
+vim.keymap.set("n", "'", "<leader>", { remap = true })
 vim.keymap.set("n", "q", ":q<CR>")
 
 -- Keymap for plugin
