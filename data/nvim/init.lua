@@ -283,9 +283,10 @@ require("lazy").setup({
 				ensure_installed = {
 					"go",
 					"json",
-					"yaml",
-					"toml",
 					"lua",
+					"toml",
+					"yaml",
+					"proto",
 				},
 			})
 		end,
