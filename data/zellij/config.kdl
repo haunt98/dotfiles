@@ -8,11 +8,11 @@ keybinds {
     normal {
         bind "Alt p" { SwitchFocus; }
         bind "Alt n" { NewPane; }
-        bind "Alt d" { NewPane "Down"; }
+        bind "Alt m" { NewPane "Down"; }
     }
     locked {
         bind "Alt p" { SwitchFocus; }
         bind "Alt n" { NewPane; }
-        bind "Alt d" { NewPane "Down"; }
+        bind "Alt m" { NewPane "Down"; }
     }
 }
