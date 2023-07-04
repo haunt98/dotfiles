@@ -43,16 +43,14 @@ vim.keymap.set("n", "'", "<leader>", { remap = true })
 vim.keymap.set("n", "q", ":q<CR>")
 
 -- Keymap for plugin
-vim.keymap.set("n", "<leader>f", ":FZF<CR>")
-vim.keymap.set("n", "<leader>rg", ":FZFRg<CR>")
-vim.keymap.set("n", "<leader>cm", ":FZFCommands<CR>")
+vim.keymap.set("n", "<leader>f", ":FzfLua files<CR>")
+vim.keymap.set("n", "<leader>rg", ":FzfLua live_grep_native<CR>")
+vim.keymap.set("n", "<leader>ds", ":FzfLua lsp_document_symbols<CR>")
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
+vim.keymap.set("n", "<leader>nf", ":Neoformat<CR>")
 vim.keymap.set("n", "<leader>lr", ":LspRestart<CR>")
-
--- Use plugin fzf.vim
-vim.g.fzf_command_prefix = "FZF"
 
 -- Use plugin nvim-tree.lua
 vim.g.loaded_netrw = 1
@@ -116,7 +114,15 @@ require("lazy").setup({
 
 	-- https://github.com/junegunn/fzf.vim
 	"junegunn/fzf",
-	"junegunn/fzf.vim",
+
+	-- https://github.com/ibhagwan/fzf-lua
+	{
+		"ibhagwan/fzf-lua",
+		dependencies = {
+			"junegunn/fzf",
+			"neovim/nvim-lspconfig",
+		},
+	},
 
 	-- https://github.com/nvim-lualine/lualine.nvim
 	{
@@ -176,10 +182,17 @@ require("lazy").setup({
 			"neovim/nvim-lspconfig",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-vsnip",
+			"hrsh7th/vim-vsnip",
 		},
 		config = function()
 			local cmp = require("cmp")
 			cmp.setup({
+				snippet = {
+					expand = function(args)
+						vim.fn["vsnip#anonymous"](args.body)
+					end,
+				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<CR>"] = cmp.mapping.confirm({
