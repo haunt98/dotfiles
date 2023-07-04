@@ -35,22 +35,13 @@ vim.opt.mouse = "a"
 
 -- Workaround
 -- https://github.com/neovim/neovim/issues/16416
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- https://github.com/rafamadriz/dotfiles/commit/1298a91558a7def5866ebee3a0b13899a6d1a78e
+vim.keymap.set("i", "<C-c>", "<C-c>")
 
 -- Keymap
-vim.keymap.set("n", ";", "<leader>", { remap = true })
-vim.keymap.set("n", "'", "<leader>", { remap = true })
+vim.keymap.set("n", ";", "<Leader>", { remap = true })
+vim.keymap.set("n", "'", "<Leader>", { remap = true })
 vim.keymap.set("n", "q", ":q<CR>")
-
--- Keymap for plugin
-vim.keymap.set("n", "<leader>f", ":FzfLua files<CR>")
-vim.keymap.set("n", "<leader>rg", ":FzfLua live_grep_native<CR>")
-vim.keymap.set("n", "<leader>ds", ":FzfLua lsp_document_symbols<CR>")
-vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>n", ":NvimTreeFindFile<CR>")
-vim.keymap.set("n", "<leader>tr", ":lua MiniTrailspace.trim()<CR>")
-vim.keymap.set("n", "<leader>nf", ":Neoformat<CR>")
-vim.keymap.set("n", "<leader>lr", ":LspRestart<CR>")
 
 -- Use plugin nvim-tree.lua
 vim.g.loaded_netrw = 1
@@ -122,6 +113,18 @@ require("lazy").setup({
 			"junegunn/fzf",
 			"neovim/nvim-lspconfig",
 		},
+		config = function()
+			local fzf_lua = require("fzf-lua")
+
+			fzf_lua.setup({ "max-perf" })
+
+			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
+			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_native<CR>")
+			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
+			vim.keymap.set({ "i" }, "<C-x><C-f>", function()
+				fzf_lua.complete_path()
+			end, { silent = true, desc = "Fuzzy complete path" })
+		end,
 	},
 
 	-- https://github.com/nvim-lualine/lualine.nvim
@@ -171,6 +174,9 @@ require("lazy").setup({
 					},
 				},
 			})
+
+			vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+			vim.keymap.set("n", "<Leader>n", ":NvimTreeFindFile<CR>")
 		end,
 	},
 
@@ -279,6 +285,8 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
 			require("mini.trailspace").setup()
+
+			vim.keymap.set("n", "<Leader>tr", ":lua MiniTrailspace.trim()<CR>")
 		end,
 	},
 
@@ -373,20 +381,18 @@ require("lazy").setup({
 					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 					local opts = { buffer = ev.buf }
-					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-					vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
-					vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+					vim.keymap.set("n", "<Space>gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
-					vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-					vim.keymap.set("n", "<space>f", function()
+					vim.keymap.set({ "n", "v" }, "<Space>ca", vim.lsp.buf.code_action, opts)
+					vim.keymap.set("n", "<Space>gr", vim.lsp.buf.references, opts)
+					vim.keymap.set("n", "<Space>f", function()
 						vim.lsp.buf.format({ async = true })
 					end, opts)
 				end,
 			})
+
+			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 		end,
 	},
 
