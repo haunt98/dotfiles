@@ -52,23 +52,6 @@ vim.g.neoformat_basic_format_trim = 1
 vim.g.neoformat_enabled_go = { "gofumpt" }
 vim.g.shfmt_opt = "-ci"
 
--- Use plugin copilot
-vim.g.copilot_filetypes = {
-	["*"] = false,
-	c = true,
-	cpp = true,
-	go = true,
-	java = true,
-	json = true,
-	lua = true,
-	make = true,
-	markdown = true,
-	proto = true,
-	python = true,
-	toml = true,
-	yaml = true,
-}
-
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -209,6 +192,15 @@ require("lazy").setup({
 					{ name = "buffer" },
 				}),
 			})
+
+			-- Support copilot
+			cmp.event:on("menu_opened", function()
+				vim.b.copilot_suggestion_hidden = true
+			end)
+
+			cmp.event:on("menu_closed", function()
+				vim.b.copilot_suggestion_hidden = false
+			end)
 		end,
 	},
 
@@ -393,6 +385,31 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/github/copilot.vim
-	"github/copilot.vim",
+	-- https://github.com/zbirenbaum/copilot.lua
+	{
+		"zbirenbaum/copilot.lua",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				suggestion = {
+					auto_trigger = true,
+				},
+				filetypes = {
+					["."] = false,
+					c = true,
+					cpp = true,
+					go = true,
+					java = true,
+					json = true,
+					lua = true,
+					make = true,
+					markdown = true,
+					proto = true,
+					python = true,
+					toml = true,
+					yaml = true,
+				},
+			})
+		end,
+	},
 })
