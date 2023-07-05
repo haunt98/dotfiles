@@ -391,6 +391,9 @@ require("lazy").setup({
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
+				panel = {
+					enabled = false,
+				},
 				suggestion = {
 					auto_trigger = true,
 				},
