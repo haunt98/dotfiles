@@ -13,6 +13,7 @@ vim.opt.smartcase = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 4
+vim.opt.signcolumn = "number"
 
 -- Tab
 vim.opt.tabstop = 4
@@ -170,6 +171,7 @@ require("lazy").setup({
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-vsnip",
 			"hrsh7th/vim-vsnip",
+			"zbirenbaum/copilot-cmp",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -188,19 +190,22 @@ require("lazy").setup({
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
+					{ name = "copilot" },
 				}, {
 					{ name = "buffer" },
 				}),
 			})
+		end,
+	},
 
-			-- Support copilot
-			cmp.event:on("menu_opened", function()
-				vim.b.copilot_suggestion_hidden = true
-			end)
-
-			cmp.event:on("menu_closed", function()
-				vim.b.copilot_suggestion_hidden = false
-			end)
+	-- https://github.com/zbirenbaum/copilot-cmp
+	{
+		"zbirenbaum/copilot-cmp",
+		dependencies = {
+			"zbirenbaum/copilot.lua",
+		},
+		config = function()
+			require("copilot_cmp").setup()
 		end,
 	},
 
@@ -395,7 +400,7 @@ require("lazy").setup({
 					enabled = false,
 				},
 				suggestion = {
-					auto_trigger = true,
+					enabled = false,
 				},
 				filetypes = {
 					["."] = false,
