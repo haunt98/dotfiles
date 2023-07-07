@@ -52,6 +52,8 @@ vim.keymap.set("n", "'", "<Leader>", { remap = true })
 -- Keymap
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("n", "q", ":q<CR>")
 
 -- Use plugin nvim-tree.lua
