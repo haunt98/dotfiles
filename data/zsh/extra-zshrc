@@ -21,7 +21,7 @@ setopt HIST_SAVE_NO_DUPS
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-# omz
+# https://github.com/ohmyzsh/ohmyzsh
 zstyle ':omz:update' mode disabled
 # https://github.com/ohmyzsh/ohmyzsh/issues/5700
 DISABLE_AUTO_TITLE="true"
@@ -29,6 +29,9 @@ DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 # https://github.com/ohmyzsh/ohmyzsh/issues/5569
 DISABLE_MAGIC_FUNCTIONS="true"
+
+# https://github.com/romkatv/powerlevel10k
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # nvim
 if command -v nvim &>/dev/null; then
@@ -97,3 +100,4 @@ fi
 if command -v pokemon-colorscripts &>/dev/null; then
 	pokemon-colorscripts --no-title -r 1-8
 fi
+
