@@ -39,9 +39,13 @@ vim.opt.mouse = "a"
 -- https://github.com/rafamadriz/dotfiles/commit/1298a91558a7def5866ebee3a0b13899a6d1a78e
 vim.keymap.set("i", "<C-c>", "<C-c>")
 
--- Keymap
+-- Leader
 vim.keymap.set("n", ";", "<Leader>", { remap = true })
 vim.keymap.set("n", "'", "<Leader>", { remap = true })
+
+-- Keymap
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "q", ":q<CR>")
 
 -- Use plugin nvim-tree.lua
