@@ -39,6 +39,12 @@ vim.opt.mouse = "a"
 -- https://github.com/rafamadriz/dotfiles/commit/1298a91558a7def5866ebee3a0b13899a6d1a78e
 vim.keymap.set("i", "<C-c>", "<C-c>")
 
+-- Typo
+vim.cmd("command W w")
+vim.cmd("command Q q")
+vim.cmd("command WQ wq")
+vim.cmd("command Wq wq")
+
 -- Leader
 vim.keymap.set("n", ";", "<Leader>", { remap = true })
 vim.keymap.set("n", "'", "<Leader>", { remap = true })
