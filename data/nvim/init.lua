@@ -269,6 +269,25 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/tpope/vim-projectionist
+	{
+		"tpope/vim-projectionist",
+		init = function()
+			vim.g.projectionist_heuristics = {
+				["*.go"] = {
+					["*.go"] = {
+						alternate = "{}_test.go",
+						type = "source",
+					},
+					["*_test.go"] = {
+						alternate = "{}.go",
+						type = "test",
+					},
+				},
+			}
+		end,
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
