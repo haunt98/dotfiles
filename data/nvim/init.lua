@@ -56,15 +56,6 @@ vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("n", "q", ":q<CR>")
 
--- Use plugin nvim-tree.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- Use plugin neoformat
-vim.g.neoformat_basic_format_trim = 1
-vim.g.neoformat_enabled_go = { "gofumpt" }
-vim.g.shfmt_opt = "-ci"
-
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -140,6 +131,10 @@ require("lazy").setup({
 	-- https://github.com/nvim-tree/nvim-tree.lua
 	{
 		"nvim-tree/nvim-tree.lua",
+		init = function()
+			vim.g.loaded_netrw = 1
+			vim.g.loaded_netrwPlugin = 1
+		end,
 		config = function()
 			require("nvim-tree").setup({
 				renderer = {
@@ -315,7 +310,14 @@ require("lazy").setup({
 
 	-- Programming languages
 	-- https://github.com/sbdchd/neoformat
-	"sbdchd/neoformat",
+	{
+		"sbdchd/neoformat",
+		init = function()
+			vim.g.neoformat_basic_format_trim = 1
+			vim.g.neoformat_enabled_go = { "gofumpt" }
+			vim.g.shfmt_opt = "-ci"
+		end,
+	},
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter
 	{
