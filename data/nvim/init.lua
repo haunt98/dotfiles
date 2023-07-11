@@ -188,10 +188,7 @@ require("lazy").setup({
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm({
-						behavior = cmp.ConfirmBehavior.Replace,
-						select = true,
-					}),
+					["<CR>"] = cmp.mapping.confirm(),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
