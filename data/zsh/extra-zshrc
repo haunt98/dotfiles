@@ -100,4 +100,3 @@ fi
 if command -v pokemon-colorscripts &>/dev/null; then
 	pokemon-colorscripts --no-title -r 1-8
 fi
-
