@@ -181,6 +181,9 @@ require("lazy").setup({
 		config = function()
 			local cmp = require("cmp")
 			cmp.setup({
+				performance = {
+					max_view_entries = 8,
+				},
 				snippet = {
 					expand = function(args)
 						vim.fn["vsnip#anonymous"](args.body)
