@@ -227,6 +227,11 @@ require("lazy").setup({
 				signs = {
 					untracked = { text = "" },
 				},
+				current_line_blame = true,
+				current_line_blame_opts = {
+					delay = 1200,
+					ignore_whitespace = true,
+				},
 				on_attach = function(bufnr)
 					local gs = package.loaded.gitsigns
 
