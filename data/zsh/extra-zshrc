@@ -1,4 +1,4 @@
-# Put this in ~/.zshrc
+# Put this on top of ~/.zshrc
 # source ~/.config/zsh/extra-zshrc
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
