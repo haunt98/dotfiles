@@ -393,6 +393,9 @@ require("lazy").setup({
 				settings = {
 					gopls = {
 						gofumpt = true,
+						codelenses = {
+							gc_details = true,
+						},
 						semanticTokens = true,
 					},
 				},
