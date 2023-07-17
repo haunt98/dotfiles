@@ -1,6 +1,10 @@
 [[apps.zsh.paths]]
-internal = "data/zsh/extra-zshrc"
-external = "~/.config/zsh/extra-zshrc"
+internal = "data/zsh/top-zshrc"
+external = "~/.config/zsh/top-zshrc"
+
+[[apps.zsh.paths]]
+internal = "data/zsh/bottom-zshrc"
+external = "~/.config/zsh/bottom-zshrc"
 
 [[apps.nvim.paths]]
 internal = "data/nvim/init.lua"

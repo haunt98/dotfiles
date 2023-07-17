@@ -1,0 +1,9 @@
+# Put this on top of ~/.zshrc
+# source ~/.config/zsh/top-zshrc
+
+# https://github.com/ohmyzsh/ohmyzsh/issues/5700
+DISABLE_AUTO_TITLE="true"
+# https://github.com/ohmyzsh/ohmyzsh/issues/10291
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+# https://github.com/ohmyzsh/ohmyzsh/issues/5569
+DISABLE_MAGIC_FUNCTIONS="true"

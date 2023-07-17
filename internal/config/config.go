@@ -49,11 +49,15 @@ func LoadConfig(path string) (*ConfigReal, *ConfigDemo, error) {
 	cfgReal, cfgDemo, err := loadConfigJSON(path)
 	if err == nil {
 		return cfgReal, cfgDemo, nil
+	} else if os.IsNotExist(err) {
+		return nil, nil, err
 	}
 
 	cfgReal, cfgDemo, err = loadConfigTOML(path)
 	if err == nil {
 		return cfgReal, cfgDemo, nil
+	} else if os.IsNotExist(err) {
+		return nil, nil, err
 	}
 
 	return nil, nil, ErrConfigNotFound

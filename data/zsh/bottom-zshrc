@@ -1,5 +1,5 @@
-# Put this on top of ~/.zshrc
-# source ~/.config/zsh/extra-zshrc
+# Put this on bottom of ~/.zshrc
+# source ~/.config/zsh/bottom-zshrc
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
 export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit|builtin)"
@@ -23,12 +23,6 @@ bindkey "^[[1;3D" backward-word
 
 # https://github.com/ohmyzsh/ohmyzsh
 zstyle ':omz:update' mode disabled
-# https://github.com/ohmyzsh/ohmyzsh/issues/5700
-DISABLE_AUTO_TITLE="true"
-# https://github.com/ohmyzsh/ohmyzsh/issues/10291
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-# https://github.com/ohmyzsh/ohmyzsh/issues/5569
-DISABLE_MAGIC_FUNCTIONS="true"
 
 # https://github.com/romkatv/powerlevel10k
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
