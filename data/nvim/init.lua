@@ -190,27 +190,7 @@ require("lazy").setup({
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = function(fallback)
-						if cmp.visible() then
-							cmp.confirm()
-						else
-							fallback()
-						end
-					end,
-					["<Tab>"] = function(fallback)
-						if cmp.visible() then
-							cmp.select_next_item()
-						else
-							fallback()
-						end
-					end,
-					["<S-Tab>"] = function(fallback)
-						if cmp.visible() then
-							cmp.select_prev_item()
-						else
-							fallback()
-						end
-					end,
+					["<CR>"] = cmp.mapping.confirm(),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
@@ -317,7 +297,9 @@ require("lazy").setup({
 			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
-			require("mini.comment").setup()
+			require("mini.comment").setup({
+				ignore_blank_line = true,
+			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
