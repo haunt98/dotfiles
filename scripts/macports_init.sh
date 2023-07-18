@@ -2,6 +2,6 @@
 
 port install \
 	git neovim \
-	fd bat ripgrep difftastic git-delta exa zellij fdupes rclone restic tealdeer task gdu duf glow \
+	fd bat ripgrep difftastic git-delta exa zellij fdupes rclone restic tealdeer task \
 	nnn imagemagick ffmpegthumbnailer asciinema agg android-platform-tools scrcpy libjxl yt-dlp \
-	lua-language-server yq jq
+	pipx lua-language-server
