@@ -298,7 +298,9 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
 			require("mini.comment").setup({
-				ignore_blank_line = true,
+				options = {
+					ignore_blank_line = true,
+				},
 			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
