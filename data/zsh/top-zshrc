@@ -7,3 +7,8 @@ DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 # https://github.com/ohmyzsh/ohmyzsh/issues/5569
 DISABLE_MAGIC_FUNCTIONS="true"
+
+# https://zellij.dev/documentation/integration.html
+if command -v zellij &>/dev/null; then
+    eval "$(zellij setup --generate-auto-start zsh)"
+fi
