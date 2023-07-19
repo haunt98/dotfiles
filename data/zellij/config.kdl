@@ -4,6 +4,12 @@ default_mode "locked"
 on_force_close "quit"
 simplified_ui true
 
+ui {
+    pane_frames {
+        hide_session_name true
+    }
+}
+
 keybinds {
     normal {
         bind "Alt p" { SwitchFocus; }
