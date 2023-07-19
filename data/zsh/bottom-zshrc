@@ -62,8 +62,3 @@ if command -v nnn &>/dev/null; then
 	export NNN_FIFO=/tmp/nnn.fifo
 	export NNN_PLUG="p:-preview-tui"
 fi
-
-# https://gitlab.com/phoneybadger/pokemon-colorscripts
-if command -v pokemon-colorscripts &>/dev/null; then
-	pokemon-colorscripts --no-title -r 1-8
-fi
