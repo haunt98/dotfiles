@@ -1,31 +1,4 @@
 # Put this on bottom of ~/.zshrc
-# source ~/.config/zsh/bottom-zshrc
-
-# https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
-export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit|builtin)"
-export HISTSIZE=100000000
-export SAVEHIST=$HISTSIZE
-
-# https://zsh.sourceforge.io/Doc/Release/Options.html
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_NO_FUNCTIONS
-setopt HIST_NO_STORE
-setopt HIST_REDUCE_BLANKS
-setopt HIST_SAVE_NO_DUPS
-
-# https://stackoverflow.com/q/12382499
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
-# https://github.com/ohmyzsh/ohmyzsh
-zstyle ':omz:update' mode disabled
-
-# https://github.com/romkatv/powerlevel10k
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # nvim
 if command -v nvim &>/dev/null; then
