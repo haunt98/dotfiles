@@ -27,5 +27,9 @@ venv
 # Wild chaos
 *.out
 
+# Software
+zig
+qmk_firmware
+
 # Personal
 Homework
