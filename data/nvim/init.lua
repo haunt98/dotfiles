@@ -282,6 +282,11 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/tpope/vim-fugitive
+	{
+		"tpope/vim-fugitive",
+	},
+
 	-- https://github.com/tpope/vim-projectionist
 	{
 		"tpope/vim-projectionist",
