@@ -153,10 +153,10 @@ require("lazy").setup({
 				},
 				filters = {
 					custom = {
-						"^.git$",
-						"^.DS_Store",
-						".out",
-						".class",
+						"^\\.git$",
+						"^\\.DS_Store",
+						"\\.out$",
+						"\\.class$",
 					},
 				},
 			})
