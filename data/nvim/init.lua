@@ -44,6 +44,7 @@ vim.cmd("command W w")
 vim.cmd("command Q q")
 vim.cmd("command WQ wq")
 vim.cmd("command Wq wq")
+vim.cmd("command Qa qa")
 
 -- Leader
 vim.keymap.set("n", ";", "<Leader>", { remap = true })
