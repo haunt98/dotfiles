@@ -349,7 +349,7 @@ require("lazy").setup({
 			local augroup = vim.api.nvim_create_augroup("UserNeoformatConfig", {})
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				group = augroup,
-				pattern = { "*.lua", ".md" },
+				pattern = { "*.lua", "*.md" },
 				command = "Neoformat",
 			})
 		end,
