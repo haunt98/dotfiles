@@ -11,13 +11,11 @@ ui {
 }
 
 keybinds {
-    normal {
+    shared {
         bind "Alt p" { SwitchFocus; }
-        bind "Alt n" { NewPane; }
-        bind "Alt m" { NewPane "Down"; }
-    }
-    locked {
-        bind "Alt p" { SwitchFocus; }
+        bind "Alt o" { NewTab; }
+        bind "Alt ]" { GoToNextTab; }
+        bind "Alt [" { GoToPreviousTab; }
         bind "Alt n" { NewPane; }
         bind "Alt m" { NewPane "Down"; }
     }
