@@ -391,6 +391,28 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-context",
+		},
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				textobjects = {
+					select = {
+						enable = true,
+						lookahead = true,
+						keymaps = {
+							["af"] = "@function.outer",
+							["if"] = "@function.inner",
+						},
+					},
+				},
+			})
+		end,
+	},
+
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
