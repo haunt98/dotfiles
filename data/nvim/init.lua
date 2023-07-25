@@ -345,6 +345,14 @@ require("lazy").setup({
 			vim.g.neoformat_enabled_go = { "gofumpt" }
 			vim.g.shfmt_opt = "-ci"
 		end,
+		config = function()
+			local augroup = vim.api.nvim_create_augroup("UserNeoformatConfig", {})
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				pattern = { "*.lua", ".md" },
+				command = "Neoformat",
+			})
+		end,
 	},
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter
@@ -435,9 +443,11 @@ require("lazy").setup({
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 
+			local augroup = vim.api.nvim_create_augroup("UserLspConfig", {})
 			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+				group = augroup,
 				callback = function(ev)
 					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
@@ -453,7 +463,17 @@ require("lazy").setup({
 				end,
 			})
 
-			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
+			-- Custom
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				pattern = "*.go",
+				callback = function()
+					-- Format without async then code action
+					-- https://github.com/neovim/neovim/issues/24168
+					vim.lsp.buf.format()
+					vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+				end,
+			})
 		end,
 	},
 
