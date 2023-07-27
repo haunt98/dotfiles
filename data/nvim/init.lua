@@ -193,6 +193,9 @@ require("lazy").setup({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<CR>"] = cmp.mapping.confirm(),
 				}),
+				completion = {
+					autocomplete = false,
+				},
 				sorting = {
 					comparators = {
 						require("copilot_cmp.comparators").prioritize,
