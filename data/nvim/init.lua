@@ -488,11 +488,12 @@ require("lazy").setup({
 					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 					local opts = { buffer = ev.buf }
-					vim.keymap.set("n", "<Space>gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "<Space>d", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 					vim.keymap.set({ "n", "v" }, "<Space>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "<Space>gr", vim.lsp.buf.references, opts)
+					vim.keymap.set("n", "<Space>r", vim.lsp.buf.references, opts)
+					vim.keymap.set("n", "<Space>i", vim.lsp.buf.implementation, opts)
 					vim.keymap.set("n", "<Space>f", function()
 						vim.lsp.buf.format({ async = true })
 					end, opts)
