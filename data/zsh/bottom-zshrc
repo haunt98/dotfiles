@@ -37,15 +37,8 @@ alias g="git"
 alias moe="make"
 alias meo="make"
 
-# https://zellij.dev/documentation/faq.html
-if command -v zellij &>/dev/null; then
-	alias zz="zellij"
-fi
-
-# https://sw.kovidgoyal.net/kitty/faq/
-if command -v kitty &>/dev/null; then
-	alias kssh="kitty +kitten ssh"
-fi
+# https://github.com/charmbracelet/glow
+alias gl="glow"
 
 # https://restic.readthedocs.io/en/latest/manual_rest.html
 if command -v restic &>/dev/null; then
