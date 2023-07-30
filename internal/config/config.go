@@ -4,10 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"net/http"
 	"os"
 	"path/filepath"
-	"time"
 
 	"github.com/BurntSushi/toml"
 )
@@ -77,9 +75,6 @@ func loadConfigJSON(path string) (*ConfigReal, *ConfigDemo, error) {
 	}
 
 	cfgReal := ConfigReal{
-		httpClient: &http.Client{
-			Timeout: time.Second * 5,
-		},
 		ConfigApps: cfgApps,
 	}
 
@@ -104,9 +99,6 @@ func loadConfigTOML(path string) (*ConfigReal, *ConfigDemo, error) {
 	}
 
 	cfgReal := ConfigReal{
-		httpClient: &http.Client{
-			Timeout: time.Second * 5,
-		},
 		ConfigApps: cfgApps,
 	}
 

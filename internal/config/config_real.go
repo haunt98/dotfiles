@@ -17,7 +17,6 @@ import (
 var ErrConfigInvalid = errors.New("config invalid")
 
 type ConfigReal struct {
-	httpClient *http.Client
 	ConfigApps
 }
 
@@ -105,8 +104,8 @@ func (c *ConfigReal) Download() error {
 			}
 
 			eg.Go(func() error {
-				// nolint:noctx
-				httpRsp, err := c.httpClient.Get(p.URL)
+				// nolint:noctx,gosec
+				httpRsp, err := http.Get(p.URL)
 				if err != nil {
 					return fmt.Errorf("http client: failed to get: %w", err)
 				}
