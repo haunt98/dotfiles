@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+go install github.com/ayoisaiah/f2/cmd/f2@latest
 go install github.com/dundee/gdu/v5/cmd/gdu@latest
 go install github.com/muesli/duf@latest
 go install github.com/charmbracelet/glow@latest
