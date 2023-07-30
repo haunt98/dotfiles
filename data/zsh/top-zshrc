@@ -23,8 +23,6 @@ bindkey "^[[1;3D" backward-word
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#omzupdate-mode
 zstyle ':omz:update' mode disabled
 
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#case_sensitive
-CASE_SENSITIVE="true"
 # https://github.com/ohmyzsh/ohmyzsh/issues/5569
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_magic_functions
 DISABLE_MAGIC_FUNCTIONS="true"
