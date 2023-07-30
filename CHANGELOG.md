@@ -1,5 +1,133 @@
 # CHANGELOG
 
+## v0.13.5 (2023-07-30)
+
+### Added
+
+- feat: use default http client (2023-07-30)
+
+### Others
+
+- chore(zsh): remove unused alias (2023-07-30)
+
+- chore(nvim): more lspconfig (2023-07-28)
+
+- chore(nvim): disable nvim-cmp autocomplete (2023-07-27)
+
+- chore(zsh): ignore builtin (2023-07-27)
+
+- chore(nvim): text obj class (2023-07-26)
+
+- chore(nvim): use treesitter textobj (2023-07-26)
+
+- chore(nvim): fix neoformat md (2023-07-25)
+
+- chore(zellij): more keymap (2023-07-25)
+
+- chore(nvim): auto format when save (2023-07-25)
+
+- chore(nvim): fix ignore nvim-tree (2023-07-23)
+
+- chore(nvim): fix typo Qa (2023-07-23)
+
+- chore(nvim): readd vim pope (2023-07-21)
+
+- chore(zellij): hide session name (wip) (2023-07-20)
+
+- chore: remove pokemon (2023-07-20)
+
+- chore(zsh): improve omz (2023-07-20)
+
+- chore(zellij): auto exit shell if exit zellij (2023-07-19)
+
+- chore(zsh): auto start zellij (2023-07-19)
+
+- chore(nvim): better sort nvim-cmp (2023-07-19)
+
+- chore: add plantuml (2023-07-19)
+
+- chore: ignore zig, qmk firmware (2023-07-19)
+
+- chore(scripts): move to go install as much as possible (2023-07-19)
+
+- chore(nvim): fix blank line (2023-07-18)
+
+- chore(nvim): remove tab complete, ignore comment blank line (2023-07-18)
+
+- chore(nvim): config gopls (2023-07-17)
+
+- build(deps): bump github.com/make-go-great/color-go from 0.4.1 to 0.5.0 (2023-07-17)
+
+- chore(zsh): split zsh to top/bottom (2023-07-17)
+
+- chore: explain zsh better (2023-07-16)
+
+- chore(macports): more useful (2023-07-16)
+
+- chore(nvim): learn vim macro (2023-07-15)
+
+- chore(nvim): use tab, s-tab to cmp (2023-07-13)
+
+- chore(nvim): performance nvim-cmp (wip) (2023-07-13)
+
+- chore(nvim): git blame current line (2023-07-13)
+
+- chore(nvim): add folding (2023-07-13)
+
+- chore: format (2023-07-12)
+
+- chore(nvim): disable auto complete (2023-07-11)
+
+- chore(kitty): use background blur (2023-07-10)
+
+- chore(nvim): use lazy init (2023-07-08)
+
+- chore(nvim): add projectionist (2023-07-08)
+
+- chore: add powerlevel10k (2023-07-08)
+
+- chore(kitty): enable window padding (2023-07-08)
+
+- chore(nvim): cleanup fzf-lua (2023-07-07)
+
+- chore(nvim): center after {} (2023-07-07)
+
+- chore(nvim): add typo command (2023-07-07)
+
+- chore(nvim): zz to quickly center (2023-07-07)
+
+- chore(nvim): use better copilot (2023-07-06)
+
+- chore(zsh): ignore builtin (2023-07-06)
+
+- chore(wezterm): change cursor style (2023-07-06)
+
+- chore(nvim): disable panel (2023-07-05)
+
+- chore(nvim): switch to copilot.lua (2023-07-05)
+
+- chore: i don't use this nvim map (2023-07-05)
+
+- chore(nvim): unify keymap (2023-07-04)
+
+- chore(zellij): mess up alt d (2023-07-04)
+
+- chore(nvim): use fzf lua (2023-07-04)
+
+- chore: remove zed, gitui (2023-07-03)
+
+- chore(nvim): ' as leader key (2023-07-03)
+
+- chore(nvim): ensure proto TS (2023-07-03)
+
+- Revert "chore(nvim): deplay lsp diagnostic in insert mode" (2023-07-01)
+
+- chore(nvim): deplay lsp diagnostic in insert mode (2023-07-01)
+
+- chore(nvim): add LspRestart (2023-07-01)
+
+- chore(changelog): generate v0.13.4 (2023-07-01)
+
 ## v0.13.4 (2023-07-01)
 
 ### Added
