@@ -28,8 +28,3 @@ git config --global pull.rebase true
 git config --global pull.twohead ort
 git config --global push.autoSetupRemote true
 git config --global rebase.stat true
-
-# https://github.com/dandavison/delta
-git config --global core.pager delta
-git config --global interactive.diffFilter "delta --color-only"
-git config --global delta.navigate true
