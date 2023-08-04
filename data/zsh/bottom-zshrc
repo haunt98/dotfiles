@@ -40,6 +40,14 @@ alias meo="make"
 # https://github.com/charmbracelet/glow
 alias gl="glow"
 
+# https://github.com/sharkdp/bat
+if [[ $(uname) == "Darwin" ]]; then
+    alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo Catppuccin-mocha || echo Catppuccin-latte)"
+else
+    # TODO: Support dark mode for more OS
+    alias bat="bat --theme=Catppuccin-mocha"
+fi
+
 # https://restic.readthedocs.io/en/latest/manual_rest.html
 if command -v restic &>/dev/null; then
 	export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
