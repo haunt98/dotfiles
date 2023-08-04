@@ -36,9 +36,3 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
-
-# https://zellij.dev/documentation/integration.html
-if command -v zellij &>/dev/null; then
-    ZELLIJ_AUTO_EXIT="true"
-    eval "$(zellij setup --generate-auto-start zsh)"
-fi

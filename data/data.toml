@@ -50,6 +50,10 @@ url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tm
 internal = "data/fd/.ignore"
 external = "~/.ignore"
 
+[[apps.tmux.paths]]
+internal = "data/tmux"
+external = "~/.config/tmux"
+
 [[apps.zellij.paths]]
 internal = "data/zellij"
 external = "~/.config/zellij"
