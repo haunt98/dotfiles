@@ -41,11 +41,12 @@ alias meo="make"
 alias gl="glow"
 
 # https://github.com/sharkdp/bat
-if [[ $(uname) == "Darwin" ]]; then
-    alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo Catppuccin-mocha || echo Catppuccin-latte)"
-else
-    # TODO: Support dark mode for more OS
-    alias bat="bat --theme=Catppuccin-mocha"
+if command -v bat &>/dev/null; then
+    if [[ $(uname) == "Darwin" ]]; then
+        alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo Catppuccin-mocha || echo Catppuccin-latte)"
+    else
+        alias bat="bat --theme=Catppuccin-mocha"
+    fi
 fi
 
 # https://restic.readthedocs.io/en/latest/manual_rest.html
@@ -55,7 +56,11 @@ fi
 
 # https://github.com/sharkdp/vivid
 if command -v vivid &>/dev/null; then
-	export LS_COLORS="$(vivid generate catppuccin-mocha)"
+    if [[ $(uname) == "Darwin" ]]; then
+	    export LS_COLORS="$(vivid generate $(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo catppuccin-mocha || echo catppuccin-latte))"
+    else
+	    export LS_COLORS="$(vivid generate catppuccin-mocha)"
+    fi
 fi
 
 # https://github.com/jarun/nnn
