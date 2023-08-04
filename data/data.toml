@@ -46,6 +46,10 @@ external = "~/.config/bat"
 internal = "data/bat/themes/Catppuccin-mocha.tmTheme"
 url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme"
 
+[[apps.bat.paths]]
+internal = "data/bat/themes/Catppuccin-latte.tmTheme"
+url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-latte.tmTheme"
+
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
 external = "~/.ignore"
