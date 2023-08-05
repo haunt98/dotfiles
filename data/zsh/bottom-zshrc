@@ -27,7 +27,7 @@ if command -v fzf &>/dev/null; then
     fi
 
     # https://github.com/catppuccin/fzf
-    if [[ $(uname) == "Darwin" ]]; then
+    if [[ $(uname) == "Darwin" ]] && [[ ${TERM_PROGRAM} == "WezTerm" ]]; then
         if defaults read -globalDomain AppleInterfaceStyle &>/dev/null; then
             export FZF_DEFAULT_OPTS=" \
             --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -64,7 +64,7 @@ fi
 
 # https://github.com/sharkdp/vivid
 if command -v vivid &>/dev/null; then
-    if [[ $(uname) == "Darwin" ]]; then
+    if [[ $(uname) == "Darwin" ]] && [[ ${TERM_PROGRAM} == "WezTerm" ]]; then
         if defaults read -globalDomain AppleInterfaceStyle &>/dev/null; then
             export LS_COLORS="$(vivid generate catppuccin-mocha)"
         else
