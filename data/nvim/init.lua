@@ -98,8 +98,13 @@ require("lazy").setup({
 					vim.cmd("colorscheme catppuccin-mocha")
 				end,
 				set_light_mode = function()
-					vim.api.nvim_set_option("background", "light")
-					vim.cmd("colorscheme catppuccin-latte")
+					if vim.env.TERM_PROGRAM == "WezTerm" then
+						vim.api.nvim_set_option("background", "light")
+						vim.cmd("colorscheme catppuccin-latte")
+					else
+						vim.api.nvim_set_option("background", "dark")
+						vim.cmd("colorscheme catppuccin-mocha")
+					end
 				end,
 			})
 		end,
