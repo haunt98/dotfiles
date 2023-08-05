@@ -1,12 +1,13 @@
+# vim: set filetype=zsh:
 # Put this on bottom of ~/.zshrc
 
 # nvim
 if command -v nvim &>/dev/null; then
-	export EDITOR=nvim
-	export VISUAL=nvim
-	export GIT_EDITOR=nvim
-	alias vi="nvim"
-	alias vim="nvim"
+    export EDITOR=nvim
+    export VISUAL=nvim
+    export GIT_EDITOR=nvim
+    alias vi="nvim"
+    alias vim="nvim"
 fi
 
 # go
@@ -14,22 +15,36 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # Depend on your company
 # Please copy this manually to ~/.zshrc
-export GOPRIVATE=github.com/make-go-great,github.com/haunt98
+# export GOPRIVATE=example.company.com
 
 # fzf
 # https://github.com/junegunn/fzf#environment-variables
 if command -v fzf &>/dev/null; then
-	if command -v fd &>/dev/null; then
-		export FZF_DEFAULT_COMMAND="fd --type file"
-		export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-		export FZF_ALT_C_COMMAND="fd --type directory"
-	fi
+    if command -v fd &>/dev/null; then
+        export FZF_DEFAULT_COMMAND="fd --type file"
+        export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+        export FZF_ALT_C_COMMAND="fd --type directory"
+    fi
 
-	# https://github.com/catppuccin/fzf
-	export FZF_DEFAULT_OPTS=" \
-    --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-    --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-    --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+    # https://github.com/catppuccin/fzf
+    if [[ $(uname) == "Darwin" ]]; then
+        if defaults read -globalDomain AppleInterfaceStyle &>/dev/null; then
+            export FZF_DEFAULT_OPTS=" \
+            --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+            --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+            --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+        else
+            export FZF_DEFAULT_OPTS=" \
+            --color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
+            --color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
+            --color=marker:#dc8a78,fg+:#4c4f69,prompt:#8839ef,hl+:#d20f39"
+        fi
+    else
+        export FZF_DEFAULT_OPTS=" \
+        --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+        --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+    fi
 fi
 
 # Alias
@@ -38,33 +53,30 @@ alias moe="make"
 alias meo="make"
 
 # https://github.com/charmbracelet/glow
-alias gl="glow"
-
-# https://github.com/sharkdp/bat
-if command -v bat &>/dev/null; then
-    if [[ $(uname) == "Darwin" ]]; then
-        alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo Catppuccin-mocha || echo Catppuccin-latte)"
-    else
-        alias bat="bat --theme=Catppuccin-mocha"
-    fi
+if command -v glow &>/dev/null; then
+    alias gl="glow"
 fi
 
 # https://restic.readthedocs.io/en/latest/manual_rest.html
 if command -v restic &>/dev/null; then
-	export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
+    export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
 fi
 
 # https://github.com/sharkdp/vivid
 if command -v vivid &>/dev/null; then
     if [[ $(uname) == "Darwin" ]]; then
-	    export LS_COLORS="$(vivid generate $(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo catppuccin-mocha || echo catppuccin-latte))"
+        if defaults read -globalDomain AppleInterfaceStyle &>/dev/null; then
+            export LS_COLORS="$(vivid generate catppuccin-mocha)"
+        else
+            export LS_COLORS="$(vivid generate catppuccin-latte)"
+        fi
     else
-	    export LS_COLORS="$(vivid generate catppuccin-mocha)"
+        export LS_COLORS="$(vivid generate catppuccin-mocha)"
     fi
 fi
 
 # https://github.com/jarun/nnn
 if command -v nnn &>/dev/null; then
-	export NNN_FIFO=/tmp/nnn.fifo
-	export NNN_PLUG="p:-preview-tui"
+    export NNN_FIFO=/tmp/nnn.fifo
+    export NNN_PLUG="p:-preview-tui"
 fi
