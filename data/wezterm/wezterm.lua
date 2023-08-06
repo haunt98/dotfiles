@@ -1,22 +1,6 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local function get_appearance()
-	if wezterm.gui then
-		return wezterm.gui.get_appearance()
-	end
-
-	return "Dark"
-end
-
-local function scheme_for_appearance(appearance)
-	if appearance:find("Dark") then
-		return "Catppuccin Mocha"
-	else
-		return "Catppuccin Latte"
-	end
-end
-
 return {
 	font = wezterm.font({
 		family = "SF Mono",
@@ -25,7 +9,7 @@ return {
 	line_height = 1.2,
 	use_cap_height_to_scale_fallback_fonts = true,
 
-	color_scheme = scheme_for_appearance(get_appearance()),
+	color_scheme = "Catppuccin Mocha",
 
 	keys = {
 		{

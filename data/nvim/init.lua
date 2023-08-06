@@ -76,37 +76,13 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		lazy = false,
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
-				integrations = {
-					mini = true,
-				},
+				flavour = "mocha",
 			})
-		end,
-	},
 
-	-- https://github.com/f-person/auto-dark-mode.nvim
-	{
-		"f-person/auto-dark-mode.nvim",
-		config = function()
-			require("auto-dark-mode").setup({
-				update_interval = 1000,
-				set_dark_mode = function()
-					vim.api.nvim_set_option("background", "dark")
-					vim.cmd("colorscheme catppuccin-mocha")
-				end,
-				set_light_mode = function()
-					if vim.env.TERM_PROGRAM == "WezTerm" then
-						vim.api.nvim_set_option("background", "light")
-						vim.cmd("colorscheme catppuccin-latte")
-					else
-						vim.api.nvim_set_option("background", "dark")
-						vim.cmd("colorscheme catppuccin-mocha")
-					end
-				end,
-			})
+			vim.cmd("colorscheme catppuccin")
 		end,
 	},
 

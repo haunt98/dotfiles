@@ -18,7 +18,7 @@ export PATH=$PATH:$GOPATH/bin
 # export GOPRIVATE=example.company.com
 
 # fzf
-# https://github.com/junegunn/fzf#environment-variables
+# https://github.com/junegunn/fzf
 if command -v fzf &>/dev/null; then
     if command -v fd &>/dev/null; then
         export FZF_DEFAULT_COMMAND="fd --type file"
@@ -26,25 +26,10 @@ if command -v fzf &>/dev/null; then
         export FZF_ALT_C_COMMAND="fd --type directory"
     fi
 
-    # https://github.com/catppuccin/fzf
-    if [[ $(uname) == "Darwin" ]] && [[ ${TERM_PROGRAM} == "WezTerm" ]]; then
-        if defaults read -globalDomain AppleInterfaceStyle &>/dev/null; then
-            export FZF_DEFAULT_OPTS=" \
-            --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-            --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-            --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-        else
-            export FZF_DEFAULT_OPTS=" \
-            --color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
-            --color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
-            --color=marker:#dc8a78,fg+:#4c4f69,prompt:#8839ef,hl+:#d20f39"
-        fi
-    else
-        export FZF_DEFAULT_OPTS=" \
+    export FZF_DEFAULT_OPTS=" \
         --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
         --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-    fi
 fi
 
 # Alias
@@ -64,15 +49,7 @@ fi
 
 # https://github.com/sharkdp/vivid
 if command -v vivid &>/dev/null; then
-    if [[ $(uname) == "Darwin" ]] && [[ ${TERM_PROGRAM} == "WezTerm" ]]; then
-        if defaults read -globalDomain AppleInterfaceStyle &>/dev/null; then
-            export LS_COLORS="$(vivid generate catppuccin-mocha)"
-        else
-            export LS_COLORS="$(vivid generate catppuccin-latte)"
-        fi
-    else
-        export LS_COLORS="$(vivid generate catppuccin-mocha)"
-    fi
+    export LS_COLORS="$(vivid generate catppuccin-mocha)"
 fi
 
 # https://github.com/jarun/nnn
