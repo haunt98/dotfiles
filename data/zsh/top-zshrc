@@ -1,3 +1,4 @@
+# vim: set filetype=zsh:
 # Put this on top of ~/.zshrc
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
