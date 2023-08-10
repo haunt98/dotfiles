@@ -66,7 +66,6 @@ return {
 	window_background_opacity = 0.9,
 	text_background_opacity = 0.8,
 	macos_window_background_blur = 15,
-	window_decorations = "RESIZE",
 
 	default_cursor_style = "SteadyBar",
 	audible_bell = "Disabled",
