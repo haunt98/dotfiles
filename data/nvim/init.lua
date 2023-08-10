@@ -155,6 +155,7 @@ require("lazy").setup({
 						"^\\.DS_Store",
 						"\\.out$",
 						"\\.class$",
+						"\\.bin$",
 					},
 				},
 			})
