@@ -16,3 +16,4 @@ go install github.com/itchyny/gojq/cmd/gojq@latest
 go install mvdan.cc/gofumpt@latest
 go install golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment@latest
 go install gotest.tools/gotestsum@latest
+go install github.com/maruel/panicparse/v2@latest
