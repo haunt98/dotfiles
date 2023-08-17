@@ -3,6 +3,6 @@
 rustup update
 
 cargo install \
-	vivid \
+	difftastic vivid \
 	fnm stylua taplo-cli \
 	pfetch
