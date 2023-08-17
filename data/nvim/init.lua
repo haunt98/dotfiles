@@ -33,6 +33,7 @@ end
 
 -- Mouse support
 vim.opt.mouse = "a"
+vim.opt.mousemodel = "extend"
 
 -- Workaround
 -- https://github.com/neovim/neovim/issues/16416
@@ -355,6 +356,7 @@ require("lazy").setup({
 		"sbdchd/neoformat",
 		init = function()
 			vim.g.neoformat_enabled_go = { "gofumpt" }
+			vim.g.neoformat_enabled_javascript = { "denofmt" }
 			vim.g.neoformat_enabled_json = { "denofmt" }
 			vim.g.neoformat_enabled_lua = { "stylua" }
 			vim.g.neoformat_enabled_markdown = { "denofmt" }
