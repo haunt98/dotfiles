@@ -69,3 +69,7 @@ external = "~/.p10k.zsh"
 [[apps.powerlevel10k.paths]]
 internal = "data/powerlevel10k/.p10k.zsh"
 url = "https://raw.githubusercontent.com/romkatv/powerlevel10k/master/config/p10k-robbyrussell.zsh"
+
+[[apps.pokeget.paths]]
+internal = "data/pokeget"
+external = "~/.config/pokeget"

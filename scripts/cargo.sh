@@ -5,4 +5,6 @@ rustup update
 cargo install \
 	difftastic vivid \
 	fnm stylua taplo-cli \
-	pfetch
+	pfetch pokeget
+
+pokeget pikachu > data/pokeget/pikachu.txt
