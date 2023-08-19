@@ -36,9 +36,7 @@ return {
 		{
 			key = "p",
 			mods = "ALT",
-			action = act.PaneSelect({
-				alphabet = "1234567890",
-			}),
+			action = act.ActivatePaneDirection("Next"),
 		},
 		{
 			key = "o",
@@ -61,7 +59,7 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	tab_bar_at_bottom = true,
 	tab_and_split_indices_are_zero_based = true,
-	tab_max_width = 32,
+	tab_max_width = 24,
 
 	window_background_opacity = 0.9,
 	text_background_opacity = 0.8,
