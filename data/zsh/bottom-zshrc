@@ -58,4 +58,13 @@ if command -v nnn &>/dev/null; then
     export NNN_PLUG="p:-preview-tui"
 fi
 
-cat ~/.config/pokeget/pikachu.txt
+rand_poke=$((RANDOM % 4))
+if [[ $rand_poke -eq 0 ]]; then
+    cat ~/.config/pokeget/pikachu.txt
+elif [[ $rand_poke -eq 1 ]]; then
+    cat ~/.config/pokeget/clefairy.txt
+elif [[ $rand_poke -eq 2 ]]; then
+    cat ~/.config/pokeget/ditto.txt
+elif [[ $rand_poke -eq 3 ]]; then
+    cat ~/.config/pokeget/chikorita.txt
+fi
