@@ -67,4 +67,7 @@ return {
 
 	default_cursor_style = "SteadyBar",
 	audible_bell = "Disabled",
+
+	-- Remove in next version
+	front_end = "WebGpu",
 }
