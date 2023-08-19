@@ -7,4 +7,4 @@ cargo install \
 	fnm stylua taplo-cli \
 	pfetch pokeget
 
-pokeget pikachu > data/pokeget/pikachu.txt
+pokeget pikachu >data/pokeget/pikachu.txt

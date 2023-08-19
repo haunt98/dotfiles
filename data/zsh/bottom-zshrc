@@ -57,3 +57,5 @@ if command -v nnn &>/dev/null; then
     export NNN_FIFO=/tmp/nnn.fifo
     export NNN_PLUG="p:-preview-tui"
 fi
+
+cat ~/.config/pokeget/pikachu.txt
