@@ -69,6 +69,3 @@ elif [[ $rand_poke -eq 2 ]]; then
 elif [[ $rand_poke -eq 3 ]]; then
     cat ~/.config/pokeget/chikorita.txt
 fi
-
-# https://github.com/jeffreytse/zsh-vi-mode
-zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
