@@ -3,9 +3,9 @@ local act = wezterm.action
 
 return {
 	font = wezterm.font({
-		family = "Ubuntu Mono",
+		family = "Sudo Var",
 	}),
-	font_size = 16.0,
+	font_size = 18.0,
 	line_height = 1.2,
 	use_cap_height_to_scale_fallback_fonts = true,
 
