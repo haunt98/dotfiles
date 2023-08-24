@@ -390,9 +390,10 @@ require("lazy").setup({
 					"go",
 					"json",
 					"lua",
+					"proto",
+					"sql",
 					"toml",
 					"yaml",
-					"proto",
 				},
 			})
 		end,
@@ -458,29 +459,6 @@ require("lazy").setup({
 			-- Proto
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bufls
 			lspconfig.bufls.setup({})
-
-			-- Lua
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
-			lspconfig.lua_ls.setup({
-				settings = {
-					Lua = {
-						runtime = {
-							version = "LuaJIT",
-						},
-						diagnostics = {
-							globals = { "vim" },
-						},
-						format = {
-							-- Prefer Neoformat with stylua
-							enable = false,
-						},
-						workspace = {
-							library = vim.api.nvim_get_runtime_file("", true),
-							checkThirdParty = false,
-						},
-					},
-				},
-			})
 
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
