@@ -34,6 +34,7 @@ end
 -- Mouse support
 vim.opt.mouse = "a"
 vim.opt.mousemodel = "extend"
+vim.opt.mousescroll = "ver:8,hor:6"
 
 -- Workaround
 -- https://github.com/neovim/neovim/issues/16416
@@ -56,8 +57,19 @@ vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
+
+-- Conflict with QMK Space Cadet
 vim.keymap.set("n", "(", "<Nop>")
 vim.keymap.set("n", ")", "<Nop>")
+
+-- Disable scrolling
+-- https://neovim.io/doc/user/scroll.html
+vim.keymap.set("n", "<C-e>", "<Nop>")
+vim.keymap.set("n", "<C-d>", "<Nop>")
+vim.keymap.set("n", "<C-f>", "<Nop>")
+vim.keymap.set("n", "<C-y>", "<Nop>")
+vim.keymap.set("n", "<C-u>", "<Nop>")
+vim.keymap.set("n", "<C-b>", "<Nop>")
 
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
