@@ -7,7 +7,7 @@ cargo install \
 	fnm stylua taplo-cli \
 	pfetch pokeget
 
-pokeget pikachu >data/pokeget/pikachu.txt
-pokeget clefairy >data/pokeget/clefairy.txt
-pokeget ditto >data/pokeget/ditto.txt
-pokeget chikorita >data/pokeget/chikorita.txt
+pokeget --hide-name pikachu >data/pokeget/pikachu.txt
+pokeget --hide-name clefairy >data/pokeget/clefairy.txt
+pokeget --hide-name ditto >data/pokeget/ditto.txt
+pokeget --hide-name chikorita >data/pokeget/chikorita.txt
