@@ -408,6 +408,16 @@ require("lazy").setup({
 					"yaml",
 				},
 			})
+
+			-- Workaround to update fold
+			-- https://github.com/nvim-treesitter/nvim-treesitter/issues/1337
+			-- https://www.jmaguire.tech/posts/treesitter_folding/
+			local augroup = vim.api.nvim_create_augroup("UserTreesitterConfig", {})
+			vim.api.nvim_create_autocmd("BufEnter", {
+				group = augroup,
+				pattern = "*",
+				command = "normal zR",
+			})
 		end,
 	},
 
