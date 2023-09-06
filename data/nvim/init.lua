@@ -58,6 +58,10 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
+-- Conflict with :q
+-- https://neovim.io/doc/user/cmdline.html#c_CTRL-F
+vim.keymap.set("n", "q:", "<Nop>")
+
 -- Conflict with QMK Space Cadet
 vim.keymap.set("n", "(", "<Nop>")
 vim.keymap.set("n", ")", "<Nop>")
