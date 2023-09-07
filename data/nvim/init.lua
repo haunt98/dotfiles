@@ -34,7 +34,7 @@ end
 -- Mouse support
 vim.opt.mouse = "a"
 vim.opt.mousemodel = "extend"
-vim.opt.mousescroll = "ver:8,hor:6"
+vim.opt.mousescroll = "ver:4,hor:6"
 
 -- Workaround
 -- https://github.com/neovim/neovim/issues/16416
