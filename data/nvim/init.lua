@@ -489,6 +489,7 @@ require("lazy").setup({
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
 			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 
 			local augroup = vim.api.nvim_create_augroup("UserLspConfig", {})
