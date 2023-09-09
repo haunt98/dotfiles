@@ -29,7 +29,7 @@ venv
 
 # Software
 zig
-qmk_firmware
+~/qmk_firmware
 
 # Personal
 Homework
