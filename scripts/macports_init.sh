@@ -2,6 +2,6 @@
 
 port install \
 	git neovim \
-	fd bat ripgrep git-delta exa fdupes rsync rclone restic tealdeer task ncdu \
+	fdupes rsync rclone restic task \
 	nnn imagemagick ffmpegthumbnailer asciinema agg android-platform-tools scrcpy libjxl yt-dlp \
 	pipx plantuml
