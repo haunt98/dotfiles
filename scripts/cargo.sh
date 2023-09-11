@@ -13,6 +13,8 @@ cargo install \
 
 sudo port activate libiconv
 
+bat cache --build
+
 pokeget --hide-name pikachu >data/pokeget/pikachu.txt
 pokeget --hide-name clefairy >data/pokeget/clefairy.txt
 pokeget --hide-name ditto >data/pokeget/ditto.txt
