@@ -170,7 +170,11 @@ require("lazy").setup({
 					custom = {
 						"\\.bin$",
 						"\\.class$",
+						"\\.exe$",
+						"\\.hex$",
 						"\\.out$",
+						"\\.pdf$",
+						"\\.zip$",
 						"^\\.DS_Store$",
 						"^\\.git$",
 						"^\\.idea$",
