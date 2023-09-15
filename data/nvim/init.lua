@@ -168,7 +168,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme kanagawa")
 		end,
-		enabled = true,
+		enabled = false,
 	},
 
 	-- https://github.com/rose-pine/neovim
@@ -183,6 +183,19 @@ require("lazy").setup({
 			vim.cmd("colorscheme rose-pine")
 		end,
 		enabled = false,
+	},
+
+	-- https://github.com/ramojus/mellifluous.nvim
+	{
+		"ramojus/mellifluous.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("mellifluous").setup({})
+
+			vim.cmd("colorscheme mellifluous")
+		end,
+		enabled = true,
 	},
 
 	-- https://github.com/junegunn/fzf.vim
