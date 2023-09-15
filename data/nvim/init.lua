@@ -95,6 +95,7 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		lazy = false,
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
@@ -103,6 +104,85 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme catppuccin")
 		end,
+		enabled = false,
+	},
+
+	-- https://github.com/nyoom-engineering/oxocarbon.nvim
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme oxocarbon")
+		end,
+		enabled = false,
+	},
+
+	-- https://github.com/projekt0n/github-nvim-theme
+	{
+		"projekt0n/github-nvim-theme",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("github-theme").setup({})
+
+			vim.cmd("colorscheme github_dark")
+		end,
+		enabled = false,
+	},
+
+	-- https://github.com/projekt0n/caret.nvim
+	{
+		"projekt0n/caret.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("caret").setup({})
+
+			vim.cmd("colorscheme caret")
+		end,
+		enabled = false,
+	},
+
+	-- https://github.com/folke/tokyonight.nvim
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("tokyonight").setup({})
+
+			vim.cmd("colorscheme tokyonight")
+		end,
+		enabled = false,
+	},
+
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("kanagawa").setup({
+				theme = "lotus",
+			})
+
+			vim.cmd("colorscheme kanagawa")
+		end,
+		enabled = true,
+	},
+
+	-- https://github.com/rose-pine/neovim
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("rose-pine").setup({})
+
+			vim.cmd("colorscheme rose-pine")
+		end,
+		enabled = false,
 	},
 
 	-- https://github.com/junegunn/fzf.vim
@@ -161,8 +241,6 @@ require("lazy").setup({
 							file = false,
 							folder = false,
 							folder_arrow = false,
-							git = false,
-							modified = false,
 						},
 					},
 				},
