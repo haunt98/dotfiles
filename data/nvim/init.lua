@@ -289,6 +289,18 @@ require("lazy").setup({
 					return
 				end
 
+				local IGNORED_FT = {
+					"gitcommit",
+				}
+
+				-- &ft
+				local filetype = vim.bo[data.buf].ft
+
+				-- skip ignored filetypes
+				if vim.tbl_contains(IGNORED_FT, filetype) then
+					return
+				end
+
 				require("nvim-tree.api").tree.toggle({ focus = false })
 			end
 
