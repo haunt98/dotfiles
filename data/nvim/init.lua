@@ -276,6 +276,27 @@ require("lazy").setup({
 
 			vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 			vim.keymap.set("n", "<Leader>n", ":NvimTreeFindFile<CR>")
+
+			-- https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
+			local function open_nvim_tree(data)
+				-- buffer is a real file on the disk
+				local real_file = vim.fn.filereadable(data.file) == 1
+
+				-- buffer is a [No Name]
+				local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+
+				if not real_file and not no_name then
+					return
+				end
+
+				require("nvim-tree.api").tree.toggle({ focus = false })
+			end
+
+			local augroup = vim.api.nvim_create_augroup("UserNvimTreeConfig", {})
+			vim.api.nvim_create_autocmd("VimEnter", {
+				group = augroup,
+				callback = open_nvim_tree,
+			})
 		end,
 	},
 
