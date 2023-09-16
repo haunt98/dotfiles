@@ -198,14 +198,10 @@ require("lazy").setup({
 		enabled = true,
 	},
 
-	-- https://github.com/junegunn/fzf.vim
-	"junegunn/fzf",
-
 	-- https://github.com/ibhagwan/fzf-lua
 	{
 		"ibhagwan/fzf-lua",
 		dependencies = {
-			"junegunn/fzf",
 			"neovim/nvim-lspconfig",
 		},
 		config = function()
