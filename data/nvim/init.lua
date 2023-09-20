@@ -141,7 +141,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme caret")
 		end,
-		enabled = false,
+		enabled = true,
 	},
 
 	-- https://github.com/folke/tokyonight.nvim
@@ -195,7 +195,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme mellifluous")
 		end,
-		enabled = true,
+		enabled = false,
 	},
 
 	-- https://github.com/ibhagwan/fzf-lua
@@ -210,25 +210,6 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
 			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_native<CR>")
 			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
-		end,
-	},
-
-	-- https://github.com/nvim-lualine/lualine.nvim
-	{
-		"nvim-lualine/lualine.nvim",
-		config = function()
-			require("lualine").setup({
-				options = {
-					icons_enabled = false,
-					theme = "auto",
-					component_separators = { left = "", right = "" },
-					section_separators = { left = "", right = "" },
-				},
-				extensions = { "fzf", "nvim-tree" },
-			})
-
-			-- Disable showmode when use lualine
-			vim.opt.showmode = false
 		end,
 	},
 
@@ -373,14 +354,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/lukas-reineke/indent-blankline.nvim
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("indent_blankline").setup()
-		end,
-	},
-
 	-- https://github.com/lewis6991/gitsigns.nvim
 	{
 		"lewis6991/gitsigns.nvim",
@@ -480,6 +453,11 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md
+			require("mini.statusline").setup({
+				use_icons = false,
+			})
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
 
@@ -556,32 +534,6 @@ require("lazy").setup({
 			require("treesitter-context").setup({
 				enable = true,
 				max_lines = 2,
-			})
-		end,
-	},
-
-	-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-	{
-		"nvim-treesitter/nvim-treesitter-textobjects",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter-context",
-		},
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				textobjects = {
-					select = {
-						enable = true,
-						lookahead = true,
-						keymaps = {
-							["af"] = "@function.outer",
-							["if"] = "@function.inner",
-							["ac"] = "@class.outer",
-							["ic"] = "@class.inner",
-							["ab"] = "@block.outer",
-							["ib"] = "@block.inner",
-						},
-					},
-				},
 			})
 		end,
 	},
