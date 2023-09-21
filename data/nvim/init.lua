@@ -137,7 +137,11 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("caret").setup({})
+			require("caret").setup({
+				options = {
+					transparent = true,
+				},
+			})
 
 			vim.cmd("colorscheme caret")
 		end,
