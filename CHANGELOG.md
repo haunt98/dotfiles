@@ -1,5 +1,135 @@
 # CHANGELOG
 
+## v0.13.6 (2023-09-21)
+
+### Added
+
+- feat: re-add ncdu (2023-08-28)
+
+- feat: add bun (2023-08-04)
+
+- feat: add f2 and rsync (2023-07-30)
+
+### Others
+
+- chore: hide nvim-tree on small window (2023-09-21)
+
+- chore: cleanup neovim (2023-09-20)
+
+- chore(nvim): fzf-lua does not require fzf vim (2023-09-16)
+
+- chore(nvim): disable nvimtree auto in gitcommit (2023-09-15)
+
+- chore(nvim): auto open nvim tree (2023-09-15)
+
+- chore(nvim): change color again (2023-09-15)
+
+- chore: switch to kanagawa theme (2023-09-15)
+
+- chore: nvim hide more, fzf preview tree level 1 (2023-09-13)
+
+- chore: exa require libgit2 (2023-09-11)
+
+- chore: use bat, exa to preview fzf (2023-09-11)
+
+- chore: run bat cache build (2023-09-11)
+
+- chore: prefer cargo to macports (2023-09-11)
+
+- chore(nvim): add block textobject treesitter (2023-09-10)
+
+- chore: only ignore qmk_firmware at home (2023-09-10)
+
+- chore(nvim): space e to open diagnostic float (2023-09-08)
+
+- chore(nvim): limit scroll mouse (2023-09-07)
+
+- chore(nvim): nop q: (2023-09-06)
+
+- chore(config): workaround to update fold (2023-09-05)
+
+- build(deps): bump actions/checkout from 3 to 4 (2023-09-05)
+
+- chore(scripts): pokeget hide name (2023-09-04)
+
+- chore: install golangci-lint (2023-08-31)
+
+- chore: no need zellij default (2023-08-30)
+
+- chore(nvim): disable scrolling (2023-08-28)
+
+- chore: remove luals (2023-08-24)
+
+- chore(nvim): remove luals (2023-08-24)
+
+- chore: use Sudo Var (2023-08-24)
+
+- chore: remove zsh vi mode (2023-08-22)
+
+- chore(config): support zsh vi (2023-08-22)
+
+- chore: add grpcurl (2023-08-21)
+
+- chore: wezterm sudo var -> ubuntu mono (2023-08-19)
+
+- chore: wezterm WebGpu (2023-08-19)
+
+- chore(config): wezterm cycle panel (2023-08-19)
+
+- chore: randomly show pokemon (2023-08-19)
+
+- chore: pika pika pika :D (2023-08-19)
+
+- chore: add pokeget (2023-08-19)
+
+- chore: add panicparse (2023-08-17)
+
+- chore: move difftastic to cargo (2023-08-17)
+
+- chore(config): nvim disable right mouse (2023-08-17)
+
+- chore: filetype zsh (2023-08-11)
+
+- chore(nvim): ignore idea, vscode (2023-08-11)
+
+- Revert "chore(config): hide wezterm/kitty decoration" (2023-08-10)
+
+- chore(nvim): ignore bin qmk files (2023-08-10)
+
+- chore(config): hide wezterm/kitty decoration (2023-08-10)
+
+- chore(config): remove nvim ( ) mapping (2023-08-10)
+
+- chore: re-add bat themes (2023-08-06)
+
+- chore(kitty): sync new keymaps (2023-08-06)
+
+- chore: bring back old dark theme (2023-08-06)
+
+- chore(nvim): only allow wezterm dynamic change (2023-08-06)
+
+- chore(zsh): only allow wezterm for dynamic change (2023-08-06)
+
+- chore: remove bat custom theme (2023-08-06)
+
+- chore(nvim): use deno fmt (2023-08-06)
+
+- chore(vivid): support dakr mode (2023-08-05)
+
+- chore(bat): support dark mode (2023-08-05)
+
+- chore(bat): add light theme (2023-08-05)
+
+- chore(nvim): auto dark/light color (2023-08-05)
+
+- chore: remove zellij, use wezterm keyboard directly (2023-08-05)
+
+- chore: remove delta (no need color) (2023-08-03)
+
+- chore(zsh): remove omz case (2023-07-30)
+
+- chore(changelog): generate v0.13.5 (2023-07-30)
+
 ## v0.13.5 (2023-07-30)
 
 ### Added
