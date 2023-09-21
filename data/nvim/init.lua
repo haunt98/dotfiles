@@ -256,10 +256,10 @@ require("lazy").setup({
 
 			-- https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
 			local function open_nvim_tree(data)
-				-- buffer is a real file on the disk
+				-- Buffer is a real file on the disk
 				local real_file = vim.fn.filereadable(data.file) == 1
 
-				-- buffer is a [No Name]
+				-- Buffer is a [No Name]
 				local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
 
 				if not real_file and not no_name then
@@ -273,8 +273,14 @@ require("lazy").setup({
 				-- &ft
 				local filetype = vim.bo[data.buf].ft
 
-				-- skip ignored filetypes
+				-- Skip ignored filetypes
 				if vim.tbl_contains(IGNORED_FT, filetype) then
+					return
+				end
+
+				-- Ignore small window
+				-- https://stackoverflow.com/a/42648387
+				if vim.api.nvim_win_get_width(0) < 800 then
 					return
 				end
 
