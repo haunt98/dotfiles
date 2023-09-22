@@ -1,6 +1,9 @@
 # vim: set filetype=zsh:
 # Put this on bottom of ~/.zshrc
 
+# https://lgug2z.com/articles/sensible-wordchars-for-most-developers/
+export WORDCHARS="*?[]~=&;!#$%^(){}<>"
+
 # nvim
 if command -v nvim &>/dev/null; then
     export EDITOR=nvim
