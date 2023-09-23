@@ -310,7 +310,6 @@ require("lazy").setup({
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-vsnip",
 			"hrsh7th/vim-vsnip",
 			"zbirenbaum/copilot-cmp",
@@ -328,30 +327,15 @@ require("lazy").setup({
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm(),
+					["<C-e>"] = cmp.mapping.abort(),
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				completion = {
 					autocomplete = false,
 				},
-				sorting = {
-					comparators = {
-						require("copilot_cmp.comparators").prioritize,
-
-						-- Default
-						cmp.config.compare.offset,
-						cmp.config.compare.exact,
-						cmp.config.compare.score,
-						cmp.config.compare.recently_used,
-						cmp.config.compare.locality,
-						cmp.config.compare.kind,
-						cmp.config.compare.length,
-						cmp.config.compare.order,
-					},
-				},
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "buffer" },
 					{ name = "copilot" },
+					{ name = "nvim_lsp" },
 				}),
 			})
 		end,
