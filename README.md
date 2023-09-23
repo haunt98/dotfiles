@@ -3,6 +3,7 @@
 [![Go](https://github.com/haunt98/dotfiles/workflows/Go/badge.svg?branch=main)](https://github.com/haunt98/dotfiles/actions)
 <a href="https://dotfyle.com/haunt98/dotfiles-data-nvim"><img src="https://dotfyle.com/haunt98/dotfiles-data-nvim/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/haunt98/dotfiles-data-nvim"><img src="https://dotfyle.com/haunt98/dotfiles-data-nvim/badges/plugin-manager?style=flat" /></a>
+[![Latest Version](https://img.shields.io/github/v/tag/haunt98/qmk_keymaps)](https://github.com/haunt98/qmk_keymaps/tags)
 
 ## Usage
 
