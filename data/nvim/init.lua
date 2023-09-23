@@ -49,8 +49,8 @@ vim.cmd("command Wq wq")
 vim.cmd("command Qa qa")
 
 -- Leader
-vim.keymap.set("n", ";", "<Leader>", { remap = true })
-vim.keymap.set("n", "'", "<Leader>", { remap = true })
+vim.keymap.set({ "n", "v" }, ";", "<Leader>", { remap = true })
+vim.keymap.set({ "n", "v" }, "'", "<Leader>", { remap = true })
 
 -- Keymap
 vim.keymap.set("n", "n", "nzz")
@@ -60,20 +60,20 @@ vim.keymap.set("n", "}", "}zz")
 
 -- Conflict with :q
 -- https://neovim.io/doc/user/cmdline.html#c_CTRL-F
-vim.keymap.set("n", "q:", "<Nop>")
+vim.keymap.set({ "n", "v" }, "q:", "<Nop>")
 
 -- Conflict with QMK Space Cadet
-vim.keymap.set("n", "(", "<Nop>")
-vim.keymap.set("n", ")", "<Nop>")
+vim.keymap.set({ "n", "v" }, "(", "<Nop>")
+vim.keymap.set({ "n", "v" }, ")", "<Nop>")
 
 -- Disable scrolling
 -- https://neovim.io/doc/user/scroll.html
-vim.keymap.set("n", "<C-e>", "<Nop>")
-vim.keymap.set("n", "<C-d>", "<Nop>")
-vim.keymap.set("n", "<C-f>", "<Nop>")
-vim.keymap.set("n", "<C-y>", "<Nop>")
-vim.keymap.set("n", "<C-u>", "<Nop>")
-vim.keymap.set("n", "<C-b>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<C-d>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<C-f>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<C-u>", "<Nop>")
+vim.keymap.set({ "n", "v" }, "<C-b>", "<Nop>")
 
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -211,9 +211,13 @@ require("lazy").setup({
 		config = function()
 			require("fzf-lua").setup({ "max-perf" })
 
-			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
-			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_native<CR>")
-			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>f", ":FzfLua files<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>l", ":FzfLua lines<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>rg", ":FzfLua live_grep_native<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>s", ":FzfLua lsp_document_symbols<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>d", ":FzfLua lsp_definitions<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>r", ":FzfLua lsp_references<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>i", ":FzfLua lsp_implementations<CR>")
 		end,
 	},
 
@@ -587,15 +591,9 @@ require("lazy").setup({
 					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 					local opts = { buffer = ev.buf }
-					vim.keymap.set("n", "<Space>d", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 					vim.keymap.set({ "n", "v" }, "<Space>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "<Space>r", vim.lsp.buf.references, opts)
-					vim.keymap.set("n", "<Space>i", vim.lsp.buf.implementation, opts)
-					vim.keymap.set("n", "<Space>f", function()
-						vim.lsp.buf.format({ async = true })
-					end, opts)
 				end,
 			})
 
