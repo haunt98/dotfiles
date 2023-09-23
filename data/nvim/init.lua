@@ -49,8 +49,8 @@ vim.cmd("command Wq wq")
 vim.cmd("command Qa qa")
 
 -- Leader
-vim.keymap.set({ "n", "v" }, ";", "<Leader>", { remap = true })
-vim.keymap.set({ "n", "v" }, "'", "<Leader>", { remap = true })
+vim.keymap.set("n", ";", "<Leader>", { remap = true })
+vim.keymap.set("n", "'", "<Leader>", { remap = true })
 
 -- Keymap
 vim.keymap.set("n", "n", "nzz")
@@ -211,13 +211,13 @@ require("lazy").setup({
 		config = function()
 			require("fzf-lua").setup({ "max-perf" })
 
-			vim.keymap.set({ "n", "v" }, "<Leader>f", ":FzfLua files<CR>")
-			vim.keymap.set({ "n", "v" }, "<Leader>l", ":FzfLua lines<CR>")
-			vim.keymap.set({ "n", "v" }, "<Leader>rg", ":FzfLua live_grep_native<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>s", ":FzfLua lsp_document_symbols<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>d", ":FzfLua lsp_definitions<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>r", ":FzfLua lsp_references<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>i", ":FzfLua lsp_implementations<CR>")
+			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
+			vim.keymap.set("n", "<Leader>l", ":FzfLua lines<CR>")
+			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_native<CR>")
+			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
+			vim.keymap.set("n", "<Space>d", ":FzfLua lsp_definitions<CR>")
+			vim.keymap.set("n", "<Space>r", ":FzfLua lsp_references<CR>")
+			vim.keymap.set("n", "<Space>i", ":FzfLua lsp_implementations<CR>")
 		end,
 	},
 
