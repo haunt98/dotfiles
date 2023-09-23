@@ -21,4 +21,4 @@ go build ./cmd/dot
 ./dot download
 ```
 
-![nvim-000](https://raw.githubusercontent.com/haunt98/posts-images/main/nvim-000.png)
+![nvim-000](https://raw.githubusercontent.com/haunt98/posts-images/main/nvim-000.jxl)
