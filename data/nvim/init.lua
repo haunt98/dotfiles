@@ -458,11 +458,7 @@ require("lazy").setup({
 			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
-			require("mini.comment").setup({
-				options = {
-					ignore_blank_line = true,
-				},
-			})
+			require("mini.comment").setup()
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
@@ -474,11 +470,6 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-trailspace.md
-			require("mini.trailspace").setup()
-
-			vim.keymap.set("n", "<Leader>tr", ":lua MiniTrailspace.trim()<CR>")
 		end,
 	},
 
