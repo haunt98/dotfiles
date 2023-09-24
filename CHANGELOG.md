@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## v0.13.7 (2023-09-25)
+
+### Others
+
+- chore(config): Sudo Var -> IBM Plex Mono (2023-09-25)
+
+- chore: use shfmt same as neoformat (2023-09-24)
+
+- chore(git): push all remotes (2023-09-24)
+
+- chore(go): add fx (2023-09-24)
+
+- chore(nvim): set leader key using official guide (2023-09-24)
+
+- chore(nvim): only search in current buffer (2023-09-24)
+
+- chore: add badges (2023-09-23)
+
+- chore: wrong badges (2023-09-23)
+
+- chore: add more badges (2023-09-23)
+
+- chore: add dotfyle badges (2023-09-23)
+
+- chore(nvim): default cmp config (2023-09-23)
+
+- chore: use jxl (2023-09-23)
+
+- chore(nvim): remove visual mode keymaps (2023-09-23)
+
+- chore(nvim): no need trailing space, we go wild (2023-09-23)
+
+- chore(nvim): move lsp keymaps to fzf-lua (2023-09-23)
+
+- chore: add zsh WORDCHARS (2023-09-23)
+
+- chore(wezterm): native macos fullscreen (2023-09-21)
+
+- chore: nvim transparent (2023-09-21)
+
+- chore(changelog): generate v0.13.6 (2023-09-21)
+
 ## v0.13.6 (2023-09-21)
 
 ### Added
