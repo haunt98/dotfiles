@@ -49,7 +49,7 @@ vim.cmd("command Wq wq")
 vim.cmd("command Qa qa")
 
 -- Leader
-vim.keymap.set("n", ";", "<Leader>", { remap = true })
+vim.g.mapleader = ";"
 vim.keymap.set("n", "'", "<Leader>", { remap = true })
 
 -- Keymap
