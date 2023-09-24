@@ -35,7 +35,7 @@ format:
 	go install mvdan.cc/sh/v3/cmd/shfmt@latest
 	gofimports -w --company github.com/make-go-great,github.com/haunt98 .
 	gofumpt -w -extra .
-	shfmt -w ./scripts ./data/zsh
+	shfmt -w -ci -i 4 ./scripts ./data/zsh
 
 build:
 	$(MAKE) clean

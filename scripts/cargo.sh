@@ -6,10 +6,10 @@ rustup update
 sudo port deactivate libiconv
 
 cargo install \
-	fd-find bat ripgrep git-delta exa tealdeer \
-	difftastic vivid \
-	fnm stylua taplo-cli \
-	pfetch pokeget
+    fd-find bat ripgrep git-delta exa tealdeer \
+    difftastic vivid \
+    fnm stylua taplo-cli \
+    pfetch pokeget
 
 sudo port activate libiconv
 
