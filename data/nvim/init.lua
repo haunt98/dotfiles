@@ -467,7 +467,9 @@ require("lazy").setup({
 			vim.g.neoformat_enabled_json = { "denofmt" }
 			vim.g.neoformat_enabled_lua = { "stylua" }
 			vim.g.neoformat_enabled_markdown = { "denofmt" }
+			vim.g.neoformat_enabled_sh = { "shfmt" }
 			vim.g.neoformat_enabled_toml = { "taplo" }
+			vim.g.neoformat_enabled_zsh = { "shfmt" }
 			vim.g.shfmt_opt = "-ci"
 		end,
 		config = function()
