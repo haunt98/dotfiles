@@ -316,9 +316,6 @@ require("lazy").setup({
 		},
 		config = function()
 			local cmp = require("cmp")
-			local feedkeys = require("cmp.utils.feedkeys")
-			local keymap = require("cmp.utils.keymap")
-
 			cmp.setup({
 				performance = {
 					max_view_entries = 8,
@@ -331,29 +328,7 @@ require("lazy").setup({
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
-
-					-- https://github.com/hrsh7th/nvim-cmp/issues/1326
-					-- https://github.com/vim/vim/issues/12230
-					-- https://github.com/neovim/neovim/issues/22892
-					["<CR>"] = function(fallback)
-						if vim.fn.pumvisible() == 1 then
-							if vim.fn.complete_info({ "selected" }).selected == -1 then
-								-- Nothing selected, insert newline
-								-- feedkeys.call(keymap.t("<CR>"), "in")
-								return
-							end
-
-							-- Something selected, confirm selection by stopping Ctrl-X mode
-							-- :h i_CTRL-X_CTRL-Z*
-							feedkeys.call(keymap.t("<C-X><C-Z>"), "in")
-							return
-						end
-
-						-- `nvim-cmp` default confirm action
-						-- Accept currently selected item
-						-- Set `select` to `false` to only confirm explicitly selected items
-						cmp.mapping.confirm({ select = false })(fallback)
-					end,
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				completion = {
 					autocomplete = false,
