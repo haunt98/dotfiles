@@ -7,3 +7,5 @@ nix-env -uA \
     nixpkgs.fdupes nixpkgs.rsync nixpkgs.rclone nixpkgs.restic nixpkgs.taskwarrior \
     nixpkgs.nnn nixpkgs.ffmpegthumbnailer nixpkgs.asciinema-agg nixpkgs.yt-dlp nixpkgs.libjxl \
     nixpkgs.pipx nixpkgs.plantuml
+
+nix-collect-garbage -d
