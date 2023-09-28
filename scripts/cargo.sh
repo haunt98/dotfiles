@@ -2,7 +2,7 @@
 
 rustup update
 
-cargo install \
+cargo install --locked \
     fd-find bat ripgrep git-delta exa tealdeer \
     difftastic vivid \
     fnm stylua taplo-cli \
