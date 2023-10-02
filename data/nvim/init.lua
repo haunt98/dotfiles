@@ -332,7 +332,6 @@ require("lazy").setup({
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({
 						select = false,
 						behavior = cmp.ConfirmBehavior.Insert,
@@ -344,6 +343,8 @@ require("lazy").setup({
 				sources = cmp.config.sources({
 					{ name = "copilot" },
 					{ name = "nvim_lsp" },
+				}, {
+					{ name = "buffer" },
 				}),
 			})
 		end,
@@ -484,7 +485,11 @@ require("lazy").setup({
 			local augroup = vim.api.nvim_create_augroup("UserNeoformatConfig", {})
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				group = augroup,
-				pattern = { "*.lua", "*.md" },
+				pattern = {
+					"*.go",
+					"*.lua",
+					"*.md",
+				},
 				command = "Neoformat",
 			})
 		end,
@@ -540,8 +545,14 @@ require("lazy").setup({
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+		},
 		config = function()
 			local lspconfig = require("lspconfig")
+
+			-- Support nvim-cmp
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
@@ -557,6 +568,7 @@ require("lazy").setup({
 						semanticTokens = true,
 					},
 				},
+				capabilities = capabilities,
 			})
 
 			-- Proto
