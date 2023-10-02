@@ -53,6 +53,7 @@ vim.g.mapleader = ";"
 vim.keymap.set("n", "'", "<Leader>", { remap = true })
 
 -- Keymap
+vim.keymap.set("n", "<Leader>w", ":w<CR>")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "{", "{zz")
@@ -474,7 +475,7 @@ require("lazy").setup({
 	{
 		"sbdchd/neoformat",
 		init = function()
-			vim.g.neoformat_enabled_go = { "gofumpt" }
+			vim.g.neoformat_enabled_go = {}
 			vim.g.neoformat_enabled_javascript = { "denofmt" }
 			vim.g.neoformat_enabled_json = { "denofmt" }
 			vim.g.neoformat_enabled_lua = { "stylua" }
@@ -581,6 +582,9 @@ require("lazy").setup({
 					local opts = { buffer = ev.buf }
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
+					vim.keymap.set("n", "<Space>f", function()
+						vim.lsp.buf.format({ async = true })
+					end, opts)
 					vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action, opts)
 					vim.keymap.set("n", "<Space>ci", function()
 						vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
