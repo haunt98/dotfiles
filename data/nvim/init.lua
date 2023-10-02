@@ -430,6 +430,9 @@ require("lazy").setup({
 				},
 			}
 		end,
+		config = function()
+			vim.keymap.set("n", "<Leader>a", ":A<CR>")
+		end,
 	},
 
 	-- https://github.com/echasnovski/mini.nvim
@@ -480,18 +483,6 @@ require("lazy").setup({
 			vim.g.neoformat_enabled_toml = { "taplo" }
 			vim.g.neoformat_enabled_zsh = { "shfmt" }
 			vim.g.shfmt_opt = "-ci"
-		end,
-		config = function()
-			local augroup = vim.api.nvim_create_augroup("UserNeoformatConfig", {})
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				pattern = {
-					"*.go",
-					"*.lua",
-					"*.md",
-				},
-				command = "Neoformat",
-			})
 		end,
 	},
 
