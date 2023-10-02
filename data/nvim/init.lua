@@ -578,19 +578,10 @@ require("lazy").setup({
 					local opts = { buffer = ev.buf }
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
-					vim.keymap.set({ "n", "v" }, "<Space>ca", vim.lsp.buf.code_action, opts)
-				end,
-			})
-
-			-- Custom
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				pattern = "*.go",
-				callback = function()
-					-- Format without async then code action
-					-- https://github.com/neovim/neovim/issues/24168
-					vim.lsp.buf.format()
-					vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+					vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action, opts)
+					vim.keymap.set("n", "<Space>ci", function()
+						vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+					end, opts)
 				end,
 			})
 		end,
