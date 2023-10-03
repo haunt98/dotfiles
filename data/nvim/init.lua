@@ -405,7 +405,16 @@ require("lazy").setup({
 			require("mini.comment").setup()
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
-			require("mini.completion").setup()
+			require("mini.completion").setup({
+				window = {
+					info = { height = 8, width = 40, border = "none" },
+					signature = { height = 8, width = 40, border = "none" },
+				},
+				mappings = {
+					force_twostep = "<C-Space>",
+					force_fallback = "",
+				},
+			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
@@ -547,7 +556,14 @@ require("lazy").setup({
 					enabled = false,
 				},
 				suggestion = {
-					enabled = false,
+					enabled = true,
+					auto_trigger = false,
+					keymap = {
+						accept = "<M-l>",
+						next = "<M-Space>",
+						prev = "<Nop>",
+						dismiss = "<Nop>",
+					},
 				},
 				filetypes = {
 					["."] = false,
