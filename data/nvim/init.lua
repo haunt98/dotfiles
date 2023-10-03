@@ -309,59 +309,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/hrsh7th/nvim-cmp
-	{
-		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-vsnip",
-			"hrsh7th/vim-vsnip",
-			"zbirenbaum/copilot-cmp",
-		},
-		config = function()
-			local cmp = require("cmp")
-			cmp.setup({
-				performance = {
-					max_view_entries = 8,
-				},
-				snippet = {
-					expand = function(args)
-						vim.fn["vsnip#anonymous"](args.body)
-					end,
-				},
-				mapping = cmp.mapping.preset.insert({
-					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm({
-						select = false,
-						behavior = cmp.ConfirmBehavior.Insert,
-					}),
-				}),
-				completion = {
-					autocomplete = false,
-				},
-				sources = cmp.config.sources({
-					{ name = "copilot" },
-					{ name = "nvim_lsp" },
-				}, {
-					{ name = "buffer" },
-				}),
-			})
-		end,
-	},
-
-	-- https://github.com/zbirenbaum/copilot-cmp
-	{
-		"zbirenbaum/copilot-cmp",
-		dependencies = {
-			"zbirenbaum/copilot.lua",
-		},
-		config = function()
-			require("copilot_cmp").setup()
-		end,
-	},
-
 	-- https://github.com/lewis6991/gitsigns.nvim
 	{
 		"lewis6991/gitsigns.nvim",
@@ -457,6 +404,9 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
 			require("mini.comment").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
+			require("mini.completion").setup()
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
@@ -537,14 +487,8 @@ require("lazy").setup({
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-		},
 		config = function()
 			local lspconfig = require("lspconfig")
-
-			-- Support nvim-cmp
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
@@ -560,7 +504,6 @@ require("lazy").setup({
 						semanticTokens = true,
 					},
 				},
-				capabilities = capabilities,
 			})
 
 			-- Proto
@@ -612,14 +555,9 @@ require("lazy").setup({
 					cpp = true,
 					go = true,
 					java = true,
-					json = true,
 					lua = true,
-					make = true,
-					markdown = true,
 					proto = true,
 					python = true,
-					toml = true,
-					yaml = true,
 				},
 			})
 		end,
