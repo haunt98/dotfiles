@@ -33,7 +33,7 @@ end
 
 -- Mouse support
 vim.opt.mouse = "a"
-vim.opt.mousemodel = "extend"
+vim.opt.mousemodel = "popup"
 vim.opt.mousescroll = "ver:4,hor:6"
 
 -- Workaround
