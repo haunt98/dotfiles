@@ -55,6 +55,16 @@ return {
 		},
 	},
 
+	-- Don't need auto copy when double click
+	-- https://github.com/wez/wezterm/discussions/3760
+	mouse_bindings = {
+		{
+			event = { Up = { streak = 1, button = "Left" } },
+			mods = "NONE",
+			action = wezterm.action.Nop,
+		},
+	},
+
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
 	tab_bar_at_bottom = true,
