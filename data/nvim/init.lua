@@ -61,6 +61,8 @@ vim.keymap.set("n", "}", "}zz")
 
 -- Unnamed register aka black hole to not push to register aka trigger yank
 vim.keymap.set("n", "d", '"_d')
+vim.keymap.set("n", "dd", '"_dd')
+vim.keymap.set("n", "D", '"_D')
 vim.keymap.set("n", "c", '"_c')
 vim.keymap.set("n", "x", '"_x')
 
