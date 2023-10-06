@@ -546,37 +546,4 @@ require("lazy").setup({
 			})
 		end,
 	},
-
-	-- https://github.com/zbirenbaum/copilot.lua
-	{
-		"zbirenbaum/copilot.lua",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				panel = {
-					enabled = false,
-				},
-				suggestion = {
-					enabled = true,
-					auto_trigger = false,
-					keymap = {
-						accept = "<M-l>",
-						next = "<M-Space>",
-						prev = "<Nop>",
-						dismiss = "<Nop>",
-					},
-				},
-				filetypes = {
-					["."] = false,
-					c = true,
-					cpp = true,
-					go = true,
-					java = true,
-					lua = true,
-					proto = true,
-					python = true,
-				},
-			})
-		end,
-	},
 })
