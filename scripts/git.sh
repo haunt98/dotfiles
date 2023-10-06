@@ -23,7 +23,7 @@ git config --global alias.tg "tag --sort=-version:refname"
 
 # Misc
 git config --global core.fsmonitor true
-git config --global diff.colorMoved default
+git config --global diff.colorMoved no
 git config --global fetch.prune true
 git config --global init.defaultBranch main
 git config --global merge.conflictstyle diff3
