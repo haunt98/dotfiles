@@ -24,9 +24,16 @@ bindkey "^[[1;3D" backward-word
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#omzupdate-mode
 zstyle ':omz:update' mode disabled
 
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#hyphen_insensitive
+HYPHEN_INSENSITIVE="true"
+
 # https://github.com/ohmyzsh/ohmyzsh/issues/5569
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_magic_functions
 DISABLE_MAGIC_FUNCTIONS="true"
+
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_ls_colors
+DISABLE_LS_COLORS="true"
+
 # https://github.com/ohmyzsh/ohmyzsh/issues/10291
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_untracked_files_dirty
 DISABLE_UNTRACKED_FILES_DIRTY="true"
