@@ -4,6 +4,9 @@
 # https://lgug2z.com/articles/sensible-wordchars-for-most-developers/
 export WORDCHARS="*?[]~=&;!#$%^(){}<>"
 
+# https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
+export LESS="-RF -i -K -s -x2 --wordwrap"
+
 # nvim
 if command -v nvim &>/dev/null; then
     export EDITOR=nvim
