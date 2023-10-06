@@ -35,3 +35,5 @@ git config --global rebase.stat true
 # https://github.com/dandavison/delta
 git config --global core.pager delta
 git config --global delta.navigate true
+git config --global delta.file-decoration-style none
+git config --global delta.hunk-header-decoration-style none
