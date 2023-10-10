@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-# Aliases
+# Global aliases
 git config --global alias.ass add
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.cl clone
 git config --global alias.co checkout
 git config --global alias.df "diff -w"
+git config --global alias.dfc "diff -w --cached"
 git config --global alias.fe "fetch --all --tags"
 git config --global alias.lg "log --stat"
 git config --global alias.lg1 "log --oneline"
@@ -37,3 +38,11 @@ git config --global core.pager delta
 git config --global delta.navigate true
 git config --global delta.file-decoration-style none
 git config --global delta.hunk-header-decoration-style none
+
+# https://github.com/Wilfred/difftastic
+git config --global diff.tool difftastic
+git config --global difftool.prompt false
+git config --global difftool.difftastic.cmd 'difft "$LOCAL" "$REMOTE"'
+git config --global pager.difftool true
+git config --global alias.dft "difftool"
+git config --global alias.dfct "difftool --cached"
