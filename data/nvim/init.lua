@@ -111,7 +111,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme catppuccin")
 		end,
-		enabled = true,
+		enabled = false,
 	},
 
 	-- https://github.com/nyoom-engineering/oxocarbon.nvim
@@ -152,7 +152,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme caret")
 		end,
-		enabled = false,
+		enabled = true,
 	},
 
 	-- https://github.com/folke/tokyonight.nvim
@@ -384,33 +384,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/kevinhwang91/nvim-ufo
-	{
-		"kevinhwang91/nvim-ufo",
-		dependencies = {
-			"kevinhwang91/promise-async",
-			"nvim-treesitter/nvim-treesitter",
-		},
-		init = function()
-			vim.o.foldcolumn = "1"
-			vim.o.foldlevel = 99
-			vim.o.foldlevelstart = 99
-			vim.o.foldenable = true
-		end,
-		config = function()
-			local ufo = require("ufo")
-
-			vim.keymap.set("n", "zR", ufo.openAllFolds)
-			vim.keymap.set("n", "zM", ufo.closeAllFolds)
-
-			ufo.setup({
-				provider_selector = function(bufnr, filetype, buftype)
-					return { "treesitter", "indent" }
-				end,
-			})
-		end,
-	},
-
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
@@ -480,6 +453,11 @@ require("lazy").setup({
 		build = {
 			":TSUpdate",
 		},
+		init = function()
+			vim.opt.foldmethod = "expr"
+			vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+			vim.opt.foldenable = false
+		end,
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
@@ -491,6 +469,16 @@ require("lazy").setup({
 					"toml",
 					"yaml",
 				},
+			})
+
+			-- Workaround to update fold
+			-- https://github.com/nvim-treesitter/nvim-treesitter/issues/1337
+			-- https://www.jmaguire.tech/posts/treesitter_folding/
+			local augroup = vim.api.nvim_create_augroup("UserTreesitterConfig", {})
+			vim.api.nvim_create_autocmd("BufEnter", {
+				group = augroup,
+				pattern = "*",
+				command = "normal zR",
 			})
 		end,
 	},
