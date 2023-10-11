@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-nix-channel --update
+sudo -i sh -c 'nix-channel --update'
 
 nix-env -iA \
     nixpkgs.less nixpkgs.curl \
