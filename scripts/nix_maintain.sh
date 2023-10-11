@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-nix-channel --update
+sudo -i sh -c 'nix-channel --update'
+sudo -i sh -c 'nix-env -uA nixpkgs.nix'
+sudo -i sh -c 'nix-collect-garbage -d'
 
 nix-env -uA \
     nixpkgs.less nixpkgs.libgit2 nixpkgs.git nixpkgs.neovim \
