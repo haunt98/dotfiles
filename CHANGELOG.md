@@ -1,5 +1,91 @@
 # CHANGELOG
 
+## v0.13.8 (2023-10-14)
+
+### Added
+
+- feat: replace port with nix (2023-09-28)
+
+### Others
+
+- chore(nvim): only black hole with d normal mode (2023-10-11)
+
+- chore(scripts): nix update (2023-10-11)
+
+- chore(scripts): nix curl (2023-10-11)
+
+- chore(scripts): better update nix (2023-10-11)
+
+- chore(scripts): support difftastic (2023-10-10)
+
+- Revert "chore(nvim): use new fold method (wip)" (2023-10-10)
+
+- chore(nvim): use new fold method (wip) (2023-10-10)
+
+- chore(nvim): remove copilot (2023-10-06)
+
+- chore: improve omz (2023-10-06)
+
+- chore(scripts): remove delta box drawing chars (2023-10-06)
+
+- chore: better less (2023-10-06)
+
+- chore(scripts): disable git diff color moved (2023-10-06)
+
+- chore(scripts): re-add support delta (2023-10-06)
+
+- chore(scripts): more nix goodies (2023-10-06)
+
+- build(deps): bump golang.org/x/sync from 0.3.0 to 0.4.0 (2023-10-06)
+
+- chore(nvim): blackhole for visual mode too (2023-10-06)
+
+- chore(nvim): more black hole (2023-10-06)
+
+- chore(nvim): popup mode (2023-10-06)
+
+- chore(wezterm): don;t need auto copy when double click (2023-10-06)
+
+- chore(nvim): more useful keymaps (2023-10-03)
+
+- chore(nvim): use simple nvim completion (2023-10-03)
+
+- chore(nvim: update keymap (2023-10-02)
+
+- chore(nvim): auto format is dangerous (2023-10-02)
+
+- chore(nvim): improve nvim-cmp (2023-10-02)
+
+- chore(nvim): code action organize imports on demand (2023-10-02)
+
+- chore(nvim): nvim-cmp insert not replace (2023-09-29)
+
+- chore(scripts): improve pipx (2023-09-29)
+
+- chore(scripts): more nix goodies (2023-09-29)
+
+- chore(scripts): use cargo install --locked (2023-09-28)
+
+- chore(scripts): install libgit2 for exa, ... (2023-09-28)
+
+- chore(scripts): nix collect garbage (2023-09-28)
+
+- chore(scripts):) remove imagmagick (2023-09-28)
+
+- chore: add nvim badges (2023-09-27)
+
+- chore(nvim): black hole register for d, c, x (2023-09-26)
+
+- chore(nvim): nvim-cmp select false (2023-09-26)
+
+- Revert "chore(nvim): workaround for nvim-cmp" (2023-09-25)
+
+- chore(nvim): workaround for nvim-cmp (2023-09-25)
+
+- chore(scripts): add manual update (2023-09-25)
+
+- chore(changelog): generate v0.13.7 (2023-09-25)
+
 ## v0.13.7 (2023-09-25)
 
 ### Others
