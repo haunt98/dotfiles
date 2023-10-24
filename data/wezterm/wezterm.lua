@@ -3,7 +3,7 @@ local act = wezterm.action
 
 return {
 	font = wezterm.font({
-		family = "Fantasque Sans Mono",
+		family = "Iosevka Term SS08",
 	}),
 	font_size = 16.0,
 	line_height = 1.2,

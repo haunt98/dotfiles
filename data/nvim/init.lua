@@ -107,6 +107,14 @@ require("lazy").setup({
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
+				transparent_background = true,
+				custom_highlights = function(colors)
+					return {
+						Comment = {
+							fg = colors.flamingo,
+						},
+					}
+				end,
 			})
 
 			vim.cmd("colorscheme catppuccin")
@@ -152,7 +160,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme caret")
 		end,
-		enabled = true,
+		enabled = false,
 	},
 
 	-- https://github.com/folke/tokyonight.nvim
@@ -161,11 +169,19 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("tokyonight").setup({})
+			require("tokyonight").setup({
+				transparent = true,
+
+				on_highlights = function(hl, c)
+					hl.Comment = {
+						fg = c.teal,
+					}
+				end,
+			})
 
 			vim.cmd("colorscheme tokyonight")
 		end,
-		enabled = false,
+		enabled = true,
 	},
 
 	{
@@ -533,6 +549,7 @@ require("lazy").setup({
 					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 					local opts = { buffer = ev.buf }
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<Space>f", function()
