@@ -2,6 +2,7 @@
 
 cargo install --force --locked \
     fd-find bat ripgrep git-delta exa tealdeer \
-    difftastic vivid \
+    difftastic vivid zellij \
     fnm stylua taplo-cli \
-    pfetch pokeget
+    pfetch pokeget \
+    daktilo kbt
