@@ -13,7 +13,6 @@ go install github.com/bufbuild/buf-language-server/cmd/bufls@latest
 go install github.com/mikefarah/yq/v4@latest
 go install github.com/itchyny/gojq/cmd/gojq@latest
 go install github.com/antonmedv/fx@latest
-go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 
 go install mvdan.cc/gofumpt@latest
 go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
