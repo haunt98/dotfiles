@@ -107,7 +107,7 @@ require("lazy").setup({
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
-				transparent_background = true,
+				transparent_background = false,
 				custom_highlights = function(colors)
 					return {
 						-- Support mini.statusline
