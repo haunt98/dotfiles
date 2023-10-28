@@ -424,10 +424,17 @@ require("lazy").setup({
 				settings = {
 					gopls = {
 						gofumpt = true,
-						codelenses = {
-							gc_details = true,
-						},
 						semanticTokens = true,
+						usePlaceholders = true,
+						analyses = {
+							deprecated = false,
+							fieldalignment = true,
+							nilness = true,
+							unusedparams = true,
+							unusedwrite = true,
+							useany = true,
+							unusedvariable = true,
+						},
 					},
 				},
 			})
