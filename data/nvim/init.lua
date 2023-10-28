@@ -361,6 +361,9 @@ require("lazy").setup({
 			vim.g.neoformat_enabled_zsh = { "shfmt" }
 			vim.g.shfmt_opt = "-ci"
 		end,
+		config = function()
+			vim.keymap.set("v", "=", ":Neoformat<CR>")
+		end,
 	},
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter
