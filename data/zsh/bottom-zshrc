@@ -68,7 +68,7 @@ if command -v nnn &>/dev/null; then
 fi
 
 # https://github.com/talwat/pokeget-rs
-rand_poke=$((RANDOM % 4))
+rand_poke=$((RANDOM % 6))
 if [[ $rand_poke -eq 0 ]]; then
     cat ~/.config/pokeget/pikachu.txt
 elif [[ $rand_poke -eq 1 ]]; then
@@ -77,6 +77,10 @@ elif [[ $rand_poke -eq 2 ]]; then
     cat ~/.config/pokeget/ditto.txt
 elif [[ $rand_poke -eq 3 ]]; then
     cat ~/.config/pokeget/chikorita.txt
+elif [[ $rand_poke -eq 4 ]]; then
+    cat ~/.config/pokeget/eevee.txt
+elif [[ $rand_poke -eq 5 ]]; then
+    cat ~/.config/pokeget/squirtle.txt
 fi
 
 # Depend on your company
