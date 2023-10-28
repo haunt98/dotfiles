@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.13.10 (2023-10-29)
+
+### Others
+
+- chore: add more pokemon, jira-cli (2023-10-29)
+
+- chore(zsh): more comment (2023-10-29)
+
+- chore(nvim): disable transparent background (2023-10-29)
+
+- chore(changelog): generate v0.13.9 (2023-10-29)
+
 ## v0.13.9 (2023-10-29)
 
 ### Others
