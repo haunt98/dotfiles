@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## v0.13.9 (2023-10-29)
+
+### Others
+
+- chore(kitty): open split with current window (2023-10-29)
+
+- chore(kitty): use zellij mapping (2023-10-29)
+
+- chore: format first (2023-10-29)
+
+- chore(config): support jira-cli (2023-10-29)
+
+- chore(nvim): use = in visual mode to Neoformat (2023-10-29)
+
+- chore(nvim): use treesitter fold setlocal (2023-10-29)
+
+- chore(nvim): improve gopls (2023-10-29)
+
+- chore(nvim): cleanup unused (2023-10-29)
+
+- chore(nvim): revision again (2023-10-29)
+
+- chore(nvim): revision again (2023-10-29)
+
+- chore(scripts): more keeb fun (2023-10-25)
+
+- chore(scripts): clean up python (2023-10-25)
+
+- chore(scripts): remove go grpcurl (2023-10-25)
+
+- chore(config): revision neovim, wezterm (2023-10-24)
+
+- chore: add zellij (2023-10-14)
+
+- chore(changelog): generate v0.13.8 (2023-10-14)
+
 ## v0.13.8 (2023-10-14)
 
 ### Added
