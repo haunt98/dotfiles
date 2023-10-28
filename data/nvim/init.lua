@@ -160,7 +160,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme caret")
 		end,
-		enabled = false,
+		enabled = true,
 	},
 
 	-- https://github.com/folke/tokyonight.nvim
@@ -181,7 +181,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme tokyonight")
 		end,
-		enabled = true,
+		enabled = false,
 	},
 
 	{
@@ -241,6 +241,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Space>d", ":FzfLua lsp_definitions<CR>")
 			vim.keymap.set("n", "<Space>r", ":FzfLua lsp_references<CR>")
 			vim.keymap.set("n", "<Space>i", ":FzfLua lsp_implementations<CR>")
+			vim.keymap.set("n", "<Space>ca", ":FzfLua lsp_code_actions<CR>")
 		end,
 	},
 
@@ -436,6 +437,9 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
+			require("mini.pairs").setup()
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md
 			require("mini.statusline").setup({
 				use_icons = false,
@@ -554,10 +558,6 @@ require("lazy").setup({
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<Space>f", function()
 						vim.lsp.buf.format({ async = true })
-					end, opts)
-					vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "<Space>ci", function()
-						vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
 					end, opts)
 				end,
 			})
