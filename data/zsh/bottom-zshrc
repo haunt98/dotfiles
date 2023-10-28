@@ -77,3 +77,7 @@ elif [[ $rand_poke -eq 2 ]]; then
 elif [[ $rand_poke -eq 3 ]]; then
     cat ~/.config/pokeget/chikorita.txt
 fi
+
+# Depend on your company
+# https://github.com/ankitpokhrel/jira-cli
+export JIRA_AUTH_TYPE=bearer
