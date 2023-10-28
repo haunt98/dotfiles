@@ -370,9 +370,9 @@ require("lazy").setup({
 			":TSUpdate",
 		},
 		init = function()
-			vim.opt.foldmethod = "expr"
-			vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-			vim.opt.foldenable = false
+			vim.opt_local.foldmethod = "expr"
+			vim.opt_local.foldexpr = "nvim_treesitter#foldexpr()"
+			vim.opt_local.foldenable = false
 		end,
 		config = function()
 			require("nvim-treesitter.configs").setup({
