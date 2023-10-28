@@ -80,4 +80,5 @@ fi
 
 # Depend on your company
 # https://github.com/ankitpokhrel/jira-cli
+# Remember to jira init local not cloud
 export JIRA_AUTH_TYPE=bearer
