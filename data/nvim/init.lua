@@ -110,7 +110,8 @@ require("lazy").setup({
 				transparent_background = true,
 				custom_highlights = function(colors)
 					return {
-						Comment = {
+						-- Support mini.statusline
+						StatusLineNC = {
 							fg = colors.flamingo,
 						},
 					}
@@ -119,7 +120,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme catppuccin")
 		end,
-		enabled = false,
+		enabled = true,
 	},
 
 	-- https://github.com/nyoom-engineering/oxocarbon.nvim
@@ -160,7 +161,7 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme caret")
 		end,
-		enabled = true,
+		enabled = false,
 	},
 
 	-- https://github.com/folke/tokyonight.nvim
@@ -171,12 +172,6 @@ require("lazy").setup({
 		config = function()
 			require("tokyonight").setup({
 				transparent = true,
-
-				on_highlights = function(hl, c)
-					hl.Comment = {
-						fg = c.teal,
-					}
-				end,
 			})
 
 			vim.cmd("colorscheme tokyonight")
@@ -441,9 +436,7 @@ require("lazy").setup({
 			require("mini.pairs").setup()
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md
-			require("mini.statusline").setup({
-				use_icons = false,
-			})
+			require("mini.statusline").setup()
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
