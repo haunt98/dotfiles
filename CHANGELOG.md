@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.13.11 (2023-10-29)
+
+### Others
+
+- chore(zsh): alias ls to eza (2023-10-29)
+
+- chore: replace exa with eza (2023-10-29)
+
+- chore(config): remove transparent background (2023-10-29)
+
+- chore(changelog): generate v0.13.10 (2023-10-29)
+
 ## v0.13.10 (2023-10-29)
 
 ### Others
