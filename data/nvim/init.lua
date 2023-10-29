@@ -323,8 +323,8 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
 			require("mini.completion").setup({
 				window = {
-					info = { height = 8, width = 40, border = "none" },
-					signature = { height = 8, width = 40, border = "none" },
+					info = { height = 8, width = 40, border = "rounded" },
+					signature = { height = 8, width = 40, border = "rounded" },
 				},
 				mappings = {
 					force_twostep = "<C-Space>",
@@ -429,15 +429,6 @@ require("lazy").setup({
 						gofumpt = true,
 						semanticTokens = true,
 						usePlaceholders = true,
-						analyses = {
-							deprecated = false,
-							fieldalignment = true,
-							nilness = true,
-							unusedparams = true,
-							unusedwrite = true,
-							useany = true,
-							unusedvariable = true,
-						},
 					},
 				},
 			})
