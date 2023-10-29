@@ -37,14 +37,26 @@ if command -v fzf &>/dev/null; then
         --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
         --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-    export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range=:500 {}'"
-    export FZF_ALT_C_OPTS="--preview 'eza --tree --level 1 {}'"
+
+    if command -v bat &>/dev/null; then
+        export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range=:500 {}'"
+    fi
+
+    if command -v eza &>/dev/null; then
+        export FZF_ALT_C_OPTS="--preview 'eza --tree --level 1 {}'"
+    fi
 fi
 
 # Alias
 alias g="git"
 alias moe="make"
 alias meo="make"
+
+# https://github.com/eza-community/eza
+if command -v eza &>/dev/null; then
+    alias ls="eza"
+    alias la="eza -la"
+fi
 
 # https://github.com/charmbracelet/glow
 if command -v glow &>/dev/null; then
