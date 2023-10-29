@@ -3,7 +3,7 @@
 rustup update
 
 cargo install --locked \
-    fd-find bat ripgrep git-delta exa tealdeer \
+    fd-find bat ripgrep git-delta eza tealdeer \
     difftastic vivid zellij \
     fnm stylua taplo-cli \
     pfetch pokeget \
