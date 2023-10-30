@@ -116,6 +116,10 @@ require("lazy").setup({
 						},
 					}
 				end,
+				integrations = {
+					treesitter = true,
+					treesitter_context = true,
+				},
 			})
 
 			vim.cmd("colorscheme catppuccin")
