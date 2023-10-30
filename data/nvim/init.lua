@@ -130,7 +130,7 @@ require("lazy").setup({
 			"neovim/nvim-lspconfig",
 		},
 		config = function()
-			require("fzf-lua").setup({ "max-perf" })
+			require("fzf-lua").setup({ "fzf-native" })
 
 			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
 			vim.keymap.set("n", "<Leader>l", ":FzfLua blines<CR>")
