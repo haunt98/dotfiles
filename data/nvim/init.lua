@@ -141,8 +141,11 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_resume<CR>")
 			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
 			vim.keymap.set("n", "<Space>d", ":FzfLua lsp_definitions<CR>")
+			vim.keymap.set("n", "gd", ":FzfLua lsp_definitions<CR>")
 			vim.keymap.set("n", "<Space>r", ":FzfLua lsp_references<CR>")
+			vim.keymap.set("n", "gr", ":FzfLua lsp_references<CR>")
 			vim.keymap.set("n", "<Space>i", ":FzfLua lsp_implementations<CR>")
+			vim.keymap.set("n", "gi", ":FzfLua lsp_implementations<CR>")
 			vim.keymap.set("n", "<Space>ca", ":FzfLua lsp_code_actions<CR>")
 		end,
 	},
@@ -303,6 +306,33 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/kevinhwang91/nvim-ufo
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = {
+			"kevinhwang91/promise-async",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		init = function()
+			vim.o.foldcolumn = "1"
+			vim.o.foldlevel = 99
+			vim.o.foldlevelstart = 99
+			vim.o.foldenable = true
+		end,
+		config = function()
+			local ufo = require("ufo")
+
+			vim.keymap.set("n", "zR", ufo.openAllFolds)
+			vim.keymap.set("n", "zM", ufo.closeAllFolds)
+
+			ufo.setup({
+				provider_selector = function(bufnr, filetype, buftype)
+					return { "treesitter", "indent" }
+				end,
+			})
+		end,
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
@@ -376,11 +406,6 @@ require("lazy").setup({
 		build = {
 			":TSUpdate",
 		},
-		init = function()
-			vim.opt_local.foldmethod = "expr"
-			vim.opt_local.foldexpr = "nvim_treesitter#foldexpr()"
-			vim.opt_local.foldenable = false
-		end,
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
@@ -392,16 +417,6 @@ require("lazy").setup({
 					"toml",
 					"yaml",
 				},
-			})
-
-			-- Workaround to update fold
-			-- https://github.com/nvim-treesitter/nvim-treesitter/issues/1337
-			-- https://www.jmaguire.tech/posts/treesitter_folding/
-			local augroup = vim.api.nvim_create_augroup("UserTreesitterConfig", {})
-			vim.api.nvim_create_autocmd("BufEnter", {
-				group = augroup,
-				pattern = "*",
-				command = "normal zR",
 			})
 		end,
 	},
@@ -456,6 +471,7 @@ require("lazy").setup({
 					local opts = { buffer = ev.buf }
 					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
+					vim.keymap.set("n", "gk", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<Space>f", function()
 						vim.lsp.buf.format({ async = true })
