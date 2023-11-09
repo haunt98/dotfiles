@@ -325,11 +325,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "zR", ufo.openAllFolds)
 			vim.keymap.set("n", "zM", ufo.closeAllFolds)
 
-			ufo.setup({
-				provider_selector = function(bufnr, filetype, buftype)
-					return { "treesitter", "indent" }
-				end,
-			})
+			ufo.setup()
 		end,
 	},
 
@@ -438,6 +434,13 @@ require("lazy").setup({
 		config = function()
 			local lspconfig = require("lspconfig")
 
+			-- Support nvim-ufo
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities.textDocument.foldingRange = {
+				dynamicRegistration = false,
+				lineFoldingOnly = true,
+			}
+
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
@@ -450,11 +453,14 @@ require("lazy").setup({
 						usePlaceholders = true,
 					},
 				},
+				capabilities = capabilities,
 			})
 
 			-- Proto
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bufls
-			lspconfig.bufls.setup({})
+			lspconfig.bufls.setup({
+				capabilities = capabilities,
+			})
 
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
