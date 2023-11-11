@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## v0.13.12 (2023-11-11)
+
+### Others
+
+- chore(zsh): add - to wordchars (2023-11-11)
+
+- chore(zsh): ignore trailing : (2023-11-11)
+
+- chore(nvim): do i need treesitter ? (2023-11-11)
+
+- chore: improve nvim-ufo (2023-11-09)
+
+- chore(scripts): bring back brew (2023-11-09)
+
+- chore(nvim): try to fold (2023-11-07)
+
+- build(deps): bump golang.org/x/sync from 0.4.0 to 0.5.0 (2023-11-06)
+
+- chore(nvim): live grep resume (2023-11-04)
+
+- chore(scripts): add zoxide (2023-11-03)
+
+- chore(kitty): remove cmd+r (2023-11-02)
+
+- chore(nvim): another revision (2023-10-31)
+
+- chore(nvim): revision again (2023-10-30)
+
+- chore(nvim): remove gopls analysic (2023-10-30)
+
+- chore(changelog): generate v0.13.11 (2023-10-29)
+
 ## v0.13.11 (2023-10-29)
 
 ### Others
