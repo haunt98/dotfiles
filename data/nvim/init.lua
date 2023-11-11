@@ -116,10 +116,6 @@ require("lazy").setup({
 						},
 					}
 				end,
-				integrations = {
-					treesitter = true,
-					treesitter_context = true,
-				},
 			})
 
 			vim.cmd("colorscheme catppuccin")
@@ -311,7 +307,6 @@ require("lazy").setup({
 		"kevinhwang91/nvim-ufo",
 		dependencies = {
 			"kevinhwang91/promise-async",
-			"nvim-treesitter/nvim-treesitter",
 		},
 		init = function()
 			vim.o.foldcolumn = "1"
@@ -393,38 +388,6 @@ require("lazy").setup({
 		end,
 		config = function()
 			vim.keymap.set("v", "=", ":Neoformat<CR>")
-		end,
-	},
-
-	-- https://github.com/nvim-treesitter/nvim-treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = {
-			":TSUpdate",
-		},
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"go",
-					"json",
-					"lua",
-					"proto",
-					"sql",
-					"toml",
-					"yaml",
-				},
-			})
-		end,
-	},
-
-	-- https://github.com/nvim-treesitter/nvim-treesitter-context
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		config = function()
-			require("treesitter-context").setup({
-				enable = true,
-				max_lines = 2,
-			})
 		end,
 	},
 
