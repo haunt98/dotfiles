@@ -2,7 +2,7 @@
 # Put this on bottom of ~/.zshrc
 
 # https://lgug2z.com/articles/sensible-wordchars-for-most-developers/
-export WORDCHARS="*?[]~=&;!#$%^(){}<>"
+export WORDCHARS="*?[]~=&;!#$%^(){}<>-"
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
 export LESS="-RF -i -K -s -x2 --wordwrap"
