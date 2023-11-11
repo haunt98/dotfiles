@@ -337,6 +337,7 @@ require("lazy").setup({
 				jump = { suffix = "", options = {} },
 				location = { suffix = "", options = {} },
 				oldfile = { suffix = "", options = {} },
+				treesitter = { suffix = "", options = {} },
 				undo = { suffix = "", options = {} },
 				window = { suffix = "", options = {} },
 				yank = { suffix = "", options = {} },

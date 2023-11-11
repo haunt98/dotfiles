@@ -2,7 +2,7 @@
 # Put this on top of ~/.zshrc
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
-export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit|builtin *)"
+export HISTORY_IGNORE="(ls|ll|la|cd|pwd|exit|builtin *|*:)"
 export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
 
