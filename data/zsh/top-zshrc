@@ -16,6 +16,7 @@ setopt HIST_NO_FUNCTIONS
 setopt HIST_NO_STORE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY_TIME
 
 # https://stackoverflow.com/q/12382499
 bindkey "^[[1;3C" forward-word
