@@ -302,28 +302,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/kevinhwang91/nvim-ufo
-	{
-		"kevinhwang91/nvim-ufo",
-		dependencies = {
-			"kevinhwang91/promise-async",
-		},
-		init = function()
-			vim.o.foldcolumn = "1"
-			vim.o.foldlevel = 99
-			vim.o.foldlevelstart = 99
-			vim.o.foldenable = true
-		end,
-		config = function()
-			local ufo = require("ufo")
-
-			vim.keymap.set("n", "zR", ufo.openAllFolds)
-			vim.keymap.set("n", "zM", ufo.closeAllFolds)
-
-			ufo.setup()
-		end,
-	},
-
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
@@ -397,13 +375,6 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-
-			-- Support nvim-ufo
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities.textDocument.foldingRange = {
-				dynamicRegistration = false,
-				lineFoldingOnly = true,
-			}
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
