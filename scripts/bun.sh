@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 bun upgrade
-bun install --global prettier
+bun install --global prettier@latest
