@@ -18,6 +18,7 @@ git config --global alias.psa "!git remote | xargs -L1 git push"
 git config --global alias.psaf "!git remote | xargs -L1 git push --force-with-lease"
 git config --global alias.psf "push --force-with-lease"
 git config --global alias.rank "shortlog -nse --no-merges"
+git config --global alias.sh show
 git config --global alias.st status
 git config --global alias.sw switch
 git config --global alias.tg "tag --sort=-version:refname"
