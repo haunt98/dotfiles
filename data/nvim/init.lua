@@ -168,6 +168,7 @@ require("lazy").setup({
 					},
 				},
 				filters = {
+					git_ignored = false,
 					custom = {
 						"\\.bin$",
 						"\\.class$",
