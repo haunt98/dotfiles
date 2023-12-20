@@ -31,6 +31,7 @@ local flexi_ibm = {
 	},
 	font_size = 18.0,
 	line_height = 1.2,
+	default_cursor_style = "SteadyBlock",
 }
 
 return {
@@ -94,7 +95,7 @@ return {
 
 	native_macos_fullscreen_mode = true,
 
-	default_cursor_style = "SteadyBar",
+	default_cursor_style = flexi_ibm.default_cursor_style,
 	audible_bell = "Disabled",
 
 	-- Remove in next version
