@@ -1,12 +1,43 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-return {
+-- Custom fonts config
+local flexi_ibm = {
 	font = wezterm.font({
-		family = "Iosevka Term SS08",
+		family = "Flexi IBM VGA False",
 	}),
-	font_size = 16.0,
+	font_rules = {
+		{
+			intensity = "Bold",
+			italic = true,
+			font = wezterm.font({
+				family = "Flexi IBM VGA False",
+			}),
+		},
+		{
+			intensity = "Bold",
+			italic = false,
+			font = wezterm.font({
+				family = "Flexi IBM VGA False",
+			}),
+		},
+		{
+			intensity = "Normal",
+			italic = true,
+			font = wezterm.font({
+				family = "Flexi IBM VGA False",
+			}),
+		},
+	},
+	font_size = 18.0,
 	line_height = 1.2,
+}
+
+return {
+	font = flexi_ibm.font,
+	font_rules = flexi_ibm.font_rules,
+	font_size = flexi_ibm.font_size,
+	line_height = flexi_ibm.line_height,
 	use_cap_height_to_scale_fallback_fonts = true,
 
 	color_scheme = "Catppuccin Mocha",
