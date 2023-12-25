@@ -58,6 +58,11 @@ if command -v eza &>/dev/null; then
     alias la="eza -la"
 fi
 
+# https://github.com/wilfred/difftastic
+if command -v difft &>/dev/null; then
+    export DFT_DISPLAY=inline
+fi
+
 # https://github.com/charmbracelet/glow
 if command -v glow &>/dev/null; then
     alias gl="glow"
