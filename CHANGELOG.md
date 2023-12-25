@@ -1,5 +1,49 @@
 # CHANGELOG
 
+## v0.13.13 (2023-12-25)
+
+### Others
+
+- chore(nvim): disable preview lsp code action (2023-12-25)
+
+- chore(diffstastic): diff inline not side by side (2023-12-25)
+
+- chore(scripts): fzf install all (2023-12-22)
+
+- chore: add go fix (2023-12-21)
+
+- build: bump go 1.20 (2023-12-21)
+
+- chore(go): add betteralign (2023-12-21)
+
+- chore(wezterm): use custom default_cursor_style (2023-12-21)
+
+- chore(wezterm): split custom fonts config (2023-12-21)
+
+- build: upgrade modules (2023-12-21)
+
+- chore(git): alias git show (2023-12-16)
+
+- chore(nvim): allow gitignore (2023-12-16)
+
+- chore(scripts): update fzf (2023-12-10)
+
+- build(deps): bump actions/setup-go from 4 to 5 (2023-12-07)
+
+- chore(scripts): update bun (2023-12-05)
+
+- build(deps): bump github.com/urfave/cli/v2 from 2.25.7 to 2.26.0 (2023-12-04)
+
+- chore(nvim): remove ufo (2023-11-17)
+
+- chore(kitty): disable liga (2023-11-14)
+
+- chore(zsh): add INC_APPEND_HISTORY_TIME (2023-11-12)
+
+- Revert "chore(zsh): add - to wordchars" (2023-11-11)
+
+- chore(changelog): generate v0.13.12 (2023-11-11)
+
 ## v0.13.12 (2023-11-11)
 
 ### Others
