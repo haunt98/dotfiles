@@ -142,7 +142,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "gr", ":FzfLua lsp_references<CR>")
 			vim.keymap.set("n", "<Space>i", ":FzfLua lsp_implementations<CR>")
 			vim.keymap.set("n", "gi", ":FzfLua lsp_implementations<CR>")
-			vim.keymap.set("n", "<Space>ca", ":FzfLua lsp_code_actions<CR>")
+			vim.keymap.set("n", "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>")
 		end,
 	},
 
