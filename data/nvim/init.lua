@@ -392,11 +392,6 @@ require("lazy").setup({
 				capabilities = capabilities,
 			})
 
-			-- Proto
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bufls
-			lspconfig.bufls.setup({
-				capabilities = capabilities,
-			})
 
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
