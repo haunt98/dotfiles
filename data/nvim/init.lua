@@ -392,7 +392,6 @@ require("lazy").setup({
 				capabilities = capabilities,
 			})
 
-
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
