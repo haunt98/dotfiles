@@ -16,8 +16,6 @@ go install github.com/antonmedv/fx@latest
 go install mvdan.cc/gofumpt@latest
 go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 go install golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment@latest
-go install github.com/dkorunic/betteralign/cmd/betteralign@latest
 go install gotest.tools/gotestsum@latest
-go install github.com/maruel/panicparse/v2@latest
 
 go install github.com/ankitpokhrel/jira-cli/cmd/jira@latest
