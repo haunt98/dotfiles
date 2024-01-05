@@ -2,7 +2,25 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- Custom fonts config
-local flexi_ibm = {
+local font_sudo = {
+	font = wezterm.font({
+		family = "Sudo Var",
+	}),
+	font_size = 18.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
+local font_hermit = {
+	font = wezterm.font({
+		family = "Hermit",
+	}),
+	font_size = 14.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
+local font_flexi_ibm = {
 	font = wezterm.font({
 		family = "Flexi IBM VGA False",
 	}),
@@ -34,11 +52,13 @@ local flexi_ibm = {
 	default_cursor_style = "SteadyBlock",
 }
 
+local current_font = font_hermit
+
 return {
-	font = flexi_ibm.font,
-	font_rules = flexi_ibm.font_rules,
-	font_size = flexi_ibm.font_size,
-	line_height = flexi_ibm.line_height,
+	font = current_font.font,
+	font_rules = current_font.font_rules,
+	font_size = current_font.font_size,
+	line_height = current_font.line_height,
 	use_cap_height_to_scale_fallback_fonts = true,
 
 	color_scheme = "Catppuccin Mocha",
@@ -95,7 +115,7 @@ return {
 
 	native_macos_fullscreen_mode = true,
 
-	default_cursor_style = flexi_ibm.default_cursor_style,
+	default_cursor_style = current_font.default_cursor_style,
 	audible_bell = "Disabled",
 
 	-- Remove in next version
