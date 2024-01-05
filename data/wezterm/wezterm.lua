@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- Custom fonts config
+-- https://github.com/jenskutilek/sudo-font
 local font_sudo = {
 	font = wezterm.font({
 		family = "Sudo Var",
@@ -11,6 +12,7 @@ local font_sudo = {
 	default_cursor_style = "SteadyBar",
 }
 
+-- https://github.com/pcaro90/hermit
 local font_hermit = {
 	font = wezterm.font({
 		family = "Hermit",
@@ -20,6 +22,7 @@ local font_hermit = {
 	default_cursor_style = "SteadyBar",
 }
 
+-- https://int10h.org/blog/2018/05/flexi-ibm-vga-scalable-truetype-font/
 local font_flexi_ibm = {
 	font = wezterm.font({
 		family = "Flexi IBM VGA False",
@@ -52,7 +55,20 @@ local font_flexi_ibm = {
 	default_cursor_style = "SteadyBlock",
 }
 
-local current_font = font_hermit
+-- https://berkeleygraphics.com/typefaces/berkeley-mono/
+local font_berkeley = {
+	font = wezterm.font({
+		family = "Berkeley Mono",
+		harfbuzz_features = { "ss02" },
+	}),
+	font_size = 16.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
+local current_font = font_berkeley
+
+local current_color_scheme = "Catppuccin Mocha"
 
 return {
 	font = current_font.font,
@@ -61,7 +77,7 @@ return {
 	line_height = current_font.line_height,
 	use_cap_height_to_scale_fallback_fonts = true,
 
-	color_scheme = "Catppuccin Mocha",
+	color_scheme = current_color_scheme,
 
 	keys = {
 		{
