@@ -56,6 +56,7 @@ alias meo="make"
 if command -v eza &>/dev/null; then
     alias ls="eza"
     alias la="eza -la"
+    alias lt="eza --tree"
 fi
 
 # https://github.com/wilfred/difftastic
