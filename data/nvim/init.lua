@@ -114,6 +114,14 @@ require("lazy").setup({
 						StatusLineNC = {
 							fg = colors.flamingo,
 						},
+						-- Eva-01 vibe
+						-- https://enjoykeycap.github.io/docs/gmk-keycaps/Mecha-01/
+						-- https://www.pantone.com/connect/802-C
+						-- https://www.pantone.com/connect/267-C
+						DiagnosticVirtualTextError = {
+							fg = "#44d62c",
+							bg = "#5f249e",
+						},
 					}
 				end,
 			})
