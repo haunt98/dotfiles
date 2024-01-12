@@ -453,6 +453,13 @@ require("lazy").setup({
 				local hl = "DiagnosticSign" .. type
 				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 			end
+
+			-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
+			vim.diagnostic.config({
+				virtual_text = {
+					prefix = "🪓",
+				},
+			})
 		end,
 	},
 })
