@@ -55,6 +55,16 @@ local font_flexi_ibm = {
 	default_cursor_style = "SteadyBlock",
 }
 
+-- http://www.kreativekorp.com/software/fonts/fairfaxhd/
+local font_fairfax = {
+	font = wezterm.font({
+		family = "Fairfax Hax HD",
+	}),
+	font_size = 16.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBlock",
+}
+
 -- https://berkeleygraphics.com/typefaces/berkeley-mono/
 local font_berkeley = {
 	font = wezterm.font({
