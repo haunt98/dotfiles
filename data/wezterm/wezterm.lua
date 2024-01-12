@@ -60,7 +60,7 @@ local font_fairfax = {
 	font = wezterm.font({
 		family = "Fairfax Hax HD",
 	}),
-	font_size = 16.0,
+	font_size = 18.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBlock",
 }
@@ -76,7 +76,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_berkeley
+local current_font = font_fairfax
 
 local current_color_scheme = "Catppuccin Mocha"
 
