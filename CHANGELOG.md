@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## v0.14.0 (2024-01-13)
+
+### Others
+
+- chore(nvim): use ]b [b (2024-01-13)
+
+- chore(wezterm): use Fairfax font for sometime (2024-01-13)
+
+- chore(wezterm): more fonts (2024-01-13)
+
+- chore(nvim): more emoji (2024-01-12)
+
+- chore(nvim): konichiwa evangelions (2024-01-11)
+
+- chore(nvim): bring back treesitter (2024-01-08)
+
+- chore(zsh): alias tree (2024-01-06)
+
+- chore: remove unused (2024-01-05)
+
+- chore(nvim): format (2024-01-05)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2024-01-05)
+
+- chore: remove bufls (2024-01-05)
+
+- chore(wezterm): more fonts (2024-01-05)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2024-01-05)
+
+- chore(wezterm): improve current font (2024-01-05)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2023-12-30)
+
+- chore(nvim): lsp chaos (2023-12-30)
+
+- chore(git): disable rebase (2023-12-26)
+
+- chore(scripts): disable git rebase (2023-12-26)
+
+- chore(changelog): generate v0.13.13 (2023-12-25)
+
 ## v0.13.13 (2023-12-25)
 
 ### Others
