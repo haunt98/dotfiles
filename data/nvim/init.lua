@@ -317,7 +317,6 @@ require("lazy").setup({
 		config = function()
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 			require("mini.bracketed").setup({
-				buffer = { suffix = "", options = {} },
 				comment = { suffix = "", options = {} },
 				file = { suffix = "", options = {} },
 				indent = { suffix = "", options = {} },
