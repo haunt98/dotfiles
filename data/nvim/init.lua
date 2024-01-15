@@ -456,7 +456,7 @@ require("lazy").setup({
 			-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
 			vim.diagnostic.config({
 				virtual_text = {
-					prefix = "🪓",
+					prefix = "🏓",
 				},
 			})
 		end,
