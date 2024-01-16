@@ -390,6 +390,18 @@ require("lazy").setup({
 					"go",
 					"proto",
 				},
+				highlight = {
+					enabled = true,
+					disable = function(lang, bufnr)
+						-- Skip if not go, proto
+						if lang ~= "go" and lang ~= "proto" then
+							return true
+						end
+
+						-- Skip big files with many lines
+						return vim.api.nvim_buf_line_count(bufnr) > 2000
+					end,
+				},
 			})
 		end,
 	},
