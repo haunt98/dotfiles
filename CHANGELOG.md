@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v0.14.1 (2024-01-17)
+
+### Added
+
+- feat(scripts): init homebrew (2024-01-15)
+
+### Others
+
+- config(nvim): disable treesitter on big files (2024-01-17)
+
+- chore(scripts): improve git log (2024-01-16)
+
+- config: add ripgrep (2024-01-16)
+
+- config: more good (2024-01-16)
+
+- config(nvim): love ping pong (2024-01-15)
+
+- chore(changelog): generate v0.14.0 (2024-01-13)
+
 ## v0.14.0 (2024-01-13)
 
 ### Others
