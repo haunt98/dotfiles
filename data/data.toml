@@ -38,6 +38,10 @@ url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-light.icns?raw=tru
 internal = "data/wezterm"
 external = "~/.config/wezterm"
 
+[[apps.fd.paths]]
+internal = "data/fd/.ignore"
+external = "~/.ignore"
+
 [[apps.bat.paths]]
 internal = "data/bat"
 external = "~/.config/bat"
@@ -46,9 +50,9 @@ external = "~/.config/bat"
 internal = "data/bat/themes/Catppuccin-mocha.tmTheme"
 url = "https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme"
 
-[[apps.fd.paths]]
-internal = "data/fd/.ignore"
-external = "~/.ignore"
+[[apps.ripgrep.paths]]
+internal = "data/ripgrep"
+external = "~/.config/ripgrep"
 
 [[apps.tmux.paths]]
 internal = "data/tmux"

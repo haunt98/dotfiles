@@ -3,11 +3,13 @@
 rustup update
 
 cargo install --locked \
-    fd-find bat ripgrep git-delta eza tealdeer \
+    fd-find bat git-delta eza tealdeer \
     difftastic vivid zellij zoxide \
     fnm stylua taplo-cli \
     pfetch pokeget \
     daktilo kbt
+
+cargo install --locked ripgrep --features 'pcre2'
 
 bat cache --build
 

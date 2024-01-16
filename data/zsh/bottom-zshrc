@@ -49,6 +49,11 @@ alias g="git"
 alias moe="make"
 alias meo="make"
 
+# https://github.com/BurntSushi/ripgrep
+if command -v rg &>/dev/null; then
+    export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
+fi
+
 # https://github.com/eza-community/eza
 if command -v eza &>/dev/null; then
     alias ls="eza"
