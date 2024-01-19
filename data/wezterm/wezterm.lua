@@ -65,6 +65,15 @@ local font_fairfax = {
 	default_cursor_style = "SteadyBlock",
 }
 
+local font_0xproto = {
+	font = wezterm.font({
+		family = "0xProto",
+	}),
+	font_size = 16.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
 -- https://berkeleygraphics.com/typefaces/berkeley-mono/
 local font_berkeley = {
 	font = wezterm.font({
@@ -76,7 +85,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_fairfax
+local current_font = font_0xproto
 
 local current_color_scheme = "Catppuccin Mocha"
 
