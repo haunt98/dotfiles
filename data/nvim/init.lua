@@ -389,18 +389,29 @@ require("lazy").setup({
 				ensure_installed = {
 					"go",
 					"proto",
+					"lua",
 				},
 				highlight = {
 					enabled = true,
 					disable = function(lang, bufnr)
 						-- Skip if not go, proto
-						if lang ~= "go" and lang ~= "proto" then
+						if lang ~= "go" and lang ~= "proto" and lang ~= "lua" then
 							return true
 						end
 
 						-- Skip big files with many lines
 						return vim.api.nvim_buf_line_count(bufnr) > 2000
 					end,
+				},
+				-- https://www.reddit.com/r/neovim/comments/r10llx/the_most_amazing_builtin_feature_nobody_ever
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<Space>k",
+						node_incremental = "<Space>k",
+						scope_incremental = false,
+						node_decremental = "<Space>j",
+					},
 				},
 			})
 		end,

@@ -69,7 +69,7 @@ local font_0xproto = {
 	font = wezterm.font({
 		family = "0xProto",
 	}),
-	font_size = 16.0,
+	font_size = 14.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
 }
@@ -80,12 +80,12 @@ local font_berkeley = {
 		family = "Berkeley Mono",
 		harfbuzz_features = { "ss02" },
 	}),
-	font_size = 16.0,
+	font_size = 14.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_0xproto
+local current_font = font_berkeley
 
 local current_color_scheme = "Catppuccin Mocha"
 
