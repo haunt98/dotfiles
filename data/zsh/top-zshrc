@@ -39,12 +39,6 @@ DISABLE_LS_COLORS="true"
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_untracked_files_dirty
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# https://github.com/romkatv/powerlevel10k#how-do-i-configure-instant-prompt
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-
-# https://github.com/romkatv/powerlevel10k#mitigation
-typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
-
 # https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
