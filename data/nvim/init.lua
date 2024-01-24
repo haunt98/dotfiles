@@ -484,4 +484,17 @@ require("lazy").setup({
 			})
 		end,
 	},
+
+	-- https://github.com/github/copilot.vim
+	{
+		"github/copilot.vim",
+		init = function()
+			vim.g.copilot_filetypes = {
+				["*"] = false,
+				go = true,
+				proto = true,
+				lua = true,
+			}
+		end,
+	},
 })
