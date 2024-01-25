@@ -403,16 +403,6 @@ require("lazy").setup({
 						return vim.api.nvim_buf_line_count(bufnr) > 2000
 					end,
 				},
-				-- https://www.reddit.com/r/neovim/comments/r10llx/the_most_amazing_builtin_feature_nobody_ever
-				incremental_selection = {
-					enable = true,
-					keymaps = {
-						init_selection = "<Space>k",
-						node_incremental = "<Space>k",
-						scope_incremental = false,
-						node_decremental = "<Space>j",
-					},
-				},
 			})
 		end,
 	},
