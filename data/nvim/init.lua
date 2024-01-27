@@ -459,7 +459,7 @@ require("lazy").setup({
 				Error = "🤬",
 				Warn = "😤",
 				Info = "🤔",
-				Hint = "😎",
+				Hint = "🤯",
 			}
 			for type, icon in pairs(signs) do
 				local hl = "DiagnosticSign" .. type
