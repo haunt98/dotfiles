@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cargo install --force --locked \
-    fd-find bat git-delta eza tealdeer \
+    fd-find bat git-delta eza sd tealdeer \
     difftastic vivid zellij zoxide \
     fnm stylua taplo-cli \
     pfetch pokeget \
