@@ -311,6 +311,11 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/ntpeters/vim-better-whitespace
+	{
+		"ntpeters/vim-better-whitespace",
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
