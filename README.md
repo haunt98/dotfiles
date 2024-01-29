@@ -25,4 +25,17 @@ go build ./cmd/dot
 ./dot download
 ```
 
-![nvim-000](https://raw.githubusercontent.com/haunt98/posts-images/main/nvim-000.jxl)
+## Support
+
+- [neovim](https://github.com/neovim/neovim)
+- [kitty](https://github.com/kovidgoyal/kitty)
+- [wezterm](https://github.com/wez/wezterm)
+- [fd](https://github.com/sharkdp/fd)
+- [bat](https://github.com/sharkdp/bat)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [tmux](https://github.com/tmux/tmux)
+- [zellij](https://github.com/zellij-org/zellij)
+- [gdu](https://github.com/dundee/gdu)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [pokeget](https://github.com/talwat/pokeget-rs)
+- [btop](https://github.com/aristocratos/btop)
