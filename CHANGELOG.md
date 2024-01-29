@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## v0.14.2 (2024-01-30)
+
+### Added
+
+- feat: add copilot again (2024-01-24)
+
+### Others
+
+- chore: add support README (2024-01-30)
+
+- config(nvim): bring back nvim-tree icon (2024-01-30)
+
+- config: revamp p10k with lean (2024-01-30)
+
+- config(kitty): sync latest theme (2024-01-30)
+
+- config: add btop (2024-01-30)
+
+- chore(scripts): add nix fun (2024-01-30)
+
+- config(wezterm): update docs (2024-01-30)
+
+- config(nvim): strip whitespace (2024-01-28)
+
+- chore(scripts): add sd (2024-01-28)
+
+- config(kitty): enable nerd font (2024-01-28)
+
+- config(kitty): use victor mono as italic font (2024-01-28)
+
+- config(nvim): brain blow (2024-01-28)
+
+- config(nvim): remove incremental selection (2024-01-25)
+
+- chore(scripts): improve fzf (2024-01-25)
+
+- config(zsh): optimize p10k (2024-01-24)
+
+- config(zsh): custom fzf (2024-01-24)
+
+- config(nvim): use treesitter (2024-01-23)
+
+- chore(zsh): try to fix wrong shell when resize terminal (2024-01-19)
+
+- chore(changelog): generate v0.14.1 (2024-01-17)
+
 ## v0.14.1 (2024-01-17)
 
 ### Added
