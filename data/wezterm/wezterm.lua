@@ -153,6 +153,5 @@ return {
 	default_cursor_style = current_font.default_cursor_style,
 	audible_bell = "Disabled",
 
-	-- Remove in next version
 	front_end = "WebGpu",
 }
