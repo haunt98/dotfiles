@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-sudo -i sh -c 'nix-channel --update'
+sudo -i sh -c 'nix-channel --update --quiet'
 sudo -i sh -c 'nix-env -uA nixpkgs.nix'
-sudo -i sh -c 'nix-collect-garbage -d'
+sudo -i sh -c 'nix-collect-garbage -d --quiet'
 
 nix-env -uA \
     nixpkgs.less nixpkgs.curl \
@@ -12,4 +12,4 @@ nix-env -uA \
     nixpkgs.btop nixpkgs.cpufetch nixpkgs.onefetch \
     nixpkgs.clang-tools nixpkgs.python3 nixpkgs.pipx nixpkgs.plantuml
 
-nix-collect-garbage -d
+nix-collect-garbage -d --quiet
