@@ -2,14 +2,14 @@
 
 rustup update
 
-cargo install --locked \
+cargo install --quiet --locked \
     fd-find bat git-delta eza sd tealdeer \
     difftastic vivid zellij zoxide \
     fnm stylua taplo-cli \
     pfetch pokeget \
     daktilo kbt
 
-cargo install --locked ripgrep --features 'pcre2'
+cargo install --quiet --locked ripgrep --features 'pcre2'
 
 bat cache --build
 
