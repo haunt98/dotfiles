@@ -85,3 +85,19 @@ external = "~/.config/btop/themes"
 [[apps.btop.paths]]
 internal = "data/btop/themes/catppuccin_mocha.theme"
 url = "https://raw.githubusercontent.com/catppuccin/btop/main/themes/catppuccin_mocha.theme"
+
+[[apps.newsboat.paths]]
+internal = "data/newsboat/config"
+external = "~/.newsboat/config"
+
+[[apps.newsboat.paths]]
+internal = "data/newsboat/urls"
+external = "~/.newsboat/urls"
+
+[[apps.newsboat.paths]]
+internal = "data/newsboat/dark"
+external = "~/.newsboat/dark"
+
+[[apps.newsboat.paths]]
+internal = "data/newsboat/dark"
+urk = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"

@@ -39,3 +39,4 @@ go build ./cmd/dot
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [pokeget](https://github.com/talwat/pokeget-rs)
 - [btop](https://github.com/aristocratos/btop)
+- [newsboat](https://github.com/newsboat/newsboat)
