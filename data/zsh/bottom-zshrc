@@ -1,17 +1,22 @@
 # vim: set filetype=zsh:
 # Put this on bottom of ~/.zshrc
 
-# Alias
-alias g="git"
-alias moe="make"
-alias meo="make"
-
 # https://github.com/romkatv/powerlevel10k#how-do-i-configure-instant-prompt
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # https://github.com/romkatv/powerlevel10k#mitigation
 typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
 typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+
+# Alias
+alias g="git"
+alias moe="make"
+alias meo="make"
+
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+export XDG_CONFIG_HOME=~/.config
+export XDG_CACHE_HOME=~/.cache
+export XDG_DATA_HOME=~/.local/share
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
 export LESS="-RF -i -K -s -x2 --wordwrap"
