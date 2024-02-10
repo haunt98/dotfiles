@@ -12,7 +12,7 @@ test:
 	go test -race -failfast ./...
 
 test-color:
-	go install github.com/haunt98/go-test-color@latest
+	# go install github.com/haunt98/go-test-color@latest
 	go-test-color -race -failfast ./...
 
 coverage:
@@ -31,9 +31,9 @@ lint:
 	golangci-lint run ./...
 
 format:
-	go install github.com/haunt98/gofimports/cmd/gofimports@latest
-	go install mvdan.cc/gofumpt@latest
-	go install mvdan.cc/sh/v3/cmd/shfmt@latest
+	# go install github.com/haunt98/gofimports/cmd/gofimports@latest
+	# go install mvdan.cc/gofumpt@latest
+	# go install mvdan.cc/sh/v3/cmd/shfmt@latest
 	gofimports -w --company github.com/make-go-great,github.com/haunt98 .
 	gofumpt -w -extra .
 	shfmt -w -ci -i 4 ./scripts ./data/zsh
