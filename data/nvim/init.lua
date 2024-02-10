@@ -337,14 +337,7 @@ require("lazy").setup({
 			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
-			require("mini.comment").setup({
-				mappings = {
-					comment = "<D-/>",
-					comment_line = "<D-/>",
-					comment_visual = "<D-/>",
-					textobject = "<D-/>",
-				},
-			})
+			require("mini.comment").setup()
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
 			require("mini.completion").setup({

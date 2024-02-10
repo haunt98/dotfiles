@@ -112,6 +112,27 @@ if command -v nnn &>/dev/null; then
     export NNN_PLUG="p:-preview-tui"
 fi
 
+
+# https://github.com/ajeetdsouza/zoxide
+if command -v zoxide &>/dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+
+# https://github.com/atuinsh/atuin
+if command -v atuin &>/dev/null; then
+    eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+fi
+
+# https://github.com/Schniz/fnm
+if command -v fnm &>/dev/null; then
+    eval "$(fnm env --use-on-cd)"
+fi
+
+# Depend on your company
+# https://github.com/ankitpokhrel/jira-cli
+# Remember to jira init local not cloud
+export JIRA_AUTH_TYPE=bearer
+
 # https://github.com/talwat/pokeget-rs
 rand_poke=$((RANDOM % 6))
 if [[ $rand_poke -eq 0 ]]; then
@@ -127,8 +148,3 @@ elif [[ $rand_poke -eq 4 ]]; then
 elif [[ $rand_poke -eq 5 ]]; then
     cat ~/.config/pokeget/squirtle.txt
 fi
-
-# Depend on your company
-# https://github.com/ankitpokhrel/jira-cli
-# Remember to jira init local not cloud
-export JIRA_AUTH_TYPE=bearer
