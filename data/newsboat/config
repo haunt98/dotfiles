@@ -1,1 +1,8 @@
+# https://wiki.archlinux.org/title/Newsboat
+
 include ~/.newsboat/dark
+
+auto-reload yes
+reload-threads 16
+confirm-mark-all-feeds-read no
+confirm-mark-feed-read no
