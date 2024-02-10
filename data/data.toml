@@ -100,4 +100,8 @@ external = "~/.newsboat/dark"
 
 [[apps.newsboat.paths]]
 internal = "data/newsboat/dark"
-urk = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
+url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
+
+[[apps.atuin.paths]]
+internal = "data/atuin/config.toml"
+external = "~/.config/atuin/config.toml"
