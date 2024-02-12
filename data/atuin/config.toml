@@ -1,7 +1,6 @@
 # https://docs.atuin.sh/configuration/config/
 
 style = "compact"
-
+inline_height = 16
 show_preview = true
-
 enter_accept = false
