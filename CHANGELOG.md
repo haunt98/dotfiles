@@ -1,5 +1,65 @@
 # CHANGELOG
 
+## v0.14.3 (2024-02-13)
+
+### Added
+
+- feat: support newsboat (2024-02-05)
+
+### Others
+
+- config(nvim): add go icon (2024-02-13)
+
+- config(nvim): red icon gitignore (2024-02-13)
+
+- config(newsboat): move to ~/.config, add vim binding (2024-02-13)
+
+- config(atuin): reduce height (2024-02-12)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2024-02-12)
+
+- config(zsh): enable atuin keybinding (2024-02-12)
+
+- chore: update readme (2024-02-11)
+
+- config(zsh): more apps (2024-02-10)
+
+- config(atuin): init (2024-02-10)
+
+- chore(scripts): add newsboat (2024-02-10)
+
+- config(newsboat): sync latest blog (2024-02-10)
+
+- chore(git): use git rerere (2024-02-10)
+
+- config(nvim): use cmd+/ to comment (2024-02-09)
+
+- config(zsh): export xdg (2024-02-06)
+
+- chore(scripts): cargo quiet (2024-02-02)
+
+- config(nvim): re-add treesitter context (2024-02-02)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2024-02-01)
+
+- config(kitty): add shell (2024-02-01)
+
+- config(kitty): change italic font (2024-01-31)
+
+- chore(scripts): fzf completion (2024-01-31)
+
+- chore(scripts): add github gh cli (2024-01-31)
+
+- config(kitty): use many fonts as possible (2024-01-31)
+
+- config(nvim): fzf-lua requires icon (2024-01-31)
+
+- chore(scripts): keep nix quiet (2024-01-30)
+
+- config(kitty): add font_features (2024-01-30)
+
+- chore(changelog): generate v0.14.2 (2024-01-30)
+
 ## v0.14.2 (2024-01-30)
 
 ### Added
