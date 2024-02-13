@@ -106,13 +106,6 @@ if command -v vivid &>/dev/null; then
     export LS_COLORS="$(vivid generate catppuccin-mocha)"
 fi
 
-# https://github.com/jarun/nnn
-if command -v nnn &>/dev/null; then
-    export NNN_FIFO=/tmp/nnn.fifo
-    export NNN_PLUG="p:-preview-tui"
-fi
-
-
 # https://github.com/ajeetdsouza/zoxide
 if command -v zoxide &>/dev/null; then
     eval "$(zoxide init zsh)"
