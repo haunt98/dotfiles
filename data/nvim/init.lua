@@ -318,6 +318,22 @@ require("lazy").setup({
 		"ntpeters/vim-better-whitespace",
 	},
 
+	-- https://github.com/nvim-tree/nvim-web-devicons
+	{
+		"kyazdani42/nvim-web-devicons",
+		config = function()
+			require("nvim-web-devicons").setup({
+				override_by_filename = {
+					[".gitignore"] = {
+						icon = "",
+						color = "#f1502f",
+						name = "Gitignore",
+					},
+				},
+			})
+		end,
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
