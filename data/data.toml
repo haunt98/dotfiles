@@ -88,15 +88,15 @@ url = "https://raw.githubusercontent.com/catppuccin/btop/main/themes/catppuccin_
 
 [[apps.newsboat.paths]]
 internal = "data/newsboat/config"
-external = "~/.newsboat/config"
+external = "~/.config/newsboat/config"
 
 [[apps.newsboat.paths]]
 internal = "data/newsboat/urls"
-external = "~/.newsboat/urls"
+external = "~/.config/newsboat/urls"
 
 [[apps.newsboat.paths]]
 internal = "data/newsboat/dark"
-external = "~/.newsboat/dark"
+external = "~/.config/newsboat/dark"
 
 [[apps.newsboat.paths]]
 internal = "data/newsboat/dark"
