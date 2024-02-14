@@ -28,7 +28,7 @@ git config --global core.fsmonitor true
 git config --global diff.colorMoved no
 git config --global fetch.prune true
 git config --global init.defaultBranch main
-git config --global merge.conflictstyle diff3
+git config --global merge.conflictstyle zdiff3
 git config --global pull.rebase false
 git config --global pull.twohead ort
 git config --global push.autoSetupRemote true
