@@ -91,11 +91,6 @@ if command -v difft &>/dev/null; then
     export DFT_TAB_WIDTH=2
 fi
 
-# https://github.com/charmbracelet/glow
-if command -v glow &>/dev/null; then
-    alias gl="glow"
-fi
-
 # https://restic.readthedocs.io/en/latest/manual_rest.html
 if command -v restic &>/dev/null; then
     export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
