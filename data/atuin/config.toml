@@ -4,3 +4,4 @@ style = "compact"
 inline_height = 16
 show_preview = true
 enter_accept = false
+prefers_reduced_motion = true
