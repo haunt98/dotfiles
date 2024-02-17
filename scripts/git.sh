@@ -29,14 +29,19 @@ git config --global core.excludesfile "~/.config/git/ignore"
 git config --global core.fsmonitor true
 git config --global diff.algorithm histogram
 git config --global diff.colorMoved no
+git config --global diff.submodule true
 git config --global fetch.prune true
+git config --global fetch.prunetags true
 git config --global init.defaultBranch main
+git config --global log.date iso
 git config --global merge.conflictstyle zdiff3
 git config --global pull.rebase false
 git config --global pull.twohead ort
 git config --global push.autoSetupRemote true
 git config --global rebase.stat true
 git config --global rerere.enabled true
+git config --global status.submoduleSummary true
+git config --global submodule.recurse true
 
 # https://github.com/dandavison/delta
 git config --global core.pager delta
