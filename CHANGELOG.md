@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## v0.15.0 (2024-02-17)
+
+### Added
+
+- feat: merge cfg real and demo (2024-02-17)
+
+- feat: add flag app to specific which app to operate (2024-02-17)
+
+- feat: improve load config (2024-02-17)
+
+- feat: remove nnn (2024-02-14)
+
+### Others
+
+- chore: more git gud (2024-02-17)
+
+- chore: refactor name (2024-02-17)
+
+- config(nvim): more copilot (2024-02-17)
+
+- config(git): init global ignore (2024-02-17)
+
+- chore: remove plantuml (2024-02-16)
+
+- config(atuin): disable up-down keybinding (2024-02-15)
+
+- chore: use git zdiff3 (2024-02-14)
+
+- chore: remove glow and more go goodies (2024-02-14)
+
+- chore: add yazi to replace nnn (2024-02-14)
+
+- config: sync latest (2024-02-14)
+
+- config(kitty): use maple mono without ligatures (2024-02-13)
+
+- chore(changelog): generate v0.14.3 (2024-02-13)
+
 ## v0.14.3 (2024-02-13)
 
 ### Added
