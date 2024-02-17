@@ -527,8 +527,11 @@ require("lazy").setup({
 			vim.g.copilot_filetypes = {
 				["*"] = false,
 				go = true,
-				proto = true,
 				lua = true,
+				proto = true,
+				markdown = true,
+				toml = true,
+				yaml = true,
 			}
 		end,
 	},
