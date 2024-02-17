@@ -24,7 +24,10 @@ git config --global alias.sw switch
 git config --global alias.tg "tag --sort=-version:refname"
 
 # Misc
+git config --global commit.verbose true
+git config --global core.excludesfile "~/.config/git/ignore"
 git config --global core.fsmonitor true
+git config --global diff.algorithm histogram
 git config --global diff.colorMoved no
 git config --global fetch.prune true
 git config --global init.defaultBranch main

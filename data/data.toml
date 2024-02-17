@@ -1,3 +1,7 @@
+[[apps.git.paths]]
+internal = "data/git/ignore"
+external = "~/.config/git/ignore"
+
 [[apps.zsh.paths]]
 internal = "data/zsh/top-zshrc"
 external = "~/.config/zsh/top-zshrc"
