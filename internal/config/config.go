@@ -19,12 +19,12 @@ const (
 var ErrConfigNotFound = errors.New("config not found")
 
 type Config interface {
-	Install() error
-	Update() error
+	Install(appNames ...string) error
+	Update(appNames ...string) error
 	Clean() error
-	Diff() error
-	Download() error
-	Validate() error
+	Diff(appNames ...string) error
+	Download(appNames ...string) error
+	Validate(appNames ...string) error
 }
 
 type ConfigApps struct {
@@ -74,4 +74,13 @@ func loadConfig(bytes []byte, unmarshalFn func(data []byte, v any) error) (*Conf
 	}
 
 	return &cfgReal, &cfgDemo, nil
+}
+
+// Helper
+func slice2map(vs []string) map[string]struct{} {
+	m := make(map[string]struct{}, len(vs))
+	for _, v := range vs {
+		m[v] = struct{}{}
+	}
+	return m
 }

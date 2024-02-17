@@ -23,10 +23,18 @@ type ConfigReal struct {
 var _ Config = (*ConfigReal)(nil)
 
 // Install internal -> external
-func (c *ConfigReal) Install() error {
-	eg := new(errgroup.Group)
+func (c *ConfigReal) Install(appNames ...string) error {
+	var eg errgroup.Group
 
-	for _, app := range c.Apps {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
@@ -56,10 +64,18 @@ func (c *ConfigReal) Install() error {
 }
 
 // Update external -> internal
-func (c *ConfigReal) Update() error {
-	eg := new(errgroup.Group)
+func (c *ConfigReal) Update(appNames ...string) error {
+	var eg errgroup.Group
 
-	for _, app := range c.Apps {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
@@ -88,10 +104,18 @@ func (c *ConfigReal) Update() error {
 	return nil
 }
 
-func (c *ConfigReal) Download() error {
-	eg := new(errgroup.Group)
+func (c *ConfigReal) Download(appNames ...string) error {
+	var eg errgroup.Group
 
-	for _, app := range c.Apps {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.URL == "" {
 				continue
@@ -184,8 +208,16 @@ func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	return unusedDirs, nil
 }
 
-func (c *ConfigReal) Diff() error {
-	for _, app := range c.Apps {
+func (c *ConfigReal) Diff(appNames ...string) error {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
@@ -200,10 +232,18 @@ func (c *ConfigReal) Diff() error {
 	return nil
 }
 
-func (c *ConfigReal) Validate() error {
-	eg := new(errgroup.Group)
+func (c *ConfigReal) Validate(appNames ...string) error {
+	var eg errgroup.Group
 
-	for _, app := range c.Apps {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			app := app
 			p := Path{

@@ -8,8 +8,16 @@ type ConfigDemo struct {
 
 var _ Config = (*ConfigDemo)(nil)
 
-func (c *ConfigDemo) Install() error {
-	for _, app := range c.Apps {
+func (c *ConfigDemo) Install(appNames ...string) error {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
@@ -22,8 +30,16 @@ func (c *ConfigDemo) Install() error {
 	return nil
 }
 
-func (c *ConfigDemo) Update() error {
-	for _, app := range c.Apps {
+func (c *ConfigDemo) Update(appNames ...string) error {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
@@ -36,8 +52,16 @@ func (c *ConfigDemo) Update() error {
 	return nil
 }
 
-func (c *ConfigDemo) Download() error {
-	for _, app := range c.Apps {
+func (c *ConfigDemo) Download(appNames ...string) error {
+	mAppNames := slice2map(appNames)
+
+	for appName, app := range c.Apps {
+		if len(appNames) > 0 {
+			if _, ok := mAppNames[appName]; !ok {
+				continue
+			}
+		}
+
 		for _, p := range app.Paths {
 			if p.URL == "" {
 				continue
@@ -63,10 +87,10 @@ func (c *ConfigDemo) Clean() error {
 	return nil
 }
 
-func (c *ConfigDemo) Diff() error {
+func (c *ConfigDemo) Diff(_ ...string) error {
 	return nil
 }
 
-func (c *ConfigDemo) Validate() error {
+func (c *ConfigDemo) Validate(_ ...string) error {
 	return nil
 }
