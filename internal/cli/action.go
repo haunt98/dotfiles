@@ -104,17 +104,13 @@ func (a *action) loadConfig(c *cli.Context, command string) (config.Config, erro
 	a.getFlags(c)
 	a.log("Start command [%s] with flags [%+v]\n", command, a.flags)
 
-	cfgReal, cfgDemo, err := config.LoadConfig(currentDir)
+	cfg, err := config.LoadConfig(currentDir, a.flags.dryRun)
 	if err != nil {
 		return nil, fmt.Errorf("config: failed to load: %w", err)
 	}
-	a.log("Config apps [%+v]\n", cfgReal.Apps)
+	a.log("Config apps %+v\n", cfg.List())
 
-	if a.flags.dryRun {
-		return cfgDemo, nil
-	}
-
-	return cfgReal, nil
+	return cfg, nil
 }
 
 func (a *action) getFlags(c *cli.Context) {
