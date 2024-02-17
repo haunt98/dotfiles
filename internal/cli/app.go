@@ -11,32 +11,32 @@ import (
 )
 
 const (
-	appName  = "dotfiles"
-	appUsage = "managing dotfiles"
+	name  = "dotfiles"
+	usage = "managing dotfiles"
 
-	installCommand = "install"
-	installUsage   = "install user configs from dotfiles"
+	commandInstallName  = "install"
+	commandInstallUsage = "install user configs from dotfiles"
 
-	updateCommand = "update"
-	updateUsage   = "update dotfiles from user configs"
+	commandUpdateName  = "update"
+	commandUpdateUsage = "update dotfiles from user configs"
 
-	downloadCommand = "download"
-	downloadUsage   = "download configs from internet (theme for example)"
+	commandDownloadName  = "download"
+	commandDownloadUsage = "download configs from internet (theme for example)"
 
-	cleanCommand = "clean"
-	cleanUsage   = "clean unused dotfiles"
+	commandCleanName  = "clean"
+	commandCleanUsage = "clean unused dotfiles"
 
-	diffCommand = "diff"
-	diffUsage   = "diff dotfiles with user configs"
+	commandDiffName  = "diff"
+	commandDiffUsage = "diff dotfiles with user configs"
 
-	validateCommand = "validate"
-	validateUsage   = "validate config"
+	commandValidateName = "validate"
+	commonValidateUsage = "validate config"
 
-	verboseFlag  = "verbose"
-	verboseUsage = "show what is going on"
+	flagVerboseName  = "verbose"
+	flagVerboseUsage = "show what is going on"
 
-	dryRunFlag  = "dry-run"
-	dryRunUsage = "demo mode without actually changing anything"
+	flagDryRunName  = "dry-run"
+	flagDryRunUsage = "demo mode without actually changing anything"
 
 	currentDir = "."
 )
@@ -64,93 +64,93 @@ func NewApp() *App {
 	a := &action{}
 
 	cliApp := &cli.App{
-		Name:  appName,
-		Usage: appUsage,
+		Name:  name,
+		Usage: usage,
 		Commands: []*cli.Command{
 			{
-				Name:    installCommand,
+				Name:    commandInstallName,
 				Aliases: installAliases,
-				Usage:   installUsage,
+				Usage:   commandInstallUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
-						Name:  verboseFlag,
-						Usage: verboseUsage,
+						Name:  flagVerboseName,
+						Usage: flagVerboseUsage,
 					},
 					&cli.BoolFlag{
-						Name:  dryRunFlag,
-						Usage: dryRunUsage,
+						Name:  flagDryRunName,
+						Usage: flagDryRunUsage,
 					},
 				},
 				Action: a.runInstall,
 			},
 			{
-				Name:    updateCommand,
+				Name:    commandUpdateName,
 				Aliases: updateAliases,
-				Usage:   updateUsage,
+				Usage:   commandUpdateUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
-						Name:  verboseFlag,
-						Usage: verboseUsage,
+						Name:  flagVerboseName,
+						Usage: flagVerboseUsage,
 					},
 					&cli.BoolFlag{
-						Name:  dryRunFlag,
-						Usage: dryRunUsage,
+						Name:  flagDryRunName,
+						Usage: flagDryRunUsage,
 					},
 				},
 				Action: a.runUpdate,
 			},
 			{
-				Name:    downloadCommand,
+				Name:    commandDownloadName,
 				Aliases: downloadAliases,
-				Usage:   downloadUsage,
+				Usage:   commandDownloadUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
-						Name:  verboseFlag,
-						Usage: verboseUsage,
+						Name:  flagVerboseName,
+						Usage: flagVerboseUsage,
 					},
 					&cli.BoolFlag{
-						Name:  dryRunFlag,
-						Usage: dryRunUsage,
+						Name:  flagDryRunName,
+						Usage: flagDryRunUsage,
 					},
 				},
 				Action: a.runDownload,
 			},
 			{
-				Name:    cleanCommand,
+				Name:    commandCleanName,
 				Aliases: cleanAliases,
-				Usage:   cleanUsage,
+				Usage:   commandCleanUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
-						Name:  verboseFlag,
-						Usage: verboseUsage,
+						Name:  flagVerboseName,
+						Usage: flagVerboseUsage,
 					},
 					&cli.BoolFlag{
-						Name:  dryRunFlag,
-						Usage: dryRunUsage,
+						Name:  flagDryRunName,
+						Usage: flagDryRunUsage,
 					},
 				},
 				Action: a.runClean,
 			},
 			{
-				Name:    diffCommand,
+				Name:    commandDiffName,
 				Aliases: diffAliases,
-				Usage:   diffUsage,
+				Usage:   commandDiffUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
-						Name:  verboseFlag,
-						Usage: verboseUsage,
+						Name:  flagVerboseName,
+						Usage: flagVerboseUsage,
 					},
 				},
 				Action: a.runDiff,
 			},
 			{
-				Name:    validateCommand,
+				Name:    commandValidateName,
 				Aliases: validateAliases,
-				Usage:   validateUsage,
+				Usage:   commonValidateUsage,
 				Flags: []cli.Flag{
 					&cli.BoolFlag{
-						Name:  verboseFlag,
-						Usage: verboseUsage,
+						Name:  flagVerboseName,
+						Usage: flagVerboseUsage,
 					},
 				},
 				Action: a.runValidate,
@@ -167,11 +167,11 @@ func NewApp() *App {
 func (a *App) Run() {
 	// Prevent running at runtime
 	if _, ok := denyOSes[runtime.GOOS]; ok {
-		color.PrintAppError(appName, fmt.Sprintf("OS [%s] is not supported right now", runtime.GOOS))
+		color.PrintAppError(name, fmt.Sprintf("OS [%s] is not supported right now", runtime.GOOS))
 		return
 	}
 
 	if err := a.cliApp.Run(os.Args); err != nil {
-		color.PrintAppError(appName, err.Error())
+		color.PrintAppError(name, err.Error())
 	}
 }

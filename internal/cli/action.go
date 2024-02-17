@@ -22,7 +22,7 @@ func (a *action) runHelp(c *cli.Context) error {
 }
 
 func (a *action) runInstall(c *cli.Context) error {
-	cfg, err := a.loadConfig(c, installCommand)
+	cfg, err := a.loadConfig(c, commandInstallName)
 	if err != nil {
 		return err
 	}
@@ -35,7 +35,7 @@ func (a *action) runInstall(c *cli.Context) error {
 }
 
 func (a *action) runUpdate(c *cli.Context) error {
-	cfg, err := a.loadConfig(c, updateCommand)
+	cfg, err := a.loadConfig(c, commandUpdateName)
 	if err != nil {
 		return err
 	}
@@ -48,7 +48,7 @@ func (a *action) runUpdate(c *cli.Context) error {
 }
 
 func (a *action) runDownload(c *cli.Context) error {
-	cfg, err := a.loadConfig(c, downloadCommand)
+	cfg, err := a.loadConfig(c, commandDownloadName)
 	if err != nil {
 		return err
 	}
@@ -61,7 +61,7 @@ func (a *action) runDownload(c *cli.Context) error {
 }
 
 func (a *action) runClean(c *cli.Context) error {
-	cfg, err := a.loadConfig(c, cleanCommand)
+	cfg, err := a.loadConfig(c, commandCleanName)
 	if err != nil {
 		return err
 	}
@@ -74,7 +74,7 @@ func (a *action) runClean(c *cli.Context) error {
 }
 
 func (a *action) runDiff(c *cli.Context) error {
-	cfg, err := a.loadConfig(c, diffCommand)
+	cfg, err := a.loadConfig(c, commandDiffName)
 	if err != nil {
 		return err
 	}
@@ -87,7 +87,7 @@ func (a *action) runDiff(c *cli.Context) error {
 }
 
 func (a *action) runValidate(c *cli.Context) error {
-	cfg, err := a.loadConfig(c, validateCommand)
+	cfg, err := a.loadConfig(c, commandValidateName)
 	if err != nil {
 		return err
 	}
@@ -117,8 +117,8 @@ func (a *action) loadConfig(c *cli.Context, command string) (config.Config, erro
 }
 
 func (a *action) getFlags(c *cli.Context) {
-	a.flags.verbose = c.Bool(verboseFlag)
-	a.flags.dryRun = c.Bool(dryRunFlag)
+	a.flags.verbose = c.Bool(flagVerboseName)
+	a.flags.dryRun = c.Bool(flagDryRunName)
 }
 
 func (a *action) log(format string, v ...interface{}) {
