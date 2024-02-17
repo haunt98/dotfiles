@@ -44,58 +44,25 @@ type Path struct {
 
 // LoadConfig return config, configDemo
 func LoadConfig(path string) (*ConfigReal, *ConfigDemo, error) {
-	cfgReal, cfgDemo, err := loadConfigJSON(path)
+	configPathJSON := filepath.Join(path, configDirPath, configFileJSON)
+	bytes, err := os.ReadFile(configPathJSON)
 	if err == nil {
-		return cfgReal, cfgDemo, nil
-	} else if os.IsNotExist(err) {
-		return nil, nil, err
+		return loadConfig(bytes, json.Unmarshal)
 	}
 
-	cfgReal, cfgDemo, err = loadConfigTOML(path)
+	configPathTOML := filepath.Join(path, configDirPath, configFileTOML)
+	bytes, err = os.ReadFile(configPathTOML)
 	if err == nil {
-		return cfgReal, cfgDemo, nil
-	} else if os.IsNotExist(err) {
-		return nil, nil, err
+		return loadConfig(bytes, toml.Unmarshal)
 	}
 
 	return nil, nil, ErrConfigNotFound
 }
 
-func loadConfigJSON(path string) (*ConfigReal, *ConfigDemo, error) {
-	configPathJSON := filepath.Join(path, configDirPath, configFileJSON)
-
-	bytes, err := os.ReadFile(configPathJSON)
-	if err != nil {
-		return nil, nil, fmt.Errorf("os: failed to read file [%s]: %w", configPathJSON, err)
-	}
-
+func loadConfig(bytes []byte, unmarshalFn func(data []byte, v any) error) (*ConfigReal, *ConfigDemo, error) {
 	var cfgApps ConfigApps
-	if err = json.Unmarshal(bytes, &cfgApps); err != nil {
-		return nil, nil, fmt.Errorf("json: failed to unmarshal: %w", err)
-	}
-
-	cfgReal := ConfigReal{
-		ConfigApps: cfgApps,
-	}
-
-	cfgDemo := ConfigDemo{
-		ConfigApps: cfgApps,
-	}
-
-	return &cfgReal, &cfgDemo, nil
-}
-
-func loadConfigTOML(path string) (*ConfigReal, *ConfigDemo, error) {
-	configPathTOML := filepath.Join(path, configDirPath, configFileTOML)
-
-	bytes, err := os.ReadFile(configPathTOML)
-	if err != nil {
-		return nil, nil, fmt.Errorf("os: failed to read file [%s]: %w", configPathTOML, err)
-	}
-
-	var cfgApps ConfigApps
-	if err := toml.Unmarshal(bytes, &cfgApps); err != nil {
-		return nil, nil, fmt.Errorf("toml: failed to decode: %w", err)
+	if err := unmarshalFn(bytes, &cfgApps); err != nil {
+		return nil, nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
 	cfgReal := ConfigReal{
