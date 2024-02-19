@@ -31,7 +31,6 @@ git config --global diff.algorithm histogram
 git config --global diff.colorMoved no
 git config --global diff.submodule log
 git config --global fetch.prune true
-git config --global fetch.prunetags true
 git config --global init.defaultBranch main
 git config --global log.date iso
 git config --global merge.conflictstyle zdiff3
