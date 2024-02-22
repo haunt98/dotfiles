@@ -128,7 +128,6 @@ require("lazy").setup({
 
 			vim.cmd("colorscheme catppuccin")
 		end,
-		enabled = true,
 	},
 
 	-- https://github.com/ibhagwan/fzf-lua

@@ -6,6 +6,7 @@ https://github.com/gin-gonic/gin/commits/master.atom "~gin"
 https://github.com/go-gorm/gorm/commits/master.atom "~gorm"
 https://github.com/go-gorm/mysql/commits/master.atom "~gorm/mysql"
 https://github.com/go-sql-driver/mysql/commits/master.atom "~mysql"
+https://github.com/grpc/grpc-go/commits/master.atom "~grpc-go"
 https://github.com/matryer/moq/commits/main.atom "~moq"
 https://github.com/minio/minio-go/commits/master.atom "~minio-go"
 https://github.com/minio/minio/commits/master.atom "~minio"
@@ -54,4 +55,6 @@ https://www.basicappleguy.com/basicappleblog?format=rss
 https://www.copetti.org/index.xml
 https://www.theremingoat.com/blog?format=rss
 https://xeiaso.net/blog.rss
+
+https://turnoff.us/feed.xml
 https://xkcd.com/atom.xml
