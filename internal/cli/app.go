@@ -83,7 +83,7 @@ func NewApp() *App {
 						Name:  flagDryRunName,
 						Usage: flagDryRunUsage,
 					},
-					&cli.StringFlag{
+					&cli.StringSliceFlag{
 						Name:  flagAppName,
 						Usage: flagAppUsage,
 					},
@@ -103,7 +103,7 @@ func NewApp() *App {
 						Name:  flagDryRunName,
 						Usage: flagDryRunUsage,
 					},
-					&cli.StringFlag{
+					&cli.StringSliceFlag{
 						Name:  flagAppName,
 						Usage: flagAppUsage,
 					},
@@ -123,7 +123,7 @@ func NewApp() *App {
 						Name:  flagDryRunName,
 						Usage: flagDryRunUsage,
 					},
-					&cli.StringFlag{
+					&cli.StringSliceFlag{
 						Name:  flagAppName,
 						Usage: flagAppUsage,
 					},
@@ -171,7 +171,7 @@ func NewApp() *App {
 						Name:  flagVerboseName,
 						Usage: flagVerboseUsage,
 					},
-					&cli.StringFlag{
+					&cli.StringSliceFlag{
 						Name:  flagAppName,
 						Usage: flagAppUsage,
 					},
