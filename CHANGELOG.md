@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v0.15.1 (2024-02-22)
+
+### Fixed
+
+- fix(cli): use string slice flag (2024-02-22)
+
+### Others
+
+- chore(newsboat): more urls (2024-02-22)
+
+- chore(newsboat): add urls (2024-02-21)
+
+- chore(newsboat): more urls (2024-02-21)
+
+- chore(newsboat): more urls (2024-02-21)
+
+- config: add toolong (2024-02-20)
+
+- config(kitty): enable dotted zero 0 mapple mono (2024-02-20)
+
+- config(powerlevel10k): switch back robbyrussell theme (2024-02-19)
+
+- config(kitty): use Maple Mono instead of 0xProto (2024-02-19)
+
+- chore: no need to prune tags if use 2 remotes (2024-02-19)
+
+- chore: fix git (2024-02-18)
+
+- chore(changelog): generate v0.15.0 (2024-02-17)
+
 ## v0.15.0 (2024-02-17)
 
 ### Added
