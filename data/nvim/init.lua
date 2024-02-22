@@ -398,6 +398,7 @@ require("lazy").setup({
 			vim.g.neoformat_enabled_json = { "denofmt" }
 			vim.g.neoformat_enabled_lua = { "stylua" }
 			vim.g.neoformat_enabled_markdown = { "denofmt" }
+			vim.g.neoformat_enabled_python = { "ruff" }
 			vim.g.neoformat_enabled_sh = { "shfmt" }
 			vim.g.neoformat_enabled_toml = { "taplo" }
 			vim.g.neoformat_enabled_zsh = { "shfmt" }
@@ -418,8 +419,9 @@ require("lazy").setup({
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"go",
-					"proto",
 					"lua",
+					"proto",
+					"python",
 				},
 				highlight = {
 					enabled = true,
@@ -527,8 +529,9 @@ require("lazy").setup({
 				["*"] = false,
 				go = true,
 				lua = true,
-				proto = true,
 				markdown = true,
+				proto = true,
+				python = true,
 				toml = true,
 				yaml = true,
 			}
