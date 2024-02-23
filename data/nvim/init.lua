@@ -326,14 +326,16 @@ require("lazy").setup({
 				color = "#519aba",
 				name = "go",
 			}
+			local icon_git = {
+				icon = "",
+				color = "#f1502f",
+				name = "Gitignore",
+			}
 
 			require("nvim-web-devicons").setup({
 				override_by_filename = {
-					[".gitignore"] = {
-						icon = "",
-						color = "#f1502f",
-						name = "Gitignore",
-					},
+					[".gitignore"] = icon_git,
+					[".gitmodules"] = icon_git,
 					["go.mod"] = icon_go,
 					["go.sum"] = icon_go,
 				},
