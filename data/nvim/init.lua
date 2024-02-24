@@ -319,7 +319,7 @@ require("lazy").setup({
 
 	-- https://github.com/nvim-tree/nvim-web-devicons
 	{
-		"kyazdani42/nvim-web-devicons",
+		"nvim-tree/nvim-web-devicons",
 		config = function()
 			local icon_go = {
 				icon = "",
