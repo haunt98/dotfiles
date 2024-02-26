@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v0.15.2 (2024-02-26)
+
+### Others
+
+- config(nvim): more icons goodies (2024-02-26)
+
+- config(nvim): fix wrong nvim-web-devicons (2024-02-24)
+
+- chore(newsboat): add more urls (2024-02-23)
+
+- config(nvim): add more icon (2024-02-23)
+
+- chore: more tools (2024-02-22)
+
+- config(nvim): support python (2024-02-22)
+
+- chore(changelog): generate v0.15.1 (2024-02-22)
+
 ## v0.15.1 (2024-02-22)
 
 ### Fixed
