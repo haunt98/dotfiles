@@ -170,6 +170,10 @@ require("lazy").setup({
 					group_empty = true,
 					root_folder_label = false,
 					indent_width = 1,
+					special_files = {
+						"go.mod",
+						"go.sum",
+					},
 					icons = {
 						show = {
 							folder_arrow = false,
@@ -333,11 +337,25 @@ require("lazy").setup({
 			}
 
 			require("nvim-web-devicons").setup({
+				default = true,
+				strict = true,
 				override_by_filename = {
 					[".gitignore"] = icon_git,
 					[".gitmodules"] = icon_git,
+					["Makefile"] = {
+						icon = " ",
+						color = "#fffafa",
+						name = "Makefile",
+					},
 					["go.mod"] = icon_go,
 					["go.sum"] = icon_go,
+				},
+				override_by_extension = {
+					["sh"] = {
+						icon = " ",
+						color = "#44d62c",
+						name = "sh",
+					},
 				},
 			})
 		end,
@@ -529,8 +547,10 @@ require("lazy").setup({
 		init = function()
 			vim.g.copilot_filetypes = {
 				["*"] = false,
+				gitcommit = true,
 				go = true,
 				lua = true,
+				make = true,
 				markdown = true,
 				proto = true,
 				python = true,
