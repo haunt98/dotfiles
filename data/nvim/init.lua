@@ -135,7 +135,6 @@ require("lazy").setup({
 		"ibhagwan/fzf-lua",
 		dependencies = {
 			"neovim/nvim-lspconfig",
-			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
 			require("fzf-lua").setup({ "fzf-native" })
@@ -157,9 +156,6 @@ require("lazy").setup({
 	-- https://github.com/nvim-tree/nvim-tree.lua
 	{
 		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
 		init = function()
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
@@ -169,13 +165,15 @@ require("lazy").setup({
 				renderer = {
 					group_empty = true,
 					root_folder_label = false,
-					indent_width = 1,
+					indent_width = 2,
 					special_files = {
 						"go.mod",
 						"go.sum",
 					},
 					icons = {
 						show = {
+							file = false,
+							folder = false,
 							folder_arrow = false,
 						},
 					},
@@ -319,46 +317,6 @@ require("lazy").setup({
 	-- https://github.com/ntpeters/vim-better-whitespace
 	{
 		"ntpeters/vim-better-whitespace",
-	},
-
-	-- https://github.com/nvim-tree/nvim-web-devicons
-	{
-		"nvim-tree/nvim-web-devicons",
-		config = function()
-			local icon_go = {
-				icon = "",
-				color = "#519aba",
-				name = "go",
-			}
-			local icon_git = {
-				icon = "",
-				color = "#f1502f",
-				name = "Gitignore",
-			}
-
-			require("nvim-web-devicons").setup({
-				default = true,
-				strict = true,
-				override_by_filename = {
-					[".gitignore"] = icon_git,
-					[".gitmodules"] = icon_git,
-					["Makefile"] = {
-						icon = " ",
-						color = "#fffafa",
-						name = "Makefile",
-					},
-					["go.mod"] = icon_go,
-					["go.sum"] = icon_go,
-				},
-				override_by_extension = {
-					["sh"] = {
-						icon = " ",
-						color = "#44d62c",
-						name = "sh",
-					},
-				},
-			})
-		end,
 	},
 
 	-- https://github.com/echasnovski/mini.nvim
