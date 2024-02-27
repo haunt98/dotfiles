@@ -28,8 +28,11 @@ venv
 *.out
 
 # Software
-zig
+~/zig
 ~/qmk_firmware
 
 # Personal
 Homework
+
+# Work
+submodules
