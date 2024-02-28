@@ -394,50 +394,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/nvim-treesitter/nvim-treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = {
-			":TSUpdate",
-		},
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"go",
-					"lua",
-					"proto",
-					"python",
-				},
-				highlight = {
-					enabled = true,
-					disable = function(lang, bufnr)
-						-- Skip if not go, proto
-						if lang ~= "go" and lang ~= "proto" and lang ~= "lua" then
-							return true
-						end
-
-						-- Skip big files with many lines
-						return vim.api.nvim_buf_line_count(bufnr) > 2000
-					end,
-				},
-			})
-		end,
-	},
-
-	-- https://github.com/nvim-treesitter/nvim-treesitter-context
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = function()
-			require("treesitter-context").setup({
-				enable = true,
-				max_lines = 2,
-			})
-		end,
-	},
-
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
