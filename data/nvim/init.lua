@@ -408,11 +408,9 @@ require("lazy").setup({
 				settings = {
 					gopls = {
 						gofumpt = true,
-						semanticTokens = true,
 						usePlaceholders = true,
 					},
 				},
-				capabilities = capabilities,
 			})
 
 			-- General
