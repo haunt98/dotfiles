@@ -109,19 +109,30 @@ require("lazy").setup({
 				flavour = "mocha",
 				transparent_background = false,
 				custom_highlights = function(colors)
+					-- Eva-01 vibe
+					-- https://enjoykeycap.github.io/docs/gmk-keycaps/Mecha-01/
+					-- https://www.pantone.com/connect/802-C
+					-- https://www.pantone.com/connect/267-C
+					local color_eva = {
+						fg = "#44d62c",
+						bg = "#5f249e",
+					}
+
 					return {
+						-- Help my eyes
+						Comment = {
+							fg = colors.overlay2,
+						},
+						LineNr = {
+							fg = colors.overlay1,
+						},
 						-- Support mini.statusline
 						StatusLineNC = {
 							fg = colors.flamingo,
 						},
-						-- Eva-01 vibe
-						-- https://enjoykeycap.github.io/docs/gmk-keycaps/Mecha-01/
-						-- https://www.pantone.com/connect/802-C
-						-- https://www.pantone.com/connect/267-C
-						DiagnosticVirtualTextError = {
-							fg = "#44d62c",
-							bg = "#5f249e",
-						},
+						-- https://neovim.io/doc/user/diagnostic.html#diagnostic-highlights
+						DiagnosticVirtualTextError = color_eva,
+						DiagnosticSignError = color_eva,
 					}
 				end,
 			})
@@ -202,8 +213,9 @@ require("lazy").setup({
 						"^\\.git$",
 						"^\\.idea$",
 						"^\\.ruff_cache$",
-						"^\\.venv$",
 						"^\\.vscode$",
+						"pycache",
+						"venv",
 					},
 				},
 			})
@@ -418,6 +430,11 @@ require("lazy").setup({
 				},
 			})
 
+			-- Python
+			-- https://github.com/Microsoft/pyright
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
+			lspconfig.pyright.setup({})
+
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
@@ -458,6 +475,7 @@ require("lazy").setup({
 
 			-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
 			vim.diagnostic.config({
+				underline = false,
 				virtual_text = {
 					prefix = "🏓",
 				},

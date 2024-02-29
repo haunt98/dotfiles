@@ -20,6 +20,8 @@ mock
 
 # Python
 venv
+ruff_cache
+__pycache__
 
 # Java
 *.class
