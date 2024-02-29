@@ -39,6 +39,9 @@ DISABLE_LS_COLORS="true"
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_untracked_files_dirty
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#automatic-title
+DISABLE_AUTO_TITLE=true
+
 # https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE

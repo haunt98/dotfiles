@@ -1,6 +1,10 @@
 # vim: set filetype=zsh:
 # Put this on bottom of ~/.zshrc
 
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#automatic-title
+ZSH_THEME_TERM_TITLE_IDLE="%~"
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%~"
+
 # https://github.com/romkatv/powerlevel10k#how-do-i-configure-instant-prompt
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
