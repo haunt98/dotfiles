@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v0.15.3 (2024-03-01)
+
+### Others
+
+- chore(newsboat): more urls (2024-03-01)
+
+- config(kitty): powerline tab (2024-03-01)
+
+- config(nvim): disable underline lsp (2024-02-29)
+
+- chore(scripts): add pyright (2024-02-29)
+
+- config(nvim): ignore more in nvim-tree (2024-02-29)
+
+- chore(nvim): update gopls settings (2024-02-29)
+
+- chore(nvim): disable treesitter because performance (2024-02-29)
+
+- config(nvim): enable wrap for fzf-lua (2024-02-28)
+
+- chore(newsboat): more urls (2024-02-28)
+
+- chore: try to use qmk from nix (2024-02-28)
+
+- chore(fd): more ignore (2024-02-28)
+
+- chore(nvim): im tired of the icons (2024-02-26)
+
+- chore(changelog): generate v0.15.2 (2024-02-26)
+
 ## v0.15.2 (2024-02-26)
 
 ### Others
