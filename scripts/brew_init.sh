@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew install pcre2
+brew install libgit2 pcre2
