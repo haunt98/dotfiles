@@ -379,6 +379,14 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md
+			local hipatterns = require("mini.hipatterns")
+			hipatterns.setup({
+				highlighters = {
+					hex_color = hipatterns.gen_highlighter.hex_color(),
+				},
+			})
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
 			require("mini.pairs").setup()
 
