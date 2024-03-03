@@ -2,6 +2,16 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- Custom fonts config
+-- https://github.com/be5invis/Iosevka
+local font_iosevka = {
+	font = wezterm.font({
+		family = "Iosevka Term SS08",
+	}),
+	font_size = 16.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
 -- https://github.com/jenskutilek/sudo-font
 local font_sudo = {
 	font = wezterm.font({
@@ -86,7 +96,6 @@ local font_berkeley = {
 }
 
 local current_font = font_berkeley
-
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
