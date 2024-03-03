@@ -5,3 +5,7 @@ inline_height = 16
 show_preview = true
 enter_accept = false
 prefers_reduced_motion = true
+
+[stats]
+common_subcommands = ["brew", "cargo", "g", "git", "go", "nix-env"]
+common_prefix = ["sudo"]
