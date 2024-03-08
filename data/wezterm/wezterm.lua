@@ -95,7 +95,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_berkeley
+local current_font = font_sudo
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
