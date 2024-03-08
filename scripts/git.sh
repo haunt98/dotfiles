@@ -45,14 +45,16 @@ git config --global submodule.recurse true
 
 # https://github.com/dandavison/delta
 git config --global core.pager delta
-git config --global delta.navigate true
+git config --global delta.features catppuccin-mocha
 git config --global delta.file-decoration-style none
 git config --global delta.hunk-header-decoration-style none
+git config --global delta.navigate true
+git config --global include.path "~/.config/delta/mocha.gitconfig"
 
 # https://github.com/Wilfred/difftastic
-git config --global diff.tool difftastic
-git config --global difftool.prompt false
-git config --global difftool.difftastic.cmd 'difft "$LOCAL" "$REMOTE"'
-git config --global pager.difftool true
-git config --global alias.dft "difftool"
 git config --global alias.dfct "difftool --cached"
+git config --global alias.dft "difftool"
+git config --global diff.tool difftastic
+git config --global difftool.difftastic.cmd 'difft "$LOCAL" "$REMOTE"'
+git config --global difftool.prompt false
+git config --global pager.difftool true
