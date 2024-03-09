@@ -50,10 +50,6 @@ external = "~/.ignore"
 internal = "data/bat"
 external = "~/.config/bat"
 
-[[apps.bat.paths]]
-internal = "data/bat/themes/Catppuccin-mocha.tmTheme"
-url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
-
 [[apps.ripgrep.paths]]
 internal = "data/ripgrep"
 external = "~/.config/ripgrep"
