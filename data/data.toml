@@ -54,14 +54,6 @@ external = "~/.config/bat"
 internal = "data/ripgrep"
 external = "~/.config/ripgrep"
 
-[[apps.delta.paths]]
-internal = "data/delta/mocha.gitconfig"
-url = "https://raw.githubusercontent.com/catppuccin/delta/main/themes/mocha.gitconfig"
-
-[[apps.delta.paths]]
-internal = "data/delta/mocha.gitconfig"
-external = "~/.config/delta/mocha.gitconfig"
-
 [[apps.tmux.paths]]
 internal = "data/tmux"
 external = "~/.config/tmux"
