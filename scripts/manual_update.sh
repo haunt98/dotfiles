@@ -6,3 +6,8 @@ git -C ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions pull
 
 git -C ~/.fzf pull
 ~/.fzf/install --key-bindings --completion --update-rc --no-bash --no-fish
+
+# Less well known
+deno upgrade
+
+nexustools -i
