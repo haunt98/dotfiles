@@ -120,6 +120,12 @@ if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
+# https://github.com/walles/moar
+if command -v moar &>/dev/null; then
+    export MOAR="-no-linenumbers -quit-if-one-screen -wrap"
+    export PAGER=moar
+fi
+
 # Depend on your company
 # https://github.com/ankitpokhrel/jira-cli
 # Remember to jira init local not cloud

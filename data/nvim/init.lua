@@ -506,6 +506,7 @@ require("lazy").setup({
 				python = true,
 				toml = true,
 				yaml = true,
+				zsh = true,
 			}
 		end,
 	},
