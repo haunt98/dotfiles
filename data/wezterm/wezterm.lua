@@ -16,6 +16,7 @@ local font_iosevka = {
 local font_sudo = {
 	font = wezterm.font({
 		family = "Sudo Var",
+		harfbuzz_features = { "cv06" },
 	}),
 	font_size = 18.0,
 	line_height = 1.2,
