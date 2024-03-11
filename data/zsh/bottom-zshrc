@@ -122,7 +122,7 @@ fi
 
 # https://github.com/walles/moar
 if command -v moar &>/dev/null; then
-    export MOAR="-no-linenumbers -quit-if-one-screen -wrap"
+    export MOAR="-no-linenumbers -no-statusbar -quit-if-one-screen -wrap"
     export PAGER=moar
 fi
 
