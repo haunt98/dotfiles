@@ -8,4 +8,7 @@ git -C ~/.oh-my-zsh/custom/plugins/fzf-tab pull
 git -C ~/.fzf pull
 ~/.fzf/install --key-bindings --completion --update-rc --no-bash --no-fish
 
+bun upgrade
+bun install --global prettier@latest
+
 deno upgrade
