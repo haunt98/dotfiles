@@ -45,3 +45,6 @@ DISABLE_AUTO_TITLE=true
 # https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+
+# https://github.com/Aloxaf/fzf-tab
+zstyle ':completion:*' menu no

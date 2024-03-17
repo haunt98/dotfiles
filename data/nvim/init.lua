@@ -414,9 +414,6 @@ require("lazy").setup({
 			vim.g.neoformat_enabled_zsh = { "shfmt" }
 			vim.g.shfmt_opt = "-ci"
 		end,
-		config = function()
-			vim.keymap.set("v", "=", ":Neoformat<CR>")
-		end,
 	},
 
 	-- https://github.com/neovim/nvim-lspconfig
@@ -508,6 +505,13 @@ require("lazy").setup({
 				yaml = true,
 				zsh = true,
 			}
+			vim.g.copilot_no_tab_map = true
+		end,
+		config = function()
+			vim.keymap.set("i", "<M-Right>", 'copilot#Accept("\\<CR>")', {
+				expr = true,
+				replace_keycodes = false,
+			})
 		end,
 	},
 })
