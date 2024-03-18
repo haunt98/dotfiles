@@ -434,7 +434,7 @@ require("lazy").setup({
 					enabled = true,
 					disable = function(lang, bufnr)
 						-- Skip if not go, proto
-						if lang ~= "go" and lang ~= "proto" and lang ~= "lua" then
+						if lang ~= "go" and lang ~= "lua" and lang ~= "proto" and lang ~= "python" then
 							return true
 						end
 
