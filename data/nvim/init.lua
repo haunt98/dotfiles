@@ -36,6 +36,10 @@ vim.opt.mouse = "a"
 vim.opt.mousemodel = "popup"
 vim.opt.mousescroll = "ver:4,hor:6"
 
+-- Annoying
+vim.cmd([[aunmenu PopUp.How-to\ disable\ mouse]])
+vim.cmd([[aunmenu PopUp.-1-]])
+
 -- Workaround
 -- https://github.com/neovim/neovim/issues/16416
 -- https://github.com/rafamadriz/dotfiles/commit/1298a91558a7def5866ebee3a0b13899a6d1a78e
@@ -366,10 +370,6 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
 			require("mini.completion").setup({
-				window = {
-					info = { height = 8, width = 40, border = "rounded" },
-					signature = { height = 8, width = 40, border = "rounded" },
-				},
 				mappings = {
 					force_twostep = "<C-Space>",
 					force_fallback = "",
