@@ -130,6 +130,9 @@ require("lazy").setup({
 						LineNr = {
 							fg = colors.overlay1,
 						},
+						ExtraWhitespace = {
+							bg = color_eva.bg,
+						},
 						-- Support mini.statusline
 						StatusLineNC = {
 							fg = colors.flamingo,

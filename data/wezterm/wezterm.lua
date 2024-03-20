@@ -6,6 +6,7 @@ local act = wezterm.action
 local font_iosevka = {
 	font = wezterm.font({
 		family = "Iosevka Term SS08",
+		harfbuzz_features = { "calt=0", "CLIK" },
 	}),
 	font_size = 16.0,
 	line_height = 1.2,
@@ -96,7 +97,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_sudo
+local current_font = font_iosevka
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
