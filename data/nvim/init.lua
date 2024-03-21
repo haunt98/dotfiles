@@ -350,6 +350,15 @@ require("lazy").setup({
 		"ntpeters/vim-better-whitespace",
 	},
 
+	-- https://github.com/lukas-reineke/headlines.nvim
+	{
+		"lukas-reineke/headlines.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = true,
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
@@ -430,17 +439,13 @@ require("lazy").setup({
 				ensure_installed = {
 					"go",
 					"lua",
+					"markdown",
 					"proto",
 					"python",
 				},
 				highlight = {
 					enabled = true,
 					disable = function(lang, bufnr)
-						-- Skip if not go, proto
-						if lang ~= "go" and lang ~= "lua" and lang ~= "proto" and lang ~= "python" then
-							return true
-						end
-
 						-- Skip big files with many lines
 						return vim.api.nvim_buf_line_count(bufnr) > 2000
 					end,
