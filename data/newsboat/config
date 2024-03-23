@@ -12,3 +12,6 @@ unbind-key g
 unbind-key G
 bind-key g home
 bind-key G end
+
+unbind-key j
+unbind-key k

@@ -110,6 +110,12 @@ if command -v zoxide &>/dev/null; then
     eval "$(zoxide init zsh)"
 fi
 
+# https://github.com/walles/moar
+if command -v moar &>/dev/null; then
+    export MOAR="-no-linenumbers -no-statusbar -quit-if-one-screen -wrap"
+    export PAGER=moar
+fi
+
 # https://github.com/atuinsh/atuin
 if command -v atuin &>/dev/null; then
     eval "$(atuin init zsh --disable-up-arrow)"
@@ -120,10 +126,11 @@ if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
-# https://github.com/walles/moar
-if command -v moar &>/dev/null; then
-    export MOAR="-no-linenumbers -no-statusbar -quit-if-one-screen -wrap"
-    export PAGER=moar
+# https://github.com/pyenv/pyenv
+if command -v pyenv &>/dev/null; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
 fi
 
 # Depend on your company
