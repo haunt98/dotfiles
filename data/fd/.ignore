@@ -20,6 +20,7 @@ mock
 
 # Python
 venv
+.venv
 ruff_cache
 __pycache__
 
@@ -38,3 +39,6 @@ Homework
 
 # Work
 submodules
+
+# ThacSi
+*.tsv

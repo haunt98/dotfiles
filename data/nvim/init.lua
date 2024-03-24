@@ -348,6 +348,9 @@ require("lazy").setup({
 	-- https://github.com/ntpeters/vim-better-whitespace
 	{
 		"ntpeters/vim-better-whitespace",
+		init = function()
+			vim.g.better_whitespace_enabled = 0
+		end,
 	},
 
 	-- https://github.com/lukas-reineke/headlines.nvim
