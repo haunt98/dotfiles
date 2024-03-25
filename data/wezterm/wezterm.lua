@@ -34,6 +34,15 @@ local font_hermit = {
 	default_cursor_style = "SteadyBar",
 }
 
+local font_ibm = {
+	font = wezterm.font({
+		family = "IBM Plex Mono",
+	}),
+	font_size = 14.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
 -- https://int10h.org/blog/2018/05/flexi-ibm-vga-scalable-truetype-font/
 local font_flexi_ibm = {
 	font = wezterm.font({
@@ -62,7 +71,7 @@ local font_flexi_ibm = {
 			}),
 		},
 	},
-	font_size = 18.0,
+	font_size = 16.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBlock",
 }
@@ -72,7 +81,7 @@ local font_fairfax = {
 	font = wezterm.font({
 		family = "Fairfax Hax HD",
 	}),
-	font_size = 18.0,
+	font_size = 16.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBlock",
 }
@@ -97,7 +106,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_iosevka
+local current_font = font_ibm
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
