@@ -142,6 +142,9 @@ require("lazy").setup({
 						DiagnosticSignError = color_eva,
 					}
 				end,
+				integrations = {
+					treesitter_context = false,
+				},
 			})
 
 			vim.cmd("colorscheme catppuccin")
@@ -414,20 +417,33 @@ require("lazy").setup({
 	},
 
 	-- Programming languages
-	-- https://github.com/sbdchd/neoformat
+	-- https://github.com/stevearc/conform.nvim
 	{
-		"sbdchd/neoformat",
-		init = function()
-			vim.g.neoformat_enabled_go = {}
-			vim.g.neoformat_enabled_javascript = { "denofmt" }
-			vim.g.neoformat_enabled_json = { "denofmt" }
-			vim.g.neoformat_enabled_lua = { "stylua" }
-			vim.g.neoformat_enabled_markdown = { "denofmt" }
-			vim.g.neoformat_enabled_python = { "ruff" }
-			vim.g.neoformat_enabled_sh = { "shfmt" }
-			vim.g.neoformat_enabled_toml = { "taplo" }
-			vim.g.neoformat_enabled_zsh = { "shfmt" }
-			vim.g.shfmt_opt = "-ci"
+		"stevearc/conform.nvim",
+		config = function()
+			local conform = require("conform")
+			conform.setup({
+				formatters_by_ft = {
+					go = { "gofumpt" },
+					javascript = { "deno_fmt" },
+					json = { "deno_fmt" },
+					lua = { "stylua" },
+					markdown = { "deno_fmt" },
+					python = { "ruff_format" },
+					sh = { "shfmt" },
+					toml = { "taplo" },
+				},
+				log_level = vim.log.levels.DEBUG,
+				formatters = {
+					gofumpt = {
+						prepend_args = { "-extra" },
+					},
+				},
+			})
+
+			vim.keymap.set("n", "<Space>f", function()
+				conform.format()
+			end)
 		end,
 	},
 
@@ -512,9 +528,6 @@ require("lazy").setup({
 					vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "gk", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
-					vim.keymap.set("n", "<Space>f", function()
-						vim.lsp.buf.format({ async = true })
-					end, opts)
 				end,
 			})
 
@@ -536,9 +549,7 @@ require("lazy").setup({
 			-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
 			vim.diagnostic.config({
 				underline = false,
-				virtual_text = {
-					prefix = "🏓",
-				},
+				virtual_text = false,
 			})
 		end,
 	},
