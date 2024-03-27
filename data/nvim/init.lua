@@ -466,7 +466,7 @@ require("lazy").setup({
 					enabled = true,
 					disable = function(lang, bufnr)
 						-- Skip big files with many lines
-						return vim.api.nvim_buf_line_count(bufnr) > 2000
+						return vim.api.nvim_buf_line_count(bufnr) > 10000
 					end,
 				},
 			})

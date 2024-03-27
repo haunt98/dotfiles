@@ -146,11 +146,6 @@ return {
 			action = act.ActivatePaneDirection("Next"),
 		},
 		{
-			key = "o",
-			mods = "ALT",
-			action = act.SpawnCommandInNewTab({}),
-		},
-		{
 			key = "[",
 			mods = "ALT",
 			action = act.ActivateTabRelative(-1),
