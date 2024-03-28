@@ -137,6 +137,11 @@ require("lazy").setup({
 						StatusLineNC = {
 							fg = colors.flamingo,
 						},
+						-- Support gitsigns.nvim
+						GitSignsCurrentLineBlame = {
+							fg = colors.overlay1,
+							style = { "italic" },
+						},
 						-- https://neovim.io/doc/user/diagnostic.html#diagnostic-highlights
 						DiagnosticVirtualTextError = color_eva,
 						DiagnosticSignError = color_eva,
@@ -284,9 +289,9 @@ require("lazy").setup({
 				},
 				current_line_blame = true,
 				current_line_blame_opts = {
-					delay = 1200,
 					ignore_whitespace = true,
 				},
+				current_line_blame_formatter = "<author> <author_time:%Y-%m-%d> <summary>",
 				on_attach = function(bufnr)
 					local gs = package.loaded.gitsigns
 
