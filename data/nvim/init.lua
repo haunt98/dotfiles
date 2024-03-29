@@ -156,9 +156,9 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/ibhagwan/fzf-lua
+	-- https://gitlab.com/ibhagwan/fzf-lua
 	{
-		"ibhagwan/fzf-lua",
+		url = "https://gitlab.com/ibhagwan/fzf-lua.git",
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
@@ -505,7 +505,6 @@ require("lazy").setup({
 			lspconfig.gopls.setup({
 				settings = {
 					gopls = {
-						gofumpt = true,
 						usePlaceholders = true,
 					},
 				},
