@@ -121,6 +121,11 @@ if command -v atuin &>/dev/null; then
     eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
+# https://github.com/extrawurst/gitui
+if command -v gitui &>/dev/null; then
+    alias gu="gitui"
+fi
+
 # https://github.com/Schniz/fnm
 if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"

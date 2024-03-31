@@ -438,7 +438,6 @@ require("lazy").setup({
 					sh = { "shfmt" },
 					toml = { "taplo" },
 				},
-				log_level = vim.log.levels.DEBUG,
 				formatters = {
 					gofumpt = {
 						prepend_args = { "-extra" },
@@ -514,6 +513,11 @@ require("lazy").setup({
 			-- https://github.com/Microsoft/pyright
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
 			lspconfig.pyright.setup({})
+
+			-- Markdown
+			-- https://github.com/artempyanykh/marksman
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman
+			lspconfig.marksman.setup({})
 
 			-- General
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)

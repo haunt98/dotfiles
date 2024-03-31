@@ -105,3 +105,11 @@ url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
 [[apps.atuin.paths]]
 internal = "data/atuin/config.toml"
 external = "~/.config/atuin/config.toml"
+
+[[apps.gitui.paths]]
+internal = "data/gitui/theme.ron"
+external = "~/.config/gitui/theme.ron"
+
+[[apps.gitui.paths]]
+internal = "data/gitui/theme.ron"
+url = "https://raw.githubusercontent.com/catppuccin/gitui/main/theme/mocha.ron"
