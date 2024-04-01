@@ -2,7 +2,7 @@
 
 cargo install --quiet --force --locked \
     fd-find bat git-delta eza sd tealdeer \
-    difftastic vivid zellij zoxide atuin \
+    difftastic vivid zellij zoxide atuin gitui \
     fnm stylua taplo-cli \
     pfetch yazi-fm pokeget \
     daktilo kbt
