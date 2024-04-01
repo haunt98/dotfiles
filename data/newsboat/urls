@@ -27,6 +27,7 @@ https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
 https://github.com/wez/wezterm/commits/main.atom "~wezterm"
 
 https://github.com/redis/redis/commits/unstable.atom "~redis"
+https://github.com/valkey-io/valkey/commits/unstable.atom "~valkey"
 https://github.com/tigerbeetle/tigerbeetle/commits/main.atom "~tigerbeetle"
 
 https://github.com/caksoylar/keymap-drawer/commits/main.atom "~keymap-drawer"

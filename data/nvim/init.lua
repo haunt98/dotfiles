@@ -158,7 +158,7 @@ require("lazy").setup({
 
 	-- https://gitlab.com/ibhagwan/fzf-lua
 	{
-		url = "https://gitlab.com/ibhagwan/fzf-lua.git",
+		url = "https://codeberg.org/ibhagwan/fzf-lua.git",
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
