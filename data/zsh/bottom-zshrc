@@ -91,7 +91,6 @@ fi
 # https://github.com/wilfred/difftastic
 if command -v difft &>/dev/null; then
     export DFT_DISPLAY=inline
-    export DFT_CONTEXT=5
     export DFT_TAB_WIDTH=2
 fi
 
