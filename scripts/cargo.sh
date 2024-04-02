@@ -3,7 +3,7 @@
 rustup update
 
 cargo install --quiet --locked \
-    fd-find bat git-delta eza sd tealdeer \
+    fd-find bat git-delta eza sd tlrc \
     difftastic vivid zellij zoxide atuin gitui \
     fnm stylua taplo-cli \
     pfetch yazi-fm pokeget \
