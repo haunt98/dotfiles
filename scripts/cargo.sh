@@ -13,6 +13,9 @@ cargo install --quiet --locked ripgrep --features 'pcre2'
 
 bat cache --build
 
+cat /dev/null >~/.zsh_history
+atuin history prune
+
 pokeget --hide-name pikachu >data/pokeget/pikachu.txt
 pokeget --hide-name clefairy >data/pokeget/clefairy.txt
 pokeget --hide-name ditto >data/pokeget/ditto.txt
