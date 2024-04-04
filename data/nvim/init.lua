@@ -429,6 +429,7 @@ require("lazy").setup({
 			local conform = require("conform")
 			conform.setup({
 				formatters_by_ft = {
+					bash = { "shfmt" },
 					go = { "gofumpt" },
 					javascript = { "deno_fmt" },
 					json = { "deno_fmt" },
@@ -437,6 +438,7 @@ require("lazy").setup({
 					python = { "ruff_format" },
 					sh = { "shfmt" },
 					toml = { "taplo" },
+					zsh = { "shfmt" },
 				},
 				formatters = {
 					gofumpt = {
