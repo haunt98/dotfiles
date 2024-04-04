@@ -3,6 +3,20 @@
 style = "compact"
 inline_height = 16
 show_preview = true
+
+# Sync with data/zsh/top-zshrc
+history_filter = [
+  "^ls",
+  "^ll",
+  "^la",
+  "^cd$",
+  "^pwd$",
+  "^exit$",
+  "^builtin",
+  "^z$",
+  '^\[',
+]
+
 enter_accept = false
 prefers_reduced_motion = true
 
