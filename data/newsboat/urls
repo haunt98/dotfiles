@@ -2,72 +2,34 @@ https://github.com/golang/go/commits/master.atom "~go"
 https://github.com/golang/tools/commits/master.atom "~go/tools"
 
 https://github.com/IBM/sarama/commits/main.atom "~sarama"
-https://github.com/bytedance/gopkg/commits/develop.atom "~bytedance/gopkg"
-https://github.com/bytedance/sonic/commits/main.atom "~bytedance/sonic"
 https://github.com/gin-gonic/gin/commits/master.atom "~gin"
 https://github.com/go-gorm/gorm/commits/master.atom "~gorm"
 https://github.com/go-gorm/mysql/commits/master.atom "~gorm/mysql"
-https://github.com/go-redsync/redsync/commits/master.atom "~redsync"
 https://github.com/go-sql-driver/mysql/commits/master.atom "~mysql"
 https://github.com/grpc/grpc-go/commits/master.atom "~grpc-go"
-https://github.com/matryer/moq/commits/main.atom "~moq"
-https://github.com/minio/minio-go/commits/master.atom "~minio-go"
-https://github.com/minio/minio/commits/master.atom "~minio"
 https://github.com/redis/go-redis/commits/master.atom "~go-redis"
-https://github.com/redis/rueidis/commits/main.atom "~rueidis"
 https://github.com/sourcegraph/conc/commits/main.atom "~conc"
-https://github.com/spf13/cast/commits/master.atom "~cast"
-https://github.com/spf13/viper/commits/master.atom "~viper"
-https://github.com/stretchr/testify/commits/master.atom "~testify"
-https://github.com/tidwall/gjson/commits/master.atom "~gjson"
 https://github.com/uber-go/zap/commits/master.atom "~zap"
-https://github.com/urfave/cli/commits/main.atom "~urfave/cli"
 
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
 https://github.com/wez/wezterm/commits/main.atom "~wezterm"
-
-https://github.com/redis/redis/commits/unstable.atom "~redis"
-https://github.com/valkey-io/valkey/commits/unstable.atom "~valkey"
-https://github.com/tigerbeetle/tigerbeetle/commits/main.atom "~tigerbeetle"
 
 https://github.com/caksoylar/keymap-drawer/commits/main.atom "~keymap-drawer"
 https://github.com/qmk/qmk_firmware/commits/develop.atom "~qmk_firmware/develop"
 https://github.com/qmk/qmk_firmware/commits/master.atom "~qmk_firmware"
 
-https://github.com/0xType/0xProto/commits/main.atom "~0xProto"
-https://github.com/JetBrains/JetBrainsMono/commits/master.atom "~JetBrainsMono"
-https://github.com/arrowtype/recursive/commits/main.atom "~recursive"
-https://github.com/arrowtype/shantell-sans/commits/main.atom "~shantell-sans"
-https://github.com/jenskutilek/sudo-font/commits/master.atom "~sudo-font"
-https://github.com/rsms/inter/commits/master.atom "~inter"
-https://github.com/subframe7536/maple-font/commits/main.atom "~maple-font"
-
-https://github.com/AsahiLinux/asahi-installer/commits/main.atom "~asahi-installer"
-https://github.com/AsahiLinux/m1n1/commits/main.atom "~asahi-m1n1"
-
-http://googletesting.blogspot.com/atom.xml
-https://dotfyle.com/this-week-in-neovim/rss.xml
 https://go.dev/blog/feed.atom
-https://golangweekly.com/rss/
-https://kbd.news/rss2.php
-https://pointieststick.com/feed/
-https://thisweek.gnome.org/index.xml
 
 http://antirez.com/rss
+https://0pointer.net/blog/index.atom
 https://apenwarr.ca/log/rss.php
 https://brandur.org/atoms
 https://daniel.haxx.se/blog/feed/
 https://drewdevault.com/blog/index.xml
-https://grumpy.website/feed.xml
 https://jvns.ca/atom.xml
 https://michael.stapelberg.ch/feed.xml
 https://mitchellh.com/feed.xml
 https://research.swtch.com/feed.atom
 https://stephango.com/feed.xml
-https://www.basicappleguy.com/basicappleblog?format=rss
 https://www.copetti.org/index.xml
-https://www.theremingoat.com/blog?format=rss
 https://xeiaso.net/blog.rss
-
-https://turnoff.us/feed.xml
-https://xkcd.com/atom.xml
