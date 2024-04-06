@@ -7,6 +7,6 @@ nix-env -iA \
     nixpkgs.git nixpkgs.neovim \
     nixpkgs.fdupes nixpkgs.rsync nixpkgs.rclone nixpkgs.restic nixpkgs.taskwarrior \
     nixpkgs.ffmpegthumbnailer nixpkgs.asciinema-agg nixpkgs.yt-dlp nixpkgs.libjxl nixpkgs.newsboat \
-    nixpkgs.btop nixpkgs.cpufetch nixpkgs.onefetch \
-    nixpkgs.clang-tools nixpkgs.pipx nixpkgs.marksman nixpkgs.gh nixpkgs.moar \
+    nixpkgs.btop \
+    nixpkgs.clang-tools nixpkgs.pipx nixpkgs.marksman nixpkgs.moar \
     nixpkgs.qmk
