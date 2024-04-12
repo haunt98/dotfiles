@@ -25,6 +25,10 @@ export XDG_DATA_HOME=~/.local/share
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
 export LESS="-RF -i -K -s -x2 --wordwrap"
 
+# git
+# https://stackoverflow.com/a/43747486
+export GIT_COMPLETION_CHECKOUT_NO_GUESS=1
+
 # nvim
 if command -v nvim &>/dev/null; then
 	export EDITOR=nvim
