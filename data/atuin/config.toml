@@ -17,6 +17,7 @@ history_filter = [
   '^\[',
   "OA",
   "OB",
+  "OC",
 ]
 
 enter_accept = false
