@@ -442,6 +442,7 @@ require("lazy").setup({
 					python = { "ruff_format" },
 					sh = { "shfmt" },
 					toml = { "taplo" },
+					yaml = { "prettier" },
 					zsh = { "shfmt" },
 				},
 				formatters = {
