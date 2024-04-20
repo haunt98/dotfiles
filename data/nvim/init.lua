@@ -374,6 +374,11 @@ require("lazy").setup({
 		config = true,
 	},
 
+	-- https://github.com/shortcuts/no-neck-pain.nvim
+	{
+		"shortcuts/no-neck-pain.nvim",
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
