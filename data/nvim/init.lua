@@ -365,15 +365,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/lukas-reineke/headlines.nvim
-	{
-		"lukas-reineke/headlines.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = true,
-	},
-
 	-- https://github.com/shortcuts/no-neck-pain.nvim
 	{
 		"shortcuts/no-neck-pain.nvim",
