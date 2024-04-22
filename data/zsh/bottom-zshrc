@@ -142,10 +142,17 @@ if command -v pyenv &>/dev/null; then
 	eval "$(pyenv init -)"
 fi
 
-# Depend on your company
 # https://github.com/ankitpokhrel/jira-cli
-# Remember to jira init local not cloud
-export JIRA_AUTH_TYPE=bearer
+if command -v jira &>/dev/null; then
+	# Remember to jira init local not cloud
+	# Depend on your company
+	export JIRA_AUTH_TYPE=bearer
+fi
+
+# https://github.com/orhun/daktilo
+if command -v daktilo &>/dev/null; then
+	export DAKTILO_CONFIG="$HOME/.config/daktilo/daktilo.toml"
+fi
 
 # https://github.com/talwat/pokeget-rs
 rand_poke=$((RANDOM % 6))

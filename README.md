@@ -41,3 +41,5 @@ go build ./cmd/dot
 - [btop](https://github.com/aristocratos/btop)
 - [newsboat](https://github.com/newsboat/newsboat)
 - [atuin](https://github.com/atuinsh/atuin)
+- [gitui](https://github.com/extrawurst/gitui)
+- [daktilo](https://github.com/orhun/daktilo)
