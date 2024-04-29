@@ -6,5 +6,5 @@ brew install \
     fdupes rsync rclone restic taskwarrior-tui \
     yt-dlp newsboat \
     btop \
-    clang-format pipx marksman moar \
+    clang-format pyenv pipx marksman moar \
     qmk
