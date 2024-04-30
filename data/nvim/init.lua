@@ -86,6 +86,12 @@ vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-u>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-b>", "<Nop>")
 
+-- Disable more
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
