@@ -363,19 +363,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/ntpeters/vim-better-whitespace
-	{
-		"ntpeters/vim-better-whitespace",
-		init = function()
-			vim.g.better_whitespace_enabled = 0
-		end,
-	},
-
-	-- https://github.com/shortcuts/no-neck-pain.nvim
-	{
-		"shortcuts/no-neck-pain.nvim",
-	},
-
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
@@ -435,6 +422,7 @@ require("lazy").setup({
 			local conform = require("conform")
 			conform.setup({
 				formatters_by_ft = {
+					["_"] = { "trim_whitespace" },
 					bash = { "shfmt" },
 					go = { "gofumpt" },
 					javascript = { "deno_fmt" },
@@ -596,5 +584,19 @@ require("lazy").setup({
 				replace_keycodes = false,
 			})
 		end,
+	},
+}, {
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"editorconfig",
+				"gzip",
+				"spellfile",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
 	},
 })
