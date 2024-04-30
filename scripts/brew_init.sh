@@ -3,7 +3,7 @@
 brew install \
     libgit2 pcre2 xz \
     git neovim \
-    fdupes rsync rclone restic taskwarrior-tui \
+    fdupes rsync rclone restic \
     yt-dlp newsboat \
     btop \
     clang-format pyenv pipx marksman moar \
