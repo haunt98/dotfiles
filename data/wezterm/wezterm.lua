@@ -6,7 +6,7 @@ local act = wezterm.action
 local font_iosevka = {
 	font = wezterm.font({
 		family = "Iosevka Term SS08",
-		harfbuzz_features = { "calt=0", "CLIK" },
+		harfbuzz_features = { "CLIK" },
 	}),
 	font_size = 16.0,
 	line_height = 1.2,
