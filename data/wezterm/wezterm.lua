@@ -58,7 +58,6 @@ local font_flexi_ibm = {
 		},
 		{
 			intensity = "Bold",
-			italic = false,
 			font = wezterm.font({
 				family = "Flexi IBM VGA False",
 			}),
@@ -90,6 +89,33 @@ local font_0xproto = {
 	font = wezterm.font({
 		family = "0xProto",
 	}),
+	font_rules = {
+		{
+			intensity = "Bold",
+			italic = true,
+			font = wezterm.font({
+				family = "0xProto",
+				weight = "Regular",
+				italic = true,
+			}),
+		},
+		{
+			intensity = "Bold",
+			font = wezterm.font({
+				family = "0xProto",
+				weight = "Regular",
+			}),
+		},
+		{
+			intensity = "Normal",
+			italic = true,
+			font = wezterm.font({
+				family = "0xProto",
+				weight = "Regular",
+				italic = true,
+			}),
+		},
+	},
 	font_size = 14.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
@@ -106,7 +132,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_ibm
+local current_font = font_0xproto
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
