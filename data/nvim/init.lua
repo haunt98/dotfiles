@@ -23,6 +23,9 @@ vim.opt.expandtab = true
 -- Wrap
 vim.opt.breakindent = true
 
+-- Word define
+vim.opt.iskeyword:append("-")
+
 -- Clipboard support
 vim.opt.clipboard = "unnamedplus"
 
