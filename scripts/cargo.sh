@@ -4,7 +4,7 @@ rustup update
 
 cargo install --quiet --locked \
     fd-find bat git-delta eza sd tlrc \
-    difftastic vivid zellij zoxide atuin gitui \
+    difftastic vivid zellij zoxide atuin \
     fnm stylua taplo-cli \
     pokeget \
     daktilo
