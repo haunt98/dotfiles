@@ -102,7 +102,7 @@ local font_0xproto = {
 		{
 			intensity = "Bold",
 			font = wezterm.font({
-				family = "0xProto",
+				family = "Maple Mono",
 				weight = "Regular",
 			}),
 		},

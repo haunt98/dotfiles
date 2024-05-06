@@ -179,6 +179,9 @@ require("lazy").setup({
 						wrap = "wrap",
 					},
 				},
+				defaults = {
+					formatter = "path.filename_first",
+				},
 			})
 
 			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
