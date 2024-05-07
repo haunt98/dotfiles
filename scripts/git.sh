@@ -15,8 +15,8 @@ git config --global alias.lg1 "log --oneline --graph"
 git config --global alias.me merge
 git config --global alias.pl "pull --tags"
 git config --global alias.ps push
-git config --global alias.psa "!git remote | xargs -L1 git push"
-git config --global alias.psaf "!git remote | xargs -L1 git push --force-with-lease"
+git config --global alias.psa "!git remote | xargs -L1 -P8 git push"
+git config --global alias.psaf "!git remote | xargs -L1 -P8 git push --force-with-lease"
 git config --global alias.psf "push --force-with-lease"
 git config --global alias.rank "shortlog -nse --no-merges"
 git config --global alias.sh show
