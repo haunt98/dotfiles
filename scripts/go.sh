@@ -5,6 +5,7 @@ go install github.com/ayoisaiah/f2/cmd/f2@latest
 go install mvdan.cc/sh/v3/cmd/shfmt@latest
 
 go install golang.org/x/tools/gopls@latest
+go install golang.org/x/tools/cmd/goimports@latest
 
 go install github.com/mikefarah/yq/v4@latest
 go install github.com/itchyny/gojq/cmd/gojq@latest
