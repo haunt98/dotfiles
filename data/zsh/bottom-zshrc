@@ -93,6 +93,11 @@ if command -v eza &>/dev/null; then
 	alias lt="eza --tree"
 fi
 
+# https://github.com/kovidgoyal/kitty
+if command -v kitten &>/dev/null; then
+	alias kssh="kitten ssh"
+fi
+
 # https://github.com/wilfred/difftastic
 if command -v difft &>/dev/null; then
 	export DFT_DISPLAY=inline
