@@ -153,9 +153,6 @@ require("lazy").setup({
 						DiagnosticSignError = color_eva,
 					}
 				end,
-				integrations = {
-					treesitter_context = false,
-				},
 			})
 
 			vim.cmd("colorscheme catppuccin")
@@ -449,46 +446,6 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Space>f", function()
 				conform.format()
 			end)
-		end,
-	},
-
-	-- https://github.com/nvim-treesitter/nvim-treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = {
-			":TSUpdate",
-		},
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"go",
-					"lua",
-					"markdown",
-					"proto",
-					"python",
-				},
-				highlight = {
-					enabled = true,
-					disable = function(lang, bufnr)
-						-- Skip big files with many lines
-						return vim.api.nvim_buf_line_count(bufnr) > 10000
-					end,
-				},
-			})
-		end,
-	},
-
-	-- https://github.com/nvim-treesitter/nvim-treesitter-context
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = function()
-			require("treesitter-context").setup({
-				enable = true,
-				max_lines = 2,
-			})
 		end,
 	},
 
