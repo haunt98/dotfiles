@@ -1,8 +1,10 @@
 # https://docs.atuin.sh/configuration/config/
 
+search_mode = "fuzzy"
 style = "compact"
 inline_height = 16
 show_preview = true
+show_help = false
 
 # Sync with data/zsh/top-zshrc
 history_filter = [
@@ -20,9 +22,10 @@ history_filter = [
   "OC",
 ]
 
+store_failed = false
 enter_accept = false
 prefers_reduced_motion = true
 
 [stats]
-common_subcommands = ["brew", "cargo", "g", "git", "go", "nix-env"]
+common_subcommands = ["brew", "cargo", "git", "g", "go"]
 common_prefix = ["sudo"]
