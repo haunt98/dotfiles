@@ -158,7 +158,7 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://gitlab.com/ibhagwan/fzf-lua
+	-- https://codeberg.org/ibhagwan/fzf-lua.git
 	{
 		url = "https://codeberg.org/ibhagwan/fzf-lua.git",
 		dependencies = {
@@ -190,31 +190,37 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/ms-jpq/coq_nvim
+	-- https://github.com/hrsh7th/nvim-cmp
 	{
-		"ms-jpq/coq_nvim",
-		branch = "coq",
-		init = function()
-			vim.g.coq_settings = {
-				auto_start = "shut-up",
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/vim-vsnip",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+		},
+		config = function()
+			local cmp = require("cmp")
+
+			cmp.setup({
 				completion = {
-					always = false,
+					autocomplete = false,
 				},
-				display = {
-					preview = {
-						enabled = false,
-					},
+				snippet = {
+					expand = function(args)
+						-- TODO: Remove later
+						vim.fn["vsnip#anonymous"](args.body)
+					end,
 				},
-				-- https://github.com/ms-jpq/coq_nvim/issues/100
-				match = {
-					look_ahead = 1,
-				},
-				clients = {
-					snippets = {
-						warn = {},
-					},
-				},
-			}
+				mapping = cmp.mapping.preset.insert({
+					["<C-Space>"] = cmp.mapping.complete(),
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
+				}),
+				sources = cmp.config.sources({
+					{ name = "nvim_lsp" },
+				}, {
+					{ name = "buffer" },
+				}),
+			})
 		end,
 	},
 
@@ -456,23 +462,19 @@ require("lazy").setup({
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"ms-jpq/coq_nvim",
+			"hrsh7th/nvim-cmp",
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
-			local coq = require("coq")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
-			lspconfig.gopls.setup(coq.lsp_ensure_capabilities({
-				settings = {
-					gopls = {
-						usePlaceholders = true,
-					},
-				},
-			}))
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
 
 			-- Python
 			-- https://github.com/Microsoft/pyright
