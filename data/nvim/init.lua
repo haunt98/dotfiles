@@ -182,8 +182,6 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_resume<CR>")
 			vim.keymap.set("n", "<Leader>g", ":FzfLua git_status<CR>")
 			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
-			vim.keymap.set("n", "<Space>d", ":FzfLua lsp_definitions<CR>")
-			vim.keymap.set("n", "gd", ":FzfLua lsp_definitions<CR>")
 			vim.keymap.set("n", "<Space>r", ":FzfLua lsp_references<CR>")
 			vim.keymap.set("n", "gr", ":FzfLua lsp_references<CR>")
 			vim.keymap.set("n", "<Space>i", ":FzfLua lsp_implementations<CR>")
