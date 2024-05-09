@@ -64,10 +64,9 @@ vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
 -- Unnamed register aka black hole to not push to register aka trigger yank
-vim.keymap.set("n", "d", '"_d')
-vim.keymap.set({ "n", "v" }, "D", '"_D')
-vim.keymap.set({ "n", "v" }, "c", '"_c')
-vim.keymap.set({ "n", "v" }, "x", '"_x')
+vim.keymap.set({ "n", "v" }, "<Leader>d", '"_d')
+vim.keymap.set({ "n", "v" }, "<Leader>c", '"_c')
+vim.keymap.set({ "n", "v" }, "<Leader>x", '"_x')
 
 -- Conflict with :q
 -- https://neovim.io/doc/user/cmdline.html#c_CTRL-F
