@@ -193,6 +193,34 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/ms-jpq/coq_nvim
+	{
+		"ms-jpq/coq_nvim",
+		branch = "coq",
+		init = function()
+			vim.g.coq_settings = {
+				auto_start = "shut-up",
+				completion = {
+					always = false,
+				},
+				display = {
+					preview = {
+						enabled = false,
+					},
+				},
+				-- https://github.com/ms-jpq/coq_nvim/issues/100
+				match = {
+					look_ahead = 1,
+				},
+				clients = {
+					snippets = {
+						warn = {},
+					},
+				},
+			}
+		end,
+	},
+
 	-- https://github.com/nvim-tree/nvim-tree.lua
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -368,30 +396,8 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.nvim",
 		config = function()
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
-			require("mini.bracketed").setup({
-				comment = { suffix = "", options = {} },
-				file = { suffix = "", options = {} },
-				indent = { suffix = "", options = {} },
-				jump = { suffix = "", options = {} },
-				location = { suffix = "", options = {} },
-				oldfile = { suffix = "", options = {} },
-				treesitter = { suffix = "", options = {} },
-				undo = { suffix = "", options = {} },
-				window = { suffix = "", options = {} },
-				yank = { suffix = "", options = {} },
-			})
-
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
 			require("mini.comment").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
-			require("mini.completion").setup({
-				mappings = {
-					force_twostep = "<C-Space>",
-					force_fallback = "",
-				},
-			})
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
@@ -452,20 +458,24 @@ require("lazy").setup({
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			"ms-jpq/coq_nvim",
+		},
 		config = function()
 			local lspconfig = require("lspconfig")
+			local coq = require("coq")
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
-			lspconfig.gopls.setup({
+			lspconfig.gopls.setup(coq.lsp_ensure_capabilities({
 				settings = {
 					gopls = {
 						usePlaceholders = true,
 					},
 				},
-			})
+			}))
 
 			-- Python
 			-- https://github.com/Microsoft/pyright
