@@ -202,9 +202,12 @@ require("lazy").setup({
 			local cmp = require("cmp")
 
 			cmp.setup({
+				-- Custom
 				completion = {
 					autocomplete = false,
 				},
+				preselect = cmp.PreselectMode.None,
+				-- Sane default
 				snippet = {
 					expand = function(args)
 						-- TODO: Remove later
@@ -448,6 +451,9 @@ require("lazy").setup({
 				formatters = {
 					gofumpt = {
 						prepend_args = { "-extra" },
+					},
+					shfmt = {
+						prepend_args = { "-s", "-i", "4" },
 					},
 				},
 			})
