@@ -23,7 +23,7 @@ pokeget --hide-name clefairy >data/pokeget/clefairy.txt
 pokeget --hide-name ditto >data/pokeget/ditto.txt
 pokeget --hide-name dratini >data/pokeget/dratini.txt
 pokeget --hide-name eevee >data/pokeget/eevee.txt
-pokeget --hide-name machamp >data/pokeget/machamp.txt
+pokeget --hide-name machoke >data/pokeget/machoke.txt
 pokeget --hide-name pikachu >data/pokeget/pikachu.txt
 pokeget --hide-name pikachu-world-cap >data/pokeget/pikachu-world-cap.txt
 pokeget --hide-name psyduck >data/pokeget/psyduck.txt
