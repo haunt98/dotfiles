@@ -24,3 +24,6 @@ go install gotest.tools/gotestsum@latest
 go install github.com/bufbuild/buf/cmd/buf@latest
 
 go install github.com/ankitpokhrel/jira-cli/cmd/jira@latest
+
+# Need to run this once a month
+# go clean -cache -testcache -modcache -fuzzcache
