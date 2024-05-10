@@ -10,6 +10,7 @@ cargo install --quiet --locked \
     daktilo
 
 cargo install --quiet --locked ripgrep --features 'pcre2'
+cargo install --quiet --git https://github.com/astral-sh/rye rye
 
 bat cache --build
 

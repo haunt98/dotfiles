@@ -6,5 +6,5 @@ brew install \
     fdupes rsync rclone restic \
     yt-dlp newsboat \
     btop \
-    clang-format pipx marksman moar \
+    clang-format marksman moar \
     qmk

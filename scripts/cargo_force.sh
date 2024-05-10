@@ -8,3 +8,4 @@ cargo install --quiet --force --locked \
     daktilo
 
 cargo install --quiet --force --locked ripgrep --features 'pcre2'
+cargo install --quiet --force --git https://github.com/astral-sh/rye rye
