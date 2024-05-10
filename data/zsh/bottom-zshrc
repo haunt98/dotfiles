@@ -140,15 +140,6 @@ if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
-# https://github.com/pyenv/pyenv
-if command -v pyenv &>/dev/null; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-    export PYTHON_CONFIGURE_OPTS="--enable-framework --enable-optimizations --with-lto"
-    export PYTHON_CFLAGS='-march=native -mtune=native'
-fi
-
 # https://github.com/ankitpokhrel/jira-cli
 if command -v jira &>/dev/null; then
     # Remember to jira init local not cloud
