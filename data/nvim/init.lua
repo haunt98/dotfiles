@@ -161,6 +161,18 @@ require("lazy").setup({
 	-- https://codeberg.org/ibhagwan/fzf-lua.git
 	{
 		url = "https://codeberg.org/ibhagwan/fzf-lua.git",
+		keys = {
+			{ "<Leader>f", ":FzfLua files<CR>" },
+			{ "<Leader>l", ":FzfLua blines<CR>" },
+			{ "<Leader>rg", ":FzfLua live_grep_resume<CR>" },
+			{ "<Leader>g", ":FzfLua git_status<CR>" },
+			{ "<Space>s", ":FzfLua lsp_document_symbols<CR>" },
+			{ "<Space>r", ":FzfLua lsp_references<CR>" },
+			{ "gr", ":FzfLua lsp_references<CR>" },
+			{ "<Space>i", ":FzfLua lsp_implementations<CR>" },
+			{ "gi", ":FzfLua lsp_implementations<CR>" },
+			{ "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>" },
+		},
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
@@ -176,23 +188,13 @@ require("lazy").setup({
 					formatter = "path.filename_first",
 				},
 			})
-
-			vim.keymap.set("n", "<Leader>f", ":FzfLua files<CR>")
-			vim.keymap.set("n", "<Leader>l", ":FzfLua blines<CR>")
-			vim.keymap.set("n", "<Leader>rg", ":FzfLua live_grep_resume<CR>")
-			vim.keymap.set("n", "<Leader>g", ":FzfLua git_status<CR>")
-			vim.keymap.set("n", "<Space>s", ":FzfLua lsp_document_symbols<CR>")
-			vim.keymap.set("n", "<Space>r", ":FzfLua lsp_references<CR>")
-			vim.keymap.set("n", "gr", ":FzfLua lsp_references<CR>")
-			vim.keymap.set("n", "<Space>i", ":FzfLua lsp_implementations<CR>")
-			vim.keymap.set("n", "gi", ":FzfLua lsp_implementations<CR>")
-			vim.keymap.set("n", "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>")
 		end,
 	},
 
 	-- https://github.com/hrsh7th/nvim-cmp
 	{
 		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
 		dependencies = {
 			"hrsh7th/vim-vsnip",
 			"hrsh7th/cmp-nvim-lsp",
@@ -207,7 +209,8 @@ require("lazy").setup({
 					autocomplete = false,
 				},
 				preselect = cmp.PreselectMode.None,
-				-- Sane default
+
+				-- Largely copy from GitHub
 				snippet = {
 					expand = function(args)
 						-- TODO: Remove later
@@ -230,6 +233,10 @@ require("lazy").setup({
 	-- https://github.com/nvim-tree/nvim-tree.lua
 	{
 		"nvim-tree/nvim-tree.lua",
+		keys = {
+			{ "<C-n>", ":NvimTreeToggle<CR>" },
+			{ "<Leader>n", ":NvimTreeFindFile<CR>" },
+		},
 		init = function()
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
@@ -275,48 +282,6 @@ require("lazy").setup({
 					},
 				},
 			})
-
-			vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
-			vim.keymap.set("n", "<Leader>n", ":NvimTreeFindFile<CR>")
-
-			-- https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
-			local function open_nvim_tree(data)
-				-- Buffer is a real file on the disk
-				local real_file = vim.fn.filereadable(data.file) == 1
-
-				-- Buffer is a [No Name]
-				local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
-
-				if not real_file and not no_name then
-					return
-				end
-
-				local IGNORED_FT = {
-					"gitcommit",
-				}
-
-				-- &ft
-				local filetype = vim.bo[data.buf].ft
-
-				-- Skip ignored filetypes
-				if vim.tbl_contains(IGNORED_FT, filetype) then
-					return
-				end
-
-				-- Ignore small window
-				-- https://stackoverflow.com/a/42648387
-				if vim.api.nvim_win_get_width(0) < 800 then
-					return
-				end
-
-				require("nvim-tree.api").tree.toggle({ focus = false })
-			end
-
-			local augroup = vim.api.nvim_create_augroup("UserNvimTreeConfig", {})
-			vim.api.nvim_create_autocmd("VimEnter", {
-				group = augroup,
-				callback = open_nvim_tree,
-			})
 		end,
 	},
 
@@ -324,7 +289,10 @@ require("lazy").setup({
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
-			require("gitsigns").setup({
+			local gitsigns = require("gitsigns")
+
+			gitsigns.setup({
+				-- Custom
 				signs = {
 					untracked = { text = "" },
 				},
@@ -333,9 +301,9 @@ require("lazy").setup({
 					ignore_whitespace = true,
 				},
 				current_line_blame_formatter = "<author> <author_time:%Y-%m-%d> <summary>",
-				on_attach = function(bufnr)
-					local gs = package.loaded.gitsigns
 
+				-- Largely copy from GitHub
+				on_attach = function(bufnr)
 					local function map(mode, l, r, opts)
 						opts = opts or {}
 						opts.buffer = bufnr
@@ -345,36 +313,28 @@ require("lazy").setup({
 					-- Navigation
 					map("n", "]c", function()
 						if vim.wo.diff then
-							return "]c"
+							vim.cmd.normal({ "]c", bang = true })
+						else
+							gitsigns.nav_hunk("next")
 						end
-						vim.schedule(function()
-							gs.next_hunk()
-						end)
-						return "<Ignore>"
-					end, { expr = true })
+					end)
 
 					map("n", "[c", function()
 						if vim.wo.diff then
-							return "[c"
+							vim.cmd.normal({ "[c", bang = true })
+						else
+							gitsigns.nav_hunk("prev")
 						end
-						vim.schedule(function()
-							gs.prev_hunk()
-						end)
-						return "<Ignore>"
-					end, { expr = true })
+					end)
 				end,
 			})
 		end,
 	},
 
-	-- https://github.com/tpope/vim-fugitive
-	{
-		"tpope/vim-fugitive",
-	},
-
 	-- https://github.com/tpope/vim-projectionist
 	{
 		"tpope/vim-projectionist",
+		ft = "go",
 		init = function()
 			vim.g.projectionist_heuristics = {
 				["*.go"] = {
@@ -431,6 +391,19 @@ require("lazy").setup({
 	-- https://github.com/stevearc/conform.nvim
 	{
 		"stevearc/conform.nvim",
+		ft = {
+			"bash",
+			"go",
+			"javascript",
+			"json",
+			"lua",
+			"markdown",
+			"python",
+			"sh",
+			"toml",
+			"yaml",
+			"zsh",
+		},
 		config = function()
 			local conform = require("conform")
 			conform.setup({
@@ -467,6 +440,11 @@ require("lazy").setup({
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
+		ft = {
+			"go",
+			"markdown",
+			"python",
+		},
 		dependencies = {
 			"hrsh7th/nvim-cmp",
 		},
@@ -538,6 +516,18 @@ require("lazy").setup({
 	-- https://github.com/github/copilot.vim
 	{
 		"github/copilot.vim",
+		ft = {
+			"gitcommit",
+			"go",
+			"lua",
+			"make",
+			"markdown",
+			"proto",
+			"python",
+			"toml",
+			"yaml",
+			"zsh",
+		},
 		init = function()
 			vim.g.copilot_filetypes = {
 				["*"] = false,
@@ -555,6 +545,7 @@ require("lazy").setup({
 			vim.g.copilot_no_tab_map = true
 		end,
 		config = function()
+			-- Largely copy from GitHub
 			vim.keymap.set("i", "<M-Right>", 'copilot#Accept("\\<CR>")', {
 				expr = true,
 				replace_keycodes = false,
