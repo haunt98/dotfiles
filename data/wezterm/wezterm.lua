@@ -2,9 +2,22 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- Custom fonts config
+-- wezterm ls-fonts --list-system
+local function font_with_fallback(main_font)
+	local fonts = {
+		main_font,
+		{
+			family = "Apple Color Emoji",
+			assume_emoji_presentation = true,
+		},
+		"Symbols Nerd Font Mono",
+	}
+	return wezterm.font_with_fallback(fonts)
+end
+
 -- https://github.com/be5invis/Iosevka
 local font_iosevka = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "Iosevka Term SS08",
 		harfbuzz_features = { "calt=0", "CLIK" },
 	}),
@@ -15,7 +28,7 @@ local font_iosevka = {
 
 -- https://github.com/jenskutilek/sudo-font
 local font_sudo = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "Sudo Var",
 		harfbuzz_features = { "cv06" },
 	}),
@@ -26,7 +39,7 @@ local font_sudo = {
 
 -- https://github.com/pcaro90/hermit
 local font_hermit = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "Hermit",
 	}),
 	font_size = 14.0,
@@ -35,7 +48,7 @@ local font_hermit = {
 }
 
 local font_ibm = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "IBM Plex Mono",
 	}),
 	font_size = 14.0,
@@ -45,27 +58,27 @@ local font_ibm = {
 
 -- https://int10h.org/blog/2018/05/flexi-ibm-vga-scalable-truetype-font/
 local font_flexi_ibm = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "Flexi IBM VGA False",
 	}),
 	font_rules = {
 		{
 			intensity = "Bold",
 			italic = true,
-			font = wezterm.font({
+			font = font_with_fallback({
 				family = "Flexi IBM VGA False",
 			}),
 		},
 		{
 			intensity = "Bold",
-			font = wezterm.font({
+			font = font_with_fallback({
 				family = "Flexi IBM VGA False",
 			}),
 		},
 		{
 			intensity = "Normal",
 			italic = true,
-			font = wezterm.font({
+			font = font_with_fallback({
 				family = "Flexi IBM VGA False",
 			}),
 		},
@@ -77,7 +90,7 @@ local font_flexi_ibm = {
 
 -- http://www.kreativekorp.com/software/fonts/fairfaxhd/
 local font_fairfax = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "Fairfax Hax HD",
 	}),
 	font_size = 16.0,
@@ -86,14 +99,14 @@ local font_fairfax = {
 }
 
 local font_0xproto = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "0xProto",
 	}),
 	font_rules = {
 		{
 			intensity = "Bold",
 			italic = true,
-			font = wezterm.font({
+			font = font_with_fallback({
 				family = "0xProto",
 				weight = "Regular",
 				italic = true,
@@ -101,7 +114,7 @@ local font_0xproto = {
 		},
 		{
 			intensity = "Bold",
-			font = wezterm.font({
+			font = font_with_fallback({
 				family = "0xProto",
 				weight = "Regular",
 			}),
@@ -109,7 +122,7 @@ local font_0xproto = {
 		{
 			intensity = "Normal",
 			italic = true,
-			font = wezterm.font({
+			font = font_with_fallback({
 				family = "0xProto",
 				weight = "Regular",
 				italic = true,
@@ -123,7 +136,7 @@ local font_0xproto = {
 
 -- https://berkeleygraphics.com/typefaces/berkeley-mono/
 local font_berkeley = {
-	font = wezterm.font({
+	font = font_with_fallback({
 		family = "Berkeley Mono",
 		harfbuzz_features = { "ss02" },
 	}),
