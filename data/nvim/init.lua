@@ -111,7 +111,6 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		lazy = false,
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
@@ -224,7 +223,15 @@ require("lazy").setup({
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 				}, {
-					{ name = "buffer" },
+					{
+						name = "buffer",
+						option = {
+							-- All buffers
+							get_bufnrs = function()
+								return vim.api.nvim_list_bufs()
+							end,
+						},
+					},
 				}),
 			})
 		end,

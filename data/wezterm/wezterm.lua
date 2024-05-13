@@ -33,7 +33,7 @@ local font_sudo = {
 		harfbuzz_features = { "cv06" },
 	}),
 	font_size = 18.0,
-	line_height = 1.2,
+	line_height = 1.4,
 	default_cursor_style = "SteadyBar",
 }
 
@@ -92,9 +92,35 @@ local font_flexi_ibm = {
 local font_fairfax = {
 	font = font_with_fallback({
 		family = "Fairfax Hax HD",
+		weight = "Medium",
 	}),
+	font_rules = {
+		{
+			intensity = "Bold",
+			italic = true,
+			font = font_with_fallback({
+				family = "Fairfax Hax HD",
+				weight = "Medium",
+			}),
+		},
+		{
+			intensity = "Bold",
+			font = font_with_fallback({
+				family = "Fairfax Hax HD",
+				weight = "Medium",
+			}),
+		},
+		{
+			intensity = "Normal",
+			italic = true,
+			font = font_with_fallback({
+				family = "Fairfax Hax HD",
+				weight = "Medium",
+			}),
+		},
+	},
 	font_size = 16.0,
-	line_height = 1.2,
+	line_height = 1.4,
 	default_cursor_style = "SteadyBlock",
 }
 
@@ -157,7 +183,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_maple
+local current_font = font_iosevka
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
