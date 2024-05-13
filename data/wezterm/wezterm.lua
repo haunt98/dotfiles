@@ -98,6 +98,18 @@ local font_fairfax = {
 	default_cursor_style = "SteadyBlock",
 }
 
+-- https://github.com/subframe7536/maple-font
+local font_maple = {
+	font = font_with_fallback({
+		family = "Maple Mono",
+		harfbuzz_features = { "cv03", "zero" },
+	}),
+	font_size = 14.0,
+	line_height = 1.2,
+	default_cursor_style = "SteadyBar",
+}
+
+-- https://github.com/0xType/0xProto
 local font_0xproto = {
 	font = font_with_fallback({
 		family = "0xProto",
@@ -145,7 +157,7 @@ local font_berkeley = {
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_0xproto
+local current_font = font_maple
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
