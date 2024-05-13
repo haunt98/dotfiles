@@ -1,5 +1,221 @@
 # CHANGELOG
 
+## v0.15.4 (2024-05-13)
+
+### Added
+
+- feat: support daktilo (2024-04-22)
+
+- feat: add userstyles (2024-04-05)
+
+- feat: add moar (2024-03-11)
+
+- feat: remove toolong (2024-03-08)
+
+### Others
+
+- config(daktilo): cd first and then run daktilo (2024-05-13)
+
+- config(wezterm): use font_with_fallback helper function (2024-05-13)
+
+- chore: fix bun upgrade (2024-05-11)
+
+- chore(nvim): try to lazy load (2024-05-11)
+
+- chore: add go clean (2024-05-11)
+
+- chore: remove pipx (2024-05-11)
+
+- chore: removee pyenv (2024-05-10)
+
+- config(kitty): remove copy_on_select (2024-05-10)
+
+- chore: random pokemon zsh (2024-05-10)
+
+- config(nvim): sync shfmt coonfig (2024-05-10)
+
+- config(nvim): switch back to nvim-cmp (2024-05-10)
+
+- config(nvim): remove dupe keymap (2024-05-10)
+
+- config(nvim): add leader d,c,x with black hole register (2024-05-10)
+
+- config(nvim): try to use coq_nvim for completion (2024-05-10)
+
+- config(kitty): readd missing symbols (2024-05-09)
+
+- chore(zsh): alias kssh to kitten ssh (2024-05-09)
+
+- config(nvim): remove treesitter (2024-05-08)
+
+- config(nvim): FzfLua git (2024-05-08)
+
+- chore: sync upstream (2024-05-08)
+
+- config(atuin): custom something (2024-05-08)
+
+- chore: run xargs in parallel (2024-05-08)
+
+- chore: sync golangci-lint config (2024-05-08)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2024-05-08)
+
+- chore: install goimports (2024-05-08)
+
+- config(wezterm): 0xProto bigger than Maple Mono (2024-05-06)
+
+- config(nvim): fzf-lua filename first (2024-05-06)
+
+- Revert "config(wezterm): calt for Iosevka" (2024-05-05)
+
+- chore: remove gitui (2024-05-02)
+
+- config(nvim): add word define (2024-05-02)
+
+- config(wezterm): calt for Iosevka (2024-05-02)
+
+- config(wezterm): use 0xProto because italic (2024-05-02)
+
+- chore(brew): remove taskwarrior (2024-05-01)
+
+- config(nvim): improve perf (2024-04-30)
+
+- config(nvim): disable more (2024-04-30)
+
+- chore(brew): add pyenv (2024-04-29)
+
+- chore(deps): bump github.com/urfave/cli/v2 from 2.27.1 to 2.27.2 (#65) (2024-04-29)
+
+- chore: format (2024-04-29)
+
+- Merge branch 'main' of https://github.com/haunt98/dotfiles (2024-04-29)
+
+- chore: remove nix (2024-04-29)
+
+- config: use Cartograph font for now (2024-04-20)
+
+- chore(nvim): hope my neck OK (2024-04-20)
+
+- config(kitty): improve lilex (2024-04-20)
+
+- config(kitty): more fonts (2024-04-16)
+
+- config(kitty): change fonts (2024-04-16)
+
+- config: increase http.postBuffer to 500MB (2024-04-14)
+
+- config(kitty): update nerd code points (2024-04-13)
+
+- config(zsh): improve git (2024-04-12)
+
+- config(kitty): correct italic font (2024-04-08)
+
+- config(kitty): correct current working dir (2024-04-08)
+
+- chore: remove unused (2024-04-07)
+
+- chore: remove unused (2024-04-06)
+
+- config(nvim): support _generated.go (2024-04-06)
+
+- chore: hide OA, OB in shell history (2024-04-06)
+
+- config(newsboat): text-width 120 (2024-04-05)
+
+- chore(newsboat): clean up URLs (2024-04-05)
+
+- chore(deps): bump golang.org/x/sync from 0.6.0 to 0.7.0 (#63) (2024-04-05)
+
+- config(kitty): Update nerd font 3.2.0 (2024-04-05)
+
+- config(nvim): experiment with go.nvim (2024-04-05)
+
+- config(kitty): update nerd font endpoints (2024-04-04)
+
+- chore: clean up atuin (2024-04-04)
+
+- config: sync filter atuin, zsh (2024-04-04)
+
+- chore(nvim): format zsh, bash (2024-04-04)
+
+- config(zsh): disable difft context (2024-04-02)
+
+- chore(scripts): tealdeer -> tlrc (2024-04-02)
+
+- config(nvim): switch fzf-lua to codeberg (2024-04-02)
+
+- chore: install gitui (2024-04-01)
+
+- config: add gitui (2024-03-31)
+
+- chore(scripts): add marksman (2024-03-29)
+
+- config(nvim): github remove fzf-lua, switch to gitlab (2024-03-29)
+
+- config(nvim): git blame (2024-03-28)
+
+- config: remove alt+o keymap (2024-03-27)
+
+- config(nvim): switch from neoformat to conform.nvim (2024-03-26)
+
+- config(wezterm): back to ibm (2024-03-25)
+
+- config(nvim): no need whitespace everytime (2024-03-25)
+
+- chore: use pyenv (2024-03-24)
+
+- chore: more link (2024-03-21)
+
+- config(nvim): add headlines to support markdown (2024-03-21)
+
+- config(nvim): add ExtraWhitespace highlight group (2024-03-20)
+
+- config(nvim): add python to treesitter (2024-03-18)
+
+- Revert "chore(nvim): disable treesitter because performance" (2024-03-18)
+
+- config(nvim): remove annoying (2024-03-18)
+
+- config(nvim): use <M-Right> to accept copilot suggestions (2024-03-17)
+
+- chore(scripts): dedupe (2024-03-15)
+
+- chore(scripts): add fzf-tab to manual update script (2024-03-15)
+
+- config(wezterm): sudo font dot zero (2024-03-12)
+
+- config(zsh): disable moar statusbar (2024-03-11)
+
+- chore(scripts): less well known updates (2024-03-11)
+
+- config(delta): remove catppuccin (2024-03-10)
+
+- config(bat): removee catppuccin theme (2024-03-10)
+
+- config: sync upstream and add delta (2024-03-08)
+
+- config(wezterm): back to sudo (2024-03-08)
+
+- chore(scripts): add deno (2024-03-07)
+
+- chore: better git branch (2024-03-04)
+
+- chore(scripts): revert g br (2024-03-04)
+
+- chore(scripts): improve g br (2024-03-04)
+
+- config(atuin): improve stats (2024-03-03)
+
+- config(wezterm): add Iosevka font (2024-03-03)
+
+- config(nvim): highligh rgb color (2024-03-01)
+
+- chore: remove go fix (2024-03-01)
+
+- chore: use brew to install libgit2 (2024-03-01)
+
+- chore(changelog): generate v0.15.3 (2024-03-01)
+
 ## v0.15.3 (2024-03-01)
 
 ### Others
