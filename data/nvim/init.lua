@@ -405,7 +405,9 @@ require("lazy").setup({
 			"javascript",
 			"json",
 			"lua",
+			"make",
 			"markdown",
+			"proto",
 			"python",
 			"sh",
 			"toml",
@@ -423,6 +425,7 @@ require("lazy").setup({
 					json = { "deno_fmt" },
 					lua = { "stylua" },
 					markdown = { "deno_fmt" },
+					proto = { "buf" },
 					python = { "ruff_format" },
 					sh = { "shfmt" },
 					toml = { "taplo" },
@@ -435,6 +438,9 @@ require("lazy").setup({
 					},
 					shfmt = {
 						prepend_args = { "-s", "-i", "4" },
+					},
+					taplo = {
+						args = { "fmt", "-o", "indent_string=    ", "-o", "allowed_blank_lines=1", "-" },
 					},
 				},
 			})
