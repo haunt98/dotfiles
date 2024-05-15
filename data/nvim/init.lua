@@ -401,6 +401,7 @@ require("lazy").setup({
 		"stevearc/conform.nvim",
 		ft = {
 			"bash",
+			"conf",
 			"go",
 			"javascript",
 			"json",
