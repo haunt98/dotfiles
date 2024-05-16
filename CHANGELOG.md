@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v0.15.5 (2024-05-17)
+
+### Others
+
+- config(nvim): nvim 0.10.0 make [d ]d default (2024-05-17)
+
+- config(nvim): use native vim.snippet (2024-05-17)
+
+- config: use custom Iosevka Pacman font (2024-05-16)
+
+- chore: sync upstream (2024-05-16)
+
+- config(wezterm): update Iosevka font configuration (2024-05-16)
+
+- config(kitty): messup iosevka a bit (2024-05-16)
+
+- config(kitty): switch to Iosevka Term SS08 font (2024-05-15)
+
+- config(nvim): improve toml format (2024-05-15)
+
+- config(nvim): nvim-cmp do not insert if select nothing (2024-05-15)
+
+- config(kitty): new tab without ssh (2024-05-14)
+
+- config(nvim): update cmp buffer source to include all buffers (2024-05-13)
+
+- config(wezterm): switch to Maple Mono font (2024-05-13)
+
+- chore(changelog): generate v0.15.4 (2024-05-13)
+
 ## v0.15.4 (2024-05-13)
 
 ### Added
