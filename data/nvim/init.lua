@@ -484,8 +484,6 @@ require("lazy").setup({
 			lspconfig.marksman.setup({})
 
 			-- General
-			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
 			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 
