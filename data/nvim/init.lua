@@ -195,7 +195,6 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
-			"hrsh7th/vim-vsnip",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 		},
@@ -212,8 +211,7 @@ require("lazy").setup({
 				-- Largely copy from GitHub
 				snippet = {
 					expand = function(args)
-						-- TODO: Remove later
-						vim.fn["vsnip#anonymous"](args.body)
+						vim.snippet.expand(args.body)
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
