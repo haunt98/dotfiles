@@ -18,14 +18,7 @@ end
 -- https://github.com/be5invis/Iosevka
 local font_iosevka = {
 	font = font_with_fallback({
-		family = "Iosevka Term",
-		harfbuzz_features = {
-			"ss08=1",
-			"calt=0",
-			"CLIK=1",
-			"cv85=13",
-			"VSAF=3",
-		},
+		family = "Iosevka Pacman",
 	}),
 	font_size = 16.0,
 	line_height = 1.2,
