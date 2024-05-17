@@ -26,11 +26,6 @@ vim.opt.breakindent = true
 -- Clipboard support
 vim.opt.clipboard = "unnamedplus"
 
--- Truecolor
-if vim.env.COLORTERM == "truecolor" then
-	vim.opt.termguicolors = true
-end
-
 -- Mouse support
 vim.opt.mouse = "a"
 vim.opt.mousemodel = "popup"
