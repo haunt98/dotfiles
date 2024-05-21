@@ -363,9 +363,6 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.nvim",
 		config = function()
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
-			require("mini.comment").setup()
-
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
