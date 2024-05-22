@@ -5,7 +5,7 @@ include ~/.config/newsboat/dark
 auto-reload yes
 confirm-mark-all-feeds-read no
 confirm-mark-feed-read no
-reload-threads 16
+reload-threads 128
 text-width 120
 
 # https://m-chrzan.xyz/blog/vim-keybindings-for-newsboat.html
@@ -16,3 +16,5 @@ bind-key G end
 
 unbind-key j
 unbind-key k
+bind-key j down
+bind-key k up
