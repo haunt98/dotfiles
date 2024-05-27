@@ -130,11 +130,6 @@ if command -v atuin &>/dev/null; then
     eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
-# https://github.com/extrawurst/gitui
-if command -v gitui &>/dev/null; then
-    alias gu="gitui"
-fi
-
 # https://github.com/oven-sh/bun
 # Depend on your settings
 # Please copy this manually to ~/.zshrc
@@ -143,13 +138,6 @@ fi
 # https://github.com/Schniz/fnm
 if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
-fi
-
-# https://github.com/ankitpokhrel/jira-cli
-if command -v jira &>/dev/null; then
-    # Remember to jira init local not cloud
-    # Depend on your company
-    export JIRA_AUTH_TYPE=bearer
 fi
 
 # https://github.com/orhun/daktilo
