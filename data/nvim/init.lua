@@ -132,6 +132,9 @@ require("lazy").setup({
 						ExtraWhitespace = {
 							bg = color_eva.bg,
 						},
+						markdownLinkText = {
+							style = {},
+						},
 						-- Support mini.statusline
 						StatusLineNC = {
 							fg = colors.flamingo,
