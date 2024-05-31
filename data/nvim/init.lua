@@ -390,6 +390,7 @@ require("lazy").setup({
 	{
 		"stevearc/conform.nvim",
 		ft = {
+			"asciidoc",
 			"bash",
 			"conf",
 			"go",
@@ -520,6 +521,7 @@ require("lazy").setup({
 	{
 		"github/copilot.vim",
 		ft = {
+			"asciidoc",
 			"gitcommit",
 			"go",
 			"lua",
@@ -534,6 +536,7 @@ require("lazy").setup({
 		init = function()
 			vim.g.copilot_filetypes = {
 				["*"] = false,
+				asciidoc = true,
 				gitcommit = true,
 				go = true,
 				lua = true,
