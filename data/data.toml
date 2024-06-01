@@ -112,7 +112,7 @@ external = "~/.config/gitui/theme.ron"
 
 [[apps.gitui.paths]]
 internal = "data/gitui/theme.ron"
-url = "https://raw.githubusercontent.com/catppuccin/gitui/main/theme/mocha.ron"
+url = "https://raw.githubusercontent.com/catppuccin/gitui/main/themes/catppuccin-mocha.ron"
 
 [[apps.daktilo.paths]]
 internal = "data/daktilo/daktilo.toml"
