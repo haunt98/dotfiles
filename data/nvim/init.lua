@@ -120,7 +120,6 @@ require("lazy").setup({
 			local color_oxocarbon = {
 				pink = "#ff7eb6",
 				purple = "#be95ff",
-				red = "#ee5396",
 			}
 
 			require("catppuccin").setup({
@@ -132,8 +131,8 @@ require("lazy").setup({
 						flamingo = color_oxocarbon.pink,
 						pink = color_oxocarbon.pink,
 						mauve = color_oxocarbon.purple,
-						red = color_oxocarbon.red,
-						maroon = color_oxocarbon.red,
+						red = color_oxocarbon.pink,
+						maroon = color_oxocarbon.pink,
 					},
 				},
 				custom_highlights = function(colors)
@@ -514,11 +513,12 @@ require("lazy").setup({
 			-- https://www.reddit.com/r/neovim/comments/18teetv/one_day_you_will_wake_up_and_choose_the_chaos
 			-- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization
 			-- https://neovim.io/doc/user/diagnostic.html#diagnostic-highlights
+			-- https://emojipedia.org/
 			local signs = {
-				Error = "🤬",
+				Error = "🔥",
 				Warn = "😤",
 				Info = "🤔",
-				Hint = "🤯",
+				Hint = "🐼",
 			}
 			for type, icon in pairs(signs) do
 				local hl = "DiagnosticSign" .. type
