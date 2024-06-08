@@ -108,19 +108,35 @@ require("lazy").setup({
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
+			-- Eva-01 vibe
+			-- https://enjoykeycap.github.io/docs/gmk-keycaps/Mecha-01/
+			-- https://www.pantone.com/connect/802-C
+			-- https://www.pantone.com/connect/267-C
+			local color_eva = {
+				fg = "#44d62c",
+				bg = "#5f249e",
+			}
+			-- https://github.com/nyoom-engineering/oxocarbon.nvim
+			local color_oxocarbon = {
+				pink = "#ff7eb6",
+				purple = "#be95ff",
+				red = "#ee5396",
+			}
+
 			require("catppuccin").setup({
 				flavour = "mocha",
 				transparent_background = false,
+				color_overrides = {
+					mocha = {
+						-- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/mocha.lua
+						flamingo = color_oxocarbon.pink,
+						pink = color_oxocarbon.pink,
+						mauve = color_oxocarbon.purple,
+						red = color_oxocarbon.red,
+						maroon = color_oxocarbon.red,
+					},
+				},
 				custom_highlights = function(colors)
-					-- Eva-01 vibe
-					-- https://enjoykeycap.github.io/docs/gmk-keycaps/Mecha-01/
-					-- https://www.pantone.com/connect/802-C
-					-- https://www.pantone.com/connect/267-C
-					local color_eva = {
-						fg = "#44d62c",
-						bg = "#5f249e",
-					}
-
 					return {
 						-- Help my eyes
 						Comment = {
@@ -137,16 +153,13 @@ require("lazy").setup({
 						},
 						-- Support mini.statusline
 						StatusLineNC = {
-							fg = colors.flamingo,
+							fg = color_oxocarbon.pink,
 						},
 						-- Support gitsigns.nvim
 						GitSignsCurrentLineBlame = {
 							fg = colors.overlay1,
 							style = { "italic" },
 						},
-						-- https://neovim.io/doc/user/diagnostic.html#diagnostic-highlights
-						DiagnosticVirtualTextError = color_eva,
-						DiagnosticSignError = color_eva,
 					}
 				end,
 			})
