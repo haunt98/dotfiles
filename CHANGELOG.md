@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## v0.15.6 (2024-06-08)
+
+### Others
+
+- chore: more brew goodies (2024-06-08)
+
+- config(zsh): zoxide enable echo (2024-06-08)
+
+- config(nvim): improve color a bit (2024-06-08)
+
+- config(nvim): fuse oxocarbon and catppuccino colors (2024-06-08)
+
+- chore: add badges (2024-06-07)
+
+- chore: gitleaks (2024-06-07)
+
+- chore: sync config upstream (2024-06-02)
+
+- chore: prettier@latest -> prettier (2024-06-02)
+
+- config(nvim): disable makrdown underlink (2024-05-31)
+
+- config(nvim): support asciidoc (2024-05-31)
+
+- chore: remove jira, gitui (2024-05-27)
+
+- chore(deps): bump github.com/BurntSushi/toml from 1.3.2 to 1.4.0 (#67) (2024-05-24)
+
+- config(newsboat): vin binding (2024-05-22)
+
+- config(nvim): mini.comment is integrated in nvim 0.10.0 (2024-05-21)
+
+- chore: freeze buf v1.31.0 for now (2024-05-17)
+
+- config(nvim): nvim 0.10.0 auto detect truecolor (2024-05-17)
+
+- chore(changelog): generate v0.15.5 (2024-05-17)
+
 ## v0.15.5 (2024-05-17)
 
 ### Others
