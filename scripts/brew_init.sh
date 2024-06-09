@@ -7,4 +7,5 @@ brew install \
     yt-dlp newsboat vips \
     btop \
     clang-format marksman moar asciidoctor ollama gitleaks \
-    qmk
+    qmk \
+    mysql-client
