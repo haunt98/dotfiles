@@ -187,7 +187,6 @@ require("lazy").setup({
 		},
 		config = function()
 			require("fzf-lua").setup({
-				"fzf-native",
 				winopts = {
 					preview = {
 						wrap = "wrap",
@@ -196,6 +195,7 @@ require("lazy").setup({
 				defaults = {
 					formatter = "path.filename_first",
 				},
+				fzf_colors = true,
 			})
 		end,
 	},
@@ -401,6 +401,11 @@ require("lazy").setup({
 	},
 
 	-- Programming languages
+	-- https://github.com/aklt/plantuml-syntax
+	{
+		"aklt/plantuml-syntax",
+	},
+
 	-- https://github.com/stevearc/conform.nvim
 	{
 		"stevearc/conform.nvim",
@@ -414,6 +419,7 @@ require("lazy").setup({
 			"lua",
 			"make",
 			"markdown",
+			"plantuml",
 			"proto",
 			"python",
 			"sh",
@@ -543,6 +549,7 @@ require("lazy").setup({
 			"lua",
 			"make",
 			"markdown",
+			"plantuml",
 			"proto",
 			"python",
 			"toml",
