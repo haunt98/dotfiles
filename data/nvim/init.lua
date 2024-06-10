@@ -159,6 +159,9 @@ require("lazy").setup({
 							fg = colors.overlay1,
 							style = { "italic" },
 						},
+						LspInlayHint = {
+							link = "Normal",
+						},
 					}
 				end,
 			})

@@ -7,7 +7,7 @@ show_preview = true
 show_help = false
 
 # Sync with data/zsh/top-zshrc
-history_filter = ["^l[sal]", "^cd$", "^pwd$", "^exit$", "^z$", '^\[', "O[ABC]"]
+history_filter = ["^l[sal]", "^cd$", "^pwd$", "^exit$", "^z$"]
 
 store_failed = false
 enter_accept = false
