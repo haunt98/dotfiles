@@ -198,6 +198,9 @@ require("lazy").setup({
 				defaults = {
 					formatter = "path.filename_first",
 				},
+				grep = {
+					multiline = 1,
+				},
 				fzf_colors = true,
 			})
 		end,
