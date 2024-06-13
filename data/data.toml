@@ -54,17 +54,9 @@ external = "~/.config/bat"
 internal = "data/ripgrep"
 external = "~/.config/ripgrep"
 
-[[apps.tmux.paths]]
-internal = "data/tmux"
-external = "~/.config/tmux"
-
 [[apps.zellij.paths]]
 internal = "data/zellij"
 external = "~/.config/zellij"
-
-[[apps.gdu.paths]]
-internal = "data/gdu"
-external = "~/.config/gdu"
 
 [[apps.powerlevel10k.paths]]
 internal = "data/powerlevel10k/.p10k.zsh"
@@ -101,18 +93,6 @@ external = "~/.config/newsboat/dark"
 [[apps.newsboat.paths]]
 internal = "data/newsboat/dark"
 url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
-
-[[apps.atuin.paths]]
-internal = "data/atuin/config.toml"
-external = "~/.config/atuin/config.toml"
-
-[[apps.gitui.paths]]
-internal = "data/gitui/theme.ron"
-external = "~/.config/gitui/theme.ron"
-
-[[apps.gitui.paths]]
-internal = "data/gitui/theme.ron"
-url = "https://raw.githubusercontent.com/catppuccin/gitui/main/themes/catppuccin-mocha.ron"
 
 [[apps.daktilo.paths]]
 internal = "data/daktilo/daktilo.toml"

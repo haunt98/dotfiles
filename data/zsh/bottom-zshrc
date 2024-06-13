@@ -126,11 +126,6 @@ if command -v moar &>/dev/null; then
     export PAGER=moar
 fi
 
-# https://github.com/atuinsh/atuin
-if command -v atuin &>/dev/null; then
-    eval "$(atuin init zsh --disable-up-arrow)"
-fi
-
 # https://github.com/oven-sh/bun
 # Depend on your settings
 # Please copy this manually to ~/.zshrc

@@ -4,7 +4,7 @@ rustup update
 
 cargo install --quiet --locked \
     fd-find bat git-delta eza sd tlrc \
-    difftastic vivid zellij zoxide atuin \
+    difftastic vivid zellij zoxide \
     fnm stylua taplo-cli \
     pokeget \
     daktilo
@@ -13,9 +13,6 @@ cargo install --quiet --locked ripgrep --features 'pcre2'
 cargo install --quiet --git https://github.com/astral-sh/rye rye
 
 bat cache --build
-
-cat /dev/null >~/.zsh_history
-atuin history prune
 
 pokeget --hide-name bulbasaur >data/pokeget/bulbasaur.txt
 pokeget --hide-name charmeleon >data/pokeget/charmeleon.txt
