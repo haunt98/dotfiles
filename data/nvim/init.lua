@@ -124,7 +124,7 @@ require("lazy").setup({
 
 			require("catppuccin").setup({
 				flavour = "mocha",
-				transparent_background = false,
+				transparent_background = true,
 				color_overrides = {
 					mocha = {
 						-- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/mocha.lua
@@ -150,14 +150,18 @@ require("lazy").setup({
 						markdownLinkText = {
 							style = {},
 						},
-						-- Support mini.statusline
-						StatusLineNC = {
-							fg = color_oxocarbon.pink,
+						-- Support nvim-tree.lua
+						NvimTreeStatuslineNc = {
+							link = "NuimTreeStatusline",
 						},
 						-- Support gitsigns.nvim
 						GitSignsCurrentLineBlame = {
 							fg = colors.overlay1,
 							style = { "italic" },
+						},
+						-- Support mini.statusline
+						StatusLineNC = {
+							fg = color_oxocarbon.pink,
 						},
 					}
 				end,

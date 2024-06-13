@@ -82,6 +82,9 @@ return {
 	tab_and_split_indices_are_zero_based = true,
 	tab_max_width = 24,
 
+	window_background_opacity = 0.95,
+	macos_window_background_blur = 32,
+
 	native_macos_fullscreen_mode = true,
 
 	default_cursor_style = current_font.default_cursor_style,
