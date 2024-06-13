@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v0.15.7 (2024-06-13)
+
+### Others
+
+- config: background blur and opacity for kitty, nvim, and wezterm (2024-06-13)
+
+- chore: install fnm from git (2024-06-13)
+
+- chore: remove unused (2024-06-13)
+
+- config: remove unused fonts (2024-06-13)
+
+- chore: idk prettier@latest is a thing (2024-06-11)
+
+- config(nvim): enable fzf multiline (2024-06-11)
+
+- chore(newsboat): update urls (2024-06-11)
+
+- config: tweak some (2024-06-11)
+
+- config(nvim): add fzf_colors, plantuml-syntax (2024-06-11)
+
+- chore(brew): add mysql-client (2024-06-10)
+
+- config(zsh): improve history (2024-06-09)
+
+- chore(changelog): generate v0.15.6 (2024-06-08)
+
 ## v0.15.6 (2024-06-08)
 
 ### Others
