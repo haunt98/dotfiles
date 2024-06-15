@@ -495,9 +495,9 @@ require("lazy").setup({
 			})
 
 			-- Python
-			-- https://github.com/Microsoft/pyright
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
-			lspconfig.pyright.setup({})
+			-- https://github.com/astral-sh/ruff/blob/main/crates/ruff_server/docs/setup/NEOVIM.md
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff
+			lspconfig.ruff.setup({})
 
 			-- Markdown
 			-- https://github.com/artempyanykh/marksman
