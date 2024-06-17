@@ -171,9 +171,9 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://codeberg.org/ibhagwan/fzf-lua.git
+	-- https://github.com/ibhagwan/fzf-lua
 	{
-		url = "https://codeberg.org/ibhagwan/fzf-lua.git",
+		"ibhagwan/fzf-lua",
 		keys = {
 			{ "<Leader>f", ":FzfLua files<CR>" },
 			{ "<Leader>l", ":FzfLua blines<CR>" },
