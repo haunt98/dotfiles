@@ -221,11 +221,6 @@ require("lazy").setup({
 				preselect = cmp.PreselectMode.None,
 
 				-- Largely copy from GitHub
-				snippet = {
-					expand = function(args)
-						vim.snippet.expand(args.body)
-					end,
-				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<CR>"] = cmp.mapping.confirm(),
