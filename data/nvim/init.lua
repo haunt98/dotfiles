@@ -340,6 +340,19 @@ require("lazy").setup({
 				},
 			})
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-diff.md
+			require("mini.diff").setup({
+				mappings = {
+					goto_first = "[C",
+					goto_prev = "[c",
+					goto_next = "]c",
+					goto_last = "]C",
+				},
+			})
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
+			require("mini.git").setup()
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
 			require("mini.pairs").setup()
 
