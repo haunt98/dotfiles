@@ -4,86 +4,86 @@
 [[sound_preset]]
 name = "holy_panda"
 key_config = [
-  { event = "press", keys = "Return", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_enter.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = "Backspace", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_back.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = "Space", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_space.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = ".*", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key1.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key2.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key3.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key4.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key5.mp3", volume = 2.0 },
-  ], strategy = "random" },
+    { event = "press", keys = "Return", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_enter.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = "Backspace", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_back.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = "Space", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_space.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = ".*", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key1.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key2.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key3.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key4.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/holy-panda/press_key5.mp3", volume = 1.0 },
+    ], strategy = "random" },
 ]
 
 [[sound_preset]]
 name = "alpaca"
 key_config = [
-  { event = "press", keys = "Return", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_enter.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = "Backspace", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_back.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = "Space", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_space.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = ".*", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key1.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key2.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key3.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key4.mp3", volume = 2.0 },
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key5.mp3", volume = 2.0 },
-  ], strategy = "random" },
-  { event = "release", keys = "Return", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_enter.mp3", volume = 2.0 },
-  ] },
-  { event = "release", keys = "Backspace", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_back.mp3", volume = 2.0 },
-  ] },
-  { event = "release", keys = "Space", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_space.mp3", volume = 2.0 },
-  ] },
-  { event = "release", keys = ".*", files = [
-    { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_key.mp3", volume = 2.0 },
-  ] },
+    { event = "press", keys = "Return", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_enter.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = "Backspace", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_back.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = "Space", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_space.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = ".*", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key1.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key2.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key3.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key4.mp3", volume = 1.0 },
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/press_key5.mp3", volume = 1.0 },
+    ], strategy = "random" },
+    { event = "release", keys = "Return", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_enter.mp3", volume = 1.0 },
+    ] },
+    { event = "release", keys = "Backspace", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_back.mp3", volume = 1.0 },
+    ] },
+    { event = "release", keys = "Space", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_space.mp3", volume = 1.0 },
+    ] },
+    { event = "release", keys = ".*", files = [
+        { path = "github.com/nathan-fiscaletti/keyboardsounds/keyboardsounds/profiles/alpaca/release_key.mp3", volume = 1.0 },
+    ] },
 ]
 
 [[sound_preset]]
 name = "topre"
 key_config = [
-  { event = "press", keys = "Return", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/ENTER.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = "Backspace", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/BACKSPACE.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = "Space", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/SPACE.mp3", volume = 2.0 },
-  ] },
-  { event = "press", keys = ".*", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R0.mp3", volume = 2.0 },
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R1.mp3", volume = 2.0 },
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R2.mp3", volume = 2.0 },
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R3.mp3", volume = 2.0 },
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R4.mp3", volume = 2.0 },
-  ], strategy = "random" },
-  { event = "release", keys = "Return", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/ENTER.mp3", volume = 2.0 },
-  ] },
-  { event = "release", keys = "Backspace", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/BACKSPACE.mp3", volume = 2.0 },
-  ] },
-  { event = "release", keys = "Space", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/SPACE.mp3", volume = 2.0 },
-  ] },
-  { event = "release", keys = ".*", files = [
-    { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/GENERIC.mp3", volume = 2.0 },
-  ] },
+    { event = "press", keys = "Return", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/ENTER.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = "Backspace", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/BACKSPACE.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = "Space", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/SPACE.mp3", volume = 1.0 },
+    ] },
+    { event = "press", keys = ".*", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R0.mp3", volume = 1.0 },
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R1.mp3", volume = 1.0 },
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R2.mp3", volume = 1.0 },
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R3.mp3", volume = 1.0 },
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/press/GENERIC_R4.mp3", volume = 1.0 },
+    ], strategy = "random" },
+    { event = "release", keys = "Return", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/ENTER.mp3", volume = 1.0 },
+    ] },
+    { event = "release", keys = "Backspace", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/BACKSPACE.mp3", volume = 1.0 },
+    ] },
+    { event = "release", keys = "Space", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/SPACE.mp3", volume = 1.0 },
+    ] },
+    { event = "release", keys = ".*", files = [
+        { path = "github.com/tplai/kbsim/src/assets/audio/topre/release/GENERIC.mp3", volume = 1.0 },
+    ] },
 ]
