@@ -71,6 +71,10 @@ vim.keymap.set({ "n", "v" }, "q:", "<Nop>")
 vim.keymap.set({ "n", "v" }, "(", "<Nop>")
 vim.keymap.set({ "n", "v" }, ")", "<Nop>")
 
+-- My Sofle V2 do not have map `[`, `]` directly
+vim.keymap.set("n", ")d", "]d", { remap = true })
+vim.keymap.set("n", "(d", "[d", { remap = true })
+
 -- Disable scrolling
 -- https://neovim.io/doc/user/scroll.html
 vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>")
@@ -180,6 +184,7 @@ require("lazy").setup({
 			{ "<Space>i", ":FzfLua lsp_implementations<CR>" },
 			{ "gi", ":FzfLua lsp_implementations<CR>" },
 			{ "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>" },
+			{ "<Space>d", ":FzfLua diagnostics_document<CR>" },
 		},
 		dependencies = {
 			"neovim/nvim-lspconfig",
@@ -349,6 +354,10 @@ require("lazy").setup({
 					goto_last = "]C",
 				},
 			})
+
+			-- Sofle V2
+			vim.keymap.set("n", ")c", "]c", { remap = true })
+			vim.keymap.set("n", "(c", "[c", { remap = true })
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
 			require("mini.git").setup()
