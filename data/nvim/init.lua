@@ -416,7 +416,7 @@ require("lazy").setup({
 					python = { "ruff_format" },
 					sh = { "shfmt" },
 					sql = { "sqlfluff" },
-					toml = { "taplo" },
+					toml = { "trim_whitespace", "taplo" },
 					yaml = { "prettier" },
 					zsh = { "shfmt" },
 				},
