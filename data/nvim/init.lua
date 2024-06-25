@@ -355,10 +355,6 @@ require("lazy").setup({
 				},
 			})
 
-			-- Sofle V2
-			vim.keymap.set("n", ")c", "]c", { remap = true })
-			vim.keymap.set("n", "(c", "[c", { remap = true })
-
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
 			require("mini.git").setup()
 
@@ -370,6 +366,19 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
+
+			-- Sofle V2
+			vim.keymap.set("n", ")c", "]c", { remap = true })
+			vim.keymap.set("n", "(c", "[c", { remap = true })
+
+			local augroup = vim.api.nvim_create_augroup("UserMiniNvim", {})
+			vim.api.nvim_create_autocmd("FileType", {
+				group = augroup,
+				pattern = "NvimTree",
+				callback = function(ev)
+					vim.b.ministatusline_disable = true
+				end,
+			})
 		end,
 	},
 
