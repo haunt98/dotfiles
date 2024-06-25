@@ -455,7 +455,11 @@ require("lazy").setup({
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
+
+			-- https://github.com/hrsh7th/cmp-nvim-lsp
+			-- https://github.com/hrsh7th/nvim-cmp/discussions/759
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
