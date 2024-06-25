@@ -162,6 +162,12 @@ require("lazy").setup({
 						StatusLineNC = {
 							fg = color_oxocarbon.pink,
 						},
+						MiniStatuslineFilename = {
+							link = "NuimTreeStatusline",
+						},
+						MiniStatuslineInactive = {
+							link = "NuimTreeStatusline",
+						},
 					}
 				end,
 			})
