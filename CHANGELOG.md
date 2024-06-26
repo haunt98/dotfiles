@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## v0.15.8 (2024-06-26)
+
+### Others
+
+- config(nvim): enable inlay hint gopls (2024-06-26)
+
+- chore: add zed (2024-06-25)
+
+- config(nvim): transparent for statusline (2024-06-25)
+
+- config(nvim): hide mini statusline in NvimTree (2024-06-25)
+
+- config(nvim): disable nvim_cmp snippet (2024-06-25)
+
+- config(nvim): toml fault file at least trim space (2024-06-24)
+
+- config(nvim): add map `(`, `)` (2024-06-24)
+
+- config(daktilo): lower volume (2024-06-23)
+
+- config(zsh): add open (2024-06-23)
+
+- config(nvim): add mini.diff, mini.git (2024-06-22)
+
+- config(nvim): remove default nvim-cmp (2024-06-21)
+
+- config(nvim): add sqlfluff, remove gitsigns (2024-06-18)
+
+- config(nvim): use github source (2024-06-17)
+
+- config(kitty): use root ignore ssh when split (2024-06-16)
+
+- config(nvim): use ruff instead of pyright (2024-06-15)
+
+- chore(changelog): generate v0.15.7 (2024-06-13)
+
 ## v0.15.7 (2024-06-13)
 
 ### Others
