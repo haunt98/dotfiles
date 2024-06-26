@@ -154,19 +154,15 @@ require("lazy").setup({
 						markdownLinkText = {
 							style = {},
 						},
-						-- Support nvim-tree.lua
-						NvimTreeStatuslineNc = {
-							link = "NuimTreeStatusline",
+						EndOfBuffer = {
+							link = "NonText",
 						},
 						-- Support mini.statusline
-						StatusLineNC = {
-							fg = color_oxocarbon.pink,
-						},
 						MiniStatuslineFilename = {
-							link = "NuimTreeStatusline",
+							link = "StatusLine",
 						},
 						MiniStatuslineInactive = {
-							link = "NuimTreeStatusline",
+							link = "StatusLine",
 						},
 					}
 				end,
@@ -479,9 +475,20 @@ require("lazy").setup({
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
+			-- https://github.com/golang/tools/blob/master/gopls/doc/inlayHints.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
+				on_attach = function(client, bufnr)
+					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+				end,
+				settings = {
+					gopls = {
+						hints = {
+							parameterNames = true,
+						},
+					},
+				},
 			})
 
 			-- Python
