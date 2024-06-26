@@ -157,6 +157,10 @@ require("lazy").setup({
 						EndOfBuffer = {
 							link = "NonText",
 						},
+						-- Support nvim-tree
+						NvimTreeStatuslineNc = {
+							link = "StatusLineNC",
+						},
 						-- Support mini.statusline
 						MiniStatuslineFilename = {
 							link = "StatusLine",
