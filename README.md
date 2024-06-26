@@ -37,6 +37,7 @@ go build ./cmd/dot
 - [tmux](https://github.com/tmux/tmux)
 - [zellij](https://github.com/zellij-org/zellij)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [zed](https://github.com/zed-industries/zed)
 - [pokeget](https://github.com/talwat/pokeget-rs)
 - [btop](https://github.com/aristocratos/btop)
 - [newsboat](https://github.com/newsboat/newsboat)
