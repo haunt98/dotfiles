@@ -170,6 +170,9 @@ require("lazy").setup({
 						},
 					}
 				end,
+				integrations = {
+					treesitter_context = false,
+				},
 			})
 
 			vim.cmd("colorscheme catppuccin")
@@ -457,6 +460,50 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/nvim-treesitter/nvim-treesitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = {
+			":TSUpdate",
+		},
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				ensure_installed = {
+					"bash",
+					"go",
+					"lua",
+					"markdown",
+					"markdown_inline",
+					"proto",
+					"python",
+					"vim",
+					"vimdoc",
+				},
+				highlight = {
+					enabled = true,
+					disable = function(lang, bufnr)
+						-- Skip big files with many lines
+						return vim.api.nvim_buf_line_count(bufnr) > 10000
+					end,
+				},
+			})
+		end,
+	},
+
+	-- https://github.com/nvim-treesitter/nvim-treesitter-context
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("treesitter-context").setup({
+				enable = true,
+				max_lines = 2,
+			})
+		end,
+	},
+
 	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
@@ -481,8 +528,14 @@ require("lazy").setup({
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/inlayHints.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
+			-- https://github.com/neovim/nvim-lspconfig/issues/2542
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
+				on_init = function(client, initialization_result)
+					if client.server_capabilities then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
 				on_attach = function(client, bufnr)
 					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 				end,
@@ -498,12 +551,24 @@ require("lazy").setup({
 			-- Python
 			-- https://github.com/astral-sh/ruff/blob/main/crates/ruff_server/docs/setup/NEOVIM.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff
-			lspconfig.ruff.setup({})
+			lspconfig.ruff.setup({
+				on_init = function(client, initialization_result)
+					if client.server_capabilities then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
+			})
 
 			-- Markdown
 			-- https://github.com/artempyanykh/marksman
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman
-			lspconfig.marksman.setup({})
+			lspconfig.marksman.setup({
+				on_init = function(client, initialization_result)
+					if client.server_capabilities then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
+			})
 
 			-- General
 			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)

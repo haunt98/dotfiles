@@ -23,6 +23,7 @@ https://kbd.news/rss.php
 https://go.dev/blog/feed.atom
 https://lwn.net/headlines/rss
 https://github.blog/tag/git/atom
+https://golangweekly.com/rss/
 https://lobste.rs/t/cryptography,design,go,linux,mac.rss "~lobste.rs"
 
 http://antirez.com/rss
@@ -38,4 +39,3 @@ https://michael.stapelberg.ch/feed.xml
 https://mitchellh.com/feed.xml
 https://research.swtch.com/feed.atom
 https://stephango.com/feed.xml
-https://xeiaso.net/blog.rss
