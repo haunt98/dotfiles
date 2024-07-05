@@ -270,6 +270,9 @@ require("lazy").setup({
 		end,
 		config = function()
 			require("nvim-tree").setup({
+				view = {
+					side = "right",
+				},
 				renderer = {
 					group_empty = true,
 					root_folder_label = false,
@@ -277,6 +280,8 @@ require("lazy").setup({
 					special_files = {
 						"go.mod",
 						"go.sum",
+						"Makefile",
+						"README.md",
 					},
 					icons = {
 						show = {
