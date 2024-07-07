@@ -344,6 +344,18 @@ require("lazy").setup({
 		end,
 	},
 
+	-- https://github.com/neovim/neovim/issues/12374
+	-- https://github.com/svban/YankAssassin.nvim
+	{
+		"svban/YankAssassin.nvim",
+		config = function()
+			require("YankAssassin").setup({
+				auto_normal = true,
+				auto_visual = true,
+			})
+		end,
+	},
+
 	-- https://github.com/echasnovski/mini.nvim
 	{
 		"echasnovski/mini.nvim",
