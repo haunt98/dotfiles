@@ -21,6 +21,9 @@ git config --global alias.psf "push --force-with-lease"
 git config --global alias.rank "shortlog -nse --no-merges"
 git config --global alias.sh show
 git config --global alias.st status
+git config --global alias.stcl "stash clear"
+git config --global alias.sth stash
+git config --global alias.stp "stash pop"
 git config --global alias.sw switch
 git config --global alias.tg "tag --sort=-version:refname"
 
