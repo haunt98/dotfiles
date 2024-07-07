@@ -3,7 +3,7 @@
 cargo install --quiet --force --locked \
     fd-find bat git-delta eza sd tlrc \
     difftastic vivid zellij zoxide \
-    stylua taplo-cli \
+    stylua taplo-cli typos-cli \
     pokeget \
     daktilo
 
