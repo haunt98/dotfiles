@@ -197,6 +197,8 @@ func (c *cfg) Download(appNames ...string) error {
 				URL:      p.URL,
 			}
 
+			httpClient := &http.Client{}
+
 			eg.Go(func() error {
 				if c.isDryRun {
 					fmt.Printf("Download [%s] -> [%s]\n", p.URL, p.Internal)
@@ -204,7 +206,7 @@ func (c *cfg) Download(appNames ...string) error {
 				}
 
 				// nolint:noctx,gosec
-				httpRsp, err := http.Get(p.URL)
+				httpRsp, err := httpClient.Get(p.URL)
 				if err != nil {
 					return fmt.Errorf("http client: failed to get: %w", err)
 				}
