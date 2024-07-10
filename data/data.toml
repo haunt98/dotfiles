@@ -23,12 +23,20 @@ internal = "data/kitty/mocha.conf"
 external = "~/.config/kitty/mocha.conf"
 
 [[apps.kitty.paths]]
+internal = "data/kitty/latte.conf"
+external = "~/.config/kitty/latte.conf"
+
+[[apps.kitty.paths]]
 internal = "data/kitty/kitty-dark.icns"
 external = "~/.config/kitty/kitty.app.icns"
 
 [[apps.kitty.paths]]
 internal = "data/kitty/mocha.conf"
 url = "https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf"
+
+[[apps.kitty.paths]]
+internal = "data/kitty/latte.conf"
+url = "https://raw.githubusercontent.com/catppuccin/kitty/main/themes/latte.conf"
 
 [[apps.kitty.paths]]
 internal = "data/kitty/kitty-dark.icns"
