@@ -106,6 +106,10 @@ external = "~/.config/newsboat/dark"
 internal = "data/newsboat/dark"
 url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
 
+[[apps.sioyek.paths]]
+internal = "data/sioyek/prefs_user.config"
+external = "~/.config/sioyek/prefs_user.config"
+
 [[apps.daktilo.paths]]
 internal = "data/daktilo/daktilo.toml"
 external = "~/.config/daktilo/daktilo.toml"

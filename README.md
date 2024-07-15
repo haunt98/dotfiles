@@ -41,4 +41,5 @@ go build ./cmd/dot
 - [pokeget](https://github.com/talwat/pokeget-rs)
 - [btop](https://github.com/aristocratos/btop)
 - [newsboat](https://github.com/newsboat/newsboat)
+- [sioyek](https://github.com/ahrm/sioyek)
 - [daktilo](https://github.com/orhun/daktilo)
