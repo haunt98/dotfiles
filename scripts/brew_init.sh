@@ -3,7 +3,7 @@
 brew install \
     libgit2 pcre2 xz \
     git neovim \
-    fdupes rsync rclone restic \
+    fdupes rsync rclone restic wcurl \
     yt-dlp newsboat vips \
     btop \
     clang-format marksman moar asciidoctor ollama gitleaks \
