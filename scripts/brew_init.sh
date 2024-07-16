@@ -6,6 +6,6 @@ brew install \
     fdupes rsync rclone restic wcurl \
     yt-dlp newsboat vips \
     btop \
-    clang-format marksman moar asciidoctor ollama gitleaks \
+    clang-format marksman asciidoctor ollama gitleaks \
     qmk \
     mysql-client
