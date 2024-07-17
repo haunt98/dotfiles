@@ -561,6 +561,7 @@ require("lazy").setup({
 				settings = {
 					gopls = {
 						hints = {
+							constantValues = true,
 							parameterNames = true,
 						},
 					},
