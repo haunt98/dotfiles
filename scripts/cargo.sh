@@ -5,13 +5,14 @@ rustup update
 cargo install --quiet --locked \
     fd-find bat git-delta eza sd tlrc \
     difftastic vivid zellij zoxide \
-    stylua taplo-cli typos-cli \
+    stylua typos-cli \
     pokeget \
     daktilo
 
 cargo install --quiet --locked ripgrep --features 'pcre2'
 cargo install --quiet --git https://github.com/Schniz/fnm fnm
 cargo install --quiet --git https://github.com/astral-sh/rye rye
+cargo install --quiet --git https://github.com/tamasfe/taplo taplo-cli
 
 bat cache --build
 
