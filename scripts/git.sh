@@ -19,6 +19,7 @@ git config --global alias.psa "!git remote | xargs -L1 -P8 git push"
 git config --global alias.psaf "!git remote | xargs -L1 -P8 git push --force-with-lease"
 git config --global alias.psf "push --force-with-lease"
 git config --global alias.rank "shortlog -nse --no-merges"
+git config --global alias.rst restore
 git config --global alias.sh show
 git config --global alias.st status
 git config --global alias.stcl "stash clear"
