@@ -545,7 +545,6 @@ require("lazy").setup({
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
-			-- https://github.com/golang/tools/blob/master/gopls/doc/inlayHints.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 			-- https://github.com/neovim/nvim-lspconfig/issues/2542
 			lspconfig.gopls.setup({
@@ -555,17 +554,6 @@ require("lazy").setup({
 						client.server_capabilities.semanticTokensProvider = nil
 					end
 				end,
-				on_attach = function(client, bufnr)
-					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-				end,
-				settings = {
-					gopls = {
-						hints = {
-							constantValues = true,
-							parameterNames = true,
-						},
-					},
-				},
 			})
 
 			-- Python
