@@ -136,6 +136,11 @@ if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
+# https://github.com/crate-ci/typos
+if command -v typos &>/dev/null; then
+    alias typo="typos --config ~/.config/typos/typos.toml"
+fi
+
 # https://github.com/orhun/daktilo
 if command -v daktilo &>/dev/null; then
     export DAKTILO_CONFIG="$HOME/.config/daktilo/daktilo.toml"

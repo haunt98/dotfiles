@@ -1,0 +1,9 @@
+[files]
+extend-exclude = [
+    "CHANGELOG.md",
+    "*/generated/*",
+    "generated/*",
+    "*/external/proto/*",
+    "external/proto/*",
+    "*.html",
+]

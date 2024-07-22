@@ -39,3 +39,9 @@ https://michael.stapelberg.ch/feed.xml
 https://mitchellh.com/feed.xml
 https://research.swtch.com/feed.atom
 https://stephango.com/feed.xml
+
+https://nyaa.si/?f=0&c=1_2&q=doraemon+movie&page=rss "~Doraemon movie"
+https://nyaa.si/?f=0&c=1_2&q=conan+movie&page=rss "~Conan movie"
+https://nyaa.si/?f=0&c=3_1&q=Detective+Conan&page=rss "~Conan manga"
+https://nyaa.si/?f=0&c=3_1&q=one+piece&page=rss "~One Piece manga"
+https://nyaa.si/?f=0&c=3_1&q=berserk "~Berserk manga"
