@@ -679,4 +679,8 @@ require("lazy").setup({
 	rocks = {
 		enabled = false,
 	},
+	git = {
+		-- Seconds
+		cooldown = 5 * 60,
+	},
 })
