@@ -6,5 +6,16 @@
   "buffer_font_family": "Iosevka Pacman",
   "soft_wrap": "preferred_line_length",
   "vim_mode": true,
-  "restore_on_startup": "none"
+  "restore_on_startup": "none",
+  "assistant": {
+    "version": "1",
+    "provider": {
+      "default_model": {
+        "name": "codegemma",
+        "max_tokens": 2048,
+        "keep_alive": -1
+      },
+      "name": "ollama"
+    }
+  }
 }
