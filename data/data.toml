@@ -78,6 +78,10 @@ url = "https://raw.githubusercontent.com/romkatv/powerlevel10k/master/config/p10
 internal = "data/zed/settings.json"
 external = "~/.config/zed/settings.json"
 
+[[apps.zed.paths]]
+internal = "data/zed/keymap.json"
+external = "~/.config/zed/keymap.json"
+
 [[apps.pokeget.paths]]
 internal = "data/pokeget"
 external = "~/.config/pokeget"

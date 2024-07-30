@@ -1,0 +1,9 @@
+[
+  {
+    "context": "Editor && inline_completion && !showing_completions",
+    "bindings": {
+      "tab": "zed::NoAction",
+      "alt-right": "editor::AcceptInlineCompletion"
+    }
+  }
+]
