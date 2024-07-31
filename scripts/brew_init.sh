@@ -8,4 +8,4 @@ brew install \
     btop \
     clang-format marksman asciidoctor ollama gitleaks \
     qmk \
-    mysql-client
+    redis mysql-client
