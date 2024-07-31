@@ -297,13 +297,7 @@ require("lazy").setup({
 						"\\.bin$",
 						"\\.class$",
 						"\\.exe$",
-						"\\.hex$",
-						"\\.jpeg$",
-						"\\.jpg$",
 						"\\.out$",
-						"\\.pdf$",
-						"\\.png$",
-						"\\.zip$",
 						"^\\.DS_Store$",
 						"^\\.git$",
 						"^\\.idea$",
@@ -668,7 +662,7 @@ require("lazy").setup({
 		"David-Kunz/gen.nvim",
 		config = function()
 			require("gen").setup({
-				model = "codellama",
+				model = "codellama:latest",
 				display_mode = "split",
 				show_model = true,
 			})

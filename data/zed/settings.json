@@ -11,7 +11,7 @@
     "version": "1",
     "provider": {
       "default_model": {
-        "name": "codegemma",
+        "name": "codellama:latest",
         "max_tokens": 2048,
         "keep_alive": -1
       },
