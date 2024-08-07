@@ -1,4 +1,7 @@
 {
+  "language_models": {
+    "ollama": {}
+  },
   "theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "ui_font_family": "Shantell Sans Normal",
@@ -8,14 +11,11 @@
   "vim_mode": true,
   "restore_on_startup": "none",
   "assistant": {
-    "version": "1",
-    "provider": {
-      "default_model": {
-        "name": "codellama:latest",
-        "max_tokens": 2048,
-        "keep_alive": -1
-      },
-      "name": "ollama"
-    }
+    "default_model": {
+      "provider": "ollama",
+      "model": "codellama:latest"
+    },
+    "version": "2",
+    "provider": null
   }
 }
