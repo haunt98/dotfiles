@@ -15,16 +15,11 @@ https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
 https://github.com/wez/wezterm/commits/main.atom "~wezterm"
 https://github.com/be5invis/Iosevka/commits/main.atom "~Iosevka"
 
-https://github.com/caksoylar/keymap-drawer/commits/main.atom "~keymap-drawer"
-https://github.com/qmk/qmk_firmware/commits/develop.atom "~qmk_firmware/develop"
-https://github.com/qmk/qmk_firmware/commits/master.atom "~qmk_firmware"
-https://kbd.news/rss.php
 
 https://go.dev/blog/feed.atom
-https://lwn.net/headlines/rss
-https://github.blog/tag/git/atom
 https://golangweekly.com/rss/
-https://lobste.rs/t/cryptography,design,go,linux,mac.rss "~lobste.rs"
+https://lobste.rs/t/performance,databases,cryptography,design,c,go,linux,mac.rss "~lobste.rs"
+https://lwn.net/headlines/rss
 
 http://antirez.com/rss
 http://feeds.feedburner.com/ThePragmaticEngineer
@@ -39,10 +34,21 @@ https://michael.stapelberg.ch/feed.xml
 https://mitchellh.com/feed.xml
 https://research.swtch.com/feed.atom
 https://rosenzweig.io/feed.xml
+https://writings.stephenwolfram.com/feed/
 
+https://100r.co/links/rss.xml
 https://jenson.org/category/article/rss
 https://matthewstrom.com/feed.xml
 https://stephango.com/feed.xml
+https://www.workspaces.xyz/p/rss.xml
+
+https://github.com/caksoylar/keymap-drawer/commits/main.atom "~keymap-drawer"
+https://github.com/qmk/qmk_firmware/commits/develop.atom "~qmk_firmware/develop"
+https://github.com/qmk/qmk_firmware/commits/master.atom "~qmk_firmware"
+
+http://matt3o.com/feed/
+https://josef-adamcik.cz/feed.xml
+https://kbd.news/rss.php
 
 https://nyaa.si/?f=0&c=1_2&q=doraemon+movie&page=rss "~Doraemon movie"
 https://nyaa.si/?f=0&c=1_2&q=conan+movie&page=rss "~Conan movie"
