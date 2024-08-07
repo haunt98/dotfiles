@@ -635,6 +635,8 @@ require("lazy").setup({
 			vim.g.copilot_filetypes = {
 				["*"] = false,
 				asciidoc = true,
+				c = true,
+				cpp = true,
 				gitcommit = true,
 				go = true,
 				lua = true,
