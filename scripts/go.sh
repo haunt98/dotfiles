@@ -23,6 +23,3 @@ go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 go install github.com/maruel/panicparse/v2@latest
 go install gotest.tools/gotestsum@latest
 go install github.com/bufbuild/buf/cmd/buf@v1.31.0
-
-# Need to run this once a month
-# go clean -cache -testcache -modcache -fuzzcache
