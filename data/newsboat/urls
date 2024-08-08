@@ -32,6 +32,7 @@ https://drewdevault.com/blog/index.xml
 https://jvns.ca/atom.xml
 https://michael.stapelberg.ch/feed.xml
 https://mitchellh.com/feed.xml
+https://registerspill.thorstenball.com/feed
 https://research.swtch.com/feed.atom
 https://rosenzweig.io/feed.xml
 https://writings.stephenwolfram.com/feed/
@@ -46,9 +47,10 @@ https://github.com/caksoylar/keymap-drawer/commits/main.atom "~keymap-drawer"
 https://github.com/qmk/qmk_firmware/commits/develop.atom "~qmk_firmware/develop"
 https://github.com/qmk/qmk_firmware/commits/master.atom "~qmk_firmware"
 
+https://kbd.news/rss.php
+https://www.theremingoat.com/blog?format=rss
 http://matt3o.com/feed/
 https://josef-adamcik.cz/feed.xml
-https://kbd.news/rss.php
 
 https://nyaa.si/?f=0&c=1_2&q=doraemon+movie&page=rss "~Doraemon movie"
 https://nyaa.si/?f=0&c=1_2&q=conan+movie&page=rss "~Conan movie"
