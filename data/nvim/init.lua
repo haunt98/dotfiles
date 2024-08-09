@@ -207,6 +207,7 @@ require("lazy").setup({
 				},
 				defaults = {
 					formatter = "path.filename_first",
+					git_icons = false,
 				},
 				grep = {
 					multiline = 1,
