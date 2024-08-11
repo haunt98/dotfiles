@@ -1,5 +1,111 @@
 # CHANGELOG
 
+## v0.15.9 (2024-08-12)
+
+### Added
+
+- feat: add sioyek (2024-07-15)
+
+- feat: cache http client (2024-07-10)
+
+### Others
+
+- config(nvim): add lspkind (2024-08-12)
+
+- chore: bump moar (2024-08-12)
+
+- config(sioyek): only launch 1 window (2024-08-11)
+
+- chore: clean docker (2024-08-11)
+
+- chore: use mistral model for gen and zed (2024-08-11)
+
+- chore: more read (2024-08-10)
+
+- config(nvim): ignore git icons in fzflua (2024-08-09)
+
+- chore: more blog (2024-08-08)
+
+- chore: clear log file (2024-08-08)
+
+- chore: bump moar (2024-08-08)
+
+- chore: add clean (2024-08-08)
+
+- chore (2024-08-08)
+
+- config(zed): chore (2024-08-07)
+
+- chore: refind history ignore (2024-08-07)
+
+- config(sioyek): no fast search (2024-08-07)
+
+- config(nvim): more copilot (2024-08-07)
+
+- chore: rss urls (2024-08-07)
+
+- chore(deps): bump golang.org/x/sync from 0.7.0 to 0.8.0 (#69) (2024-08-06)
+
+- config(nvim): show all (2024-07-31)
+
+- chore: add redis to brew_init.sh (2024-07-31)
+
+- config(zed): use ollama (2024-07-30)
+
+- config(zed): save zed keymaps (2024-07-30)
+
+- config(kitty): launch tabs in the oldest directory not root (2024-07-30)
+
+- config(nvim): welcome ai (2024-07-30)
+
+- chore: improve cargo install, remove --locked (2024-07-26)
+
+- chore(deps): bump github.com/urfave/cli/v2 from 2.27.2 to 2.27.3 (#68) (2024-07-25)
+
+- config(nvim): add throttle lazy (2024-07-24)
+
+- config(nvim): cool down update plugin (2024-07-24)
+
+- config(sioyek): better keymap (2024-07-23)
+
+- chore: add typos (2024-07-22)
+
+- config(nvim): disable rocks in lazy.nvim (2024-07-19)
+
+- config(nvim): remove inlay hint (2024-07-19)
+
+- chore: git restore (2024-07-19)
+
+- chore: install taplo-cli from git (2024-07-18)
+
+- config(nvim): enable gopls hint constantValues (2024-07-17)
+
+- chore: pin moar (2024-07-16)
+
+- chore: add wcurl (2024-07-15)
+
+- config: add kitty catppuccin latte (2024-07-10)
+
+- config(nvim): add yank ass (2024-07-08)
+
+- chore: add typo (2024-07-08)
+
+- chore: alias for git stash (2024-07-07)
+
+- config(nvim): open files on right (2024-07-05)
+
+- config(nvim): more ts goodies (2024-07-05)
+
+- config(nvim): replace lsp syntax with treesitter (2024-07-05)
+
+- chore: remove pyright (2024-07-01)
+
+- config(nvim): add support for nvim-tree statusline (2024-06-26)
+
+- chore: add zed (2024-06-26)
+
+- chore(changelog): generate v0.15.8 (2024-06-26)
+
 ## v0.15.8 (2024-06-26)
 
 ### Others
