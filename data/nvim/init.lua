@@ -665,7 +665,7 @@ require("lazy").setup({
 		"David-Kunz/gen.nvim",
 		config = function()
 			require("gen").setup({
-				model = "codellama:latest",
+				model = "mistral:latest",
 				display_mode = "split",
 				show_model = true,
 			})

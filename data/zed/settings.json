@@ -13,7 +13,7 @@
   "assistant": {
     "default_model": {
       "provider": "ollama",
-      "model": "codellama:latest"
+      "model": "mistral:latest"
     },
     "version": "2",
     "provider": null
