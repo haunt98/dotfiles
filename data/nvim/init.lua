@@ -224,9 +224,12 @@ require("lazy").setup({
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
+			-- https://github.com/onsails/lspkind.nvim
+			"onsails/lspkind.nvim",
 		},
 		config = function()
 			local cmp = require("cmp")
+			local lspkind = require("lspkind")
 
 			cmp.setup({
 				-- Custom
@@ -254,6 +257,14 @@ require("lazy").setup({
 						},
 					},
 				}),
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						maxwidth = 50,
+						ellipsis_char = "...",
+						show_labelDetails = true,
+					}),
+				},
 			})
 		end,
 	},
