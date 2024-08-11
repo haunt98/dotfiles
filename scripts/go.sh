@@ -9,7 +9,7 @@ go install golang.org/x/tools/cmd/goimports@latest
 
 go install github.com/mikefarah/yq/v4@latest
 go install github.com/itchyny/gojq/cmd/gojq@latest
-go install github.com/walles/moar@v1.25.2
+go install github.com/walles/moar@v1.25.4
 go install github.com/antonmedv/fx@latest
 
 go install golang.org/x/telemetry/cmd/gotelemetry@latest
