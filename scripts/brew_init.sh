@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 brew install \
-    libgit2 pcre2 xz \
+    libgit2 pcre2 xz telnet \
     git neovim \
     fdupes rsync rclone restic wcurl ncdu \
     yt-dlp newsboat vips btop \
