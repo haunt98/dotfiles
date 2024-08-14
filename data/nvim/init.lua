@@ -454,7 +454,7 @@ require("lazy").setup({
 					lua = { "stylua" },
 					markdown = { "deno_fmt" },
 					proto = { "buf" },
-					python = { "ruff_format" },
+					python = { "ruff_format", "ruff_organize_imports" },
 					sh = { "shfmt" },
 					sql = { "sqlfluff" },
 					toml = { "trim_whitespace", "taplo" },
