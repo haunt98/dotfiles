@@ -563,12 +563,36 @@ require("lazy").setup({
 			})
 
 			-- Python
-			-- https://github.com/astral-sh/ruff/blob/main/crates/ruff_server/docs/setup/NEOVIM.md
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				on_init = function(client, initialization_result)
+					if client.server_capabilities then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
+				settings = {
+					pyright = {
+						-- Conflicts with Ruff
+						disableOrganizeImports = true,
+					},
+					python = {
+						analysis = {
+							-- Conflicts with Ruff
+							ignore = { "*" },
+						},
+					},
+				},
+			})
+
+			-- https://docs.astral.sh/ruff/editors/setup/#neovim
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff
 			lspconfig.ruff.setup({
 				on_init = function(client, initialization_result)
 					if client.server_capabilities then
 						client.server_capabilities.semanticTokensProvider = nil
+						-- Conflicts with pyright
+						client.server_capabilities.hoverProvider = false
 					end
 				end,
 			})
