@@ -121,3 +121,7 @@ external = "~/.config/typos/typos.toml"
 [[apps.daktilo.paths]]
 internal = "data/daktilo/daktilo.toml"
 external = "~/.config/daktilo/daktilo.toml"
+
+[[apps.cargo.paths]]
+internal = "data/cargo/config.toml"
+external = "~/.cargo/config.toml"
