@@ -17,9 +17,9 @@ gotelemetry on
 
 go install golang.org/x/vuln/cmd/govulncheck@latest
 go install golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment@latest
-
+go install github.com/dkorunic/betteralign/cmd/betteralign@latest
 go install mvdan.cc/gofumpt@latest
 go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 go install github.com/maruel/panicparse/v2@latest
 go install gotest.tools/gotestsum@latest
-go install github.com/bufbuild/buf/cmd/buf@v1.31.0
+go install github.com/bufbuild/buf/cmd/buf@latest
