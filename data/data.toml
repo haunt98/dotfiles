@@ -103,6 +103,10 @@ internal = "data/newsboat/urls"
 external = "~/.config/newsboat/urls"
 
 [[apps.newsboat.paths]]
+internal = "data/newsboat/tiny_urls"
+external = "~/.config/newsboat/tiny_urls"
+
+[[apps.newsboat.paths]]
 internal = "data/newsboat/dark"
 external = "~/.config/newsboat/dark"
 
