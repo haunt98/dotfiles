@@ -5,6 +5,6 @@ brew install \
     git neovim \
     fdupes rsync rclone restic wcurl ncdu \
     yt-dlp newsboat vips btop \
-    clang-format marksman asciidoctor ollama gitleaks \
+    clang-format marksman asciidoctor ollama gitleaks gh \
     qmk \
     redis mysql-client
