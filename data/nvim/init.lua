@@ -418,6 +418,17 @@ require("lazy").setup({
 	-- https://github.com/aklt/plantuml-syntax
 	{
 		"aklt/plantuml-syntax",
+		ft = {
+			"plantuml",
+		},
+	},
+
+	-- https://github.com/NoahTheDuke/vim-just
+	{
+		"NoahTheDuke/vim-just",
+		ft = {
+			"just",
+		},
 	},
 
 	-- https://github.com/stevearc/conform.nvim
