@@ -136,6 +136,11 @@ if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
+# https://github.com/casey/just
+if command -v just &>/dev/null; then
+    alias jst="just"
+fi
+
 # https://github.com/crate-ci/typos
 if command -v typos &>/dev/null; then
     alias typo="typos --config ~/.config/typos/typos.toml"
