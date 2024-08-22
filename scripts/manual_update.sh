@@ -8,6 +8,8 @@ git -C ~/.oh-my-zsh/custom/plugins/fzf-tab pull
 git -C ~/.fzf pull
 ~/.fzf/install --key-bindings --completion --update-rc --no-bash --no-fish
 
+fnm install --lts
+
 bun upgrade --stable
 bun install --global prettier@latest
 
