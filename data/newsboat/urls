@@ -8,13 +8,13 @@ https://github.com/go-gorm/mysql/commits/master.atom "~gorm/mysql"
 https://github.com/go-sql-driver/mysql/commits/master.atom "~mysql"
 https://github.com/grpc/grpc-go/commits/master.atom "~grpc-go"
 https://github.com/redis/go-redis/commits/master.atom "~go-redis"
+https://github.com/serengil/deepface/commits/master.atom "~deepface"
 https://github.com/sourcegraph/conc/commits/main.atom "~conc"
 https://github.com/uber-go/zap/commits/master.atom "~zap"
 
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
 https://github.com/wez/wezterm/commits/main.atom "~wezterm"
 https://github.com/be5invis/Iosevka/commits/main.atom "~Iosevka"
-
 
 https://go.dev/blog/feed.atom
 https://golangweekly.com/rss/
@@ -29,6 +29,7 @@ https://apenwarr.ca/log/rss.php
 https://brandur.org/articles.atom
 https://brandur.org/fragments.atom
 https://daniel.haxx.se/blog/feed/
+https://dave.cheney.net/feed/atom
 https://drewdevault.com/blog/index.xml
 https://jvns.ca/atom.xml
 https://matthewstrom.com/feed.xml
