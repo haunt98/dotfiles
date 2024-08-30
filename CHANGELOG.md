@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## v0.15.10 (2024-08-30)
+
+### Added
+
+- feat: add bat (2024-08-22)
+
+### Others
+
+- config(delta): add catppuccin themes (2024-08-30)
+
+- config(zsh): shell completion for delta and just (2024-08-30)
+
+- config(zsh): disable aliases omz (2024-08-30)
+
+- chore: more url (2024-08-24)
+
+- chore: read news from Dave Cheney (2024-08-24)
+
+- config(nvim): copilot more (2024-08-22)
+
+- config(nvim): support just syntax (2024-08-22)
+
+- chore: migrate to justfile (2024-08-22)
+
+- chore: replace rye with uv (2024-08-22)
+
+- chore: add gosec (2024-08-22)
+
+- chore: add gh (2024-08-21)
+
+- chore: rss tiny (2024-08-19)
+
+- chore: go buf latest (2024-08-19)
+
+- config(kitty): remove hardcoded symbol_map as kitty support native (2024-08-17)
+
+- config(cargo): enable strip and lto for release builds (2024-08-17)
+
+- config(nvim): sort ruff imports (2024-08-15)
+
+- config(nvim): bring back pyright (2024-08-15)
+
+- chore: bun upgrade stable (2024-08-14)
+
+- chore: bump moar (2024-08-13)
+
+- chore: clean ollama (2024-08-13)
+
+- chore(deps): bump github.com/urfave/cli/v2 from 2.27.3 to 2.27.4 (#71) (2024-08-12)
+
+- chore: telnet (2024-08-12)
+
+- chore(changelog): generate v0.15.9 (2024-08-12)
+
 ## v0.15.9 (2024-08-12)
 
 ### Added
