@@ -62,6 +62,14 @@ external = "~/.config/bat"
 internal = "data/bat/themes/Catppuccin Mocha.tmTheme"
 url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
 
+[[apps.delta.paths]]
+internal = "data/delta/themes/catppuccin.gitconfig"
+external = "~/.config/delta/themes/catppuccin.gitconfig"
+
+[[apps.delta.paths]]
+internal = "data/delta/themes/catppuccin.gitconfig"
+url = "https://raw.githubusercontent.com/catppuccin/delta/main/catppuccin.gitconfig"
+
 [[apps.ripgrep.paths]]
 internal = "data/ripgrep"
 external = "~/.config/ripgrep"
