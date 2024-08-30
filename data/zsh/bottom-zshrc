@@ -98,6 +98,12 @@ if command -v kitten &>/dev/null; then
     alias kssh="kitten ssh"
 fi
 
+# https://github.com/dandavison/delta
+if command -v delta &>/dev/null; then
+    alias da="delta"
+    eval "$(delta --generate-completion zsh)"
+fi
+
 # https://github.com/wilfred/difftastic
 if command -v difft &>/dev/null; then
     export DFT_DISPLAY=inline
@@ -139,6 +145,7 @@ fi
 # https://github.com/casey/just
 if command -v just &>/dev/null; then
     alias jst="just"
+    eval "$(just --completions zsh)"
 fi
 
 # https://github.com/crate-ci/typos
