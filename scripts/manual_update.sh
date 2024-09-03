@@ -10,7 +10,4 @@ git -C ~/.fzf pull
 
 fnm install --lts
 
-bun upgrade --stable
-bun install --global prettier@latest
-
 deno upgrade
