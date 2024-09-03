@@ -514,6 +514,7 @@ require("lazy").setup({
 					"markdown_inline",
 					"proto",
 					"python",
+					"toml",
 					"vim",
 					"vimdoc",
 				},
