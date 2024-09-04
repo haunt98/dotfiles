@@ -7,6 +7,6 @@ brew install \
     tlrc vivid zellij \
     yt-dlp newsboat vips btop \
     fnm uv \
-    stylua taplo typos-cli clang-format marksman asciidoctor ollama gitleaks gh \
+    stylua taplo typos-cli clang-format marksman asciidoctor ollama gitleaks gh glab \
     qmk daktilo \
     redis mysql-client
