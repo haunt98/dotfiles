@@ -249,7 +249,7 @@ func (c *cfg) Clean() error {
 		return err
 	}
 
-	// Delete ununsed dirs to save some space
+	// Delete unused dirs to save some space
 	for dir := range unusedDirs {
 		if c.isDryRun {
 			fmt.Printf("Remove [%s]\n", dir)
