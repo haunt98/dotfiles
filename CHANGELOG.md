@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v0.15.11 (2024-09-04)
+
+### Fixed
+
+- fix: delete data.toml when clean (2024-09-04)
+
+### Others
+
+- chore: typo (2024-09-04)
+
+- config(nvim): add toml (2024-09-03)
+
+- chore: improve bun (2024-09-03)
+
+- chore(changelog): generate v0.15.10 (2024-08-30)
+
 ## v0.15.10 (2024-08-30)
 
 ### Added
