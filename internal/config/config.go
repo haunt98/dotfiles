@@ -45,13 +45,13 @@ type cfg struct {
 
 // LoadConfig return config, configDemo
 func LoadConfig(path string, isDryRun bool) (Config, error) {
-	configPathJSON := filepath.Join(path, configDirPath, configFileJSON)
+	configPathJSON := filepath.Clean(filepath.Join(path, configDirPath, configFileJSON))
 	bytes, err := os.ReadFile(configPathJSON)
 	if err == nil {
 		return loadConfig(bytes, isDryRun, json.Unmarshal)
 	}
 
-	configPathTOML := filepath.Join(path, configDirPath, configFileTOML)
+	configPathTOML := filepath.Clean(filepath.Join(path, configDirPath, configFileTOML))
 	bytes, err = os.ReadFile(configPathTOML)
 	if err == nil {
 		return loadConfig(bytes, isDryRun, toml.Unmarshal)
@@ -219,7 +219,7 @@ func (c *cfg) Download(appNames ...string) error {
 				// Copy from github.com/make-go-great/copy-go
 				// Make sure nested dir is exist before copying file
 				dstDir := filepath.Dir(p.Internal)
-				if err := os.MkdirAll(dstDir, os.ModePerm); err != nil {
+				if err := os.MkdirAll(dstDir, 0o750); err != nil {
 					return fmt.Errorf("os: failed to mkdir all [%s]: %w", dstDir, err)
 				}
 
@@ -227,7 +227,9 @@ func (c *cfg) Download(appNames ...string) error {
 					return fmt.Errorf("os: failed to write file: %w", err)
 				}
 
-				httpRsp.Body.Close()
+				if err := httpRsp.Body.Close(); err != nil {
+					return fmt.Errorf("http client: failed to close body: %w", err)
+				}
 
 				return nil
 			})
