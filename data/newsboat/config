@@ -18,3 +18,6 @@ unbind-key j
 unbind-key k
 bind-key j down
 bind-key k up
+
+# https://github.com/newsboat/newsboat/issues/1295
+browser "open %u"
