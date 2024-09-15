@@ -148,6 +148,13 @@ if command -v just &>/dev/null; then
     eval "$(just --completions zsh)"
 fi
 
+# https://github.com/rclone/rclone
+if command -v rclone &>/dev/null; then
+    export RCLONE_PROGRESS=true
+    # https://github.com/rclone/rclone/issues/8063
+    # export RCLONE_EXCLUDE=".DS_Store"
+fi
+
 # https://github.com/crate-ci/typos
 if command -v typos &>/dev/null; then
     alias typo="typos --config ~/.config/typos/typos.toml"
