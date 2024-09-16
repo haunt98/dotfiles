@@ -5,7 +5,13 @@ include ~/.config/newsboat/dark
 auto-reload yes
 confirm-mark-all-feeds-read no
 confirm-mark-feed-read no
-reload-threads 128
+display-article-progress yes
+download-retries 4
+keep-articles-days 120
+max-items 100
+pager ""
+reload-threads 8
+scrolloff 4
 text-width 120
 
 # https://m-chrzan.xyz/blog/vim-keybindings-for-newsboat.html
