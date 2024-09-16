@@ -9,7 +9,7 @@ display-article-progress yes
 download-retries 4
 keep-articles-days 120
 max-items 100
-pager ""
+pager "moar %f"
 reload-threads 8
 scrolloff 4
 text-width 120
