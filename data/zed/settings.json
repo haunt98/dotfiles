@@ -1,17 +1,25 @@
 {
-  "theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "ui_font_family": "Shantell Sans Normal",
   "buffer_font_size": 16,
   "buffer_font_family": "Iosevka Pacman",
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 120,
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "theme": {
+    "mode": "system",
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Latte"
+  },
   "vim_mode": true,
-  "show_call_status_icon": false,
-  "projects_online_by_default": false,
-  "restore_on_startup": "none",
   "assistant": {
     "enabled": false,
-    "version": "1"
-  }
+    "version": "2"
+  },
+  "show_call_status_icon": false,
+  "projects_online_by_default": false,
+  "restore_on_startup": "none"
 }
