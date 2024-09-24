@@ -15,11 +15,14 @@ https://github.com/uber-go/zap/commits/master.atom "~zap"
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
 https://github.com/wez/wezterm/commits/main.atom "~wezterm"
 https://github.com/be5invis/Iosevka/commits/main.atom "~Iosevka"
+https://github.com/AsahiLinux/linux/commits/asahi.atom "~AsahiLinux/linux"
+https://github.com/AsahiLinux/m1n1/commits/main.atom "~AsahiLinux/m1n1"
 
 https://go.dev/blog/feed.atom
 https://golangweekly.com/rss/
-https://lobste.rs/t/performance,databases,cryptography,design,c,go,linux,mac.rss "~lobste.rs"
 https://lwn.net/headlines/rss
+https://lobste.rs/t/performance,databases,cryptography,design,c,go,linux,mac.rss "~lobste.rs"
+https://www.undeadly.org/cgi?action=rss
 
 http://antirez.com/rss
 http://feeds.feedburner.com/ThePragmaticEngineer
