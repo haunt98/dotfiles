@@ -1,21 +1,17 @@
 {
-  "language_models": {
-    "ollama": {}
-  },
   "theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "ui_font_family": "Shantell Sans Normal",
   "buffer_font_size": 16,
   "buffer_font_family": "Iosevka Pacman",
   "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 120,
   "vim_mode": true,
+  "show_call_status_icon": false,
+  "projects_online_by_default": false,
   "restore_on_startup": "none",
   "assistant": {
-    "default_model": {
-      "provider": "ollama",
-      "model": "mistral:latest"
-    },
-    "version": "2",
-    "provider": null
+    "enabled": false,
+    "version": "1"
   }
 }

@@ -717,7 +717,7 @@ require("lazy").setup({
 		"David-Kunz/gen.nvim",
 		config = function()
 			require("gen").setup({
-				model = "mistral:latest",
+				model = "qwen2.5-coder:1.5b",
 				display_mode = "split",
 				show_model = true,
 			})
