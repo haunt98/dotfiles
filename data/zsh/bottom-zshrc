@@ -151,8 +151,7 @@ fi
 # https://github.com/rclone/rclone
 if command -v rclone &>/dev/null; then
     export RCLONE_PROGRESS=true
-    # https://github.com/rclone/rclone/issues/8063
-    # export RCLONE_EXCLUDE=".DS_Store"
+    export RCLONE_EXCLUDE=".DS_Store"
 fi
 
 # https://github.com/crate-ci/typos
