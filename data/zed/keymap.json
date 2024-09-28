@@ -5,5 +5,14 @@
       "tab": "zed::NoAction",
       "alt-right": "editor::AcceptInlineCompletion"
     }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "; d": ["workspace::SendKeystrokes", "\" _ d"],
+      "; c": ["workspace::SendKeystrokes", "\" _ c"],
+      "; x": ["workspace::SendKeystrokes", "\" _ x"],
+      "space f": "editor::Format"
+    }
   }
 ]
