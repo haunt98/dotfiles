@@ -37,6 +37,29 @@ return {
 
 	color_scheme = current_color_scheme,
 
+	window_padding = {
+		left = 16,
+		right = 16,
+		top = 16,
+		bottom = 16,
+	},
+
+	use_fancy_tab_bar = false,
+	hide_tab_bar_if_only_one_tab = true,
+	tab_bar_at_bottom = true,
+	tab_and_split_indices_are_zero_based = true,
+	tab_max_width = 24,
+
+	window_background_opacity = 0.95,
+	macos_window_background_blur = 32,
+
+	native_macos_fullscreen_mode = true,
+
+	default_cursor_style = current_font.default_cursor_style,
+	audible_bell = "Disabled",
+
+	front_end = "WebGpu",
+
 	keys = {
 		{
 			key = "LeftArrow",
@@ -75,20 +98,4 @@ return {
 			action = act.ActivateTabRelative(1),
 		},
 	},
-
-	use_fancy_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = true,
-	tab_bar_at_bottom = true,
-	tab_and_split_indices_are_zero_based = true,
-	tab_max_width = 24,
-
-	window_background_opacity = 0.95,
-	macos_window_background_blur = 32,
-
-	native_macos_fullscreen_mode = true,
-
-	default_cursor_style = current_font.default_cursor_style,
-	audible_bell = "Disabled",
-
-	front_end = "WebGpu",
 }
