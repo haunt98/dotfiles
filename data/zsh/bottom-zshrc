@@ -50,6 +50,17 @@ export PATH=$PATH:$GOPATH/bin
 if command -v fzf &>/dev/null; then
     export FZF_COMPLETION_TRIGGER='~~'
 
+    # https://github.com/catppuccin/fzf
+    # Remove bg for transparent terminal
+    export FZF_DEFAULT_OPTS="\
+        --ansi \
+        --pointer='🔫' --prompt='🪓 ' \
+        --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+        --color=selected-bg:#45475a \
+        --multi"
+
     if command -v fd &>/dev/null; then
         _fzf_compgen_path() {
             fd --type file . "$1"
@@ -63,17 +74,6 @@ if command -v fzf &>/dev/null; then
         export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
         export FZF_ALT_C_COMMAND="fd --type directory --color=always"
     fi
-
-    # https://github.com/catppuccin/fzf
-    # Remove bg for transparent terminal
-    export FZF_DEFAULT_OPTS="\
-        --ansi \
-        --pointer='🔫' --prompt='🪓 ' \
-        --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
-        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-        --color=selected-bg:#45475a \
-        --multi"
 
     if command -v bat &>/dev/null; then
         export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range=:500 {}'"
