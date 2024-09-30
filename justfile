@@ -35,3 +35,12 @@ build:
 
 clean:
     rm -rf dot
+
+dot-upd:
+    go run ./cmd/dot upd
+
+dot-ins:
+    go run ./cmd/dot ins
+
+dot-dl:
+    go run ./cmd/dot dl
