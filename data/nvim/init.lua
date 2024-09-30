@@ -390,6 +390,9 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
 			require("mini.git").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-icons.md
+			require("mini.icons").setup()
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
 			require("mini.pairs").setup()
 
