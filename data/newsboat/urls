@@ -10,6 +10,7 @@ https://github.com/grpc/grpc-go/commits/master.atom "~grpc-go"
 https://github.com/redis/go-redis/commits/master.atom "~go-redis"
 https://github.com/serengil/deepface/commits/master.atom "~deepface"
 https://github.com/sourcegraph/conc/commits/main.atom "~conc"
+https://github.com/tidwall/gjson/commits/master.atom "~gjson"
 https://github.com/uber-go/zap/commits/master.atom "~zap"
 
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
