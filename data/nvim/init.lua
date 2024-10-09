@@ -509,14 +509,17 @@ require("lazy").setup({
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"bash",
+					"c",
 					"git_config",
 					"gitcommit",
 					"go",
 					"lua",
+					"make",
 					"markdown",
 					"markdown_inline",
 					"proto",
 					"python",
+					"query",
 					"toml",
 					"vim",
 					"vimdoc",
