@@ -18,12 +18,18 @@ export XDG_DATA_HOME=~/.local/share
 export LESS="-RF -i -K -s -x2 --wordwrap"
 
 # zsh plugins
+# https://github.com/zsh-users/zsh-syntax-highlighting
+if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # https://github.com/zsh-users/zsh-autosuggestions
 if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-    typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-    typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+    export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+    export ZSH_AUTOSUGGEST_MANUAL_REBIND=true
+    export ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
 fi
 
 # https://unix.stackexchange.com/q/621606
@@ -36,6 +42,7 @@ if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-
 
     export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
     export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+    export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 fi
 
 # git
