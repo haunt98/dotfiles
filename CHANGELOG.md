@@ -1,5 +1,69 @@
 # CHANGELOG
 
+## v0.15.12 (2024-10-09)
+
+### Others
+
+- config: add starship (2024-10-09)
+
+- config(zsh): fix fzf-tab colors (2024-10-09)
+
+- config(zsh): improve highlight (2024-10-09)
+
+- config(zsh): add zsh-history-substring-search (2024-10-09)
+
+- config(zsh): replace omz, p10k with starship (2024-10-09)
+
+- chore: add gjson to newsboat (2024-10-08)
+
+- config(zed): change soft_wrap to bounded (2024-10-05)
+
+- chore: brew just (2024-10-01)
+
+- config(nvim): add mini-icons (2024-09-30)
+
+- config(zsh): move fzf (2024-09-30)
+
+- chore: dot- (2024-09-30)
+
+- config(zsh): fix fzf colors (2024-09-28)
+
+- config(wezterm): update window_padding for aesthetics (2024-09-28)
+
+- config(kitty): increase window_padding_width to 16 for aesthetics (2024-09-28)
+
+- config(zed): keymap for vim mode (2024-09-28)
+
+- config(zsh): rclone update (2024-09-25)
+
+- chore(newsboat): more urls (2024-09-24)
+
+- config(zed): hide toolbar (2024-09-24)
+
+- config(zed): some tweak (2024-09-24)
+
+- config(newsboat): fix pager again (2024-09-17)
+
+- config(newsboat): fix pager (2024-09-17)
+
+- config(newsboat): tweak (2024-09-17)
+
+- chore (2024-09-16)
+
+- config(zsh): add rclone env (2024-09-15)
+
+- chore: trust moar again (2024-09-14)
+
+- chore: sync catppuccin/delta (2024-09-10)
+
+- config(newsboat): open links in browser (2024-09-10)
+
+- chore: gosec (2024-09-04)
+
+- chore: add glab (gitlab) (2024-09-04)
+
+- chore(changelog): generate v0.15.11 (2024-09-04)
+
 ## v0.15.11 (2024-09-04)
 
 ### Fixed
