@@ -82,8 +82,7 @@ if command -v fzf &>/dev/null; then
         --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
         --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-        --color=selected-bg:#45475a \
-        --multi"
+        --color=selected-bg:#45475a"
 
     if command -v fd &>/dev/null; then
         _fzf_compgen_path() {
@@ -114,6 +113,13 @@ if command -v fzf &>/dev/null; then
         source /Users/anon/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
 
         zstyle ':completion:*' menu no
+        zstyle ':fzf-tab:*' fzf-flags \
+            --ansi \
+            --pointer='🔫' --prompt='🪓 ' \
+            --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+            --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+            --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+            --color=selected-bg:#45475a
     fi
 fi
 
