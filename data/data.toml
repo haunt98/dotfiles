@@ -78,6 +78,10 @@ external = "~/.config/ripgrep"
 internal = "data/zellij"
 external = "~/.config/zellij"
 
+[[apps.starship.paths]]
+internal = "data/starship/starship.toml"
+external = "~/.config/starship/starship.toml"
+
 [[apps.zed.paths]]
 internal = "data/zed/settings.json"
 external = "~/.config/zed/settings.json"
