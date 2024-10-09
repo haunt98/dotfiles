@@ -22,9 +22,20 @@ export LESS="-RF -i -K -s -x2 --wordwrap"
 if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-    # https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
     typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
     typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+fi
+
+# https://unix.stackexchange.com/q/621606
+# https://github.com/zsh-users/zsh-history-substring-search
+if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
+    source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+
+    export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+    export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
 fi
 
 # git
