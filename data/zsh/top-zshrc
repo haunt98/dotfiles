@@ -1,6 +1,11 @@
 # vim: set filetype=zsh:
 # Put this on top of ~/.zshrc
 
+# See https://wiki.archlinux.org/title/Zsh
+
+# https://lgug2z.com/articles/sensible-wordchars-for-most-developers/
+export WORDCHARS='*?[]~=&;!#$%^(){}<>'
+
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
 export HISTORY_IGNORE="(l[sal]|cd|pwd|exit|z)"
 export HISTSIZE=100000000
@@ -22,35 +27,5 @@ setopt INC_APPEND_HISTORY_TIME
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#omzupdate-mode
-zstyle ':omz:update' mode disabled
-zstyle ':omz:update' verbose minimal
-
-# Skip aliases
-zstyle ':omz:*' aliases no
-zstyle ':omz:lib:*' aliases no
-zstyle ':omz:plugins:*' aliases no
-
-# https://github.com/Aloxaf/fzf-tab
-zstyle ':completion:*' menu no
-
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#hyphen_insensitive
-HYPHEN_INSENSITIVE="true"
-
-# https://github.com/ohmyzsh/ohmyzsh/issues/5569
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_magic_functions
-DISABLE_MAGIC_FUNCTIONS="true"
-
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_ls_colors
-DISABLE_LS_COLORS="true"
-
-# https://github.com/ohmyzsh/ohmyzsh/issues/10291
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#disable_untracked_files_dirty
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#automatic-title
-DISABLE_AUTO_TITLE=true
-
-# https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
-typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+autoload -Uz compinit
+compinit

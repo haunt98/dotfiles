@@ -1,16 +1,8 @@
 # vim: set filetype=zsh:
 # Put this on bottom of ~/.zshrc
 
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#automatic-title
-ZSH_THEME_TERM_TITLE_IDLE="%~"
-ZSH_THEME_TERM_TAB_TITLE_IDLE="%~"
-
-# https://github.com/romkatv/powerlevel10k#how-do-i-configure-instant-prompt
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-
-# https://github.com/romkatv/powerlevel10k#mitigation
-typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
-typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+# https://blog.izissise.net/posts/env-path/
+typeset -U path PATH
 
 # Alias
 alias g="git"
@@ -24,6 +16,16 @@ export XDG_DATA_HOME=~/.local/share
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
 export LESS="-RF -i -K -s -x2 --wordwrap"
+
+# zsh plugins
+# https://github.com/zsh-users/zsh-autosuggestions
+if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+    # https://github.com/zsh-users/zsh-autosuggestions#suggestion-strategy
+    typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+    typeset -g ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+fi
 
 # git
 # https://stackoverflow.com/a/43747486
@@ -39,11 +41,15 @@ if command -v nvim &>/dev/null; then
 fi
 
 # go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-# Depend on your company
-# Please copy this manually to ~/.zshrc
-# export GOPRIVATE=example.company.com
+# https://stackoverflow.com/a/13542854
+if command -v go &>/dev/null; then
+    if [[ -d $HOME/go ]]; then
+        export GOPATH=$HOME/go
+        path=($path $GOPATH/bin)
+    fi
+    # Depend on your company
+    # export GOPRIVATE=example.company.com
+fi
 
 # fzf
 # https://github.com/junegunn/fzf
@@ -81,6 +87,15 @@ if command -v fzf &>/dev/null; then
 
     if command -v eza &>/dev/null; then
         export FZF_ALT_C_OPTS="--preview 'eza --tree --level 1 {}'"
+    fi
+
+    source <(fzf --zsh)
+
+    # https://github.com/Aloxaf/fzf-tab
+    if [[ -f $HOME/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh ]]; then
+        source /Users/anon/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
+
+        zstyle ':completion:*' menu no
     fi
 fi
 
@@ -135,14 +150,16 @@ if command -v moar &>/dev/null; then
     export PAGER=moar
 fi
 
-# https://github.com/oven-sh/bun
-# Depend on your settings
-# Please copy this manually to ~/.zshrc
-# export GITHUB_TOKEN=your_github_token
-
 # https://github.com/Schniz/fnm
 if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
+fi
+
+# https://github.com/oven-sh/bun
+if command -v bun &>/dev/null; then
+    if [[ -d $HOME/.cache/.bun/bin ]]; then
+        path=($path $HOME/.cache/.bun/bin)
+    fi
 fi
 
 # https://github.com/casey/just
@@ -167,32 +184,9 @@ if command -v daktilo &>/dev/null; then
     export DAKTILO_CONFIG="$HOME/.config/daktilo/daktilo.toml"
 fi
 
-# https://github.com/talwat/pokeget-rs
-rand_poke=$((RANDOM % 13))
-if [[ $rand_poke -eq 0 ]]; then
-    cat ~/.config/pokeget/bulbasaur.txt
-elif [[ $rand_poke -eq 1 ]]; then
-    cat ~/.config/pokeget/charmeleon.txt
-elif [[ $rand_poke -eq 2 ]]; then
-    cat ~/.config/pokeget/chikorita.txt
-elif [[ $rand_poke -eq 3 ]]; then
-    cat ~/.config/pokeget/clefairy.txt
-elif [[ $rand_poke -eq 4 ]]; then
-    cat ~/.config/pokeget/ditto.txt
-elif [[ $rand_poke -eq 5 ]]; then
-    cat ~/.config/pokeget/dratini.txt
-elif [[ $rand_poke -eq 6 ]]; then
-    cat ~/.config/pokeget/eevee.txt
-elif [[ $rand_poke -eq 7 ]]; then
-    cat ~/.config/pokeget/machoke.txt
-elif [[ $rand_poke -eq 8 ]]; then
-    cat ~/.config/pokeget/pikachu-world-cap.txt
-elif [[ $rand_poke -eq 9 ]]; then
-    cat ~/.config/pokeget/pikachu.txt
-elif [[ $rand_poke -eq 10 ]]; then
-    cat ~/.config/pokeget/psyduck.txt
-elif [[ $rand_poke -eq 11 ]]; then
-    cat ~/.config/pokeget/slowpoke.txt
-elif [[ $rand_poke -eq 12 ]]; then
-    cat ~/.config/pokeget/squirtle.txt
+# https://github.com/starship/starship
+if command -v starship &>/dev/null; then
+    eval "$(starship init zsh)"
 fi
+
+export PATH

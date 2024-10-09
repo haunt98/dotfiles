@@ -78,14 +78,6 @@ external = "~/.config/ripgrep"
 internal = "data/zellij"
 external = "~/.config/zellij"
 
-[[apps.powerlevel10k.paths]]
-internal = "data/powerlevel10k/.p10k.zsh"
-external = "~/.p10k.zsh"
-
-[[apps.powerlevel10k.paths]]
-internal = "data/powerlevel10k/.p10k.zsh"
-url = "https://raw.githubusercontent.com/romkatv/powerlevel10k/master/config/p10k-robbyrussell.zsh"
-
 [[apps.zed.paths]]
 internal = "data/zed/settings.json"
 external = "~/.config/zed/settings.json"
@@ -93,10 +85,6 @@ external = "~/.config/zed/settings.json"
 [[apps.zed.paths]]
 internal = "data/zed/keymap.json"
 external = "~/.config/zed/keymap.json"
-
-[[apps.pokeget.paths]]
-internal = "data/pokeget"
-external = "~/.config/pokeget"
 
 [[apps.btop.paths]]
 internal = "data/btop/themes"
@@ -125,10 +113,6 @@ external = "~/.config/newsboat/dark"
 [[apps.newsboat.paths]]
 internal = "data/newsboat/dark"
 url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
-
-[[apps.sioyek.paths]]
-internal = "data/sioyek/prefs_user.config"
-external = "~/.config/sioyek/prefs_user.config"
 
 [[apps.typos.paths]]
 internal = "data/typos/typos.toml"
