@@ -21,6 +21,10 @@ export LESS="-RF -i -K -s -x2 --wordwrap"
 # https://github.com/zsh-users/zsh-syntax-highlighting
 if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+    typeset -A ZSH_HIGHLIGHT_STYLES
+    ZSH_HIGHLIGHT_STYLES[path]='none'
+    ZSH_HIGHLIGHT_STYLES[globbing]='none'
 fi
 
 # https://github.com/zsh-users/zsh-autosuggestions

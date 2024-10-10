@@ -12,6 +12,7 @@ export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
 
 # https://zsh.sourceforge.io/Doc/Release/Options.html
+setopt AUTO_CD
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
