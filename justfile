@@ -44,3 +44,6 @@ dot-ins:
 
 dot-dl:
     go run ./cmd/dot dl
+
+dot-df:
+    go run ./cmd/dot df
