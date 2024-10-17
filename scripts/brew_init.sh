@@ -5,7 +5,7 @@ brew install \
     starship zsh-autosuggestions \
     git neovim \
     fdupes rsync rclone restic wcurl ncdu \
-    tlrc vivid zellij \
+    tlrc vivid zellij totp-cli \
     yt-dlp newsboat vips btop \
     fnm oven-sh/bun/bun deno uv just \
     stylua taplo typos-cli clang-format marksman asciidoctor ollama gitleaks gh glab \
