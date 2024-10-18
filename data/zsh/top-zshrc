@@ -4,7 +4,7 @@
 # See https://wiki.archlinux.org/title/Zsh
 
 # https://lgug2z.com/articles/sensible-wordchars-for-most-developers/
-export WORDCHARS='*?[]~=&;!#$%^(){}<>'
+export WORDCHARS='*?[]~&;!#$%^(){}<>'
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
 export HISTORY_IGNORE="(l[sal]|cd|pwd|exit|z)"
