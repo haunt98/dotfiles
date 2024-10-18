@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v0.15.13 (2024-10-18)
+
+### Others
+
+- config(zsh): remove = from WORDCHARS (2024-10-18)
+
+- chore: add totp-cli (2024-10-17)
+
+- chore: improve git log (2024-10-17)
+
+- chore: add dot-df (2024-10-15)
+
+- chore: rss kindle updates (2024-10-15)
+
+- chore(deps): bump github.com/urfave/cli/v2 from 2.27.4 to 2.27.5 (#72) (2024-10-14)
+
+- config(zsh): disable zsh-syntax-highlighting for path and globbing (2024-10-11)
+
+- config(nvim): ts (2024-10-09)
+
+- chore(changelog): generate v0.15.12 (2024-10-09)
+
 ## v0.15.12 (2024-10-09)
 
 ### Others
