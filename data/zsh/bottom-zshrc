@@ -14,8 +14,13 @@ export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
 
-# https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
-export LESS="-RF -i -K -s -x2 --wordwrap"
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/completion.zsh
+# https://thevaluable.dev/zsh-completion-guide-examples/
+# https://damn.engineer/2022/09/28/zsh-case-insensitive
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' special-dirs true
 
 # zsh plugins
 # https://github.com/zsh-users/zsh-syntax-highlighting
@@ -48,6 +53,9 @@ if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-
     export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
     export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 fi
+
+# https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
+export LESS="-RF -i -K -s -x2 --wordwrap"
 
 # git
 # https://stackoverflow.com/a/43747486
