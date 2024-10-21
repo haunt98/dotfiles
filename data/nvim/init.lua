@@ -454,6 +454,7 @@ require("lazy").setup({
 			"sh",
 			"sql",
 			"toml",
+			"typst",
 			"yaml",
 			"zsh",
 		},
@@ -474,6 +475,7 @@ require("lazy").setup({
 					sh = { "shfmt" },
 					sql = { "sqlfluff" },
 					toml = { "trim_whitespace", "taplo" },
+					typst = { "typstyle" },
 					yaml = { "prettier" },
 					zsh = { "shfmt" },
 				},
@@ -521,6 +523,7 @@ require("lazy").setup({
 					"python",
 					"query",
 					"toml",
+					"typst",
 					"vim",
 					"vimdoc",
 				},
@@ -556,6 +559,7 @@ require("lazy").setup({
 			"go",
 			"markdown",
 			"python",
+			"typst",
 		},
 		dependencies = {
 			"hrsh7th/nvim-cmp",
@@ -571,26 +575,16 @@ require("lazy").setup({
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
 			-- https://github.com/neovim/nvim-lspconfig/issues/2542
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
-				on_init = function(client, initialization_result)
-					if client.server_capabilities then
-						client.server_capabilities.semanticTokensProvider = nil
-					end
-				end,
 			})
 
 			-- Python
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
-				on_init = function(client, initialization_result)
-					if client.server_capabilities then
-						client.server_capabilities.semanticTokensProvider = nil
-					end
-				end,
 				settings = {
 					pyright = {
 						-- Conflicts with Ruff
@@ -606,11 +600,10 @@ require("lazy").setup({
 			})
 
 			-- https://docs.astral.sh/ruff/editors/setup/#neovim
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff
 			lspconfig.ruff.setup({
 				on_init = function(client, initialization_result)
 					if client.server_capabilities then
-						client.server_capabilities.semanticTokensProvider = nil
 						-- Conflicts with pyright
 						client.server_capabilities.hoverProvider = false
 					end
@@ -619,14 +612,13 @@ require("lazy").setup({
 
 			-- Markdown
 			-- https://github.com/artempyanykh/marksman
-			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman
-			lspconfig.marksman.setup({
-				on_init = function(client, initialization_result)
-					if client.server_capabilities then
-						client.server_capabilities.semanticTokensProvider = nil
-					end
-				end,
-			})
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#marksman
+			lspconfig.marksman.setup({})
+
+			-- Typst
+			-- https://github.com/Myriad-Dreamin/tinymist
+			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
+			lspconfig.tinymist.setup({})
 
 			-- General
 			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
@@ -685,6 +677,7 @@ require("lazy").setup({
 			"proto",
 			"python",
 			"toml",
+			"typst",
 			"yaml",
 			"zsh",
 		},
