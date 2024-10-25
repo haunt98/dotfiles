@@ -45,6 +45,7 @@ vim.cmd("command W w")
 vim.cmd("command Q q")
 vim.cmd("command WQ wq")
 vim.cmd("command Wq wq")
+vim.cmd("command QA qa")
 vim.cmd("command Qa qa")
 
 -- Leader
@@ -112,14 +113,6 @@ require("lazy").setup({
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			-- Eva-01 vibe
-			-- https://enjoykeycap.github.io/docs/gmk-keycaps/Mecha-01/
-			-- https://www.pantone.com/connect/802-C
-			-- https://www.pantone.com/connect/267-C
-			local color_eva = {
-				fg = "#44d62c",
-				bg = "#5f249e",
-			}
 			-- https://github.com/nyoom-engineering/oxocarbon.nvim
 			local color_oxocarbon = {
 				pink = "#ff7eb6",
@@ -148,18 +141,11 @@ require("lazy").setup({
 						LineNr = {
 							fg = colors.overlay1,
 						},
-						ExtraWhitespace = {
-							bg = color_eva.bg,
-						},
 						markdownLinkText = {
 							style = {},
 						},
 						EndOfBuffer = {
 							link = "NonText",
-						},
-						-- Support nvim-tree
-						NvimTreeStatuslineNc = {
-							link = "StatusLineNC",
 						},
 						-- Support mini.statusline
 						MiniStatuslineFilename = {
@@ -269,60 +255,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/nvim-tree/nvim-tree.lua
-	{
-		"nvim-tree/nvim-tree.lua",
-		keys = {
-			{ "<C-n>", ":NvimTreeToggle<CR>" },
-			{ "<Leader>n", ":NvimTreeFindFile<CR>" },
-		},
-		init = function()
-			vim.g.loaded_netrw = 1
-			vim.g.loaded_netrwPlugin = 1
-		end,
-		config = function()
-			require("nvim-tree").setup({
-				view = {
-					side = "right",
-				},
-				renderer = {
-					group_empty = true,
-					root_folder_label = false,
-					indent_width = 2,
-					special_files = {
-						"go.mod",
-						"go.sum",
-						"Makefile",
-						"README.md",
-					},
-					icons = {
-						show = {
-							file = false,
-							folder = false,
-							folder_arrow = false,
-						},
-					},
-				},
-				filters = {
-					git_ignored = false,
-					custom = {
-						"\\.bin$",
-						"\\.class$",
-						"\\.exe$",
-						"\\.out$",
-						"^\\.DS_Store$",
-						"^\\.git$",
-						"^\\.idea$",
-						"^\\.ruff_cache$",
-						"^\\.vscode$",
-						"pycache",
-						"venv",
-					},
-				},
-			})
-		end,
-	},
-
 	-- https://github.com/tpope/vim-projectionist
 	{
 		"tpope/vim-projectionist",
@@ -369,6 +301,20 @@ require("lazy").setup({
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md
+			require("mini.files").setup({
+				mappings = {
+					go_in = "",
+					go_in_plus = "<CR>",
+					go_out = "",
+					go_out_plus = "<BS>",
+					reset = "",
+				},
+			})
+
+			vim.keymap.set("n", "<C-n>", ":lua MiniFiles.open(nil, false)<CR>")
+			vim.keymap.set("n", "<Leader>n", ":lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>")
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md
 			local hipatterns = require("mini.hipatterns")
 			hipatterns.setup({
@@ -379,13 +325,16 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-diff.md
 			require("mini.diff").setup({
-				mappings = {
-					goto_first = "[C",
-					goto_prev = "[c",
-					goto_next = "]c",
-					goto_last = "]C",
+				options = {
+					wrap_goto = true,
 				},
 			})
+
+			-- See my Sofle V2 keymap above
+			vim.keymap.set("n", ")H", "]H", { remap = true })
+			vim.keymap.set("n", "(H", "[H", { remap = true })
+			vim.keymap.set("n", ")h", "]h", { remap = true })
+			vim.keymap.set("n", "(h", "[h", { remap = true })
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
 			require("mini.git").setup()
@@ -401,19 +350,6 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
-
-			-- Sofle V2
-			vim.keymap.set("n", ")c", "]c", { remap = true })
-			vim.keymap.set("n", "(c", "[c", { remap = true })
-
-			local augroup = vim.api.nvim_create_augroup("UserMiniNvim", {})
-			vim.api.nvim_create_autocmd("FileType", {
-				group = augroup,
-				pattern = "NvimTree",
-				callback = function(ev)
-					vim.b.ministatusline_disable = true
-				end,
-			})
 		end,
 	},
 
@@ -667,6 +603,8 @@ require("lazy").setup({
 		"github/copilot.vim",
 		ft = {
 			"asciidoc",
+			"c",
+			"cpp",
 			"gitcommit",
 			"go",
 			"just",
@@ -697,6 +635,7 @@ require("lazy").setup({
 				proto = true,
 				python = true,
 				toml = true,
+				typst = true,
 				yaml = true,
 				zsh = true,
 			}
