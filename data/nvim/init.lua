@@ -350,6 +350,9 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
+
+			-- Use cl instead of s
+			vim.keymap.set({ "n", "x" }, "s", "<Nop>")
 		end,
 	},
 
@@ -451,6 +454,7 @@ require("lazy").setup({
 					"git_config",
 					"gitcommit",
 					"go",
+					"json",
 					"lua",
 					"make",
 					"markdown",
@@ -470,6 +474,9 @@ require("lazy").setup({
 						return vim.api.nvim_buf_line_count(bufnr) > 10000
 					end,
 				},
+				incremental_selection = { enable = false },
+				textobjects = { enable = false },
+				indent = { enable = false },
 			})
 		end,
 	},
@@ -607,6 +614,7 @@ require("lazy").setup({
 			"cpp",
 			"gitcommit",
 			"go",
+			"json",
 			"just",
 			"lua",
 			"make",
@@ -627,6 +635,7 @@ require("lazy").setup({
 				cpp = true,
 				gitcommit = true,
 				go = true,
+				json = true,
 				just = true,
 				lua = true,
 				make = true,
@@ -663,12 +672,8 @@ require("lazy").setup({
 			},
 		},
 	},
-	rocks = {
-		enabled = false,
-	},
-	throttle = {
-		enabled = true,
-	},
+	rocks = { enabled = false },
+	throttle = { enabled = true },
 	git = {
 		-- Seconds
 		cooldown = 5 * 60,
