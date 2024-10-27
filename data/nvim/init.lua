@@ -203,56 +203,21 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/hrsh7th/nvim-cmp
+	-- https://github.com/Saghen/blink.cmp
 	{
-		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			-- https://github.com/onsails/lspkind.nvim
-			"onsails/lspkind.nvim",
+		"saghen/blink.cmp",
+		version = "v0.*",
+		opts = {
+			keymap = {
+				select_and_accept = { "<CR>" },
+			},
+			windows = {
+				autocomplete = {
+					auto_show = false,
+				},
+			},
+			nerd_font_variant = "mono",
 		},
-		config = function()
-			local cmp = require("cmp")
-			local lspkind = require("lspkind")
-
-			cmp.setup({
-				-- Custom
-				completion = {
-					autocomplete = false,
-				},
-				preselect = cmp.PreselectMode.None,
-
-				-- Largely copy from GitHub
-				mapping = cmp.mapping.preset.insert({
-					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm(),
-					["<C-e>"] = cmp.mapping.abort(),
-				}),
-				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-				}, {
-					{
-						name = "buffer",
-						option = {
-							-- All buffers
-							get_bufnrs = function()
-								return vim.api.nvim_list_bufs()
-							end,
-						},
-					},
-				}),
-				formatting = {
-					format = lspkind.cmp_format({
-						mode = "symbol",
-						maxwidth = 50,
-						ellipsis_char = "...",
-						show_labelDetails = true,
-					}),
-				},
-			})
-		end,
 	},
 
 	-- https://github.com/tpope/vim-projectionist
@@ -504,30 +469,19 @@ require("lazy").setup({
 			"python",
 			"typst",
 		},
-		dependencies = {
-			"hrsh7th/nvim-cmp",
-		},
 		config = function()
 			local lspconfig = require("lspconfig")
-
-			-- https://github.com/hrsh7th/cmp-nvim-lsp
-			-- https://github.com/hrsh7th/nvim-cmp/discussions/759
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 			-- Go
 			-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 			-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
 			-- https://github.com/neovim/nvim-lspconfig/issues/2542
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.gopls.setup({})
 
 			-- Python
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
 			lspconfig.pyright.setup({
-				capabilities = capabilities,
 				settings = {
 					pyright = {
 						-- Conflicts with Ruff
