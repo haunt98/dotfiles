@@ -184,23 +184,22 @@ require("lazy").setup({
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
-		config = function()
-			require("fzf-lua").setup({
-				winopts = {
-					preview = {
-						wrap = "wrap",
-					},
+		opts = {
+
+			winopts = {
+				preview = {
+					wrap = "wrap",
 				},
-				defaults = {
-					formatter = "path.filename_first",
-					git_icons = false,
-				},
-				grep = {
-					multiline = 1,
-				},
-				fzf_colors = true,
-			})
-		end,
+			},
+			defaults = {
+				formatter = "path.filename_first",
+				git_icons = false,
+			},
+			grep = {
+				multiline = 1,
+			},
+			fzf_colors = true,
+		},
 	},
 
 	-- https://github.com/Saghen/blink.cmp
@@ -251,12 +250,10 @@ require("lazy").setup({
 	-- https://github.com/svban/YankAssassin.nvim
 	{
 		"svban/YankAssassin.nvim",
-		config = function()
-			require("YankAssassin").setup({
-				auto_normal = true,
-				auto_visual = true,
-			})
-		end,
+		opts = {
+			auto_normal = true,
+			auto_visual = true,
+		},
 	},
 
 	-- https://github.com/echasnovski/mini.nvim
@@ -411,39 +408,37 @@ require("lazy").setup({
 		build = {
 			":TSUpdate",
 		},
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"bash",
-					"c",
-					"git_config",
-					"gitcommit",
-					"go",
-					"json",
-					"lua",
-					"make",
-					"markdown",
-					"markdown_inline",
-					"proto",
-					"python",
-					"query",
-					"toml",
-					"typst",
-					"vim",
-					"vimdoc",
-				},
-				highlight = {
-					enabled = true,
-					disable = function(lang, bufnr)
-						-- Skip big files with many lines
-						return vim.api.nvim_buf_line_count(bufnr) > 10000
-					end,
-				},
-				incremental_selection = { enable = false },
-				textobjects = { enable = false },
-				indent = { enable = false },
-			})
-		end,
+		opts = {
+			ensure_installed = {
+				"bash",
+				"c",
+				"git_config",
+				"gitcommit",
+				"go",
+				"json",
+				"lua",
+				"make",
+				"markdown",
+				"markdown_inline",
+				"proto",
+				"python",
+				"query",
+				"toml",
+				"typst",
+				"vim",
+				"vimdoc",
+			},
+			highlight = {
+				enabled = true,
+				disable = function(lang, bufnr)
+					-- Skip big files with many lines
+					return vim.api.nvim_buf_line_count(bufnr) > 10000
+				end,
+			},
+			incremental_selection = { enable = false },
+			textobjects = { enable = false },
+			indent = { enable = false },
+		},
 	},
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter-context
@@ -452,12 +447,10 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
-		config = function()
-			require("treesitter-context").setup({
-				enable = true,
-				max_lines = 2,
-			})
-		end,
+		opts = {
+			enable = true,
+			max_lines = 2,
+		},
 	},
 
 	-- https://github.com/neovim/nvim-lspconfig
