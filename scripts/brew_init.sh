@@ -5,11 +5,11 @@ brew install \
     starship zsh-autosuggestions \
     git neovim \
     bat-extras \
-    fdupes rsync rclone restic wcurl ncdu \
+    fdupes rsync rclone restic f2 wcurl ncdu \
     tlrc vivid zellij totp-cli \
     yt-dlp newsboat vips btop \
     fnm oven-sh/bun/bun deno uv \
-    just typst asciidoctor clang-format stylua taplo typos-cli typstyle marksman tinymist \
-    ollama gitleaks gh glab \
+    just typst asciidoctor clang-format stylua sqlfluff taplo typos-cli typstyle marksman tinymist \
+    yq gojq fx ollama gitleaks gh glab k1LoW/tap/tbls \
     qmk/qmk/qmk daktilo asciinema \
     redis mysql-client
