@@ -210,6 +210,11 @@ require("lazy").setup({
 			keymap = {
 				select_and_accept = { "<CR>" },
 			},
+			trigger = {
+				completion = {
+					show_on_insert_on_trigger_character = false,
+				},
+			},
 			windows = {
 				autocomplete = {
 					auto_show = false,
