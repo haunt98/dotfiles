@@ -208,10 +208,14 @@ require("lazy").setup({
 		version = "v0.*",
 		opts = {
 			keymap = {
-				select_and_accept = { "<CR>" },
+				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+				["<CR>"] = { "select_and_accept", "fallback" },
+				["<Up>"] = { "select_prev", "fallback" },
+				["<Down>"] = { "select_next", "fallback" },
 			},
 			trigger = {
 				completion = {
+					show_on_accept_on_trigger_character = false,
 					show_on_insert_on_trigger_character = false,
 				},
 			},
