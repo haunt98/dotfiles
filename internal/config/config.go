@@ -1,7 +1,6 @@
 package config
 
 import (
-	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
@@ -11,6 +10,7 @@ import (
 	"sort"
 
 	"github.com/BurntSushi/toml"
+	"github.com/bytedance/sonic"
 	"golang.org/x/sync/errgroup"
 
 	"github.com/make-go-great/copy-go"
@@ -48,7 +48,7 @@ func LoadConfig(path string, isDryRun bool) (Config, error) {
 	configPathJSON := filepath.Clean(filepath.Join(path, configDirPath, configFileJSON))
 	bytes, err := os.ReadFile(configPathJSON)
 	if err == nil {
-		return loadConfig(bytes, isDryRun, json.Unmarshal)
+		return loadConfig(bytes, isDryRun, sonic.Unmarshal)
 	}
 
 	configPathTOML := filepath.Clean(filepath.Join(path, configDirPath, configFileTOML))
