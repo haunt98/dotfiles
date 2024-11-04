@@ -208,10 +208,8 @@ require("lazy").setup({
 		version = "v0.*",
 		opts = {
 			keymap = {
-				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+				preset = "default",
 				["<CR>"] = { "select_and_accept", "fallback" },
-				["<Up>"] = { "select_prev", "fallback" },
-				["<Down>"] = { "select_next", "fallback" },
 			},
 			trigger = {
 				completion = {
