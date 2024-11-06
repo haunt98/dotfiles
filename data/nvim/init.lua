@@ -479,6 +479,9 @@ require("lazy").setup({
 			-- https://github.com/neovim/nvim-lspconfig/issues/2542
 			lspconfig.gopls.setup({})
 
+			-- Protobuf
+			lspconfig.buf_ls.setup({})
+
 			-- Python
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
 			lspconfig.pyright.setup({
