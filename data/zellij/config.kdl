@@ -3,6 +3,7 @@ default_layout "compact"
 default_mode "locked"
 on_force_close "quit"
 simplified_ui true
+pane_frames false
 
 ui {
     pane_frames {
