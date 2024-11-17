@@ -59,6 +59,7 @@ return {
 	audible_bell = "Disabled",
 
 	front_end = "WebGpu",
+	max_fps = 120,
 
 	keys = {
 		{
