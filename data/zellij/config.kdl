@@ -4,20 +4,30 @@ default_mode "locked"
 on_force_close "quit"
 simplified_ui true
 pane_frames false
-
 ui {
     pane_frames {
         hide_session_name true
     }
 }
-
 keybinds {
     shared {
-        bind "Alt p" { SwitchFocus; }
-        bind "Alt o" { NewTab; }
-        bind "Alt ]" { GoToNextTab; }
-        bind "Alt [" { GoToPreviousTab; }
-        bind "Alt n" { NewPane; }
-        bind "Alt m" { NewPane "Down"; }
+        bind "Alt p" {
+            SwitchFocus
+        }
+        bind "Alt o" {
+            NewTab
+        }
+        bind "Alt ]" {
+            GoToNextTab
+        }
+        bind "Alt [" {
+            GoToPreviousTab
+        }
+        bind "Alt n" {
+            NewPane
+        }
+        bind "Alt m" {
+            NewPane "Down"
+        }
     }
 }

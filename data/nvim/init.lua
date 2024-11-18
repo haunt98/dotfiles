@@ -430,6 +430,7 @@ require("lazy").setup({
 				"proto",
 				"python",
 				"query",
+				"sql",
 				"toml",
 				"typst",
 				"vim",
