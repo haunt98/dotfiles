@@ -25,6 +25,9 @@ zstyle ':completion:*' special-dirs true
 # zsh plugins
 # https://github.com/zsh-users/zsh-syntax-highlighting
 if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+    # https://github.com/catppuccin/zsh-syntax-highlighting
+    source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
     typeset -A ZSH_HIGHLIGHT_STYLES

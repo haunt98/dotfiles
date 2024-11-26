@@ -10,6 +10,14 @@ external = "~/.config/zsh/top-zshrc"
 internal = "data/zsh/bottom-zshrc"
 external = "~/.config/zsh/bottom-zshrc"
 
+[[apps.zsh.paths]]
+internal = "data/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+external = "~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+
+[[apps.zsh.paths]]
+internal = "data/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+url = "https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+
 [[apps.nvim.paths]]
 internal = "data/nvim/init.lua"
 external = "~/.config/nvim/init.lua"
