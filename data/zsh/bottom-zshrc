@@ -31,8 +31,11 @@ if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
     typeset -A ZSH_HIGHLIGHT_STYLES
-    ZSH_HIGHLIGHT_STYLES[path]='none'
-    ZSH_HIGHLIGHT_STYLES[globbing]='none'
+    # Remove underline from catppuccin mocha theme
+    ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4'
+    ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#f38ba8'
+    ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#cdd6f4'
+    ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#f38ba8'
 fi
 
 # https://github.com/zsh-users/zsh-autosuggestions
