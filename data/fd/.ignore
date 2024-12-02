@@ -6,6 +6,19 @@ Library
 Movies
 Music
 Pictures
+.DS_Store
+
+# Window
+*.exe
+
+# IntelliJ
+.idea
+
+# VSCode
+.vscode
+
+# Obsidian
+.obsidian
 
 # Node
 node_modules
@@ -17,6 +30,7 @@ sumdb
 vendor
 mock
 *mock*.go
+coverage.out
 
 # Python
 venv
@@ -31,12 +45,7 @@ __pycache__
 *.out
 
 # Software
-~/.nix*
-~/zig
 ~/qmk_firmware
-
-# Personal
-Homework
 
 # Work
 submodules
