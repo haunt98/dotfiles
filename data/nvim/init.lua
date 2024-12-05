@@ -211,18 +211,13 @@ require("lazy").setup({
 				preset = "default",
 				["<CR>"] = { "select_and_accept", "fallback" },
 			},
-			trigger = {
-				completion = {
-					show_on_accept_on_trigger_character = false,
-					show_on_insert_on_trigger_character = false,
+			completion = {
+				trigger = {
+					show_in_snippet = false,
+					show_on_keyword = false,
+					show_on_trigger_character = false,
 				},
 			},
-			windows = {
-				autocomplete = {
-					auto_show = false,
-				},
-			},
-			nerd_font_variant = "mono",
 		},
 	},
 
