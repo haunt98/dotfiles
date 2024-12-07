@@ -22,6 +22,7 @@ https://github.com/AsahiLinux/m1n1/commits/main.atom "~AsahiLinux/m1n1"
 
 http://antirez.com/rss
 http://feeds.feedburner.com/ThePragmaticEngineer
+http://matt3o.com/feed/
 https://0pointer.net/blog/index.atom
 https://100r.co/links/rss.xml
 https://andrewkelley.me/rss.xml
@@ -31,8 +32,10 @@ https://brandur.org/articles.atom
 https://brandur.org/fragments.atom
 https://daniel.haxx.se/blog/feed/
 https://dave.cheney.net/feed/atom
+https://djr.com/feed.rss
 https://dotat.at/@/blog.atom
 https://drewdevault.com/blog/index.xml
+https://josef-adamcik.cz/feed.xml
 https://jvns.ca/atom.xml
 https://matthewstrom.com/feed.xml
 https://michael.stapelberg.ch/feed.xml
@@ -57,8 +60,6 @@ https://github.com/qmk/qmk_firmware/commits/master.atom "~qmk_firmware"
 
 https://kbd.news/rss.php
 https://www.theremingoat.com/blog?format=rss
-http://matt3o.com/feed/
-https://josef-adamcik.cz/feed.xml
 
 https://developer.apple.com/news/releases/rss/releases.rss
 https://rsshub.app/amazon/kindle/software-updates
