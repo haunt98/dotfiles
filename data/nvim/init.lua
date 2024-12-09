@@ -75,6 +75,23 @@ vim.keymap.set({ "n", "v" }, ")", "<Nop>")
 -- My Sofle V2 do not have map `[`, `]` directly
 vim.keymap.set("n", ")d", "]d", { remap = true })
 vim.keymap.set("n", "(d", "[d", { remap = true })
+vim.keymap.set("n", ")D", "]D", { remap = true })
+vim.keymap.set("n", "(D", "[D", { remap = true })
+
+vim.keymap.set("n", ")c", "]c", { remap = true })
+vim.keymap.set("n", "(c", "[c", { remap = true })
+vim.keymap.set("n", ")C", "]C", { remap = true })
+vim.keymap.set("n", "(C", "[C", { remap = true })
+
+vim.keymap.set("n", ")x", "]x", { remap = true })
+vim.keymap.set("n", "(x", "[x", { remap = true })
+vim.keymap.set("n", ")X", "]X", { remap = true })
+vim.keymap.set("n", "(X", "[X", { remap = true })
+
+vim.keymap.set("n", ")t", "]t", { remap = true })
+vim.keymap.set("n", "(t", "[t", { remap = true })
+vim.keymap.set("n", ")T", "]T", { remap = true })
+vim.keymap.set("n", "(T", "[T", { remap = true })
 
 -- Disable scrolling
 -- https://neovim.io/doc/user/scroll.html
@@ -185,7 +202,6 @@ require("lazy").setup({
 			"neovim/nvim-lspconfig",
 		},
 		opts = {
-
 			winopts = {
 				preview = {
 					wrap = "wrap",
@@ -262,6 +278,21 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.nvim",
 		config = function()
+			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
+			require("mini.bracketed").setup({
+				{
+					buffer = { suffix = "", options = {} },
+					file = { suffix = "", options = {} },
+					indent = { suffix = "", options = {} },
+					jump = { suffix = "", options = {} },
+					location = { suffix = "", options = {} },
+					oldfile = { suffix = "", options = {} },
+					undo = { suffix = "", options = {} },
+					window = { suffix = "", options = {} },
+					yank = { suffix = "", options = {} },
+				},
+			})
+
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
 			require("mini.cursorword").setup()
 
@@ -453,6 +484,14 @@ require("lazy").setup({
 		opts = {
 			enable = true,
 			max_lines = 2,
+		},
+	},
+
+	-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
 		},
 	},
 
