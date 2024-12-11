@@ -72,27 +72,6 @@ vim.keymap.set({ "n", "v" }, "q:", "<Nop>")
 vim.keymap.set({ "n", "v" }, "(", "<Nop>")
 vim.keymap.set({ "n", "v" }, ")", "<Nop>")
 
--- My Sofle V2 do not have map `[`, `]` directly
-vim.keymap.set("n", ")d", "]d", { remap = true })
-vim.keymap.set("n", "(d", "[d", { remap = true })
-vim.keymap.set("n", ")D", "]D", { remap = true })
-vim.keymap.set("n", "(D", "[D", { remap = true })
-
-vim.keymap.set("n", ")c", "]c", { remap = true })
-vim.keymap.set("n", "(c", "[c", { remap = true })
-vim.keymap.set("n", ")C", "]C", { remap = true })
-vim.keymap.set("n", "(C", "[C", { remap = true })
-
-vim.keymap.set("n", ")x", "]x", { remap = true })
-vim.keymap.set("n", "(x", "[x", { remap = true })
-vim.keymap.set("n", ")X", "]X", { remap = true })
-vim.keymap.set("n", "(X", "[X", { remap = true })
-
-vim.keymap.set("n", ")t", "]t", { remap = true })
-vim.keymap.set("n", "(t", "[t", { remap = true })
-vim.keymap.set("n", ")T", "]T", { remap = true })
-vim.keymap.set("n", "(T", "[T", { remap = true })
-
 -- Disable scrolling
 -- https://neovim.io/doc/user/scroll.html
 vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>")
@@ -325,12 +304,6 @@ require("lazy").setup({
 				},
 			})
 
-			-- See my Sofle V2 keymap above
-			vim.keymap.set("n", ")H", "]H", { remap = true })
-			vim.keymap.set("n", "(H", "[H", { remap = true })
-			vim.keymap.set("n", ")h", "]h", { remap = true })
-			vim.keymap.set("n", "(h", "[h", { remap = true })
-
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
 			require("mini.git").setup()
 
@@ -345,6 +318,32 @@ require("lazy").setup({
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
 			require("mini.surround").setup()
+
+			-- My Sofle V2 do not have map `[`, `]` directly
+			vim.keymap.set("n", ")d", "]d", { remap = true })
+			vim.keymap.set("n", "(d", "[d", { remap = true })
+			vim.keymap.set("n", ")D", "]D", { remap = true })
+			vim.keymap.set("n", "(D", "[D", { remap = true })
+
+			vim.keymap.set("n", ")c", "]c", { remap = true })
+			vim.keymap.set("n", "(c", "[c", { remap = true })
+			vim.keymap.set("n", ")C", "]C", { remap = true })
+			vim.keymap.set("n", "(C", "[C", { remap = true })
+
+			vim.keymap.set("n", ")x", "]x", { remap = true })
+			vim.keymap.set("n", "(x", "[x", { remap = true })
+			vim.keymap.set("n", ")X", "]X", { remap = true })
+			vim.keymap.set("n", "(X", "[X", { remap = true })
+
+			vim.keymap.set("n", ")t", "]t", { remap = true })
+			vim.keymap.set("n", "(t", "[t", { remap = true })
+			vim.keymap.set("n", ")T", "]T", { remap = true })
+			vim.keymap.set("n", "(T", "[T", { remap = true })
+
+			vim.keymap.set("n", ")h", "]h", { remap = true })
+			vim.keymap.set("n", "(h", "[h", { remap = true })
+			vim.keymap.set("n", ")H", "]H", { remap = true })
+			vim.keymap.set("n", "(H", "[H", { remap = true })
 
 			-- Use cl instead of s
 			vim.keymap.set({ "n", "x" }, "s", "<Nop>")
