@@ -22,9 +22,7 @@ https://github.com/AsahiLinux/m1n1/commits/main.atom "~AsahiLinux/m1n1"
 
 http://antirez.com/rss
 http://feeds.feedburner.com/ThePragmaticEngineer
-http://matt3o.com/feed/
 https://0pointer.net/blog/index.atom
-https://100r.co/links/rss.xml
 https://andrewkelley.me/rss.xml
 https://apenwarr.ca/log/rss.php
 https://blog.codinghorror.com/rss/
@@ -32,10 +30,8 @@ https://brandur.org/articles.atom
 https://brandur.org/fragments.atom
 https://daniel.haxx.se/blog/feed/
 https://dave.cheney.net/feed/atom
-https://djr.com/feed.rss
 https://dotat.at/@/blog.atom
 https://drewdevault.com/blog/index.xml
-https://josef-adamcik.cz/feed.xml
 https://jvns.ca/atom.xml
 https://matthewstrom.com/feed.xml
 https://michael.stapelberg.ch/feed.xml
@@ -44,22 +40,15 @@ https://registerspill.thorstenball.com/feed
 https://research.swtch.com/feed.atom
 https://rosenzweig.io/feed.xml
 https://stephango.com/feed.xml
-https://writings.stephenwolfram.com/feed/
 
 https://go.dev/blog/feed.atom
 https://golangweekly.com/rss/
-https://lwn.net/headlines/rss
-https://lobste.rs/t/performance,databases,cryptography,design,c,go,linux,mac.rss "~lobste.rs"
-https://www.undeadly.org/cgi?action=rss
-https://googleprojectzero.blogspot.com/feeds/posts/default
-https://blog.trailofbits.com/feed/
 
 https://github.com/caksoylar/keymap-drawer/commits/main.atom "~keymap-drawer"
 https://github.com/qmk/qmk_firmware/commits/develop.atom "~qmk_firmware/develop"
 https://github.com/qmk/qmk_firmware/commits/master.atom "~qmk_firmware"
 
 https://kbd.news/rss.php
-https://www.theremingoat.com/blog?format=rss
 
 https://developer.apple.com/news/releases/rss/releases.rss
 https://rsshub.app/amazon/kindle/software-updates
