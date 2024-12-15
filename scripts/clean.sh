@@ -6,3 +6,4 @@
 # docker system prune --all --force --volumes
 # rm -rf ~/.ollama/models/blobs/sha256-*
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
+# rm -rf ~/pprof
