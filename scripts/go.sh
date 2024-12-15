@@ -19,3 +19,5 @@ go install github.com/dkorunic/betteralign/cmd/betteralign@latest
 go install github.com/maruel/panicparse/v2@latest
 go install gotest.tools/gotestsum@latest
 go install github.com/bufbuild/buf/cmd/buf@latest
+go install github.com/google/pprof@latest
+go install github.com/sudorandom/fauxrpc/cmd/fauxrpc@latest
