@@ -164,19 +164,6 @@ require("lazy").setup({
 	-- https://github.com/ibhagwan/fzf-lua
 	{
 		"ibhagwan/fzf-lua",
-		keys = {
-			{ "<Leader>f", ":FzfLua files<CR>" },
-			{ "<Leader>l", ":FzfLua blines<CR>" },
-			{ "<Leader>rg", ":FzfLua live_grep_resume<CR>" },
-			{ "<Leader>g", ":FzfLua git_status<CR>" },
-			{ "<Space>s", ":FzfLua lsp_document_symbols<CR>" },
-			{ "<Space>r", ":FzfLua lsp_references<CR>" },
-			{ "gr", ":FzfLua lsp_references<CR>" },
-			{ "<Space>i", ":FzfLua lsp_implementations<CR>" },
-			{ "gi", ":FzfLua lsp_implementations<CR>" },
-			{ "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>" },
-			{ "<Space>d", ":FzfLua diagnostics_document<CR>" },
-		},
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
@@ -195,6 +182,16 @@ require("lazy").setup({
 			},
 			fzf_colors = true,
 		},
+		config = function()
+			vim.keymap.set({ "n", "v" }, "<Leader>f", ":FzfLua files<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>l", ":FzfLua blines<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>rg", ":FzfLua live_grep_resume<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>s", ":FzfLua lsp_document_symbols<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>r", ":FzfLua lsp_references<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>i", ":FzfLua lsp_implementations<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>")
+			vim.keymap.set({ "n", "v" }, "<Space>d", ":FzfLua diagnostics_document<CR>")
+		end,
 	},
 
 	-- https://github.com/Saghen/blink.cmp
@@ -203,8 +200,11 @@ require("lazy").setup({
 		version = "v0.*",
 		opts = {
 			keymap = {
-				preset = "default",
+				preset = "none",
+				["<C-space>"] = { "show", "show_documentation", "hide_documentation", "fallback" },
 				["<CR>"] = { "select_and_accept", "fallback" },
+				["<Up>"] = { "select_prev", "fallback" },
+				["<Down>"] = { "select_next", "fallback" },
 			},
 			completion = {
 				trigger = {
@@ -370,27 +370,6 @@ require("lazy").setup({
 	-- https://github.com/stevearc/conform.nvim
 	{
 		"stevearc/conform.nvim",
-		ft = {
-			"asciidoc",
-			"bash",
-			"conf",
-			"go",
-			"javascript",
-			"json",
-			"just",
-			"lua",
-			"make",
-			"markdown",
-			"plantuml",
-			"proto",
-			"python",
-			"sh",
-			"sql",
-			"toml",
-			"typst",
-			"yaml",
-			"zsh",
-		},
 		config = function()
 			local conform = require("conform")
 			conform.setup({
@@ -599,26 +578,6 @@ require("lazy").setup({
 	-- https://github.com/github/copilot.vim
 	{
 		"github/copilot.vim",
-		ft = {
-			"asciidoc",
-			"c",
-			"cpp",
-			"dockerfile",
-			"gitcommit",
-			"go",
-			"json",
-			"just",
-			"lua",
-			"make",
-			"markdown",
-			"plantuml",
-			"proto",
-			"python",
-			"toml",
-			"typst",
-			"yaml",
-			"zsh",
-		},
 		init = function()
 			vim.g.copilot_filetypes = {
 				["*"] = false,
