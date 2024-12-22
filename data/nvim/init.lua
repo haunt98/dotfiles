@@ -170,12 +170,12 @@ require("lazy").setup({
 		opts = {
 			winopts = {
 				preview = {
+					default = "bat",
 					wrap = "wrap",
 				},
 			},
-			defaults = {
-				formatter = "path.filename_first",
-				git_icons = false,
+			files = {
+				path_shorten = 1,
 			},
 			grep = {
 				multiline = 1,
@@ -188,6 +188,7 @@ require("lazy").setup({
 			vim.keymap.set({ "n", "v" }, "<Leader>rg", ":FzfLua live_grep_resume<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>s", ":FzfLua lsp_document_symbols<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>r", ":FzfLua lsp_references<CR>")
+			vim.keymap.set({ "n", "v" }, "gr", ":FzfLua lsp_references<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>i", ":FzfLua lsp_implementations<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>d", ":FzfLua diagnostics_document<CR>")
