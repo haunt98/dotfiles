@@ -384,7 +384,7 @@ require("lazy").setup({
 					lua = { "stylua" },
 					markdown = { "deno_fmt" },
 					proto = { "buf" },
-					python = { "ruff_format" },
+					python = { "ruff_fix", "ruff_format" },
 					sh = { "shfmt" },
 					sql = { "sqlfluff" },
 					toml = { "trim_whitespace", "taplo" },
@@ -393,17 +393,33 @@ require("lazy").setup({
 					zsh = { "shfmt" },
 				},
 				formatters = {
+					-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/gofumpt.lua
 					gofumpt = {
 						prepend_args = { "-extra" },
 					},
+					-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/shfmt.lua
 					shfmt = {
 						prepend_args = { "-s", "-i", "4" },
 					},
+					-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/taplo.lua
 					taplo = {
 						args = { "fmt", "-o", "indent_string=    ", "-o", "allowed_blank_lines=1", "-" },
 					},
+					-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/sqlfluff.lua
 					sqlfluff = {
 						args = { "fix", "--dialect=mysql", "-" },
+					},
+					-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/ruff_format.lua
+					ruff_format = {
+						args = {
+							"format",
+							"--force-exclude",
+							"--line-length",
+							"120",
+							"--stdin-filename",
+							"$FILENAME",
+							"-",
+						},
 					},
 				},
 			})
@@ -423,23 +439,22 @@ require("lazy").setup({
 		opts = {
 			ensure_installed = {
 				"bash",
-				"c",
+				"dockerfile",
 				"git_config",
 				"gitcommit",
 				"go",
 				"json",
+				"just",
 				"lua",
 				"make",
 				"markdown",
 				"markdown_inline",
 				"proto",
 				"python",
-				"query",
 				"sql",
 				"toml",
 				"typst",
-				"vim",
-				"vimdoc",
+				"yaml",
 			},
 			highlight = {
 				enabled = true,
@@ -583,8 +598,6 @@ require("lazy").setup({
 			vim.g.copilot_filetypes = {
 				["*"] = false,
 				asciidoc = true,
-				c = true,
-				cpp = true,
 				dockerfile = true,
 				gitcommit = true,
 				go = true,
@@ -596,6 +609,7 @@ require("lazy").setup({
 				plantuml = true,
 				proto = true,
 				python = true,
+				sql = true,
 				toml = true,
 				typst = true,
 				yaml = true,
