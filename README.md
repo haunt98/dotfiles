@@ -31,6 +31,7 @@ go build ./cmd/dot
 - [neovim](https://github.com/neovim/neovim)
 - [kitty](https://github.com/kovidgoyal/kitty)
 - [wezterm](https://github.com/wez/wezterm)
+- [ghostty](https://github.com/ghostty-org/ghostty)
 - [fd](https://github.com/sharkdp/fd)
 - [bat](https://github.com/sharkdp/bat)
 - [delta](https://github.com/dandavison/delta)

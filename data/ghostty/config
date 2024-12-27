@@ -1,0 +1,26 @@
+font-family = Iosevka Pacman
+font-size = 18
+adjust-cell-height = 20%
+
+theme = catppuccin-mocha
+
+cursor-style-blink = false
+
+background-opacity = 0.95
+background-blur-radius = 20
+
+window-padding-x = 16
+window-padding-y = 16
+
+clipboard-trim-trailing-spaces = true
+
+quit-after-last-window-closed = true
+
+macos-option-as-alt = true
+
+# Inspire from Zellij
+keybind = alt+n=new_split:right
+keybind = alt+m=new_split:down
+keybind = alt+p=goto_split:next
+keybind = alt+[=previous_tab
+keybind = alt+]=next_tab

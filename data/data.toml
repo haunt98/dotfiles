@@ -58,6 +58,10 @@ url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-light.icns?raw=tru
 internal = "data/wezterm"
 external = "~/.config/wezterm"
 
+[[apps.ghostty.paths]]
+internal = "data/ghostty"
+external = "~/.config/ghostty"
+
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
 external = "~/.ignore"
