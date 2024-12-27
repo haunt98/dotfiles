@@ -15,9 +15,10 @@ https://github.com/sourcegraph/conc/commits/main.atom "~conc"
 https://github.com/tidwall/gjson/commits/master.atom "~gjson"
 https://github.com/uber-go/zap/commits/master.atom "~zap"
 
+https://github.com/be5invis/Iosevka/commits/main.atom "~Iosevka"
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
 https://github.com/wez/wezterm/commits/main.atom "~wezterm"
-https://github.com/be5invis/Iosevka/commits/main.atom "~Iosevka"
+https://github.com/ghostty-org/ghostty/commits/main.atom "~ghostty"
 https://github.com/AsahiLinux/linux/commits/asahi.atom "~AsahiLinux/linux"
 https://github.com/AsahiLinux/m1n1/commits/main.atom "~AsahiLinux/m1n1"
 

@@ -11,6 +11,9 @@ background-blur-radius = 20
 
 window-padding-x = 16
 window-padding-y = 16
+window-height = 24
+window-width = 72
+window-save-state = never
 
 clipboard-trim-trailing-spaces = true
 
