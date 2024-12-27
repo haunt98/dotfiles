@@ -1,8 +1,8 @@
+config-file = catppuccin-mocha.conf
+
 font-family = Iosevka Pacman
 font-size = 18
 adjust-cell-height = 20%
-
-theme = catppuccin-mocha
 
 cursor-style-blink = false
 

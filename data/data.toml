@@ -59,8 +59,16 @@ internal = "data/wezterm"
 external = "~/.config/wezterm"
 
 [[apps.ghostty.paths]]
-internal = "data/ghostty"
-external = "~/.config/ghostty"
+internal = "data/ghostty/config"
+external = "~/.config/ghostty/config"
+
+[[apps.ghostty.paths]]
+internal = "data/ghostty/catppuccin-mocha.conf"
+external = "~/.config/ghostty/catppuccin-mocha.conf"
+
+[[apps.ghostty.paths]]
+internal = "data/ghostty/catppuccin-mocha.conf"
+external = "https://raw.githubusercontent.com/catppuccin/ghostty/refs/heads/main/themes/catppuccin-mocha.conf"
 
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
