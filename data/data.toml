@@ -68,7 +68,7 @@ external = "~/.config/ghostty/catppuccin-mocha.conf"
 
 [[apps.ghostty.paths]]
 internal = "data/ghostty/catppuccin-mocha.conf"
-external = "https://raw.githubusercontent.com/catppuccin/ghostty/refs/heads/main/themes/catppuccin-mocha.conf"
+url = "https://raw.githubusercontent.com/catppuccin/ghostty/refs/heads/main/themes/catppuccin-mocha.conf"
 
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
