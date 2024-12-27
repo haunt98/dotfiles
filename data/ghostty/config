@@ -1,7 +1,11 @@
 config-file = catppuccin-mocha.conf
 
+font-family = ""
 font-family = Iosevka Pacman
+font-family = Symbols Nerd Font Mono
 font-size = 18
+font-thicken = true
+
 adjust-cell-height = 20%
 
 cursor-style-blink = false
