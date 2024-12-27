@@ -9,6 +9,7 @@ font-thicken = true
 adjust-cell-height = 20%
 
 cursor-style-blink = false
+mouse-hide-while-typing = true
 
 background-opacity = 0.95
 background-blur-radius = 20
@@ -20,10 +21,14 @@ window-width = 72
 window-save-state = never
 
 clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
 
 quit-after-last-window-closed = true
-
 macos-option-as-alt = true
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+
+bold-is-bright = true
 
 # Inspire from Zellij
 keybind = alt+n=new_split:right
