@@ -37,6 +37,8 @@ keybind = alt+m=new_split:down
 keybind = alt+p=goto_split:next
 keybind = alt+[=previous_tab
 keybind = alt+]=next_tab
+keybind = ctrl+shift+left=previous_tab
+keybind = ctrl+shift+right=next_tab
 
 # https://github.com/ghostty-org/ghostty/pull/3107
 keybind = alt+left=unbind
