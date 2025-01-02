@@ -10,6 +10,6 @@ brew install \
     yt-dlp newsboat vips btop \
     fnm oven-sh/bun/bun deno uv \
     just typst asciidoctor clang-format stylua sqlfluff taplo typos-cli typstyle marksman tinymist \
-    yq gojq fx ollama gitleaks gh glab k1LoW/tap/tbls \
+    yq gojq fx ollama gitleaks gh glab k1LoW/tap/tbls ghz k6 \
     qmk/qmk/qmk daktilo asciinema \
     redis mysql-client
