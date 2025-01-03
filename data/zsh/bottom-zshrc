@@ -232,4 +232,7 @@ if command -v starship &>/dev/null; then
     eval "$(starship init zsh)"
 fi
 
+# https://ryuuta.net/blog/diagnosing-an-unsual-wifi-issue/
+export QT_BEARER_POLL_TIMEOUT=-1
+
 export PATH

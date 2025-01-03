@@ -25,6 +25,7 @@ clipboard-trim-trailing-spaces = true
 clipboard-paste-protection = true
 
 quit-after-last-window-closed = true
+
 macos-option-as-alt = true
 macos-auto-secure-input = true
 macos-secure-input-indication = true
