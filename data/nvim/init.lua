@@ -456,13 +456,7 @@ require("lazy").setup({
 				"typst",
 				"yaml",
 			},
-			highlight = {
-				enabled = true,
-				disable = function(lang, bufnr)
-					-- Skip big files with many lines
-					return vim.api.nvim_buf_line_count(bufnr) > 10000
-				end,
-			},
+			highlight = { enabled = true },
 			incremental_selection = { enable = false },
 			textobjects = { enable = false },
 			indent = { enable = false },
