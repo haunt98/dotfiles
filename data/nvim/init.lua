@@ -585,38 +585,14 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/github/copilot.vim
+	-- https://github.com/ggml-org/llama.vim
 	{
-		"github/copilot.vim",
-		init = function()
-			vim.g.copilot_filetypes = {
-				["*"] = false,
-				asciidoc = true,
-				dockerfile = true,
-				gitcommit = true,
-				go = true,
-				json = true,
-				just = true,
-				lua = true,
-				make = true,
-				markdown = true,
-				plantuml = true,
-				proto = true,
-				python = true,
-				sql = true,
-				toml = true,
-				typst = true,
-				yaml = true,
-				zsh = true,
-			}
-			vim.g.copilot_no_tab_map = true
-		end,
+		"ggml-org/llama.vim",
 		config = function()
-			-- Largely copy from GitHub
-			vim.keymap.set("i", "<M-Right>", 'copilot#Accept("\\<CR>")', {
-				expr = true,
-				replace_keycodes = false,
-			})
+			-- https://github.com/ggml-org/llama.vim/blob/master/autoload/llama.vim
+			vim.cmd("silent! iunmap <buffer> <Tab>")
+			vim.cmd("silent! iunmap <buffer> <S-Tab>")
+			vim.keymap.set("i", "<M-Right>", "<C-O>:call llama#fim_accept('full')<CR>")
 		end,
 	},
 }, {
