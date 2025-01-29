@@ -15,10 +15,6 @@
     "light": "Catppuccin Latte"
   },
   "vim_mode": true,
-  "assistant": {
-    "enabled": false,
-    "version": "2"
-  },
   "show_call_status_icon": false,
   "projects_online_by_default": false,
   "restore_on_startup": "none"
