@@ -543,6 +543,10 @@ require("lazy").setup({
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
 			lspconfig.tinymist.setup({})
 
+			-- https://github.com/neovim/nvim-lspconfig/issues/3588
+			-- https://github.com/neovim/neovim/pull/31031
+			-- TODO: Wait for nvim 0.11
+
 			-- General
 			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
 			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
