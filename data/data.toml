@@ -18,6 +18,10 @@ external = "~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 internal = "data/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 url = "https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 
+[[apps.fzf.paths]]
+internal = "data/fzf/fzfrc"
+external = "~/.config/fzf/fzfrc"
+
 [[apps.nvim.paths]]
 internal = "data/nvim/init.lua"
 external = "~/.config/nvim/init.lua"

@@ -91,16 +91,7 @@ fi
 # https://github.com/junegunn/fzf
 if command -v fzf &>/dev/null; then
     export FZF_COMPLETION_TRIGGER='~~'
-
-    # https://github.com/catppuccin/fzf
-    # Remove bg for transparent terminal
-    export FZF_DEFAULT_OPTS="\
-        --ansi \
-        --pointer='🔫' --prompt='🪓 ' \
-        --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
-        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-        --color=selected-bg:#45475a"
+    export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzfrc
 
     if command -v fd &>/dev/null; then
         _fzf_compgen_path() {
@@ -111,9 +102,9 @@ if command -v fzf &>/dev/null; then
             fd --type directory . "$1"
         }
 
-        export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+        export FZF_DEFAULT_COMMAND="fd --type file"
         export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-        export FZF_ALT_C_COMMAND="fd --type directory --color=always"
+        export FZF_ALT_C_COMMAND="fd --type directory"
     fi
 
     if command -v bat &>/dev/null; then
@@ -125,20 +116,6 @@ if command -v fzf &>/dev/null; then
     fi
 
     source <(fzf --zsh)
-
-    # https://github.com/Aloxaf/fzf-tab
-    if [[ -f $HOME/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh ]]; then
-        source /Users/anon/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
-
-        zstyle ':completion:*' menu no
-        zstyle ':fzf-tab:*' fzf-flags \
-            --ansi \
-            --pointer='🔫' --prompt='🪓 ' \
-            --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
-            --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-            --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-            --color=selected-bg:#45475a
-    fi
 fi
 
 # https://github.com/BurntSushi/ripgrep
