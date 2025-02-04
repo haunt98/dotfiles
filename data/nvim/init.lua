@@ -425,7 +425,9 @@ require("lazy").setup({
 			})
 
 			vim.keymap.set("n", "<Space>f", function()
-				conform.format()
+				conform.format({
+					async = true,
+				})
 			end)
 		end,
 	},
