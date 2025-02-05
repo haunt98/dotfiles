@@ -60,6 +60,13 @@ if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-
     export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 fi
 
+# https://docs.brew.sh/Manpage
+if command -v brew &>/dev/null; then
+    export HOMEBREW_FORCE_BREWED_CURL=1
+    # https://everything.curl.dev/install/macos.html
+    path=($(brew --prefix)/opt/curl/bin $path)
+fi
+
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
 export LESS="-RF -i -K -s -x2 --wordwrap"
 
