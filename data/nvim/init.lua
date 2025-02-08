@@ -258,7 +258,10 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.nvim",
 		config = function()
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-ai.txt
+			require("mini.ai").setup()
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-bracketed.txt
 			require("mini.bracketed").setup({
 				{
 					buffer = { suffix = "", options = {} },
@@ -273,10 +276,10 @@ require("lazy").setup({
 				},
 			})
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-cursorword.txt
 			require("mini.cursorword").setup()
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-files.txt
 			require("mini.files").setup({
 				mappings = {
 					go_in = "",
@@ -290,7 +293,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<C-n>", ":lua MiniFiles.open(nil, false)<CR>")
 			vim.keymap.set("n", "<Leader>n", ":lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>")
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-hipatterns.txt
 			local hipatterns = require("mini.hipatterns")
 			hipatterns.setup({
 				highlighters = {
@@ -298,26 +301,26 @@ require("lazy").setup({
 				},
 			})
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-diff.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-diff.txt
 			require("mini.diff").setup({
 				options = {
 					wrap_goto = true,
 				},
 			})
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-git.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-git.txt
 			require("mini.git").setup()
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-icons.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-icons.txt
 			require("mini.icons").setup()
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-pairs.txt
 			require("mini.pairs").setup()
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-statusline.txt
 			require("mini.statusline").setup()
 
-			-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-surround.txt
 			require("mini.surround").setup()
 
 			-- My Sofle V2 do not have map `[`, `]` directly

@@ -17,10 +17,13 @@ https://github.com/uber-go/zap/commits/master.atom "~zap"
 
 https://github.com/be5invis/Iosevka/commits/main.atom "~Iosevka"
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty"
-https://github.com/wez/wezterm/commits/main.atom "~wezterm"
+https://github.com/wezterm/wezterm/commits/main.atom "~wezterm"
 https://github.com/ghostty-org/ghostty/commits/main.atom "~ghostty"
 https://github.com/AsahiLinux/linux/commits/asahi.atom "~AsahiLinux/linux"
 https://github.com/AsahiLinux/m1n1/commits/main.atom "~AsahiLinux/m1n1"
+https://github.com/AsahiLinux/u-boot/commits/asahi.atom "~AsahiLinux/u-boot"
+https://github.com/AsahiLinux/muvm/commits/main.atom "~AsahiLinux/muvm"
+https://github.com/AsahiLinux/asahi-installer/commits/main.atom "~AsahiLinux/asahi-installer"
 
 http://feeds.feedburner.com/ThePragmaticEngineer
 https://0pointer.net/blog/index.atom
