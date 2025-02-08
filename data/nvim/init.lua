@@ -383,6 +383,7 @@ require("lazy").setup({
 					go = { "gofumpt" },
 					javascript = { "deno_fmt" },
 					json = { "deno_fmt" },
+					jsonc = { "deno_fmt" },
 					just = { "just" },
 					lua = { "stylua" },
 					markdown = { "deno_fmt" },
