@@ -43,3 +43,4 @@ go build ./cmd/dot
 - [newsboat](https://github.com/newsboat/newsboat)
 - [typos](https://github.com/crate-ci/typos)
 - [daktilo](https://github.com/orhun/daktilo)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)

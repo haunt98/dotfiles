@@ -153,3 +153,7 @@ external = "~/.config/daktilo/daktilo.toml"
 [[apps.cargo.paths]]
 internal = "data/cargo/config.toml"
 external = "~/.cargo/config.toml"
+
+[[apps.fastfetch.paths]]
+internal = "data/fastfetch"
+external = "~/.config/fastfetch"
