@@ -600,9 +600,8 @@ require("lazy").setup({
 		"ggml-org/llama.vim",
 		config = function()
 			-- https://github.com/ggml-org/llama.vim/blob/master/autoload/llama.vim
-			vim.cmd("silent! iunmap <buffer> <Tab>")
-			vim.cmd("silent! iunmap <buffer> <S-Tab>")
-			vim.keymap.set("i", "<M-Right>", "<C-O>:call llama#fim_accept('full')<CR>")
+			-- TODO: Remove mapping Tab
+			vim.keymap.set("i", "<M-Right>", "<C-O>:call llama#fim_accept('line')<CR>")
 		end,
 	},
 }, {
