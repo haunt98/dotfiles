@@ -183,8 +183,8 @@ require("lazy").setup({
 			fzf_colors = true,
 		},
 		config = function()
-			vim.keymap.set({ "n", "v" }, "<Leader>f", ":FzfLua files<CR>")
-			vim.keymap.set({ "n", "v" }, "<Leader>l", ":FzfLua blines<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>f", ":FzfLua files resume=true<CR>")
+			vim.keymap.set({ "n", "v" }, "<Leader>l", ":FzfLua blines resume=true<CR>")
 			vim.keymap.set({ "n", "v" }, "<Leader>rg", ":FzfLua live_grep_resume<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>s", ":FzfLua lsp_document_symbols<CR>")
 			vim.keymap.set({ "n", "v" }, "<Space>r", ":FzfLua lsp_references<CR>")
