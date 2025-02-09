@@ -217,6 +217,11 @@ if command -v starship &>/dev/null; then
     eval "$(starship init zsh)"
 fi
 
+# https://github.com/qpdf/qpdf
+if command -v qpdf &>/dev/null; then
+    eval "$(qpdf --completion-zsh)"
+fi
+
 # https://ryuuta.net/blog/diagnosing-an-unsual-wifi-issue/
 export QT_BEARER_POLL_TIMEOUT=-1
 
