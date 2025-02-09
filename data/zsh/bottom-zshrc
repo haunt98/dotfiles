@@ -222,6 +222,11 @@ if command -v qpdf &>/dev/null; then
     eval "$(qpdf --completion-zsh)"
 fi
 
+# https://github.com/fastfetch-cli/fastfetch
+if command -v fastfetch &>/dev/null; then
+    alias ff="fastfetch"
+fi
+
 # https://ryuuta.net/blog/diagnosing-an-unsual-wifi-issue/
 export QT_BEARER_POLL_TIMEOUT=-1
 
