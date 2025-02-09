@@ -1,5 +1,189 @@
 # CHANGELOG
 
+## v0.15.14 (2025-02-10)
+
+### Others
+
+- config(zsh): alias ff="fastfetch" (2025-02-10)
+
+- config(zsh): improve qpdf (2025-02-09)
+
+- config(nvim): improve llama.nvim (2025-02-09)
+
+- config(nvim): more resume fzf-lua (2025-02-09)
+
+- config: add fastfetch (2025-02-09)
+
+- config(nvim): format jsonc (2025-02-09)
+
+- config(nvim): enable mini.ai (2025-02-09)
+
+- config: sync upstream (2025-02-07)
+
+- config(zsh): use homebrew curl (2025-02-06)
+
+- chore(deps): bump golang.org/x/sync from 0.10.0 to 0.11.0 (#81) (2025-02-05)
+
+- config(nvim): conform async format (2025-02-04)
+
+- config(fzf): migrate fzfrc (2025-02-02)
+
+- chore: add llama.cpp (2025-02-02)
+
+- config(nvim): wait for nvim 0.11 (2025-01-31)
+
+- config(zed): latest update (2025-01-30)
+
+- config(nvim): Replace copilot with llama.vim (2025-01-28)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.7 to 1.12.8 (#80) (2025-01-27)
+
+- chore: update rss (2025-01-27)
+
+- config(nvim): allow treesitter on big files (2025-01-26)
+
+- config(starship): minor improve (2025-01-19)
+
+- config(bat): add --squeeze-blank (2025-01-09)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.6 to 1.12.7 (#79) (2025-01-08)
+
+- chore: add words.filippo.io to newsboat (2025-01-05)
+
+- chore: add fclones and qpdf (2025-01-05)
+
+- chore: deprecated check-shadowing in golangci.yml (2025-01-05)
+
+- config(zsh): add QT_BEARER_POLL_TIMEOUT=-1 to fix wifi issue (2025-01-03)
+
+- config(ghostty): add keybinds for switching tabs (2025-01-02)
+
+- chore: more tools (2025-01-02)
+
+- chore: add more urls (2025-01-01)
+
+- config: sync upstream (2025-01-01)
+
+- config(ghostty): use display-p3 colorspace (2024-12-28)
+
+- config(kitty): improve config (2024-12-27)
+
+- config(ghostty): unbind alt+left and alt+right to fix neovim (2024-12-27)
+
+- config: correct url (2024-12-27)
+
+- config(ghostty): improve font rendering (2024-12-27)
+
+- config(ghostty): set window size and save state (2024-12-27)
+
+- config(ghostty): add catppuccin-mocha theme (2024-12-27)
+
+- config: add ghostty (2024-12-27)
+
+- config(nvim): improve conform (2024-12-25)
+
+- chore: sync upstream (2024-12-25)
+
+- config(ripgrep): improve sth (2024-12-24)
+
+- config(nvim): improve fzf-lua settings (2024-12-22)
+
+- config(nvim): improve blink.cmp keymap (2024-12-21)
+
+- chore(newsboat): add protobuf-go feed (2024-12-17)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.5 to 1.12.6 (#78) (2024-12-16)
+
+- chore (2024-12-16)
+
+- chore(newsboat): add matklad's blog (2024-12-15)
+
+- chore: add go profile tools (2024-12-15)
+
+- chore(newsboat): the purge (2024-12-13)
+
+- config(nvim): do some chore (2024-12-11)
+
+- config(nvim): re-add mini.bracketed (2024-12-09)
+
+- chore(newsboat): more (2024-12-08)
+
+- chore(newsboat): add grpc-gateway (2024-12-06)
+
+- config(nvim): new blink.cmp config (2024-12-05)
+
+- chore(deps): bump golang.org/x/sync from 0.9.0 to 0.10.0 (#77) (2024-12-05)
+
+- chore: more ignore (2024-12-02)
+
+- config(starship): remove git_metrics (2024-12-01)
+
+- config(zsh): remove underline from catppuccin mocha theme (2024-11-29)
+
+- config(zsh): add catppuccin zsh (2024-11-26)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.4 to 1.12.5 (#76) (2024-11-25)
+
+- config(nvim): add dockerfile (2024-11-25)
+
+- config(nvim): add sql to tree-sitter parsers (2024-11-18)
+
+- config(wezterm): set max_fps to 120 (2024-11-18)
+
+- chore(deps): bump codecov/codecov-action from 4 to 5 (#75) (2024-11-16)
+
+- config(zellij): disable pane frames (2024-11-13)
+
+- chore(deps): bump golang.org/x/sync from 0.8.0 to 0.9.0 (#74) (2024-11-09)
+
+- config(nvim): add buf ls (2024-11-06)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.3 to 1.12.4 (#73) (2024-11-06)
+
+- config(nvim): blink use keymap preset default (2024-11-04)
+
+- chore: use sonic to unmarshal json (2024-11-01)
+
+- config(nvim): update blink keymap (2024-10-31)
+
+- config(kitty): add cursor trail (2024-10-31)
+
+- config(nvim): tweak blink (2024-10-29)
+
+- chore: prefer brew over go install for some tools (2024-10-29)
+
+- chore: add asciinema (2024-10-28)
+
+- config(nvim): replace config with opts (2024-10-28)
+
+- config(nvim): replace hrsh7th/nvim-cmp with saghen/blink.cmp (2024-10-28)
+
+- chore(newsboat): add commoncog.com to urls (2024-10-28)
+
+- chore: sync lint (2024-10-26)
+
+- chore(newsboat): add Trail of Bits blog (2024-10-26)
+
+- config(nvim): saturday tweaks (2024-10-26)
+
+- config(nvim): do chore (2024-10-26)
+
+- config(nvim): replace nvim-tree with mini.files (2024-10-26)
+
+- config(nvim): support typst (2024-10-22)
+
+- config(zsh): improve zstyle completion settings (2024-10-21)
+
+- chore: add google project zero (2024-10-20)
+
+- chore: batman (2024-10-19)
+
+- chore: sync upstream bat themes (2024-10-19)
+
+- config: increase font size (2024-10-19)
+
+- chore(changelog): generate v0.15.13 (2024-10-18)
+
 ## v0.15.13 (2024-10-18)
 
 ### Others
