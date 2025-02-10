@@ -13,11 +13,9 @@
     "packages",
     "display",
     "terminal",
-    "terminalfont",
     "cpu",
     "gpu",
     "memory",
-    "swap",
     "disk",
     "battery",
     "poweradapter"
