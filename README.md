@@ -35,7 +35,6 @@ go build ./cmd/dot
 - [fd](https://github.com/sharkdp/fd)
 - [bat](https://github.com/sharkdp/bat)
 - [delta](https://github.com/dandavison/delta)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [zellij](https://github.com/zellij-org/zellij)
 - [starship](https://github.com/starship/starship)
 - [zed](https://github.com/zed-industries/zed)

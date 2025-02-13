@@ -94,10 +94,6 @@ external = "~/.config/delta/themes/catppuccin.gitconfig"
 internal = "data/delta/themes/catppuccin.gitconfig"
 url = "https://raw.githubusercontent.com/catppuccin/delta/main/catppuccin.gitconfig"
 
-[[apps.ripgrep.paths]]
-internal = "data/ripgrep"
-external = "~/.config/ripgrep"
-
 [[apps.zellij.paths]]
 internal = "data/zellij"
 external = "~/.config/zellij"
