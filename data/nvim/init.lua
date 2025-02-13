@@ -161,40 +161,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- https://github.com/ibhagwan/fzf-lua
-	{
-		"ibhagwan/fzf-lua",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-		},
-		opts = {
-			winopts = {
-				preview = {
-					default = "bat",
-					wrap = "wrap",
-				},
-			},
-			files = {
-				path_shorten = 1,
-			},
-			grep = {
-				multiline = 1,
-			},
-			fzf_colors = true,
-		},
-		config = function()
-			vim.keymap.set({ "n", "v" }, "<Leader>f", ":FzfLua files resume=true<CR>")
-			vim.keymap.set({ "n", "v" }, "<Leader>l", ":FzfLua blines resume=true<CR>")
-			vim.keymap.set({ "n", "v" }, "<Leader>rg", ":FzfLua live_grep_resume<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>s", ":FzfLua lsp_document_symbols<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>r", ":FzfLua lsp_references<CR>")
-			vim.keymap.set({ "n", "v" }, "gr", ":FzfLua lsp_references<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>i", ":FzfLua lsp_implementations<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>ca", ":FzfLua lsp_code_actions previewer=false<CR>")
-			vim.keymap.set({ "n", "v" }, "<Space>d", ":FzfLua diagnostics_document<CR>")
-		end,
-	},
-
 	-- https://github.com/Saghen/blink.cmp
 	{
 		"saghen/blink.cmp",
@@ -251,6 +217,70 @@ require("lazy").setup({
 		opts = {
 			auto_normal = true,
 			auto_visual = true,
+		},
+	},
+
+	-- https://github.com/folke/snacks.nvim
+	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		---@type snacks.Config
+		opts = {
+			picker = { enabled = true },
+		},
+		keys = {
+			{
+				"<leader>f",
+				function()
+					Snacks.picker.files()
+				end,
+				desc = "Find Files",
+			},
+			{
+				"<leader>l",
+				function()
+					Snacks.picker.lines()
+				end,
+				desc = "Buffer Lines",
+			},
+			{
+				"<leader>rg",
+				function()
+					Snacks.picker.grep()
+				end,
+				desc = "Grep",
+			},
+			{
+				"<leader>s",
+				function()
+					Snacks.picker.lsp_symbols()
+				end,
+				desc = "LSP Symbols",
+			},
+			{
+				"<Space>r",
+				function()
+					Snacks.picker.lsp_references()
+				end,
+				nowait = true,
+				desc = "References",
+			},
+			{
+				"gr",
+				function()
+					Snacks.picker.lsp_references()
+				end,
+				nowait = true,
+				desc = "References",
+			},
+			{
+				"<Space>i",
+				function()
+					Snacks.picker.lsp_implementations()
+				end,
+				desc = "Goto Implementation",
+			},
 		},
 	},
 
@@ -457,6 +487,8 @@ require("lazy").setup({
 				"markdown_inline",
 				"proto",
 				"python",
+				"query",
+				"regex",
 				"sql",
 				"toml",
 				"typst",
@@ -555,6 +587,7 @@ require("lazy").setup({
 
 			-- General
 			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
+			vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action)
 			vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 
 			local augroup = vim.api.nvim_create_augroup("UserLspConfig", {})
@@ -598,6 +631,10 @@ require("lazy").setup({
 	-- https://github.com/ggml-org/llama.vim
 	{
 		"ggml-org/llama.vim",
+		ft = {
+			"go",
+			"python",
+		},
 		config = function()
 			-- https://github.com/ggml-org/llama.vim/blob/master/autoload/llama.vim
 			-- TODO: Remove mapping Tab
