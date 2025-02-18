@@ -252,7 +252,7 @@ require("lazy").setup({
 				desc = "Grep",
 			},
 			{
-				"<leader>s",
+				"<Space>s",
 				function()
 					Snacks.picker.lsp_symbols()
 				end,
@@ -527,6 +527,7 @@ require("lazy").setup({
 		ft = {
 			"go",
 			"markdown",
+			"proto",
 			"python",
 			"typst",
 		},
@@ -633,6 +634,7 @@ require("lazy").setup({
 		"ggml-org/llama.vim",
 		ft = {
 			"go",
+			"proto",
 			"python",
 		},
 		config = function()

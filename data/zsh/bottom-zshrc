@@ -2,6 +2,7 @@
 # Put this on bottom of ~/.zshrc
 
 # https://blog.izissise.net/posts/env-path/
+# https://jvns.ca/blog/2025/02/13/how-to-add-a-directory-to-your-path/
 typeset -U path PATH
 
 # Alias
