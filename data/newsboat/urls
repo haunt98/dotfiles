@@ -2,6 +2,8 @@ https://github.com/golang/go/commits/master.atom "~go"
 https://github.com/golang/tools/commits/master.atom "~go/tools"
 
 https://github.com/IBM/sarama/commits/main.atom "~sarama"
+https://github.com/bytedance/sonic/commits/main.atom "~sonic"
+https://github.com/gabriel-vasile/mimetype/commits/master.atom "~mimetype"
 https://github.com/gin-gonic/gin/commits/master.atom "~gin"
 https://github.com/go-gorm/gorm/commits/master.atom "~gorm"
 https://github.com/go-gorm/mysql/commits/master.atom "~gorm/mysql"
