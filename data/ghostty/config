@@ -1,9 +1,9 @@
 config-file = catppuccin-mocha.conf
 
 font-family = ""
-font-family = Iosevka Pacman
+font-family = M PLUS Code Latin 60
 font-family = Symbols Nerd Font Mono
-font-size = 18
+font-size = 16
 font-thicken = true
 
 adjust-cell-height = 20%

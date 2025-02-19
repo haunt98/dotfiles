@@ -640,7 +640,7 @@ require("lazy").setup({
 		config = function()
 			-- https://github.com/ggml-org/llama.vim/blob/master/autoload/llama.vim
 			-- TODO: Remove mapping Tab
-			vim.keymap.set("i", "<M-Right>", "<C-O>:call llama#fim_accept('word')<CR>")
+			vim.keymap.set("i", "<M-Right>", "<C-O>:call llama#fim_accept('line')<CR>")
 		end,
 	},
 }, {
