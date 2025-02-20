@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/BurntSushi/toml v1.4.0
-	github.com/bytedance/sonic v1.12.8
+	github.com/bytedance/sonic v1.12.9
 	github.com/make-go-great/color-go v0.5.0
 	github.com/make-go-great/copy-go v0.9.0
 	github.com/make-go-great/diff-go v0.0.6
