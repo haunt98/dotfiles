@@ -637,6 +637,11 @@ require("lazy").setup({
 			"proto",
 			"python",
 		},
+		init = function()
+			vim.g.llama_config = {
+				show_info = 0,
+			}
+		end,
 		config = function()
 			-- https://github.com/ggml-org/llama.vim/blob/master/autoload/llama.vim
 			-- TODO: Remove mapping Tab
