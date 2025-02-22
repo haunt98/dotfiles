@@ -119,7 +119,7 @@ func (a *action) getFlags(c *cli.Context) {
 	a.flags.appNames = c.StringSlice(flagAppName)
 }
 
-func (a *action) log(format string, v ...interface{}) {
+func (a *action) log(format string, v ...any) {
 	if a.flags.verbose {
 		log.Printf(format, v...)
 	}
