@@ -633,7 +633,9 @@ require("lazy").setup({
 	{
 		"ggml-org/llama.vim",
 		ft = {
+			"gitcommit",
 			"go",
+			"markdown",
 			"proto",
 			"python",
 		},
