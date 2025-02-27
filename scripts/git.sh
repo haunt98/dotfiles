@@ -35,6 +35,7 @@ git config --global alias.tg "tag --sort=-version:refname"
 git config --global commit.verbose true
 git config --global core.excludesfile "~/.config/git/ignore"
 git config --global core.fsmonitor true
+git config --global core.untrackedCache true
 git config --global diff.algorithm histogram
 git config --global diff.colorMoved no
 git config --global diff.submodule log
@@ -46,7 +47,12 @@ git config --global merge.conflictstyle zdiff3
 git config --global pull.rebase false
 git config --global pull.twohead ort
 git config --global push.autoSetupRemote true
+git config --global push.followTags true
+git config --global rebase.autoSquash true
+git config --global rebase.autoStash true
 git config --global rebase.stat true
+git config --global rebase.updateRefs true
+git config --global rerere.autoupdate true
 git config --global rerere.enabled true
 git config --global status.submoduleSummary true
 git config --global submodule.recurse true
