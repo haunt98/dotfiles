@@ -633,11 +633,23 @@ require("lazy").setup({
 	{
 		"ggml-org/llama.vim",
 		ft = {
+			"bash",
+			"c",
+			"dockerfile",
 			"gitcommit",
 			"go",
+			"json",
+			"just",
+			"lua",
+			"make",
 			"markdown",
+			"plantuml",
 			"proto",
 			"python",
+			"sql",
+			"toml",
+			"typst",
+			"yaml",
 		},
 		init = function()
 			vim.g.llama_config = {
