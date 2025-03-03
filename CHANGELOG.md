@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## v0.15.15 (2025-03-03)
+
+### Others
+
+- chore: add fastfetch (2025-03-03)
+
+- chore: remove daktilo, vivid (2025-03-03)
+
+- chore: more rss (2025-03-03)
+
+- config(nvim): more llm (2025-03-03)
+
+- chore: more git gud (2025-02-27)
+
+- chore: improve brew (2025-02-25)
+
+- chore: improve brew (2025-02-24)
+
+- config(nvim): more llama (2025-02-23)
+
+- chore: add modernize (2025-02-23)
+
+- config(nvim): off llama show info (2025-02-21)
+
+- config(nvim): back to line (2025-02-19)
+
+- config(nvim): accept word (2025-02-19)
+
+- config(nvim): update keymap (2025-02-18)
+
+- config(nvim): replace fzf-lua with snacks.nvim (2025-02-14)
+
+- chore: rm ripgrep config as it breaks nvim plugin (2025-02-14)
+
+- config(fastfetch): I use custom font, ignore swap (2025-02-10)
+
+- chore(changelog): generate v0.15.14 (2025-02-10)
+
+### Build
+
+- build: bump go.mod 1.24 (2025-03-03)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.9 to 1.12.10 (#83) (2025-03-03)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.8 to 1.12.9 (#82) (2025-02-20)
+
 ## v0.15.14 (2025-02-10)
 
 ### Others
