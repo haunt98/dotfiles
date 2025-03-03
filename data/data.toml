@@ -142,10 +142,6 @@ url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
 internal = "data/typos/typos.toml"
 external = "~/.config/typos/typos.toml"
 
-[[apps.daktilo.paths]]
-internal = "data/daktilo/daktilo.toml"
-external = "~/.config/daktilo/daktilo.toml"
-
 [[apps.cargo.paths]]
 internal = "data/cargo/config.toml"
 external = "~/.cargo/config.toml"

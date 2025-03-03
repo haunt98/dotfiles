@@ -150,16 +150,6 @@ if command -v difft &>/dev/null; then
     export DFT_TAB_WIDTH=2
 fi
 
-# https://restic.readthedocs.io/en/latest/manual_rest.html
-if command -v restic &>/dev/null; then
-    export RESTIC_PASSWORD_FILE=$HOME/.restic_password_file
-fi
-
-# https://github.com/sharkdp/vivid
-if command -v vivid &>/dev/null; then
-    export LS_COLORS="$(vivid generate catppuccin-mocha)"
-fi
-
 # https://github.com/ajeetdsouza/zoxide
 if command -v zoxide &>/dev/null; then
     export _ZO_ECHO=1
@@ -201,21 +191,11 @@ if command -v typos &>/dev/null; then
     alias typo="typos --config ~/.config/typos/typos.toml"
 fi
 
-# https://github.com/orhun/daktilo
-if command -v daktilo &>/dev/null; then
-    export DAKTILO_CONFIG="$HOME/.config/daktilo/daktilo.toml"
-fi
-
 # https://github.com/starship/starship
 if command -v starship &>/dev/null; then
     export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
     export STARSHIP_LOG="error"
     eval "$(starship init zsh)"
-fi
-
-# https://github.com/qpdf/qpdf
-if command -v qpdf &>/dev/null; then
-    eval "$(qpdf --completion-zsh)"
 fi
 
 # https://github.com/fastfetch-cli/fastfetch

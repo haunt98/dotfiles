@@ -41,5 +41,4 @@ go build ./cmd/dot
 - [btop](https://github.com/aristocratos/btop)
 - [newsboat](https://github.com/newsboat/newsboat)
 - [typos](https://github.com/crate-ci/typos)
-- [daktilo](https://github.com/orhun/daktilo)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
