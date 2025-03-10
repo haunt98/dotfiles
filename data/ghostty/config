@@ -1,9 +1,10 @@
 config-file = catppuccin-mocha.conf
 
 font-family = ""
-font-family = M PLUS Code Latin 60
+font-family = Maple Mono
 font-family = Symbols Nerd Font Mono
-font-size = 16
+font-feature = zero
+font-size = 14
 font-thicken = true
 
 adjust-cell-height = 20%

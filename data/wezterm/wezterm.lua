@@ -20,7 +20,7 @@ local font_iosevka = {
 	font = font_with_fallback({
 		family = "Iosevka Pacman",
 	}),
-	font_size = 18.0,
+	font_size = 16.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
 }
