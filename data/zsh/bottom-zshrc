@@ -33,6 +33,7 @@ if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
     typeset -A ZSH_HIGHLIGHT_STYLES
     # Remove underline from catppuccin mocha theme
+    # https://github.com/catppuccin/zsh-syntax-highlighting/issues/7
     ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4'
     ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#f38ba8'
     ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#cdd6f4'
@@ -131,11 +132,6 @@ if command -v eza &>/dev/null; then
     alias ls="eza"
     alias ll="eza -l"
     alias la="eza -la"
-fi
-
-# https://github.com/kovidgoyal/kitty
-if command -v kitten &>/dev/null; then
-    alias kssh="kitten ssh"
 fi
 
 # https://github.com/dandavison/delta
