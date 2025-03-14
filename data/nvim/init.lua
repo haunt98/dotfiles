@@ -654,12 +654,11 @@ require("lazy").setup({
 		init = function()
 			vim.g.llama_config = {
 				show_info = 0,
+				keymap_trigger = "",
+				keymap_accept_full = "",
+				keymap_accept_line = "<M-Right>",
+				keymap_accept_word = "",
 			}
-		end,
-		config = function()
-			-- https://github.com/ggml-org/llama.vim/blob/master/autoload/llama.vim
-			-- TODO: Remove mapping Tab
-			vim.keymap.set("i", "<M-Right>", "<C-O>:call llama#fim_accept('line')<CR>")
 		end,
 	},
 }, {
