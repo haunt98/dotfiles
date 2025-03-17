@@ -6,7 +6,7 @@ brew install \
     git neovim \
     bat-extras \
     rsync rclone restic fclones f2 wcurl ncdu \
-    tlrc zellij totp-cli \
+    tlrc totp-cli \
     yt-dlp newsboat vips btop \
     fnm oven-sh/bun/bun deno uv \
     just typst asciidoctor clang-format stylua sqlfluff taplo typos-cli typstyle marksman tinymist \

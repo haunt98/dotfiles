@@ -94,10 +94,6 @@ external = "~/.config/delta/themes/catppuccin.gitconfig"
 internal = "data/delta/themes/catppuccin.gitconfig"
 url = "https://raw.githubusercontent.com/catppuccin/delta/main/catppuccin.gitconfig"
 
-[[apps.zellij.paths]]
-internal = "data/zellij"
-external = "~/.config/zellij"
-
 [[apps.starship.paths]]
 internal = "data/starship/starship.toml"
 external = "~/.config/starship/starship.toml"
