@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v0.15.16 (2025-03-18)
+
+### Others
+
+- chore: rm zellij (2025-03-17)
+
+- chore: add bitwarden-cli (2025-03-15)
+
+- config(nvim): better config keymap (2025-03-15)
+
+- config(zsh): clean up (2025-03-12)
+
+- config: decrease font size 18 -> 16 (2025-03-10)
+
+- config(zsh): ll (2025-03-03)
+
+- chore(changelog): generate v0.15.15 (2025-03-03)
+
+### Build
+
+- chore(deps): bump github.com/BurntSushi/toml from 1.4.0 to 1.5.0 (#87) (2025-03-18)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.12.10 to 1.13.1 (#86) (2025-03-10)
+
+- chore(deps): bump golang.org/x/sync from 0.11.0 to 0.12.0 (#85) (2025-03-06)
+
+- chore(deps): bump github.com/urfave/cli/v2 from 2.27.5 to 2.27.6 (#84) (2025-03-06)
+
 ## v0.15.15 (2025-03-03)
 
 ### Others
