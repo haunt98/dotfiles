@@ -14,6 +14,7 @@
     "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte"
   },
+  "icon_theme": "Catppuccin Mocha",
   "vim_mode": true,
   "show_call_status_icon": false,
   "projects_online_by_default": false,
