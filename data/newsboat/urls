@@ -51,6 +51,7 @@ https://daniel.haxx.se/blog/feed/
 https://dave.cheney.net/feed/atom
 https://dotat.at/@/blog.atom
 https://drewdevault.com/blog/index.xml
+https://gpanders.com/index.xml
 https://jvns.ca/atom.xml
 https://lemire.me/blog/feed/
 https://lucumr.pocoo.org/feed.atom
@@ -69,11 +70,12 @@ https://words.filippo.io/rss
 
 https://go.dev/blog/feed.atom
 https://golangweekly.com/rss/
-https://tigerbeetle.com/blog/atom.xml
-https://asahilinux.org/blog/index.xml
 https://kbd.news/rss.php
 
 https://neovim.io/news.xml
+https://zed.dev/blog.rss
+https://asahilinux.org/blog/index.xml
+https://tigerbeetle.com/blog/atom.xml
 https://developer.apple.com/news/releases/rss/releases.rss
 https://rsshub.app/amazon/kindle/software-updates
 

@@ -1,5 +1,5 @@
 -- https://neovim.io/doc/user/lua-guide.html
-vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
+vim.opt.completeopt = { "menuone", "noinsert", "noselect", "fuzzy" }
 vim.opt.swapfile = false
 vim.opt.title = true
 vim.opt.virtualedit = "block"
@@ -11,7 +11,6 @@ vim.opt.smartcase = true
 
 -- Line number
 vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.scrolloff = 4
 vim.opt.signcolumn = "number"
 
@@ -296,11 +295,14 @@ require("lazy").setup({
 			require("mini.bracketed").setup({
 				{
 					buffer = { suffix = "", options = {} },
+					comment = { suffix = "", options = {} },
+					diagnostic = { suffix = "", options = {} },
 					file = { suffix = "", options = {} },
 					indent = { suffix = "", options = {} },
 					jump = { suffix = "", options = {} },
 					location = { suffix = "", options = {} },
 					oldfile = { suffix = "", options = {} },
+					quickfix = { suffix = "", options = {} },
 					undo = { suffix = "", options = {} },
 					window = { suffix = "", options = {} },
 					yank = { suffix = "", options = {} },
@@ -359,11 +361,6 @@ require("lazy").setup({
 			vim.keymap.set("n", "(d", "[d", { remap = true })
 			vim.keymap.set("n", ")D", "]D", { remap = true })
 			vim.keymap.set("n", "(D", "[D", { remap = true })
-
-			vim.keymap.set("n", ")c", "]c", { remap = true })
-			vim.keymap.set("n", "(c", "[c", { remap = true })
-			vim.keymap.set("n", ")C", "]C", { remap = true })
-			vim.keymap.set("n", "(C", "[C", { remap = true })
 
 			vim.keymap.set("n", ")x", "]x", { remap = true })
 			vim.keymap.set("n", "(x", "[x", { remap = true })
@@ -625,7 +622,7 @@ require("lazy").setup({
 			-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
 			vim.diagnostic.config({
 				underline = false,
-				virtual_text = false,
+				virtual_lines = true,
 			})
 		end,
 	},
