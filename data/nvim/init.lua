@@ -107,6 +107,7 @@ require("lazy").setup({
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		enabled = true,
 		config = function()
 			-- https://github.com/nyoom-engineering/oxocarbon.nvim
 			local color_oxocarbon = {
@@ -218,6 +219,14 @@ require("lazy").setup({
 			auto_normal = true,
 			auto_visual = true,
 		},
+	},
+
+	-- https://github.com/johmsalas/text-case.nvim
+	{
+		"johmsalas/text-case.nvim",
+		config = function()
+			require("textcase").setup({})
+		end,
 	},
 
 	-- https://github.com/folke/snacks.nvim
