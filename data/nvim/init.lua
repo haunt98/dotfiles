@@ -109,25 +109,9 @@ require("lazy").setup({
 		priority = 1000,
 		enabled = true,
 		config = function()
-			-- https://github.com/nyoom-engineering/oxocarbon.nvim
-			local color_oxocarbon = {
-				pink = "#ff7eb6",
-				purple = "#be95ff",
-			}
-
 			require("catppuccin").setup({
 				flavour = "mocha",
 				transparent_background = true,
-				color_overrides = {
-					mocha = {
-						-- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/mocha.lua
-						flamingo = color_oxocarbon.pink,
-						pink = color_oxocarbon.pink,
-						mauve = color_oxocarbon.purple,
-						red = color_oxocarbon.pink,
-						maroon = color_oxocarbon.pink,
-					},
-				},
 				custom_highlights = function(colors)
 					return {
 						-- Help my eyes
@@ -294,9 +278,17 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.nvim",
 		config = function()
+			-- Text editing
 			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-ai.txt
 			require("mini.ai").setup()
 
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-pairs.txt
+			require("mini.pairs").setup()
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-surround.txt
+			require("mini.surround").setup()
+
+			-- General workflow
 			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-bracketed.txt
 			require("mini.bracketed").setup({
 				{
@@ -314,53 +306,6 @@ require("lazy").setup({
 					yank = { suffix = "", options = {} },
 				},
 			})
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-cursorword.txt
-			require("mini.cursorword").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-files.txt
-			require("mini.files").setup({
-				mappings = {
-					go_in = "",
-					go_in_plus = "<CR>",
-					go_out = "",
-					go_out_plus = "<BS>",
-					reset = "",
-				},
-			})
-
-			vim.keymap.set("n", "<C-n>", ":lua MiniFiles.open(nil, false)<CR>")
-			vim.keymap.set("n", "<Leader>n", ":lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>")
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-hipatterns.txt
-			local hipatterns = require("mini.hipatterns")
-			hipatterns.setup({
-				highlighters = {
-					hex_color = hipatterns.gen_highlighter.hex_color(),
-				},
-			})
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-diff.txt
-			require("mini.diff").setup({
-				options = {
-					wrap_goto = true,
-				},
-			})
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-git.txt
-			require("mini.git").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-icons.txt
-			require("mini.icons").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-pairs.txt
-			require("mini.pairs").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-statusline.txt
-			require("mini.statusline").setup()
-
-			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-surround.txt
-			require("mini.surround").setup()
 
 			-- My Sofle V2 do not have map `[`, `]` directly
 			vim.keymap.set("n", ")d", "]d", { remap = true })
@@ -382,6 +327,39 @@ require("lazy").setup({
 			vim.keymap.set("n", "(h", "[h", { remap = true })
 			vim.keymap.set("n", ")H", "]H", { remap = true })
 			vim.keymap.set("n", "(H", "[H", { remap = true })
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-files.txt
+			require("mini.files").setup({
+				mappings = {
+					go_in = "",
+					go_in_plus = "<CR>",
+					go_out = "",
+					go_out_plus = "<BS>",
+					reset = "",
+				},
+			})
+
+			vim.keymap.set("n", "<C-n>", ":lua MiniFiles.open(nil, false)<CR>")
+			vim.keymap.set("n", "<Leader>n", ":lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>")
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-hipatterns.txt
+			local hipatterns = require("mini.hipatterns")
+			hipatterns.setup({
+				highlighters = {
+					todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+					hex_color = hipatterns.gen_highlighter.hex_color(),
+				},
+			})
+
+			-- Appearance
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-cursorword.txt
+			require("mini.cursorword").setup()
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-icons.txt
+			require("mini.icons").setup()
+
+			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-statusline.txt
+			require("mini.statusline").setup()
 
 			-- Use cl instead of s
 			vim.keymap.set({ "n", "x" }, "s", "<Nop>")
@@ -585,10 +563,6 @@ require("lazy").setup({
 			-- https://github.com/Myriad-Dreamin/tinymist
 			-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
 			lspconfig.tinymist.setup({})
-
-			-- https://github.com/neovim/nvim-lspconfig/issues/3588
-			-- https://github.com/neovim/neovim/pull/31031
-			-- TODO: Wait for nvim 0.11
 
 			-- General
 			vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
