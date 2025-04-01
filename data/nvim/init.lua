@@ -1,6 +1,5 @@
 -- https://neovim.io/doc/user/lua-guide.html
 vim.opt.completeopt = { "menuone", "noinsert", "noselect", "fuzzy" }
-vim.opt.swapfile = false
 vim.opt.title = true
 vim.opt.virtualedit = "block"
 vim.opt.whichwrap = "<,>,[,]"
