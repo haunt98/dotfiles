@@ -650,23 +650,4 @@ require("lazy").setup({
 			end,
 		},
 	},
-	performance = {
-		rtp = {
-			disabled_plugins = {
-				"editorconfig",
-				"gzip",
-				"spellfile",
-				"tarPlugin",
-				"tohtml",
-				"tutor",
-				"zipPlugin",
-			},
-		},
-	},
-	rocks = { enabled = false },
-	throttle = { enabled = true },
-	git = {
-		-- Seconds
-		cooldown = 5 * 60,
-	},
 })
