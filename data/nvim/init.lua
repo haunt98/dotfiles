@@ -152,9 +152,6 @@ require("lazy").setup({
 						},
 					}
 				end,
-				integrations = {
-					blink_cmp = true,
-				},
 			})
 
 			vim.cmd("colorscheme catppuccin")
