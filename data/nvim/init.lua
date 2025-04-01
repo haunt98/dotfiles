@@ -165,6 +165,34 @@ require("lazy").setup({
 		},
 	},
 
+	-- https://github.com/lewis6991/gitsigns.nvim
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			local gitsigns = require("gitsigns")
+			gitsigns.setup({
+				current_line_blame = true,
+				current_line_blame_opts = {
+					ignore_whitespace = true,
+				},
+				on_attach = function(bufnr)
+					vim.keymap.set("n", "]h", function()
+						gitsigns.nav_hunk("next")
+					end)
+					vim.keymap.set("n", "[h", function()
+						gitsigns.nav_hunk("prev")
+					end)
+				end,
+			})
+
+			-- My Sofle V2 do not have map `[`, `]` directly
+			vim.keymap.set("n", ")h", "]h", { remap = true })
+			vim.keymap.set("n", "(h", "[h", { remap = true })
+			vim.keymap.set("n", ")H", "]H", { remap = true })
+			vim.keymap.set("n", "(H", "[H", { remap = true })
+		end,
+	},
+
 	-- https://github.com/tpope/vim-projectionist
 	{
 		"tpope/vim-projectionist",
@@ -322,11 +350,6 @@ require("lazy").setup({
 			vim.keymap.set("n", "(t", "[t", { remap = true })
 			vim.keymap.set("n", ")T", "]T", { remap = true })
 			vim.keymap.set("n", "(T", "[T", { remap = true })
-
-			vim.keymap.set("n", ")h", "]h", { remap = true })
-			vim.keymap.set("n", "(h", "[h", { remap = true })
-			vim.keymap.set("n", ")H", "]H", { remap = true })
-			vim.keymap.set("n", "(H", "[H", { remap = true })
 
 			-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-files.txt
 			require("mini.files").setup({
