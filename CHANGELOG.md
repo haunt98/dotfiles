@@ -1,5 +1,51 @@
 # CHANGELOG
 
+## v0.15.17 (2025-04-03)
+
+### Others
+
+- config(nvim): disable comment on new line (2025-04-03)
+
+- config(nvim+ghostty): clean up (2025-04-01)
+
+- chore: rm gosec, panicparse (2025-04-01)
+
+- config(nvim): clean up (2025-04-01)
+
+- config(nvim): latest bootstrap lazy.nvim (2025-04-01)
+
+- config(nvim): re-add gitsigns (2025-04-01)
+
+- config(nvim): remove custom (2025-04-01)
+
+- config(nvim): clean up (2025-04-01)
+
+- config(nvim): clean up (2025-03-31)
+
+- config(nvim): add text-case (2025-03-30)
+
+- config(nvim): migrate nvim 0.11 (2025-03-27)
+
+- config(nvim): disable blink on insert (2025-03-26)
+
+- chore: golangci-lint fix (2025-03-25)
+
+- chore: migrate golangci-lint v2 (2025-03-25)
+
+- chore: more rss (2025-03-25)
+
+- chore: install golangci-lint v2 (2025-03-25)
+
+- conifg(zed+newsboat): more (2025-03-22)
+
+- chore(changelog): generate v0.15.16 (2025-03-18)
+
+### Build
+
+- chore(deps): bump golangci/golangci-lint-action from 6 to 7 (#89) (2025-03-25)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.13.1 to 1.13.2 (#88) (2025-03-21)
+
 ## v0.15.16 (2025-03-18)
 
 ### Others
