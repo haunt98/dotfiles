@@ -33,9 +33,17 @@ vim.opt.mousescroll = "ver:4,hor:6"
 vim.cmd([[aunmenu PopUp.How-to\ disable\ mouse]])
 vim.cmd([[aunmenu PopUp.-1-]])
 
+-- Disable comment on new line
+-- https://neovim.discourse.group/t/how-do-i-prevent-neovim-commenting-out-next-line-after-a-comment-line/3711/7
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback = function()
+		vim.opt.formatoptions:remove({ "c", "r", "o" })
+	end,
+})
+
 -- Workaround
 -- https://github.com/neovim/neovim/issues/16416
--- https://github.com/rafamadriz/dotfiles/commit/1298a91558a7def5866ebee3a0b13899a6d1a78e
 vim.keymap.set("i", "<C-c>", "<C-c>")
 
 -- Typo
@@ -595,9 +603,7 @@ require("lazy").setup({
 				vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action)
 				vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 
-				local augroup = vim.api.nvim_create_augroup("UserLspConfig", {})
 				vim.api.nvim_create_autocmd("LspAttach", {
-					group = augroup,
 					callback = function(ev)
 						vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
