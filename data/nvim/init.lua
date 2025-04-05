@@ -647,7 +647,8 @@ require("lazy").setup({
 			init = function()
 				vim.g.llama_config = {
 					show_info = 0,
-					keymap_trigger = "",
+					auto_fim = false,
+					keymap_trigger = "<C-F>",
 					keymap_accept_full = "",
 					keymap_accept_line = "<M-Right>",
 					keymap_accept_word = "",
