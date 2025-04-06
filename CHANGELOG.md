@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v0.16.0 (2025-04-06)
+
+### Others
+
+- chore: add llm (2025-04-06)
+
+- config(nvim): trigger llama on need (2025-04-06)
+
+- chore(changelog): generate v0.15.17 (2025-04-03)
+
+### Build
+
+- build: migrate urfave/cli v3 (2025-04-06)
+
 ## v0.15.17 (2025-04-03)
 
 ### Others
