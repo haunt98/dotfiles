@@ -1,11 +1,12 @@
 package cli
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"runtime"
 
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 
 	"github.com/make-go-great/color-go"
 )
@@ -60,13 +61,13 @@ var denyOSes = map[string]struct{}{
 }
 
 type App struct {
-	cliApp *cli.App
+	cliApp *cli.Command
 }
 
 func NewApp() *App {
 	a := &action{}
 
-	cliApp := &cli.App{
+	cliApp := &cli.Command{
 		Name:  name,
 		Usage: usage,
 		Commands: []*cli.Command{
@@ -187,14 +188,14 @@ func NewApp() *App {
 	}
 }
 
-func (a *App) Run() {
+func (a *App) Run(ctx context.Context) {
 	// Prevent running at runtime
 	if _, ok := denyOSes[runtime.GOOS]; ok {
 		color.PrintAppError(name, fmt.Sprintf("OS [%s] is not supported right now", runtime.GOOS))
 		return
 	}
 
-	if err := a.cliApp.Run(os.Args); err != nil {
+	if err := a.cliApp.Run(ctx, os.Args); err != nil {
 		color.PrintAppError(name, err.Error())
 	}
 }

@@ -1,10 +1,11 @@
 package cli
 
 import (
+	"context"
 	"fmt"
 	"log"
 
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 
 	"github.com/haunt98/dotfiles/internal/config"
 )
@@ -18,11 +19,11 @@ type action struct {
 }
 
 // Show help by default
-func (a *action) runHelp(c *cli.Context) error {
+func (a *action) runHelp(ctx context.Context, c *cli.Command) error {
 	return cli.ShowAppHelp(c)
 }
 
-func (a *action) runInstall(c *cli.Context) error {
+func (a *action) runInstall(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandInstallName)
 	if err != nil {
 		return err
@@ -35,7 +36,7 @@ func (a *action) runInstall(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) runUpdate(c *cli.Context) error {
+func (a *action) runUpdate(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandUpdateName)
 	if err != nil {
 		return err
@@ -48,7 +49,7 @@ func (a *action) runUpdate(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) runDownload(c *cli.Context) error {
+func (a *action) runDownload(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandDownloadName)
 	if err != nil {
 		return err
@@ -61,7 +62,7 @@ func (a *action) runDownload(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) runClean(c *cli.Context) error {
+func (a *action) runClean(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandCleanName)
 	if err != nil {
 		return err
@@ -74,7 +75,7 @@ func (a *action) runClean(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) runDiff(c *cli.Context) error {
+func (a *action) runDiff(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandDiffName)
 	if err != nil {
 		return err
@@ -87,7 +88,7 @@ func (a *action) runDiff(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) runValidate(c *cli.Context) error {
+func (a *action) runValidate(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandValidateName)
 	if err != nil {
 		return err
@@ -100,7 +101,7 @@ func (a *action) runValidate(c *cli.Context) error {
 	return nil
 }
 
-func (a *action) loadConfig(c *cli.Context, command string) (config.Config, error) {
+func (a *action) loadConfig(c *cli.Command, command string) (config.Config, error) {
 	a.getFlags(c)
 	a.log("Start command [%s] with flags [%+v]\n", command, a.flags)
 
@@ -113,7 +114,7 @@ func (a *action) loadConfig(c *cli.Context, command string) (config.Config, erro
 	return cfg, nil
 }
 
-func (a *action) getFlags(c *cli.Context) {
+func (a *action) getFlags(c *cli.Command) {
 	a.flags.verbose = c.Bool(flagVerboseName)
 	a.flags.dryRun = c.Bool(flagDryRunName)
 	a.flags.appNames = c.StringSlice(flagAppName)
