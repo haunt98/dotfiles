@@ -114,26 +114,6 @@ external = "~/.config/btop/themes"
 internal = "data/btop/themes/catppuccin_mocha.theme"
 url = "https://raw.githubusercontent.com/catppuccin/btop/main/themes/catppuccin_mocha.theme"
 
-[[apps.newsboat.paths]]
-internal = "data/newsboat/config"
-external = "~/.config/newsboat/config"
-
-[[apps.newsboat.paths]]
-internal = "data/newsboat/urls"
-external = "~/.config/newsboat/urls"
-
-[[apps.newsboat.paths]]
-internal = "data/newsboat/tiny_urls"
-external = "~/.config/newsboat/tiny_urls"
-
-[[apps.newsboat.paths]]
-internal = "data/newsboat/dark"
-external = "~/.config/newsboat/dark"
-
-[[apps.newsboat.paths]]
-internal = "data/newsboat/dark"
-url = "https://raw.githubusercontent.com/catppuccin/newsboat/main/themes/dark"
-
 [[apps.typos.paths]]
 internal = "data/typos/typos.toml"
 external = "~/.config/typos/typos.toml"

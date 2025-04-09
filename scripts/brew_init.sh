@@ -7,7 +7,7 @@ brew install \
     bat-extras \
     rsync rclone restic fclones f2 wcurl ncdu \
     tlrc totp-cli \
-    yt-dlp newsboat vips btop \
+    yt-dlp vips btop \
     fnm oven-sh/bun/bun deno uv \
     just typst asciidoctor clang-format stylua sqlfluff taplo typos-cli typstyle marksman tinymist \
     yq gojq fx jd ollama llama.cpp llm gitleaks gh glab tbls ghz k6 jira-cli bitwarden-cli \

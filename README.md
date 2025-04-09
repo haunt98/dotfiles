@@ -39,6 +39,5 @@ go build ./cmd/dot
 - [starship](https://github.com/starship/starship)
 - [zed](https://github.com/zed-industries/zed)
 - [btop](https://github.com/aristocratos/btop)
-- [newsboat](https://github.com/newsboat/newsboat)
 - [typos](https://github.com/crate-ci/typos)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
