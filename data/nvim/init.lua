@@ -540,13 +540,6 @@ require("lazy").setup({
 		-- https://github.com/neovim/nvim-lspconfig
 		{
 			"neovim/nvim-lspconfig",
-			ft = {
-				"go",
-				"markdown",
-				"proto",
-				"python",
-				"typst",
-			},
 			config = function()
 				local lspconfig = require("lspconfig")
 
@@ -625,25 +618,6 @@ require("lazy").setup({
 		-- https://github.com/ggml-org/llama.vim
 		{
 			"ggml-org/llama.vim",
-			ft = {
-				"bash",
-				"c",
-				"dockerfile",
-				"gitcommit",
-				"go",
-				"json",
-				"just",
-				"lua",
-				"make",
-				"markdown",
-				"plantuml",
-				"proto",
-				"python",
-				"sql",
-				"toml",
-				"typst",
-				"yaml",
-			},
 			init = function()
 				vim.g.llama_config = {
 					show_info = 0,
