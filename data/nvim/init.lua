@@ -262,7 +262,9 @@ require("lazy").setup({
 				{
 					"<leader>f",
 					function()
-						Snacks.picker.files()
+						Snacks.picker.files({
+							hidden = true,
+						})
 					end,
 					desc = "Find Files",
 				},
