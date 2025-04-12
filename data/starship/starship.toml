@@ -3,22 +3,8 @@
 add_newline = false
 
 format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
 $directory\
 $git_branch\
-$git_commit\
-$git_state\
-$git_status\
-$golang\
-$sudo\
 $cmd_duration\
 $line_break\
-$jobs\
-$time\
-$status\
-$os\
-$shell\
 $character"""
