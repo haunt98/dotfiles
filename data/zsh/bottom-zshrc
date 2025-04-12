@@ -64,9 +64,14 @@ fi
 
 # https://docs.brew.sh/Manpage
 if command -v brew &>/dev/null; then
-    export HOMEBREW_FORCE_BREWED_CURL=1
     # https://everything.curl.dev/install/macos.html
-    path=($(brew --prefix)/opt/curl/bin $path)
+    export HOMEBREW_FORCE_BREWED_CURL=1
+    path=(/opt/homebrew/opt/curl/bin $path)
+
+    # https://github.com/uutils/coreutils
+    if [[ -d /opt/homebrew/opt/uutils-coreutils/libexec/uubin ]]; then
+        path=(/opt/homebrew/opt/uutils-coreutils/libexec/uubin $path)
+    fi
 fi
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
