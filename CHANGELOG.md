@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v1.0.0 (2025-04-13)
+
+### Others
+
+- config(nvim): rm workaround (2025-04-13)
+
+- config(starship): clean up unused (2025-04-12)
+
+- config(zsh): use uutils-coreutils (2025-04-12)
+
+- config(nvim): picker hidden (2025-04-12)
+
+- chore: update golangci-lint (2025-04-11)
+
+- config(nvim): add blink.cmp lsp capabilities (2025-04-11)
+
+- config(nvim): clean up (2025-04-10)
+
+- config: rm newsboat (2025-04-09)
+
+- chore(changelog): generate v0.16.0 (2025-04-06)
+
+### Build
+
+- chore(deps): bump golang.org/x/sync from 0.12.0 to 0.13.0 (#90) (2025-04-07)
+
 ## v0.16.0 (2025-04-06)
 
 ### Others
