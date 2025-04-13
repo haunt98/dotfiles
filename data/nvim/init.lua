@@ -547,22 +547,16 @@ require("lazy").setup({
 			},
 			config = function()
 				local lspconfig = require("lspconfig")
-				-- https://github.com/neovim/nvim-lspconfig/issues/3494
-				local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 				-- Go
 				-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 				-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
 				-- https://github.com/neovim/nvim-lspconfig/issues/2542
-				lspconfig.gopls.setup({
-					capabilities = capabilities,
-				})
+				lspconfig.gopls.setup({})
 
 				-- Protobuf
-				lspconfig.buf_ls.setup({
-					capabilities = capabilities,
-				})
+				lspconfig.buf_ls.setup({})
 
 				-- Python
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
@@ -579,7 +573,6 @@ require("lazy").setup({
 							},
 						},
 					},
-					capabilities = capabilities,
 				})
 
 				-- https://docs.astral.sh/ruff/editors/setup/#neovim
@@ -591,22 +584,17 @@ require("lazy").setup({
 							client.server_capabilities.hoverProvider = false
 						end
 					end,
-					capabilities = capabilities,
 				})
 
 				-- Markdown
 				-- https://github.com/artempyanykh/marksman
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#marksman
-				lspconfig.marksman.setup({
-					capabilities = capabilities,
-				})
+				lspconfig.marksman.setup({})
 
 				-- Typst
 				-- https://github.com/Myriad-Dreamin/tinymist
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
-				lspconfig.tinymist.setup({
-					capabilities = capabilities,
-				})
+				lspconfig.tinymist.setup({})
 
 				-- General
 				vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
