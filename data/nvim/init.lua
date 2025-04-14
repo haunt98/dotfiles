@@ -366,6 +366,15 @@ require("lazy").setup({
 
 				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-files.txt
 				require("mini.files").setup({
+					content = {
+						filter = function(fs_entry)
+							if fs_entry.name == ".git" then
+								return false
+							end
+
+							return true
+						end,
+					},
 					mappings = {
 						go_in = "",
 						go_in_plus = "<CR>",
