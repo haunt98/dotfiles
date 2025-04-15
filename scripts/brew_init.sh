@@ -4,7 +4,7 @@ brew install \
     libgit2 pcre2 xz telnet \
     starship zsh-autosuggestions \
     git neovim \
-    bat-extras \
+    bat-extras uutils-coreutils uutils-diffutils uutils-findutils \
     rsync rclone restic fclones f2 wcurl ncdu \
     tlrc totp-cli \
     yt-dlp vips btop \
