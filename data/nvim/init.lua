@@ -283,6 +283,20 @@ require("lazy").setup({
 					desc = "Grep",
 				},
 				{
+					"<leader>rs",
+					function()
+						Snacks.picker.resume()
+					end,
+					desc = "Resume",
+				},
+				{
+					"<leader>gs",
+					function()
+						Snacks.picker.git_status()
+					end,
+					desc = "Git Status",
+				},
+				{
 					"<Space>s",
 					function()
 						Snacks.picker.lsp_symbols()
