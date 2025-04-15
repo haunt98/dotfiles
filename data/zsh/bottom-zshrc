@@ -72,6 +72,16 @@ if command -v brew &>/dev/null; then
     if [[ -d /opt/homebrew/opt/uutils-coreutils/libexec/uubin ]]; then
         path=(/opt/homebrew/opt/uutils-coreutils/libexec/uubin $path)
     fi
+
+    # https://github.com/uutils/diffutils
+    if [[ -d /opt/homebrew/opt/uutils-diffutils/libexec/uubin ]]; then
+        path=(/opt/homebrew/opt/uutils-diffutils/libexec/uubin $path)
+    fi
+
+    # https://github.com/uutils/findutils
+    if [[ -d /opt/homebrew/opt/uutils-findutils/libexec/uubin ]]; then
+        path=(/opt/homebrew/opt/uutils-findutils/libexec/uubin $path)
+    fi
 fi
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
