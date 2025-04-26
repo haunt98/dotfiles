@@ -7,4 +7,5 @@
 # rm -rf ~/.ollama/models/blobs/sha256-*
 # rm -rf ~/Library/Caches/llama.cpp/*
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
+# rm ~/.local/state/nvim/lsp.log
 # rm -rf ~/pprof

@@ -636,6 +636,8 @@ require("lazy").setup({
 					end,
 				})
 
+				vim.lsp.set_log_level("ERROR")
+
 				-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
 				vim.diagnostic.config({
 					underline = false,
