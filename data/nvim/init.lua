@@ -467,6 +467,7 @@ require("lazy").setup({
 						yaml = { "prettier" },
 						zsh = { "shfmt" },
 					},
+					log_level = vim.log.levels.OFF,
 					formatters = {
 						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/gofumpt.lua
 						gofumpt = {
@@ -636,7 +637,7 @@ require("lazy").setup({
 					end,
 				})
 
-				vim.lsp.set_log_level("ERROR")
+				vim.lsp.set_log_level("OFF")
 
 				-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
 				vim.diagnostic.config({
