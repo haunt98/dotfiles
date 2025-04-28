@@ -1,8 +1,8 @@
 config-file = catppuccin-mocha.conf
 
-font-family = Sudo
-font-feature = cv06
-font-size = 18
+font-family = Maple Mono
+font-feature = zero
+font-size = 14
 font-thicken = true
 
 adjust-cell-height = 20%
