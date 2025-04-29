@@ -9,11 +9,7 @@
     "breadcrumbs": false,
     "quick_actions": false
   },
-  "theme": {
-    "mode": "system",
-    "dark": "Catppuccin Mocha",
-    "light": "Catppuccin Latte"
-  },
+  "theme": "Catppuccin Mocha",
   "icon_theme": "Catppuccin Mocha",
   "vim_mode": true,
   "show_call_status_icon": false,
