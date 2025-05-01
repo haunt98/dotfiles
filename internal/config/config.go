@@ -3,8 +3,6 @@ package config
 import (
 	"errors"
 	"fmt"
-	"io"
-	"net/http"
 	"os"
 	"path/filepath"
 	"sort"
@@ -33,7 +31,6 @@ type Config interface {
 	Update(appNames ...string) error
 	Clean() error
 	Diff(appNames ...string) error
-	Download(appNames ...string) error
 	Validate(appNames ...string) error
 	List() []string
 }
@@ -74,7 +71,7 @@ func loadConfig(bytes []byte, isDryRun bool, unmarshalFn func(data []byte, v any
 	}
 
 	sort.Strings(apps2)
-	cfgApps.Apps2 = apps2
+	cfgApps.SortedApps = apps2
 
 	return &cfg{
 		cfgApps:  cfgApps,
@@ -103,7 +100,6 @@ func (c *cfg) Install(appNames ...string) error {
 			p := Path{
 				Internal: p.Internal,
 				External: p.External,
-				URL:      p.URL,
 			}
 
 			eg.Go(func() error {
@@ -149,7 +145,6 @@ func (c *cfg) Update(appNames ...string) error {
 			p := Path{
 				Internal: p.Internal,
 				External: p.External,
-				URL:      p.URL,
 			}
 
 			eg.Go(func() error {
@@ -164,76 +159,6 @@ func (c *cfg) Update(appNames ...string) error {
 
 				return nil
 			})
-		}
-	}
-
-	if err := eg.Wait(); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func (c *cfg) Download(appNames ...string) error {
-	var eg errgroup.Group
-
-	mAppNames := slice2map(appNames)
-
-	for appName, app := range c.cfgApps.Apps {
-		if len(appNames) > 0 {
-			if _, ok := mAppNames[appName]; !ok {
-				continue
-			}
-		}
-
-		for _, p := range app.Paths {
-			if p.URL == "" {
-				continue
-			}
-
-			p := Path{
-				Internal: p.Internal,
-				External: p.External,
-				URL:      p.URL,
-			}
-
-			httpClient := &http.Client{}
-
-			eg.Go(func() error {
-				if c.isDryRun {
-					fmt.Printf("Download [%s] -> [%s]\n", p.URL, p.Internal)
-					return nil
-				}
-
-				// nolint:noctx,gosec
-				httpRsp, err := httpClient.Get(p.URL)
-				if err != nil {
-					return fmt.Errorf("http client: failed to get: %w", err)
-				}
-
-				data, err := io.ReadAll(httpRsp.Body)
-				if err != nil {
-					return fmt.Errorf("io: failed to read all: %w", err)
-				}
-
-				// Copy from github.com/make-go-great/copy-go
-				// Make sure nested dir is exist before copying file
-				dstDir := filepath.Dir(p.Internal)
-				if err := os.MkdirAll(dstDir, 0o750); err != nil {
-					return fmt.Errorf("os: failed to mkdir all [%s]: %w", dstDir, err)
-				}
-
-				if err := os.WriteFile(p.Internal, data, 0o600); err != nil {
-					return fmt.Errorf("os: failed to write file: %w", err)
-				}
-
-				if err := httpRsp.Body.Close(); err != nil {
-					return fmt.Errorf("http client: failed to close body: %w", err)
-				}
-
-				return nil
-			})
-
 		}
 	}
 
@@ -334,7 +259,6 @@ func (c *cfg) Validate(appNames ...string) error {
 			p := Path{
 				Internal: p.Internal,
 				External: p.External,
-				URL:      p.URL,
 			}
 
 			eg.Go(func() error {
@@ -342,8 +266,8 @@ func (c *cfg) Validate(appNames ...string) error {
 					return fmt.Errorf("empty internal app [%s]: %w", app, ErrConfigInvalid)
 				}
 
-				if p.External == "" && p.URL == "" {
-					return fmt.Errorf("empty external and url app [%s]: %w", app, ErrConfigInvalid)
+				if p.External == "" {
+					return fmt.Errorf("empty external app [%s]: %w", app, ErrConfigInvalid)
 				}
 
 				return nil
@@ -359,5 +283,5 @@ func (c *cfg) Validate(appNames ...string) error {
 }
 
 func (c *cfg) List() []string {
-	return c.cfgApps.Apps2
+	return c.cfgApps.SortedApps
 }

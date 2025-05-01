@@ -49,19 +49,6 @@ func (a *action) runUpdate(ctx context.Context, c *cli.Command) error {
 	return nil
 }
 
-func (a *action) runDownload(ctx context.Context, c *cli.Command) error {
-	cfg, err := a.loadConfig(c, commandDownloadName)
-	if err != nil {
-		return err
-	}
-
-	if err := cfg.Download(a.flags.appNames...); err != nil {
-		return fmt.Errorf("config: failed to download: %w", err)
-	}
-
-	return nil
-}
-
 func (a *action) runClean(ctx context.Context, c *cli.Command) error {
 	cfg, err := a.loadConfig(c, commandCleanName)
 	if err != nil {

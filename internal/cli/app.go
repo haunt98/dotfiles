@@ -21,9 +21,6 @@ const (
 	commandUpdateName  = "update"
 	commandUpdateUsage = "update dotfiles from user configs"
 
-	commandDownloadName  = "download"
-	commandDownloadUsage = "download configs from internet (theme for example)"
-
 	commandCleanName  = "clean"
 	commandCleanUsage = "clean unused dotfiles"
 
@@ -48,7 +45,6 @@ const (
 var (
 	installAliases  = []string{"ins"}
 	updateAliases   = []string{"upd"}
-	downloadAliases = []string{"dl"}
 	cleanAliases    = []string{"cl"}
 	diffAliases     = []string{"df"}
 	validateAliases = []string{"vl"}
@@ -110,26 +106,6 @@ func NewApp() *App {
 					},
 				},
 				Action: a.runUpdate,
-			},
-			{
-				Name:    commandDownloadName,
-				Aliases: downloadAliases,
-				Usage:   commandDownloadUsage,
-				Flags: []cli.Flag{
-					&cli.BoolFlag{
-						Name:  flagVerboseName,
-						Usage: flagVerboseUsage,
-					},
-					&cli.BoolFlag{
-						Name:  flagDryRunName,
-						Usage: flagDryRunUsage,
-					},
-					&cli.StringSliceFlag{
-						Name:  flagAppName,
-						Usage: flagAppUsage,
-					},
-				},
-				Action: a.runDownload,
 			},
 			{
 				Name:    commandCleanName,
