@@ -20,6 +20,7 @@ vim.opt.expandtab = true
 
 -- Wrap
 vim.opt.breakindent = true
+vim.opt.linebreak = true
 
 -- Clipboard support
 vim.opt.clipboard = "unnamedplus"
