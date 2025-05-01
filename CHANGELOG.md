@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## v1.0.1 (2025-05-01)
+
+### Added
+
+- feat: rm download (2025-05-01)
+
+### Others
+
+- config: bat and delta must use same theme (2025-05-01)
+
+- chore: use wcurl to update upstream (2025-05-01)
+
+- config(zed): no switch theme (2025-04-29)
+
+- config(ghostty): Back to Maple Mono v7.1 (2025-04-28)
+
+- config(nvim): disable more log (2025-04-27)
+
+- config(nvim): reduce vim lsp log (2025-04-27)
+
+- config(ghostty): switch to Sudo (2025-04-21)
+
+- chore: brew install uutils-diffutils, uutils-findutils (2025-04-15)
+
+- config(zsh): add uutils-diffutils, uutils-findutils (2025-04-15)
+
+- config(nvim): add more picker (2025-04-15)
+
+- config(nvim): ignore .git (2025-04-14)
+
+- chore(changelog): generate v1.0.0 (2025-04-13)
+
+### Build
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.3.1 to 3.3.2 (#93) (2025-04-29)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.2.0 to 3.3.1 (#92) (2025-04-28)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.1.1 to 3.2.0 (#91) (2025-04-21)
+
 ## v1.0.0 (2025-04-13)
 
 ### Others
