@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.0.2 (2025-05-01)
+
+### Others
+
+- chore(changelog): generate v1.0.1 (2025-05-01)
+
 ## v1.0.1 (2025-05-01)
 
 ### Added
