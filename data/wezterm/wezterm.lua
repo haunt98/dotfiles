@@ -6,26 +6,26 @@ local act = wezterm.action
 local function font_with_fallback(main_font)
 	local fonts = {
 		main_font,
+		"Symbols Nerd Font Mono",
 		{
 			family = "Apple Color Emoji",
 			assume_emoji_presentation = true,
 		},
-		"Symbols Nerd Font Mono",
 	}
 	return wezterm.font_with_fallback(fonts)
 end
 
--- https://github.com/be5invis/Iosevka
-local font_iosevka = {
+-- https://github.com/coz-m/MPLUS_FONTS
+local font_mplus = {
 	font = font_with_fallback({
-		family = "Iosevka Pacman",
+		family = "M PLUS Code Latin 60",
 	}),
 	font_size = 16.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
 }
 
-local current_font = font_iosevka
+local current_font = font_mplus
 local current_color_scheme = "Catppuccin Mocha"
 
 return {
