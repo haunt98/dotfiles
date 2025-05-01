@@ -43,7 +43,7 @@ upstream:
     wcurl --curl-options="--clobber --netrc" "https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-dark.icns" --output ./data/kitty/kitty-dark.icns
     wcurl --curl-options="--clobber --netrc" "https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-light.icns" --output ./data/kitty/kitty-light.icns
     wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/ghostty/refs/heads/main/themes/catppuccin-mocha.conf" --output ./data/ghostty/catppuccin-mocha.conf
-    wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme" --output ./data/bat/themes/Catppuccin_Mocha.tmTheme
+    wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme" --output "./data/bat/themes/Catppuccin Mocha.tmTheme"
     wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/delta/main/catppuccin.gitconfig" --output ./data/delta/themes/catppuccin.gitconfig
     wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/btop/main/themes/catppuccin_mocha.theme" --output ./data/btop/themes/catppuccin_mocha.theme
 
