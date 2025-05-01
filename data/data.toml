@@ -14,10 +14,6 @@ external = "~/.config/zsh/bottom-zshrc"
 internal = "data/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 external = "~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 
-[[apps.zsh.paths]]
-internal = "data/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
-url = "https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
-
 [[apps.fzf.paths]]
 internal = "data/fzf/fzfrc"
 external = "~/.config/fzf/fzfrc"
@@ -35,28 +31,8 @@ internal = "data/kitty/mocha.conf"
 external = "~/.config/kitty/mocha.conf"
 
 [[apps.kitty.paths]]
-internal = "data/kitty/latte.conf"
-external = "~/.config/kitty/latte.conf"
-
-[[apps.kitty.paths]]
 internal = "data/kitty/kitty-dark.icns"
 external = "~/.config/kitty/kitty.app.icns"
-
-[[apps.kitty.paths]]
-internal = "data/kitty/mocha.conf"
-url = "https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf"
-
-[[apps.kitty.paths]]
-internal = "data/kitty/latte.conf"
-url = "https://raw.githubusercontent.com/catppuccin/kitty/main/themes/latte.conf"
-
-[[apps.kitty.paths]]
-internal = "data/kitty/kitty-dark.icns"
-url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-dark.icns?raw=true"
-
-[[apps.kitty.paths]]
-internal = "data/kitty/kitty-light.icns"
-url = "https://github.com/DinkDonk/kitty-icon/blob/main/kitty-light.icns?raw=true"
 
 [[apps.wezterm.paths]]
 internal = "data/wezterm"
@@ -70,10 +46,6 @@ external = "~/.config/ghostty/config"
 internal = "data/ghostty/catppuccin-mocha.conf"
 external = "~/.config/ghostty/catppuccin-mocha.conf"
 
-[[apps.ghostty.paths]]
-internal = "data/ghostty/catppuccin-mocha.conf"
-url = "https://raw.githubusercontent.com/catppuccin/ghostty/refs/heads/main/themes/catppuccin-mocha.conf"
-
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
 external = "~/.ignore"
@@ -82,17 +54,9 @@ external = "~/.ignore"
 internal = "data/bat"
 external = "~/.config/bat"
 
-[[apps.bat.paths]]
-internal = "data/bat/themes/Catppuccin Mocha.tmTheme"
-url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
-
 [[apps.delta.paths]]
 internal = "data/delta/themes/catppuccin.gitconfig"
 external = "~/.config/delta/themes/catppuccin.gitconfig"
-
-[[apps.delta.paths]]
-internal = "data/delta/themes/catppuccin.gitconfig"
-url = "https://raw.githubusercontent.com/catppuccin/delta/main/catppuccin.gitconfig"
 
 [[apps.starship.paths]]
 internal = "data/starship/starship.toml"
@@ -109,10 +73,6 @@ external = "~/.config/zed/keymap.json"
 [[apps.btop.paths]]
 internal = "data/btop/themes"
 external = "~/.config/btop/themes"
-
-[[apps.btop.paths]]
-internal = "data/btop/themes/catppuccin_mocha.theme"
-url = "https://raw.githubusercontent.com/catppuccin/btop/main/themes/catppuccin_mocha.theme"
 
 [[apps.typos.paths]]
 internal = "data/typos/typos.toml"
