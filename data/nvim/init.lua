@@ -256,6 +256,16 @@ require("lazy").setup({
 			config = true,
 		},
 
+		-- https://github.com/keaising/im-select.nvim
+		{
+			"keaising/im-select.nvim",
+			config = function()
+				require("im_select").setup({
+					set_previous_events = {},
+				})
+			end,
+		},
+
 		-- https://github.com/folke/snacks.nvim
 		{
 			"folke/snacks.nvim",
