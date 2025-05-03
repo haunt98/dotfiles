@@ -608,6 +608,10 @@ require("lazy").setup({
 
 				-- General
 				vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
+				vim.keymap.set("n", "<leader>dt", function()
+					vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+				end)
+
 				vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 				vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action)
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition)
