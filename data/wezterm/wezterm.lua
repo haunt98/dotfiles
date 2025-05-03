@@ -7,10 +7,6 @@ local function font_with_fallback(main_font)
 	local fonts = {
 		main_font,
 		"Symbols Nerd Font Mono",
-		{
-			family = "Apple Color Emoji",
-			assume_emoji_presentation = true,
-		},
 	}
 	return wezterm.font_with_fallback(fonts)
 end
@@ -19,6 +15,7 @@ end
 local font_mplus = {
 	font = font_with_fallback({
 		family = "M PLUS Code Latin 60",
+		weight = "Medium",
 	}),
 	font_size = 14.0,
 	line_height = 1.2,

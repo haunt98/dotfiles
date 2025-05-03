@@ -339,7 +339,6 @@ require("lazy").setup({
 		-- https://github.com/echasnovski/mini.nvim
 		{
 			"echasnovski/mini.nvim",
-			version = "*",
 			config = function()
 				-- Text editing
 				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-ai.txt
@@ -577,76 +576,44 @@ require("lazy").setup({
 		-- https://github.com/neovim/nvim-lspconfig
 		{
 			"neovim/nvim-lspconfig",
-			dependencies = {
-				"saghen/blink.cmp",
-			},
 			config = function()
-				local lspconfig = require("lspconfig")
-
 				-- Go
 				-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 				-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
-				-- https://github.com/neovim/nvim-lspconfig/issues/2542
-				lspconfig.gopls.setup({})
+				vim.lsp.enable("gopls")
 
 				-- Protobuf
-				lspconfig.buf_ls.setup({})
+				vim.lsp.enable("buf_ls")
 
 				-- Python
-				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
-				lspconfig.pyright.setup({
-					settings = {
-						pyright = {
-							-- Conflicts with Ruff
-							disableOrganizeImports = true,
-						},
-						python = {
-							analysis = {
-								-- Conflicts with Ruff
-								ignore = { "*" },
-							},
-						},
-					},
-				})
-
 				-- https://docs.astral.sh/ruff/editors/setup/#neovim
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff
-				lspconfig.ruff.setup({
-					on_init = function(client, initialization_result)
-						if client.server_capabilities then
-							-- Conflicts with pyright
-							client.server_capabilities.hoverProvider = false
-						end
-					end,
-				})
+				vim.lsp.enable("ruff")
+
+				-- Lua
+				-- https://luals.github.io/#neovim-install
+				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
+				vim.lsp.enable("lua_ls")
 
 				-- Markdown
 				-- https://github.com/artempyanykh/marksman
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#marksman
-				lspconfig.marksman.setup({})
+				vim.lsp.enable("marksman")
 
 				-- Typst
 				-- https://github.com/Myriad-Dreamin/tinymist
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
-				lspconfig.tinymist.setup({})
+				vim.lsp.enable("tinymist")
 
 				-- General
 				vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
-				vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action)
 				vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
-
-				vim.api.nvim_create_autocmd("LspAttach", {
-					callback = function(ev)
-						vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-
-						local opts = { buffer = ev.buf }
-						vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-						vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover, opts)
-						vim.keymap.set("n", "gk", vim.lsp.buf.hover, opts)
-						vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
-					end,
-				})
+				vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action)
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+				vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover)
+				vim.keymap.set("n", "gk", vim.lsp.buf.hover)
+				vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 
 				vim.lsp.set_log_level("OFF")
 
