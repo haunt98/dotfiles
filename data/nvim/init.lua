@@ -157,7 +157,7 @@ require("lazy").setup({
 		-- https://github.com/Saghen/blink.cmp
 		{
 			"saghen/blink.cmp",
-			version = "v0.*",
+			version = "v1.*",
 			opts = {
 				keymap = {
 					preset = "none",
@@ -250,6 +250,12 @@ require("lazy").setup({
 			end,
 		},
 
+		-- https://github.com/mcauley-penney/visual-whitespace.nvim
+		{
+			"mcauley-penney/visual-whitespace.nvim",
+			config = true,
+		},
+
 		-- https://github.com/folke/snacks.nvim
 		{
 			"folke/snacks.nvim",
@@ -333,6 +339,7 @@ require("lazy").setup({
 		-- https://github.com/echasnovski/mini.nvim
 		{
 			"echasnovski/mini.nvim",
+			version = "*",
 			config = function()
 				-- Text editing
 				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-ai.txt
@@ -417,6 +424,9 @@ require("lazy").setup({
 
 				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-icons.txt
 				require("mini.icons").setup()
+
+				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-indentscope.txt
+				require("mini.indentscope").setup()
 
 				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-statusline.txt
 				require("mini.statusline").setup()
@@ -647,18 +657,29 @@ require("lazy").setup({
 			end,
 		},
 
-		-- https://github.com/ggml-org/llama.vim
+		-- https://github.com/zbirenbaum/copilot.lua
 		{
-			"ggml-org/llama.vim",
-			init = function()
-				vim.g.llama_config = {
-					show_info = 0,
-					auto_fim = false,
-					keymap_trigger = "<C-F>",
-					keymap_accept_full = "",
-					keymap_accept_line = "<M-Right>",
-					keymap_accept_word = "",
-				}
+			"zbirenbaum/copilot.lua",
+			cmd = "Copilot",
+			event = "InsertEnter",
+			config = function()
+				require("copilot").setup({
+					panel = {
+						enabled = false,
+					},
+					suggestion = {
+						enabled = true,
+						auto_trigger = true,
+						keymap = {
+							accept = "<M-Right>",
+							accept_word = false,
+							accept_line = false,
+							next = "<C-F>",
+							prev = false,
+							dismiss = false,
+						},
+					},
+				})
 			end,
 		},
 	},

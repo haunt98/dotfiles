@@ -20,7 +20,7 @@ local font_mplus = {
 	font = font_with_fallback({
 		family = "M PLUS Code Latin 60",
 	}),
-	font_size = 16.0,
+	font_size = 14.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
 }
