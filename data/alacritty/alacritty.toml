@@ -1,0 +1,15 @@
+[general]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[window]
+padding = { x = 16, y = 16 }
+opacity = 0.95
+blur = true
+option_as_alt = "OnlyLeft"
+
+[font]
+normal = { family = "Sudo", style = "Regular" }
+size = 16.0
+
+[cursor]
+style = "Beam"

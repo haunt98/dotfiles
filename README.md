@@ -21,9 +21,6 @@ go build ./cmd/dot
 
 # Diff dotfiles with user config
 ./dot diff
-
-# Download internet themes, ...
-./dot download
 ```
 
 ## Support
@@ -32,6 +29,7 @@ go build ./cmd/dot
 - [kitty](https://github.com/kovidgoyal/kitty)
 - [wezterm](https://github.com/wez/wezterm)
 - [ghostty](https://github.com/ghostty-org/ghostty)
+- [alacritty](https://github.com/alacritty/alacritty)
 - [fd](https://github.com/sharkdp/fd)
 - [bat](https://github.com/sharkdp/bat)
 - [delta](https://github.com/dandavison/delta)

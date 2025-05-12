@@ -1,9 +1,9 @@
 [
   {
-    "context": "Editor && inline_completion && !showing_completions",
+    "context": "Editor && edit_prediction && !showing_completions",
     "bindings": {
-      "tab": "zed::NoAction",
-      "alt-right": "editor::AcceptInlineCompletion"
+      "tab": null,
+      "alt-right": "editor::AcceptEditPrediction"
     }
   },
   {
