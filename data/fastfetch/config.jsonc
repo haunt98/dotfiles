@@ -4,8 +4,6 @@
     "type": "small"
   },
   "modules": [
-    "title",
-    "separator",
     "os",
     "host",
     "kernel",
