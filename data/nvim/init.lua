@@ -646,7 +646,6 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
-			cmd = "Copilot",
 			event = "LspAttach",
 			config = function()
 				require("copilot").setup({
