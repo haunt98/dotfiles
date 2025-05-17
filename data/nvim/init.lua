@@ -269,6 +269,7 @@ require("lazy").setup({
 		-- https://github.com/folke/zen-mode.nvim
 		{
 			"folke/zen-mode.nvim",
+			cmd = "ZenMode",
 		},
 
 		-- https://github.com/folke/snacks.nvim
