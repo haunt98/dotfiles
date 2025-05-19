@@ -2,14 +2,14 @@
 
 brew install \
     libgit2 pcre2 xz telnet \
-    starship zsh-autosuggestions \
+    zsh-autosuggestions \
     git neovim \
-    bat-extras uutils-coreutils uutils-diffutils uutils-findutils \
-    rsync rclone restic fclones f2 wcurl ncdu \
-    tlrc totp-cli \
-    yt-dlp vips btop \
+    fzf fd bat bat-extras ripgrep git-delta difftastic eza zoxide starship sd moar \
+    uutils-coreutils uutils-diffutils uutils-findutils \
+    rsync rclone restic ncdu wcurl fclones f2 tlrc totp-cli \
+    yt-dlp vips \
+    qmk/qmk/qmk btop asciinema qpdf fastfetch laishulu/homebrew/macism \
     fnm oven-sh/bun/bun deno uv \
-    just typst asciidoctor clang-format stylua sqlfluff taplo typos-cli typstyle lua-language-server marksman tinymist \
+    just typst asciidoctor clang-format shfmt stylua sqlfluff taplo typos-cli typstyle lua-language-server marksman tinymist \
     yq gojq fx jd llama.cpp gitleaks gh glab tbls ghz k6 bitwarden-cli \
-    qmk/qmk/qmk asciinema qpdf fastfetch laishulu/homebrew/macism \
     redis mysql-client confluentinc/tap/cli
