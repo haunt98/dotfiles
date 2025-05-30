@@ -6,7 +6,7 @@ brew install \
     git neovim \
     fzf fd bat bat-extras ripgrep git-delta difftastic eza zoxide starship sd moar \
     uutils-coreutils uutils-diffutils uutils-findutils \
-    rsync rclone restic ncdu wcurl fclones f2 tlrc totp-cli \
+    rsync rclone restic ncdu fclones f2 tlrc totp-cli \
     yt-dlp vips \
     qmk/qmk/qmk btop asciinema qpdf fastfetch laishulu/homebrew/macism \
     fnm oven-sh/bun/bun deno uv \
