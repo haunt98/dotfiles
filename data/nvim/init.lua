@@ -119,7 +119,6 @@ require("lazy").setup({
 			"catppuccin/nvim",
 			name = "catppuccin",
 			priority = 1000,
-			enabled = true,
 			config = function()
 				require("catppuccin").setup({
 					flavour = "mocha",
@@ -644,9 +643,27 @@ require("lazy").setup({
 			end,
 		},
 
+		-- https://github.com/ggml-org/llama.vim
+		{
+			"ggml-org/llama.vim",
+			cmd = "LlamaEnable",
+			init = function()
+				vim.g.llama_config = {
+					stop_strings = { "\n" },
+					show_info = 0,
+					auto_fim = false,
+					keymap_trigger = "<C-F>",
+					keymap_accept_full = "",
+					keymap_accept_line = "<M-Right>",
+					keymap_accept_word = "",
+				}
+			end,
+		},
+
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
+			cmd = "Copilot",
 			config = function()
 				require("copilot").setup({
 					panel = {
