@@ -48,7 +48,6 @@ return {
 	tab_max_width = 24,
 
 	window_background_opacity = 0.95,
-	macos_window_background_blur = 20,
 
 	native_macos_fullscreen_mode = true,
 
