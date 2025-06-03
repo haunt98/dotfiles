@@ -627,7 +627,6 @@ require("lazy").setup({
 					vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 				end)
 
-				vim.keymap.set("n", "<Space>lr", ":LspRestart<CR>")
 				vim.keymap.set("n", "<Space>ca", vim.lsp.buf.code_action)
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 				vim.keymap.set("n", "<Space>k", vim.lsp.buf.hover)
