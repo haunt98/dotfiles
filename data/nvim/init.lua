@@ -94,6 +94,30 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
+-- https://github.com/romainl/vim-cool
+-- https://github.com/ibhagwan/nvim-lua
+local group_toggle_search_hl = vim.api.nvim_create_augroup("ToggleSearchHL", { clear = true })
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+	group = group_toggle_search_hl,
+	callback = function()
+		vim.schedule(function()
+			vim.cmd("nohlsearch")
+		end)
+	end,
+})
+
+vim.api.nvim_create_autocmd("CursorMoved", {
+	group = group_toggle_search_hl,
+	callback = function()
+		if vim.v.hlsearch == 1 and vim.fn.searchcount().exact_match == 0 then
+			vim.schedule(function()
+				vim.cmd("nohlsearch")
+			end)
+		end
+	end,
+})
+
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -680,6 +704,21 @@ require("lazy").setup({
 							dismiss = false,
 						},
 					},
+				})
+
+				vim.api.nvim_create_autocmd("User", {
+					pattern = "BlinkCmpMenuOpen",
+					callback = function()
+						require("copilot.suggestion").dismiss()
+						vim.b.copilot_suggestion_hidden = true
+					end,
+				})
+
+				vim.api.nvim_create_autocmd("User", {
+					pattern = "BlinkCmpMenuClose",
+					callback = function()
+						vim.b.copilot_suggestion_hidden = false
+					end,
 				})
 			end,
 		},
