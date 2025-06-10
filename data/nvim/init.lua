@@ -265,14 +265,6 @@ require("lazy").setup({
 			},
 		},
 
-		-- https://github.com/johmsalas/text-case.nvim
-		{
-			"johmsalas/text-case.nvim",
-			config = function()
-				require("textcase").setup({})
-			end,
-		},
-
 		-- https://github.com/mcauley-penney/visual-whitespace.nvim
 		{
 			"mcauley-penney/visual-whitespace.nvim",
@@ -555,61 +547,6 @@ require("lazy").setup({
 					})
 				end)
 			end,
-		},
-
-		-- https://github.com/nvim-treesitter/nvim-treesitter
-		{
-			"nvim-treesitter/nvim-treesitter",
-			build = {
-				":TSUpdate",
-			},
-			opts = {
-				ensure_installed = {
-					"bash",
-					"dockerfile",
-					"git_config",
-					"gitcommit",
-					"go",
-					"json",
-					"just",
-					"lua",
-					"make",
-					"markdown",
-					"markdown_inline",
-					"proto",
-					"python",
-					"query",
-					"regex",
-					"sql",
-					"toml",
-					"typst",
-					"yaml",
-				},
-				highlight = { enabled = true },
-				incremental_selection = { enable = false },
-				textobjects = { enable = false },
-				indent = { enable = false },
-			},
-		},
-
-		-- https://github.com/nvim-treesitter/nvim-treesitter-context
-		{
-			"nvim-treesitter/nvim-treesitter-context",
-			dependencies = {
-				"nvim-treesitter/nvim-treesitter",
-			},
-			opts = {
-				enable = true,
-				max_lines = 2,
-			},
-		},
-
-		-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-		{
-			"nvim-treesitter/nvim-treesitter-textobjects",
-			dependencies = {
-				"nvim-treesitter/nvim-treesitter",
-			},
 		},
 
 		-- https://github.com/neovim/nvim-lspconfig
