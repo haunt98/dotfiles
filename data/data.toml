@@ -86,10 +86,6 @@ external = "~/.config/btop/themes"
 internal = "data/typos/typos.toml"
 external = "~/.config/typos/typos.toml"
 
-[[apps.cargo.paths]]
-internal = "data/cargo/config.toml"
-external = "~/.cargo/config.toml"
-
 [[apps.fastfetch.paths]]
 internal = "data/fastfetch"
 external = "~/.config/fastfetch"
