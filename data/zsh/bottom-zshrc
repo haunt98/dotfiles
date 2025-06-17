@@ -106,6 +106,7 @@ if command -v go &>/dev/null; then
     if [[ -d $HOME/go ]]; then
         export GOPATH=$HOME/go
         path=($path $GOPATH/bin)
+        export GOTELEMETRY=on
     fi
     # Depend on your company
     # export GOPRIVATE=example.company.com
