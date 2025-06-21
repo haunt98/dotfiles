@@ -8,7 +8,6 @@ typeset -U path PATH
 # Alias
 alias g="git"
 alias moe="make"
-alias meo="make"
 
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export XDG_CONFIG_HOME=~/.config
@@ -23,47 +22,46 @@ zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' special-dirs true
 
-# zsh plugins
-# https://github.com/zsh-users/zsh-syntax-highlighting
-if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-    # https://github.com/catppuccin/zsh-syntax-highlighting
-    source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-    typeset -A ZSH_HIGHLIGHT_STYLES
-    # Remove underline from catppuccin mocha theme
-    # https://github.com/catppuccin/zsh-syntax-highlighting/issues/7
-    ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4'
-    ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#f38ba8'
-    ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#cdd6f4'
-    ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#f38ba8'
-fi
-
-# https://github.com/zsh-users/zsh-autosuggestions
-if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-    export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-    export ZSH_AUTOSUGGEST_MANUAL_REBIND=true
-    export ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
-fi
-
-# https://unix.stackexchange.com/q/621606
-# https://github.com/zsh-users/zsh-history-substring-search
-if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
-    source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-    bindkey '^[[A' history-substring-search-up
-    bindkey '^[[B' history-substring-search-down
-
-    export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
-    export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
-    export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
-fi
-
 # https://docs.brew.sh/Manpage
 if command -v brew &>/dev/null; then
+    # https://github.com/zsh-users/zsh-syntax-highlighting
+    if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+        # https://github.com/catppuccin/zsh-syntax-highlighting
+        source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+        source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+        typeset -A ZSH_HIGHLIGHT_STYLES
+        # Remove underline from catppuccin mocha theme
+        # https://github.com/catppuccin/zsh-syntax-highlighting/issues/7
+        ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4'
+        ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#f38ba8'
+        ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#cdd6f4'
+        ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#f38ba8'
+    fi
+
+    # https://github.com/zsh-users/zsh-autosuggestions
+    if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+        export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+        export ZSH_AUTOSUGGEST_MANUAL_REBIND=true
+        export ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+    fi
+
+    # https://unix.stackexchange.com/q/621606
+    # https://github.com/zsh-users/zsh-history-substring-search
+    if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
+        source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+        bindkey '^[[A' history-substring-search-up
+        bindkey '^[[B' history-substring-search-down
+
+        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+        export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
+    fi
+
     # https://everything.curl.dev/install/macos.html
     export HOMEBREW_FORCE_BREWED_CURL=1
     path=(/opt/homebrew/opt/curl/bin $path)

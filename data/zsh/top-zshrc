@@ -26,5 +26,12 @@ setopt INC_APPEND_HISTORY_TIME
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
+if command -v brew &>/dev/null; then
+    # https://github.com/zsh-users/zsh-completions
+    if [[ -f /opt/homebrew/share/zsh-completions ]]; then
+        FPATH=/opt/homebrew/share/zsh-completions:$FPATH
+    fi
+fi
+
 autoload -Uz compinit
 compinit
