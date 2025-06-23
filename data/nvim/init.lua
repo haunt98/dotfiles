@@ -192,10 +192,14 @@ require("lazy").setup({
 					},
 					on_attach = function(bufnr)
 						vim.keymap.set("n", "]h", function()
-							gitsigns.nav_hunk("next")
+							gitsigns.nav_hunk("next", {
+								target = "all",
+							})
 						end)
 						vim.keymap.set("n", "[h", function()
-							gitsigns.nav_hunk("prev")
+							gitsigns.nav_hunk("prev", {
+								target = "all",
+							})
 						end)
 					end,
 				})
