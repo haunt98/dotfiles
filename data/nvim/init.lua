@@ -88,6 +88,9 @@ vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-u>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-b>", "<Nop>")
 
+-- Disable annoying keymap
+vim.keymap.set({ "n", "v" }, "<F1>", "<Nop>")
+
 -- Disable more
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
