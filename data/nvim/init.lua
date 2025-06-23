@@ -30,17 +30,9 @@ vim.opt.mouse = "a"
 vim.opt.mousemodel = "popup"
 vim.opt.mousescroll = "ver:4,hor:6"
 
--- Annoying
-vim.cmd([[aunmenu PopUp.How-to\ disable\ mouse]])
-vim.cmd([[aunmenu PopUp.-1-]])
-
--- Disable comment on new line
--- https://neovim.discourse.group/t/how-do-i-prevent-neovim-commenting-out-next-line-after-a-comment-line/3711/7
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function()
-		vim.opt.formatoptions:remove({ "c", "r", "o" })
-	end,
+-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
+vim.diagnostic.config({
+	underline = false,
 })
 
 -- Workaround
@@ -97,27 +89,12 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
--- https://github.com/romainl/vim-cool
--- https://github.com/ibhagwan/nvim-lua
-local group_toggle_search_hl = vim.api.nvim_create_augroup("ToggleSearchHL", { clear = true })
-
-vim.api.nvim_create_autocmd("InsertEnter", {
-	group = group_toggle_search_hl,
+-- Disable comment on new line
+-- https://neovim.discourse.group/t/how-do-i-prevent-neovim-commenting-out-next-line-after-a-comment-line/3711/7
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
 	callback = function()
-		vim.schedule(function()
-			vim.cmd("nohlsearch")
-		end)
-	end,
-})
-
-vim.api.nvim_create_autocmd("CursorMoved", {
-	group = group_toggle_search_hl,
-	callback = function()
-		if vim.v.hlsearch == 1 and vim.fn.searchcount().exact_match == 0 then
-			vim.schedule(function()
-				vim.cmd("nohlsearch")
-			end)
-		end
+		vim.opt.formatoptions:remove({ "c", "r", "o" })
 	end,
 })
 
@@ -496,12 +473,11 @@ require("lazy").setup({
 						["_"] = { "trim_whitespace" },
 						bash = { "shfmt" },
 						go = { "gofumpt" },
-						javascript = { "deno_fmt" },
-						json = { "deno_fmt" },
-						jsonc = { "deno_fmt" },
+						javascript = { "prettier" },
+						json = { "prettier" },
+						jsonc = { "prettier" },
 						just = { "just" },
 						lua = { "stylua" },
-						markdown = { "deno_fmt" },
 						proto = { "buf" },
 						python = { "ruff_fix", "ruff_format" },
 						sh = { "shfmt" },
@@ -515,19 +491,36 @@ require("lazy").setup({
 					formatters = {
 						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/gofumpt.lua
 						gofumpt = {
-							prepend_args = { "-extra" },
+							prepend_args = {
+								"-extra",
+							},
 						},
 						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/shfmt.lua
 						shfmt = {
-							prepend_args = { "-s", "-i", "4" },
+							prepend_args = {
+								"-s",
+								"-i",
+								"4",
+							},
 						},
 						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/taplo.lua
 						taplo = {
-							args = { "fmt", "-o", "indent_string=    ", "-o", "allowed_blank_lines=1", "-" },
+							args = {
+								"fmt",
+								"-o",
+								"indent_string=    ",
+								"-o",
+								"allowed_blank_lines=1",
+								"-",
+							},
 						},
 						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/sqlfluff.lua
 						sqlfluff = {
-							args = { "fix", "--dialect=mysql", "-" },
+							args = {
+								"fix",
+								"--dialect=mysql",
+								"-",
+							},
 						},
 						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/ruff_format.lua
 						ruff_format = {
@@ -598,11 +591,6 @@ require("lazy").setup({
 				vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 
 				vim.lsp.set_log_level("OFF")
-
-				-- https://neovim.io/doc/user/diagnostic.html#diagnostic-api
-				vim.diagnostic.config({
-					underline = false,
-				})
 			end,
 		},
 
