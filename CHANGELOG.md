@@ -1,5 +1,99 @@
 # CHANGELOG
 
+## v1.0.3 (2025-06-24)
+
+### Others
+
+- config(nvim): git nav hunk target staged too (2025-06-24)
+
+- chore: rm deno (2025-06-23)
+
+- config(nvim): deno_fmt -> prettier (2025-06-23)
+
+- config(nvim): disable f1 (2025-06-23)
+
+- config(zsh): Add zsh-completions (2025-06-22)
+
+- config(zsh): enable GOTELEMETRY (2025-06-17)
+
+- config(bat): sync with less, tab is 2 spaces (2025-06-17)
+
+- chore: disable curl kitty icon (2025-06-17)
+
+- chore: rm rustup (2025-06-17)
+
+- chore(nvim): rm unused (2025-06-10)
+
+- config(nvim): copy vim-cool adaption (2025-06-10)
+
+- config: no blur (2025-06-03)
+
+- config(nvim): no LspRestart all anymore (2025-06-03)
+
+- config(nvim): re-add llama.vim (2025-06-01)
+
+- config(nvim): lazy copilot.lua (2025-06-01)
+
+- chore: rm wcurl (2025-05-30)
+
+- config(alacritty): improve font space (2025-05-21)
+
+- chore: move go/rust install to brew (2025-05-19)
+
+- config(nvim): lazy load zen mode (2025-05-17)
+
+- chore: clean up go (2025-05-16)
+
+- config(nvim): remove cmd (2025-05-15)
+
+- config(nvim): auto attach Copilot by lsp (2025-05-15)
+
+- chore: upstream alacritty catppuccin-mocha (2025-05-13)
+
+- config: re-add support alacritty with sudo font (2025-05-13)
+
+- config(nvim): off copilot by default (2025-05-12)
+
+- config(ghostty+nvim): add zen and correct blur (2025-05-09)
+
+- chore: rm llm (2025-05-05)
+
+- chore: rm jira-cli (2025-05-04)
+
+- chore: add macism, confluentinc (2025-05-04)
+
+- config(nvim): reset text input source in normal mode (2025-05-03)
+
+- chore: re-add lua-language-server (2025-05-03)
+
+- chore: rm pyright (2025-05-03)
+
+- config(nvim): toggle vim diagnostic (2025-05-03)
+
+- config(nvim): migrate to vim.lsp.* apis (2025-05-03)
+
+- config(nvim): switch to copilot from llama.nvim (2025-05-03)
+
+- config(nvim): wrap do not break word (2025-05-02)
+
+- config(wezterm): font change to mplus (2025-05-02)
+
+- chore(changelog): generate v1.0.2 (2025-05-01)
+
+### Build
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.3.3 to 3.3.8 (#99) (2025-06-13)
+
+- chore(deps): bump golang.org/x/sync from 0.14.0 to 0.15.0 (#98) (2025-06-06)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.13.2 to 1.13.3 (#97) (2025-06-04)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.3.2 to 3.3.3 (#96) (2025-05-12)
+
+- chore(deps): bump golang.org/x/sync from 0.13.0 to 0.14.0 (#95) (2025-05-06)
+
+- chore(deps): bump golangci/golangci-lint-action from 7 to 8 (#94) (2025-05-05)
+
 ## v1.0.2 (2025-05-01)
 
 ### Others
