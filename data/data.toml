@@ -46,14 +46,6 @@ external = "~/.config/ghostty/config"
 internal = "data/ghostty/catppuccin-mocha.conf"
 external = "~/.config/ghostty/catppuccin-mocha.conf"
 
-[[apps.alacritty.paths]]
-internal = "data/alacritty/alacritty.toml"
-external = "~/.config/alacritty/alacritty.toml"
-
-[[apps.alacritty.paths]]
-internal = "data/alacritty/catppuccin-mocha.toml"
-external = "~/.config/alacritty/catppuccin-mocha.toml"
-
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
 external = "~/.ignore"
