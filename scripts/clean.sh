@@ -1,5 +1,6 @@
 # Need to run this once in a while
 # go clean -cache -testcache -modcache -fuzzcache -x
+# golangci-lint cache clean
 # uv cache clean
 # bun pm cache rm --global
 # docker system prune --all --force --volumes
