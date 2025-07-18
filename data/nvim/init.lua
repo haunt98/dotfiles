@@ -404,7 +404,7 @@ require("lazy").setup({
 				require("mini.files").setup({
 					content = {
 						filter = function(fs_entry)
-							if fs_entry.name == ".git" then
+							if fs_entry.name == ".git" or fs_entry.name == ".DS_Store" then
 								return false
 							end
 
