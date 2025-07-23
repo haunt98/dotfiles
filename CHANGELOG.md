@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v1.0.4 (2025-07-23)
+
+### Others
+
+- config(nvim): hide .DS_Store (2025-07-18)
+
+- config(nvim): support range format (2025-07-09)
+
+- chore: golangci-lint cache (2025-07-09)
+
+- config(nvim): disable rocks (2025-07-05)
+
+- chore: rm alacritty config (2025-07-05)
+
+- chore: sync upstream (2025-07-05)
+
+- chore (2025-07-05)
+
+- chore: sync upstream (2025-07-03)
+
+- chore(changelog): generate v1.0.3 (2025-06-24)
+
+### Build
+
+- chore(deps): bump github.com/bytedance/sonic from 1.13.3 to 1.14.0 (#101) (2025-07-23)
+
+- chore(deps): bump golang.org/x/sync from 0.15.0 to 0.16.0 (#100) (2025-07-10)
+
 ## v1.0.3 (2025-06-24)
 
 ### Others
