@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 brew install \
-    libgit2 pcre2 xz telnet \
+    less xz telnet \
     zsh-autosuggestions \
     git neovim \
     fzf fd bat bat-extras ripgrep git-delta difftastic eza zoxide starship sd moar \
