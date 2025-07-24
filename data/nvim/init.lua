@@ -476,7 +476,7 @@ require("lazy").setup({
 					formatters_by_ft = {
 						["_"] = { "trim_whitespace" },
 						bash = { "shfmt" },
-						go = { "gofumpt" },
+						go = { "goimports", "gofumpt" },
 						javascript = { "prettier" },
 						json = { "prettier" },
 						jsonc = { "prettier" },
