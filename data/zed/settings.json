@@ -13,6 +13,6 @@
   "icon_theme": "Catppuccin Mocha",
   "vim_mode": true,
   "show_call_status_icon": false,
-  "projects_online_by_default": false,
-  "restore_on_startup": "none"
+  "restore_on_startup": "none",
+  "disable_ai": true
 }
