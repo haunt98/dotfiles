@@ -17,7 +17,7 @@ local current_font = {
 		family = "Sudo",
 		harfbuzz_features = { "cv06=1", "cv08=1" },
 	}),
-	font_size = 16.0,
+	font_size = 14.0,
 	line_height = 1.2,
 	default_cursor_style = "SteadyBar",
 }
