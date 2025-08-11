@@ -166,10 +166,10 @@ if command -v zoxide &>/dev/null; then
     eval "$(zoxide init zsh)"
 fi
 
-# https://github.com/walles/moar
-if command -v moar &>/dev/null; then
-    export MOAR="-no-linenumbers -no-statusbar -quit-if-one-screen -wrap"
-    export PAGER=moar
+# https://github.com/walles/moor
+if command -v moor &>/dev/null; then
+    export moor="-no-linenumbers -no-statusbar -quit-if-one-screen -wrap"
+    export PAGER=moor
 fi
 
 # https://github.com/Schniz/fnm
