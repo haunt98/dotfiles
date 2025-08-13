@@ -579,6 +579,11 @@ require("lazy").setup({
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff
 				vim.lsp.enable("ruff")
 
+				-- R
+				-- https://github.com/REditorSupport/languageserver/
+				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#r_language_server
+				vim.lsp.enable("r_language_server")
+
 				-- Lua
 				-- https://luals.github.io/#neovim-install
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
