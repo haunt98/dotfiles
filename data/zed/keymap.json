@@ -14,5 +14,12 @@
       "; x": ["workspace::SendKeystrokes", "\" _ x"],
       "space f": "editor::Format"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      ")": null,
+      "(": null
+    }
   }
 ]
