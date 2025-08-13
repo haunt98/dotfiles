@@ -488,6 +488,7 @@ require("lazy").setup({
 						lua = { "stylua" },
 						proto = { "buf" },
 						python = { "ruff_fix", "ruff_format" },
+						r = { lsp_format = "fallback" },
 						sh = { "shfmt" },
 						sql = { "sqlfluff" },
 						toml = { "trim_whitespace", "taplo" },
