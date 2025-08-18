@@ -12,11 +12,11 @@ git config --global alias.cl clone
 git config --global alias.co checkout
 git config --global alias.df "diff -w"
 git config --global alias.dfc "diff -w --cached"
-git config --global alias.fe "fetch --all --tags"
+git config --global alias.fe "fetch"
 git config --global alias.lg "log --stat --abbrev-commit"
 git config --global alias.lg1 "log --graph --abbrev-commit --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %Cblue%an%Creset %s %Cgreen(%cr)%Creset'"
 git config --global alias.me merge
-git config --global alias.pl "pull --tags"
+git config --global alias.pl "pull"
 git config --global alias.ps push
 git config --global alias.psa "!git remote | xargs -L1 -P8 git push"
 git config --global alias.psaf "!git remote | xargs -L1 -P8 git push --force-with-lease"
