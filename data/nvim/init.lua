@@ -185,9 +185,6 @@ require("lazy").setup({
 							module = "blink-copilot",
 							score_offset = 100,
 							async = true,
-							opts = {
-								max_completions = 3,
-							},
 						},
 						lsp = {
 							fallbacks = {},
