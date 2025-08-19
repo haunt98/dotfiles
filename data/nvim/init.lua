@@ -162,23 +162,36 @@ require("lazy").setup({
 		},
 
 		-- https://github.com/Saghen/blink.cmp
+		-- https://github.com/fang2hou/blink-copilot
 		{
 			"saghen/blink.cmp",
 			version = "v1.*",
+			dependencies = {
+				"fang2hou/blink-copilot",
+			},
 			opts = {
 				keymap = {
 					preset = "none",
-					["<C-space>"] = { "show", "show_documentation", "hide_documentation", "fallback" },
-					["<CR>"] = { "select_and_accept", "fallback" },
+					["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+					["<CR>"] = { "accept", "fallback" },
 					["<Up>"] = { "select_prev", "fallback" },
 					["<Down>"] = { "select_next", "fallback" },
 				},
-				completion = {
-					trigger = {
-						prefetch_on_insert = false,
-						show_in_snippet = false,
-						show_on_keyword = false,
-						show_on_trigger_character = false,
+				sources = {
+					default = { "lsp", "path", "buffer", "copilot" },
+					providers = {
+						copilot = {
+							name = "copilot",
+							module = "blink-copilot",
+							score_offset = 100,
+							async = true,
+							opts = {
+								max_completions = 3,
+							},
+						},
+						lsp = {
+							fallbacks = {},
+						},
 					},
 				},
 			},
@@ -637,38 +650,25 @@ require("lazy").setup({
 		{
 			"zbirenbaum/copilot.lua",
 			cmd = "Copilot",
+			event = "InsertEnter",
 			config = function()
 				require("copilot").setup({
 					panel = {
 						enabled = false,
 					},
 					suggestion = {
-						enabled = true,
-						auto_trigger = true,
-						keymap = {
-							accept = "<M-Right>",
-							accept_word = false,
-							accept_line = false,
-							next = "<C-F>",
-							prev = false,
-							dismiss = false,
-						},
+						enabled = false,
 					},
-				})
-
-				vim.api.nvim_create_autocmd("User", {
-					pattern = "BlinkCmpMenuOpen",
-					callback = function()
-						require("copilot.suggestion").dismiss()
-						vim.b.copilot_suggestion_hidden = true
-					end,
-				})
-
-				vim.api.nvim_create_autocmd("User", {
-					pattern = "BlinkCmpMenuClose",
-					callback = function()
-						vim.b.copilot_suggestion_hidden = false
-					end,
+					filetypes = {
+						["."] = false,
+						gitcommit = true,
+						go = true,
+						markdown = true,
+						proto = true,
+						python = true,
+						r = true,
+						sql = true,
+					},
 				})
 			end,
 		},
