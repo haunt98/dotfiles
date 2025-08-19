@@ -177,6 +177,17 @@ require("lazy").setup({
 					["<Up>"] = { "select_prev", "fallback" },
 					["<Down>"] = { "select_next", "fallback" },
 				},
+				completion = {
+					list = {
+						selection = {
+							preselect = false,
+							auto_insert = true,
+						},
+					},
+					documentation = {
+						auto_show = true,
+					},
+				},
 				sources = {
 					default = { "lsp", "path", "buffer", "copilot" },
 					providers = {
@@ -185,9 +196,6 @@ require("lazy").setup({
 							module = "blink-copilot",
 							score_offset = 100,
 							async = true,
-						},
-						lsp = {
-							fallbacks = {},
 						},
 					},
 				},
