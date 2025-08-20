@@ -194,7 +194,7 @@ require("lazy").setup({
 						copilot = {
 							name = "copilot",
 							module = "blink-copilot",
-							score_offset = 100,
+							score_offset = -1, -- less than lsp, greater than buffer
 							async = true,
 						},
 					},
