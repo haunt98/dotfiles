@@ -598,6 +598,22 @@ require("lazy").setup({
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff
 				vim.lsp.enable("ruff")
 
+				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
+				vim.lsp.enable("pyright", {
+					settings = {
+						pyright = {
+							-- Use ruff
+							disableOrganizeImports = true,
+						},
+						python = {
+							analysis = {
+								-- Use ruff
+								ignore = { "*" },
+							},
+						},
+					},
+				})
+
 				-- R
 				-- https://github.com/REditorSupport/languageserver/
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#r_language_server
@@ -656,26 +672,31 @@ require("lazy").setup({
 			"zbirenbaum/copilot.lua",
 			cmd = "Copilot",
 			event = "InsertEnter",
-			config = function()
-				require("copilot").setup({
-					panel = {
-						enabled = false,
+			opts = {
+				panel = {
+					enabled = false,
+				},
+				suggestion = {
+					enabled = false,
+				},
+				filetypes = {
+					["."] = false,
+					gitcommit = true,
+					go = true,
+					markdown = true,
+					proto = true,
+					python = true,
+					r = true,
+					sql = true,
+				},
+				server_opts_overrides = {
+					settings = {
+						telemetry = {
+							telemetryLevel = "off",
+						},
 					},
-					suggestion = {
-						enabled = false,
-					},
-					filetypes = {
-						["."] = false,
-						gitcommit = true,
-						go = true,
-						markdown = true,
-						proto = true,
-						python = true,
-						r = true,
-						sql = true,
-					},
-				})
-			end,
+				},
+			},
 		},
 	},
 	rocks = {
