@@ -194,7 +194,7 @@ require("lazy").setup({
 						copilot = {
 							name = "copilot",
 							module = "blink-copilot",
-							score_offset = -1, -- less than lsp, greater than buffer
+							score_offset = -1, -- < lsp, > buffer
 							async = true,
 						},
 					},
@@ -670,6 +670,7 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
+			commit = "f0c0d981de2737abc50bd7b5bb034ae440826827",
 			cmd = "Copilot",
 			event = "InsertEnter",
 			opts = {
@@ -680,7 +681,7 @@ require("lazy").setup({
 					enabled = false,
 				},
 				filetypes = {
-					["."] = false,
+					["*"] = false,
 					gitcommit = true,
 					go = true,
 					markdown = true,
