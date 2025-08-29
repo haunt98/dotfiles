@@ -373,9 +373,9 @@ require("lazy").setup({
 			},
 		},
 
-		-- https://github.com/echasnovski/mini.nvim
+		-- https://github.com/nvim-mini/mini.nvim
 		{
-			"echasnovski/mini.nvim",
+			"nvim-mini/mini.nvim",
 			config = function()
 				-- Text editing
 				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-ai.txt
