@@ -261,36 +261,10 @@ require("lazy").setup({
 			end,
 		},
 
-		-- https://github.com/neovim/neovim/issues/12374
-		-- https://github.com/svban/YankAssassin.nvim
-		{
-			"svban/YankAssassin.nvim",
-			opts = {
-				auto_normal = true,
-				auto_visual = true,
-			},
-		},
-
 		-- https://github.com/mcauley-penney/visual-whitespace.nvim
 		{
 			"mcauley-penney/visual-whitespace.nvim",
 			config = true,
-		},
-
-		-- https://github.com/keaising/im-select.nvim
-		{
-			"keaising/im-select.nvim",
-			config = function()
-				require("im_select").setup({
-					set_previous_events = {},
-				})
-			end,
-		},
-
-		-- https://github.com/folke/zen-mode.nvim
-		{
-			"folke/zen-mode.nvim",
-			cmd = "ZenMode",
 		},
 
 		-- https://github.com/folke/snacks.nvim
