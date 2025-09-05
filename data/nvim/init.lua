@@ -194,7 +194,7 @@ require("lazy").setup({
 						copilot = {
 							name = "copilot",
 							module = "blink-copilot",
-							score_offset = -1, -- < lsp, > buffer
+							score_offset = 100,
 							async = true,
 						},
 					},
@@ -572,21 +572,9 @@ require("lazy").setup({
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff
 				vim.lsp.enable("ruff")
 
-				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pyright
-				vim.lsp.enable("pyright", {
-					settings = {
-						pyright = {
-							-- Use ruff
-							disableOrganizeImports = true,
-						},
-						python = {
-							analysis = {
-								-- Use ruff
-								ignore = { "*" },
-							},
-						},
-					},
-				})
+				-- https://docs.astral.sh/ty/editors/#neovim
+				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ty
+				vim.lsp.enable("ty")
 
 				-- R
 				-- https://github.com/REditorSupport/languageserver/
