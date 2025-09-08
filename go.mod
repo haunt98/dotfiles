@@ -1,6 +1,6 @@
 module github.com/haunt98/dotfiles
 
-go 1.24
+go 1.24.0
 
 require (
 	github.com/BurntSushi/toml v1.5.0
@@ -9,7 +9,7 @@ require (
 	github.com/make-go-great/copy-go v0.9.0
 	github.com/make-go-great/diff-go v0.0.6
 	github.com/urfave/cli/v3 v3.4.1
-	golang.org/x/sync v0.16.0
+	golang.org/x/sync v0.17.0
 )
 
 require (
