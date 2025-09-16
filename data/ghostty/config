@@ -23,7 +23,7 @@ clipboard-paste-protection = true
 
 quit-after-last-window-closed = true
 
-custom-shader = ~/.config/ghostty/shaders/bettercrt.glsl
+custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
 
 macos-option-as-alt = true
 macos-auto-secure-input = true
