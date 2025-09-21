@@ -558,6 +558,13 @@ require("lazy").setup({
 			end,
 		},
 
+		-- https://github.com/nvim-treesitter/nvim-treesitter
+		{
+			"nvim-treesitter/nvim-treesitter",
+			branch = "main",
+			build = ":TSUpdate",
+		},
+
 		-- https://github.com/neovim/nvim-lspconfig
 		{
 			"neovim/nvim-lspconfig",
