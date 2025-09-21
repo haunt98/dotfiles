@@ -3,7 +3,7 @@
 brew install \
     less xz telnet \
     zsh-autosuggestions \
-    git neovim \
+    git neovim tree-sitter-cli \
     fzf fd bat bat-extras ripgrep git-delta difftastic eza zoxide starship sd moor \
     uutils-coreutils uutils-diffutils uutils-findutils \
     rsync rclone restic ncdu fclones f2 tlrc totp-cli \
