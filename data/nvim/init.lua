@@ -568,6 +568,7 @@ require("lazy").setup({
 				vim.lsp.enable("gopls")
 
 				-- Protobuf
+				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#buf_ls
 				vim.lsp.enable("buf_ls")
 
 				-- Python
@@ -598,6 +599,14 @@ require("lazy").setup({
 				-- https://github.com/Myriad-Dreamin/tinymist
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
 				vim.lsp.enable("tinymist")
+
+				-- https://github.com/tekumara/typos-lsp
+				vim.lsp.enable("typos_lsp", {
+					init_options = {
+						config = "~/.config/typos/typos.toml",
+						diagnosticSeverity = "Warning",
+					},
+				})
 
 				-- General
 				vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
