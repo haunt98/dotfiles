@@ -459,14 +459,6 @@ require("lazy").setup({
 			},
 		},
 
-		-- https://github.com/NoahTheDuke/vim-just
-		{
-			"NoahTheDuke/vim-just",
-			ft = {
-				"just",
-			},
-		},
-
 		-- https://github.com/stevearc/conform.nvim
 		{
 			"stevearc/conform.nvim",
