@@ -601,7 +601,8 @@ require("lazy").setup({
 				vim.lsp.enable("tinymist")
 
 				-- https://github.com/tekumara/typos-lsp
-				vim.lsp.enable("typos_lsp", {
+				vim.lsp.enable("typos_lsp")
+				vim.lsp.config("typos_lsp", {
 					init_options = {
 						config = "~/.config/typos/typos.toml",
 						diagnosticSeverity = "Warning",
