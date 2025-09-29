@@ -168,7 +168,7 @@ fi
 
 # https://github.com/walles/moor
 if command -v moor &>/dev/null; then
-    export MOOR="-no-linenumbers -no-statusbar -quit-if-one-screen -wrap"
+    export MOOR="-no-linenumbers -no-statusbar -quit-if-one-screen -terminal-fg -wrap"
     export PAGER=moor
 fi
 
