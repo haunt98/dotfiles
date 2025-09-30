@@ -1,6 +1,6 @@
 config-file = catppuccin-mocha.conf
 
-font-family = PragmataPro Mono
+font-family = PragmataPro Mono Liga
 font-size = 16
 font-thicken = true
 
