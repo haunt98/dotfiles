@@ -555,6 +555,20 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter",
 			branch = "main",
 			build = ":TSUpdate",
+			config = function()
+				vim.api.nvim_create_autocmd("FileType", {
+					pattern = {
+						"go",
+						"just",
+						"lua",
+						"markdown",
+						"proto",
+					},
+					callback = function()
+						vim.treesitter.start()
+					end,
+				})
+			end,
 		},
 
 		-- https://github.com/neovim/nvim-lspconfig
