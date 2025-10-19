@@ -563,6 +563,9 @@ require("lazy").setup({
 						"lua",
 						"markdown",
 						"proto",
+						"python",
+						"r",
+						"sql",
 					},
 					callback = function()
 						vim.treesitter.start()
