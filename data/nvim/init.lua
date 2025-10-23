@@ -561,6 +561,7 @@ require("lazy").setup({
 						"go",
 						"just",
 						"lua",
+						"make",
 						"markdown",
 						"proto",
 						"python",

@@ -80,6 +80,10 @@ if command -v brew &>/dev/null; then
     if [[ -d /opt/homebrew/opt/uutils-findutils/libexec/uubin ]]; then
         path=(/opt/homebrew/opt/uutils-findutils/libexec/uubin $path)
     fi
+
+    if [[ -d /opt/homebrew/opt/mysql-client/bin ]]; then
+        path=(/opt/homebrew/opt/mysql-client/bin $path)
+    fi
 fi
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
