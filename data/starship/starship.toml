@@ -7,6 +7,8 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$golang\
+$buf\
 $cmd_duration\
 $line_break\
 $character"""
