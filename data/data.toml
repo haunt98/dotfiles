@@ -34,10 +34,6 @@ external = "~/.config/kitty/mocha.conf"
 internal = "data/kitty/kitty-dark.icns"
 external = "~/.config/kitty/kitty.app.icns"
 
-[[apps.wezterm.paths]]
-internal = "data/wezterm"
-external = "~/.config/wezterm"
-
 [[apps.ghostty.paths]]
 internal = "data/ghostty/config"
 external = "~/.config/ghostty/config"
