@@ -135,7 +135,7 @@ if command -v fzf &>/dev/null; then
     fi
 
     if command -v bat &>/dev/null; then
-        export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range=:500 {}'"
+        export FZF_CTRL_T_OPTS="--preview 'bat {}'"
     fi
 
     if command -v eza &>/dev/null; then
