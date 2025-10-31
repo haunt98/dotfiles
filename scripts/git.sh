@@ -5,8 +5,8 @@ truncate -s 0 ~/.gitconfig
 
 # Global aliases
 git config --global alias.ass add
-git config --global alias.br "branch -v -r"
-git config --global alias.brv "branch -v --sort=-committerdate"
+git config --global alias.br "branch -v --sort=-committerdate"
+git config --global alias.brr "branch -v --sort=-committerdate -r"
 git config --global alias.ci commit
 git config --global alias.cl clone
 git config --global alias.co checkout
