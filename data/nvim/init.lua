@@ -476,7 +476,7 @@ require("lazy").setup({
 						lua = { "stylua" },
 						proto = { "buf" },
 						python = { "ruff_fix", "ruff_format" },
-						r = { lsp_format = "fallback" },
+						r = { "air" },
 						sh = { "shfmt" },
 						sql = { "sqlfluff" },
 						toml = { "trim_whitespace", "taplo" },
@@ -640,23 +640,6 @@ require("lazy").setup({
 				vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 
 				vim.lsp.set_log_level("OFF")
-			end,
-		},
-
-		-- https://github.com/ggml-org/llama.vim
-		{
-			"ggml-org/llama.vim",
-			cmd = "LlamaEnable",
-			init = function()
-				vim.g.llama_config = {
-					stop_strings = { "\n" },
-					show_info = 0,
-					auto_fim = false,
-					keymap_trigger = "<C-F>",
-					keymap_accept_full = "",
-					keymap_accept_line = "<M-Right>",
-					keymap_accept_word = "",
-				}
 			end,
 		},
 
