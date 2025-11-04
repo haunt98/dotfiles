@@ -8,8 +8,7 @@ brew install \
     uutils-coreutils uutils-diffutils uutils-findutils \
     rsync rclone restic ncdu fclones f2 tlrc totp-cli \
     yt-dlp vips \
-    qmk/qmk/qmk btop asciinema qpdf fastfetch scrcpy android-platform-tools \
-    fnm oven-sh/bun/bun uv \
-    just typst clang-format shfmt stylua sqlfluff taplo typos-cli typstyle lua-language-server marksman tinymist air \
-    yq gojq fx jd llama.cpp gitleaks gh glab tbls ghz k6 \
-    redis mysql-client confluentinc/tap/cli
+    qmk/qmk/qmk btop asciinema qpdf fastfetch android-platform-tools \
+    fnm oven-sh/bun/bun uv just typst clang-format shfmt stylua sqlfluff taplo typos-cli typstyle lua-language-server tinymist air \
+    yq gojq fx jd gh glab tbls ghz k6 \
+    redis
