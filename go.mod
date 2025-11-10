@@ -9,7 +9,7 @@ require (
 	github.com/make-go-great/copy-go v0.9.0
 	github.com/make-go-great/diff-go v0.0.6
 	github.com/urfave/cli/v3 v3.6.0
-	golang.org/x/sync v0.17.0
+	golang.org/x/sync v0.18.0
 )
 
 require (
