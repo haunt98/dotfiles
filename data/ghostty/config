@@ -1,9 +1,7 @@
 config-file = catppuccin-mocha.conf
 
-font-family = PragmataPro Mono
-font-feature = -calt, -liga, -dlig
+font-family = PragmataPro Mono Liga
 font-size = 16
-font-thicken = true
 
 adjust-cell-height = 20%
 
@@ -23,8 +21,6 @@ clipboard-trim-trailing-spaces = true
 clipboard-paste-protection = true
 
 quit-after-last-window-closed = true
-
-custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
 
 macos-option-as-alt = true
 macos-auto-secure-input = true
