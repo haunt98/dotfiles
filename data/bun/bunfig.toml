@@ -1,0 +1,12 @@
+# https://bun.com/docs/runtime/bunfig
+# https://github.com/bodadotsh/npm-security-best-practices
+
+[install]
+production = true
+exact = true
+frozenLockfile = true
+
+minimumReleaseAge = 259200
+
+[install.lockfile]
+save = true

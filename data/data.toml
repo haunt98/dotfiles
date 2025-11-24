@@ -70,6 +70,10 @@ external = "~/.config/zed/settings.json"
 internal = "data/zed/keymap.json"
 external = "~/.config/zed/keymap.json"
 
+[[apps.bun.paths]]
+internal = "data/bun/bunfig.toml"
+external = "~/.bunfig.toml"
+
 [[apps.btop.paths]]
 internal = "data/btop/themes"
 external = "~/.config/btop/themes"
