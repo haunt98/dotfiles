@@ -74,6 +74,10 @@ external = "~/.config/zed/keymap.json"
 internal = "data/bun/bunfig.toml"
 external = "~/.bunfig.toml"
 
+[[apps.npm.paths]]
+internal = "data/npm/.npmrc"
+external = "~/.npmrc"
+
 [[apps.btop.paths]]
 internal = "data/btop/themes"
 external = "~/.config/btop/themes"
