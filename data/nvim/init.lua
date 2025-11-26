@@ -593,6 +593,9 @@ require("lazy").setup({
 			dependencies = {
 				"nvim-treesitter/nvim-treesitter",
 			},
+			opts = {
+				max_lines = 2,
+			},
 		},
 
 		-- https://github.com/neovim/nvim-lspconfig
