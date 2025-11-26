@@ -587,6 +587,14 @@ require("lazy").setup({
 			end,
 		},
 
+		-- https://github.com/nvim-treesitter/nvim-treesitter-context
+		{
+			"nvim-treesitter/nvim-treesitter-context",
+			dependencies = {
+				"nvim-treesitter/nvim-treesitter",
+			},
+		},
+
 		-- https://github.com/neovim/nvim-lspconfig
 		{
 			"neovim/nvim-lspconfig",
