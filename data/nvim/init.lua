@@ -356,17 +356,17 @@ require("lazy").setup({
 			"nvim-mini/mini.nvim",
 			config = function()
 				-- Text editing
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-ai.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
 				require("mini.ai").setup()
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-pairs.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-pairs.txt
 				require("mini.pairs").setup()
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-surround.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-surround.txt
 				require("mini.surround").setup()
 
 				-- General workflow
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-bracketed.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-bracketed.txt
 				require("mini.bracketed").setup({
 					{
 						buffer = { suffix = "", options = {} },
@@ -400,7 +400,7 @@ require("lazy").setup({
 				vim.keymap.set("n", ")T", "]T", { remap = true })
 				vim.keymap.set("n", "(T", "[T", { remap = true })
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-files.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-files.txt
 				require("mini.files").setup({
 					content = {
 						filter = function(fs_entry)
@@ -423,7 +423,7 @@ require("lazy").setup({
 				vim.keymap.set("n", "<C-n>", ":lua MiniFiles.open(nil, false)<CR>")
 				vim.keymap.set("n", "<Leader>n", ":lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>")
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-hipatterns.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-hipatterns.txt
 				local hipatterns = require("mini.hipatterns")
 				hipatterns.setup({
 					highlighters = {
@@ -433,16 +433,16 @@ require("lazy").setup({
 				})
 
 				-- Appearance
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-cursorword.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-cursorword.txt
 				require("mini.cursorword").setup()
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-icons.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-icons.txt
 				require("mini.icons").setup()
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-indentscope.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-indentscope.txt
 				require("mini.indentscope").setup()
 
-				-- https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-statusline.txt
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-statusline.txt
 				require("mini.statusline").setup()
 
 				-- Use cl instead of s
