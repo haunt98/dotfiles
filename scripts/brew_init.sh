@@ -10,5 +10,5 @@ brew install \
     yt-dlp vips \
     btop asciinema qpdf fastfetch android-platform-tools \
     fnm oven-sh/bun/bun just typst clang-format shfmt stylua sqlfluff taplo typos-cli typstyle lua-language-server tinymist air \
-    yq gojq fx jd gh glab tbls ghz k6 \
+    yq gojq fx jd gh glab tbls k6 \
     redis
