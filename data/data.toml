@@ -39,10 +39,6 @@ internal = "data/ghostty/config"
 external = "~/.config/ghostty/config"
 
 [[apps.ghostty.paths]]
-internal = "data/ghostty/shaders"
-external = "~/.config/ghostty/shaders"
-
-[[apps.ghostty.paths]]
 internal = "data/ghostty/catppuccin-mocha.conf"
 external = "~/.config/ghostty/catppuccin-mocha.conf"
 
