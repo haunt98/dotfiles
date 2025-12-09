@@ -606,6 +606,16 @@ require("lazy").setup({
 				-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 				-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
+				vim.lsp.config("gopls", {
+					settings = {
+						gopls = {
+							hints = {
+								constantValues = true,
+								parameterNames = true,
+							},
+						},
+					},
+				})
 				vim.lsp.enable("gopls")
 
 				-- Protobuf
@@ -657,6 +667,7 @@ require("lazy").setup({
 				vim.keymap.set("n", "gk", vim.lsp.buf.hover)
 				vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 
+				vim.lsp.inlay_hint.enable(true)
 				vim.lsp.set_log_level("OFF")
 			end,
 		},
