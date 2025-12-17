@@ -1,5 +1,193 @@
 # CHANGELOG
 
+## v1.0.5 (2025-12-18)
+
+### Others
+
+- config(nvim): enable inlay hint (2025-12-09)
+
+- chore (2025-12-08)
+
+- chore: rm ghz (2025-12-07)
+
+- chore: experiment (2025-12-06)
+
+- chore: switch from brew uv -> curl uv (2025-11-28)
+
+- chore: rm qmk (2025-11-28)
+
+- chore(nvim): update docs (2025-11-26)
+
+- config(nvim): limit treesitter context (2025-11-26)
+
+- Revert "config(nvim): rm treesitter-context plugin" (2025-11-26)
+
+- config(nvim): rm treesitter-context plugin (2025-11-25)
+
+- config(npm): safer (2025-11-24)
+
+- config(bun): safer (2025-11-24)
+
+- config(nvim): add nvim-treesitter-context plugin (2025-11-24)
+
+- config(ghostty): rm shaders (2025-11-22)
+
+- config(zed): Sudo UI Var (2025-11-19)
+
+- config(starship): rm slow (2025-11-13)
+
+- config(nvim): add fold (2025-11-05)
+
+- chore: cleanup unused (2025-11-05)
+
+- chore (2025-11-04)
+
+- chore: rm bw (2025-11-02)
+
+- chore: add air for r (2025-11-01)
+
+- config(nvim): use air to format R (2025-10-31)
+
+- chore: update g br (2025-10-31)
+
+- chore: clean up g br (2025-10-31)
+
+- chore: g brr (2025-10-31)
+
+- chore: rm wezterm (2025-10-27)
+
+- config(starship): add golang, buf (2025-10-27)
+
+- config(starship): re-add git status (2025-10-27)
+
+- chore: cleanup fzf opts (2025-10-26)
+
+- chore: bat already has theme, fzf set to no color (2025-10-26)
+
+- chore: add mysql-client in zsh (2025-10-23)
+
+- chore: sync upstream (2025-10-21)
+
+- chore: sync upstream (2025-10-19)
+
+- config(nvim): more ts langs (2025-10-19)
+
+- config(nvim): enable treesitter highlight (2025-10-19)
+
+- chore: sync upstream (2025-10-18)
+
+- chore: clean more (2025-10-10)
+
+- config(ghostty): no ligature with pragmatapro (2025-10-06)
+
+- config(moor+ghostty): tab tweak and no more liga (2025-10-06)
+
+- config(ghostty): use font PragmataPro Mono Liga (2025-10-01)
+
+- chore: add scrcpy (2025-09-29)
+
+- config(moor): update moor terminal-fg option (2025-09-29)
+
+- chore(ghostty): sync latest upstream (2025-09-22)
+
+- config(nvim): fix config typos_lsp (2025-09-22)
+
+- config(nvim): add typos-lsp (2025-09-21)
+
+- config(nvim): replace vim-just with treesitter (2025-09-21)
+
+- chore: neovim need tree-sitter-cli (2025-09-21)
+
+- config(nvim): re-add nvim-treesitter (2025-09-21)
+
+- chore: sync upstream (2025-09-21)
+
+- config(ghostty): use cursor_blaze shader (2025-09-16)
+
+- config(nvim): disable auto menu for blink.cmp (2025-09-16)
+
+- config(ghostty): add custom bettercrt shader (2025-09-13)
+
+- chore: pyright -> ty (2025-09-05)
+
+- config(nvim): chore (2025-09-04)
+
+- config(nvim): migrate mini.nvim (2025-08-29)
+
+- config(nvim): rm copilot workaround commit (2025-08-28)
+
+- config(nvim): workaround copilot (2025-08-27)
+
+- config(nvim): enable lsp pyright (2025-08-27)
+
+- config(ghostty): Sudo -> PragmataPro (2025-08-24)
+
+- config(nvim): adjust copilot score offset (2025-08-20)
+
+- config(nvim): tuning completion settings (2025-08-19)
+
+- config(nvim): chore (2025-08-19)
+
+- config(nvim): use copilot with blink.cmp (2025-08-19)
+
+- chore: do not pull/fetch tags auto (2025-08-18)
+
+- config(nvim): format r (2025-08-14)
+
+- config(zsh): fix wrong moor config (2025-08-14)
+
+- config(nvim): enable r_language_server (2025-08-14)
+
+- config(zed): disable (,) (2025-08-14)
+
+- chore: moar -> moor (2025-08-11)
+
+- config(nvim): enable float transparent (2025-08-03)
+
+- config(zed): switch to Sudo UI (2025-07-31)
+
+- config: prefer Sudo 14 again (2025-07-29)
+
+- config: bigger Sudo font-size (2025-07-28)
+
+- config: switch to Sudo font (2025-07-28)
+
+- config(zsh): fix zsh highlight order (2025-07-24)
+
+- chore: add less (2025-07-24)
+
+- chore(changelog): generate v1.0.4 (2025-07-23)
+
+### Build
+
+- build: bump go.mod (2025-12-18)
+
+- chore(deps): bump golang.org/x/sync from 0.18.0 to 0.19.0 (#115) (2025-12-09)
+
+- chore(deps): bump actions/checkout from 5 to 6 (#114) (2025-11-21)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.6.0 to 3.6.1 (#113) (2025-11-17)
+
+- chore(deps): bump golang.org/x/sync from 0.17.0 to 0.18.0 (#111) (2025-11-10)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.5.0 to 3.6.0 (#110) (2025-11-10)
+
+- chore(deps): bump golangci/golangci-lint-action from 8 to 9 (#112) (2025-11-10)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.14.1 to 1.14.2 (#109) (2025-10-29)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.4.1 to 3.5.0 (#108) (2025-10-22)
+
+- chore(deps): bump golang.org/x/sync from 0.16.0 to 0.17.0 (#107) (2025-09-08)
+
+- chore(deps): bump actions/setup-go from 5 to 6 (#106) (2025-09-05)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.14.0 to 1.14.1 (#105) (2025-09-04)
+
+- chore(deps): bump actions/checkout from 4 to 5 (#103) (2025-08-13)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.3.8 to 3.4.1 (#104) (2025-08-13)
+
 ## v1.0.4 (2025-07-23)
 
 ### Others
