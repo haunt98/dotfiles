@@ -3,7 +3,7 @@ module github.com/haunt98/dotfiles
 go 1.25.0
 
 require (
-	github.com/BurntSushi/toml v1.5.0
+	github.com/BurntSushi/toml v1.6.0
 	github.com/bytedance/sonic v1.14.2
 	github.com/make-go-great/color-go v0.6.0
 	github.com/make-go-great/copy-go v0.9.0
