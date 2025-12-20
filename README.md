@@ -2,9 +2,6 @@
 
 [![Go](https://github.com/haunt98/dotfiles/actions/workflows/go.yml/badge.svg)](https://github.com/haunt98/dotfiles/actions/workflows/go.yml)
 [![gitleaks](https://github.com/haunt98/dotfiles/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/haunt98/dotfiles/actions/workflows/gitleaks.yml)
-<a href="https://dotfyle.com/haunt98/dotfiles-data-nvim"><img src="https://dotfyle.com/haunt98/dotfiles-data-nvim/badges/plugins?style=flat" /></a>
-<a href="https://dotfyle.com/haunt98/dotfiles-data-nvim"><img src="https://dotfyle.com/haunt98/dotfiles-data-nvim/badges/leaderkey?style=flat" /></a>
-<a href="https://dotfyle.com/haunt98/dotfiles-data-nvim"><img src="https://dotfyle.com/haunt98/dotfiles-data-nvim/badges/plugin-manager?style=flat" /></a>
 [![Latest Version](https://img.shields.io/github/v/tag/haunt98/dotfiles)](https://github.com/haunt98/dotfiles/tags)
 
 ## Usage
