@@ -6,7 +6,7 @@ require (
 	github.com/BurntSushi/toml v1.6.0
 	github.com/bytedance/sonic v1.14.2
 	github.com/make-go-great/color-go v0.6.0
-	github.com/make-go-great/copy-go v0.9.0
+	github.com/make-go-great/copy-go v0.10.0
 	github.com/make-go-great/diff-go v0.0.7
 	github.com/urfave/cli/v3 v3.6.1
 	golang.org/x/sync v0.19.0
