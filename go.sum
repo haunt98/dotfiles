@@ -17,8 +17,8 @@ github.com/klauspost/cpuid/v2 v2.2.9 h1:66ze0taIn2H33fBvCkXuv9BmCwDfafmiIVpKV9kK
 github.com/klauspost/cpuid/v2 v2.2.9/go.mod h1:rqkxqrZ1EhYM9G+hXH7YdowN5R5RGN6NK4QwQ3WMXF8=
 github.com/make-go-great/color-go v0.6.0 h1:PkqgCPlhQtyta40fE/UzKvzGZZaT0BC/j1QguOtFx0k=
 github.com/make-go-great/color-go v0.6.0/go.mod h1:6wDCKrYcExDmKXCeO5HGjedl6GjcS+CZgytUuG+iMB0=
-github.com/make-go-great/copy-go v0.9.0 h1:RTqVypNIa6liItFg6kORP93ZhgSck8+pupvGrnSzrSI=
-github.com/make-go-great/copy-go v0.9.0/go.mod h1:J1ihIqaX3O/lGAaL23d+1GXSQwJX3RpStmUIUdh4xyw=
+github.com/make-go-great/copy-go v0.10.0 h1:zJrR3nKttaj/xucZoQj9dlJvNHqE2AgQAYewaofNAAQ=
+github.com/make-go-great/copy-go v0.10.0/go.mod h1:1VQfW59T0FZmKxV3hTlzbEcfceajtk3gq/WmiwfYl1I=
 github.com/make-go-great/diff-go v0.0.7 h1:Iqqc56v6bkqM0I4ZdCZws0F3u9zFKbme0cK+eqUgWY8=
 github.com/make-go-great/diff-go v0.0.7/go.mod h1:u1SsLvLMcrkJHAsCGKXOnJoczd9+jwx2tatbLn4Olrs=
 github.com/mattn/go-colorable v0.1.13 h1:fFA4WZxdEF4tXPZVKMLwD8oUnCTTo08duU7wxecdEvA=
