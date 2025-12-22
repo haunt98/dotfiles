@@ -689,6 +689,7 @@ require("lazy").setup({
 					gitcommit = true,
 					go = true,
 					markdown = true,
+					plantuml = true,
 					proto = true,
 					python = true,
 					r = true,
