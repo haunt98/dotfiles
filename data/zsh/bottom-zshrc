@@ -65,25 +65,6 @@ if command -v brew &>/dev/null; then
     # https://everything.curl.dev/install/macos.html
     export HOMEBREW_FORCE_BREWED_CURL=1
     path=(/opt/homebrew/opt/curl/bin $path)
-
-    # https://github.com/uutils/coreutils
-    if [[ -d /opt/homebrew/opt/uutils-coreutils/libexec/uubin ]]; then
-        path=(/opt/homebrew/opt/uutils-coreutils/libexec/uubin $path)
-    fi
-
-    # https://github.com/uutils/diffutils
-    if [[ -d /opt/homebrew/opt/uutils-diffutils/libexec/uubin ]]; then
-        path=(/opt/homebrew/opt/uutils-diffutils/libexec/uubin $path)
-    fi
-
-    # https://github.com/uutils/findutils
-    if [[ -d /opt/homebrew/opt/uutils-findutils/libexec/uubin ]]; then
-        path=(/opt/homebrew/opt/uutils-findutils/libexec/uubin $path)
-    fi
-
-    if [[ -d /opt/homebrew/opt/mysql-client/bin ]]; then
-        path=(/opt/homebrew/opt/mysql-client/bin $path)
-    fi
 fi
 
 # https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/

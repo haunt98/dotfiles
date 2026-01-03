@@ -5,7 +5,6 @@ brew install \
     zsh-autosuggestions \
     git neovim tree-sitter-cli \
     fzf fd bat bat-extras ripgrep git-delta difftastic eza zoxide starship sd moor \
-    uutils-coreutils uutils-diffutils uutils-findutils \
     rsync rclone restic ncdu fclones f2 tlrc totp-cli \
     yt-dlp vips \
     btop asciinema qpdf fastfetch android-platform-tools \
