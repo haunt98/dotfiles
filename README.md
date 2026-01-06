@@ -31,6 +31,5 @@ go build ./cmd/dot
 - [zellij](https://github.com/zellij-org/zellij)
 - [starship](https://github.com/starship/starship)
 - [zed](https://github.com/zed-industries/zed)
-- [btop](https://github.com/aristocratos/btop)
 - [typos](https://github.com/crate-ci/typos)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)

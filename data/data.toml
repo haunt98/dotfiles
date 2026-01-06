@@ -74,10 +74,6 @@ external = "~/.bunfig.toml"
 internal = "data/npm/.npmrc"
 external = "~/.npmrc"
 
-[[apps.btop.paths]]
-internal = "data/btop/themes"
-external = "~/.config/btop/themes"
-
 [[apps.typos.paths]]
 internal = "data/typos/typos.toml"
 external = "~/.config/typos/typos.toml"

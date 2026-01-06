@@ -44,7 +44,6 @@ upstream:
     # wcurl --curl-options="--clobber --netrc" "https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-light.icns" --output ./data/kitty/kitty-light.icns
     wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/ghostty/refs/heads/main/themes/catppuccin-mocha.conf" --output ./data/ghostty/catppuccin-mocha.conf
     wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/delta/main/catppuccin.gitconfig" --output ./data/delta/themes/catppuccin.gitconfig
-    wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/btop/main/themes/catppuccin_mocha.theme" --output ./data/btop/themes/catppuccin_mocha.theme
 
 dot-upd:
     go run ./cmd/dot upd
