@@ -7,12 +7,12 @@
   "preferred_line_length": 120,
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
   },
-  "theme": "Rosé Pine",
-  "icon_theme": "Zed (Default)",
+  "theme": "Catppuccin Mocha",
+  "icon_theme": "Catppuccin Mocha",
   "vim_mode": true,
   "show_call_status_icon": false,
-  "restore_on_startup": "none",
-  "disable_ai": true
+  "restore_on_startup": "last_session",
+  "disable_ai": true,
 }
