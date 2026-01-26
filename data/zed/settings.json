@@ -9,8 +9,8 @@
     "breadcrumbs": false,
     "quick_actions": false
   },
-  "theme": "Catppuccin Mocha",
-  "icon_theme": "Catppuccin Mocha",
+  "theme": "Rosé Pine",
+  "icon_theme": "Zed (Default)",
   "vim_mode": true,
   "show_call_status_icon": false,
   "restore_on_startup": "none",
