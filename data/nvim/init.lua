@@ -628,15 +628,6 @@ require("lazy").setup({
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
 				vim.lsp.enable("tinymist")
 
-				-- https://github.com/tekumara/typos-lsp
-				vim.lsp.enable("typos_lsp")
-				vim.lsp.config("typos_lsp", {
-					init_options = {
-						config = "~/.config/typos/typos.toml",
-						diagnosticSeverity = "Warning",
-					},
-				})
-
 				-- General
 				vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float)
 				vim.keymap.set("n", "<leader>dt", function()
