@@ -1,7 +1,5 @@
 config-file = catppuccin-mocha.conf
 
-custom-shader = shaders/cursor_blaze.glsl
-
 font-family = PragmataPro Mono Liga
 font-size = 16
 

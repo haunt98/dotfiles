@@ -42,10 +42,6 @@ external = "~/.config/ghostty/config"
 internal = "data/ghostty/catppuccin-mocha.conf"
 external = "~/.config/ghostty/catppuccin-mocha.conf"
 
-[[apps.ghostty.paths]]
-internal = "data/ghostty/shaders"
-external = "~/.config/ghostty/shaders"
-
 [[apps.fd.paths]]
 internal = "data/fd/.ignore"
 external = "~/.ignore"
