@@ -6,9 +6,10 @@
 # uv cache clean
 # rm -rf ~/.bun/install/cache
 # docker system prune --all --force --volumes
-# rm -rf ~/Library/Caches/llama.cpp/*
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
 # rm ~/.local/state/nvim/log
 # rm ~/.local/state/nvim/lsp.log
 # rm ~/.local/state/nvim/conform.log
 # rm -rf ~/pprof
+# rm -rf ~/Library/Caches/llama.cpp/*
+# rm -rf ~/.llamabarn/*.gguf
