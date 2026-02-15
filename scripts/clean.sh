@@ -4,7 +4,7 @@
 # rm -rf ~/Library/Caches/gopls
 # rm -rf ~/Library/Caches/goimports
 # uv cache clean
-# bun pm cache rm --global
+# rm -rf ~/.bun/install/cache
 # docker system prune --all --force --volumes
 # rm -rf ~/Library/Caches/llama.cpp/*
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
