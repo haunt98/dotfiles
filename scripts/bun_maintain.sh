@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bun update --global --latest prettier
+bun update --global --latest
