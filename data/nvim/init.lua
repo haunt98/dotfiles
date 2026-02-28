@@ -162,13 +162,9 @@ require("lazy").setup({
 		},
 
 		-- https://github.com/Saghen/blink.cmp
-		-- https://github.com/fang2hou/blink-copilot
 		{
 			"saghen/blink.cmp",
 			version = "v1.*",
-			dependencies = {
-				"fang2hou/blink-copilot",
-			},
 			opts = {
 				keymap = {
 					preset = "none",
@@ -193,15 +189,7 @@ require("lazy").setup({
 					},
 				},
 				sources = {
-					default = { "lsp", "path", "buffer", "copilot" },
-					providers = {
-						copilot = {
-							name = "copilot",
-							module = "blink-copilot",
-							score_offset = 100,
-							async = true,
-						},
-					},
+					default = { "lsp", "path", "buffer" },
 				},
 			},
 		},
@@ -643,41 +631,6 @@ require("lazy").setup({
 				vim.lsp.inlay_hint.enable(true)
 				vim.lsp.set_log_level("OFF")
 			end,
-		},
-
-		-- https://github.com/zbirenbaum/copilot.lua
-		{
-			"zbirenbaum/copilot.lua",
-			cmd = "Copilot",
-			event = "InsertEnter",
-			opts = {
-				panel = {
-					enabled = false,
-				},
-				suggestion = {
-					enabled = false,
-				},
-				filetypes = {
-					["*"] = false,
-					gitcommit = true,
-					go = true,
-					just = true,
-					make = true,
-					markdown = true,
-					plantuml = true,
-					proto = true,
-					python = true,
-					r = true,
-					sql = true,
-				},
-				server_opts_overrides = {
-					settings = {
-						telemetry = {
-							telemetryLevel = "off",
-						},
-					},
-				},
-			},
 		},
 	},
 	rocks = {
