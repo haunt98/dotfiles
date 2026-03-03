@@ -162,13 +162,9 @@ require("lazy").setup({
 		},
 
 		-- https://github.com/Saghen/blink.cmp
-		-- https://github.com/fang2hou/blink-copilot
 		{
 			"saghen/blink.cmp",
 			version = "v1.*",
-			dependencies = {
-				"fang2hou/blink-copilot",
-			},
 			opts = {
 				keymap = {
 					preset = "none",
@@ -193,15 +189,7 @@ require("lazy").setup({
 					},
 				},
 				sources = {
-					default = { "lsp", "path", "buffer", "copilot" },
-					providers = {
-						copilot = {
-							name = "copilot",
-							module = "blink-copilot",
-							score_offset = 100,
-							async = true,
-						},
-					},
+					default = { "lsp", "path", "buffer" },
 				},
 			},
 		},
@@ -648,36 +636,61 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
-			cmd = "Copilot",
 			event = "InsertEnter",
-			opts = {
-				panel = {
-					enabled = false,
-				},
-				suggestion = {
-					enabled = false,
-				},
-				filetypes = {
-					["*"] = false,
-					gitcommit = true,
-					go = true,
-					just = true,
-					make = true,
-					markdown = true,
-					plantuml = true,
-					proto = true,
-					python = true,
-					r = true,
-					sql = true,
-				},
-				server_opts_overrides = {
-					settings = {
-						telemetry = {
-							telemetryLevel = "off",
+			config = function()
+				require("copilot").setup({
+					panel = {
+						enabled = false,
+					},
+					suggestion = {
+						auto_trigger = true,
+						keymap = {
+							accept = "<M-Right>",
+							accept_word = false,
+							accept_line = false,
+							next = false,
+							prev = false,
+							dismiss = false,
+							toggle_auto_trigger = false,
 						},
 					},
-				},
-			},
+					filetypes = {
+						["*"] = false,
+						gitcommit = true,
+						go = true,
+						just = true,
+						lua = true,
+						make = true,
+						markdown = true,
+						plantuml = true,
+						proto = true,
+						python = true,
+						r = true,
+						sql = true,
+					},
+					server_opts_overrides = {
+						settings = {
+							telemetry = {
+								telemetryLevel = "off",
+							},
+						},
+					},
+				})
+
+				vim.api.nvim_create_autocmd("User", {
+					pattern = "BlinkCmpMenuOpen",
+					callback = function()
+						vim.b.copilot_suggestion_hidden = true
+					end,
+				})
+
+				vim.api.nvim_create_autocmd("User", {
+					pattern = "BlinkCmpMenuClose",
+					callback = function()
+						vim.b.copilot_suggestion_hidden = false
+					end,
+				})
+			end,
 		},
 	},
 	rocks = {
