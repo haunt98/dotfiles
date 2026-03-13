@@ -577,6 +577,7 @@ require("lazy").setup({
 				-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
 				vim.lsp.config("gopls", {
+					---@type lspconfig.settings.gopls
 					settings = {
 						gopls = {
 							hints = {
@@ -609,6 +610,21 @@ require("lazy").setup({
 				-- Lua
 				-- https://luals.github.io/#neovim-install
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
+				vim.lsp.config("lua_ls", {
+					---@type lspconfig.settings.lua_ls
+					settings = {
+						Lua = {
+							runtime = {
+								version = "LuaJIT",
+							},
+							workspace = {
+								library = {
+									vim.env.VIMRUNTIME,
+								},
+							},
+						},
+					},
+				})
 				vim.lsp.enable("lua_ls")
 
 				-- Typst
