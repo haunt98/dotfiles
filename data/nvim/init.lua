@@ -290,48 +290,48 @@ require("lazy").setup({
 			},
 			keys = {
 				{
+					"<leader>b",
+					function()
+						Snacks.picker.buffers()
+					end,
+				},
+				{
 					"<leader>f",
 					function()
 						Snacks.picker.files({
 							hidden = true,
 						})
 					end,
-					desc = "Find Files",
 				},
 				{
 					"<leader>l",
 					function()
 						Snacks.picker.lines()
 					end,
-					desc = "Buffer Lines",
 				},
 				{
 					"<leader>rg",
 					function()
 						Snacks.picker.grep()
 					end,
-					desc = "Grep",
 				},
 				{
 					"<leader>rs",
 					function()
 						Snacks.picker.resume()
 					end,
-					desc = "Resume",
 				},
 				{
 					"<leader>gs",
 					function()
 						Snacks.picker.git_status()
 					end,
-					desc = "Git Status",
 				},
 				{
 					"<Space>s",
 					function()
 						Snacks.picker.lsp_symbols()
 					end,
-					desc = "LSP Symbols",
 				},
 				{
 					"<Space>r",
@@ -339,7 +339,6 @@ require("lazy").setup({
 						Snacks.picker.lsp_references()
 					end,
 					nowait = true,
-					desc = "References",
 				},
 				{
 					"gr",
@@ -347,14 +346,12 @@ require("lazy").setup({
 						Snacks.picker.lsp_references()
 					end,
 					nowait = true,
-					desc = "References",
 				},
 				{
 					"<Space>i",
 					function()
 						Snacks.picker.lsp_implementations()
 					end,
-					desc = "Goto Implementation",
 				},
 			},
 		},
