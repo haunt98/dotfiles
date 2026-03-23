@@ -1,15 +1,17 @@
 # Need to run this once in a while
-# go clean -cache -testcache -modcache -fuzzcache -x
+# go clean -cache -testcache -modcache -fuzzcache
 # golangci-lint cache clean
-# rm -rf ~/Library/Caches/gopls
-# rm -rf ~/Library/Caches/goimports
+# docker system prune --all --force --volumes
 # uv cache clean
 # rm -rf ~/.bun/install/cache
-# docker system prune --all --force --volumes
+# truncate -s 0 ~/.local/state/nvim/log
+# truncate -s 0 ~/.local/state/nvim/lsp.log
+#
+# macOS
+# rm -rf ~/Library/Caches/gopls
+# rm -rf ~/Library/Caches/goimports
+# sudo log erase --all
+# sudo rm /private/var/log/system.log.*.gz
+# sudo rm /private/var/log/install.log.*.gz
+# sudo rm /private/var/log/wifi.log.*.bz2
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
-# rm ~/.local/state/nvim/log
-# rm ~/.local/state/nvim/lsp.log
-# rm ~/.local/state/nvim/conform.log
-# rm -rf ~/pprof
-# rm -rf ~/Library/Caches/llama.cpp/*
-# rm -rf ~/.llamabarn/*.gguf
