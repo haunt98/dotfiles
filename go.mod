@@ -8,7 +8,7 @@ require (
 	github.com/make-go-great/color-go v0.7.0
 	github.com/make-go-great/copy-go v0.10.0
 	github.com/make-go-great/diff-go v0.0.7
-	github.com/urfave/cli/v3 v3.7.0
+	github.com/urfave/cli/v3 v3.8.0
 	golang.org/x/sync v0.20.0
 )
 
