@@ -1,7 +1,8 @@
 config-file = catppuccin-mocha.conf
 
-font-family = PragmataPro Mono Liga
-font-size = 16
+font-family = Monaspace Krypton
+font-feature = calt, liga, ss01, ss02, ss03, ss06
+font-size = 14
 
 adjust-cell-height = 20%
 
