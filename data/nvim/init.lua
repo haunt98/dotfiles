@@ -658,7 +658,7 @@ require("lazy").setup({
 				vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 
 				vim.lsp.inlay_hint.enable(true)
-				vim.lsp.set_log_level("OFF")
+				vim.lsp.log.set_level("OFF")
 			end,
 		},
 
