@@ -75,7 +75,7 @@ internal = "data/bun/bunfig.toml"
 external = "~/.bunfig.toml"
 
 [[apps.npm.paths]]
-internal = "data/npm/.npmrc"
+internal = "data/npm/npmrc"
 external = "~/.npmrc"
 
 [[apps.typos.paths]]

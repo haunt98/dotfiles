@@ -6,7 +6,7 @@ production = true
 exact = true
 frozenLockfile = true
 
-minimumReleaseAge = 259200
+minimumReleaseAge = 1209600
 
 [install.lockfile]
 save = true

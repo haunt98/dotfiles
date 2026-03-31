@@ -1,5 +1,6 @@
 ; https://github.com/bodadotsh/npm-security-best-practices
 
+min-release-age=14
 ignore-scripts=true
 provenance=true
 save-exact=true
