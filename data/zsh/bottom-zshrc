@@ -26,24 +26,24 @@ zstyle ':completion:*' special-dirs true
 if command -v brew &>/dev/null; then
     # https://github.com/zsh-users/zsh-autosuggestions
     if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
         export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-        export ZSH_AUTOSUGGEST_MANUAL_REBIND=true
+        export ZSH_AUTOSUGGEST_MANUAL_REBIND=false
         export ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
+
+        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     fi
 
     # https://unix.stackexchange.com/q/621606
     # https://github.com/zsh-users/zsh-history-substring-search
     if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
+        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+        export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
+
         source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
         bindkey '^[[A' history-substring-search-up
         bindkey '^[[B' history-substring-search-down
-
-        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
-        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
-        export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
     fi
 
     # https://github.com/zsh-users/zsh-syntax-highlighting
@@ -53,7 +53,6 @@ if command -v brew &>/dev/null; then
 
         source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-        typeset -A ZSH_HIGHLIGHT_STYLES
         # Remove underline from catppuccin mocha theme
         # https://github.com/catppuccin/zsh-syntax-highlighting/issues/7
         ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4'
