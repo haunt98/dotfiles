@@ -121,6 +121,7 @@ require("lazy").setup({
 		-- https://github.com/catppuccin/nvim
 		{
 			"catppuccin/nvim",
+			commit = "a7788416689dbefea659d9e9415c87926b0ba5d8",
 			name = "catppuccin",
 			priority = 1000,
 			config = function()
@@ -197,6 +198,7 @@ require("lazy").setup({
 		-- https://github.com/lewis6991/gitsigns.nvim
 		{
 			"lewis6991/gitsigns.nvim",
+			version = "v2.*",
 			config = function()
 				local gitsigns = require("gitsigns")
 				gitsigns.setup({
@@ -229,6 +231,7 @@ require("lazy").setup({
 		-- https://github.com/tpope/vim-projectionist
 		{
 			"tpope/vim-projectionist",
+			commit = "5ff7bf79a6ef741036d2038a226bcb5f8b1cd296",
 			ft = "go",
 			init = function()
 				vim.g.projectionist_heuristics = {
@@ -253,15 +256,10 @@ require("lazy").setup({
 			end,
 		},
 
-		-- https://github.com/mcauley-penney/visual-whitespace.nvim
-		{
-			"mcauley-penney/visual-whitespace.nvim",
-			config = true,
-		},
-
 		-- https://github.com/folke/snacks.nvim
 		{
 			"folke/snacks.nvim",
+			version = "v2.*",
 			priority = 1000,
 			lazy = false,
 			---@type snacks.Config
@@ -359,6 +357,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
+			version = "*",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
@@ -459,6 +458,7 @@ require("lazy").setup({
 		-- https://github.com/aklt/plantuml-syntax
 		{
 			"aklt/plantuml-syntax",
+			commit = "9d4900aa16674bf5bb8296a72b975317d573b547",
 			ft = {
 				"plantuml",
 			},
@@ -467,6 +467,7 @@ require("lazy").setup({
 		-- https://github.com/stevearc/conform.nvim
 		{
 			"stevearc/conform.nvim",
+			version = "v9.*",
 			config = function()
 				local conform = require("conform")
 				conform.setup({
@@ -554,6 +555,7 @@ require("lazy").setup({
 		-- https://github.com/chrisgrieser/nvim-origami
 		{
 			"chrisgrieser/nvim-origami",
+			commit = "e5b527f41d18c2ee5af868e1a3939b60f15fdb90",
 			event = "VeryLazy",
 			opts = {},
 			init = function()
@@ -584,6 +586,7 @@ require("lazy").setup({
 		-- https://github.com/neovim/nvim-lspconfig
 		{
 			"neovim/nvim-lspconfig",
+			version = "v2.*",
 			config = function()
 				-- Go
 				-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
@@ -665,6 +668,7 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
+			version = "v2.*",
 			event = "InsertEnter",
 			config = function()
 				require("copilot").setup({
