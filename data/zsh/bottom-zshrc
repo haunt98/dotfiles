@@ -19,7 +19,7 @@ export XDG_DATA_HOME=~/.local/share
 # https://damn.engineer/2022/09/28/zsh-case-insensitive
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*'
 zstyle ':completion:*' special-dirs true
 
 # https://docs.brew.sh/Manpage
