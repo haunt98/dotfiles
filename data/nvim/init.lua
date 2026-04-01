@@ -98,6 +98,9 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- https://neovim.io/doc/user/plugins/#standard-plugin-list
+vim.cmd.packadd("nohlsearch")
+
 -- https://github.com/folke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
