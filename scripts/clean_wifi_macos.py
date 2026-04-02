@@ -22,6 +22,8 @@ def get_saved_network_names(device: str) -> list[str]:
         if network_name:
             network_names.append(network_name)
 
+    network_names.sort()
+
     return network_names
 
 
