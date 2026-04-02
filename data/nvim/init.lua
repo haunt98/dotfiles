@@ -209,24 +209,38 @@ require("lazy").setup({
 					current_line_blame_opts = {
 						ignore_whitespace = true,
 					},
+					on_attach = function(bufnr)
+						vim.keymap.set("n", "]h", function()
+							gitsigns.nav_hunk("next", {
+								target = "all",
+							})
+						end, { buf = bufnr })
+
+						vim.keymap.set("n", "[h", function()
+							gitsigns.nav_hunk("prev", {
+								target = "all",
+							})
+						end, { buf = bufnr })
+
+						-- My Sofle V2 do not have map `[`, `]` directly
+						vim.keymap.set("n", ")h", "]h", {
+							remap = true,
+							buf = bufnr,
+						})
+						vim.keymap.set("n", "(h", "[h", {
+							remap = true,
+							buf = bufnr,
+						})
+						vim.keymap.set("n", ")H", "]H", {
+							remap = true,
+							buf = bufnr,
+						})
+						vim.keymap.set("n", "(H", "[H", {
+							remap = true,
+							buf = bufnr,
+						})
+					end,
 				})
-
-				vim.keymap.set("n", "]h", function()
-					gitsigns.nav_hunk("next", {
-						target = "all",
-					})
-				end)
-				vim.keymap.set("n", "[h", function()
-					gitsigns.nav_hunk("prev", {
-						target = "all",
-					})
-				end)
-
-				-- My Sofle V2 do not have map `[`, `]` directly
-				vim.keymap.set("n", ")h", "]h", { remap = true })
-				vim.keymap.set("n", "(h", "[h", { remap = true })
-				vim.keymap.set("n", ")H", "]H", { remap = true })
-				vim.keymap.set("n", "(H", "[H", { remap = true })
 			end,
 		},
 
