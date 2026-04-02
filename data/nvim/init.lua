@@ -90,11 +90,10 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
 -- Disable comment on new line
--- https://neovim.discourse.group/t/how-do-i-prevent-neovim-commenting-out-next-line-after-a-comment-line/3711/7
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
 	callback = function()
-		vim.opt.formatoptions:remove({ "c", "r", "o" })
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
 	end,
 })
 
