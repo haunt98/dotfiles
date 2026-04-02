@@ -284,14 +284,21 @@ require("lazy").setup({
 					size = 1 * 1024 * 1024, -- 1MB
 					---@param ctx {buf: number, ft:string}
 					setup = function(ctx)
-						-- Default config
 						if vim.fn.exists(":NoMatchParen") ~= 0 then
 							vim.cmd([[NoMatchParen]])
 						end
-						Snacks.util.wo(0, { foldmethod = "manual", statuscolumn = "", conceallevel = 0 })
+
+						Snacks.util.wo(0, {
+							foldmethod = "manual",
+							statuscolumn = "",
+							conceallevel = 0,
+						})
+
 						vim.b.completion = false
-						vim.b.minianimate_disable = true
+
 						vim.b.minihipatterns_disable = true
+						vim.b.minicursorword_disable = true
+						vim.b.miniindentscope_disable = true
 					end,
 				},
 				notifier = {
@@ -437,8 +444,13 @@ require("lazy").setup({
 					},
 				})
 
-				vim.keymap.set("n", "<C-n>", ":lua MiniFiles.open(nil, false)<CR>")
-				vim.keymap.set("n", "<Leader>n", ":lua MiniFiles.open(vim.api.nvim_buf_get_name(0), false)<CR>")
+				vim.keymap.set("n", "<C-n>", function()
+					MiniFiles.open(nil, false)
+				end)
+
+				vim.keymap.set("n", "<Leader>n", function()
+					MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
+				end)
 
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-hipatterns.txt
 				local hipatterns = require("mini.hipatterns")
