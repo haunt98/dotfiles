@@ -124,7 +124,7 @@ require("lazy").setup({
 		-- https://github.com/catppuccin/nvim
 		{
 			"catppuccin/nvim",
-			commit = "a7788416689dbefea659d9e9415c87926b0ba5d8",
+			version = "v2.*",
 			name = "catppuccin",
 			priority = 1000,
 			config = function()
