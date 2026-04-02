@@ -481,6 +481,15 @@ require("lazy").setup({
 		{
 			"stevearc/conform.nvim",
 			version = "v9.*",
+			keys = {
+				{
+					"<Space>f",
+					function()
+						require("conform").format({ async = true })
+					end,
+					mode = { "n", "v" },
+				},
+			},
 			config = function()
 				local conform = require("conform")
 				conform.setup({
@@ -493,7 +502,6 @@ require("lazy").setup({
 						proto = { "buf" },
 						r = { "air" },
 						sh = { "shfmt" },
-						sql = { "sqlfluff" },
 						toml = { "trim_whitespace", "taplo" },
 						typst = { "typstyle" },
 						yaml = { "prettier" },
@@ -526,42 +534,8 @@ require("lazy").setup({
 								"-",
 							},
 						},
-						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/sqlfluff.lua
-						sqlfluff = {
-							args = {
-								"fix",
-								"--dialect=mysql",
-								"-",
-							},
-						},
-						-- https://github.com/stevearc/conform.nvim/blob/master/lua/conform/formatters/ruff_format.lua
-						ruff_format = {
-							args = {
-								"format",
-								"--force-exclude",
-								"--line-length",
-								"120",
-								"--stdin-filename",
-								"$FILENAME",
-								"-",
-							},
-						},
 					},
 				})
-
-				vim.api.nvim_create_user_command("ConformFormat", function(args)
-					local range = nil
-					if args.count ~= -1 then
-						local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]
-						range = {
-							start = { args.line1, 0 },
-							["end"] = { args.line2, end_line:len() },
-						}
-					end
-					conform.format({ async = true, range = range })
-				end, { range = true })
-
-				vim.keymap.set({ "n", "v" }, "<Space>f", ":ConformFormat<CR>")
 			end,
 		},
 
