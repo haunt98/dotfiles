@@ -573,6 +573,31 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter",
 			branch = "main",
 			build = ":TSUpdate",
+			init = function()
+				local ensureInstalled = {
+					"go",
+					"json",
+					"lua",
+					"make",
+					"markdown",
+					"markdown_inline",
+					"proto",
+					"python",
+					"r",
+					"regex",
+					"sql",
+					"toml",
+					"typst",
+					"yaml",
+				}
+				local alreadyInstalled = require("nvim-treesitter.config").get_installed()
+				local parsersToInstall = vim.iter(ensureInstalled)
+					:filter(function(parser)
+						return not vim.tbl_contains(alreadyInstalled, parser)
+					end)
+					:totable()
+				require("nvim-treesitter").install(parsersToInstall)
+			end,
 		},
 
 		-- https://github.com/nvim-treesitter/nvim-treesitter-context
