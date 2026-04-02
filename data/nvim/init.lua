@@ -209,19 +209,18 @@ require("lazy").setup({
 					current_line_blame_opts = {
 						ignore_whitespace = true,
 					},
-					on_attach = function(bufnr)
-						vim.keymap.set("n", "]h", function()
-							gitsigns.nav_hunk("next", {
-								target = "all",
-							})
-						end)
-						vim.keymap.set("n", "[h", function()
-							gitsigns.nav_hunk("prev", {
-								target = "all",
-							})
-						end)
-					end,
 				})
+
+				vim.keymap.set("n", "]h", function()
+					gitsigns.nav_hunk("next", {
+						target = "all",
+					})
+				end)
+				vim.keymap.set("n", "[h", function()
+					gitsigns.nav_hunk("prev", {
+						target = "all",
+					})
+				end)
 
 				-- My Sofle V2 do not have map `[`, `]` directly
 				vim.keymap.set("n", ")h", "]h", { remap = true })
@@ -375,20 +374,18 @@ require("lazy").setup({
 				-- General workflow
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-bracketed.txt
 				require("mini.bracketed").setup({
-					{
-						buffer = { suffix = "", options = {} },
-						comment = { suffix = "", options = {} },
-						diagnostic = { suffix = "", options = {} },
-						file = { suffix = "", options = {} },
-						indent = { suffix = "", options = {} },
-						jump = { suffix = "", options = {} },
-						location = { suffix = "", options = {} },
-						oldfile = { suffix = "", options = {} },
-						quickfix = { suffix = "", options = {} },
-						undo = { suffix = "", options = {} },
-						window = { suffix = "", options = {} },
-						yank = { suffix = "", options = {} },
-					},
+					buffer = { suffix = "", options = {} },
+					comment = { suffix = "", options = {} },
+					diagnostic = { suffix = "", options = {} },
+					file = { suffix = "", options = {} },
+					indent = { suffix = "", options = {} },
+					jump = { suffix = "", options = {} },
+					location = { suffix = "", options = {} },
+					oldfile = { suffix = "", options = {} },
+					quickfix = { suffix = "", options = {} },
+					undo = { suffix = "", options = {} },
+					window = { suffix = "", options = {} },
+					yank = { suffix = "", options = {} },
 				})
 
 				-- My Sofle V2 do not have map `[`, `]` directly
