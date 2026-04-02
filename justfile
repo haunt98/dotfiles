@@ -27,9 +27,11 @@ format:
     # go install github.com/haunt98/gofimports/cmd/gofimports@latest
     gofimports -w --company github.com/make-go-great,github.com/haunt98 .
     gofumpt -w -extra .
-    shfmt -w -s -i 4 ./scripts \
+    shfmt -w -s -i 4 ./scripts/*.sh \
         ./data/zsh/top-zshrc \
         ./data/zsh/bottom-zshrc
+    ruff check --select I --fix ./scripts/*.py
+    ruff format ./scripts/*.py
 
 build:
     go build ./cmd/dot
