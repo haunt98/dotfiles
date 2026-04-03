@@ -18,7 +18,7 @@ def get_saved_network_names(device: str) -> list[str]:
 
     network_names = []
     for line in lines[1:]:
-        network_name = line.strip()
+        network_name = line.removeprefix("\t")
         if network_name:
             network_names.append(network_name)
 
