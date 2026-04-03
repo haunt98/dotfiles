@@ -567,9 +567,10 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		{
 			"nvim-treesitter/nvim-treesitter",
-			branch = "main",
 			build = ":TSUpdate",
-			init = function()
+			config = function()
+				local ts = require("nvim-treesitter")
+
 				local ensureInstalled = {
 					"go",
 					"json",
@@ -586,13 +587,23 @@ require("lazy").setup({
 					"typst",
 					"yaml",
 				}
-				local alreadyInstalled = require("nvim-treesitter.config").get_installed()
-				local parsersToInstall = vim.iter(ensureInstalled)
-					:filter(function(parser)
-						return not vim.tbl_contains(alreadyInstalled, parser)
-					end)
-					:totable()
-				require("nvim-treesitter").install(parsersToInstall)
+
+				local installedSet = {}
+				local alreadyInstalled = ts.get_installed()
+				for _, parser in ipairs(alreadyInstalled) do
+					installedSet[parser] = true
+				end
+
+				local parsersToInstall = {}
+				for _, parser in ipairs(ensureInstalled) do
+					if not installedSet[parser] then
+						table.insert(parsersToInstall, parser)
+					end
+				end
+
+				if #parsersToInstall > 0 then
+					ts.install(parsersToInstall)
+				end
 			end,
 		},
 
