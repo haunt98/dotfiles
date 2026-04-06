@@ -713,7 +713,7 @@ require("lazy").setup({
 					suggestion = {
 						auto_trigger = true,
 						keymap = {
-							accept = "<M-Right>",
+							accept = "<M-l>",
 							accept_word = false,
 							accept_line = false,
 							next = false,
