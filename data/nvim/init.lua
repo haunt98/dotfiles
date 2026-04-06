@@ -713,7 +713,7 @@ require("lazy").setup({
 					suggestion = {
 						auto_trigger = true,
 						keymap = {
-							accept = "<M-l>",
+							accept = "<M-Right>",
 							accept_word = false,
 							accept_line = false,
 							next = false,
@@ -758,6 +758,8 @@ require("lazy").setup({
 						vim.b.copilot_suggestion_hidden = false
 					end,
 				})
+
+				vim.keymap.set("i", "<M-l>", "<M-Right>", { remap = true })
 			end,
 		},
 	},
