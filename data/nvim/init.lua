@@ -573,6 +573,7 @@ require("lazy").setup({
 
 				local ensureInstalled = {
 					"go",
+					"javascript",
 					"json",
 					"lua",
 					"make",
@@ -726,6 +727,8 @@ require("lazy").setup({
 						["*"] = false,
 						gitcommit = true,
 						go = true,
+						javascript = true,
+						json = true,
 						just = true,
 						lua = true,
 						make = true,
@@ -735,6 +738,8 @@ require("lazy").setup({
 						python = true,
 						r = true,
 						sql = true,
+						toml = true,
+						yaml = true,
 					},
 					server_opts_overrides = {
 						settings = {
