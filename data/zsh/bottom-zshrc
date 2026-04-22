@@ -24,43 +24,6 @@ zstyle ':completion:*' special-dirs true
 
 # https://docs.brew.sh/Manpage
 if command -v brew &>/dev/null; then
-    # https://github.com/zsh-users/zsh-autosuggestions
-    if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-        export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-        export ZSH_AUTOSUGGEST_MANUAL_REBIND=false
-        export ZSH_AUTOSUGGEST_HISTORY_IGNORE=$HISTORY_IGNORE
-
-        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    fi
-
-    # https://unix.stackexchange.com/q/621606
-    # https://github.com/zsh-users/zsh-history-substring-search
-    if [[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
-        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
-        export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
-        export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
-
-        source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-        bindkey '^[[A' history-substring-search-up
-        bindkey '^[[B' history-substring-search-down
-    fi
-
-    # https://github.com/zsh-users/zsh-syntax-highlighting
-    if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-        # https://github.com/catppuccin/zsh-syntax-highlighting
-        source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-
-        source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-        # Remove underline from catppuccin mocha theme
-        # https://github.com/catppuccin/zsh-syntax-highlighting/issues/7
-        ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4'
-        ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#f38ba8'
-        ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#cdd6f4'
-        ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#f38ba8'
-    fi
-
     # https://everything.curl.dev/install/macos.html
     export HOMEBREW_FORCE_BREWED_CURL=1
     path=(/opt/homebrew/opt/curl/bin $path)
