@@ -1,5 +1,153 @@
 # CHANGELOG
 
+## v1.0.6 (2026-04-22)
+
+### Added
+
+- feat(scripts): sort wifi names (2026-04-02)
+
+- feat: add clean saved wifi macos (2026-04-02)
+
+### Others
+
+- chore(zsh): no need zsh plugins (2026-04-22)
+
+- config(nvim): more filetypes (2026-04-15)
+
+- config(nvim): add M-l to support corne keyboard (2026-04-06)
+
+- config(nvim): update copilot keymap (2026-04-06)
+
+- scripts: fix network name macos has trailling space (2026-04-03)
+
+- config(nvim): improve nvim-treesitter (2026-04-03)
+
+- config(nvim): disable more when big files (2026-04-03)
+
+- config(nvim): simplify conform (2026-04-03)
+
+- config(nvim): vim.opt -> vim.opt_local (2026-04-03)
+
+- config(nvim): only remap for gitsigns current buf (2026-04-03)
+
+- config(nvim): fix gitsigns and mini.bracketed config (2026-04-03)
+
+- config(nvim): add ensureInstalled to nvim-treesitter (2026-04-03)
+
+- config(nvim): pin version catppuccin to v2.* (2026-04-03)
+
+- config: reduce min release age to 1 week (2026-04-02)
+
+- config(nvim): packadd nohlsearch (2026-04-01)
+
+- config(nvim): pin version to reduce attack surface area of supply chain attacks (2026-04-01)
+
+- config: minimum release age to 14 days (2026-03-31)
+
+- config(zsh): export before source zsh-autosuggestions, zsh-history-substring-search (2026-03-31)
+
+- config(zsh): reduce zsh completion matcher list to only case-insensitive and suffix matchers (2026-03-31)
+
+- config(nvim): fix deprecated in nvim 0.12 (2026-03-30)
+
+- config(ghostty+nvim): use Monaspace Krypton, do not python, json format (2026-03-28)
+
+- config: add uv config (2026-03-28)
+
+- chore: clean npm (2026-03-27)
+
+- chore: add more macOS clean (2026-03-23)
+
+- chore (2026-03-23)
+
+- chore (2026-03-21)
+
+- config(nvim): pick buffer (2026-03-18)
+
+- config(nvim): open big file (2026-03-15)
+
+- config(nvim): config lua_ls lsp (2026-03-14)
+
+- config(nvim): update catppuccin colorscheme name (2026-03-13)
+
+- config(kitty): add pixel_scroll (2026-03-11)
+
+- Revert "config(ghostty+kitty): remove window size settings" (2026-03-11)
+
+- config(ghostty+kitty): remove window size settings (2026-03-10)
+
+- lint (2026-03-10)
+
+- chore: add git-filter-repo (2026-03-09)
+
+- chore: use copilot directly (2026-03-03)
+
+- Revert "chore: rm copilot" (2026-03-03)
+
+- chore: rm copilot (2026-03-01)
+
+- chore: bun update all (2026-02-27)
+
+- chore(zsh): enable zsh hsitory for some (2026-02-22)
+
+- chore: add llamabarn (2026-02-16)
+
+- chore: update bun cache clean (2026-02-16)
+
+- config(zsh): ignore more (2026-02-11)
+
+- Revert "config(ghostty): re add shaders" (2026-02-09)
+
+- config(ghostty): re add shaders (2026-02-09)
+
+- chore(nvim): rm typos-lsp (2026-02-01)
+
+- config(zed): latest config (2026-01-26)
+
+- config(nvim): more copilot (2026-01-26)
+
+- chore: sync upstream (2026-01-19)
+
+- chore: rm btop (2026-01-07)
+
+- config(nvim): off ts syntax for now (2026-01-06)
+
+- chore: rm uutils (2026-01-03)
+
+- chore: change style (2025-12-22)
+
+- chore (2025-12-20)
+
+- chore: add workflow_dispatch (2025-12-20)
+
+- chore: ubuntu-latest -> ubuntu-slim (2025-12-20)
+
+- chore(changelog): generate v1.0.5 (2025-12-18)
+
+### Build
+
+- chore(deps): bump codecov/codecov-action from 5 to 6 (#126) (2026-03-27)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.7.0 to 3.8.0 (#125) (2026-03-26)
+
+- chore(deps): bump github.com/make-go-great/color-go from 0.6.0 to 0.7.0 (#124) (2026-03-23)
+
+- chore(deps): bump golang.org/x/sync from 0.19.0 to 0.20.0 (#123) (2026-03-09)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.6.2 to 3.7.0 (#122) (2026-03-02)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.14.2 to 1.15.0 (#121) (2026-01-23)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.6.1 to 3.6.2 (#120) (2026-01-19)
+
+- chore(deps): bump github.com/make-go-great/copy-go from 0.9.0 to 0.10.0 (#119) (2025-12-22)
+
+- chore(deps): bump github.com/BurntSushi/toml from 1.5.0 to 1.6.0 (#118) (2025-12-19)
+
+- chore(deps): bump github.com/make-go-great/color-go from 0.5.0 to 0.6.0 (#116) (2025-12-18)
+
+- chore(deps): bump github.com/make-go-great/diff-go from 0.0.6 to 0.0.7 (#117) (2025-12-18)
+
 ## v1.0.5 (2025-12-18)
 
 ### Others
