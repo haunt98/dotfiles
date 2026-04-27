@@ -160,6 +160,11 @@ if command -v fastfetch &>/dev/null; then
     alias ff="fastfetch"
 fi
 
+# https://github.com/anomalyco/opencode
+if command -v opencode &>/dev/null; then
+    alias oc="opencode"
+fi
+
 # https://ryuuta.net/blog/diagnosing-an-unsual-wifi-issue/
 export QT_BEARER_POLL_TIMEOUT=-1
 
