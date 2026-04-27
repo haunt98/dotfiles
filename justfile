@@ -40,7 +40,6 @@ clean:
     rm -rf dot
 
 upstream:
-    wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh" --output ./data/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
     wcurl --curl-options="--clobber --netrc" "https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf" --output ./data/kitty/mocha.conf
     # wcurl --curl-options="--clobber --netrc" "https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-dark.icns" --output ./data/kitty/kitty-dark.icns
     # wcurl --curl-options="--clobber --netrc" "https://github.com/DinkDonk/kitty-icon/raw/refs/heads/main/kitty-light.icns" --output ./data/kitty/kitty-light.icns
