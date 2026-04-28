@@ -1,7 +1,7 @@
 config-file = catppuccin-mocha.conf
 
-font-family = Monaspace Krypton
-font-feature = calt, liga, ss01, ss02, ss03, ss06
+font-family = Annotation Mono
+font-feature = liga, ss01, onum
 font-size = 14
 
 adjust-cell-height = 20%
