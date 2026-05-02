@@ -43,6 +43,7 @@ if command -v nvim &>/dev/null; then
     export GIT_EDITOR=nvim
     alias vi="nvim"
     alias vim="nvim"
+    alias vu="nvim"
 fi
 
 # go
