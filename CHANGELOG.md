@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v1.1.0 (2026-05-13)
+
+### Others
+
+- chore: update lint (2026-05-10)
+
+- chore: add bun outdated (2026-05-09)
+
+- config(zsh): more alias (2026-05-07)
+
+- config(ghostty+kitty): reduce font size (2026-05-05)
+
+- config(zsh): alias vim (2026-05-02)
+
+- chore: re-add govulncheck (2026-04-28)
+
+- config(ghostty): use font Annotation Mono (2026-04-28)
+
+- config: sync zed and alias opencode (2026-04-27)
+
+- chore: rm upstream zsh syntax highlighting theme (2026-04-27)
+
+- chore(changelog): generate v1.0.6 (2026-04-22)
+
+### Build
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.8.0 to 3.9.0 (#128) (2026-05-13)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.15.0 to 1.15.1 (#127) (2026-04-28)
+
 ## v1.0.6 (2026-04-22)
 
 ### Added
