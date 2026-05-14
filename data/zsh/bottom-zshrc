@@ -167,6 +167,12 @@ if command -v opencode &>/dev/null; then
     alias oc="opencode"
 fi
 
+# https://github.com/modem-dev/hunk
+if command -v hunk &>/dev/null; then
+    alias hsh="hunk show"
+    alias hdf="hunk diff"
+fi
+
 # https://ryuuta.net/blog/diagnosing-an-unsual-wifi-issue/
 export QT_BEARER_POLL_TIMEOUT=-1
 
