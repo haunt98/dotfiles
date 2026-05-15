@@ -95,11 +95,12 @@ if command -v eza &>/dev/null; then
     alias ls="eza"
     alias ll="eza -l"
     alias la="eza -la"
+    alias lt2="eza --tree --level 2"
+    alias lt3="eza --tree --level 3"
 fi
 
 # https://github.com/dandavison/delta
 if command -v delta &>/dev/null; then
-    alias da="delta"
     eval "$(delta --generate-completion zsh)"
 fi
 
@@ -123,7 +124,7 @@ fi
 
 # https://github.com/Schniz/fnm
 if command -v fnm &>/dev/null; then
-    eval "$(fnm env --use-on-cd)"
+    eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
 # https://github.com/oven-sh/bun
@@ -172,8 +173,5 @@ if command -v hunk &>/dev/null; then
     alias hsh="hunk show"
     alias hdf="hunk diff"
 fi
-
-# https://ryuuta.net/blog/diagnosing-an-unsual-wifi-issue/
-export QT_BEARER_POLL_TIMEOUT=-1
 
 export PATH
