@@ -8,6 +8,6 @@ brew install \
     rsync rclone restic ncdu fclones f2 tlrc totp-cli \
     ffmpeg yt-dlp vips jpeg-xl \
     qpdf fastfetch android-platform-tools \
-    fnm oven-sh/bun/bun just typst clang-format shfmt stylua sqlfluff taplo typos-cli typstyle lua-language-server tinymist air \
+    fnm just typst clang-format shfmt stylua sqlfluff taplo typos-cli typstyle lua-language-server tinymist air \
     yq gojq fx jd gh glab tbls k6 \
     redis

@@ -3,7 +3,6 @@
 # golangci-lint cache clean
 # docker system prune --all --force --volumes
 # uv cache clean
-# rm -rf ~/.bun/install/cache
 # npm cache clean --force
 # truncate -s 0 ~/.local/state/nvim/log
 # truncate -s 0 ~/.local/state/nvim/lsp.log

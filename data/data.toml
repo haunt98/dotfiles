@@ -66,10 +66,6 @@ external = "~/.config/zed/keymap.json"
 internal = "data/uv/uv.toml"
 external = "~/.config/uv/uv.toml"
 
-[[apps.bun.paths]]
-internal = "data/bun/bunfig.toml"
-external = "~/.bunfig.toml"
-
 [[apps.npm.paths]]
 internal = "data/npm/npmrc"
 external = "~/.npmrc"

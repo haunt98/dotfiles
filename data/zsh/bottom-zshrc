@@ -127,13 +127,6 @@ if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
-# https://github.com/oven-sh/bun
-if command -v bun &>/dev/null; then
-    if [[ -d $HOME/.cache/.bun/bin ]]; then
-        path=($path $HOME/.cache/.bun/bin)
-    fi
-fi
-
 # https://github.com/casey/just
 if command -v just &>/dev/null; then
     alias jst="just"
