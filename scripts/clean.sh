@@ -10,6 +10,12 @@
 # macOS
 # rm -rf ~/Library/Caches/gopls
 # rm -rf ~/Library/Caches/goimports
+# rm -rf ~/Library/Logs/DiagnosticReports/*
+# rm -rf ~/Library/Logs/Homebrew/*
+# rm -rf ~/Library/Logs/Zed/*
+# rm -rf ~/Library/Logs/JetBrains/*
+# rm -rf ~/Library/Logs/HTTPie/*
+# rm -rf ~/Library/Logs/Microsoft/*
 # sudo log erase --all
 # sudo rm /private/var/log/system.log.*.gz
 # sudo rm /private/var/log/install.log.*.gz
