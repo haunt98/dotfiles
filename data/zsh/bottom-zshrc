@@ -24,6 +24,8 @@ zstyle ':completion:*' special-dirs true
 
 # https://docs.brew.sh/Manpage
 if command -v brew &>/dev/null; then
+    # https://docs.brew.sh/Analytics
+    export HOMEBREW_NO_ANALYTICS=1
     # https://everything.curl.dev/install/macos.html
     export HOMEBREW_FORCE_BREWED_CURL=1
     path=(/opt/homebrew/opt/curl/bin $path)
