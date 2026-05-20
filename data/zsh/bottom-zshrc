@@ -163,6 +163,12 @@ if command -v opencode &>/dev/null; then
     alias oc="opencode"
 fi
 
+# https://github.com/earendil-works/pi
+if command -v pi &>/dev/null; then
+    export PI_OFFLINE=1
+    export PI_TELEMETRY=0
+fi
+
 # https://github.com/modem-dev/hunk
 if command -v hunk &>/dev/null; then
     alias hsh="hunk show"
