@@ -6,9 +6,9 @@ truncate -s 0 ~/.gitconfig
 # Global aliases
 git config --global alias.ass add
 git config --global alias.br "branch -v --sort=-committerdate"
+git config --global alias.brd "branch -D"
 git config --global alias.brr "branch -v --sort=-committerdate -r"
 git config --global alias.ci commit
-git config --global alias.cl clone
 git config --global alias.co checkout
 git config --global alias.df "diff -w"
 git config --global alias.dfc "diff -w --cached"
@@ -23,13 +23,12 @@ git config --global alias.psa "!git remote | xargs -L1 -P8 git push"
 git config --global alias.psaf "!git remote | xargs -L1 -P8 git push --force-with-lease"
 git config --global alias.psf "push --force-with-lease"
 git config --global alias.rank "shortlog -nse --no-merges"
-git config --global alias.rst restore
 git config --global alias.sh show
 git config --global alias.st status
-git config --global alias.stcl "stash clear"
 git config --global alias.sth stash
 git config --global alias.stp "stash pop"
 git config --global alias.sw switch
+git config --global alias.swc "switch -C"
 git config --global alias.tg "tag --sort=-version:refname"
 
 # Misc

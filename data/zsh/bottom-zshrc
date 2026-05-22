@@ -173,6 +173,7 @@ fi
 if command -v hunk &>/dev/null; then
     alias hsh="hunk show"
     alias hdf="hunk diff"
+    alias hdfc="hunk diff --cached"
 fi
 
 export PATH
