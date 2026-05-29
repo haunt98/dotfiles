@@ -740,6 +740,7 @@ require("lazy").setup({
 						sql = true,
 						toml = true,
 						yaml = true,
+						zsh = true,
 					},
 					server_opts_overrides = {
 						settings = {

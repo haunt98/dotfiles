@@ -158,6 +158,16 @@ if command -v fastfetch &>/dev/null; then
     alias ff="fastfetch"
 fi
 
+# https://github.com/cli/cli
+if command -v gh &>/dev/null; then
+    export GH_TELEMETRY=false
+fi
+
+# https://gitlab.com/gitlab-org/cli
+if command -v glab &>/dev/null; then
+    export GLAB_SEND_TELEMETRY=false
+fi
+
 # https://github.com/anomalyco/opencode
 if command -v opencode &>/dev/null; then
     alias oc="opencode"
