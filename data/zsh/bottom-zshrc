@@ -186,4 +186,10 @@ if command -v hunk &>/dev/null; then
     alias hdfc="hunk diff --cached"
 fi
 
+# https://github.com/ankitpokhrel/jira-cli
+# When jira init, choose local
+if command -v jira &>/dev/null; then
+    export JIRA_AUTH_TYPE="bearer"
+fi
+
 export PATH
