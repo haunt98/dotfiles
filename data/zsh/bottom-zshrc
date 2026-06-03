@@ -168,6 +168,11 @@ if command -v glab &>/dev/null; then
     export GLAB_SEND_TELEMETRY=false
 fi
 
+# https://github.com/grafana/k6
+if command -v k6 &>/dev/null; then
+    export K6_NO_USAGE_REPORT=true
+fi
+
 # https://github.com/anomalyco/opencode
 if command -v opencode &>/dev/null; then
     alias oc="opencode"
