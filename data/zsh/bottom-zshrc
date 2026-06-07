@@ -44,7 +44,6 @@ if command -v nvim &>/dev/null; then
     export VISUAL=nvim
     export GIT_EDITOR=nvim
     alias vi="nvim"
-    alias vim="nvim"
     alias vu="nvim"
     alias vo="nvim"
 fi
