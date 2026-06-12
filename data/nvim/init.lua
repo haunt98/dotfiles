@@ -704,7 +704,7 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
-			version = "v2.*",
+			version = "v3.*",
 			event = "InsertEnter",
 			config = function()
 				require("copilot").setup({
