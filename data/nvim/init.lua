@@ -230,14 +230,6 @@ require("lazy").setup({
 							remap = true,
 							buf = bufnr,
 						})
-						vim.keymap.set("n", ")H", "]H", {
-							remap = true,
-							buf = bufnr,
-						})
-						vim.keymap.set("n", "(H", "[H", {
-							remap = true,
-							buf = bufnr,
-						})
 					end,
 				})
 			end,
@@ -383,7 +375,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
-			version = "*",
+			commit = "a59a9b7fb0a42cbcf022938ee5f0724320b66f63",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
@@ -558,7 +550,7 @@ require("lazy").setup({
 		-- https://github.com/chrisgrieser/nvim-origami
 		{
 			"chrisgrieser/nvim-origami",
-			commit = "e5b527f41d18c2ee5af868e1a3939b60f15fdb90",
+			commit = "47be2209d09755c0202da1e22a8d67af8f5ae178",
 			event = "VeryLazy",
 			opts = {},
 			init = function()
