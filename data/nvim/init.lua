@@ -259,8 +259,12 @@ require("lazy").setup({
 							alternate = "{}_test.go",
 							type = "source",
 						},
+						["*_gen.go"] = {
+							alternate = "{}_test.go",
+							type = "source",
+						},
 						["*_test.go"] = {
-							alternate = { "{}.go", "{}_generated.go" },
+							alternate = { "{}.go", "{}_generated.go", "{}_gen.go" },
 							type = "test",
 						},
 					},
