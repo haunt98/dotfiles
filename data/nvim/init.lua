@@ -700,6 +700,7 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
+			enabled = false,
 			version = "v3.*",
 			event = "InsertEnter",
 			config = function()
@@ -761,6 +762,33 @@ require("lazy").setup({
 					end,
 				})
 
+				vim.keymap.set("i", "<M-l>", "<M-Right>", { remap = true })
+			end,
+		},
+
+		-- https://github.com/ggml-org/llama.vim
+		-- https://gist.github.com/haunt98/7f8d2560ac4385242c5e8a1966421bd3
+		{
+			"ggml-org/llama.vim",
+			event = "InsertEnter",
+			init = function()
+				vim.g.llama_config = {
+					show_info = 0,
+					keymap_fim_trigger = "",
+					keymap_fim_accept_full = "<M-Right>",
+					keymap_fim_accept_line = "",
+					keymap_fim_accept_word = "",
+					keymap_fim_next = "",
+					keymap_fim_prev = "",
+					keymap_inst_trigger = "",
+					keymap_inst_rerun = "",
+					keymap_inst_continue = "",
+					keymap_inst_accept = "",
+					keymap_inst_cancel = "",
+					keymap_debug_toggle = "",
+				}
+			end,
+			config = function()
 				vim.keymap.set("i", "<M-l>", "<M-Right>", { remap = true })
 			end,
 		},
