@@ -773,6 +773,8 @@ require("lazy").setup({
 			event = "InsertEnter",
 			init = function()
 				vim.g.llama_config = {
+					-- https://github.com/haunt98/llama-recipes
+					-- endpoint_fim = "http://127.0.0.1:8013/infill",
 					show_info = 0,
 					keymap_fim_trigger = "",
 					keymap_fim_accept_full = "<M-Right>",
