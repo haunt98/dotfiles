@@ -424,11 +424,15 @@ require("lazy").setup({
 				require("mini.files").setup({
 					content = {
 						filter = function(fs_entry)
-							if fs_entry.name == ".git" or fs_entry.name == ".DS_Store" then
-								return false
-							end
+							local ignoreds = {
+								[".git"] = true,
+								[".DS_Store"] = true,
+								[".venv"] = true,
+								[".ruff_cache"] = true,
+								["__pycache__"] = true,
+							}
 
-							return true
+							return not ignoreds[fs_entry.name]
 						end,
 					},
 					mappings = {
