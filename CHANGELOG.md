@@ -12,7 +12,7 @@
 
 - config(nvim): update mini.nvim and nvim-origami to latest commits (2026-06-13)
 
-- config(nvim): support *_gen.go (2026-06-12)
+- config(nvim): support \*\_gen.go (2026-06-12)
 
 - chore: sync editor (2026-06-12)
 
