@@ -64,7 +64,7 @@
 
 - config(nvim): add ensureInstalled to nvim-treesitter (2026-04-03)
 
-- config(nvim): pin version catppuccin to v2.* (2026-04-03)
+- config(nvim): pin version catppuccin to v2.\* (2026-04-03)
 
 - config: reduce min release age to 1 week (2026-04-02)
 
@@ -464,7 +464,7 @@
 
 - config(nvim): toggle vim diagnostic (2025-05-03)
 
-- config(nvim): migrate to vim.lsp.* apis (2025-05-03)
+- config(nvim): migrate to vim.lsp.\* apis (2025-05-03)
 
 - config(nvim): switch to copilot from llama.nvim (2025-05-03)
 
@@ -1388,7 +1388,7 @@
 
 - chore: remove unused (2024-04-06)
 
-- config(nvim): support _generated.go (2024-04-06)
+- config(nvim): support \_generated.go (2024-04-06)
 
 - chore: hide OA, OB in shell history (2024-04-06)
 
@@ -3224,7 +3224,7 @@
 
 - refactor: move main to cmd (2021-05-05)
 
-- chore:  switch pkg to internal (2021-05-05)
+- chore: switch pkg to internal (2021-05-05)
 
 - chore: add building macos on github action (#11) (2021-04-23)
 
