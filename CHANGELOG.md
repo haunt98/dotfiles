@@ -1,5 +1,79 @@
 # CHANGELOG
 
+## v1.1.1 (2026-06-15)
+
+### Others
+
+- chore (2026-06-15)
+
+- config(nvim): add llama-recipes endpoint (2026-06-13)
+
+- config(nvim): experiment llama.vim (2026-06-13)
+
+- config(nvim): update mini.nvim and nvim-origami to latest commits (2026-06-13)
+
+- config(nvim): support *_gen.go (2026-06-12)
+
+- chore: sync editor (2026-06-12)
+
+- config(zsh): rm vim alias (2026-06-08)
+
+- config(ghostty+kitty): update font size (2026-06-07)
+
+- config(zsh): off semgrep metrics (2026-06-05)
+
+- chore: disable k6 telemetry (2026-06-03)
+
+- chore: disable rtk telemetry (2026-06-03)
+
+- chore(zsh): add docs (2026-06-03)
+
+- config(zsh): support jira-cli (2026-06-03)
+
+- chore: update typo (2026-05-30)
+
+- config(zsh): disable telemetry for gh and glab (2026-05-29)
+
+- config(zsh): more git alias (2026-05-22)
+
+- chore: clean more (2026-05-20)
+
+- config(zsh): disable pi telemetry (2026-05-20)
+
+- config(kitty+zsh): update kitty palette and disable Homebrew analytics (2026-05-19)
+
+- chore: clean up more (2026-05-17)
+
+- config(zsh): ignore ffmpeg (2026-05-16)
+
+- chore: add scripts clean zsh history (2026-05-16)
+
+- config(zsh): ignore more history (2026-05-16)
+
+- chore: clean up zsh history (2026-05-16)
+
+- chore: rm bun (2026-05-16)
+
+- config(zsh): clean up init (2026-05-15)
+
+- chore: git plr (2026-05-14)
+
+- config(zsh): support hunk (2026-05-14)
+
+- chore(changelog): generate v1.1.0 (2026-05-13)
+
+### Build
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.9.0 to 3.9.1 (#133) (2026-06-11)
+
+- chore(deps): bump golang.org/x/sync from 0.20.0 to 0.21.0 (#132) (2026-06-09)
+
+- chore(deps): bump codecov/codecov-action from 6 to 7 (#131) (2026-06-08)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.15.1 to 1.15.2 (#130) (2026-06-05)
+
+- chore(deps): bump gitleaks/gitleaks-action from 2 to 3 (#129) (2026-06-01)
+
 ## v1.1.0 (2026-05-13)
 
 ### Others
