@@ -9,8 +9,16 @@
     "breadcrumbs": false,
     "quick_actions": false,
   },
-  "theme": "Gruvbox Dark Hard",
-  "icon_theme": "Zed (Default)",
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "vim_mode": true,
   "show_call_status_icon": false,
   "restore_on_startup": "empty_tab",
