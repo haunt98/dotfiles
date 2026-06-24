@@ -19,6 +19,7 @@
 # rm -rf ~/Library/Logs/JetBrains/*
 # rm -rf ~/Library/Logs/HTTPie/*
 # rm -rf ~/Library/Logs/Microsoft/*
+# rm -rf ~/Library/Logs/Cloudflare/*
 # sudo log erase --all
 # sudo rm /private/var/log/system.log.*.gz
 # sudo rm /private/var/log/install.log.*.gz
