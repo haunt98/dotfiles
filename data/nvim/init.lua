@@ -654,11 +654,6 @@ require("lazy").setup({
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ty
 				vim.lsp.enable("ty")
 
-				-- R
-				-- https://github.com/REditorSupport/languageserver/
-				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#r_language_server
-				vim.lsp.enable("r_language_server")
-
 				-- Lua
 				-- https://luals.github.io/#neovim-install
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
@@ -704,7 +699,7 @@ require("lazy").setup({
 		-- https://github.com/zbirenbaum/copilot.lua
 		{
 			"zbirenbaum/copilot.lua",
-			enabled = false,
+			enabled = true,
 			version = "v3.*",
 			event = "InsertEnter",
 			config = function()
@@ -774,6 +769,7 @@ require("lazy").setup({
 		-- https://gist.github.com/haunt98/7f8d2560ac4385242c5e8a1966421bd3
 		{
 			"ggml-org/llama.vim",
+			enabled = false,
 			event = "InsertEnter",
 			init = function()
 				vim.g.llama_config = {
