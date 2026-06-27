@@ -7,6 +7,7 @@ font-size = 14
 adjust-cell-height = 20%
 
 cursor-style-blink = false
+cursor-click-to-move = true
 mouse-hide-while-typing = true
 
 background-opacity = 0.95
