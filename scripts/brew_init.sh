@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 brew install \
-    less xz telnet \
+    bash less xz telnet \
     zsh-autosuggestions \
     git git-filter-repo neovim tree-sitter-cli \
     fzf fd bat ripgrep git-delta eza zoxide starship sd moor \

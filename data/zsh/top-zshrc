@@ -7,7 +7,7 @@
 export WORDCHARS='*?[]~&;!#$%^(){}<>'
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
-export HISTORY_IGNORE="(l[sal]|cd|rm *|open *|pwd|exit|bash|zsh|export *|z|g co *|curl *|wcurl *|docker build *|ffmpeg *|yt-dlp *|llama*)"
+export HISTORY_IGNORE="(l[sal]|cd|rm *|open *|pwd|exit|bash|zsh|export *|z|g co *|curl *|wcurl *|cs *|rg *|docker build *|ffmpeg *|yt-dlp *|llama*)"
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 
