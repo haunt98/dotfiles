@@ -21,7 +21,7 @@
 # rm -rf ~/Library/Logs/Microsoft/*
 # rm -rf ~/Library/Logs/Cloudflare/*
 # sudo log erase --all
-# sudo rm /private/var/log/system.log.*.gz
-# sudo rm /private/var/log/install.log.*.gz
-# sudo rm /private/var/log/wifi.log.*.bz2
+# sudo rm -rf /private/var/log/system.log.*.gz
+# sudo rm -rf /private/var/log/install.log.*.gz
+# sudo rm -rf /private/var/log/wifi.log.*.bz2
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
