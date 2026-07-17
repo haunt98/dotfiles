@@ -554,7 +554,7 @@ require("lazy").setup({
 		-- https://github.com/chrisgrieser/nvim-origami
 		{
 			"chrisgrieser/nvim-origami",
-			commit = "47be2209d09755c0202da1e22a8d67af8f5ae178",
+			commit = "02312301df125908031b27dc556adb4cd81893d6",
 			event = "VeryLazy",
 			opts = {},
 			init = function()
@@ -567,6 +567,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		{
 			"nvim-treesitter/nvim-treesitter",
+			commit = "4916d6592ede8c07973490d9322f187e07dfefac",
 			build = ":TSUpdate",
 			config = function()
 				local ts = require("nvim-treesitter")
@@ -611,6 +612,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter-context
 		{
 			"nvim-treesitter/nvim-treesitter-context",
+			commit = "b311b30818951d01f7b4bf650521b868b3fece16",
 			dependencies = {
 				"nvim-treesitter/nvim-treesitter",
 			},
@@ -766,9 +768,10 @@ require("lazy").setup({
 		},
 
 		-- https://github.com/ggml-org/llama.vim
-		-- https://gist.github.com/haunt98/7f8d2560ac4385242c5e8a1966421bd3
+		-- https://github.com/haunt98/llama-recipes
 		{
 			"ggml-org/llama.vim",
+			commit = "77db2afe488a7f700a2027527f17ab771988e358",
 			enabled = false,
 			event = "InsertEnter",
 			init = function()
