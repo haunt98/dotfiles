@@ -172,11 +172,6 @@ if command -v k6 &>/dev/null; then
     export K6_NO_USAGE_REPORT=true
 fi
 
-# https://github.com/semgrep/semgrep
-if command -v semgrep &>/dev/null; then
-    export SEMGREP_SEND_METRICS="off"
-fi
-
 # https://github.com/anomalyco/opencode
 if command -v opencode &>/dev/null; then
     alias oc="opencode"
