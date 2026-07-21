@@ -52,7 +52,6 @@ vim.g.mapleader = ";"
 vim.keymap.set("n", "'", "<Leader>", { remap = true })
 
 -- Keymap
-vim.keymap.set("n", "<Leader>w", ":w<CR>")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "{", "{zz")
@@ -79,6 +78,9 @@ vim.keymap.set({ "n", "v" }, "<C-f>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-u>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-b>", "<Nop>")
+vim.keymap.set("n", "H", "<Nop>")
+vim.keymap.set("n", "M", "<Nop>")
+vim.keymap.set("n", "L", "<Nop>")
 
 -- Disable annoying keymap
 vim.keymap.set({ "n", "v" }, "<F1>", "<Nop>")
@@ -763,35 +765,6 @@ require("lazy").setup({
 					end,
 				})
 
-				vim.keymap.set("i", "<M-l>", "<M-Right>", { remap = true })
-			end,
-		},
-
-		-- https://github.com/ggml-org/llama.vim
-		-- https://github.com/haunt98/llama-recipes
-		{
-			"ggml-org/llama.vim",
-			commit = "77db2afe488a7f700a2027527f17ab771988e358",
-			enabled = false,
-			event = "InsertEnter",
-			init = function()
-				vim.g.llama_config = {
-					show_info = 0,
-					keymap_fim_trigger = "",
-					keymap_fim_accept_full = "<M-Right>",
-					keymap_fim_accept_line = "",
-					keymap_fim_accept_word = "",
-					keymap_fim_next = "",
-					keymap_fim_prev = "",
-					keymap_inst_trigger = "",
-					keymap_inst_rerun = "",
-					keymap_inst_continue = "",
-					keymap_inst_accept = "",
-					keymap_inst_cancel = "",
-					keymap_debug_toggle = "",
-				}
-			end,
-			config = function()
 				vim.keymap.set("i", "<M-l>", "<M-Right>", { remap = true })
 			end,
 		},

@@ -18,6 +18,10 @@ external = "~/.config/fzf/fzfrc"
 internal = "data/nvim/init.lua"
 external = "~/.config/nvim/init.lua"
 
+[[apps.ideavim.paths]]
+internal = "data/ideavim/ideavimrc"
+external = "~/.ideavimrc"
+
 [[apps.kitty.paths]]
 internal = "data/kitty/kitty.conf"
 external = "~/.config/kitty/kitty.conf"
@@ -39,7 +43,7 @@ internal = "data/ghostty/catppuccin-mocha.conf"
 external = "~/.config/ghostty/catppuccin-mocha.conf"
 
 [[apps.fd.paths]]
-internal = "data/fd/.ignore"
+internal = "data/fd/ignore"
 external = "~/.ignore"
 
 [[apps.bat.paths]]
