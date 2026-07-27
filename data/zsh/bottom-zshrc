@@ -177,12 +177,6 @@ if command -v opencode &>/dev/null; then
     alias oc="opencode"
 fi
 
-# https://github.com/earendil-works/pi
-if command -v pi &>/dev/null; then
-    export PI_OFFLINE=1
-    export PI_TELEMETRY=0
-fi
-
 # https://github.com/rtk-ai/rtk
 if command -v rtk &>/dev/null; then
     export RTK_TELEMETRY_DISABLED=1
@@ -200,6 +194,10 @@ fi
 # When jira init, choose local
 if command -v jira &>/dev/null; then
     export JIRA_AUTH_TYPE="bearer"
+fi
+
+if command -v R &>/dev/null; then
+    alias R="R --no-save --no-restore-data"
 fi
 
 export PATH
