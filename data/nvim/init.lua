@@ -569,12 +569,18 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		{
 			"nvim-treesitter/nvim-treesitter",
-			commit = "24977147550d53589e53b874ec75e14e4fbc304e",
+			commit = "61df84986b4b4ec469ee745a182e433d49f8c27e",
 			build = ":TSUpdate",
 			config = function()
 				local ts = require("nvim-treesitter")
 
 				local ensureInstalled = {
+					"bash",
+					"csv",
+					"diff",
+					"dockerfile",
+					"git_config",
+					"git_rebase",
 					"go",
 					"javascript",
 					"json",
@@ -587,9 +593,13 @@ require("lazy").setup({
 					"r",
 					"regex",
 					"sql",
+					"ssh_config",
 					"toml",
 					"typst",
+					"vim",
+					"vimdoc",
 					"yaml",
+					"zsh",
 				}
 
 				local installedSet = {}
