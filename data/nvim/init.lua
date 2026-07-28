@@ -688,6 +688,10 @@ require("lazy").setup({
 				})
 				vim.lsp.enable("lua_ls")
 
+				-- R
+				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#r_language_server
+				vim.lsp.enable("r_language_server")
+
 				-- Typst
 				-- https://github.com/Myriad-Dreamin/tinymist
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tinymist
