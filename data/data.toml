@@ -3,12 +3,12 @@ internal = "data/git/ignore"
 external = "~/.config/git/ignore"
 
 [[apps.zsh.paths]]
-internal = "data/zsh/top-zshrc"
-external = "~/.config/zsh/top-zshrc"
+internal = "data/zsh/top-zshrc.zsh"
+external = "~/.config/zsh/top-zshrc.zsh"
 
 [[apps.zsh.paths]]
-internal = "data/zsh/bottom-zshrc"
-external = "~/.config/zsh/bottom-zshrc"
+internal = "data/zsh/bottom-zshrc.zsh"
+external = "~/.config/zsh/bottom-zshrc.zsh"
 
 [[apps.fzf.paths]]
 internal = "data/fzf/fzfrc"

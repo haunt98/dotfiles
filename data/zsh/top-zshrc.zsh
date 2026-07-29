@@ -1,4 +1,3 @@
-# vim: set filetype=zsh:
 # Put this on top of ~/.zshrc
 
 # See https://wiki.archlinux.org/title/Zsh

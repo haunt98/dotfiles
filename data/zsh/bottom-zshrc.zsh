@@ -1,4 +1,3 @@
-# vim: set filetype=zsh:
 # Put this on bottom of ~/.zshrc
 
 # https://blog.izissise.net/posts/env-path/
