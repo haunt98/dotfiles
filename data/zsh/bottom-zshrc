@@ -117,12 +117,6 @@ if command -v zoxide &>/dev/null; then
     eval "$(zoxide init zsh)"
 fi
 
-# https://github.com/walles/moor
-if command -v moor &>/dev/null; then
-    export MOOR="-no-linenumbers -no-statusbar -quit-if-one-screen -tab-size 4 -terminal-fg -wrap"
-    export PAGER=moor
-fi
-
 # https://github.com/Schniz/fnm
 if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd --shell zsh)"
