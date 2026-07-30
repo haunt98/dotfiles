@@ -8,19 +8,6 @@ typeset -U path PATH
 alias g="git"
 alias moe="make"
 
-# https://wiki.archlinux.org/title/XDG_Base_Directory
-export XDG_CONFIG_HOME=~/.config
-export XDG_CACHE_HOME=~/.cache
-export XDG_DATA_HOME=~/.local/share
-
-# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/completion.zsh
-# https://thevaluable.dev/zsh-completion-guide-examples/
-# https://damn.engineer/2022/09/28/zsh-case-insensitive
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*'
-zstyle ':completion:*' special-dirs true
-
 # https://docs.brew.sh/Manpage
 if command -v brew &>/dev/null; then
     # https://docs.brew.sh/Analytics
@@ -50,9 +37,9 @@ fi
 # go
 # https://stackoverflow.com/a/13542854
 if command -v go &>/dev/null; then
-    if [[ -d $HOME/go ]]; then
-        export GOPATH=$HOME/go
-        path=($path $GOPATH/bin)
+    if [[ -d "$HOME/go" ]]; then
+        export GOPATH="$HOME/go"
+        path=($path "$GOPATH/bin")
         export GOTELEMETRY=on
     fi
     # Depend on your company
@@ -63,7 +50,7 @@ fi
 # https://github.com/junegunn/fzf
 if command -v fzf &>/dev/null; then
     export FZF_COMPLETION_TRIGGER='~~'
-    export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzfrc
+    export FZF_DEFAULT_OPTS_FILE="$HOME/.config/fzf/fzfrc"
 
     if command -v fd &>/dev/null; then
         _fzf_compgen_path() {
@@ -135,7 +122,7 @@ fi
 
 # https://github.com/crate-ci/typos
 if command -v typos &>/dev/null; then
-    alias typo="typos --config ~/.config/typos/typos.toml"
+    alias typo="typos --config $HOME/.config/typos/typos.toml"
 fi
 
 # https://github.com/starship/starship
@@ -148,6 +135,11 @@ fi
 # https://github.com/fastfetch-cli/fastfetch
 if command -v fastfetch &>/dev/null; then
     alias ff="fastfetch"
+fi
+
+# https://github.com/medialab/xan
+if command -v xan &>/dev/null; then
+    alias xavi="xan view -t compact -R -e"
 fi
 
 # https://github.com/cli/cli
