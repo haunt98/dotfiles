@@ -184,5 +184,3 @@ fi
 if command -v R &>/dev/null; then
     alias R="R --no-save --no-restore-data"
 fi
-
-export PATH
