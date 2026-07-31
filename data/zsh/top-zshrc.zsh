@@ -12,9 +12,11 @@ export SAVEHIST=$HISTSIZE
 
 # https://zsh.sourceforge.io/Doc/Release/Options.html
 setopt AUTO_CD
+setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
 setopt HIST_NO_FUNCTIONS
 setopt HIST_NO_STORE
 setopt HIST_REDUCE_BLANKS
