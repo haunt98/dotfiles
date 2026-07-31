@@ -39,4 +39,4 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 zstyle ':completion:*' special-dirs true
 
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
