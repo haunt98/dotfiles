@@ -20,7 +20,7 @@ external = "~/.config/nvim/init.lua"
 
 [[apps.vim.paths]]
 internal = "data/vim/vimrc"
-external = "~/.vimrc"
+external = "~/.config/vim/vimrc"
 
 [[apps.ideavim.paths]]
 internal = "data/ideavim/ideavimrc"

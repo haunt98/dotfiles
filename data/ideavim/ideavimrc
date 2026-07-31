@@ -1,4 +1,4 @@
-source ~/.vimrc
+source ~/.config/vim/vimrc
 
 set clipboard+=ideaput
 set surround
