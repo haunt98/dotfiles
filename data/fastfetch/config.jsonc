@@ -9,13 +9,15 @@
     "kernel",
     "uptime",
     "packages",
-    "display",
     "terminal",
+    "terminalfont",
     "cpu",
     "gpu",
     "memory",
     "disk",
     "battery",
-    "poweradapter"
+    "poweradapter",
+    "publicip",
+    "wifi"
   ]
 }

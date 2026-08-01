@@ -1,7 +1,6 @@
 config-file = catppuccin-mocha.conf
 
-font-family = AT Name Mono Trial
-font-feature = dlig, zero, ss03, ss09, ss10, ss11, ss12
+font-family = Input Mono
 font-size = 14
 
 adjust-cell-height = 20%
