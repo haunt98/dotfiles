@@ -90,6 +90,7 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
+vim.g.no_plugin_maps = 0
 
 -- Disable comment on new line
 vim.api.nvim_create_autocmd("FileType", {
