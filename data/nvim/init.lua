@@ -569,7 +569,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		{
 			"nvim-treesitter/nvim-treesitter",
-			commit = "61df84986b4b4ec469ee745a182e433d49f8c27e",
+			commit = "7b6cc8949f9999c5ed91436cbe24aa5f99c42025",
 			build = ":TSUpdate",
 			config = function()
 				local ts = require("nvim-treesitter")
@@ -584,6 +584,7 @@ require("lazy").setup({
 					"go",
 					"javascript",
 					"json",
+					"just",
 					"lua",
 					"make",
 					"markdown",
@@ -624,7 +625,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter-context
 		{
 			"nvim-treesitter/nvim-treesitter-context",
-			commit = "b311b30818951d01f7b4bf650521b868b3fece16",
+			commit = "f3061339b8eaf9fda873600bc425b8d2d8502533",
 			dependencies = {
 				"nvim-treesitter/nvim-treesitter",
 			},
@@ -739,6 +740,7 @@ require("lazy").setup({
 					},
 					filetypes = {
 						["*"] = false,
+						bash = true,
 						gitcommit = true,
 						go = true,
 						javascript = true,
@@ -753,6 +755,7 @@ require("lazy").setup({
 						r = true,
 						sql = true,
 						toml = true,
+						typst = true,
 						yaml = true,
 						zsh = true,
 					},
