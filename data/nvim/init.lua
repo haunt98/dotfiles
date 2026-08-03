@@ -100,6 +100,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Reset jump list
+vim.api.nvim_create_autocmd("VimEnter", {
+	pattern = "*",
+	callback = function()
+		vim.cmd("clearjumps")
+	end,
+})
+
 -- https://neovim.io/doc/user/plugins/#standard-plugin-list
 vim.cmd.packadd("nohlsearch")
 
