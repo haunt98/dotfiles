@@ -3,7 +3,8 @@
     "context": "Editor && edit_prediction && !showing_completions",
     "bindings": {
       "tab": null,
-      "alt-right": "editor::AcceptEditPrediction"
+      "alt-right": "editor::AcceptEditPrediction",
+      "alt-l": "editor::AcceptEditPrediction"
     }
   },
   {

@@ -1,25 +1,19 @@
 {
-  "buffer_font_size": 16,
   "buffer_font_family": "Iosevka Pacman",
-  "soft_wrap": "bounded",
+  "buffer_font_size": 16,
+  "ui_font_family": "SF Pro",
   "preferred_line_length": 120,
+  "soft_wrap": "bounded",
+  "theme": "Gruvbox Dark Hard",
+  "icon_theme": "Zed (Default)",
+  "vim_mode": true,
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
   },
-  "theme": {
-    "mode": "system",
-    "light": "Gruvbox Light",
-    "dark": "Gruvbox Dark Hard",
-  },
-  "icon_theme": {
-    "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)",
-  },
-  "vim_mode": true,
   "show_call_status_icon": false,
   "restore_on_startup": "empty_tab",
+  "cli_default_open_behavior": "new_window",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
