@@ -1,15 +1,28 @@
 {
+  "ui_font_family": "SF Pro Text",
   "buffer_font_family": "Iosevka Pacman",
-  "buffer_font_size": 16,
-  "ui_font_family": "SF Pro",
+  "buffer_font_size": 16.0,
+  "agent_ui_font_family": "SF Pro Text",
+  "agent_ui_font_size": 16.0,
+  "agent_buffer_font_family": "Iosevka Pacman",
+  "agent_buffer_font_size": 16.0,
   "preferred_line_length": 120,
   "soft_wrap": "bounded",
   "theme": "Gruvbox Dark Hard",
   "icon_theme": "Zed (Default)",
   "vim_mode": true,
-  "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false,
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left",
+    "button": false
   },
   "show_call_status_icon": false,
   "restore_on_startup": "empty_tab",
@@ -17,12 +30,21 @@
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
-    "anthropic_retention": false,
+    "anthropic_retention": false
   },
-  "collaboration_panel": {
-    "button": false
+  "language_models": {
+    "opencode": {
+      "show_zen_models": false
+    }
   },
   "agent": {
+    "default_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash",
+      "enable_thinking": true,
+      "effort": "high"
+    },
+    "dock": "right",
     "enable_feedback": false
   },
   "edit_predictions": {
