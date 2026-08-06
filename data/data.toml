@@ -24,7 +24,7 @@ external = "~/.config/vim/vimrc"
 
 [[apps.ideavim.paths]]
 internal = "data/ideavim/ideavimrc"
-external = "~/.ideavimrc"
+external = "~/.config/ideavim/ideavimrc"
 
 [[apps.kitty.paths]]
 internal = "data/kitty/kitty.conf"
