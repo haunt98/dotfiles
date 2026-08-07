@@ -57,6 +57,12 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
+-- Up/Down visual line instead of physical line
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "<Up>", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
 -- Unnamed register aka black hole to not push to register aka trigger yank
 vim.keymap.set({ "n", "v" }, "<Leader>d", '"_d')
 vim.keymap.set({ "n", "v" }, "<Leader>c", '"_c')
@@ -78,9 +84,9 @@ vim.keymap.set({ "n", "v" }, "<C-f>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-u>", "<Nop>")
 vim.keymap.set({ "n", "v" }, "<C-b>", "<Nop>")
-vim.keymap.set("n", "H", "<Nop>")
-vim.keymap.set("n", "M", "<Nop>")
-vim.keymap.set("n", "L", "<Nop>")
+vim.keymap.set({ "n", "v" }, "H", "<Nop>")
+vim.keymap.set({ "n", "v" }, "M", "<Nop>")
+vim.keymap.set({ "n", "v" }, "L", "<Nop>")
 
 -- Disable annoying keymap
 vim.keymap.set({ "n", "v" }, "<F1>", "<Nop>")

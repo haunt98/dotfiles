@@ -32,6 +32,11 @@ nnoremap N Nzz
 nnoremap { {zz
 nnoremap } }zz
 
+nnoremap <expr> <silent> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> <silent> <Down> (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> <silent> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> <silent> <Up> (v:count == 0 ? 'gk' : 'k')
+
 nnoremap <Leader>d "_d
 vnoremap <Leader>d "_d
 nnoremap <Leader>c "_c
