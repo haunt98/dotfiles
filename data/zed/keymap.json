@@ -10,8 +10,6 @@
   {
     "context": "Editor && VimControl",
     "bindings": {
-      ")": null,
-      "(": null,
       "j": ["vim::Down", { "display_lines": true }],
       "k": ["vim::Up", { "display_lines": true }],
       "; d": ["workspace::SendKeystrokes", "\" _ d"],
