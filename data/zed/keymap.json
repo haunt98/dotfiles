@@ -1,5 +1,13 @@
 [
   {
+    "bindings": {
+      "alt-[": "pane::ActivatePreviousItem",
+      "alt-]": "pane::ActivateNextItem",
+      "ctrl-shift-left": "pane::ActivatePreviousItem",
+      "ctrl-shift-right": "pane::ActivateNextItem"
+    }
+  },
+  {
     "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
     "bindings": {
       "tab": null,
@@ -11,7 +19,9 @@
     "context": "Editor && VimControl",
     "bindings": {
       "j": ["vim::Down", { "display_lines": true }],
+      "down": ["vim::Down", { "display_lines": true }],
       "k": ["vim::Up", { "display_lines": true }],
+      "up": ["vim::Up", { "display_lines": true }],
       "; d": ["workspace::SendKeystrokes", "\" _ d"],
       "; c": ["workspace::SendKeystrokes", "\" _ c"],
       "; x": ["workspace::SendKeystrokes", "\" _ x"]
