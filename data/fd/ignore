@@ -17,9 +17,6 @@ Pictures
 # VSCode
 .vscode
 
-# Obsidian
-.obsidian
-
 # Node
 node_modules
 node
@@ -46,9 +43,3 @@ __pycache__
 
 # Software
 ~/qmk_firmware
-
-# Work
-submodules
-
-# ThacSi
-*.tsv
