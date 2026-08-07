@@ -11,6 +11,7 @@
     "ss12": true
   },
   "buffer_font_size": 14.0,
+  "buffer_font_fallbacks": ["Symbols Nerd Font Mono"],
   "agent_ui_font_family": "SF Pro Text",
   "agent_ui_font_size": 16.0,
   "agent_buffer_font_family": "AT Name Mono Trial",

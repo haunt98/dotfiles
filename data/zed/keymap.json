@@ -1,6 +1,6 @@
 [
   {
-    "context": "Editor && edit_prediction && !showing_completions",
+    "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
     "bindings": {
       "tab": null,
       "alt-right": "editor::AcceptEditPrediction",
@@ -8,19 +8,15 @@
     }
   },
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
-    "bindings": {
-      "; d": ["workspace::SendKeystrokes", "\" _ d"],
-      "; c": ["workspace::SendKeystrokes", "\" _ c"],
-      "; x": ["workspace::SendKeystrokes", "\" _ x"],
-      "space f": "editor::Format"
-    }
-  },
-  {
-    "context": "Editor",
+    "context": "Editor && VimControl",
     "bindings": {
       ")": null,
-      "(": null
+      "(": null,
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }],
+      "; d": ["workspace::SendKeystrokes", "\" _ d"],
+      "; c": ["workspace::SendKeystrokes", "\" _ c"],
+      "; x": ["workspace::SendKeystrokes", "\" _ x"]
     }
   }
 ]
