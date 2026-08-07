@@ -24,7 +24,10 @@
       "up": ["vim::Up", { "display_lines": true }],
       "; d": ["workspace::SendKeystrokes", "\" _ d"],
       "; c": ["workspace::SendKeystrokes", "\" _ c"],
-      "; x": ["workspace::SendKeystrokes", "\" _ x"]
+      "; x": ["workspace::SendKeystrokes", "\" _ x"],
+      "s a": ["vim::PushAddSurrounds", {}],
+      "s d": "vim::PushDeleteSurrounds",
+      "s r": ["vim::PushChangeSurrounds", {}]
     }
   }
 ]
