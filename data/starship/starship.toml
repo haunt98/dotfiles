@@ -3,9 +3,19 @@
 add_newline = false
 
 format = """
+$os\
 $directory\
 $git_branch\
 $git_status\
 $cmd_duration\
 $line_break\
 $character"""
+
+[os]
+disabled = false
+
+[os.symbols]
+Macos = " "
+
+[git_status]
+ignore_submodules = true

@@ -44,7 +44,14 @@ if command -v go &>/dev/null; then
     # export GOPRIVATE=example.company.com
 fi
 
-# fzf
+# The prompt
+# https://github.com/starship/starship
+if command -v starship &>/dev/null; then
+    export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+    export STARSHIP_LOG="error"
+    eval "$(starship init zsh)"
+fi
+
 # https://github.com/junegunn/fzf
 if command -v fzf &>/dev/null; then
     export FZF_COMPLETION_TRIGGER='~~'
@@ -80,25 +87,17 @@ if command -v eza &>/dev/null; then
     alias ls="eza"
     alias ll="eza -l"
     alias la="eza -la"
-    alias lt2="eza --tree --level 2"
-    alias lt3="eza --tree --level 3"
-fi
-
-# https://github.com/dandavison/delta
-if command -v delta &>/dev/null; then
-    eval "$(delta --generate-completion zsh)"
-fi
-
-# https://github.com/wilfred/difftastic
-if command -v difft &>/dev/null; then
-    export DFT_DISPLAY=inline
-    export DFT_TAB_WIDTH=2
+    alias lt="eza --tree --level 2"
 fi
 
 # https://github.com/ajeetdsouza/zoxide
 if command -v zoxide &>/dev/null; then
     export _ZO_ECHO=1
-    eval "$(zoxide init zsh)"
+    z() {
+        unfunction z
+        eval "$(zoxide init zsh)"
+        z "$@"
+    }
 fi
 
 # https://github.com/Schniz/fnm
@@ -109,7 +108,6 @@ fi
 # https://github.com/casey/just
 if command -v just &>/dev/null; then
     alias jst="just"
-    eval "$(just --completions zsh)"
 fi
 
 # https://github.com/rclone/rclone
@@ -121,13 +119,6 @@ fi
 # https://github.com/crate-ci/typos
 if command -v typos &>/dev/null; then
     alias typo="typos --config $HOME/.config/typos/typos.toml"
-fi
-
-# https://github.com/starship/starship
-if command -v starship &>/dev/null; then
-    export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-    export STARSHIP_LOG="error"
-    eval "$(starship init zsh)"
 fi
 
 # https://github.com/fastfetch-cli/fastfetch
