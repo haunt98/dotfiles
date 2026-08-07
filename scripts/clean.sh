@@ -19,12 +19,14 @@
 # rm -rf ~/Library/Logs/Microsoft/*
 # rm -rf ~/Library/Logs/Cloudflare/*
 # sudo log erase --all
-# sudo rm -rf /Library/Logs/DiagnosticReports/*
+# sudo rm -rf /private/var/log/asl/*.asl
+# sudo rm -rf /private/var/log/asl/Logs/*
 # sudo rm -rf /private/var/log/install.log.*.gz
 # sudo rm -rf /private/var/log/system.log.*.gz
 # sudo rm -rf /private/var/log/wifi.log.*.bz2
-# sudo rm -rf /private/var/log/asl/*.asl
-# sudo rm -rf /private/var/log/asl/Logs/*
 # sudo rm -rf /private/var/logs/keybagd.log.*
 # sudo rm -rf /private/var/logs/usermanagerd.log.*
 # sudo truncate -s 0 /private/var/log/ovpnagent.log
+# sudo rm -rf /Library/Logs/CrashReporter/*
+# sudo rm -rf /Library/Logs/DiagnosticReports/*
+# sudo rm -rf /Library/Logs/Microsoft/*
