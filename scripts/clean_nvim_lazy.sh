@@ -15,6 +15,6 @@ for dir in "$LAZY_DIR"/*/; do
         echo "Clean $plugin_name"
 
         git -C "$dir" clean -dfx
-        git -C "$dir" gc
+        git -C "$dir" -c gc.repackFilter="blob:none" gc --prune=now
     fi
 done
