@@ -27,7 +27,8 @@
       "; x": ["workspace::SendKeystrokes", "\" _ x"],
       "s a": ["vim::PushAddSurrounds", {}],
       "s d": "vim::PushDeleteSurrounds",
-      "s r": ["vim::PushChangeSurrounds", {}]
+      "s r": ["vim::PushChangeSurrounds", {}],
+      "space f": "editor::Format"
     }
   }
 ]
