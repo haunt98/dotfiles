@@ -151,11 +151,6 @@ if command -v opencode &>/dev/null; then
     alias oc="opencode"
 fi
 
-# https://github.com/rtk-ai/rtk
-if command -v rtk &>/dev/null; then
-    export RTK_TELEMETRY_DISABLED=1
-fi
-
 # https://github.com/modem-dev/hunk
 if command -v hunk &>/dev/null; then
     alias hsh="hunk show"
