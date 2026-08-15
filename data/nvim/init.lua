@@ -584,7 +584,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		{
 			"nvim-treesitter/nvim-treesitter",
-			commit = "a1bcffc8095c142ad1f7a9671a4ae180333f9209",
+			commit = "074aa4422bf029908338e855d0c0f71470a971bb",
 			build = ":TSUpdate",
 			config = function()
 				local ts = require("nvim-treesitter")
