@@ -8,8 +8,8 @@ require (
 	github.com/make-go-great/color-go v0.7.0
 	github.com/make-go-great/copy-go v0.10.0
 	github.com/make-go-great/diff-go v0.0.7
+	github.com/sourcegraph/conc v0.3.0
 	github.com/urfave/cli/v3 v3.11.0
-	golang.org/x/sync v0.22.0
 )
 
 require (
@@ -22,6 +22,8 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/pkg/diff v0.0.0-20241224192749-4e6772a4315c // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
+	go.uber.org/atomic v1.7.0 // indirect
+	go.uber.org/multierr v1.9.0 // indirect
 	golang.org/x/arch v0.0.0-20210923205945-b76863e36670 // indirect
 	golang.org/x/sys v0.42.0 // indirect
 )

@@ -9,7 +9,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/bytedance/sonic"
-	"golang.org/x/sync/errgroup"
+	"github.com/sourcegraph/conc/pool"
 
 	"github.com/make-go-great/copy-go"
 	"github.com/make-go-great/diff-go"
@@ -19,6 +19,8 @@ const (
 	configDirPath  = "data"
 	configFileJSON = "data.json"
 	configFileTOML = "data.toml"
+
+	maxPoolGoroutines = 8
 )
 
 var (
@@ -81,7 +83,10 @@ func loadConfig(bytes []byte, isDryRun bool, unmarshalFn func(data []byte, v any
 
 // Install internal -> external
 func (c *cfg) Install(appNames ...string) error {
-	var eg errgroup.Group
+	p := pool.New().
+		WithErrors().
+		WithMaxGoroutines(maxPoolGoroutines).
+		WithFirstError()
 
 	mAppNames := slice2map(appNames)
 
@@ -92,24 +97,19 @@ func (c *cfg) Install(appNames ...string) error {
 			}
 		}
 
-		for _, p := range app.Paths {
-			if p.External == "" {
+		for _, path := range app.Paths {
+			if path.External == "" {
 				continue
 			}
 
-			p := Path{
-				Internal: p.Internal,
-				External: p.External,
-			}
-
-			eg.Go(func() error {
+			p.Go(func() error {
 				if c.isDryRun {
-					fmt.Printf("Replace [%s] -> [%s]\n", p.Internal, p.External)
+					fmt.Printf("Replace [%s] -> [%s]\n", path.Internal, path.External)
 					return nil
 				}
 
-				if err := copy.Replace(p.Internal, p.External); err != nil {
-					return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.Internal, p.External, err)
+				if err := copy.Replace(path.Internal, path.External); err != nil {
+					return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", path.Internal, path.External, err)
 				}
 
 				return nil
@@ -117,16 +117,12 @@ func (c *cfg) Install(appNames ...string) error {
 		}
 	}
 
-	if err := eg.Wait(); err != nil {
-		return err
-	}
-
-	return nil
+	return p.Wait()
 }
 
 // Update external -> internal
 func (c *cfg) Update(appNames ...string) error {
-	var eg errgroup.Group
+	p := pool.New().WithErrors().WithMaxGoroutines(maxPoolGoroutines).WithFirstError()
 
 	mAppNames := slice2map(appNames)
 
@@ -137,24 +133,19 @@ func (c *cfg) Update(appNames ...string) error {
 			}
 		}
 
-		for _, p := range app.Paths {
-			if p.External == "" {
+		for _, path := range app.Paths {
+			if path.External == "" {
 				continue
 			}
 
-			p := Path{
-				Internal: p.Internal,
-				External: p.External,
-			}
-
-			eg.Go(func() error {
+			p.Go(func() error {
 				if c.isDryRun {
-					fmt.Printf("Replace [%s] -> [%s]\n", p.External, p.Internal)
+					fmt.Printf("Replace [%s] -> [%s]\n", path.External, path.Internal)
 					return nil
 				}
 
-				if err := copy.Replace(p.External, p.Internal); err != nil {
-					return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", p.External, p.Internal, err)
+				if err := copy.Replace(path.External, path.Internal); err != nil {
+					return fmt.Errorf("copy: failed to replace [%s] -> [%s]: %w", path.External, path.Internal, err)
 				}
 
 				return nil
@@ -162,11 +153,7 @@ func (c *cfg) Update(appNames ...string) error {
 		}
 	}
 
-	if err := eg.Wait(); err != nil {
-		return err
-	}
-
-	return nil
+	return p.Wait()
 }
 
 // Clean remove unused config inside config dir
@@ -243,8 +230,6 @@ func (c *cfg) Diff(appNames ...string) error {
 }
 
 func (c *cfg) Validate(appNames ...string) error {
-	var eg errgroup.Group
-
 	mAppNames := slice2map(appNames)
 
 	for appName, app := range c.cfgApps.Apps {
@@ -254,29 +239,15 @@ func (c *cfg) Validate(appNames ...string) error {
 			}
 		}
 
-		for _, p := range app.Paths {
-			app := app
-			p := Path{
-				Internal: p.Internal,
-				External: p.External,
+		for _, path := range app.Paths {
+			if path.Internal == "" {
+				return fmt.Errorf("empty internal app [%s]: %w", appName, ErrConfigInvalid)
 			}
 
-			eg.Go(func() error {
-				if p.Internal == "" {
-					return fmt.Errorf("empty internal app [%s]: %w", app, ErrConfigInvalid)
-				}
-
-				if p.External == "" {
-					return fmt.Errorf("empty external app [%s]: %w", app, ErrConfigInvalid)
-				}
-
-				return nil
-			})
+			if path.External == "" {
+				return fmt.Errorf("empty external app [%s]: %w", appName, ErrConfigInvalid)
+			}
 		}
-	}
-
-	if err := eg.Wait(); err != nil {
-		return err
 	}
 
 	return nil
