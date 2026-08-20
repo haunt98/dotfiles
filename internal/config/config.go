@@ -42,17 +42,28 @@ type cfg struct {
 	isDryRun bool
 }
 
-// LoadConfig return config, configDemo
 func LoadConfig(path string, isDryRun bool) (Config, error) {
 	configPathJSON := filepath.Clean(filepath.Join(path, configDirPath, configFileJSON))
 	bytes, err := os.ReadFile(configPathJSON)
-	if err == nil {
+	if err != nil {
+		if !errors.Is(err, os.ErrNotExist) {
+			return nil, fmt.Errorf("os: failed to read file [%s]: %w", configPathJSON, err)
+		}
+
+		// Not found
+	} else {
 		return loadConfig(bytes, isDryRun, sonic.Unmarshal)
 	}
 
 	configPathTOML := filepath.Clean(filepath.Join(path, configDirPath, configFileTOML))
 	bytes, err = os.ReadFile(configPathTOML)
-	if err == nil {
+	if err != nil {
+		if !errors.Is(err, os.ErrNotExist) {
+			return nil, fmt.Errorf("os: failed to read file [%s]: %w", configPathTOML, err)
+		}
+
+		// Not found
+	} else {
 		return loadConfig(bytes, isDryRun, toml.Unmarshal)
 	}
 
