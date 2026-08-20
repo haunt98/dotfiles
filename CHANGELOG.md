@@ -1,5 +1,155 @@
 # CHANGELOG
 
+## v1.2.0 (2026-08-20)
+
+### Added
+
+- feat: correct error when load config (2026-08-20)
+
+- feat: use conc instead of errgroup (2026-08-20)
+
+### Others
+
+- chore: rm app names (2026-08-20)
+
+- config(nvim): update nvim-treesitter (2026-08-16)
+
+- config(nvim): update treesitter (2026-08-13)
+
+- chore: rm rtk (2026-08-10)
+
+- chore: improve brew (2026-08-10)
+
+- config(zed): add space f format (2026-08-10)
+
+- chore: clean more (2026-08-10)
+
+- config(nvim): update treesitter (2026-08-09)
+
+- chore: git gc more (2026-08-08)
+
+- chore(scripts): clean lazy nvim (2026-08-08)
+
+- config(starship): clean up os (2026-08-07)
+
+- config(zed): support mini surround keymaps (2026-08-07)
+
+- config(zed): improve keymaps (2026-08-07)
+
+- config(zsh+starship): imrpove zsh log (2026-08-07)
+
+- config(zsh): reduce HISTSIZE to 10000 (2026-08-07)
+
+- config(nvim): actually disable plugin maps (2026-08-07)
+
+- config(fd): clean up ignore file (2026-08-07)
+
+- config(zed): restore va( vi) da( di) (2026-08-07)
+
+- config(zed): improve keymap (2026-08-07)
+
+- config(nvim+vim): map up/down better (2026-08-07)
+
+- config(fastfetch): remove terminal, terminalfont, gpu, publicip, wifi (2026-08-07)
+
+- config(ghostty+zed): change font to AT Name Mono Trial (2026-08-07)
+
+- chore: rm more (2026-08-07)
+
+- config: move ideavimrc to ~/.config/ideavim/ideavimrc (2026-08-06)
+
+- chore: clean more logs (2026-08-06)
+
+- config(zed): sync (2026-08-06)
+
+- config(zed): improve settings (2026-08-04)
+
+- config(nvim): reset jump list on startup (2026-08-03)
+
+- config(nvim): ignore plugin mappings (2026-08-02)
+
+- config(nvim): update treesitter (2026-08-02)
+
+- config(ghostty): back to some old school (2026-08-02)
+
+- config(vim): use vim 9.x (2026-07-31)
+
+- config(zsh): improve history management (2026-07-31)
+
+- config(zsh): show where dump (2026-07-31)
+
+- chore(zsh): rm cs (2026-07-30)
+
+- config(zsh): chore (2026-07-30)
+
+- config(zsh): fix compinit (2026-07-30)
+
+- config(zsh): ignore more (2026-07-29)
+
+- chore: fix format (2026-07-29)
+
+- chore: better zsh configs (2026-07-29)
+
+- chore: rm moor (2026-07-29)
+
+- config(nvim): re-add R language server (2026-07-28)
+
+- config(zsh): rm pi, add R (2026-07-27)
+
+- config(nvim): update more treesitter parsers (2026-07-27)
+
+- config: add vim (2026-07-21)
+
+- config: add ideavimrc (2026-07-21)
+
+- chore: rm semgrep again (2026-07-20)
+
+- config(nvim): sync upstream (2026-07-19)
+
+- config(nvim): update plugin commits (2026-07-17)
+
+- chore: improve scripts (2026-07-13)
+
+- config(ghostty): add ss03 for AT Name Mono Trial (2026-07-07)
+
+- config(ghostty): experiement name mono font (2026-07-06)
+
+- chore: add bash, ignore cs, rg (2026-07-02)
+
+- config(zed): run zed native format (2026-07-02)
+
+- config(ghostty): enable cursor click to move (2026-06-28)
+
+- config(nvim): clean up (2026-06-25)
+
+- chore: clean log Cloudflare (2026-06-24)
+
+- config(nvim): bump version mini.vim (2026-06-21)
+
+- config(zed): sync latest cfg (2026-06-21)
+
+- config(nvim): ignore more for mini.files (2026-06-15)
+
+- chore (2026-06-15)
+
+- chore (2026-06-15)
+
+- chore(changelog): generate v1.1.1 (2026-06-15)
+
+### Build
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.10.1 to 3.11.0 (#139) (2026-08-20)
+
+- chore(deps): bump actions/setup-go from 6 to 7 (#138) (2026-07-16)
+
+- chore(deps): bump golang.org/x/sync from 0.21.0 to 0.22.0 (#137) (2026-07-09)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.10.0 to 3.10.1 (#136) (2026-06-29)
+
+- chore(deps): bump actions/checkout from 6 to 7 (#135) (2026-06-19)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.9.1 to 3.10.0 (#134) (2026-06-15)
+
 ## v1.1.1 (2026-06-15)
 
 ### Others
