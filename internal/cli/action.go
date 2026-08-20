@@ -12,9 +12,8 @@ import (
 
 type action struct {
 	flags struct {
-		appNames []string
-		verbose  bool
-		dryRun   bool
+		verbose bool
+		dryRun  bool
 	}
 }
 
@@ -29,7 +28,7 @@ func (a *action) runInstall(ctx context.Context, c *cli.Command) error {
 		return err
 	}
 
-	if err := cfg.Install(a.flags.appNames...); err != nil {
+	if err := cfg.Install(); err != nil {
 		return fmt.Errorf("config: failed to install: %w", err)
 	}
 
@@ -42,7 +41,7 @@ func (a *action) runUpdate(ctx context.Context, c *cli.Command) error {
 		return err
 	}
 
-	if err := cfg.Update(a.flags.appNames...); err != nil {
+	if err := cfg.Update(); err != nil {
 		return fmt.Errorf("config: failed to update: %w", err)
 	}
 
@@ -68,7 +67,7 @@ func (a *action) runDiff(ctx context.Context, c *cli.Command) error {
 		return err
 	}
 
-	if err := cfg.Diff(a.flags.appNames...); err != nil {
+	if err := cfg.Diff(); err != nil {
 		return fmt.Errorf("config: failed to compare: %w", err)
 	}
 
@@ -81,7 +80,7 @@ func (a *action) runValidate(ctx context.Context, c *cli.Command) error {
 		return err
 	}
 
-	if err := cfg.Validate(a.flags.appNames...); err != nil {
+	if err := cfg.Validate(); err != nil {
 		return fmt.Errorf("config: failed to validate: %w", err)
 	}
 
@@ -104,7 +103,6 @@ func (a *action) loadConfig(c *cli.Command, command string) (config.Config, erro
 func (a *action) getFlags(c *cli.Command) {
 	a.flags.verbose = c.Bool(flagVerboseName)
 	a.flags.dryRun = c.Bool(flagDryRunName)
-	a.flags.appNames = c.StringSlice(flagAppName)
 }
 
 func (a *action) log(format string, v ...any) {

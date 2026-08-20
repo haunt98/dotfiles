@@ -36,9 +36,6 @@ const (
 	flagDryRunName  = "dry-run"
 	flagDryRunUsage = "demo mode without actually changing anything"
 
-	flagAppName  = "app"
-	flagAppUsage = "specific app to operate"
-
 	currentDir = "."
 )
 
@@ -80,10 +77,6 @@ func NewApp() *App {
 						Name:  flagDryRunName,
 						Usage: flagDryRunUsage,
 					},
-					&cli.StringSliceFlag{
-						Name:  flagAppName,
-						Usage: flagAppUsage,
-					},
 				},
 				Action: a.runInstall,
 			},
@@ -99,10 +92,6 @@ func NewApp() *App {
 					&cli.BoolFlag{
 						Name:  flagDryRunName,
 						Usage: flagDryRunUsage,
-					},
-					&cli.StringSliceFlag{
-						Name:  flagAppName,
-						Usage: flagAppUsage,
 					},
 				},
 				Action: a.runUpdate,
@@ -132,10 +121,6 @@ func NewApp() *App {
 						Name:  flagVerboseName,
 						Usage: flagVerboseUsage,
 					},
-					&cli.StringSliceFlag{
-						Name:  flagAppName,
-						Usage: flagAppUsage,
-					},
 				},
 				Action: a.runDiff,
 			},
@@ -147,10 +132,6 @@ func NewApp() *App {
 					&cli.BoolFlag{
 						Name:  flagVerboseName,
 						Usage: flagVerboseUsage,
-					},
-					&cli.StringSliceFlag{
-						Name:  flagAppName,
-						Usage: flagAppUsage,
 					},
 				},
 				Action: a.runValidate,

@@ -29,11 +29,11 @@ var (
 )
 
 type Config interface {
-	Install(appNames ...string) error
-	Update(appNames ...string) error
+	Install() error
+	Update() error
 	Clean() error
-	Diff(appNames ...string) error
-	Validate(appNames ...string) error
+	Diff() error
+	Validate() error
 	List() []string
 }
 
@@ -82,21 +82,13 @@ func loadConfig(bytes []byte, isDryRun bool, unmarshalFn func(data []byte, v any
 }
 
 // Install internal -> external
-func (c *cfg) Install(appNames ...string) error {
+func (c *cfg) Install() error {
 	p := pool.New().
 		WithErrors().
 		WithMaxGoroutines(maxPoolGoroutines).
 		WithFirstError()
 
-	mAppNames := slice2map(appNames)
-
-	for appName, app := range c.cfgApps.Apps {
-		if len(appNames) > 0 {
-			if _, ok := mAppNames[appName]; !ok {
-				continue
-			}
-		}
-
+	for _, app := range c.cfgApps.Apps {
 		for _, path := range app.Paths {
 			if path.External == "" {
 				continue
@@ -121,18 +113,13 @@ func (c *cfg) Install(appNames ...string) error {
 }
 
 // Update external -> internal
-func (c *cfg) Update(appNames ...string) error {
-	p := pool.New().WithErrors().WithMaxGoroutines(maxPoolGoroutines).WithFirstError()
+func (c *cfg) Update() error {
+	p := pool.New().
+		WithErrors().
+		WithMaxGoroutines(maxPoolGoroutines).
+		WithFirstError()
 
-	mAppNames := slice2map(appNames)
-
-	for appName, app := range c.cfgApps.Apps {
-		if len(appNames) > 0 {
-			if _, ok := mAppNames[appName]; !ok {
-				continue
-			}
-		}
-
+	for _, app := range c.cfgApps.Apps {
 		for _, path := range app.Paths {
 			if path.External == "" {
 				continue
@@ -205,16 +192,8 @@ func getUnusedDirs(apps map[string]App) (map[string]struct{}, error) {
 	return unusedDirs, nil
 }
 
-func (c *cfg) Diff(appNames ...string) error {
-	mAppNames := slice2map(appNames)
-
-	for appName, app := range c.cfgApps.Apps {
-		if len(appNames) > 0 {
-			if _, ok := mAppNames[appName]; !ok {
-				continue
-			}
-		}
-
+func (c *cfg) Diff() error {
+	for _, app := range c.cfgApps.Apps {
 		for _, p := range app.Paths {
 			if p.External == "" {
 				continue
@@ -229,16 +208,8 @@ func (c *cfg) Diff(appNames ...string) error {
 	return nil
 }
 
-func (c *cfg) Validate(appNames ...string) error {
-	mAppNames := slice2map(appNames)
-
+func (c *cfg) Validate() error {
 	for appName, app := range c.cfgApps.Apps {
-		if len(appNames) > 0 {
-			if _, ok := mAppNames[appName]; !ok {
-				continue
-			}
-		}
-
 		for _, path := range app.Paths {
 			if path.Internal == "" {
 				return fmt.Errorf("empty internal app [%s]: %w", appName, ErrConfigInvalid)
