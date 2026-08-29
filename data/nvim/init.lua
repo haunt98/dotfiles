@@ -142,6 +142,7 @@ require("lazy").setup({
 			"catppuccin/nvim",
 			version = "v2.*",
 			name = "catppuccin",
+			enabled = true,
 			priority = 1000,
 			config = function()
 				require("catppuccin").setup({

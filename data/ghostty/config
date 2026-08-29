@@ -1,7 +1,6 @@
 config-file = catppuccin-mocha.conf
 
-font-family = AT Name Mono Trial
-font-feature = dlig, zero, ss03, ss09, ss10, ss11, ss12
+font-family = TX-02-Trial
 font-size = 14
 
 adjust-cell-height = 20%
@@ -9,8 +8,6 @@ adjust-cell-height = 20%
 cursor-style-blink = false
 cursor-click-to-move = true
 mouse-hide-while-typing = true
-
-background-opacity = 0.95
 
 window-padding-x = 16
 window-padding-y = 16
