@@ -44,6 +44,12 @@ if command -v go &>/dev/null; then
     # export GOPRIVATE=example.company.com
 fi
 
+# python3
+if command -v python3 &>/dev/null; then
+    alias pysrc="source .venv/bin/activate"
+    alias pymain="python3 main.py"
+fi
+
 # The prompt
 # https://github.com/starship/starship
 if command -v starship &>/dev/null; then
