@@ -1,5 +1,5 @@
 {
-  "ui_font_family": "SF Pro Text",
+  "ui_font_family": "AT Name Sans Text Trial",
   "buffer_font_family": "AT Name Mono Trial",
   "buffer_font_features": {
     "dlig": true,
@@ -12,7 +12,7 @@
   },
   "buffer_font_size": 14.0,
   "buffer_font_fallbacks": ["Symbols Nerd Font Mono"],
-  "agent_ui_font_family": "SF Pro Text",
+  "agent_ui_font_family": "AT Name Sans Text Trial",
   "agent_ui_font_size": 16.0,
   "agent_buffer_font_family": "AT Name Mono Trial",
   "agent_buffer_font_size": 14.0,
@@ -48,12 +48,6 @@
     }
   },
   "agent": {
-    "default_model": {
-      "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
-      "enable_thinking": true,
-      "effort": "high"
-    },
     "dock": "right",
     "enable_feedback": false
   },
