@@ -50,6 +50,9 @@ if command -v python3 &>/dev/null; then
     alias pymain="python3 main.py"
 fi
 
+# Local bin
+path=($path "$HOME/.local/bin")
+
 # The prompt
 # https://github.com/starship/starship
 if command -v starship &>/dev/null; then
