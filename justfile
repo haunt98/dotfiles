@@ -31,7 +31,7 @@ format:
         ./data/zsh/*.zsh
     ruff check --select I --fix
     ruff format
-    npx prettier --log-level error --print-width 120 --tab-width 4 --prose-wrap always --write **/*.md
+    prettier --log-level error --print-width 120 --tab-width 4 --prose-wrap always --write **/*.md
 
 build:
     go build ./cmd/dot
