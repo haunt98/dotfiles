@@ -2,7 +2,7 @@
 
 brew install \
     neovim vim \
-    bash less xz telnet zsh-autosuggestions \
+    bash less xz curl telnet \
     git git-filter-repo tree-sitter-cli \
     fzf fd bat ripgrep git-delta eza zoxide starship sd \
     rsync rclone restic ncdu fclones f2 tlrc totp-cli \
