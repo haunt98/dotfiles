@@ -11,13 +11,15 @@
 # macOS
 # rm -rf ~/Library/Caches/gopls
 # rm -rf ~/Library/Caches/goimports
+# rm -rf ~/Library/Logs/CrashReporter/*
 # rm -rf ~/Library/Logs/DiagnosticReports/*
 # rm -rf ~/Library/Logs/Homebrew/*
 # rm -rf ~/Library/Logs/Zed/*
 # rm -rf ~/Library/Logs/JetBrains/*
 # rm -rf ~/Library/Logs/HTTPie/*
-# rm -rf ~/Library/Logs/Microsoft/*
 # rm -rf ~/Library/Logs/Cloudflare/*
+# rm -rf ~/Library/Logs/Microsoft/*
+# rm -rf "~/Library/Logs/Company Portal/*"
 # sudo log erase --all
 # sudo rm -rf /private/var/log/asl/*.asl
 # sudo rm -rf /private/var/log/asl/Logs/*
