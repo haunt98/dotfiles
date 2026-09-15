@@ -6,7 +6,7 @@
 export WORDCHARS='*?[]~&;!#$%^(){}<>'
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
-export HISTORY_IGNORE="(l[sal]|l[sal] *|cd|cd ..|cd ../*|..|../*|rm *|mkdir *|touch *|open *|pwd|exit|bash|zsh|export *|z|z ..|z ../*|g co *|g me *|g br*|g df*|g sh*|g restore *|g revert *|g ass *|curl *|wcurl *|bat *|rg *|fd *|*go build *|*go run*|*go test*|go install *|docker run *|docker build *|docker push *|docker login *|docker logs *|xan *|xavi *|ffmpeg *|yt-dlp *|llama*)"
+export HISTORY_IGNORE="(l[sal]|l[sal] *|cd|cd ..|cd ../*|..|../*|rm *|mkdir *|touch *|open *|pwd|exit|bash|zsh|export *|z|z ..|z ../*|g co *|g me *|g br*|g df*|g sh*|g restore *|g revert *|g ass *|curl *|wcurl *|bat *|rg *|fd *|*go build*|*go run*|*go test*|*go install*|docker run *|docker build *|docker push *|docker login *|docker logs *|xan *|xavi *|ffmpeg *|yt-dlp *|llama*)"
 export HISTSIZE=10000
 export SAVEHIST=$HISTSIZE
 
@@ -39,6 +39,8 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*'
 zstyle ':completion:*' special-dirs true
+
+[[ -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh" ]] || mkdir -p "${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
