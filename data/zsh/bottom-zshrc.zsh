@@ -160,13 +160,6 @@ if command -v opencode &>/dev/null; then
     alias oc="opencode"
 fi
 
-# https://github.com/modem-dev/hunk
-if command -v hunk &>/dev/null; then
-    alias hsh="hunk show"
-    alias hdf="hunk diff"
-    alias hdfc="hunk diff --cached"
-fi
-
 # https://github.com/ankitpokhrel/jira-cli
 # https://github.com/ankitpokhrel/jira-cli/issues/630
 # When jira init, choose local
