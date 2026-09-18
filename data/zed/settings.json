@@ -21,6 +21,9 @@
   "theme": "Gruvbox Dark Hard",
   "icon_theme": "Zed (Default)",
   "vim_mode": true,
+  "cursor_animation": {
+    "enabled": true
+  },
   "project_panel": {
     "dock": "left"
   },
