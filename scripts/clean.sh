@@ -6,6 +6,7 @@
 # npm cache clean --force
 # truncate -s 0 ~/.local/state/nvim/lsp.log
 # truncate -s 0 ~/.local/state/nvim/nvim.log
+# rm -rf ~/.npm/_logs/*
 # rm -rf ~/.local/share/opencode/log/*
 #
 # macOS
