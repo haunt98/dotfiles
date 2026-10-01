@@ -157,6 +157,7 @@ fi
 
 # https://github.com/anomalyco/opencode
 if command -v opencode &>/dev/null; then
+    export OPENCODE_LOG_LEVEL=ERROR
     alias oc="opencode"
 fi
 
