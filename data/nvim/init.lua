@@ -315,9 +315,6 @@ require("lazy").setup({
 						vim.b.miniindentscope_disable = true
 					end,
 				},
-				notifier = {
-					enabled = true,
-				},
 				picker = {
 					enabled = true,
 				},
@@ -488,6 +485,9 @@ require("lazy").setup({
 
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-indentscope.txt
 				require("mini.indentscope").setup()
+
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-notify.md
+				require("mini.notify").setup()
 
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-statusline.txt
 				require("mini.statusline").setup()
