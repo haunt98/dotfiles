@@ -140,7 +140,7 @@ require("lazy").setup({
 		-- https://github.com/catppuccin/nvim
 		{
 			"catppuccin/nvim",
-			version = "v2.*",
+			commit = "edefef779ab08ce1a4a404713e3012b0d202bd35",
 			name = "catppuccin",
 			enabled = true,
 			priority = 1000,
@@ -218,7 +218,7 @@ require("lazy").setup({
 		-- https://github.com/lewis6991/gitsigns.nvim
 		{
 			"lewis6991/gitsigns.nvim",
-			version = "v2.*",
+			commit = "070a5d7b985546cc57e1fc61e5bc507fecac6045",
 			config = function()
 				local gitsigns = require("gitsigns")
 				gitsigns.setup({
@@ -347,7 +347,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
-			version = "*",
+			commit = "65d615e1f78775323bfd4651f694824256e2adc1",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
@@ -470,7 +470,7 @@ require("lazy").setup({
 		-- https://github.com/stevearc/conform.nvim
 		{
 			"stevearc/conform.nvim",
-			version = "v9.*",
+			commit = "016802de402556da54c36bd7359b441266b01cdd",
 			config = function()
 				local conform = require("conform")
 				conform.setup({
