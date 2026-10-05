@@ -295,7 +295,7 @@ require("lazy").setup({
 			opts = {
 				bigfile = {
 					enabled = true,
-					size = 1 * 1024 * 1024, -- 1MB
+					size = 2 * 1024 * 1024, -- 1MB
 					---@param ctx {buf: number, ft:string}
 					setup = function(ctx)
 						if vim.fn.exists(":NoMatchParen") ~= 0 then
@@ -315,76 +315,33 @@ require("lazy").setup({
 						vim.b.miniindentscope_disable = true
 					end,
 				},
-				picker = {
-					enabled = true,
-				},
 			},
-			keys = {
-				{
-					"<leader>b",
-					function()
-						Snacks.picker.buffers()
-					end,
-				},
-				{
-					"<leader>f",
-					function()
-						Snacks.picker.files({
-							hidden = true,
-						})
-					end,
-				},
-				{
-					"<leader>l",
-					function()
-						Snacks.picker.lines()
-					end,
-				},
-				{
-					"<leader>rg",
-					function()
-						Snacks.picker.grep()
-					end,
-				},
-				{
-					"<leader>rs",
-					function()
-						Snacks.picker.resume()
-					end,
-				},
-				{
-					"<leader>gs",
-					function()
-						Snacks.picker.git_status()
-					end,
-				},
-				{
-					"<Space>s",
-					function()
-						Snacks.picker.lsp_symbols()
-					end,
-				},
-				{
-					"<Space>r",
-					function()
-						Snacks.picker.lsp_references()
-					end,
-					nowait = true,
-				},
-				{
-					"gr",
-					function()
-						Snacks.picker.lsp_references()
-					end,
-					nowait = true,
-				},
-				{
-					"<Space>i",
-					function()
-						Snacks.picker.lsp_implementations()
-					end,
-				},
-			},
+		},
+
+		-- https://github.com/ibhagwan/fzf-lua
+		{
+			"ibhagwan/fzf-lua",
+			commit = "bba13a0d260ca5e049683344ba70791c9ad8ece6",
+			config = function()
+				local fzf_lua = require("fzf-lua")
+				fzf_lua.setup({
+					file_icons = "mini",
+				})
+
+				vim.keymap.set("n", "<leader>b", fzf_lua.buffers)
+				vim.keymap.set("n", "<leader>f", function()
+					fzf_lua.files({
+						hidden = true,
+					})
+				end)
+				vim.keymap.set("n", "<leader>l", fzf_lua.blines)
+				vim.keymap.set("n", "<leader>rg", fzf_lua.live_grep)
+				vim.keymap.set("n", "<leader>rs", fzf_lua.resume)
+				vim.keymap.set("n", "<leader>gs", fzf_lua.git_status)
+				vim.keymap.set("n", "<Space>s", fzf_lua.lsp_document_symbols)
+				vim.keymap.set("n", "gr", fzf_lua.lsp_references, { nowait = true })
+				vim.keymap.set("n", "<Space>i", fzf_lua.lsp_implementations)
+			end,
 		},
 
 		-- https://github.com/nvim-mini/mini.nvim
@@ -492,6 +449,9 @@ require("lazy").setup({
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-statusline.txt
 				require("mini.statusline").setup()
 
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-tabline.md
+				require("mini.tabline").setup()
+
 				-- Use cl instead of s
 				vim.keymap.set({ "n", "x" }, "s", "<Nop>")
 			end,
@@ -511,15 +471,6 @@ require("lazy").setup({
 		{
 			"stevearc/conform.nvim",
 			version = "v9.*",
-			keys = {
-				{
-					"<Space>f",
-					function()
-						require("conform").format({ async = true })
-					end,
-					mode = { "n", "v" },
-				},
-			},
 			config = function()
 				local conform = require("conform")
 				conform.setup({
@@ -566,6 +517,10 @@ require("lazy").setup({
 						},
 					},
 				})
+
+				vim.keymap.set({ "n", "v" }, "<Space>f", function()
+					conform.format({ async = true })
+				end)
 			end,
 		},
 
