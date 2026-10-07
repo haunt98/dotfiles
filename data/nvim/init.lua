@@ -362,7 +362,6 @@ require("lazy").setup({
 				-- General workflow
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-bracketed.txt
 				require("mini.bracketed").setup({
-					buffer = { suffix = "", options = {} },
 					comment = { suffix = "", options = {} },
 					diagnostic = { suffix = "", options = {} },
 					file = { suffix = "", options = {} },
@@ -377,20 +376,23 @@ require("lazy").setup({
 				})
 
 				-- My Sofle V2 do not have map `[`, `]` directly
-				vim.keymap.set("n", ")d", "]d", { remap = true })
-				vim.keymap.set("n", "(d", "[d", { remap = true })
-				vim.keymap.set("n", ")D", "]D", { remap = true })
-				vim.keymap.set("n", "(D", "[D", { remap = true })
+				-- buffer
+				vim.keymap.set("n", ")b", "]b", { remap = true })
+				vim.keymap.set("n", "(b", "[b", { remap = true })
+				vim.keymap.set("n", ")B", "]B", { remap = true })
+				vim.keymap.set("n", "(B", "[B", { remap = true })
 
+				-- conflict
 				vim.keymap.set("n", ")x", "]x", { remap = true })
 				vim.keymap.set("n", "(x", "[x", { remap = true })
 				vim.keymap.set("n", ")X", "]X", { remap = true })
 				vim.keymap.set("n", "(X", "[X", { remap = true })
 
-				vim.keymap.set("n", ")t", "]t", { remap = true })
-				vim.keymap.set("n", "(t", "[t", { remap = true })
-				vim.keymap.set("n", ")T", "]T", { remap = true })
-				vim.keymap.set("n", "(T", "[T", { remap = true })
+				-- diagnostic
+				vim.keymap.set("n", ")d", "]d", { remap = true })
+				vim.keymap.set("n", "(d", "[d", { remap = true })
+				vim.keymap.set("n", ")D", "]D", { remap = true })
+				vim.keymap.set("n", "(D", "[D", { remap = true })
 
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-files.txt
 				require("mini.files").setup({
