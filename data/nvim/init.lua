@@ -321,7 +321,7 @@ require("lazy").setup({
 		-- https://github.com/ibhagwan/fzf-lua
 		{
 			"ibhagwan/fzf-lua",
-			commit = "ed0e0ead1789ee349cbf025900931fb402b1e05e",
+			commit = "71b6d3667c4846ab2f0bab06e68d196d2eea016c",
 			config = function()
 				local fzf_lua = require("fzf-lua")
 				fzf_lua.setup({
@@ -347,7 +347,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
-			commit = "8be16f79cb8edc6b15ac4d669ee416d7eac371ef",
+			commit = "3b084ad46bed14e468ee4fe5a2df03cd2f82f69c",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
@@ -435,6 +435,9 @@ require("lazy").setup({
 					},
 				})
 
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-git.txt
+				require("mini.git").setup()
+
 				-- Appearance
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-cursorword.txt
 				require("mini.cursorword").setup()
@@ -445,14 +448,16 @@ require("lazy").setup({
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-indentscope.txt
 				require("mini.indentscope").setup()
 
-				-- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-notify.md
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-notify.txt
 				require("mini.notify").setup()
 
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-statusline.txt
 				require("mini.statusline").setup()
 
-				-- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-tabline.md
-				require("mini.tabline").setup()
+				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-tabline.txt
+				require("mini.tabline").setup({
+					show_icons = false,
+				})
 
 				-- Use cl instead of s
 				vim.keymap.set({ "n", "x" }, "s", "<Nop>")
