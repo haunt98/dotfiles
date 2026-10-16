@@ -2,7 +2,7 @@
 
 go install golang.org/x/telemetry/cmd/gotelemetry@latest
 go install golang.org/x/tools/cmd/goimports@latest
-go install golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize@latest
+go install golang.org/x/tools/go/analysis/passes/modernize/cmd/modernize@latest
 go install golang.org/x/tools/gopls@latest
 go install golang.org/x/vuln/cmd/govulncheck@latest
 
