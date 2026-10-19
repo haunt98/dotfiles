@@ -1,4 +1,5 @@
 {
+  "autosave": "on_focus_change",
   "ui_font_family": "AT Name Sans Text Trial",
   "buffer_font_family": "AT Name Mono Trial",
   "buffer_font_features": {

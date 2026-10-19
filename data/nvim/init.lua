@@ -321,7 +321,7 @@ require("lazy").setup({
 		-- https://github.com/ibhagwan/fzf-lua
 		{
 			"ibhagwan/fzf-lua",
-			commit = "71b6d3667c4846ab2f0bab06e68d196d2eea016c",
+			commit = "448a7895ed900ba7e75561c16e73ad1f30c3c4f5",
 			config = function()
 				local fzf_lua = require("fzf-lua")
 				fzf_lua.setup({
@@ -347,7 +347,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
-			commit = "3b084ad46bed14e468ee4fe5a2df03cd2f82f69c",
+			commit = "295af26358628c8ba8f007ff6a7e0aec2f642a31",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
