@@ -39,7 +39,7 @@
     "button": false
   },
   "show_call_status_icon": false,
-  "restore_on_startup": "empty_tab",
+  "restore_on_startup": "launchpad",
   "cli_default_open_behavior": "new_window",
   "telemetry": {
     "diagnostics": false,

@@ -3,12 +3,12 @@
 # See https://wiki.archlinux.org/title/Zsh
 
 # https://lgug2z.com/articles/sensible-wordchars-for-most-developers/
-export WORDCHARS='*?[]~&;!#$%^(){}<>'
+WORDCHARS='*?[]~&;!#$%^(){}<>'
 
 # https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
-export HISTORY_IGNORE="(l[sal]|l[sal] *|cd|cd ..|cd ../*|..|../*|rm *|mkdir *|touch *|open *|pwd|exit|bash|zsh|export *|z|z ..|z ../*|g co *|g me *|g br*|g df*|g sh*|g restore *|g revert *|g ass *|curl *|wcurl *|bat *|rg *|fd *|*go build*|*go run*|*go test*|*go install*|docker run *|docker build *|docker push *|docker login *|docker logs *|xan *|xavi *|ffmpeg *|yt-dlp *|llama*)"
-export HISTSIZE=10000
-export SAVEHIST=$HISTSIZE
+HISTORY_IGNORE="(l[sal]|l[sal] *|cd|cd ..|cd ../*|..|../*|rm *|mkdir *|touch *|open *|pwd|exit|bash|zsh|export *|z|z ..|z ../*|g co *|g me *|g br*|g df*|g sh*|g restore *|g revert *|g ass *|curl *|wcurl *|bat *|rg *|fd *|*go build*|*go run*|*go test*|*go install*|docker run *|docker build *|docker push *|docker login *|docker logs *|xan *|xavi *|ffmpeg *|yt-dlp *|llama*)"
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
 
 # https://zsh.sourceforge.io/Doc/Release/Options.html
 setopt AUTO_CD
@@ -32,15 +32,15 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
+mkdir -p "$XDG_CACHE_HOME/zsh"
+
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/completion.zsh
 # https://thevaluable.dev/zsh-completion-guide-examples/
 # https://damn.engineer/2022/09/28/zsh-case-insensitive
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*'
 zstyle ':completion:*' special-dirs true
 
-[[ -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh" ]] || mkdir -p "${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
-
 autoload -Uz compinit
-compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
