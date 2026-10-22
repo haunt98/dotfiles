@@ -19,7 +19,7 @@
   "agent_buffer_font_size": 16.0,
   "preferred_line_length": 120,
   "soft_wrap": "bounded",
-  "theme": "Gruvbox Dark Hard",
+  "theme": "Gruvbox Light",
   "icon_theme": "Zed (Default)",
   "vim_mode": true,
   "cursor_animation": {
