@@ -321,7 +321,7 @@ require("lazy").setup({
 		-- https://github.com/ibhagwan/fzf-lua
 		{
 			"ibhagwan/fzf-lua",
-			commit = "5dca84ef44f37b960a128a43d044ee348ff86fb4",
+			commit = "507dfc85551ff2d9293ec215f10f19395252aada",
 			config = function()
 				local fzf_lua = require("fzf-lua")
 				fzf_lua.setup({
