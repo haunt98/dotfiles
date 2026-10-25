@@ -1,22 +1,15 @@
 {
   "autosave": "on_focus_change",
-  "ui_font_family": "AT Name Sans Text Trial",
-  "buffer_font_family": "AT Name Mono Trial",
+  "ui_font_family": "MonoLisaText",
+  "buffer_font_family": "MonoLisaCode",
   "buffer_font_features": {
+    "liga": true,
+    "calt": true,
     "dlig": true,
-    "zero": true,
-    "ss03": true,
-    "ss09": true,
-    "ss10": true,
-    "ss11": true,
-    "ss12": true
+    "ss02": true
   },
   "buffer_font_size": 16.0,
   "buffer_font_fallbacks": ["Symbols Nerd Font Mono"],
-  "agent_ui_font_family": "AT Name Sans Text Trial",
-  "agent_ui_font_size": 18.0,
-  "agent_buffer_font_family": "AT Name Mono Trial",
-  "agent_buffer_font_size": 16.0,
   "preferred_line_length": 120,
   "soft_wrap": "bounded",
   "theme": "Gruvbox Light",
@@ -35,21 +28,21 @@
     "dock": "left"
   },
   "collaboration_panel": {
-    "dock": "left",
+    "dock": "right",
     "button": false
   },
   "show_call_status_icon": false,
   "restore_on_startup": "launchpad",
+  "default_open_behavior": "new_window",
   "cli_default_open_behavior": "new_window",
+  "session": {
+    "restore_unsaved_buffers": false
+  },
+  "suggest_extensions": false,
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
     "anthropic_retention": false
-  },
-  "language_models": {
-    "opencode": {
-      "show_zen_models": false
-    }
   },
   "agent": {
     "dock": "right",
