@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# uv python upgrade
+# uv tool list --show-python
 uv tool upgrade --all

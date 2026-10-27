@@ -8,4 +8,4 @@ brew cleanup
 
 # Check yourself
 # brew doctor
-# brew tap
+# brew list --installed-on-request
