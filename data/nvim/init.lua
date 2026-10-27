@@ -531,19 +531,6 @@ require("lazy").setup({
 			end,
 		},
 
-		-- https://github.com/chrisgrieser/nvim-origami
-		{
-			"chrisgrieser/nvim-origami",
-			commit = "02312301df125908031b27dc556adb4cd81893d6",
-			event = "VeryLazy",
-			opts = {},
-			init = function()
-				-- Disable vim's auto-folding
-				vim.opt.foldlevel = 99
-				vim.opt.foldlevelstart = 99
-			end,
-		},
-
 		-- https://github.com/neovim/nvim-lspconfig
 		{
 			"neovim/nvim-lspconfig",
