@@ -285,39 +285,6 @@ require("lazy").setup({
 			end,
 		},
 
-		-- https://github.com/folke/snacks.nvim
-		{
-			"folke/snacks.nvim",
-			version = "v2.*",
-			priority = 1000,
-			lazy = false,
-			---@type snacks.Config
-			opts = {
-				bigfile = {
-					enabled = true,
-					size = 2 * 1024 * 1024, -- 1MB
-					---@param ctx {buf: number, ft:string}
-					setup = function(ctx)
-						if vim.fn.exists(":NoMatchParen") ~= 0 then
-							vim.cmd([[NoMatchParen]])
-						end
-
-						Snacks.util.wo(0, {
-							foldmethod = "manual",
-							statuscolumn = "",
-							conceallevel = 0,
-						})
-
-						vim.b.completion = false
-
-						vim.b.minihipatterns_disable = true
-						vim.b.minicursorword_disable = true
-						vim.b.miniindentscope_disable = true
-					end,
-				},
-			},
-		},
-
 		-- https://github.com/ibhagwan/fzf-lua
 		{
 			"ibhagwan/fzf-lua",
@@ -454,11 +421,6 @@ require("lazy").setup({
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-statusline.txt
 				require("mini.statusline").setup()
 
-				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-tabline.txt
-				require("mini.tabline").setup({
-					show_icons = false,
-				})
-
 				-- Use cl instead of s
 				vim.keymap.set({ "n", "x" }, "s", "<Nop>")
 			end,
@@ -541,7 +503,6 @@ require("lazy").setup({
 				-- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#gopls
 				vim.lsp.config("gopls", {
-					---@type lspconfig.settings.gopls
 					settings = {
 						gopls = {
 							hints = {
@@ -570,7 +531,6 @@ require("lazy").setup({
 				-- https://luals.github.io/#neovim-install
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
 				vim.lsp.config("lua_ls", {
-					---@type lspconfig.settings.lua_ls
 					settings = {
 						Lua = {
 							runtime = {
