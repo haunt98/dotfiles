@@ -9,4 +9,4 @@ brew install \
     ffmpeg yt-dlp vips jpeg-xl exiftool \
     qpdf poppler fastfetch lcdf-typetools \
     uv fnm just clang-format shfmt prettier stylua sqlfluff taplo typos-cli lua-language-server \
-    yq gojq fx jd xan gh glab tbls k6
+    jq yq fx jd xan gh glab tbls k6
