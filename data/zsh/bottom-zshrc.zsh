@@ -30,6 +30,7 @@ if command -v nvim &>/dev/null; then
     export VISUAL=nvim
     export GIT_EDITOR=nvim
     alias vi="nvim"
+    alias vir="nvim -R"
 fi
 
 # go
