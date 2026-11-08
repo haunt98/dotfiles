@@ -1,11 +1,4 @@
 # macOS
-Applications
-Desktop
-Documents
-Library
-Movies
-Music
-Pictures
 .DS_Store
 
 # Window
@@ -19,27 +12,19 @@ Pictures
 
 # Node
 node_modules
-node
 
 # Go
-mod
-sumdb
+go/pkg/mod
+go/pkg/sumdb
 vendor
-mock
-*mock*.go
-coverage.out
 
 # Python
-venv
 .venv
-ruff_cache
+.ruff_cache
 __pycache__
-
-# Java
-*.class
 
 # Wild chaos
 *.out
 
 # Software
-~/qmk_firmware
+qmk_firmware

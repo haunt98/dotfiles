@@ -2,6 +2,5 @@
 --style minimal
 
 --cycle
---bind tab:down
 
 --no-color
