@@ -1,5 +1,119 @@
 # CHANGELOG
 
+## v1.2.1 (2026-11-08)
+
+### Fixed
+
+- fix(zsh): missing mkdir -p zsh cache (2026-09-15)
+
+### Others
+
+- chore(kitty): add tft to custom shaders (2026-11-08)
+
+- chore: replace gojq with jq (2026-11-02)
+
+- chore: add pdf manipulation (2026-10-29)
+
+- config(nvim): rm snacks (2026-10-29)
+
+- chore: add usefull cmds (2026-10-28)
+
+- chore (2026-10-27)
+
+- config(zed): try new fonts (2026-10-26)
+
+- config(nvim): bump fzf-lua commit (2026-10-24)
+
+- config(zed): editor light theme (2026-10-23)
+
+- config(ghostty+kitty+zed): increase font size for better readability (2026-10-23)
+
+- config(nvim): bump fzf-lua and mini.nvim to latest commits (2026-10-23)
+
+- config(zsh): improve zsh cache (2026-10-21)
+
+- config(nvim): bump fzf-lua and mini.nvim (2026-10-19)
+
+- chore: some npm command (2026-10-17)
+
+- chore: update go modernize (2026-10-16)
+
+- config(nvim): add mini git (2026-10-15)
+
+- config(nvim): support buffer navigation (2026-10-07)
+
+- config(nvim): bump commit (2026-10-07)
+
+- config(nvim): use commit for some plugins (2026-10-05)
+
+- config(nvim): replace snacks picker with fzf-lua (2026-10-05)
+
+- config(nvim): replace snacks notifer with mini.notify (2026-10-03)
+
+- config(git): cleanup (2026-10-01)
+
+- config(zsh): migrate opencode v2 (2026-10-01)
+
+- chore (2026-10-01)
+
+- chore: more clean (2026-09-23)
+
+- config(kitty): disable blur (2026-09-22)
+
+- config(kitty): enable cursor blaze (2026-09-21)
+
+- chore (2026-09-19)
+
+- config(zed): enable cursor animation (2026-09-18)
+
+- chore (2026-09-18)
+
+- chore: clear more logs (2026-09-16)
+
+- chore (2026-09-14)
+
+- chore(scripts): update brew (2026-09-14)
+
+- config(zsh+scripts): clean up and support local bin (2026-09-14)
+
+- chore(nvim): rm treesitter because conflict with macos sdk 27 (2026-09-14)
+
+- chore (2026-09-14)
+
+- chore(scripts): more optional (2026-09-14)
+
+- chore(scripts): workaround macos sdk 27 (2026-09-14)
+
+- config(zed): update font (2026-09-11)
+
+- config(nvim): update nvim-treesitter (2026-09-11)
+
+- config(zsh): alias python3 (2026-09-04)
+
+- config(nvim): update treesitter (2026-09-02)
+
+- config: rm berkeley mono (2026-09-01)
+
+- config(ghostty+nvim): some style (2026-08-30)
+
+- chore: add staticcheck (2026-08-24)
+
+- chore(changelog): generate v1.2.0 (2026-08-20)
+
+### Build
+
+- chore(deps): bump github.com/bytedance/sonic from 1.15.4 to 1.15.5 (#145) (2026-10-30)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.13.0 to 3.14.0 (#144) (2026-10-05)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.12.0 to 3.13.0 (#143) (2026-09-25)
+
+- chore(deps): bump github.com/urfave/cli/v3 from 3.11.0 to 3.12.0 (#142) (2026-09-18)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.15.3 to 1.15.4 (#141) (2026-09-14)
+
+- chore(deps): bump github.com/bytedance/sonic from 1.15.2 to 1.15.3 (#140) (2026-08-27)
+
 ## v1.2.0 (2026-08-20)
 
 ### Added
