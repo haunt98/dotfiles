@@ -2,6 +2,8 @@ import subprocess
 
 WIFI_DEVICE = "en0"
 
+# Open Keychain Access then search and delete AirPort network password
+
 
 def get_saved_network_names(device: str) -> list[str]:
     cmd = ["networksetup", "-listpreferredwirelessnetworks", device]
