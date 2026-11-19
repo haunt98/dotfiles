@@ -1,18 +1,18 @@
 {
+  "proxy": "",
   "autosave": "on_focus_change",
-  "ui_font_family": "MonoLisaText",
-  "buffer_font_family": "MonoLisaCode",
+  "ui_font_family": "Inter",
+  "buffer_font_family": "Annotation Mono",
   "buffer_font_features": {
     "liga": true,
-    "calt": true,
-    "dlig": true,
-    "ss02": true
+    "ss01": true,
+    "onum": true
   },
   "buffer_font_size": 16.0,
   "buffer_font_fallbacks": ["Symbols Nerd Font Mono"],
   "preferred_line_length": 120,
   "soft_wrap": "bounded",
-  "theme": "Gruvbox Light",
+  "theme": "Gruvbox Dark Hard",
   "icon_theme": "Zed (Default)",
   "vim_mode": true,
   "cursor_animation": {
@@ -41,10 +41,19 @@
   "suggest_extensions": false,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
-    "anthropic_retention": false
+    "metrics": false
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {}
+    },
+    "default_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4.1-flash",
+      "enable_thinking": true,
+      "effort": "low"
+    },
     "dock": "right",
     "enable_feedback": false
   },
