@@ -218,7 +218,7 @@ require("lazy").setup({
 		-- https://github.com/lewis6991/gitsigns.nvim
 		{
 			"lewis6991/gitsigns.nvim",
-			commit = "dc7698f932792a764d3db95fedee26c38e728355",
+			commit = "c0862d382a35b7b45757d8d151a6a634c09bf3ce",
 			config = function()
 				local gitsigns = require("gitsigns")
 				gitsigns.setup({
@@ -288,7 +288,7 @@ require("lazy").setup({
 		-- https://github.com/ibhagwan/fzf-lua
 		{
 			"ibhagwan/fzf-lua",
-			commit = "ded1c96d3d9d74634287d722431c26690968a4bf",
+			commit = "a8312697c30b4d3b110fa3dc56e3699107aed9a0",
 			config = function()
 				local fzf_lua = require("fzf-lua")
 				fzf_lua.setup({
@@ -314,7 +314,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
-			commit = "4d32e018f7cfcc0ba95357465516be615c542fef",
+			commit = "b8a0af521530f8ee68c738657429eab59de6a2ae",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
