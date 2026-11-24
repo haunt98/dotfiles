@@ -1,5 +1,4 @@
 {
-  "proxy": "",
   "autosave": "on_focus_change",
   "ui_font_family": "Inter",
   "buffer_font_family": "Annotation Mono",
@@ -47,12 +46,6 @@
     "tool_permissions": {
       "default": "allow",
       "tools": {}
-    },
-    "default_model": {
-      "provider": "opencode",
-      "model": "go/deepseek-v4.1-flash",
-      "enable_thinking": true,
-      "effort": "low"
     },
     "dock": "right",
     "enable_feedback": false
