@@ -218,7 +218,7 @@ require("lazy").setup({
 		-- https://github.com/lewis6991/gitsigns.nvim
 		{
 			"lewis6991/gitsigns.nvim",
-			commit = "ea38d317af34f8ffcfbaf0f0dcc1471736661a4c",
+			commit = "166c03131e6a3528f692dd89f37668d991f17baa",
 			config = function()
 				local gitsigns = require("gitsigns")
 				gitsigns.setup({
@@ -314,7 +314,7 @@ require("lazy").setup({
 		-- https://github.com/nvim-mini/mini.nvim
 		{
 			"nvim-mini/mini.nvim",
-			commit = "24cf4ad5840f0d092e3d8296b17eaf7026bf27f3",
+			commit = "39334e0f4dec24ef159945067e222318392a65c5",
 			config = function()
 				-- Text editing
 				-- https://github.com/nvim-mini/mini.nvim/blob/main/doc/mini-ai.txt
